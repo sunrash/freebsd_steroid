@@ -1,0 +1,5 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITH_LLVM_TARGET_BPF 337552 2018-08-09 21:28:31Z dim $
+Set to build LLVM target support for BPF.
+The
+.Va LLVM_TARGET_ALL
+option should be used rather than this in most cases.

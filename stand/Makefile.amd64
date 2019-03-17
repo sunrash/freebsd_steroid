@@ -1,0 +1,4 @@
+# $FreeBSD: releng/12.0/stand/Makefile.amd64 330248 2018-03-01 19:50:55Z imp $
+
+S.yes+=		userboot
+S.yes+=		i386

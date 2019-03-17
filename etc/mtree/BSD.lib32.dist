@@ -1,0 +1,16 @@
+# $FreeBSD: releng/12.0/etc/mtree/BSD.lib32.dist 335645 2018-06-25 19:55:15Z brooks $
+#
+# Please see the file src/etc/mtree/README before making changes to this file.
+#
+
+/set type=dir uname=root gname=wheel mode=0755
+.
+    lib32
+        dtrace
+        ..
+        geom
+        ..
+        i18n
+        ..
+    ..
+..

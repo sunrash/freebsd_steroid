@@ -1,0 +1,10 @@
+# $FreeBSD: releng/12.0/sys/arm/ralink/std.ralink 337841 2018-08-15 13:13:19Z andrew $
+files		"../ralink/files.ralink"
+cpu		CPU_ARM9E
+machine 	arm
+makeoptions	CONF_CFLAGS="-march=armv5te"
+options		INTRNG
+
+makeoptions	KERNPHYSADDR=0x40000000
+makeoptions	KERNVIRTADDR=0xc0000000
+options		KERNVIRTADDR=0xc0000000

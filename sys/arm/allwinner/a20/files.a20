@@ -1,0 +1,4 @@
+# $FreeBSD: releng/12.0/sys/arm/allwinner/a20/files.a20 335165 2018-06-14 17:50:29Z kevans $
+
+arm/allwinner/a20/a20_padconf.c		standard
+arm/allwinner/clkng/ccu_a10.c		standard

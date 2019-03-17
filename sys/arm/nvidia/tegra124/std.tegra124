@@ -1,0 +1,6 @@
+# $FreeBSD: releng/12.0/sys/arm/nvidia/tegra124/std.tegra124 338116 2018-08-20 20:31:53Z imp $
+cpu 		CPU_CORTEXA
+machine		arm	armv7
+makeoptions	CONF_CFLAGS="-march=armv7a"
+
+files "../nvidia/tegra124/files.tegra124"

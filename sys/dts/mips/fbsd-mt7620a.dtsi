@@ -1,0 +1,9 @@
+/* $FreeBSD: releng/12.0/sys/dts/mips/fbsd-mt7620a.dtsi 325826 2017-11-14 21:03:57Z imp $ */
+
+&pcie {
+	/*
+	 * Our driver is different that OpenWRT's, so we need slightly
+	 * different values for the reg property
+	 */
+	reg = <0x10140000 0x10000>;
+};

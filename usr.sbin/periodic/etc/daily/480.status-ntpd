@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/daily/480.status-ntpd 289021 2015-10-08 08:55:08Z des $
+#
+
+# If there is a global system configuration file, suck it in.
+#
+if [ -r /etc/defaults/periodic.conf ]
+then
+    . /etc/defaults/periodic.conf
+    source_periodic_confs
+fi
+
+rc=0
+
+case "$daily_status_ntpd_enable" in
+    [Yy][Ee][Ss])
+	echo ""
+	echo "NTP status:"
+
+	synchronized=$(ntpq -pn | tee /dev/stderr | grep '^\*')
+	if [ -z "$synchronized" ]; then
+		rc=1
+	fi
+	;;
+esac
+
+exit $rc

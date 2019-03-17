@@ -1,0 +1,17 @@
+#
+# $FreeBSD: releng/12.0/release/packages/clibs.ucl 295337 2016-02-05 21:01:08Z gjb $
+#
+
+name = "FreeBSD-%PKGNAME%"
+origin = "base"
+version = "%VERSION%"
+comment = "%COMMENT%"
+categories = [ base ]
+maintainer = "re@FreeBSD.org"
+www = "https://www.FreeBSD.org"
+prefix = "/"
+licenselogic = "single"
+licenses = [ BSD2CLAUSE ]
+desc = <<EOD
+%DESC%
+EOD

@@ -1,0 +1,4 @@
+# $FreeBSD: releng/12.0/share/keys/pkg/trusted/pkg.freebsd.org.2013102301 260605 2014-01-13 20:55:15Z bdrewery $
+
+function: "sha256"
+fingerprint: "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"

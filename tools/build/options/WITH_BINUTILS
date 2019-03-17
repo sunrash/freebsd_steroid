@@ -1,0 +1,3 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITH_BINUTILS 335210 2018-06-15 16:18:39Z emaste $
+Set to build and install binutils (as, ld, and objdump) as part
+of the normal system build.

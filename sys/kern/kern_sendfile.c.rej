@@ -1,0 +1,81 @@
+@@ -337,12 +338,28 @@
+ 
+ 		m = sfio->m;
+ 		mb_free_notready(m, sfio->npages);
+-	} else
+-		(void )(so->so_proto->pr_usrreqs->pru_ready)(so, sfio->m,
+-		    sfio->npages);
++	} else {
++		if (so->so_snd.sb_tls_flags & SB_TLS_ACTIVE) {
++			/*
++			 * I/O operation is complete, but we still
++			 * need to encrypt.  We cannot do this in the
++			 * interrupt thread of the disk controller, so
++			 * forward the mbufs to a different thread.
++			 *
++			 * Note that the socket was referenced by
++			 * sendfile, and we're inheriting that ref,
++			 * so we do not need to do an soref() here.
++			 */
++			sbtls_enqueue(sfio->m, so, sfio->npages);
++			goto out_with_ref;
++		} else
++			(void )(so->so_proto->pr_usrreqs->pru_ready)(so,
++			    sfio->m, sfio->npages);
++	}
+ 
+ 	SOCK_LOCK(so);
+ 	sorele(so);
++out_with_ref:
+ 	CURVNET_RESTORE();
+ 	free(sfio, M_TEMP);
+ }
+@@ -582,9 +599,10 @@
+ 	off_t off, sbytes, rem, obj_size;
+ 	struct mbuf_ext_pgs *ext_pgs;
+ 	struct mbuf *m0;
++	struct sbtls_info *tls;
+ 	int use_ext_pgs = 0;
+ 	int error, softerr, bsize, hdrlen;
+-	int ext_pgs_idx;
++	int ext_pgs_idx, max_pgs, tls_enq_cnt;
+ 
+ 	obj = NULL;
+ 	so = NULL;
+@@ -756,11 +795,16 @@
+ 		pa = sfio->pa;
+ 
+ 		if ((mb_use_ext_pgs &&
+-			so->so_proto->pr_protocol == IPPROTO_TCP)) {
++			so->so_proto->pr_protocol == IPPROTO_TCP) ||
++		    tls != NULL) {
+ 			/* cache state in a local, to avoid locks */
+ 			use_ext_pgs = 1;
++			if (tls != NULL)
++				max_pgs = num_pages(tls->sb_params.sb_maxlen);
++			else
++				max_pgs = MBUF_PEXT_MAX_PGS;
+ 			/* start at last index, to wrap to first */
+-			ext_pgs_idx = MBUF_PEXT_MAX_PGS - 1;
++			ext_pgs_idx = max_pgs - 1;
+ 			m0 = NULL; /* -Wsometimes-uninitialized */
+ 		}
+ 
+@@ -782,7 +826,7 @@
+ 				off_t xfs;
+ 
+ 				ext_pgs_idx++;
+-				if (ext_pgs_idx == MBUF_PEXT_MAX_PGS) {
++				if (ext_pgs_idx == max_pgs) {
+ 					m0 = mb_alloc_ext_pgs(M_WAITOK, false,
+ 					    sendfile_free_mext_pg);
+ 
+@@ -796,7 +840,7 @@
+ 						 * last page.
+ 						 */
+ 						if ((i + min(npages - i,
+-						    MBUF_PEXT_MAX_PGS) == npages) &&
++						    max_pgs) == npages) &&
+ 						    ((off + space) & PAGE_MASK) &&
+ 						    (rem > space || rhpages > 0))
+ 							m0->m_ext.ext_flags |=

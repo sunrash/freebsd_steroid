@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# $FreeBSD: releng/12.0/libexec/rc/rc.d/auditdistd 298514 2016-04-23 16:10:54Z lme $
+#
+
+# PROVIDE: auditdistd
+# REQUIRE: auditd
+# BEFORE:  DAEMON
+# KEYWORD: nojail shutdown
+
+. /etc/rc.subr
+
+name="auditdistd"
+desc="Audit trail files distribution daemon"
+rcvar="${name}_enable"
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/${name}"
+required_files="/etc/security/${name}.conf"
+extra_commands="reload"
+
+load_rc_config $name
+run_rc_command "$1"

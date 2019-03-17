@@ -1,0 +1,6 @@
+# $FreeBSD: releng/12.0/sys/mips/conf/XLP.hints 322476 2017-08-13 22:07:42Z ian $
+
+# RTC
+hint.ds13rtc.0.at="iicbus1"
+hint.ds13rtc.0.addr=0xd0
+hint.ds13rtc.0.compatible="dallas,ds1374"

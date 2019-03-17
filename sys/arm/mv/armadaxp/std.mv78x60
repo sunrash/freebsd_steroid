@@ -1,0 +1,4 @@
+# $FreeBSD: releng/12.0/sys/arm/mv/armadaxp/std.mv78x60 331995 2018-04-04 08:40:49Z mw $
+
+include	"../mv/std-pj4b.mv"
+include "../mv/armadaxp/std.armadaxp"

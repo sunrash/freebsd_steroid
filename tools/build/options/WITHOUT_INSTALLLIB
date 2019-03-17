@@ -1,0 +1,8 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_INSTALLLIB 313172 2017-02-03 19:21:28Z wblock $
+Set this to not install optional libraries.
+For example, when creating a
+.Xr nanobsd 8
+image.
+.Bf -symbolic
+The option does not work for build targets.
+.Ef

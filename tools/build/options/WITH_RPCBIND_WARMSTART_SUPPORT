@@ -1,0 +1,4 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITH_RPCBIND_WARMSTART_SUPPORT 317168 2017-04-19 20:45:46Z ngie $
+Set to build
+.Xr rpcbind 8
+with warmstart support.

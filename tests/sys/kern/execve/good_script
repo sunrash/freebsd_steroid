@@ -1,0 +1,4 @@
+#!/bin/sh
+# $FreeBSD: releng/12.0/tests/sys/kern/execve/good_script 281464 2015-04-12 12:29:34Z ngie $
+
+echo succeeded

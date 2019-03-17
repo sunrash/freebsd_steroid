@@ -1,0 +1,11 @@
+# $FreeBSD: releng/12.0/sys/mips/malta/std.malta 305664 2016-09-09 14:50:44Z br $
+files	"../malta/files.malta"
+
+cpu		CPU_MALTA
+device		pci
+device		ata
+
+device		scbus		# SCSI bus (required for ATA/SCSI)
+device		cd		# CD
+device		da		# Direct Access (disks)
+device		pass		# Passthrough device (direct ATA/SCSI access)

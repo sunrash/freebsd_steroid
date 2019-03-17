@@ -1,0 +1,2 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_LLD 309124 2016-11-24 22:54:55Z dim $
+Set to not build LLVM's lld linker.

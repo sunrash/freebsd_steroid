@@ -1,0 +1,4 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_AUTOFS 296264 2016-03-01 11:36:10Z trasz $
+Set to not build
+.Xr autofs 5
+related programs, libraries, and kernel modules.

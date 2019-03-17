@@ -1,0 +1,10 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITH_GDB_LIBEXEC 317416 2017-04-25 18:08:56Z jhb $
+Set to install
+.Xr gdb 1
+into
+.Pa /usr/libexec .
+This permits
+.Xr gdb 1
+to be used as a fallback for
+.Xr crashinfo 8
+if a newer version is not installed.

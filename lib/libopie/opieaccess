@@ -1,0 +1,13 @@
+# $FreeBSD: releng/12.0/lib/libopie/opieaccess 338823 2018-09-20 09:26:10Z brd $
+#
+# This file controls whether UNIX passwords are to be permitted.  Rules
+# are matched in order, and the search terminates when the first matching
+# rule has been found. Default action is "deny". See opieaccess(5) for
+# more information.
+#
+# Each rule has the form:
+#
+#       permit address netmask
+#       deny address netmask
+#
+#permit 127.0.0.1 255.255.255.255

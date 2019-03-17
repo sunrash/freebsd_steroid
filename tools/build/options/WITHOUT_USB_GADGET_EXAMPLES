@@ -1,0 +1,2 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_USB_GADGET_EXAMPLES 311548 2017-01-06 21:08:19Z ngie $
+Set to not build USB gadget kernel modules.

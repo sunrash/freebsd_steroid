@@ -1,0 +1,9 @@
+$FreeBSD: releng/12.0/tools/tools/netmap/README 261909 2014-02-15 04:53:04Z luigi $
+
+This directory contains examples that use netmap
+
+	pkt-gen		a packet sink/source using the netmap API
+
+	bridge		a two-port jumper wire, also using the native API
+
+	vale-ctl	the program to control VALE bridges

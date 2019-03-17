@@ -1,0 +1,4 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_BINUTILS 335210 2018-06-15 16:18:39Z emaste $
+Set to not build or install binutils (as, ld, and objdump) as part
+of the normal system build.
+The resulting system cannot build programs from source.

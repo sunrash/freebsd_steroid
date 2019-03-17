@@ -1,0 +1,15 @@
+# $FreeBSD: releng/12.0/tests/sys/pjdfstest/tests/chown/Makefile 299094 2016-05-04 23:20:53Z ngie $
+
+TAP_TESTS_SH=	00
+TAP_TESTS_SH+=	01
+TAP_TESTS_SH+=	02
+TAP_TESTS_SH+=	03
+TAP_TESTS_SH+=	04
+TAP_TESTS_SH+=	05
+TAP_TESTS_SH+=	06
+TAP_TESTS_SH+=	07
+TAP_TESTS_SH+=	08
+TAP_TESTS_SH+=	09
+TAP_TESTS_SH+=	10
+
+.include "../pjdfstest.test.mk"

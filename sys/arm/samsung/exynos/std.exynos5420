@@ -1,0 +1,7 @@
+# $FreeBSD: releng/12.0/sys/arm/samsung/exynos/std.exynos5420 336804 2018-07-28 06:46:10Z andrew $
+
+cpu		CPU_CORTEXA
+machine		arm armv7
+makeoptions	CONF_CFLAGS="-march=armv7a"
+
+files		"../samsung/exynos/files.exynos5"

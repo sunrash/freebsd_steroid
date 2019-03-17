@@ -1,0 +1,5 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_BLACKLIST 319246 2017-05-30 18:03:34Z ngie $
+Set this if you do not want to build
+.Xr blacklistd 8
+and
+.Xr blacklistctl 8 .

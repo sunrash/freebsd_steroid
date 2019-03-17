@@ -1,0 +1,21 @@
+\ Loader.rc
+\ $FreeBSD: releng/12.0/stand/i386/loader/loader.rc 332413 2018-04-11 18:02:13Z imp $
+\
+\ Includes additional commands
+include /boot/loader.4th
+include /boot/efi.4th
+try-include /boot/loader.rc.local
+
+\ Reads and processes loader.conf variables
+initialize
+
+maybe-efi-resizecons
+
+\ Tests for password -- executes autoboot first if a password was defined
+check-password
+
+\ Load in the boot menu
+include /boot/beastie.4th
+
+\ Start the boot menu
+beastie-start

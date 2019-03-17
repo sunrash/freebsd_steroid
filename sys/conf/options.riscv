@@ -1,0 +1,5 @@
+# $FreeBSD: releng/12.0/sys/conf/options.riscv 335007 2018-06-12 17:45:15Z br $
+
+RISCV				opt_global.h
+FPE				opt_global.h
+INTRNG				opt_global.h

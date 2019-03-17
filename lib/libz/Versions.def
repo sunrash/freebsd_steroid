@@ -1,0 +1,20 @@
+# $FreeBSD: releng/12.0/lib/libz/Versions.def 311285 2017-01-04 16:09:08Z delphij $
+
+ZLIB_1.2.4.0 {
+};
+
+ZLIB_1.2.7.0 {
+} ZLIB_1.2.4.0;
+
+ZLIB_1.2.7.1 {
+} ZLIB_1.2.7.0;
+
+ZLIB_1.2.9 {
+} ZLIB_1.2.7.1;
+
+FBSD_1.2 {
+} ZLIB_1.2.4.0;
+
+ZLIBprivate_1.0 {
+} ZLIB_1.2.4.0;
+

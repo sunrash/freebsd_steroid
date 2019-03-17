@@ -1,0 +1,4 @@
+# $FreeBSD: releng/12.0/sbin/Makefile.powerpc64 335101 2018-06-14 01:15:19Z imp $
+
+SUBDIR += bsdlabel
+SUBDIR += fdisk

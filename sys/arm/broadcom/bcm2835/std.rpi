@@ -1,0 +1,3 @@
+# $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/std.rpi 327367 2017-12-30 00:20:49Z ian $
+
+options		LINUX_BOOT_ABI

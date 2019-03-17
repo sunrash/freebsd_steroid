@@ -1,0 +1,3 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_DOCCOMPRESS 313169 2017-02-03 19:09:46Z wblock $
+Set to not install compressed system documentation.
+Only the uncompressed version will be installed.

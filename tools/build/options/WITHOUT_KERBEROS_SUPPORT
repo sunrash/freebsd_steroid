@@ -1,0 +1,7 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_KERBEROS_SUPPORT 251794 2013-06-15 20:29:07Z eadler $
+Set to build some programs without Kerberos support, like
+.Xr ssh 1 ,
+.Xr telnet 1 ,
+.Xr sshd 8 ,
+and
+.Xr telnetd 8 .

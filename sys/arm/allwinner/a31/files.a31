@@ -1,0 +1,6 @@
+# $FreeBSD: releng/12.0/sys/arm/allwinner/a31/files.a31 314394 2017-02-28 15:44:21Z manu $
+
+arm/allwinner/clkng/ccu_a31.c		standard
+arm/allwinner/a31/a31_padconf.c		standard
+arm/allwinner/a31/a31_r_padconf.c	standard
+arm/allwinner/a31/a31s_padconf.c	standard

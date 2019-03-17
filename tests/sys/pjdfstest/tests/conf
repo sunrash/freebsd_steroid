@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# $FreeBSD: releng/12.0/tests/sys/pjdfstest/tests/conf 314056 2017-02-21 21:01:01Z asomers $
+
+GREP=grep
+mountpoint=$(df . | tail -1 | awk '{print $6}')
+fs=$(mount -p | awk '$2 == "'$mountpoint'" { print toupper($3) }')
+os=FreeBSD

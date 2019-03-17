@@ -1,0 +1,16 @@
+#
+# DEFAULTS -- Default kernel configuration file for FreeBSD/arm64
+#
+# $FreeBSD: releng/12.0/sys/arm64/conf/DEFAULTS 337967 2018-08-17 14:47:21Z imp $
+
+machine		arm64 aarch64
+
+# Pseudo devices.
+device		mem		# Memory and kernel memory devices
+
+# Default partitioning schemes
+options 	GEOM_PART_BSD
+options 	GEOM_PART_MBR
+options 	GEOM_PART_GPT
+
+options 	NEW_PCIB

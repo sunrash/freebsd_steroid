@@ -1,0 +1,660 @@
+--- a/crypto/openssl/crypto/bio/bio.h
++++ ./crypto/openssl/crypto/bio/bio.h
+@@ -193,6 +193,11 @@ extern "C" {
+ #  define BIO_CTRL_DGRAM_SCTP_SAVE_SHUTDOWN               70
+ # endif
+ 
++# define BIO_CTRL_SET_OFFLOAD_TX               71
++# define BIO_CTRL_GET_OFFLOAD_TX               72
++# define BIO_CTRL_SET_OFFLOAD_TX_CTRL_MSG      73
++# define BIO_CTRL_CLEAR_OFFLOAD_TX_CTRL_MSG    74
++
+ /* modifiers */
+ # define BIO_FP_READ             0x02
+ # define BIO_FP_WRITE            0x04
+@@ -235,9 +240,22 @@ extern "C" {
+  */
+ # define BIO_FLAGS_MEM_RDONLY    0x200
+ 
++/*
++ * This is used with memory BIOs:
++ * BIO_FLAGS_MEM_RDONLY means we shouldn't free up or change the data in any way;
++ * BIO_FLAGS_NONCLEAR_RST means we should't clear data on reset.
++ */
++# define BIO_FLAGS_MEM_RDONLY    0x200
++# define BIO_FLAGS_NONCLEAR_RST  0x400
++
++# define BIO_FLAGS_OFFLOAD_TX           0x2000
++# define BIO_FLAGS_OFFLOAD_TX_CTRL_MSG  0x4000
++
+ typedef struct bio_st BIO;
+ 
+ void BIO_set_flags(BIO *b, int flags);
++void BIO_set_error(BIO *b, int error);
++int BIO_get_error(BIO *b);
+ int BIO_test_flags(const BIO *b, int flags);
+ void BIO_clear_flags(BIO *b, int flags);
+ 
+@@ -249,6 +267,18 @@ void BIO_clear_flags(BIO *b, int flags);
+ # define BIO_set_retry_write(b) \
+                 BIO_set_flags(b, (BIO_FLAGS_WRITE|BIO_FLAGS_SHOULD_RETRY))
+ 
++/* Offload related controls and flags */
++# define BIO_set_offload_tx_flag(b) \
++                BIO_set_flags(b, BIO_FLAGS_OFFLOAD_TX)
++# define BIO_should_offload_tx_flag(b) \
++    BIO_test_flags(b, BIO_FLAGS_OFFLOAD_TX)
++# define BIO_set_offload_tx_ctrl_msg_flag(b) \
++    BIO_set_flags(b, BIO_FLAGS_OFFLOAD_TX_CTRL_MSG)
++# define BIO_should_offload_tx_ctrl_msg_flag(b) \
++    BIO_test_flags(b, (BIO_FLAGS_OFFLOAD_TX_CTRL_MSG))
++# define BIO_clear_offload_tx_ctrl_msg_flag(b) \
++    BIO_clear_flags(b, (BIO_FLAGS_OFFLOAD_TX_CTRL_MSG))
++
+ /* These are normally used internally in BIOs */
+ # define BIO_clear_retry_flags(b) \
+                 BIO_clear_flags(b, (BIO_FLAGS_RWS|BIO_FLAGS_SHOULD_RETRY))
+@@ -330,6 +360,7 @@ struct bio_st {
+     int init;
+     int shutdown;
+     int flags;                  /* extra storage */
++    int error_reason;
+     int retry_reason;
+     int num;
+     void *ptr;
+@@ -482,6 +513,14 @@ struct bio_dgram_sctp_prinfo {
+ # define BIO_get_conn_int_port(b) BIO_ctrl(b,BIO_C_GET_CONNECT,3,NULL)
+ 
+ # define BIO_set_nbio(b,n)       BIO_ctrl(b,BIO_C_SET_NBIO,(n),NULL)
++#  define BIO_set_offload_tx(b, keyblob) \
++    BIO_ctrl(b, BIO_CTRL_SET_OFFLOAD_TX, 0, keyblob)
++#  define BIO_get_offload_tx(b)         \
++    BIO_ctrl(b, BIO_CTRL_GET_OFFLOAD_TX, 0, NULL)
++#  define BIO_set_offload_tx_ctrl_msg(b, record_type)   \
++    BIO_ctrl(b, BIO_CTRL_SET_OFFLOAD_TX_CTRL_MSG, record_type, NULL)
++#  define BIO_clear_offload_tx_ctrl_msg(b) \
++    BIO_ctrl(b, BIO_CTRL_CLEAR_OFFLOAD_TX_CTRL_MSG, 0, NULL)
+ 
+ /* BIO_s_accept() */
+ # define BIO_set_accept_port(b,name) BIO_ctrl(b,BIO_C_SET_ACCEPT,0,(char *)name)
+--- a/crypto/openssl/crypto/bio/bio_lib.c
++++ ./crypto/openssl/crypto/bio/bio_lib.c
+@@ -155,6 +155,16 @@ void BIO_set_flags(BIO *b, int flags)
+     b->flags |= flags;
+ }
+ 
++void BIO_set_error(BIO *b, int error)
++{
++	b->error_reason = error;
++}
++
++int BIO_get_error(BIO *b)
++{
++	return (b->error_reason);
++}
++
+ long (*BIO_get_callback(const BIO *b)) (struct bio_st *, int, const char *,
+                                         int, long, long) {
+     return b->callback;
+--- a/crypto/openssl/crypto/bio/bss_sock.c
++++ ./crypto/openssl/crypto/bio/bss_sock.c
+@@ -71,6 +71,15 @@
+ #  define sock_puts  SockPuts
+ # endif
+ 
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <sys/sockbuf_tls.h>
++#include <crypto/cryptodev.h>
++#include <netinet/in.h>
++#include <netinet/tcp.h>
++#endif
++
+ static int sock_write(BIO *h, const char *buf, int num);
+ static int sock_read(BIO *h, char *buf, int size);
+ static int sock_puts(BIO *h, const char *str);
+@@ -147,12 +156,56 @@ static int sock_read(BIO *b, char *out, int outl)
+     return (ret);
+ }
+ 
++static int send_ctrl_message(int fd, unsigned char record_type,
++        const void *data, size_t length)
++{
++    struct msghdr msg = {0};
++    int cmsg_len = sizeof(record_type);
++    struct cmsghdr *cmsg;
++    char buf[CMSG_SPACE(cmsg_len)];
++    struct iovec msg_iov;   /* Vector of data to send/receive into */
++
++    msg.msg_control = buf;
++    msg.msg_controllen = sizeof(buf);
++    cmsg = CMSG_FIRSTHDR(&msg);
++#if defined(TCP_TLS_ENABLE)
++    cmsg->cmsg_level = IPPROTO_TCP;
++    cmsg->cmsg_type = TLS_SET_RECORD_TYPE;
++#endif
++    cmsg->cmsg_len = CMSG_LEN(cmsg_len);
++    *((unsigned char *)CMSG_DATA(cmsg)) = record_type;
++    msg.msg_controllen = cmsg->cmsg_len;
++
++    msg_iov.iov_base = (void *)data;
++    msg_iov.iov_len = length;
++    msg.msg_iov = &msg_iov;
++    msg.msg_iovlen = 1;
++
++    return sendmsg(fd, &msg, 0);
++}
++
+ static int sock_write(BIO *b, const char *in, int inl)
+ {
+     int ret;
+ 
+     clear_socket_error();
+-    ret = writesocket(b->num, in, inl);
++    if (BIO_should_offload_tx_ctrl_msg_flag(b)) {
++        unsigned char record_type = (unsigned char)(uintptr_t)b->ptr;
++
++#ifdef SSL_DEBUG
++        printf("\nsending ctrl msg, type = %d, len = %d\n", record_type, inl);
++#endif
++        BIO_clear_offload_tx_ctrl_msg_flag(b);
++        ret = send_ctrl_message(b->num, record_type, in, inl);
++        if (ret >= 0) {
++            ret = inl;
++        }
++    } else {
++#ifdef SSL_DEBUG
++        printf("\nsending data msg %p %d\n", b, b->flags);
++#endif
++        ret = writesocket(b->num, in, inl);
++    }
+     BIO_clear_retry_flags(b);
+     if (ret <= 0) {
+         if (BIO_sock_should_retry(ret))
+@@ -165,6 +218,9 @@ static long sock_ctrl(BIO *b, int cmd, long num, void *ptr)
+ {
+     long ret = 1;
+     int *ip;
++#if defined(TCP_TLS_ENABLE)
++    struct tls_so_enable *tls_en;
++#endif
+ 
+     switch (cmd) {
+     case BIO_C_SET_FD:
+@@ -192,6 +248,37 @@ static long sock_ctrl(BIO *b, int cmd, long num, void *ptr)
+     case BIO_CTRL_FLUSH:
+         ret = 1;
+         break;
++#if defined(TCP_TLS_ENABLE)
++    case BIO_CTRL_SET_OFFLOAD_TX:
++	tls_en = ptr;
++	ret = setsockopt(b->num, IPPROTO_TCP, TCP_TLS_ENABLE,
++			 tls_en, sizeof(*tls_en));
++#ifdef SSL_DEBUG
++        printf("\nAttempt to offload...");
++#endif
++        if (!ret) {
++            BIO_set_offload_tx_flag(b);
++#ifdef SSL_DEBUG
++            printf("Success %p %p\n", b, &(b->flags));
++#endif
++        } else {
++#ifdef SSL_DEBUG
++            printf("Failed ret=%ld\n", ret);
++#endif
++        }
++        break;
++     case BIO_CTRL_GET_OFFLOAD_TX:
++         return BIO_should_offload_tx_flag(b);
++     case BIO_CTRL_SET_OFFLOAD_TX_CTRL_MSG:
++         BIO_set_offload_tx_ctrl_msg_flag(b);
++	 b->ptr = (void *)num;
++         ret = 0;
++         break;
++     case BIO_CTRL_CLEAR_OFFLOAD_TX_CTRL_MSG:
++         BIO_clear_offload_tx_ctrl_msg_flag(b);
++         ret = 0;
++         break;
++#endif
+     default:
+         ret = 0;
+         break;
+--- a/crypto/openssl/crypto/evp/e_aes.c
++++ ./crypto/openssl/crypto/evp/e_aes.c
+@@ -1185,6 +1185,14 @@ static int aes_gcm_ctrl(EVP_CIPHER_CTX *c, int type, int arg, void *ptr)
+         memcpy(ptr, c->buf, arg);
+         return 1;
+ 
++    case EVP_CTRL_GCM_GET_IV:
++        if (gctx->iv_gen != 1)
++            return 0;
++        if (gctx->ivlen != arg)
++            return 0;
++        memcpy(ptr, gctx->iv, arg);
++        return 1;
++
+     case EVP_CTRL_GCM_SET_IV_FIXED:
+         /* Special case: -1 length restores whole IV */
+         if (arg == -1) {
+--- a/crypto/openssl/crypto/evp/evp.h
++++ ./crypto/openssl/crypto/evp/evp.h
+@@ -402,6 +402,7 @@ struct evp_cipher_st {
+ # define         EVP_CTRL_GCM_SET_TAG            0x11
+ # define         EVP_CTRL_GCM_SET_IV_FIXED       0x12
+ # define         EVP_CTRL_GCM_IV_GEN             0x13
++# define         EVP_CTRL_GCM_GET_IV             0xa
+ # define         EVP_CTRL_CCM_SET_IVLEN          EVP_CTRL_GCM_SET_IVLEN
+ # define         EVP_CTRL_CCM_GET_TAG            EVP_CTRL_GCM_GET_TAG
+ # define         EVP_CTRL_CCM_SET_TAG            EVP_CTRL_GCM_SET_TAG
+--- a/crypto/openssl/ssl/s3_pkt.c
++++ ./crypto/openssl/ssl/s3_pkt.c
+@@ -697,6 +697,7 @@ int ssl3_write_bytes(SSL *s, int type, const void *buf_, int len)
+      */
+     if (type == SSL3_RT_APPLICATION_DATA &&
+         len >= 4 * (int)(max_send_fragment = s->max_send_fragment) &&
++	(0 == BIO_get_offload_tx(s->wbio)) &&
+         s->compress == NULL && s->msg_callback == NULL &&
+         SSL_USE_EXPLICIT_IV(s) &&
+         s->enc_write_ctx != NULL &&
+@@ -966,40 +967,47 @@ static int do_ssl3_write(SSL *s, int type, const unsigned char *buf,
+         wb->offset = align;
+     }
+ 
+-    /* write the header */
+-
+-    *(p++) = type & 0xff;
+-    wr->type = type;
+-
+-    *(p++) = (s->version >> 8);
+-    /*
+-     * Some servers hang if iniatial client hello is larger than 256 bytes
+-     * and record version number > TLS 1.0
+-     */
+-    if (s->state == SSL3_ST_CW_CLNT_HELLO_B
+-        && !s->renegotiate && TLS1_get_version(s) > TLS1_VERSION)
+-        *(p++) = 0x1;
+-    else
+-        *(p++) = s->version & 0xff;
+-
+-    /* field where we are to write out packet length */
+-    plen = p;
+-    p += 2;
+-    /* Explicit IV length, block ciphers appropriate version flag */
+-    if (s->enc_write_ctx && SSL_USE_EXPLICIT_IV(s)) {
+-        int mode = EVP_CIPHER_CTX_mode(s->enc_write_ctx);
+-        if (mode == EVP_CIPH_CBC_MODE) {
+-            eivlen = EVP_CIPHER_CTX_iv_length(s->enc_write_ctx);
+-            if (eivlen <= 1)
+-                eivlen = 0;
+-        }
+-        /* Need explicit part of IV for GCM mode */
+-        else if (mode == EVP_CIPH_GCM_MODE)
+-            eivlen = EVP_GCM_TLS_EXPLICIT_IV_LEN;
+-        else
+-            eivlen = 0;
+-    } else
+-        eivlen = 0;
++    if (BIO_get_offload_tx(s->wbio)) {
++	/* IV will be generated by the kernel if offload is used */
++	eivlen = 0;
++	wr->type = type;
++    } else {
++	/* write the header */
++
++	*(p++) = type & 0xff;
++	wr->type = type;
++
++	*(p++) = (s->version >> 8);
++	/*
++	 * Some servers hang if iniatial client hello is larger than 256 bytes
++	 * and record version number > TLS 1.0
++	 */
++	if (s->state == SSL3_ST_CW_CLNT_HELLO_B
++	    && !s->renegotiate && TLS1_get_version(s) > TLS1_VERSION)
++	    *(p++) = 0x1;
++	else
++	    *(p++) = s->version & 0xff;
++
++	/* field where we are to write out packet length */
++	plen = p;
++	p += 2;
++
++	/* Explicit IV length, block ciphers appropriate version flag */
++	if (s->enc_write_ctx && SSL_USE_EXPLICIT_IV(s)) {
++	    int mode = EVP_CIPHER_CTX_mode(s->enc_write_ctx);
++	    if (mode == EVP_CIPH_CBC_MODE) {
++		eivlen = EVP_CIPHER_CTX_iv_length(s->enc_write_ctx);
++		if (eivlen <= 1)
++		    eivlen = 0;
++	    }
++	    /* Need explicit part of IV for GCM mode */
++	    else if (mode == EVP_CIPH_GCM_MODE)
++		eivlen = EVP_GCM_TLS_EXPLICIT_IV_LEN;
++	    else
++		eivlen = 0;
++	} else
++	    eivlen = 0;
++    }
+ 
+     /* lets setup the record stuff. */
+     wr->data = p + eivlen;
+@@ -1027,6 +1035,7 @@ static int do_ssl3_write(SSL *s, int type, const unsigned char *buf,
+      * wb->buf
+      */
+ 
++    /* XXX ktls */
+     if (mac_size != 0) {
+         if (s->method->ssl3_enc->mac(s, &(p[wr->length + eivlen]), 1) < 0)
+             goto err;
+@@ -1043,22 +1052,47 @@ static int do_ssl3_write(SSL *s, int type, const unsigned char *buf,
+         wr->length += eivlen;
+     }
+ 
+-    if (s->method->ssl3_enc->enc(s, 1) < 1)
+-        goto err;
++    if (!BIO_get_offload_tx(s->wbio)) {
++	if (s->method->ssl3_enc->enc(s, 1) < 1)
++	    goto err;
++    }
+ 
+-    /* record length after mac and block padding */
+-    s2n(wr->length, plen);
+ 
+-    if (s->msg_callback)
+-        s->msg_callback(1, 0, SSL3_RT_HEADER, plen - 5, 5, s,
+-                        s->msg_callback_arg);
++    if (!BIO_get_offload_tx(s->wbio)) {
++	/* record length after mac and block padding */
++	s2n(wr->length, plen);
++
++	if (s->msg_callback)
++	    s->msg_callback(1, 0, SSL3_RT_HEADER, plen - 5, 5, s,
++			    s->msg_callback_arg);
++    } else {
++	/* Create a fake SSL3_RT_HEADER msg to maintain compatibility */
++	if (s->msg_callback) {
++	    unsigned char header[5] = {0}, *pheader = header + 3;
++
++	    header[0] = type & 0xff;
++	    header[1] = (s->version >> 8);
++	    if (s->state == SSL3_ST_CW_CLNT_HELLO_B
++		&& !s->renegotiate
++		&& TLS1_get_version(s) > TLS1_VERSION)
++		header[2] = 0x1;
++	    else
++		header[2] = s->version & 0xff;
++	    s2n(wr->length, pheader);
++	    s->msg_callback(1, 0, SSL3_RT_HEADER, header, 5, s,
++			    s->msg_callback_arg);
++	}
++    }
+ 
+     /*
+      * we should now have wr->data pointing to the encrypted data, which is
+      * wr->length long
+      */
+     wr->type = type;            /* not needed but helps for debugging */
+-    wr->length += SSL3_RT_HEADER_LENGTH;
++
++    if (!BIO_get_offload_tx(s->wbio)) {
++	wr->length += SSL3_RT_HEADER_LENGTH;
++    }
+ 
+     if (create_empty_fragment) {
+         /*
+@@ -1109,9 +1143,21 @@ int ssl3_write_pending(SSL *s, int type, const unsigned char *buf,
+         clear_sys_error();
+         if (s->wbio != NULL) {
+             s->rwstate = SSL_WRITING;
++            if (BIO_get_offload_tx(s->wbio) && type !=
++                    SSL3_RT_APPLICATION_DATA) {
++                BIO_set_offload_tx_ctrl_msg(s->wbio, type);
++            }
+             i = BIO_write(s->wbio,
+                           (char *)&(wb->buf[wb->offset]),
+                           (unsigned int)wb->left);
++            /* To prevent coalescing of control and data messages,
++             * such as in buffer_write, we flush the BIO
++             */
++            if (BIO_get_offload_tx(s->wbio) &&
++                    type != SSL3_RT_APPLICATION_DATA) {
++                (void)BIO_flush(s->wbio);
++            }
++
+         } else {
+             SSLerr(SSL_F_SSL3_WRITE_PENDING, SSL_R_BIO_NOT_SET);
+             i = -1;
+--- a/crypto/openssl/ssl/ssl.h
++++ ./crypto/openssl/ssl/ssl.h
+@@ -161,6 +161,11 @@
+ # endif
+ # include <openssl/pem.h>
+ # include <openssl/hmac.h>
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <sys/uio.h>
++#endif
+ 
+ # include <openssl/kssl.h>
+ # include <openssl/safestack.h>
+@@ -2451,6 +2456,14 @@ void SSL_set_info_callback(SSL *ssl,
+ void (*SSL_get_info_callback(const SSL *ssl)) (const SSL *ssl, int type,
+                                                int val);
+ int SSL_state(const SSL *ssl);
++#ifdef __FreeBSD__
++int SSL_can_use_sendfile(SSL *ssl);
++int SSL_sendfile(int fd, SSL *s, off_t offset, size_t nbytes,
++		 struct sf_hdtr *hdtr, int flags);
++#endif
++int SSL_get_wbio_error(SSL *ssl);
++int SSL_get_rbio_error(SSL *ssl);
++
+ void SSL_set_state(SSL *ssl, int state);
+ 
+ void SSL_set_verify_result(SSL *ssl, long v);
+--- a/crypto/openssl/ssl/ssl_lib.c
++++ ./crypto/openssl/ssl/ssl_lib.c
+@@ -159,6 +159,8 @@
+ #ifndef OPENSSL_NO_ENGINE
+ # include <openssl/engine.h>
+ #endif
++#include <sys/socket.h>
++#include <sys/uio.h>
+ 
+ const char *SSL_version_str = OPENSSL_VERSION_TEXT;
+ 
+@@ -3251,6 +3253,84 @@ void SSL_set_info_callback(SSL *ssl,
+     ssl->info_callback = cb;
+ }
+ 
++#ifdef __FreeBSD__
++int SSL_can_use_sendfile(SSL *s)
++{
++	BIO *wbio;
++
++	if (s == NULL)
++		return (0);
++
++	if (s->compress) {
++		return (0);
++	}
++
++	wbio = s->wbio;
++
++	if (wbio == NULL) {
++		return (0);
++	}
++
++	return (!!BIO_should_offload_tx_flag(wbio));
++}
++
++int SSL_sendfile(int fd, SSL *s, off_t offset, size_t nbytes,
++		 struct sf_hdtr *hdtr, int flags)
++{
++	off_t sbytes;
++	int ret;
++
++	if ((fd == -1) || (s == NULL)) {
++		errno = EINVAL;
++		return (-1);
++	}
++	if (SSL_can_use_sendfile(s) == 0) {
++		/* You must be able to use it! */
++		return (-1);
++	}
++	s->rwstate = SSL_WRITING;
++	if (BIO_flush(s->wbio) <= 0) {
++		if (!BIO_should_retry(s->wbio)) {
++			s->rwstate = SSL_NOTHING;
++		} else {
++			errno = EAGAIN;
++		}
++		return (-1);
++	}
++	sbytes = 0;
++	ret = sendfile(fd, BIO_get_fd(s->wbio, NULL), offset, nbytes, hdtr,
++	    &sbytes, flags);
++	if (ret < 0) {
++		BIO_set_error(s->wbio, errno);
++		if ((errno == EAGAIN) ||
++		    (errno == EINTR) ||
++		    (errno == EBUSY)) {
++			BIO_set_retry_write(s->wbio);
++			if (sbytes == 0) {
++				sbytes = -1;
++			}
++			return (sbytes);
++		}
++	} else {
++		BIO_set_error(s->wbio, 0);
++	}
++	s->rwstate = SSL_NOTHING;
++	return (sbytes);
++}
++#endif
++
++int
++SSL_get_wbio_error(SSL *ssl)
++{
++	return(BIO_get_error(ssl->wbio));
++}
++
++int
++SSL_get_rbio_error(SSL *ssl)
++{
++	return(BIO_get_error(ssl->rbio));
++}
++
+ /*
+  * One compiler (Diab DCC) doesn't like argument names in returned function
+  * pointer.
+--- a/crypto/openssl/ssl/t1_enc.c
++++ ./crypto/openssl/ssl/t1_enc.c
+@@ -148,6 +148,15 @@
+ # include <openssl/des.h>
+ #endif
+ 
++#ifdef __FreeBSD__
++#include <sys/types.h>
++#include <sys/socket.h>
++#include <sys/sockbuf_tls.h>
++#include <crypto/cryptodev.h>
++#include <netinet/in.h>
++#include <netinet/tcp.h>
++#endif
++
+ /* seed1 through seed5 are virtually concatenated */
+ static int tls1_P_hash(const EVP_MD *md, const unsigned char *sec,
+                        int sec_len,
+@@ -339,6 +348,11 @@ int tls1_change_cipher_state(SSL *s, int which)
+     EVP_PKEY *mac_key;
+     int is_export, n, i, j, k, exp_label_len, cl;
+     int reuse_dd = 0;
++#if defined(TCP_TLS_ENABLE)
++    struct tls_so_enable tls_en;
++    int sd;
++    BIO *wbio;
++#endif
+ 
+     is_export = SSL_C_IS_EXPORT(s->s3->tmp.new_cipher);
+     c = s->s3->tmp.new_sym_enc;
+@@ -583,6 +597,77 @@ int tls1_change_cipher_state(SSL *s, int which)
+         SSLerr(SSL_F_TLS1_CHANGE_CIPHER_STATE, ERR_R_INTERNAL_ERROR);
+         goto err2;
+     }
++
++#if defined(TCP_TLS_ENABLE)
++
++    if (!(which & SSL3_CC_WRITE)) {
++        goto skip_offload;
++    }
++
++    wbio = s->wbio;
++    if (!wbio) {
++        goto skip_offload;
++    }
++    bzero(&tls_en, sizeof(tls_en));
++    sd = BIO_get_fd(wbio, NULL);
++    if (EVP_CIPHER_mode(c) == EVP_CIPH_GCM_MODE) {
++	tls_en.crypt_algorithm = CRYPTO_AES_NIST_GCM_16;
++	tls_en.iv_len = EVP_GCM_TLS_FIXED_IV_LEN;
++	switch (8 * EVP_CIPHER_key_length(c)) {
++	case 128:
++	    tls_en.mac_algorthim = CRYPTO_AES_128_NIST_GMAC;
++	    break;
++	case 192:
++	    tls_en.mac_algorthim = CRYPTO_AES_192_NIST_GMAC;
++	    break;
++	case 256:
++	    tls_en.mac_algorthim = CRYPTO_AES_256_NIST_GMAC;
++	    break;
++	default:
++#ifdef KSSL_DEBUG
++	    printf("\nSkipping offload fpr ciph len %d\n", EVP_CIPHER_key_length(c));
++#endif
++
++	    goto skip_offload;
++	}
++    } else if (EVP_CIPHER_mode(c) == EVP_CIPH_CBC_MODE) {
++
++	tls_en.crypt_algorithm = CRYPTO_AES_CBC;
++	tls_en.iv_len = EVP_CIPHER_iv_length(c);
++	switch (dd->cipher->nid) {
++	/* XXX CBC?  Do we even care */
++	case NID_aes_128_cbc_hmac_sha1:
++	case NID_aes_256_cbc_hmac_sha1:
++	    tls_en.mac_algorthim = CRYPTO_SHA1_HMAC;
++	    break;
++	case NID_aes_128_cbc_hmac_sha256:
++	case NID_aes_256_cbc_hmac_sha256:
++	    tls_en.mac_algorthim = CRYPTO_SHA2_256_HMAC;
++	    break;
++	default:
++	    goto skip_offload;
++	}
++	tls_en.hmac_key = ms;
++	tls_en.hmac_key_len = *mac_secret_size;
++    } else {
++#ifdef KSSL_DEBUG
++	    printf("\nSkipping offload fpr ciph mode %lu\n", EVP_CIPHER_mode(c));
++#endif
++
++	goto skip_offload;
++    }
++    tls_en.key_size = EVP_CIPHER_key_length(c);
++    tls_en.tls_vmajor = (s->version >> 8) & 0x000000ff;
++    tls_en.tls_vminor = (s->version & 0x000000ff);
++    tls_en.crypt_key_len = EVP_CIPHER_key_length(c);
++    tls_en.crypt = key;
++    tls_en.iv = iv;
++    (void)BIO_flush(wbio);
++    BIO_set_offload_tx(wbio, &tls_en);
++
++skip_offload:
++#endif
++
+ #ifdef OPENSSL_SSL_TRACE_CRYPTO
+     if (s->msg_callback) {
+         int wh = which & SSL3_CC_WRITE ? TLS1_RT_CRYPTO_WRITE : 0;

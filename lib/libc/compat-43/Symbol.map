@@ -1,0 +1,31 @@
+/*
+ * $FreeBSD: releng/12.0/lib/libc/compat-43/Symbol.map 277032 2015-01-11 22:16:31Z kib $
+ */
+
+FBSD_1.0 {
+	creat;
+	gethostid;
+	getwd;
+	killpg;
+	sethostid;
+	setpgrp;
+	setrgid;
+	setruid;
+	sigblock;
+	sigpause;
+	sigsetmask;
+	sigvec;
+};
+
+FBSD_1.2 {
+	sighold;
+	sigignore;
+	sigrelse;
+	sigset;
+	xsi_sigpause;
+};
+
+FBSDprivate_1.0 {
+	__creat;
+	_creat;
+};

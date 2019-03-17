@@ -1,0 +1,5 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_LEGACY_CONSOLE 296264 2016-03-01 11:36:10Z trasz $
+Set to not build programs that support a legacy PC console; e.g.,
+.Xr kbdcontrol 1
+and
+.Xr vidcontrol 1 .

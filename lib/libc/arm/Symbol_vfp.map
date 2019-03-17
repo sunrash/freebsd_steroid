@@ -1,0 +1,15 @@
+/*
+ * $FreeBSD: releng/12.0/lib/libc/arm/Symbol_vfp.map 313873 2017-02-17 13:49:46Z mmel $
+ */
+
+FBSD_1.0 {
+	fpgetmask;
+	fpgetround;
+	fpsetmask;
+	fpsetround;
+};
+
+FBSD_1.5 {
+	fpgetsticky;
+	fpsetsticky;
+};

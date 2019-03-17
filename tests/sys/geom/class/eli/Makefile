@@ -1,0 +1,43 @@
+# $FreeBSD: releng/12.0/tests/sys/geom/class/eli/Makefile 329273 2018-02-14 20:15:32Z asomers $
+
+.PATH: ${SRCTOP}/sys/geom/eli ${SRCTOP}/sys/crypto/sha2
+
+PACKAGE=	tests
+
+TESTSDIR=	${TESTSBASE}/sys/geom/class/${.CURDIR:T}
+
+ATF_TESTS_C=	pbkdf2_test
+ATF_TESTS_SH+=	attach_test
+ATF_TESTS_SH+=	configure_test
+ATF_TESTS_SH+=	delkey_test
+ATF_TESTS_SH+=	detach_test
+ATF_TESTS_SH+=	init_test
+ATF_TESTS_SH+=	integrity_test
+ATF_TESTS_SH+=	kill_test
+ATF_TESTS_SH+=	misc_test
+ATF_TESTS_SH+=	onetime_test
+ATF_TESTS_SH+=	resize_test
+ATF_TESTS_SH+=	setkey_test
+
+${PACKAGE}FILES+=		conf.sh
+
+.for t in ${TAP_TESTS_SH}
+TEST_METADATA.$t+=	required_user="root"
+.endfor
+
+CFLAGS.pbkdf2_test=	-I${SRCTOP}/sys
+
+SRCS.pbkdf2_test=	\
+		hmac_test.c \
+		g_eli_crypto.c \
+		g_eli_hmac.c \
+		pkcs5v2.c \
+		sha512c.c \
+		sha256c.c
+
+LIBADD.pbkdf2_test= crypto
+
+testvect.h:
+	python gentestvect.py > ${.TARGET}
+
+.include <bsd.test.mk>

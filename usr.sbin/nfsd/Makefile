@@ -1,0 +1,7 @@
+#	@(#)Makefile	8.1 (Berkeley) 6/5/93
+# $FreeBSD: releng/12.0/usr.sbin/nfsd/Makefile 337361 2018-08-05 20:15:33Z rmacklem $
+
+PROG=	nfsd
+MAN=	nfsd.8 nfsv4.4 stablerestart.5 pnfs.4 pnfsserver.4
+
+.include <bsd.prog.mk>

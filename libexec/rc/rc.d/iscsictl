@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# $FreeBSD: releng/12.0/libexec/rc/rc.d/iscsictl 298514 2016-04-23 16:10:54Z lme $
+#
+
+# PROVIDE: iscsictl
+# REQUIRE: NETWORK iscsid
+# BEFORE:  DAEMON
+# KEYWORD: nojail
+
+. /etc/rc.subr
+
+name="iscsictl"
+desc="iSCSI initiator management utility"
+rcvar="iscsictl_enable"
+command="/usr/bin/${name}"
+command_args="${iscsictl_flags}"
+required_modules="iscsi"
+
+load_rc_config $name
+run_rc_command "$1"

@@ -1,0 +1,5 @@
+# $FreeBSD: releng/12.0/contrib/netcat/FREEBSD-vendor 249520 2013-04-15 18:35:09Z delphij $
+Project:	netcat (aka src/usr.bin/nc in OpenBSD)
+ProjectURL:	http://www.openbsd.org/
+Version:	5.3
+License:	BSD

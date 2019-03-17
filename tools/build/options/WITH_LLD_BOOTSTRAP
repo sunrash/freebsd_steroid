@@ -1,0 +1,2 @@
+.\" $FreeBSD: releng/12.0/tools/build/options/WITH_LLD_BOOTSTRAP 316647 2017-04-09 01:35:19Z emaste $
+Set to build the LLD linker during the bootstrap phase of the build.

@@ -1,0 +1,44 @@
+#
+# WITHOUT_SOURCELESS_UCODE -- Disable drivers that include sourceless
+# microcode.
+#
+# $FreeBSD: releng/12.0/sys/conf/WITHOUT_SOURCELESS_UCODE 307529 2016-10-17 20:38:24Z avos $
+
+nodevice	adw
+nodevice	bce
+nodevice	fatm
+nodevice	fxp
+nodevice	ispfw
+nodevice	mwlfw
+nodevice	ralfw
+nodevice	rtwnfw
+nodevice	runfw
+nodevice	sf
+nodevice	ti
+nodevice	txp
+nodevice	ce
+nodevice	cp
+nodevice	ctau
+nodevice	ipwfw
+nodevice	iwifw
+nodevice	iwmfw
+nodevice	iwnfw
+nodevice	wpifw
+
+# drm
+nodevice	mga
+nodevice	r128
+nodevice	radeon
+
+# sound
+nodevice	csa
+nodevice	ds1
+nodevice	maestro3
+
+# usb
+nodevice	rsu
+nodevice	rsufw
+nodevice	rum
+nodevice	uath
+nodevice	zyd
+nodevice	kue
