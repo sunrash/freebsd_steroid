@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/efi/loader/arch/arm64/ldscript.arm64 307324 2016-10-14 16:23:12Z imp $ */
+/* $FreeBSD$ */
 /*
 OUTPUT_FORMAT("elf64-aarch64-freebsd", "elf64-aarch64-freebsd", "elf64-aarch64-freebsd")
 */

@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	@(#)Title	8.2 (Berkeley) 4/19/94
-.\" $FreeBSD: releng/12.0/share/doc/psd/title/Title 307807 2016-10-22 23:09:06Z bapt $
+.\" $FreeBSD$
 .\"
 .ps 18
 .vs 22

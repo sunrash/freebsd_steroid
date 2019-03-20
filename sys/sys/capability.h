@@ -28,14 +28,15 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/capability.h 334931 2018-06-10 19:15:38Z eadler $
+ * $FreeBSD$
  */
 
 /*
  * Historically, the key userspace and kernel Capsicum definitions were found
  * in this file.  However, it conflicted with POSIX.1e's capability.h, so has
  * been renamed capsicum.h.  The file remains for backwards compatibility
- * reasons as a nested include.
+ * reasons as a nested include.  It is expected to be removed before
+ * FreeBSD 13.
  */
 #ifndef _SYS_CAPABILITY_H_
 #define	_SYS_CAPABILITY_H_

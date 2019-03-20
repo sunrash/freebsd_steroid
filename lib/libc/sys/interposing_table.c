@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/sys/interposing_table.c 315526 2017-03-19 00:51:12Z vangyzen $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include "libc_private.h"

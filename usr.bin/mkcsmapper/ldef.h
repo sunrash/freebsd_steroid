@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/mkcsmapper/ldef.h 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: ldef.h,v 1.2 2006/09/09 14:35:17 tnozaki Exp $	*/
 
 /*-

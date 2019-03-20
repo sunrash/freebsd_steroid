@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/sparc64/ebus/ebusreg.h 326262 2017-11-27 15:10:39Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: ebusreg.h,v 1.4 2001/10/01 18:08:04 jason Exp $	*/
 /*	$NetBSD: ebusreg.h,v 1.8 2008/05/29 14:51:27 mrg Exp $	*/
 

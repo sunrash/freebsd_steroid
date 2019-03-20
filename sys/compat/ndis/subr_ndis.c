@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/ndis/subr_ndis.c 335297 2018-06-17 19:24:40Z dim $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This file implements a translation layer between the BSD networking

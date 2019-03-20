@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/vmstat/tests/Makefile 327832 2018-01-11 16:04:04Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/ntptime/Makefile 330104 2018-02-28 07:59:55Z delphij $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/contrib/ntp/util
 

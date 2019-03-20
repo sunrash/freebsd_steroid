@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: inp.c,v 1.44 2015/07/26 14:32:19 millert Exp $
- * $FreeBSD: releng/12.0/usr.bin/patch/inp.c 327826 2018-01-11 15:01:48Z kevans $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

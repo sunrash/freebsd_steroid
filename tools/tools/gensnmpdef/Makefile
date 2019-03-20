@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/gensnmpdef/Makefile 311748 2017-01-09 05:46:41Z ngie $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/contrib/bsnmp/gensnmpdef
 

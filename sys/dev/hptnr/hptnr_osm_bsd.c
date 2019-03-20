@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hptnr/hptnr_osm_bsd.c 327498 2018-01-02 18:31:32Z emaste $
+ * $FreeBSD$
  */
 #include <dev/hptnr/hptnr_config.h>
 #include <dev/hptnr/os_bsd.h>

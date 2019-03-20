@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 4/2/94
-# $FreeBSD: releng/12.0/usr.bin/chpass/Makefile 315170 2017-03-12 18:58:44Z imp $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

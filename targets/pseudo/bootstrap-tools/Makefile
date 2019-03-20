@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/targets/pseudo/bootstrap-tools/Makefile 325412 2017-11-05 00:11:51Z bdrewery $
+# $FreeBSD$
 
 # building clang is particularly tedious - so avoid re-inventing wheels
 

@@ -29,7 +29,7 @@
 #define __R300D_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/r300d.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define CP_PACKET0			0x00000000
 #define		PACKET0_BASE_INDEX_SHIFT	0

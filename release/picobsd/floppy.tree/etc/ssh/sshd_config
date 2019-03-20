@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/release/picobsd/floppy.tree/etc/ssh/sshd_config 256641 2013-10-16 16:53:00Z luigi $
+# $FreeBSD$
 # minimal config for sshd on picobsd
 Port 22
 ListenAddress 0.0.0.0

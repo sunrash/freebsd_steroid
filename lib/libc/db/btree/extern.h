@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.10 (Berkeley) 7/20/94
- * $FreeBSD: releng/12.0/lib/libc/db/btree/extern.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 int	 __bt_close(DB *);

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/string/memcmp_test.c 296434 2016-03-06 18:41:48Z jilles $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 #include <stdio.h>

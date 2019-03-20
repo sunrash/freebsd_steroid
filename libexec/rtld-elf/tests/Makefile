@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/rtld-elf/tests/Makefile 315040 2017-03-11 00:10:40Z asomers $
+# $FreeBSD$
 
 SUBDIR+=	libpythagoras target
 

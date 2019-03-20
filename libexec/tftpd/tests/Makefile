@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/tftpd/tests/Makefile 330696 2018-03-09 15:30:20Z asomers $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

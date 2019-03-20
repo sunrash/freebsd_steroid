@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/gnu/usr.bin/binutils/libbinutils/config.h 338860 2018-09-21 17:44:05Z brooks $ */
+/* $FreeBSD$ */
 
 /* FreeBSD isn't any form of AIX. */
 #define bin_dummy_emulation bin_vanilla_emulation

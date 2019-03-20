@@ -37,7 +37,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/armreg.h 336783 2018-07-27 21:25:01Z imp $
+ * $FreeBSD$
  */
 
 #ifndef MACHINE_ARMREG_H

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpica/acpi_smbat.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_acpi.h"
 #include <sys/param.h>
@@ -107,16 +107,18 @@ acpi_smbat_probe(device_t dev)
 {
 	static char *smbat_ids[] = {"ACPI0001", "ACPI0005", NULL};
 	ACPI_STATUS status;
+	int rv;
 
-	if (acpi_disabled("smbat") ||
-	    ACPI_ID_PROBE(device_get_parent(dev), dev, smbat_ids) == NULL)
+	if (acpi_disabled("smbat"))
 		return (ENXIO);
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, smbat_ids, NULL);
+	if (rv > 0)
+	  return (rv);
 	status = AcpiEvaluateObject(acpi_get_handle(dev), "_EC", NULL, NULL);
 	if (ACPI_FAILURE(status))
 		return (ENXIO);
-
 	device_set_desc(dev, "ACPI Smart Battery");
-	return (0);
+	return (rv);
 }
 
 static int

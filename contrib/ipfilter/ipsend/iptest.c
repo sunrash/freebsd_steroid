@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/ipsend/iptest.c 255332 2013-09-06 23:11:19Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * ipsend.c (C) 1995-1998 Darren Reed

@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.1 (Berkeley) 6/6/93
-# $FreeBSD: releng/12.0/usr.sbin/lpr/lpd/Makefile 338822 2018-09-20 09:21:05Z brd $
+# $FreeBSD$
 
 CONFS=	hosts.lpd printcap
 PROG=	lpd

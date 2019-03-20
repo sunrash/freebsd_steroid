@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/devfs/devfs_dir.c 326395 2017-11-30 14:06:54Z manu $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

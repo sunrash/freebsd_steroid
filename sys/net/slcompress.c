@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)slcompress.c	8.2 (Berkeley) 4/16/94
- * $FreeBSD: releng/12.0/sys/net/slcompress.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

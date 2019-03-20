@@ -28,7 +28,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/mips/include/cdefs.h 326403 2017-11-30 15:48:35Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MIPS_CDEFS_H_

@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/reg.h 326165 2017-11-24 13:50:53Z ed $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_REG_H_
@@ -42,7 +42,11 @@ struct reg {
 };
 
 struct reg32 {
-	int dummy;
+	unsigned int r[13];
+	unsigned int r_sp;
+	unsigned int r_lr;
+	unsigned int r_pc;
+	unsigned int r_cpsr;
 };
 
 struct fpreg {

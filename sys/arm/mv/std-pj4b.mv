@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/mv/std-pj4b.mv 331995 2018-04-04 08:40:49Z mw $
+# $FreeBSD$
 
 files		"../mv/files.arm7"
 cpu		CPU_MV_PJ4B

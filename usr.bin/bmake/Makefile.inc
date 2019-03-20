@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/bmake/Makefile.inc 330260 2018-03-02 01:53:50Z sjg $ 
+# $FreeBSD$ 
 
 .sinclude <src.opts.mk>
 

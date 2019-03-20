@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/man/man4/man4.arm/Makefile 336796 2018-07-27 23:28:35Z imp $
+# $FreeBSD$
 
 PACKAGE=runtime-manuals
 

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/mp_machdep.c 338143 2018-08-21 16:43:46Z alc $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -78,7 +78,7 @@ machdep_ap_bootstrap(void)
 	__asm __volatile("msync; isync");
 
 	while (ap_letgo == 0)
-		__asm __volatile("or 27,27,27");
+		__asm __volatile("or 31,31,31");
 	__asm __volatile("or 6,6,6");
 
 	/*
@@ -100,7 +100,11 @@ machdep_ap_bootstrap(void)
 	/* Serialize console output and AP count increment */
 	mtx_lock_spin(&ap_boot_mtx);
 	ap_awake++;
-	printf("SMP: AP CPU #%d launched\n", PCPU_GET(cpuid));
+	if (bootverbose)
+		printf("SMP: AP CPU #%d launched\n", PCPU_GET(cpuid));
+	else
+		printf("%s%d%s", ap_awake == 2 ? "Launching APs: " : "",
+		    PCPU_GET(cpuid), ap_awake == mp_ncpus ? "\n" : " ");
 	mtx_unlock_spin(&ap_boot_mtx);
 
 	while(smp_started == 0)
@@ -182,6 +186,10 @@ cpu_mp_start(void)
 next:
 		error = platform_smp_next_cpu(&cpu);
 	}
+
+#ifdef SMP
+	platform_smp_probe_threads();
+#endif
 }
 
 void

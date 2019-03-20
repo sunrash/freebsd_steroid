@@ -56,7 +56,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sparc64/isa/ofw_isa.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SPARC64_ISA_OFW_ISA_H_

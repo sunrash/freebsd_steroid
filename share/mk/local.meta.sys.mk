@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/local.meta.sys.mk 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 
 # local configuration specific to meta mode
 # XXX some of this should be in meta.sys.mk

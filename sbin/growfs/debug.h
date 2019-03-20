@@ -38,7 +38,7 @@
  * SUCH DAMAGE.
  *
  * $TSHeader: src/sbin/growfs/debug.h,v 1.2 2000/11/16 18:43:50 tom Exp $
- * $FreeBSD: releng/12.0/sbin/growfs/debug.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  *
  */
 

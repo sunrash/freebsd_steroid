@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/al_eth/al_init_eth_lm.c 313982 2017-02-20 03:43:12Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "al_init_eth_lm.h"
 #include "al_serdes.h"

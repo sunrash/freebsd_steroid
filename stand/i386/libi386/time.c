@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/i386/libi386/time.c 316111 2017-03-28 21:47:12Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include <btxv86.h>

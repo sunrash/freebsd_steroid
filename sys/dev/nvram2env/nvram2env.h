@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  * 
- * $FreeBSD: releng/12.0/sys/dev/nvram2env/nvram2env.h 303258 2016-07-24 08:35:45Z mizhka $
+ * $FreeBSD$
  */
 
 

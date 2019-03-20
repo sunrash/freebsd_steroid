@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)options.h	8.2 (Berkeley) 4/18/94
- * $FreeBSD: releng/12.0/bin/pax/options.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

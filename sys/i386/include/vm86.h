@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/vm86.h 326260 2017-11-27 15:08:52Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_VM86_H_
@@ -111,7 +111,7 @@ struct vm86context {
 		int	flags;
 		int	pte_num;
 		vm_offset_t	kva;
-		u_int	old_pte;
+		uint64_t	old_pte;
 	} pmap[VM86_PMAPSIZE];
 };
 

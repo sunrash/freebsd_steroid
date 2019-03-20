@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_bridge/Makefile 335885 2018-07-03 08:44:40Z harti $
+# $FreeBSD$
 #
 
 MOD=	bridge

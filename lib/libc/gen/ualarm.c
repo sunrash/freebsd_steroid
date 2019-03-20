@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)ualarm.c	8.1 (Berkeley) 6/4/93");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/ualarm.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/time.h>
 #include <unistd.h>

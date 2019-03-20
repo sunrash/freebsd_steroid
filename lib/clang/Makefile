@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/clang/Makefile 309124 2016-11-24 22:54:55Z dim $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

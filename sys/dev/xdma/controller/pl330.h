@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/xdma/controller/pl330.h 332469 2018-04-13 12:43:54Z br $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_XDMA_CONTROLLER_PL330_H_

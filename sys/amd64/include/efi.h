@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/efi.h 338437 2018-09-02 21:37:05Z kib $
+ * $FreeBSD$
  */
 
 #ifndef __AMD64_INCLUDE_EFI_H_

@@ -40,7 +40,7 @@ static const char copyright[] =
 static char sccsid[] = "@(#)tee.c	8.1 (Berkeley) 6/6/93";
 #endif
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/usr.bin/tee/tee.c 335395 2018-06-19 23:43:14Z oshogbo $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/capsicum.h>
@@ -147,7 +147,7 @@ add(int fd, const char *name)
 			err(EXIT_FAILURE, "unable to limit stdout");
 	} else {
 		cap_rights_init(&rights, CAP_WRITE, CAP_FSTAT);
-		if (cap_rights_limit(fd, &rights) < 0 && errno != ENOSYS)
+		if (caph_rights_limit(fd, &rights) < 0)
 			err(EXIT_FAILURE, "unable to limit rights");
 	}
 

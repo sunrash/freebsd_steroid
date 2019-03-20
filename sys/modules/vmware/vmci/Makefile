@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/vmware/vmci/Makefile 332263 2018-04-08 01:32:56Z mp $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/vmware/vmci
 

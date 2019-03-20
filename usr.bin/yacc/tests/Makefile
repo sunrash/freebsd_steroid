@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/yacc/tests/Makefile 313106 2017-02-02 20:01:54Z jkim $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

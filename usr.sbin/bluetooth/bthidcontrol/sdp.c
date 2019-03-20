@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: sdp.c,v 1.3 2004/02/17 22:14:57 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidcontrol/sdp.c 333112 2018-04-30 10:49:29Z wulf $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

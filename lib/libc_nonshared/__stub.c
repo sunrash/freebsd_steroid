@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc_nonshared/__stub.c 326219 2017-11-26 02:00:33Z pfg $
+ * $FreeBSD$
  */
 
 extern int __stub_N8TwezWFyocUB;

@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netgraph/ng_source.c 298813 2016-04-29 21:25:05Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This node is used for high speed packet geneneration.  It queues
@@ -125,8 +125,16 @@ static int		ng_source_dup_mod(sc_p, struct mbuf *,
 
 /* Parse type for timeval */
 static const struct ng_parse_struct_field ng_source_timeval_type_fields[] = {
+#ifdef __i386__
 	{ "tv_sec",		&ng_parse_int32_type	},
+#else
+	{ "tv_sec",		&ng_parse_int64_type	},
+#endif
+#ifdef __LP64__
+	{ "tv_usec",		&ng_parse_int64_type	},
+#else
 	{ "tv_usec",		&ng_parse_int32_type	},
+#endif
 	{ NULL }
 };
 const struct ng_parse_type ng_source_timeval_type = {

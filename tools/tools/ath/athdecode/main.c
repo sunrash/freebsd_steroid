@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/athdecode/main.c 269638 2014-08-06 18:59:39Z adrian $
+ * $FreeBSD$
  */
 #include "diag.h"
 

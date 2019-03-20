@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/net80211/ieee80211_proto.c 326737 2017-12-09 23:16:02Z adrian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * IEEE 802.11 protocol support.

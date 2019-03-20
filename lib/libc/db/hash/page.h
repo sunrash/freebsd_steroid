@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)page.h	8.2 (Berkeley) 5/31/94
- * $FreeBSD: releng/12.0/lib/libc/db/hash/page.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

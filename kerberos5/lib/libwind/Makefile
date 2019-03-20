@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/kerberos5/lib/libwind/Makefile 275022 2014-11-25 09:57:42Z bapt $
+#$FreeBSD$
 
 LIB=	wind
 LDFLAGS=	-Wl,--no-undefined
@@ -27,7 +27,7 @@ SRCS=	bidi.c \
 SRCS+=	wind_err.c \
 	wind_err.h
 
-CFLAGS+=-I${KRB5DIR}/lib/roken -I.
+CFLAGS+=-I${KRB5DIR}/lib/roken -I${SRCTOP}/contrib/com_err -I.
 
 .include <bsd.lib.mk>
 

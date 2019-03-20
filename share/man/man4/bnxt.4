@@ -23,9 +23,9 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 .\" THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man4/bnxt.4 338834 2018-09-20 18:24:32Z shurd $
+.\" $FreeBSD$
 .\"
-.Dd September 20, 2018
+.Dd January 30, 2019
 .Dt BNXT 4
 .Os
 .Sh NAME
@@ -36,6 +36,7 @@ To compile this driver into the kernel,
 place the following lines in your
 kernel configuration file:
 .Bd -ragged -offset indent
+.Cd "device iflib"
 .Cd "device bnxt"
 .Ed
 .Pp

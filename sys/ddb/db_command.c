@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/ddb/db_command.c 332648 2018-04-17 15:44:05Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/linker_set.h>
@@ -145,7 +145,7 @@ static struct command db_cmds[] = {
 	{ "reset",	db_reset,		0,	NULL },
 	{ "kill",	db_kill,		CS_OWN,	NULL },
 	{ "watchdog",	db_watchdog,		CS_OWN,	NULL },
-	{ "thread",	db_set_thread,		CS_OWN,	NULL },
+	{ "thread",	db_set_thread,		0,	NULL },
 	{ "run",	db_run_cmd,		CS_OWN,	NULL },
 	{ "script",	db_script_cmd,		CS_OWN,	NULL },
 	{ "scripts",	db_scripts_cmd,		0,	NULL },

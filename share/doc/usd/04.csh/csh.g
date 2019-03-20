@@ -27,7 +27,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	@(#)csh.g	8.1 (Berkeley) 6/8/93
-.\" $FreeBSD: releng/12.0/share/doc/usd/04.csh/csh.g 314436 2017-02-28 23:42:47Z imp $
+.\" $FreeBSD$
 .\"
 .SH
 Glossary

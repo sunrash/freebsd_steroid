@@ -26,7 +26,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 # THE POSSIBILITY OF SUCH DAMAGES.
 #
-# $FreeBSD: releng/12.0/sys/modules/gpio/gpiobus/Makefile 327681 2018-01-07 20:28:17Z jhibbits $
+# $FreeBSD$
 #
 
 .PATH:	${SRCTOP}/sys/dev/gpio/

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/tzsetup/tzsetup.c 337522 2018-08-09 02:47:22Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <errno.h>

@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/test/dn_test.h 294882 2016-01-27 02:22:31Z luigi $
+ * $FreeBSD$
  *
  * userspace compatibility code for dummynet schedulers
  */

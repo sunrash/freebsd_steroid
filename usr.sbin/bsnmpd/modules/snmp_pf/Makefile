@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_pf/Makefile 335885 2018-07-03 08:44:40Z harti $
+# $FreeBSD$
 #
 # Author: Philip Paeps <philip@freebsd.org>
 

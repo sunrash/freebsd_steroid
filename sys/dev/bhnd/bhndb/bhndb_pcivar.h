@@ -30,7 +30,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/bhndb/bhndb_pcivar.h 328071 2018-01-17 03:34:26Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_BHNDB_PCIVAR_H_

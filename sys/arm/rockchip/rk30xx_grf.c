@@ -29,7 +29,7 @@
 /* General Register File for Rockchip RK30xx */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/rockchip/rk30xx_grf.c 326258 2017-11-27 15:04:10Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

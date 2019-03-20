@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/lib/libhdb/Makefile 314657 2017-03-04 11:34:36Z ngie $
+# $FreeBSD$
 
 LIB=	hdb
 LDFLAGS=	-Wl,--no-undefined ${LDAPLDFLAGS}
@@ -59,6 +59,7 @@ SRCS=	common.c \
 CFLAGS+=-I${KRB5DIR}/lib/hdb -I${KRB5DIR}/lib/asn1 \
 	-I${KRB5DIR}/lib/roken -I${SRCTOP}/contrib/sqlite3/ \
 	-I${KRB5DIR}/lib/krb5 \
+	-I${SRCTOP}/contrib/com_err \
 	-I. ${LDAPCFLAGS}
 CFLAGS+=-DHDB_DB_DIR="\"/var/heimdal\""
 

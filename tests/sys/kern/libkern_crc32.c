@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kern/libkern_crc32.c 317512 2017-04-27 17:53:05Z tuexen $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

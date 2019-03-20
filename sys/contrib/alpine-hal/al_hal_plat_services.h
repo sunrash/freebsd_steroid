@@ -57,7 +57,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <machine/atomic.h>
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/contrib/alpine-hal/al_hal_plat_services.h 305477 2016-09-06 14:59:13Z wma $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

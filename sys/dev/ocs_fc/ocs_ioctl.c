@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs_ioctl.c 336615 2018-07-22 18:31:15Z markj $
+ * $FreeBSD$
  */
 
 #include "ocs.h"
@@ -243,9 +243,13 @@ ocs_process_mbx_ioctl(ocs_t *ocs, ocs_ioctl_elxu_mbox_t *mcmd)
 	 *  6. ioctl code releases the lock
 	 */
 	mtx_lock(&ocs->dbg_lock);
-		ocs_hw_command(&ocs->hw, mcmd->payload, OCS_CMD_NOWAIT,
-				__ocs_ioctl_mbox_cb, ocs);
-		msleep(ocs, &ocs->dbg_lock, 0, "ocsmbx", 0);
+	if (ocs_hw_command(&ocs->hw, mcmd->payload, OCS_CMD_NOWAIT,
+			__ocs_ioctl_mbox_cb, ocs)) {
+
+		device_printf(ocs->dev, "%s: command- %x failed\n", __func__,
+			((sli4_mbox_command_header_t *)mcmd->payload)->command);
+	}
+	msleep(ocs, &ocs->dbg_lock, 0, "ocsmbx", 0);
 	mtx_unlock(&ocs->dbg_lock);
 
 	if( SLI4_MBOX_COMMAND_SLI_CONFIG == ((sli4_mbox_command_header_t *)mcmd->payload)->command

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/ds3231.c 330431 2018-03-05 00:15:56Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for Maxim DS3231[N] real-time clock/calendar.

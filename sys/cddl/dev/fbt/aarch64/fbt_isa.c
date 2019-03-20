@@ -23,7 +23,7 @@
  * Portions Copyright 2013 Howard Su howardsu@freebsd.org
  * Portions Copyright 2015 Ruslan Bukin <br@bsdpad.com>
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/fbt/aarch64/fbt_isa.c 338359 2018-08-28 20:21:36Z markj $
+ * $FreeBSD$
  */
 
 /*

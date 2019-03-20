@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/contrib/libnv/dnvlist.c 328474 2018-01-27 12:58:21Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #ifdef _KERNEL
 

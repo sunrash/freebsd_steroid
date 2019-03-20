@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_soctherm.c 306477 2016-09-30 05:25:15Z mmel $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Thermometer and thermal zones driver for Tegra SoCs.

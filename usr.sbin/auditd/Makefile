@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/usr.sbin/auditd/Makefile 337622 2018-08-11 13:23:09Z brd $
+# $FreeBSD$
 #
 
 OPENBSMDIR=${SRCTOP}/contrib/openbsm

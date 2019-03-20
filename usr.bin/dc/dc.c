@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/dc/dc.c 335312 2018-06-18 04:54:09Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stat.h>
 

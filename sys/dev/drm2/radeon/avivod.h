@@ -28,7 +28,7 @@
 #define AVIVOD_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/avivod.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 
 #define	D1CRTC_CONTROL					0x6080

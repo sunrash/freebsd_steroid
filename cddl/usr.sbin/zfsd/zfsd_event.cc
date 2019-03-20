@@ -67,7 +67,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__FBSDID("$FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/zfsd_event.cc 329344 2018-02-15 21:30:30Z asomers $");
+__FBSDID("$FreeBSD$");
 /*============================ Namespace Control =============================*/
 using DevdCtl::Event;
 using DevdCtl::Guid;

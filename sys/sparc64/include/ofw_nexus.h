@@ -55,7 +55,7 @@
  *
  *	from: NetBSD: psychoreg.h,v 1.14 2008/05/30 02:29:37 mrg Exp
  *
- * $FreeBSD: releng/12.0/sys/sparc64/include/ofw_nexus.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_OFW_NEXUS_H_

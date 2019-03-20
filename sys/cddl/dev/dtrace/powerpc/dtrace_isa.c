@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2012,2013 Justin Hibbits <jhibbits@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/powerpc/dtrace_isa.c 336355 2018-07-16 19:47:29Z jhibbits $
+ * $FreeBSD$
  */
 /*
  * Copyright 2005 Sun Microsystems, Inc.  All rights reserved.

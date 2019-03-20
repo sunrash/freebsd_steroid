@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/share/examples/hwpmc/overhead.c 334701 2018-06-06 02:48:09Z mmacy $
+ * $FreeBSD$
  *
  * Author: George V. Neville-Neil
  *

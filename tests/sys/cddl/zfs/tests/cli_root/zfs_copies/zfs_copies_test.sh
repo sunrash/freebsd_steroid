@@ -18,7 +18,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zfs_copies/zfs_copies_test.sh 330979 2018-03-15 09:28:10Z avg $
+# $FreeBSD$
 
 #
 # Copyright 2012 Spectra Logic.  All rights reserved.

@@ -1,7 +1,7 @@
 /* This file is in the public domain. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/xform_poly1305.c 337939 2018-08-17 00:30:04Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <opencrypto/xform_auth.h>
 #include <opencrypto/xform_poly1305.h>

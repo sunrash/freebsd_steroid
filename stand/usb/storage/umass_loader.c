@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/usb/storage/umass_loader.c 317097 2017-04-18 18:07:54Z tsoome $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2014 Hans Petter Selasky <hselasky@FreeBSD.org>
  * All rights reserved.

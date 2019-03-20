@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/sys/dev/vmware/vmci/LICENSE 332263 2018-04-08 01:32:56Z mp $
+$FreeBSD$
 
 These files are provided under a dual BSD-2 Clause/GPLv2 license. When
 using or redistributing this file, you may do so under either license.

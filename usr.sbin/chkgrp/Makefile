@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/chkgrp/Makefile 201390 2010-01-02 11:07:44Z ed $
+# $FreeBSD$
 
 PROG=	chkgrp
 MAN=	chkgrp.8

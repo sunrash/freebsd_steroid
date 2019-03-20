@@ -34,7 +34,7 @@
  *
  *	@(#)fpu_arith.h	8.1 (Berkeley) 6/11/93
  *	$NetBSD: fpu_arith.h,v 1.3 2000/07/24 04:11:03 mycroft Exp $
- * $FreeBSD: releng/12.0/lib/libc/sparc64/fpu/fpu_arith.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

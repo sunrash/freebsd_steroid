@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/iconv/iconvctl_test.c 333430 2018-05-09 20:12:59Z vangyzen $");
+__FBSDID("$FreeBSD$");
 
 #include <iconv.h>
 

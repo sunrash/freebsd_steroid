@@ -30,7 +30,7 @@ License Agreement applies to this software.
 	Written at Bellcore for the S/Key Version 1 software distribution
 		(keyinfo)
 
-$FreeBSD: releng/12.0/contrib/opie/opieinfo.c 257264 2013-10-28 18:24:31Z sbruno $
+$FreeBSD$
 
 */
 

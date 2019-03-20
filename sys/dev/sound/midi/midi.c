@@ -37,7 +37,7 @@
   */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sound/midi/midi.c 338424 2018-09-01 15:07:38Z gjb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/queue.h>

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/cfumass 334254 2018-05-27 10:48:21Z trasz $
+# $FreeBSD$
 #
 
 # PROVIDE: cfumass

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_kthread.c 334647 2018-06-05 04:26:40Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -166,7 +166,7 @@ kproc_exit(int ecode)
 	 */
 	sx_xlock(&proctree_lock);
 	PROC_LOCK(p);
-	proc_reparent(p, initproc);
+	proc_reparent(p, initproc, true);
 	PROC_UNLOCK(p);
 	sx_xunlock(&proctree_lock);
 

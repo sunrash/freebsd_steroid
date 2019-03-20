@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/nfs/nfs_diskless.c 334118 2018-05-23 21:02:14Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bootp.h"
 

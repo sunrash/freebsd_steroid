@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_devmap.c 336519 2018-07-19 21:58:06Z manu $");
+__FBSDID("$FreeBSD$");
 
 /* Routines for mapping device memory. */
 

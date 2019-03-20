@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 ***************************************************************************/
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgb/common/cxgb_ael1002.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <cxgb_include.h>
 

@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/dev/ath/if_ath_pci_devlist.h 336067 2018-07-07 15:25:16Z imp $
+ * $FreeBSD$
  */
 
 static const struct pci_device_table ath_pci_id_table[] = {

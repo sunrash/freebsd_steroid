@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ccp/Makefile 328150 2018-01-18 22:01:30Z cem $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/crypto/ccp
 

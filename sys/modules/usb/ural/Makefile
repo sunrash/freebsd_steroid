@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/usb/ural/Makefile 330749 2018-03-10 23:16:24Z avos $
+# $FreeBSD$
 #
 # Copyright (c) 2008 Hans Petter Selasky. All rights reserved.
 #

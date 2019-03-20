@@ -24,7 +24,7 @@
  *
  * Embedded Artists LPC3250-Kit Device Tree Source.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/ea3250.dts 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 /dts-v1/;

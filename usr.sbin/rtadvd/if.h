@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/rtadvd/if.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: if.h,v 1.10 2003/02/24 11:29:10 ono Exp $	*/
 
 /*-

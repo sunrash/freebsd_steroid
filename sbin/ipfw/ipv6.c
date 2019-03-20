@@ -17,7 +17,7 @@
  *
  * NEW command line interface for IP firewall facility
  *
- * $FreeBSD: releng/12.0/sbin/ipfw/ipv6.c 340277 2018-11-09 08:14:47Z ae $
+ * $FreeBSD$
  *
  * ipv6 support
  */
@@ -401,7 +401,7 @@ fill_ip6(ipfw_insn_ip6 *cmd, char *av, int cblen, struct tidx *tstate)
 				n2mask(&d[1], masklen);
 		}
 
-		APPLY_MASK(d, &d[1])   /* mask base address with mask */
+		APPLY_MASK(d, &d[1]);   /* mask base address with mask */
 
 		av = q;
 

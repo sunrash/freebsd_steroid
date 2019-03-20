@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/e_lgammal_r.c 306709 2016-10-05 17:04:58Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /*
  * See e_lgamma_r.c for complete comments.

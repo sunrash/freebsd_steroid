@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)sel_subs.h	8.1 (Berkeley) 5/31/93
- * $FreeBSD: releng/12.0/bin/pax/sel_subs.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

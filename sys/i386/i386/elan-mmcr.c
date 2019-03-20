@@ -41,7 +41,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/elan-mmcr.c 326408 2017-11-30 20:33:45Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_cpu.h"
 #include <sys/param.h>

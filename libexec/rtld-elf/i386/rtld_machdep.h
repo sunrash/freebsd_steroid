@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/i386/rtld_machdep.h 326274 2017-11-27 15:25:02Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef RTLD_MACHDEP_H
@@ -58,7 +58,7 @@ extern uint32_t cpu_feature2;
 extern uint32_t cpu_stdext_feature;
 extern uint32_t cpu_stdext_feature2;
 #define	call_ifunc_resolver(ptr) \
-	(((Elf_Addr (*)(uint32_t, uint32_t, uint32_t, uint32_t))ptr)( \
+	(((Elf_Addr (*)(uint32_t, uint32_t, uint32_t, uint32_t))(ptr))( \
 	    cpu_feature, cpu_feature2, cpu_stdext_feature, cpu_stdext_feature2))
 
 #define round(size, align) \

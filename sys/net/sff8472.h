@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/net/sff8472.h 326571 2017-12-05 18:42:07Z erj $
+ * $FreeBSD$
  */
 
 /*

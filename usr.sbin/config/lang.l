@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)lang.l	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.sbin/config/lang.l 338120 2018-08-20 22:08:03Z kevans $
+ * $FreeBSD$
  */
 
 #include <assert.h>

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_sendfile.c 339379 2018-10-16 15:57:16Z glebius $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -65,6 +65,7 @@ __FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_sendfile.c 339379 2018-10-16 15:57
 #define	EXT_FLAG_SYNC		EXT_FLAG_VENDOR1
 #define	EXT_FLAG_NOCACHE	EXT_FLAG_VENDOR2
 #define	EXT_FLAG_CACHE_LAST	EXT_FLAG_VENDOR3
+
 /*
  * Structure describing a single sendfile(2) I/O, which may consist of
  * several underlying pager I/Os.
@@ -85,6 +86,7 @@ struct sf_io {
 	int		npages;
 	struct socket	*so;
 	struct mbuf	*m;
+	struct sbtls_session *tls;
 	vm_page_t	pa[];
 };
 
@@ -120,7 +122,6 @@ sfstat_sysctl(SYSCTL_HANDLER_ARGS)
 }
 SYSCTL_PROC(_kern_ipc, OID_AUTO, sfstat, CTLTYPE_OPAQUE | CTLFLAG_RW,
     NULL, 0, sfstat_sysctl, "I", "sendfile statistics");
-
 
 /*
  * Detach mapped page and release resources back to the system.  Called
@@ -237,8 +238,6 @@ sendfile_free_mext_pg(struct mbuf *m)
 	}
 }
 
-
-
 /*
  * Helper function to calculate how much data to put into page i of n.
  * Only first and last pages are special.
@@ -319,6 +318,17 @@ sendfile_iodone(void *arg, vm_page_t *pg, int count, int error)
 	if (!refcount_release(&sfio->nios))
 		return;
 
+#ifdef INVARIANTS
+	if ((sfio->m->m_flags & M_EXT) != 0 &&
+	    sfio->m->m_ext.ext_type == EXT_PGS) {
+		struct mbuf_ext_pgs *ext_pgs;
+
+		ext_pgs = (struct mbuf_ext_pgs *)sfio->m->m_ext.ext_buf;
+		KASSERT(sfio->tls == ext_pgs->tls, ("TLS session mismatch"));
+	} else
+		KASSERT(sfio->tls == NULL,
+		    ("non-ext_pgs mbuf with TLS session"));
+#endif
 	CURVNET_SET(so->so_vnet);
 	if (sfio->error) {
 		struct mbuf *m;
@@ -338,24 +348,17 @@ sendfile_iodone(void *arg, vm_page_t *pg, int count, int error)
 		so->so_error = EIO;
 
 		m = sfio->m;
-		//for (int i = 0; i < sfio->npages; i++)
-		//	m = m_free(m);
 		mb_free_notready(m, sfio->npages);
-	/*} else
-		(void )(so->so_proto->pr_usrreqs->pru_ready)(so, sfio->m,
-		    sfio->npages);
-        */
-         } else {
-		if (so->so_snd.sb_tls_flags & SB_TLS_ACTIVE) {
+	} else {
+		if (sfio->tls != NULL && sfio->tls->sb_tls_crypt != NULL) {
 			/*
 			 * I/O operation is complete, but we still
 			 * need to encrypt.  We cannot do this in the
 			 * interrupt thread of the disk controller, so
 			 * forward the mbufs to a different thread.
 			 *
-			 * Note that the socket was referenced by
-			 * sendfile, and we're inheriting that ref,
-			 * so we do not need to do an soref() here.
+			 * Donate the socket reference from sfio to
+			 * rather than explicitly invoking soref().
 			 */
 			sbtls_enqueue(sfio->m, so, sfio->npages);
 			goto out_with_ref;
@@ -363,6 +366,7 @@ sendfile_iodone(void *arg, vm_page_t *pg, int count, int error)
 			(void )(so->so_proto->pr_usrreqs->pru_ready)(so,
 			    sfio->m, sfio->npages);
 	}
+
 	SOCK_LOCK(so);
 	sorele(so);
 out_with_ref:
@@ -599,7 +603,6 @@ vn_sendfile(struct file *fp, int sockfd, struct uio *hdr_uio,
 	struct vm_object *obj;
 	struct socket *so;
 	struct mbuf *m, *mh, *mhtail;
-        struct sbtls_info *tls;
 	struct sf_buf *sf;
 	struct shmfd *shmfd;
 	struct sendfile_sync *sfs;
@@ -607,15 +610,16 @@ vn_sendfile(struct file *fp, int sockfd, struct uio *hdr_uio,
 	off_t off, sbytes, rem, obj_size;
 	struct mbuf_ext_pgs *ext_pgs;
 	struct mbuf *m0;
-	//struct sbtls_info *tls;
+	struct sbtls_session *tls;
 	int use_ext_pgs = 0;
 	int error, softerr, bsize, hdrlen;
-        int tls_enq_cnt, max_pgs;
-	int ext_pgs_idx;
+	int ext_pgs_idx, max_pgs, tls_enq_cnt;
+
 	obj = NULL;
 	so = NULL;
 	m = mh = NULL;
 	sfs = NULL;
+	tls = NULL;
 	hdrlen = sbytes = 0;
 	softerr = 0;
 
@@ -651,10 +655,7 @@ vn_sendfile(struct file *fp, int sockfd, struct uio *hdr_uio,
 	 * we implement that, but possibly shouldn't.
 	 */
 	(void)sblock(&so->so_snd, SBL_WAIT | SBL_NOINTR);
-	if (so->so_snd.sb_tls_flags & SB_TLS_ACTIVE)
-		tls = so->so_snd.sb_tls_info;
-	else
-		tls = NULL;
+	tls = sbtls_hold(so->so_snd.sb_tls_info);
 
 	/*
 	 * Loop through the pages of the file, starting with the requested
@@ -828,6 +829,13 @@ retry_space:
 		sfio->so = so;
 		sfio->error = 0;
 
+		/*
+		 * This doesn't use sbtls_hold() because sfio->m will
+		 * also have a reference on 'tls' that will be valid
+		 * for all of sfio's lifetime.
+		 */
+		sfio->tls = tls;
+
 		nios = sendfile_swapin(obj, sfio, off, space, npages, rhpages,
 		    flags);
 
@@ -836,9 +844,10 @@ retry_space:
 		 * dumped into socket buffer.
 		 */
 		pa = sfio->pa;
-                // ZLO PATCH
+
 		if ((mb_use_ext_pgs &&
-			so->so_proto->pr_protocol == IPPROTO_TCP) || tls != NULL) {
+			so->so_proto->pr_protocol == IPPROTO_TCP) ||
+		    tls != NULL) {
 			/* cache state in a local, to avoid locks */
 			use_ext_pgs = 1;
 			if (tls != NULL)
@@ -846,15 +855,12 @@ retry_space:
 			else
 				max_pgs = MBUF_PEXT_MAX_PGS;
 			/* start at last index, to wrap to first */
-			//ext_pgs_idx = MBUF_PEXT_MAX_PGS - 1;
 			ext_pgs_idx = max_pgs - 1;
 			m0 = NULL; /* -Wsometimes-uninitialized */
 		}
 
 
 		for (int i = 0; i < npages; i++) {
-			//struct mbuf *m0;
-
 			/*
 			 * If a page wasn't grabbed successfully, then
 			 * trim the array. Can happen only with SF_NODISKIO.
@@ -871,7 +877,6 @@ retry_space:
 				off_t xfs;
 
 				ext_pgs_idx++;
-				//if (ext_pgs_idx == MBUF_PEXT_MAX_PGS) {
 				if (ext_pgs_idx == max_pgs) {
 					m0 = mb_alloc_ext_pgs(M_WAITOK, false,
 					    sendfile_free_mext_pg);
@@ -922,6 +927,7 @@ retry_space:
 				ext_pgs->npgs++;
 				xfs = xfsize(i, npages, off, space);
 				ext_pgs->last_pg_len = xfs;
+				MBUF_EXT_PGS_ASSERT_SANITY(ext_pgs);
 				m0->m_len += xfs;
 				m0->m_ext.ext_size += PAGE_SIZE;
 
@@ -1040,10 +1046,10 @@ prepend_header:
 			 * PRUS_NOTREADY flag.
 			 */
 			free(sfio, M_TEMP);
-			if (tls != NULL) {
-				soref(so);
+			if (tls != NULL && tls->sb_tls_crypt != NULL) {
 				error = (*so->so_proto->pr_usrreqs->pru_send)
 				    (so, PRUS_NOTREADY, m, NULL, NULL, td);
+				soref(so);
 				sbtls_enqueue(m, so, tls_enq_cnt);
 			} else {
 				error = (*so->so_proto->pr_usrreqs->pru_send)
@@ -1112,6 +1118,8 @@ out:
 		mtx_destroy(&sfs->mtx);
 		free(sfs, M_TEMP);
 	}
+	if (tls != NULL)
+		sbtls_free(tls);
 
 	if (error == ERESTART)
 		error = EINTR;

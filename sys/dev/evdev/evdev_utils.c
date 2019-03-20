@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/evdev/evdev_utils.c 337721 2018-08-13 19:05:53Z wulf $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -250,12 +250,15 @@ evdev_scancode2key(int *state, int scancode)
 		 */
 		*state = 0;
 		if ((scancode & 0x7f) == 0x1D)
-			*state = 0x1D;
+			*state = scancode;
 		return (NONE);
 		/* NOT REACHED */
 	case 0x1D:	/* pause / break */
+	case 0x9D:
+		if ((*state ^ scancode) & 0x80)
+			return (NONE);
 		*state = 0;
-		if (scancode != 0x45)
+		if ((scancode & 0x7f) != 0x45)
 			return (NONE);
 		keycode = KEY_PAUSE;
 		break;

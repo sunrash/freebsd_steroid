@@ -30,7 +30,7 @@
  *
  *	$NetBSD: mk48txxreg.h,v 1.10 2008/04/28 20:23:50 martin Exp $
  *
- * $FreeBSD: releng/12.0/sys/dev/mk48txx/mk48txxreg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /*

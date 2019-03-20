@@ -1,6 +1,6 @@
-# $FreeBSD: releng/12.0/sys/dts/mips/Makefile 325826 2017-11-14 21:03:57Z imp $
+# $FreeBSD$
 
-DTS!=ls *.dts
+DTS!=ls ${.CURDIR}/*.dts
 
 all: test-dts
 

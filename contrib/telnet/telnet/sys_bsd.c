@@ -37,7 +37,7 @@ static const char sccsid[] = "@(#)sys_bsd.c	8.4 (Berkeley) 5/30/95";
 #endif
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/contrib/telnet/telnet/sys_bsd.c 274364 2014-11-11 04:06:05Z ngie $");
+__FBSDID("$FreeBSD$");
 
 /*
  * The following routines try to encapsulate what is system dependent

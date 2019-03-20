@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/sf_buf.h 328178 2018-01-19 22:17:13Z nwhitehorn $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SF_BUF_H_

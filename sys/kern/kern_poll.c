@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_poll.c 326271 2017-11-27 15:20:12Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_device_polling.h"
 

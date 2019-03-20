@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/bootp.c 337038 2018-08-01 12:06:39Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include <stddef.h>
 #include <sys/types.h>

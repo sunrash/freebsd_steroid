@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpam/pam.d/Makefile 338651 2018-09-13 16:14:33Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/apmd/Makefile 336743 2018-07-26 16:51:23Z brd $
+# $FreeBSD$
 
 CONFS=	apmd.conf
 PROG=	apmd

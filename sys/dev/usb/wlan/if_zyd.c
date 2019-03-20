@@ -1,6 +1,6 @@
 /*	$OpenBSD: if_zyd.c,v 1.52 2007/02/11 00:08:04 jsg Exp $	*/
 /*	$NetBSD: if_zyd.c,v 1.7 2007/06/21 04:04:29 kiyohara Exp $	*/
-/*	$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_zyd.c 333813 2018-05-18 20:13:34Z mmacy $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 2006 by Damien Bergamini <damien.bergamini@free.fr>
@@ -20,7 +20,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_zyd.c 333813 2018-05-18 20:13:34Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 /*
  * ZyDAS ZD1211/ZD1211B USB WLAN driver.
@@ -43,10 +43,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_zyd.c 333813 2018-05-18 20:1
 #include <sys/bus.h>
 #include <sys/endian.h>
 #include <sys/kdb.h>
-
-#include <machine/bus.h>
-#include <machine/resource.h>
-#include <sys/rman.h>
 
 #include <net/bpf.h>
 #include <net/if.h>
@@ -2889,8 +2885,7 @@ zyd_getradiocaps(struct ieee80211com *ic,
 	memset(bands, 0, sizeof(bands));
 	setbit(bands, IEEE80211_MODE_11B);
 	setbit(bands, IEEE80211_MODE_11G);
-	ieee80211_add_channel_list_2ghz(chans, maxchans, nchans,
-	    zyd_chan_2ghz, nitems(zyd_chan_2ghz), bands, 0);
+	ieee80211_add_channels_default_2ghz(chans, maxchans, nchans, bands, 0);
 }
 
 static void

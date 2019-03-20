@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/4/93
-# $FreeBSD: releng/12.0/lib/libcompat/Makefile 334911 2018-06-10 02:34:41Z jhb $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	compat

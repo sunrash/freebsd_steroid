@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/net/rss_config.h 324519 2017-10-11 06:08:01Z sephe $
+ * $FreeBSD$
  */
 
 #ifndef _NET_RSS_CONFIG_H_

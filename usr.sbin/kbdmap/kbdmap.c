@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/kbdmap/kbdmap.c 326276 2017-11-27 15:37:16Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/queue.h>
@@ -241,8 +241,7 @@ get_font(void)
 				if (strcmp(buf, "NO")) {
 					if (fnt)
 						free(fnt);
-					fnt = (char *) malloc(strlen(buf) + 1);
-					strcpy(fnt, buf);
+					fnt = strdup(buf);
 				}
 			}
 		}

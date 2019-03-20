@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/smbus/smbus_if.m 308242 2016-11-03 07:40:52Z avg $
+# $FreeBSD$
 #
 
 #include <sys/bus.h>

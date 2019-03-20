@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/iwnfw/iwn6000g2a/Makefile 254199 2013-08-11 01:03:32Z adrian $
+# $FreeBSD$
 
 KMOD=	iwn6000g2afw
 IMG=	iwlwifi-6000g2a-18.168.6.1

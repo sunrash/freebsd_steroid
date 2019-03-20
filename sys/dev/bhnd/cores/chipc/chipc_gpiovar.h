@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/chipc_gpiovar.h 326838 2017-12-14 03:12:05Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_CORES_CHIPC_CHIPC_GPIOVAR_H_

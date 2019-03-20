@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/mbrtowc.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <wchar.h>
 #include "mblocal.h"
@@ -43,7 +43,7 @@ mbrtowc_l(wchar_t * __restrict pwc, const char * __restrict s,
 {
 	FIX_LOCALE(locale);
 	if (ps == NULL)
-		ps = &locale->mbrtowc;
+		ps = &(XLOCALE_CTYPE(locale)->mbrtowc);
 	return (XLOCALE_CTYPE(locale)->__mbrtowc(pwc, s, n, ps));
 }
 

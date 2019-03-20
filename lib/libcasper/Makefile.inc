@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcasper/Makefile.inc 325062 2017-10-28 19:23:57Z oshogbo $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

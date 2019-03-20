@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/atomic.h 322713 2017-08-20 01:40:24Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_ATOMIC_H_

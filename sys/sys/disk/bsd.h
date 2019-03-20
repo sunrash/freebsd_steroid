@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)disklabel.h	8.2 (Berkeley) 7/10/94
- * $FreeBSD: releng/12.0/sys/sys/disk/bsd.h 314436 2017-02-28 23:42:47Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_DISK_BSD_H_

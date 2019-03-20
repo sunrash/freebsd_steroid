@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcasper/services/cap_grp/cap_grp.c 331146 2018-03-18 19:50:32Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/dnv.h>
 #include <sys/nv.h>
@@ -157,7 +157,7 @@ group_unpack(const nvlist_t *nvl, struct group *grp, char *buffer,
 	if (!nvlist_exists_string(nvl, "gr_name"))
 		return (EINVAL);
 
-	memset(grp, 0, sizeof(*grp));
+	explicit_bzero(grp, sizeof(*grp));
 
 	error = group_unpack_string(nvl, "gr_name", &grp->gr_name, &buffer,
 	    &bufsize);

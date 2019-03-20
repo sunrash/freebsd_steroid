@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ep/elink.c 327384 2017-12-30 19:27:22Z cy $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Common code for dealing with 3COM ethernet cards.

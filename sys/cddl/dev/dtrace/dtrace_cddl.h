@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/dtrace_cddl.h 332364 2018-04-10 13:47:09Z markj $
+ * $FreeBSD$
  *
  */
 

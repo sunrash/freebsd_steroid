@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/sched/make_ktr.sh 308790 2016-11-18 02:29:09Z rstone $
+# $FreeBSD$
 #
 
 if [ "$#" -ne 2 ]

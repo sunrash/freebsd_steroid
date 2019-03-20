@@ -37,7 +37,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_pppoe.c 329279 2018-02-14 21:17:44Z eugen $
+ * $FreeBSD$
  * $Whistle: ng_pppoe.c,v 1.10 1999/11/01 09:24:52 julian Exp $
  */
 

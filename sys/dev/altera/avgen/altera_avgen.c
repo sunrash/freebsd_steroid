@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/altera/avgen/altera_avgen.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bio.h>
@@ -229,6 +229,7 @@ altera_avgen_mmap(struct cdev *dev, vm_ooffset_t offset, vm_paddr_t *paddr,
 			return (EACCES);
 	}
 	if (trunc_page(offset) == offset &&
+	    offset + PAGE_SIZE > offset &&
 	    rman_get_size(sc->avg_res) >= offset + PAGE_SIZE) {
 		*paddr = rman_get_start(sc->avg_res) + offset;
 		*memattr = VM_MEMATTR_UNCACHEABLE;

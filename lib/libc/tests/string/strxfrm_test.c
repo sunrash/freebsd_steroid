@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/string/strxfrm_test.c 302918 2016-07-15 23:24:00Z bapt $");
+__FBSDID("$FreeBSD$");
 
 #include <string.h>
 #include <locale.h>

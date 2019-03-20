@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libpmcstat/libpmcstat_logging.c 334244 2018-05-26 19:29:19Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/cpuset.h>

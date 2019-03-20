@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/fil.c 333427 2018-05-09 19:05:27Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
@@ -139,7 +139,7 @@ extern struct timeout ipf_slowtimer_ch;
 
 #if !defined(lint)
 static const char sccsid[] = "@(#)fil.c	1.36 6/5/96 (C) 1993-2000 Darren Reed";
-static const char rcsid[] = "@(#)$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/fil.c 333427 2018-05-09 19:05:27Z cy $";
+static const char rcsid[] = "@(#)$FreeBSD$";
 /* static const char rcsid[] = "@(#)$Id: fil.c,v 2.243.2.125 2007/10/10 09:27:20 darrenr Exp $"; */
 #endif
 
@@ -2815,7 +2815,8 @@ ipf_firewall(fin, passp)
 /*                    -2 == requires authentication                         */
 /*              Kernel:                                                     */
 /*                   > 0 == filter error # for packet                       */
-/* Parameters: ip(I)   - pointer to start of IPv4/6 packet                  */
+/* Parameters: ctx(I)  - pointer to the instance context                    */
+/*             ip(I)   - pointer to start of IPv4/6 packet                  */
 /*             hlen(I) - length of header                                   */
 /*             ifp(I)  - pointer to interface this packet is on             */
 /*             out(I)  - 0 == packet going in, 1 == packet going out        */
@@ -4266,8 +4267,6 @@ copyoutptr(softc, src, dst, size)
 	}
 	return error;
 }
-#ifdef	_KERNEL
-#endif
 
 
 /* ------------------------------------------------------------------------ */

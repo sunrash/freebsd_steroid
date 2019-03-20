@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bwi/if_bwi.c 337570 2018-08-10 13:06:14Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_bwi.h"
@@ -306,9 +306,6 @@ static const struct {
 	[96]	= { 9, 4 },
 	[108]	= { 7, 3 }
 };
-
-static const uint8_t bwi_chan_2ghz[] =
-	{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
 
 #ifdef BWI_DEBUG
 #ifdef BWI_DEBUG_VERBOSE
@@ -1715,8 +1712,7 @@ bwi_getradiocaps(struct ieee80211com *ic,
 		panic("unknown phymode %d\n", phy->phy_mode);
 	}
 
-	ieee80211_add_channel_list_2ghz(chans, maxchans, nchans,
-	    bwi_chan_2ghz, nitems(bwi_chan_2ghz), bands, 0);
+	ieee80211_add_channels_default_2ghz(chans, maxchans, nchans, bands, 0);
 }
 
 static void

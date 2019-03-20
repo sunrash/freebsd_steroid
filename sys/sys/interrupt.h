@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/interrupt.h 338360 2018-08-28 21:09:19Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_INTERRUPT_H_
@@ -62,6 +62,8 @@ struct intr_handler {
 #define	IH_EXCLUSIVE	0x00000002	/* Exclusive interrupt. */
 #define	IH_ENTROPY	0x00000004	/* Device is a good entropy source. */
 #define	IH_DEAD		0x00000008	/* Handler should be removed. */
+#define	IH_SUSP		0x00000010	/* Device is powered down. */
+#define	IH_CHANGED	0x40000000	/* Handler state is changed. */
 #define	IH_MPSAFE	0x80000000	/* Handler does not need Giant. */
 
 /*
@@ -184,6 +186,8 @@ int	intr_event_describe_handler(struct intr_event *ie, void *cookie,
 int	intr_event_destroy(struct intr_event *ie);
 int	intr_event_handle(struct intr_event *ie, struct trapframe *frame);
 int	intr_event_remove_handler(void *cookie);
+int	intr_event_suspend_handler(void *cookie);
+int	intr_event_resume_handler(void *cookie);
 int	intr_getaffinity(int irq, int mode, void *mask);
 void	*intr_handler_source(void *cookie);
 int	intr_setaffinity(int irq, int mode, void *mask);

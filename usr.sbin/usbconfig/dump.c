@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.sbin/usbconfig/dump.c 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

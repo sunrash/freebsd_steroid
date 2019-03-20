@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/date/tests/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 ATF_TESTS_SH=	format_string_test
 

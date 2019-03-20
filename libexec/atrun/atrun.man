@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/libexec/atrun/atrun.man 284709 2015-06-22 20:24:59Z wblock $
+.\" $FreeBSD$
 .Dd June 22, 2015
 .Dt ATRUN 8
 .Os

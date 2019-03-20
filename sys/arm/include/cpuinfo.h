@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/cpuinfo.h 328467 2018-01-27 11:19:41Z mmel $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_CPUINFO_H_

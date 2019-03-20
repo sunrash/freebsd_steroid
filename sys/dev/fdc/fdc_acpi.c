@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/fdc/fdc_acpi.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -81,16 +81,18 @@ fdc_acpi_probe(device_t dev)
 {
 	device_t bus;
 	static char *fdc_ids[] = { "PNP0700", "PNP0701", NULL };
+	int rv;
 
 	bus = device_get_parent(dev);
-	if (ACPI_ID_PROBE(bus, dev, fdc_ids) == NULL)
-		return (ENXIO);
+	rv = ACPI_ID_PROBE(bus, dev, fdc_ids, NULL);
+	if (rv > 0)
+		return (rv);
 
 	if (ACPI_SUCCESS(ACPI_EVALUATE_OBJECT(bus, dev, "_FDE", NULL, NULL)))
 		device_set_desc(dev, "floppy drive controller (FDE)");
 	else
 		device_set_desc(dev, "floppy drive controller");
-	return (0);
+	return (rv);
 }
 
 static int

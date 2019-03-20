@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_capability.c 334069 2018-05-23 01:48:09Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Note that this file is compiled into the kernel and into libc.

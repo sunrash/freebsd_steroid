@@ -35,7 +35,7 @@
 
 /* @(#)exp.c	8.1 (Berkeley) 6/4/93 */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/bsdsrc/b_exp.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 
 /* EXP(X)

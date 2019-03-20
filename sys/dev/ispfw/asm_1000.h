@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/ispfw/asm_1000.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

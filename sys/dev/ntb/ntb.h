@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ntb/ntb.h 323126 2017-09-02 11:56:16Z mav $
+ * $FreeBSD$
  */
 
 #ifndef _NTB_H_

@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/s_expl.c 336545 2018-07-20 12:42:24Z bde $");
+__FBSDID("$FreeBSD$");
 
 /**
  * Compute the exponential of x for Intel 80-bit format.  This is based on:

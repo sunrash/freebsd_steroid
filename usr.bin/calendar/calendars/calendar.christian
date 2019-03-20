@@ -1,7 +1,7 @@
 /*
  * Christian
  *
- * $FreeBSD: releng/12.0/usr.bin/calendar/calendars/calendar.christian 286893 2015-08-18 15:50:02Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _calendar_christian_

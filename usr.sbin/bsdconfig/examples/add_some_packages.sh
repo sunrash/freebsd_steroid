@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/examples/add_some_packages.sh 268999 2014-07-22 23:10:12Z dteske $
+# $FreeBSD$
 #
 # This sample installs a short list of packages from the main HTTP site.
 #

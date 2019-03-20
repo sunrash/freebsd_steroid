@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/psci/psci.h 335061 2018-06-13 15:24:07Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PSCI_H_

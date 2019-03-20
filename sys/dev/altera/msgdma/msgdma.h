@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/altera/msgdma/msgdma.h 332470 2018-04-13 13:23:31Z br $
+ * $FreeBSD$
  */
 
 /* Altera mSGDMA registers. */

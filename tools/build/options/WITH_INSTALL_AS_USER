@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_INSTALL_AS_USER 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 Set to make install targets succeed for non-root users by installing
 files with owner and group attributes set to that of the user running
 the

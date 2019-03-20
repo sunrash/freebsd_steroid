@@ -1,5 +1,5 @@
 # Makefile for libpcap
-# $FreeBSD: releng/12.0/lib/libpcap/Makefile 334376 2018-05-30 08:24:57Z hselasky $
+# $FreeBSD$
 
 SHLIBDIR?= /lib
 

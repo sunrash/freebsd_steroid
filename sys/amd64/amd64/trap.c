@@ -40,7 +40,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/amd64/trap.c 339349 2018-10-13 21:18:31Z mjg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * AMD64 Trap and System call handling
@@ -916,7 +916,7 @@ trap_fatal(frame, eva)
 	    curproc->p_pid, curthread->td_name);
 
 #ifdef KDB
-	if (debugger_on_panic) {
+	if (debugger_on_trap) {
 		kdb_why = KDB_WHY_TRAP;
 		handled = kdb_trap(type, 0, frame);
 		kdb_why = KDB_WHY_UNSET;
@@ -991,8 +991,6 @@ cpu_fetch_syscall_args_fallback(struct thread *td, struct syscall_args *sa)
 		reg++;
 		regcnt--;
 	}
- 	if (p->p_sysent->sv_mask)
- 		sa->code &= p->p_sysent->sv_mask;
 
  	if (sa->code >= p->p_sysent->sv_size)
  		sa->callp = &p->p_sysent->sv_table[0];
@@ -1040,9 +1038,6 @@ cpu_fetch_syscall_args(struct thread *td)
 	sa->narg = sa->callp->sy_narg;
 	KASSERT(sa->narg <= nitems(sa->args), ("Too many syscall arguments!"));
 
-	if (p->p_sysent->sv_mask)
-		sa->code &= p->p_sysent->sv_mask;
-
 	if (__predict_false(sa->narg > NARGREGS))
 		return (cpu_fetch_syscall_args_fallback(td, sa));
 
@@ -1055,6 +1050,84 @@ cpu_fetch_syscall_args(struct thread *td)
 }
 
 #include "../../kern/subr_syscall.c"
+
+static void (*syscall_ret_l1d_flush)(void);
+int syscall_ret_l1d_flush_mode;
+
+static void
+flush_l1d_hw(void)
+{
+
+	wrmsr(MSR_IA32_FLUSH_CMD, IA32_FLUSH_CMD_L1D);
+}
+
+static void __inline
+amd64_syscall_ret_flush_l1d_inline(int error)
+{
+	void (*p)(void);
+
+	if (error != 0 && error != EEXIST && error != EAGAIN &&
+	    error != EXDEV && error != ENOENT && error != ENOTCONN &&
+	    error != EINPROGRESS) {
+		p = syscall_ret_l1d_flush;
+		if (p != NULL)
+			p();
+	}
+}
+
+void
+amd64_syscall_ret_flush_l1d(int error)
+{
+
+	amd64_syscall_ret_flush_l1d_inline(error);
+}
+
+void
+amd64_syscall_ret_flush_l1d_recalc(void)
+{
+	bool l1d_hw;
+
+	l1d_hw = (cpu_stdext_feature3 & CPUID_STDEXT3_L1D_FLUSH) != 0;
+again:
+	switch (syscall_ret_l1d_flush_mode) {
+	case 0:
+		syscall_ret_l1d_flush = NULL;
+		break;
+	case 1:
+		syscall_ret_l1d_flush = l1d_hw ? flush_l1d_hw :
+		    flush_l1d_sw_abi;
+		break;
+	case 2:
+		syscall_ret_l1d_flush = l1d_hw ? flush_l1d_hw : NULL;
+		break;
+	case 3:
+		syscall_ret_l1d_flush = flush_l1d_sw_abi;
+		break;
+	default:
+		syscall_ret_l1d_flush_mode = 1;
+		goto again;
+	}
+}
+
+static int
+machdep_syscall_ret_flush_l1d(SYSCTL_HANDLER_ARGS)
+{
+	int error, val;
+
+	val = syscall_ret_l1d_flush_mode;
+	error = sysctl_handle_int(oidp, &val, 0, req);
+	if (error != 0 || req->newptr == NULL)
+		return (error);
+	syscall_ret_l1d_flush_mode = val;
+	amd64_syscall_ret_flush_l1d_recalc();
+	return (0);
+}
+SYSCTL_PROC(_machdep, OID_AUTO, syscall_ret_flush_l1d, CTLTYPE_INT |
+    CTLFLAG_RWTUN | CTLFLAG_NOFETCH | CTLFLAG_MPSAFE, NULL, 0,
+    machdep_syscall_ret_flush_l1d, "I",
+    "Flush L1D on syscall return with error (0 - off, 1 - on, "
+    "2 - use hw only, 3 - use sw only");
+
 
 /*
  * System call handler for native binaries.  The trap frame is already
@@ -1110,4 +1183,6 @@ amd64_syscall(struct thread *td, int traced)
 	 */
 	if (__predict_false(td->td_frame->tf_rip >= VM_MAXUSER_ADDRESS))
 		set_pcb_flags(td->td_pcb, PCB_FULL_IRET);
+
+	amd64_syscall_ret_flush_l1d_inline(error);
 }

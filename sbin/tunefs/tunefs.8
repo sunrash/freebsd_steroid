@@ -26,9 +26,9 @@
 .\" SUCH DAMAGE.
 .\"
 .\"     @(#)tunefs.8	8.2 (Berkeley) 12/11/93
-.\" $FreeBSD: releng/12.0/sbin/tunefs/tunefs.8 314436 2017-02-28 23:42:47Z imp $
+.\" $FreeBSD$
 .\"
-.Dd April 19, 2016
+.Dd January 29, 2019
 .Dt TUNEFS 8
 .Os
 .Sh NAME
@@ -112,6 +112,7 @@ By default
 sets it to half of the space reserved to minfree.
 .It Fl L Ar volname
 Add/modify an optional file system volume label.
+Legal characters are alphanumerics, dashes, and underscores.
 .It Fl l Cm enable | disable
 Turn on/off MAC multilabel flag.
 .It Fl m Ar minfree

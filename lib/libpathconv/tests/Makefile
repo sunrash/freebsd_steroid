@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpathconv/tests/Makefile 315037 2017-03-11 00:08:46Z asomers $
+# $FreeBSD$
 
 TAP_TESTS_C+=	abs2rel
 TAP_TESTS_C+=	rel2abs

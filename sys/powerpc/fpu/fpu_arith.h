@@ -1,5 +1,5 @@
 /*	$NetBSD: fpu_arith.h,v 1.4 2005/12/24 20:07:28 perry Exp $ */
-/* $FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_arith.h 326023 2017-11-20 19:43:44Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

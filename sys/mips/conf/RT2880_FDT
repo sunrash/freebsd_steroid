@@ -3,7 +3,7 @@
 #
 # This includes all the configurable parts of the kernel.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/RT2880_FDT 317873 2017-05-06 06:20:34Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

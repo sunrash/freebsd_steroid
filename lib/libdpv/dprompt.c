@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libdpv/dprompt.c 335264 2018-06-16 20:00:41Z dteske $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

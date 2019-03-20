@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_data_tlvreg.h 309202 2016-11-26 23:22:32Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_NVRAM_BHND_NVRAM_TLVREG_H_

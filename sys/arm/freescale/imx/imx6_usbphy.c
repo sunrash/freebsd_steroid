@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_usbphy.c 330351 2018-03-03 18:52:19Z kevans $");
+__FBSDID("$FreeBSD$");
 
 /*
  * USBPHY driver for Freescale i.MX6 family of SoCs.

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/lib/libgcov/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 MK_PROFILE=	no
 MK_SSP=		no

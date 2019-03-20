@@ -1,2 +1,2 @@
-/* $FreeBSD: releng/12.0/lib/libc/libc_nossp.ldscript 307146 2016-10-12 13:19:21Z br $ */
+/* $FreeBSD$ */
 GROUP ( @@SHLIB@@ @@LIBDIR@@/libc_nonshared.a )

@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) profile for top-like syscall $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/systop 337611 2018-08-11 06:32:31Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

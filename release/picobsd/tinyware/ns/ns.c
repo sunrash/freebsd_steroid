@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/release/picobsd/tinyware/ns/ns.c 298880 2016-05-01 16:16:11Z pfg $
+ * $FreeBSD$
  */
 
 

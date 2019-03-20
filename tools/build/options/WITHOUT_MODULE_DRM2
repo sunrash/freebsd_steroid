@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_MODULE_DRM2 338347 2018-08-28 14:46:49Z imp $
+.\" $FreeBSD$
 Disable creation of old drm2 video modules.

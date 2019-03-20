@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.sbin/ntp/ntpdc/nl.c 280849 2015-03-30 13:30:15Z cy $ */
+/* $FreeBSD$ */
   printf("sizeof(union req_data_u_tag) = %d\n", 
 	 (int) sizeof(union req_data_u_tag));
   printf("offsetof(u32) = %d\n", 

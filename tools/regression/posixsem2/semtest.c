@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tools/regression/posixsem2/semtest.c 294565 2016-01-22 14:52:31Z jilles $ */
+/* $FreeBSD$ */
 
 #include <sys/types.h>
 #include <sys/wait.h>

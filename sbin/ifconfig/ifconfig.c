@@ -40,7 +40,7 @@ static const char copyright[] =
 static char sccsid[] = "@(#)ifconfig.c	8.2 (Berkeley) 2/16/94";
 #endif
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/sbin/ifconfig/ifconfig.c 337426 2018-08-07 17:25:38Z markj $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -110,6 +110,8 @@ static	void status(const struct afswtch *afp, const struct sockaddr_dl *sdl,
 		struct ifaddrs *ifa);
 static	void tunnel_status(int s);
 static _Noreturn void usage(void);
+
+static int getifflags(const char *ifname, int us);
 
 static struct afswtch *af_getbyname(const char *name);
 static struct afswtch *af_getbyfamily(int af);
@@ -369,6 +371,7 @@ main(int argc, char *argv[])
 	const char *ifname;
 	struct option *p;
 	size_t iflen;
+	int flags;
 
 	all = downonly = uponly = namesonly = noload = verbose = 0;
 	f_inet = f_inet6 = f_ether = f_addr = NULL;
@@ -504,6 +507,18 @@ main(int argc, char *argv[])
 			}
 #endif
 			errx(1, "interface %s does not exist", ifname);
+		} else {
+			/*
+			 * Do not allow use `create` command as hostname if
+			 * address family is not specified.
+			 */
+			if (argc > 0 && (strcmp(argv[0], "create") == 0 ||
+			    strcmp(argv[0], "plumb") == 0)) {
+				if (argc == 1)
+					errx(1, "interface %s already exists",
+					    ifname);
+				argc--, argv++;
+			}
 		}
 	}
 
@@ -512,6 +527,25 @@ main(int argc, char *argv[])
 		afp = af_getbyname(*argv);
 		if (afp != NULL)
 			argc--, argv++;
+	}
+
+	/*
+	 * Check for a requested configuration action on a single interface,
+	 * which doesn't require building, sorting, and searching the entire
+	 * system address list
+	 */
+	if ((argc > 0) && (ifname != NULL)) {
+		iflen = strlcpy(name, ifname, sizeof(name));
+		if (iflen >= sizeof(name)) {
+			warnx("%s: interface name too long, skipping", ifname);
+		} else {
+			flags = getifflags(name, -1);
+			if (!(((flags & IFF_CANTCONFIG) != 0) ||
+				(downonly && (flags & IFF_UP) != 0) ||
+				(uponly && (flags & IFF_UP) == 0)))
+				ifconfig(argc, argv, 0, afp);
+		}
+		goto done;
 	}
 
 	if (getifaddrs(&ifap) != 0)
@@ -597,6 +631,7 @@ main(int argc, char *argv[])
 		printf("\n");
 	freeifaddrs(ifap);
 
+done:
 	freeformat();
 	exit(exit_code);
 }
@@ -1008,6 +1043,28 @@ setifdstaddr(const char *addr, int param __unused, int s,
 		afp->af_getaddr(addr, DSTADDR);
 }
 
+static int
+getifflags(const char *ifname, int us)
+{
+	struct ifreq my_ifr;
+	int s;
+	
+	memset(&my_ifr, 0, sizeof(my_ifr));
+	(void) strlcpy(my_ifr.ifr_name, ifname, sizeof(my_ifr.ifr_name));
+	if (us < 0) {
+		if ((s = socket(AF_LOCAL, SOCK_DGRAM, 0)) < 0)
+			err(1, "socket(family AF_LOCAL,SOCK_DGRAM");
+	} else
+		s = us;
+ 	if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&my_ifr) < 0) {
+ 		Perror("ioctl (SIOCGIFFLAGS)");
+ 		exit(1);
+ 	}
+	if (us < 0)
+		close(s);
+	return ((my_ifr.ifr_flags & 0xffff) | (my_ifr.ifr_flagshigh << 16));
+}
+
 /*
  * Note: doing an SIOCIGIFFLAGS scribbles on the union portion
  * of the ifreq structure, which may confuse other parts of ifconfig.
@@ -1019,20 +1076,14 @@ setifflags(const char *vname, int value, int s, const struct afswtch *afp)
 	struct ifreq		my_ifr;
 	int flags;
 
-	memset(&my_ifr, 0, sizeof(my_ifr));
-	(void) strlcpy(my_ifr.ifr_name, name, sizeof(my_ifr.ifr_name));
-
- 	if (ioctl(s, SIOCGIFFLAGS, (caddr_t)&my_ifr) < 0) {
- 		Perror("ioctl (SIOCGIFFLAGS)");
- 		exit(1);
- 	}
-	flags = (my_ifr.ifr_flags & 0xffff) | (my_ifr.ifr_flagshigh << 16);
-
+	flags = getifflags(name, s);
 	if (value < 0) {
 		value = -value;
 		flags &= ~value;
 	} else
 		flags |= value;
+	memset(&my_ifr, 0, sizeof(my_ifr));
+	(void) strlcpy(my_ifr.ifr_name, name, sizeof(my_ifr.ifr_name));
 	my_ifr.ifr_flags = flags & 0xffff;
 	my_ifr.ifr_flagshigh = flags >> 16;
 	if (ioctl(s, SIOCSIFFLAGS, (caddr_t)&my_ifr) < 0)
@@ -1172,7 +1223,7 @@ unsetifdescr(const char *val, int value, int s, const struct afswtch *afp)
 "\020\1RXCSUM\2TXCSUM\3NETCONS\4VLAN_MTU\5VLAN_HWTAGGING\6JUMBO_MTU\7POLLING" \
 "\10VLAN_HWCSUM\11TSO4\12TSO6\13LRO\14WOL_UCAST\15WOL_MCAST\16WOL_MAGIC" \
 "\17TOE4\20TOE6\21VLAN_HWFILTER\23VLAN_HWTSO\24LINKSTATE\25NETMAP" \
-"\26RXCSUM_IPV6\27TXCSUM_IPV6\31TXRTLMT\32HWRXTSTMP\33NOMAP"
+"\26RXCSUM_IPV6\27TXCSUM_IPV6\31TXRTLMT\32HWRXTSTMP\33NOMAP\34TXTLS4\35TXTLS6"
 
 /*
  * Print the status of the interface.  If an address family was
@@ -1453,7 +1504,7 @@ static struct cmd basic_cmds[] = {
 	DEF_CMD("-monitor",	-IFF_MONITOR,	setifflags),
 	DEF_CMD("nomap",	IFCAP_NOMAP,	setifcap),
 	DEF_CMD("-nomap",	-IFCAP_NOMAP,	setifcap),
-        DEF_CMD("staticarp",	IFF_STATICARP,	setifflags),
+	DEF_CMD("staticarp",	IFF_STATICARP,	setifflags),
 	DEF_CMD("-staticarp",	-IFF_STATICARP,	setifflags),
 	DEF_CMD("rxcsum6",	IFCAP_RXCSUM_IPV6,	setifcap),
 	DEF_CMD("-rxcsum6",	-IFCAP_RXCSUM_IPV6,	setifcap),
@@ -1479,6 +1530,8 @@ static struct cmd basic_cmds[] = {
 	DEF_CMD("-toe",		-IFCAP_TOE,	setifcap),
 	DEF_CMD("lro",		IFCAP_LRO,	setifcap),
 	DEF_CMD("-lro",		-IFCAP_LRO,	setifcap),
+	DEF_CMD("txtls",	IFCAP_TXTLS,	setifcap),
+	DEF_CMD("-txtls",	-IFCAP_TXTLS,	setifcap),
 	DEF_CMD("wol",		IFCAP_WOL,	setifcap),
 	DEF_CMD("-wol",		-IFCAP_WOL,	setifcap),
 	DEF_CMD("wol_ucast",	IFCAP_WOL_UCAST,	setifcap),

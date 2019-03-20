@@ -1,5 +1,5 @@
 # $Cronyx: sys.modules.ce.Makefile,v 1.2 2005/04/23 20:10:22 rik Exp $
-# $FreeBSD: releng/12.0/sys/modules/ce/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 .PATH:  ${SRCTOP}/sys/dev/ce
 KMOD	= if_ce

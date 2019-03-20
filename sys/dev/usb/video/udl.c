@@ -1,5 +1,5 @@
 /*	$OpenBSD: udl.c,v 1.81 2014/12/09 07:05:06 doug Exp $ */
-/*	$FreeBSD: releng/12.0/sys/dev/usb/video/udl.c 307518 2016-10-17 10:20:38Z hselasky $ */
+/*	$FreeBSD$ */
 
 /*-
  * Copyright (c) 2015 Hans Petter Selasky <hselasky@freebsd.org>

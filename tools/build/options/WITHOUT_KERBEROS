@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_KERBEROS 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 Set this to not build Kerberos 5 (KTH Heimdal).

@@ -24,7 +24,7 @@
 -- OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 -- SUCH DAMAGE.
 --
--- $FreeBSD: releng/12.0/stand/lua/cli.lua 340244 2018-11-08 03:25:18Z kevans $
+-- $FreeBSD$
 --
 
 local config = require("config")

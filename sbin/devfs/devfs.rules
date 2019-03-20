@@ -13,7 +13,7 @@
 # references must include a dollar sign '$' in front of the
 # name to be expanded properly.
 #
-# $FreeBSD: releng/12.0/sbin/devfs/devfs.rules 338204 2018-08-22 15:55:23Z brd $
+# $FreeBSD$
 #
 
 # Very basic and secure ruleset: Hide everything.

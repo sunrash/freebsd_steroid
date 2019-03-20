@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/iwn/iwnstats/Makefile 287314 2015-08-30 21:55:01Z adrian $
+# $FreeBSD$
 
 MAN=
 

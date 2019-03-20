@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: btsockstat.c,v 1.8 2003/05/21 22:40:25 max Exp $
- * $FreeBSD: releng/12.0/usr.bin/bluetooth/btsockstat/btsockstat.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

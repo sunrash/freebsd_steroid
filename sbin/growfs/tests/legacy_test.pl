@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/growfs/tests/legacy_test.pl 324478 2017-10-10 05:58:33Z ngie $
+# $FreeBSD$
 
 use strict;
 use warnings;

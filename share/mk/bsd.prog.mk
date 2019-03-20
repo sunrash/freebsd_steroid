@@ -1,5 +1,5 @@
 #	from: @(#)bsd.prog.mk	5.26 (Berkeley) 6/25/91
-# $FreeBSD: releng/12.0/share/mk/bsd.prog.mk 340773 2018-11-22 18:59:05Z emaste $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 .include <bsd.compiler.mk>
@@ -34,6 +34,10 @@ PROG=	${PROG_CXX}
 MK_DEBUG_FILES=	no
 .endif
 
+# ELF hardening knobs
+.if ${MK_BIND_NOW} != "no"
+LDFLAGS+= -Wl,-znow
+.endif
 .if ${MK_RETPOLINE} != "no"
 CFLAGS+= -mretpoline
 CXXFLAGS+= -mretpoline

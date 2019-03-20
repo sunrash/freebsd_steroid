@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/bc/bc.y 314704 2017-03-05 16:10:35Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -996,7 +996,7 @@ yyerror(const char *s)
 			putchar('\\');
 		putchar(*p);
 	}
-	fputs("]pc\n", stdout);
+	fputs("]ec\n", stdout);
 	free(str);
 }
 
@@ -1173,7 +1173,8 @@ main(int argc, char *argv[])
 	argc -= optind;
 	argv += optind;
 
-	interactive = isatty(STDIN_FILENO);
+	interactive = isatty(STDIN_FILENO) && isatty(STDOUT_FILENO) &&
+	    isatty(STDERR_FILENO);
 	for (i = 0; i < argc; i++)
 		sargv[sargc++] = argv[i];
 

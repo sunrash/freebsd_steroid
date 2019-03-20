@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/nscd/cachelib.c 315213 2017-03-13 20:34:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/time.h>
 

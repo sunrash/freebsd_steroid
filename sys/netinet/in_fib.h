@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netinet/in_fib.h 314436 2017-02-28 23:42:47Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_IN_FIB_H_

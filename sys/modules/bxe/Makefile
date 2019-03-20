@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bxe/Makefile 333848 2018-05-19 04:46:34Z mmacy $
+# $FreeBSD$
 
 SYSDIR	?= ${SRCTOP}/sys
 

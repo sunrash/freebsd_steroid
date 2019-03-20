@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/tests/nss/testutil.h 299654 2016-05-13 10:52:02Z ngie $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

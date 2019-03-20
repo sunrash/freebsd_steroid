@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mpr/mpr_table.h 323380 2017-09-09 22:02:36Z scottl $
+ * $FreeBSD$
  */
 
 #ifndef _MPR_TABLE_H

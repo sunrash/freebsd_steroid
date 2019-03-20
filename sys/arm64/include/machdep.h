@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/machdep.h 334164 2018-05-24 16:07:47Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_MACHDEP_H_

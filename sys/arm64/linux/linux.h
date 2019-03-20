@@ -26,7 +26,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/arm64/linux/linux.h 335232 2018-06-15 19:09:17Z emaste $
+ * $FreeBSD$
  */
 #ifndef _ARM64_LINUX_H_
 #define	_ARM64_LINUX_H_

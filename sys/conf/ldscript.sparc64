@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/conf/ldscript.sparc64 303442 2016-07-28 13:54:46Z emaste $ */
+/* $FreeBSD$ */
 OUTPUT_FORMAT("elf64-sparc-freebsd", "elf64-sparc-freebsd",
 	      "elf64-sparc-freebsd")
 OUTPUT_ARCH(sparc:v9)

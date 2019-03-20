@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libutil/pw_util.c 336746 2018-07-26 18:34:38Z ian $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)pw_util.c	8.3 (Berkeley) 4/2/94");
 
 /*

@@ -39,7 +39,7 @@ static char sccsid[] = "@(#)sync.c	8.1 (Berkeley) 5/31/93";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/bin/sync/sync.c 314436 2017-02-28 23:42:47Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stdlib.h>
 #include <unistd.h>

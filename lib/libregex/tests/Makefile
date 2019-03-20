@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libregex/tests/Makefile 328240 2018-01-22 02:44:41Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/lib/libc/regex

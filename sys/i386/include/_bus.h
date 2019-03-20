@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/_bus.h 326260 2017-11-27 15:08:52Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef I386_INCLUDE__BUS_H

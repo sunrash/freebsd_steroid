@@ -53,7 +53,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/memcpy.S 307909 2016-10-25 14:04:35Z andrew $");
+__FBSDID("$FreeBSD$");
 
 /* Assumptions:
  *

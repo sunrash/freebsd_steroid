@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/loader/arch/i386/exec.c 324557 2017-10-12 15:16:16Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include <machine/elf.h>

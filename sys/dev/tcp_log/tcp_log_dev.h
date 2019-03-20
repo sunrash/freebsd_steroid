@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/tcp_log/tcp_log_dev.h 331485 2018-03-24 12:48:10Z jtl $
+ * $FreeBSD$
  */
 
 #ifndef __tcp_log_dev_h__

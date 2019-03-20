@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/nvme/nvme_private.h 334200 2018-05-25 03:34:33Z mav $
+ * $FreeBSD$
  */
 
 #ifndef __NVME_PRIVATE_H__
@@ -247,7 +247,8 @@ struct nvme_controller {
 
 	uint32_t		ready_timeout_in_ms;
 	uint32_t		quirks;
-#define QUIRK_DELAY_B4_CHK_RDY 1		/* Can't touch MMIO on disable */
+#define	QUIRK_DELAY_B4_CHK_RDY	1		/* Can't touch MMIO on disable */
+#define	QUIRK_DISABLE_TIMEOUT	2		/* Disable broken completion timeout feature */
 
 	bus_space_tag_t		bus_tag;
 	bus_space_handle_t	bus_handle;

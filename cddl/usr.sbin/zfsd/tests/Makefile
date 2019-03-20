@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/tests/Makefile 320122 2017-06-19 20:47:24Z bdrewery $
+# $FreeBSD$
 
 .include "${.CURDIR}/../Makefile.common"
 .PATH:	${.CURDIR:H}

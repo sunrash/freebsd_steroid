@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/common/t4_regs.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  *
  */
 
@@ -22616,6 +22616,10 @@
 #define M_TXPDUSIZEADJ    0xffU
 #define V_TXPDUSIZEADJ(x) ((x) << S_TXPDUSIZEADJ)
 #define G_TXPDUSIZEADJ(x) (((x) >> S_TXPDUSIZEADJ) & M_TXPDUSIZEADJ)
+
+#define S_ENABLECBYP    21
+#define V_ENABLECBYP(x) ((x) << S_ENABLECBYP)
+#define F_ENABLECBYP    V_ENABLECBYP(1U)
 
 #define S_LIMITEDTRANSMIT    20
 #define M_LIMITEDTRANSMIT    0xfU

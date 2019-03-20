@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/libalias/alias.c 335133 2018-06-14 11:15:39Z ae $");
+__FBSDID("$FreeBSD$");
 
 /*
     Alias.c provides supervisory control for the functions of the

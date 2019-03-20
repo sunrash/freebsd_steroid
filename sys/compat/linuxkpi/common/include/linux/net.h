@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/net.h 290335 2015-11-03 12:37:55Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_NET_H_
 #define	_LINUX_NET_H_

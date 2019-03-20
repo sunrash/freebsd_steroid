@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/gen/telldir.h 326640 2017-12-06 22:06:48Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef _TELLDIR_H_

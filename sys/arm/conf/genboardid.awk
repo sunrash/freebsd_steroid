@@ -1,5 +1,5 @@
 #!/bin/awk
-# $FreeBSD: releng/12.0/sys/arm/conf/genboardid.awk 333142 2018-05-01 16:21:01Z imp $
+# $FreeBSD$
 
 #-
 # SPDX-License-Identifier: BSD-2-Clause-FreeBSD

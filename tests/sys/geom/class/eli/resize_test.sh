@@ -1,5 +1,7 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/eli/resize_test.sh 327662 2018-01-07 00:44:22Z asomers $
+# $FreeBSD$
+
+. $(atf_get_srcdir)/conf.sh
 
 atf_test_case resize cleanup
 resize_head()
@@ -9,7 +11,8 @@ resize_head()
 }
 resize_body()
 {
-	. $(atf_get_srcdir)/conf.sh
+	geli_test_setup
+
 	BLK=512
 	BLKS_PER_MB=2048
 
@@ -67,8 +70,6 @@ resize_body()
 }
 resize_cleanup()
 {
-	. $(atf_get_srcdir)/conf.sh
-
 	if [ -f "$TEST_MDS_FILE" ]; then
 		while read md; do
 			[ -c /dev/${md}a.eli ] && \

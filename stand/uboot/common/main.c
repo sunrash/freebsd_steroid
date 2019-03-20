@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/uboot/common/main.c 337060 2018-08-01 20:08:20Z kevans $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 
 #include <stand.h>
@@ -497,6 +497,9 @@ main(int argc, char **argv)
 do_interact:
 	setenv("LINES", "24", 1);		/* optional */
 	setenv("prompt", "loader>", 1);
+#ifdef __powerpc__
+	setenv("usefdt", "1", 1);
+#endif
 
 	archsw.arch_loadaddr = uboot_loadaddr;
 	archsw.arch_getdev = uboot_getdev;

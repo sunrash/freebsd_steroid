@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/rijndael/rijndael-api.c 175360 2008-01-15 18:34:47Z sobomax $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #ifdef _KERNEL

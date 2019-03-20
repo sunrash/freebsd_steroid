@@ -22,7 +22,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.\" $FreeBSD: releng/12.0/usr.sbin/efivar/efivar.8 323066 2017-08-31 17:53:50Z imp $
+.\" $FreeBSD$
 .\"
 .Dd May 22, 2017
 .Dt EFIVAR 8
@@ -86,8 +86,17 @@ This flag implies
 .Fl -write
 unless the
 .Fl -append
-flag is given.
-This behavior is not well understood and is currently unimplemented.
+or
+.Fl -print
+flags are given.
+This behavior is not well understood and is currently unimplemented
+for writes.
+When
+.Fl -print
+is specified, the contents of the file are used as the value to
+print using any other specified flags.
+This is used primarily for testing purposes for more complicated
+variable decoding.
 .It Fl a Fl -append
 Append the specified value to the UEFI variable rather than replacing
 it.

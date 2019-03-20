@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/libc/sys/Symbol.map 336171 2018-07-10 13:32:04Z brooks $
+ * $FreeBSD$
  */
 
 /*
@@ -399,6 +399,13 @@ FBSD_1.5 {
 	statfs;
 	cpuset_getdomain;
 	cpuset_setdomain;
+};
+
+FBSD_1.6 {
+	fhlink;
+	fhlinkat;
+	fhreadlink;
+	getfhat;
 };
 
 FBSDprivate_1.0 {

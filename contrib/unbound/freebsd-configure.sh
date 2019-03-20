@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/contrib/unbound/freebsd-configure.sh 339294 2018-10-10 22:29:06Z des $
+# $FreeBSD$
 #
 
 set -e

@@ -33,7 +33,7 @@
 #if !defined(lint)
 __RCSID("$NetBSD: rl1.c,v 1.2 2016/02/29 00:54:19 christos Exp $");
 #endif /* not lint  */
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/TEST/rl1.c 313002 2017-01-30 23:00:51Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * test.c: A little test program

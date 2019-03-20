@@ -1,5 +1,5 @@
 /* $OpenBSD: myproposal.h,v 1.56 2018/07/03 11:39:54 djm Exp $ */
-/* $FreeBSD: releng/12.0/crypto/openssh/myproposal.h 338561 2018-09-10 16:20:12Z des $ */
+/* $FreeBSD$ */
 
 /*
  * Copyright (c) 2000 Markus Friedl.  All rights reserved.

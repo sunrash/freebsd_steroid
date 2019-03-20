@@ -19,7 +19,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/mips/dtrace_asm.S 323206 2017-09-06 03:19:52Z lidl $
+ * $FreeBSD$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.

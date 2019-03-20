@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)quota.h	8.3 (Berkeley) 8/19/94
- * $FreeBSD: releng/12.0/sys/ufs/ufs/quota.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _UFS_UFS_QUOTA_H_

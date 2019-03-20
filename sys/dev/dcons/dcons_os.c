@@ -33,7 +33,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/dcons/dcons_os.c 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -309,7 +309,7 @@ dcons_drv_init(int stage)
 		 * Allow read/write access to dcons buffer.
 		 */
 		for (pa = trunc_page(addr); pa < addr + size; pa += PAGE_SIZE)
-			*vtopte(PMAP_MAP_LOW + pa) |= PG_RW;
+			pmap_ksetrw(PMAP_MAP_LOW + pa);
 		invltlb();
 #endif
 		/* XXX P to V */

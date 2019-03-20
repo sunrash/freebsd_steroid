@@ -29,7 +29,7 @@
 
 /*
  * $Id$
- * $FreeBSD: releng/12.0/sys/geom/sched/g_sched.c 326270 2017-11-27 15:17:37Z pfg $
+ * $FreeBSD$
  *
  * Main control module for geom-based disk schedulers ('sched').
  *

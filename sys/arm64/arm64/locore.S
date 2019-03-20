@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/arm64/locore.S 333636 2018-05-15 16:44:35Z andrew $
+ * $FreeBSD$
  */
 
 #include "assym.inc"
@@ -633,7 +633,7 @@ sctlr_set:
 sctlr_clear:
 	/* Bits to clear */
 	.quad (SCTLR_EE | SCTLR_EOE | SCTLR_IESB | SCTLR_WXN | SCTLR_UMA | \
-	    SCTLR_ITD | SCTLR_THEE | SCTLR_A)
+	    SCTLR_ITD | SCTLR_A)
 
 	.globl abort
 abort:
@@ -699,3 +699,21 @@ esigcode:
 	.global	szsigcode
 szsigcode:
 	.quad	esigcode - sigcode
+
+ENTRY(aarch32_sigcode)
+	.word 0xe1a0000d	// mov r0, sp
+	.word 0xe2800040	// add r0, r0, #SIGF_UC
+	.word 0xe59f700c	// ldr r7, [pc, #12]
+	.word 0xef000000	// swi #0
+	.word 0xe59f7008	// ldr r7, [pc, #8]
+	.word 0xef000000	// swi #0
+	.word 0xeafffffa	// b . - 16
+END(aarch32_sigcode)
+	.word SYS_sigreturn
+	.word SYS_exit
+	.align	3
+aarch32_esigcode:
+	.data
+	.global sz_aarch32_sigcode
+sz_aarch32_sigcode:
+	.quad aarch32_esigcode - aarch32_sigcode

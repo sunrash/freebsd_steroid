@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/backend-partmanager/Makefile 284255 2015-06-11 04:22:17Z sjg $
+# $FreeBSD$
 
 FILES=	create-part.sh delete-part.sh
 FILESMODE=	${BINMODE}

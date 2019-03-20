@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/controller/musb_otg.h 331306 2018-03-21 15:17:54Z andrew $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

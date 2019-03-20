@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libexecinfo/Makefile 312507 2017-01-20 04:53:40Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIBEXECINFO=	${SRCTOP}/contrib/libexecinfo

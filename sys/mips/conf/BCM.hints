@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/conf/BCM.hints 304243 2016-08-16 21:32:05Z landonf $
+# $FreeBSD$
 hint.bhnd.0.at="nexus0"
 hint.bhnd.0.maddr="0x18000000" 
 hint.bhnd.0.msize="0x00100000"

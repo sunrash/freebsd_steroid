@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libopencsd/Makefile 332033 2018-04-04 14:31:56Z br $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?=	/lib

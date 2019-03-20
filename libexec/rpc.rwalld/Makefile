@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/rpc.rwalld/Makefile 275077 2014-11-25 21:18:18Z bapt $
+# $FreeBSD$
 
 PROG =	rpc.rwalld
 SRCS =	rwalld.c

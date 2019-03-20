@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/lib80211/Makefile 338794 2018-09-19 09:29:06Z brd $
+# $FreeBSD$
 
 CONFS=	regdomain.xml
 PACKAGE=lib${LIB}

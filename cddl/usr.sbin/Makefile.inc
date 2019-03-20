@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/Makefile.inc 168404 2007-04-06 01:09:06Z pjd $
+# $FreeBSD$
 
 BINDIR?=	/usr/sbin
 

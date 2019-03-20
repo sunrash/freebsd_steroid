@@ -22,7 +22,7 @@
  * Portions Copyright 2013 Justin Hibbits jhibbits@freebsd.org
  * Portions Copyright 2013 Howard Su howardsu@freebsd.org
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/fbt/arm/fbt_isa.c 338359 2018-08-28 20:21:36Z markj $
+ * $FreeBSD$
  *
  */
 

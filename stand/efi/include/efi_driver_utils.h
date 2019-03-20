@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/efi/include/efi_driver_utils.h 322038 2017-08-04 04:16:41Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _EFI_DRIVER_UTILS_H_

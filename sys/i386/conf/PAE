@@ -1,7 +1,7 @@
 #
 # PAE -- Generic kernel configuration file for FreeBSD/i386 PAE
 #
-# $FreeBSD: releng/12.0/sys/i386/conf/PAE 276526 2015-01-02 05:34:14Z scottl $
+# $FreeBSD$
 
 include GENERIC
 
@@ -17,6 +17,5 @@ nodevice	hptmv
 nodevice	ida
 
 # The following drivers don't work with PAE enabled.
-makeoptions	WITHOUT_MODULES+="ncr pst"
-nodevice	ncr
+makeoptions	WITHOUT_MODULES+="pst"
 nodevice	pst

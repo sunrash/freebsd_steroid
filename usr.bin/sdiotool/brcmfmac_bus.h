@@ -15,7 +15,7 @@
  * OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/usr.bin/sdiotool/brcmfmac_bus.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 /* The level of bus communication with the dongle */
 enum brcmf_bus_state {

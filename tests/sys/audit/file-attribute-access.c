@@ -22,7 +22,7 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/audit/file-attribute-access.c 336604 2018-07-22 14:11:52Z asomers $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

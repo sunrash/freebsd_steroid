@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/timer.h 334658 2018-06-05 15:20:20Z hselasky $
+ * $FreeBSD$
  */
 #ifndef _LINUX_TIMER_H_
 #define	_LINUX_TIMER_H_

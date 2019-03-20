@@ -36,7 +36,7 @@ SUCH DAMAGE.
 #include <unistd.h>
 
 /*
- * $FreeBSD: releng/12.0/tests/sys/kern/pipe/pipe_fstat_bug_test.c 306962 2016-10-10 13:40:05Z br $
+ * $FreeBSD$
  * The goal of this program is to see if fstat reports the correct
  * data count for a pipe.  Prior to revision 1.172 of sys_pipe.c,
  * 0 would be returned once the pipe entered direct write mode.

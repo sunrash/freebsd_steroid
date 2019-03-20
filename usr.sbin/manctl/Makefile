@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/manctl/Makefile 75286 2001-04-07 11:21:35Z ru $
+# $FreeBSD$
 
 SCRIPTS=manctl.sh
 MAN=	manctl.8

@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/5/93
-#	$FreeBSD: releng/12.0/share/man/man5/Makefile 319079 2017-05-28 18:07:53Z trasz $
+#	$FreeBSD$
 
 .include <src.opts.mk>
 
@@ -66,10 +66,12 @@ MAN=	acct.5 \
 	src.conf.5 \
 	stab.5 \
 	style.Makefile.5 \
+	style.mdoc.5 \
 	sysctl.conf.5 \
 	tmpfs.5
 
 MLINKS=	dir.5 dirent.5
+MLINKS+=ext2fs.5 ext4fs.5
 MLINKS+=fs.5 inode.5
 MLINKS+=hosts.equiv.5 rhosts.5
 MLINKS+=msdosfs.5 msdos.5

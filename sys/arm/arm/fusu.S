@@ -36,7 +36,7 @@
 #include <machine/asm.h>
 #include <machine/armreg.h>
 #include "assym.inc"
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/fusu.S 332656 2018-04-17 18:04:28Z brooks $");
+__FBSDID("$FreeBSD$");
 
 	.syntax	unified
 

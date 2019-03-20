@@ -38,7 +38,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)param.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/amd64/include/param.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 

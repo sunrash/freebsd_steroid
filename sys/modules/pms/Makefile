@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/pms/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 # 5/31/2012
 #PATH shall include all directories
 

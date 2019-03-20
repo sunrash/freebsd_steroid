@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libcam/camlib.h 327249 2017-12-27 21:36:37Z pfg $
+ * $FreeBSD$
  */
 /*
  * Buffer encoding/decoding routines taken from the original FreeBSD SCSI

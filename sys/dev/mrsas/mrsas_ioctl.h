@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mrsas/mrsas_ioctl.h 282533 2015-05-06 10:46:28Z kadesai $");
+__FBSDID("$FreeBSD$");
 
 #ifndef MRSAS_IOCTL_H
 #define	MRSAS_IOCTL_H

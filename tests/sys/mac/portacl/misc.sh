@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/mac/portacl/misc.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 sysctl security.mac.portacl >/dev/null 2>&1
 if [ $? -ne 0 ]; then

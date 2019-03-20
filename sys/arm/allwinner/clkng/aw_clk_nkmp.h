@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/allwinner/clkng/aw_clk_nkmp.h 314393 2017-02-28 15:11:33Z manu $
+ * $FreeBSD$
  */
 
 #ifndef	__AW_CLK_NKMP_H__

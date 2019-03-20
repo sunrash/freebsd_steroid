@@ -26,7 +26,7 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 # USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/bhnd/bhnd_bus_if.m 326292 2017-11-27 22:13:30Z landonf $
+# $FreeBSD$
 
 #include <sys/types.h>
 #include <sys/bus.h>

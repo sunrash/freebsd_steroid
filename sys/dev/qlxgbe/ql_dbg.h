@@ -26,7 +26,7 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/qlxgbe/ql_dbg.h 331739 2018-03-29 17:36:34Z davidcs $
+ * $FreeBSD$
  */
 
 /*

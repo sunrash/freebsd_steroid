@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/lib/hostname.c 320455 2017-06-28 19:08:07Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.

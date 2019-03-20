@@ -37,7 +37,7 @@
  *
  * Define the interface structure required by the disassembler.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/disassem.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_DISASSEM_H_

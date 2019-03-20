@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/cxgbetool/tcb_common.h 330887 2018-03-14 00:04:58Z np $
+ * $FreeBSD$
  *
  */
 

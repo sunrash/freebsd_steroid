@@ -68,7 +68,7 @@
 #ifdef ICL_KERNEL_PROXY
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iscsi/icl_soft_proxy.c 319722 2017-06-08 21:30:34Z glebius $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/capsicum.h>

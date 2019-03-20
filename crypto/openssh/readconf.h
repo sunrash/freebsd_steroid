@@ -1,5 +1,5 @@
 /* $OpenBSD: readconf.h,v 1.127 2018/07/19 10:28:47 dtucker Exp $ */
-/* $FreeBSD: releng/12.0/crypto/openssh/readconf.h 338561 2018-09-10 16:20:12Z des $ */
+/* $FreeBSD$ */
 
 /*
  * Author: Tatu Ylonen <ylo@cs.hut.fi>

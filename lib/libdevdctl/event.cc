@@ -63,7 +63,7 @@
 #include "event_factory.h"
 #include "exception.h"
 
-__FBSDID("$FreeBSD: releng/12.0/lib/libdevdctl/event.cc 329284 2018-02-14 23:52:39Z asomers $");
+__FBSDID("$FreeBSD$");
 
 /*================================== Macros ==================================*/
 #define NUM_ELEMENTS(x) (sizeof(x) / sizeof(*x))

@@ -25,7 +25,7 @@
  *
  *	$NetBSD: mc146818var.h,v 1.7 2008/05/14 13:29:29 tsutsui Exp $
  *
- * $FreeBSD: releng/12.0/sys/dev/mc146818/mc146818var.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 struct mc146818_softc {

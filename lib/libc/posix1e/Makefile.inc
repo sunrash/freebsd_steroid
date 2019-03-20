@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/posix1e/Makefile.inc 338745 2018-09-18 01:40:37Z brd $
+# $FreeBSD$
 
 .PATH: ${LIBC_SRCTOP}/posix1e
 

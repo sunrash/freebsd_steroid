@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/malta/asm_malta.S 337769 2018-08-14 16:26:44Z br $
+ * $FreeBSD$
  */
 
 #include <machine/asm.h>

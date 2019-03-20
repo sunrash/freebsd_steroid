@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_cpuset.c 340401 2018-11-13 18:21:47Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

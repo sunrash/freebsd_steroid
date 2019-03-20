@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/devmatch/devmatch.c 338314 2018-08-25 15:47:52Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <ctype.h>

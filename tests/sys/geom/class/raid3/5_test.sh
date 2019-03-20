@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/raid3/5_test.sh 293821 2016-01-13 09:14:27Z ngie $
+# $FreeBSD$
 
 . `dirname $0`/conf.sh
 

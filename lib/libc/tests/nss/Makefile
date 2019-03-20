@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/nss/Makefile 319049 2017-05-28 06:29:01Z ngie $
+# $FreeBSD$
 
 .PATH: ${.CURDIR:H}/resolv
 

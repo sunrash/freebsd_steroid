@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/msdosfs/msdosfs_vfsops.c 336966 2018-07-31 12:44:28Z emaste $ */
+/* $FreeBSD$ */
 /*	$NetBSD: msdosfs_vfsops.c,v 1.51 1997/11/17 15:36:58 ws Exp $	*/
 
 /*-
@@ -418,9 +418,12 @@ mountmsdosfs(struct vnode *devvp, struct mount *mp)
 		return (error);
 	}
 	dev_ref(dev);
-	VOP_UNLOCK(devvp, 0);
-
 	bo = &devvp->v_bufobj;
+	VOP_UNLOCK(devvp, 0);
+	if (dev->si_iosize_max != 0)
+		mp->mnt_iosize_max = dev->si_iosize_max;
+	if (mp->mnt_iosize_max > MAXPHYS)
+		mp->mnt_iosize_max = MAXPHYS;
 
 	/*
 	 * Read the boot sector of the filesystem, and then check the

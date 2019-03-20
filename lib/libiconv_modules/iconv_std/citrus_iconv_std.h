@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/iconv_std/citrus_iconv_std.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_iconv_std.h,v 1.1 2003/06/25 09:51:44 tshiozak Exp $	*/
 
 /*-

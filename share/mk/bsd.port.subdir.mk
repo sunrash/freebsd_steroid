@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.port.subdir.mk 287436 2015-09-03 17:01:58Z bdrewery $
+# $FreeBSD$
 
 .if !defined(PORTSDIR)
 # Autodetect if the command is being run in a ports tree that's not rooted

@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/hyperv/netvsc/if_hn.c 339984 2018-11-01 08:08:08Z whu $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_hn.h"
 #include "opt_inet6.h"

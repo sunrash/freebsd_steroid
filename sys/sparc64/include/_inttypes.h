@@ -29,7 +29,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *	From: $NetBSD: int_fmtio.h,v 1.4 2008/04/28 20:23:36 martin Exp $
- * $FreeBSD: releng/12.0/sys/sparc64/include/_inttypes.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_INTTYPES_H_

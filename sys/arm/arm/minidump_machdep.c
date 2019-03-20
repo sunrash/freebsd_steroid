@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/minidump_machdep.c 333145 2018-05-01 17:32:43Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_watchdog.h"
 

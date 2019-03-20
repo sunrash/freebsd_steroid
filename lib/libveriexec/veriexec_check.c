@@ -1,5 +1,5 @@
 /* 
- * $FreeBSD: releng/12.0/lib/libveriexec/veriexec_check.c 335401 2018-06-20 00:55:18Z stevek $
+ * $FreeBSD$
  *
  * Copyright (c) 2011, 2012, 2013, 2015, Juniper Networks, Inc.
  * All rights reserved.

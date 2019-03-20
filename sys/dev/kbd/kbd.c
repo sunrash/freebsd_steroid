@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/kbd/kbd.c 337721 2018-08-13 19:05:53Z wulf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_kbd.h"
 

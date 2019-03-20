@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ffs_extern.h	8.6 (Berkeley) 3/30/95
- * $FreeBSD: releng/12.0/usr.sbin/makefs/ffs/ffs_extern.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #include "ffs/buf.h"

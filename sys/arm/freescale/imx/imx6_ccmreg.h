@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_ccmreg.h 329999 2018-02-26 02:28:32Z ian $
+ * $FreeBSD$
  */
 
 #ifndef	IMX6_CCMREG_H

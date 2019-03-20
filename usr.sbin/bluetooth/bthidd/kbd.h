@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: kbd.h,v 1.3 2006/09/07 21:06:53 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidd/kbd.h 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _KBD_H_

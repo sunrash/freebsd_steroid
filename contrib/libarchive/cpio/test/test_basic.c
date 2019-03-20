@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/cpio/test/test_basic.c 338600 2018-09-11 20:51:34Z mm $");
+__FBSDID("$FreeBSD$");
 
 static void
 verify_files(const char *msg)

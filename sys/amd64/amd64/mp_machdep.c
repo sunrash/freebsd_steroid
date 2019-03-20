@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/amd64/mp_machdep.c 338356 2018-08-28 18:47:02Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_cpu.h"
 #include "opt_ddb.h"

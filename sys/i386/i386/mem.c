@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/mem.c 332489 2018-04-13 20:30:49Z kib $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Memory special file
@@ -148,7 +148,6 @@ memrw(struct cdev *dev, struct uio *uio, int flags)
 		error = uiomove((caddr_t)&ptvmmap[o], (int)c, uio);
 		pmap_qremove((vm_offset_t)ptvmmap, 1);
 		sx_xunlock(&memsxlock);
-		
 	}
 
 	return (error);

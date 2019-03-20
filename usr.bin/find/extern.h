@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.3 (Berkeley) 4/16/94
- *	$FreeBSD: releng/12.0/usr.bin/find/extern.h 326816 2017-12-13 03:36:33Z eadler $
+ *	$FreeBSD$
  */
 
 #include <sys/cdefs.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/pfctl/tests/files/Makefile 336744 2018-07-26 17:05:33Z brd $
+# $FreeBSD$
 
 TESTSDIR=	${TESTSBASE}/sbin/pfctl/files
 BINDIR=		${TESTSDIR}

@@ -24,7 +24,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kern/coredump_phnum_helper.c 308177 2016-11-01 19:18:16Z cem $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

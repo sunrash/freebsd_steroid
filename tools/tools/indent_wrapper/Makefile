@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/indent_wrapper/Makefile 291300 2015-11-25 13:26:42Z hselasky $
+# $FreeBSD$
 PREFIX?=        /usr/local
 LOCALBASE?=     /usr/local
 BINDIR=         ${PREFIX}/sbin

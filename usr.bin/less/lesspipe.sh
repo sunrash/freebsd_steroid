@@ -1,7 +1,7 @@
 #! /bin/sh
 # ex:ts=8
 
-# $FreeBSD: releng/12.0/usr.bin/less/lesspipe.sh 316979 2017-04-15 20:06:24Z bapt $
+# $FreeBSD$
 
 case "$1" in
 	*.zip)

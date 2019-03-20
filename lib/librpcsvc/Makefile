@@ -1,5 +1,5 @@
 #	from: @(#)Makefile    5.10 (Berkeley) 6/24/90
-# $FreeBSD: releng/12.0/lib/librpcsvc/Makefile 320122 2017-06-19 20:47:24Z bdrewery $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -38,7 +38,7 @@
 
 #include "vc_vchi_audioserv_defs.h"
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_audio.c 310636 2016-12-27 19:08:08Z gonzo $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 /* Audio destination */
 #define	DEST_AUTO		0

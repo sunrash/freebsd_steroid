@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/debug_monitor.h 305771 2016-09-13 15:45:22Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_DEBUG_MONITOR_H_

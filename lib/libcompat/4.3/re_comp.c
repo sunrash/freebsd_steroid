@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcompat/4.3/re_comp.c 334911 2018-06-10 02:34:41Z jhb $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)regex.c	5.1 (Berkeley) 3/29/92");
 
 /*

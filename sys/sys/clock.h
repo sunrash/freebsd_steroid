@@ -43,7 +43,7 @@
  *
  * All that code should go here for service.
  *
- * $FreeBSD: releng/12.0/sys/sys/clock.h 329172 2018-02-12 17:33:14Z ian $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_CLOCK_H_

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/ioctl/Makefile 332102 2018-04-06 15:03:48Z kp $
+# $FreeBSD$
 
 PACKAGE=	tests
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/net80211/ieee80211_radiotap.h 326272 2017-11-27 15:23:17Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: ieee80211_radiotap.h,v 1.16 2007/01/06 05:51:15 dyoung Exp $ */
 
 /*-

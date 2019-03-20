@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/etc/mtree/Makefile 321446 2017-07-25 00:28:23Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

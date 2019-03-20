@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD: releng/12.0/sys/dev/drm2/ttm/ttm_execbuf_util.h 338285 2018-08-24 00:02:00Z imp $ */
+/* $FreeBSD$ */
 
 #ifndef _TTM_EXECBUF_UTIL_H_
 #define _TTM_EXECBUF_UTIL_H_

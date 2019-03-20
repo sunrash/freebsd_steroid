@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/kbdcontrol/kbdcontrol.c 326276 2017-11-27 15:37:16Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <err.h>
@@ -961,6 +961,8 @@ set_bell_values(char *opt)
 	int bell, duration, pitch;
 
 	bell = 0;
+	duration = 0;
+	pitch = 0;
 	if (!strncmp(opt, "quiet.", 6)) {
 		bell = CONS_QUIET_BELL;
 		opt += 6;
@@ -991,8 +993,8 @@ badopt:
 	}
 
 	ioctl(0, CONS_BELLTYPE, &bell);
-	if (!(bell & CONS_VISUAL_BELL))
-		fprintf(stderr, "[=%d;%dB", pitch, duration);
+	if (duration > 0 && pitch > 0)
+		fprintf(stderr, "\e[=%d;%dB", pitch, duration);
 }
 
 static void

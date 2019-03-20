@@ -33,7 +33,7 @@
 
 #include <sys/cdefs.h>
 #ifdef __FreeBSD__
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/malo/if_malo.c 333813 2018-05-18 20:13:34Z mmacy $");
+__FBSDID("$FreeBSD$");
 #endif
 
 #include "opt_malo.h"

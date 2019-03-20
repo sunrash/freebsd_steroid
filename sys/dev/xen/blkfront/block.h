@@ -27,7 +27,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/dev/xen/blkfront/block.h 298955 2016-05-03 03:41:25Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __XEN_BLKFRONT_BLOCK_H__

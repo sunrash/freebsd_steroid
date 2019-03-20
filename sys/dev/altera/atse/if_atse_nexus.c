@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/altera/atse/if_atse_nexus.c 332474 2018-04-13 15:59:24Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_device_polling.h"
 

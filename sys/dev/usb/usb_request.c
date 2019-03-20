@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/usb_request.c 335700 2018-06-27 12:08:12Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *
@@ -1601,8 +1601,9 @@ usbd_req_get_port_status(struct usb_device *udev, struct mtx *mtx,
 	USETW(req.wValue, 0);
 	req.wIndex[0] = port;
 	req.wIndex[1] = 0;
-	USETW(req.wLength, sizeof *ps);
-	return (usbd_do_request(udev, mtx, &req, ps));
+	USETW(req.wLength, sizeof(*ps));
+
+	return (usbd_do_request_flags(udev, mtx, &req, ps, 0, NULL, 1000));
 }
 
 /*------------------------------------------------------------------------*

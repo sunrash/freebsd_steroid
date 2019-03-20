@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs_xport.c 336446 2018-07-18 07:01:34Z ram $
+ * $FreeBSD$
  */
 
 /**
@@ -290,10 +290,6 @@ ocs_xport_attach_cleanup:
 
 	if (node_pool_created) {
 		ocs_node_free_pool(ocs);
-	}
-
-	if (rq_threads_created) {
-		ocs_xport_rq_threads_teardown(xport);
 	}
 
 	return -1;

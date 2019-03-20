@@ -40,7 +40,7 @@
  */
 
 #include <sys/param.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/gb18030.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <runetype.h>

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/autoconf.c 331082 2018-03-17 01:40:09Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Setup the system to run on the current machine.

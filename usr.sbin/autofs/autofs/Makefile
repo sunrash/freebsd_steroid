@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/autofs/autofs/Makefile 337340 2018-08-04 22:41:17Z brd $
+# $FreeBSD$
 
 CONFS=		include_ldap \
 		include_nis \

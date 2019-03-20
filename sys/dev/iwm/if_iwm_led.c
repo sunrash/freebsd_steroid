@@ -87,7 +87,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_led.c 318001 2017-05-09 02:38:23Z adrian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_wlan.h"
 #include "opt_iwm.h"
@@ -161,6 +161,9 @@ static void
 iwm_led_blink_timeout(void *arg)
 {
 	struct iwm_softc *sc = arg;
+
+	if (sc->sc_attached == 0)
+		return;
 
 	if (iwm_mvm_led_is_enabled(sc))
 		iwm_mvm_led_disable(sc);

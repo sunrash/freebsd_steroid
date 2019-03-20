@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/xform_aes_icm.c 303650 2016-08-01 22:57:03Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <opencrypto/xform_enc.h>
 

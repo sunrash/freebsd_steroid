@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/i386/libi386/biospnp.c 330864 2018-03-13 16:33:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * PnP BIOS enumerator.

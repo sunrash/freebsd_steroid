@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/wpa/Makefile 288266 2015-09-26 14:13:51Z bdrewery $
+# $FreeBSD$
 
 SUBDIR= wpa_supplicant wpa_cli wpa_passphrase
 SUBDIR+= hostapd hostapd_cli

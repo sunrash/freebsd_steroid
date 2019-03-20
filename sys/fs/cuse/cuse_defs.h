@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/cuse/cuse_defs.h 324320 2017-10-05 16:42:02Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2010-2012 Hans Petter Selasky. All rights reserved.
  *

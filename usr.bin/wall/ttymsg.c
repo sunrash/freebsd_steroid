@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/wall/ttymsg.c 332510 2018-04-15 08:34:16Z ed $");
+__FBSDID("$FreeBSD$");
 
 #ifndef lint
 static const char sccsid[] = "@(#)ttymsg.c	8.2 (Berkeley) 11/16/93";

@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD: releng/12.0/sys/dev/drm2/ttm/ttm_lock.h 338285 2018-08-24 00:02:00Z imp $ */
+/* $FreeBSD$ */
 
 /** @file ttm_lock.h
  * This file implements a simple replacement for the buffer manager use

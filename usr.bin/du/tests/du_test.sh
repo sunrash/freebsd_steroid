@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/du/tests/du_test.sh 322291 2017-08-09 01:19:19Z kevans $
+# $FreeBSD$
 
 atf_test_case A_flag
 A_flag_head()

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/hwpmc/hwpmc_mod.c 340719 2018-11-21 03:22:37Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/domainset.h>
@@ -3512,6 +3512,7 @@ pmc_syscall_handler(struct thread *td, void *syscall_args)
 		struct pmc_classdep *pcd;
 		int cl;
 
+		memset(&gci, 0, sizeof(gci));
 		gci.pm_cputype = md->pmd_cputype;
 		gci.pm_ncpu    = pmc_cpu_max();
 		gci.pm_npmc    = md->pmd_npmc;
@@ -3661,7 +3662,7 @@ pmc_syscall_handler(struct thread *td, void *syscall_args)
 		npmc = md->pmd_npmc;
 
 		pmcinfo_size = npmc * sizeof(struct pmc_info);
-		pmcinfo = malloc(pmcinfo_size, M_PMC, M_WAITOK);
+		pmcinfo = malloc(pmcinfo_size, M_PMC, M_WAITOK | M_ZERO);
 
 		p = pmcinfo;
 

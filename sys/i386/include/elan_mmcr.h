@@ -34,7 +34,7 @@
  * bytes. Ignore fields with the 'pad' prefix - they are only present for
  * alignment purposes.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/elan_mmcr.h 326260 2017-11-27 15:08:52Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_ELAN_MMCR_H_

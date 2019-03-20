@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_event.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -504,7 +504,7 @@ linux_epoll_ctl(struct thread *td, struct linux_epoll_ctl_args *args)
 		 * and the EV_ADD flag is not set.
 		 */
 		kev[0].flags &= ~EV_ADD;
-		error = kqfd_register(args->epfd, &kev[0], td, 1);
+		error = kqfd_register(args->epfd, &kev[0], td, M_WAITOK);
 		if (error != ENOENT) {
 			error = EEXIST;
 			goto leave0;

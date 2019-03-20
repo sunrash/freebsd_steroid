@@ -13,7 +13,7 @@
  * UCL. This driver is based much more on read/write/poll mode of
  * operation though.
  *
- * $FreeBSD: releng/12.0/sys/net/if_tun.c 339121 2018-10-03 07:35:16Z tuexen $
+ * $FreeBSD$
  */
 
 #include "opt_inet.h"
@@ -204,7 +204,7 @@ tunclone(void *arg, struct ucred *cred, char *name, int namelen,
 	 * If tun cloning is enabled, only the superuser can create an
 	 * interface.
 	 */
-	if (!tundclone || priv_check_cred(cred, PRIV_NET_IFCREATE, 0) != 0)
+	if (!tundclone || priv_check_cred(cred, PRIV_NET_IFCREATE) != 0)
 		return;
 
 	if (strcmp(name, tunname) == 0) {

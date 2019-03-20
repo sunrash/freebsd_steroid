@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/userboot/userboot/host.c 329879 2018-02-23 20:18:09Z cem $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Read from the host filesystem

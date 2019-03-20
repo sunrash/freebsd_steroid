@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libsm/Makefile 312482 2017-01-20 04:35:36Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

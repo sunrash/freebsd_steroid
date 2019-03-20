@@ -79,7 +79,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/trap-v4.c 336834 2018-07-28 17:21:34Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -456,7 +456,7 @@ dab_fatal(struct trapframe *tf, u_int fsr, u_int far, struct thread *td,
 	printf(", pc =%08x\n\n", tf->tf_pc);
 
 #ifdef KDB
-	if (debugger_on_panic) {
+	if (debugger_on_trap) {
 		kdb_why = KDB_WHY_TRAP;
 		handled = kdb_trap(fsr, 0, tf);
 		kdb_why = KDB_WHY_UNSET;

@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/indent/tests/functional_test.sh 314613 2017-03-03 20:15:22Z ngie $
+# $FreeBSD$
 
 SRCDIR=$(atf_get_srcdir)
 
@@ -38,7 +38,7 @@ check()
 	# to pass.
 	atf_check cp ${SRCDIR}/${tc}* .
 
-	# Remove $FreeBSD: releng/12.0/usr.bin/indent/tests/functional_test.sh 314613 2017-03-03 20:15:22Z ngie $ RCS expansions because they get re-indented, which
+	# Remove $FreeBSD$ RCS expansions because they get re-indented, which
 	# changes the output
 	local out_file="${tc}.stdout"
 	if [ -f "${out_file}" ]; then

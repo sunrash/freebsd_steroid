@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_private.h 331378 2018-03-22 22:13:46Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_NVRAM_BHND_NVRAM_PRIVATE_H_

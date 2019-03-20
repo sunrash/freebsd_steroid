@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/mtkswitch/mtkswitch.c 328377 2018-01-24 21:33:18Z mizhka $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

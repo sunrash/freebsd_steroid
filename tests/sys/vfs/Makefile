@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/vfs/Makefile 325957 2017-11-17 19:25:39Z cem $
+# $FreeBSD$
 
 PACKAGE=	tests
 

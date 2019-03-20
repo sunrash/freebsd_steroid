@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/gpio/gpiospi.c 310018 2016-12-13 10:03:29Z mizhka $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_gpio.h"
 

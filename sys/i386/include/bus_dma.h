@@ -26,7 +26,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/i386/include/bus_dma.h 326260 2017-11-27 15:08:52Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef _I386_BUS_DMA_H_
 #define _I386_BUS_DMA_H_

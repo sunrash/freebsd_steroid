@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/tcpdump/tcpdump/Makefile 324287 2017-10-04 21:05:44Z oshogbo $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -1,5 +1,5 @@
 /* readfile.h */
-/* $FreeBSD: releng/12.0/libexec/bootpd/readfile.h 97416 2002-05-28 18:31:41Z alfred $ */
+/* $FreeBSD$ */
 
 #include "bptypes.h"
 #include "hash.h"

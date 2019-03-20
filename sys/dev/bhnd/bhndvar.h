@@ -32,7 +32,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/bhndvar.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_BHNDVAR_H_

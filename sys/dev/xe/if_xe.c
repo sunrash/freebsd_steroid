@@ -59,7 +59,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/xe/if_xe.c 339735 2018-10-25 17:00:39Z brooks $");
+__FBSDID("$FreeBSD$");
 
 /*		
  * FreeBSD device driver for Xircom CreditCard PCMCIA Ethernet adapters.  The

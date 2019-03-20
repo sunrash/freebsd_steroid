@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_hostres/hostres_partition_tbl.c 312910 2017-01-28 02:22:15Z nyan $
+ * $FreeBSD$
  */
 
 /*

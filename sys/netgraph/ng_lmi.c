@@ -37,7 +37,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_lmi.c 298813 2016-04-29 21:25:05Z pfg $
+ * $FreeBSD$
  * $Whistle: ng_lmi.c,v 1.38 1999/11/01 09:24:52 julian Exp $
  */
 

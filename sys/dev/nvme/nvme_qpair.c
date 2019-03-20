@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/nvme/nvme_qpair.c 338182 2018-08-22 04:29:24Z chuck $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -561,6 +561,13 @@ nvme_qpair_construct(struct nvme_qpair *qpair, uint32_t id,
 		bus_setup_intr(ctrlr->dev, qpair->res,
 		    INTR_TYPE_MISC | INTR_MPSAFE, NULL,
 		    nvme_qpair_msix_handler, qpair, &qpair->tag);
+		if (id == 0) {
+			bus_describe_intr(ctrlr->dev, qpair->res, qpair->tag,
+			    "admin");
+		} else {
+			bus_describe_intr(ctrlr->dev, qpair->res, qpair->tag,
+			    "io%d", id - 1);
+		}
 	}
 
 	mtx_init(&qpair->lock, "nvme qpair lock", NULL, MTX_DEF);

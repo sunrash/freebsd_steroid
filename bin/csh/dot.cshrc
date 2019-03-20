@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/csh/dot.cshrc 338374 2018-08-29 16:59:19Z brd $
+# $FreeBSD$
 #
 # .cshrc - csh resource script, read at beginning of execution by each shell
 #
@@ -19,7 +19,6 @@ set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/b
 
 setenv	EDITOR	vi
 setenv	PAGER	less
-setenv	BLOCKSIZE	K
 
 if ($?prompt) then
 	# An interactive shell -- set some stuff up

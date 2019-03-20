@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/gnu/usr.bin/binutils/libbfd/bfd.h 336027 2018-07-06 11:50:59Z andrew $ */
+/* $FreeBSD$ */
 
 /* DO NOT EDIT!  -*- buffer-read-only: t -*-  This file is automatically 
    generated from "bfd-in.h", "init.c", "opncls.c", "libbfd.c", 

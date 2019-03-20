@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/ingenic/jz4780_smb.h 310172 2016-12-16 20:04:56Z jmcneill $
+ * $FreeBSD$
  */
 
 /*

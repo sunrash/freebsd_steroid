@@ -1,17 +1,22 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/Makefile 337646 2018-08-11 16:41:07Z kp $
+# $FreeBSD$
 
 PACKAGE=	tests
 
 TESTSDIR=       ${TESTSBASE}/sys/netpfil/pf
 TESTS_SUBDIRS+=	ioctl
 
-ATF_TESTS_SH+=	pass_block \
+ATF_TESTS_SH+=	anchor \
+		pass_block \
 		forward \
 		fragmentation \
+		names \
+		nat \
 		set_tos \
+		rdr \
 		route_to \
 		synproxy \
-		set_skip
+		set_skip \
+		pfsync
 
 ${PACKAGE}FILES+=	utils.subr \
 			echo_inetd.conf \

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/sys/getdirentries.c 320278 2017-06-23 18:06:20Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define _WANT_FREEBSD11_DIRENT
 

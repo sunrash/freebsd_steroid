@@ -80,7 +80,7 @@
 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/syscall.c 319873 2017-06-12 21:03:23Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -118,8 +118,6 @@ cpu_fetch_syscall_args(struct thread *td)
 		ap += 2;
 	}
 	p = td->td_proc;
-	if (p->p_sysent->sv_mask)
-		sa->code &= p->p_sysent->sv_mask;
 	if (sa->code >= p->p_sysent->sv_size)
 		sa->callp = &p->p_sysent->sv_table[0];
 	else

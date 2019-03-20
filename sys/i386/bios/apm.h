@@ -15,7 +15,7 @@
  *
  * Sep, 1994	Implemented on FreeBSD 1.1.5.1R (Toshiba AVS001WD)
  *
- * $FreeBSD: releng/12.0/sys/i386/bios/apm.h 312910 2017-01-28 02:22:15Z nyan $
+ * $FreeBSD$
  */
 
 #ifndef __APM_H__

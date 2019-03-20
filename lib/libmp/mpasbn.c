@@ -72,7 +72,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libmp/mpasbn.c 339270 2018-10-09 21:28:26Z gjb $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <err.h>

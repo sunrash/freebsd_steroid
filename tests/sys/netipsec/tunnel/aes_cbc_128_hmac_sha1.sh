@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netipsec/tunnel/aes_cbc_128_hmac_sha1.sh 326500 2017-12-03 18:35:07Z kp $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

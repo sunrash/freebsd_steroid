@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/acpica/acpi_pcivar.h 297679 2016-04-07 17:15:16Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef	_ACPI_PCIVAR_H_

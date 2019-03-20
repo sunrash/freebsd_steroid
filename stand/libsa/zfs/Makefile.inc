@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/libsa/zfs/Makefile.inc 336084 2018-07-08 07:42:49Z imp $
+# $FreeBSD$
 
 .PATH:		${ZFSSRC}
 SRCS+=		zfs.c skein.c skein_block.c

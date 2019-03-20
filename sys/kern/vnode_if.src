@@ -27,7 +27,7 @@
 # SUCH DAMAGE.
 #
 #	@(#)vnode_if.src	8.12 (Berkeley) 5/14/95
-# $FreeBSD: releng/12.0/sys/kern/vnode_if.src 328099 2018-01-17 22:36:58Z jhb $
+# $FreeBSD$
 #
 
 #
@@ -325,7 +325,7 @@ vop_symlink {
 	OUT struct vnode **vpp;
 	IN struct componentname *cnp;
 	IN struct vattr *vap;
-	IN char *target;
+	IN const char *target;
 };
 
 

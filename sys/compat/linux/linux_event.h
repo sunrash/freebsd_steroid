@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linux/linux_event.h 314295 2017-02-26 09:48:18Z dchagin $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_EVENT_H_

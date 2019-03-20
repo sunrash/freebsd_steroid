@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/acpi/iasl/Makefile 329085 2018-02-09 21:49:38Z jkim $
+# $FreeBSD$
 
 PROG=	iasl
 

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/allwinner/aw_nmi.c 325991 2017-11-19 03:14:10Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

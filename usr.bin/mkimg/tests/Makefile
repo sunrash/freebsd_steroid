@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/mkimg/tests/Makefile 319294 2017-05-31 07:49:49Z ngie $
+# $FreeBSD$
 
 .PATH:	${.CURDIR}
 

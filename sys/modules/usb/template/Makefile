@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/usb/template/Makefile 333760 2018-05-17 19:54:11Z trasz $
+# $FreeBSD$
 #
 # Copyright (c) 2008 Hans Petter Selasky. All rights reserved.
 #

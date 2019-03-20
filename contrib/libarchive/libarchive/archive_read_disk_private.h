@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_read_disk_private.h 315636 2017-03-20 13:02:27Z mm $
+ * $FreeBSD$
  */
 
 #ifndef __LIBARCHIVE_BUILD

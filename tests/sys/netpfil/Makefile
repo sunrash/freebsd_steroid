@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/Makefile 332358 2018-04-10 12:45:34Z kp $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/packages/apm.ucl 295263 2016-02-04 15:41:00Z gjb $
+# $FreeBSD$
 #
 
 name = "FreeBSD-%PKGNAME%"

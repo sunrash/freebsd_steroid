@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/spigen/Makefile 336561 2018-07-20 17:46:55Z lwhsu $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/dev/spibus
 KMOD=	spigen

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/kern/opensolaris_dtrace.c 271819 2014-09-18 20:38:18Z smh $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/queue.h>

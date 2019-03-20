@@ -1,5 +1,5 @@
 /* $NetBSD: milieu.h,v 1.1 2000/12/29 20:13:54 bjh21 Exp $ */
-/* $FreeBSD: releng/12.0/lib/libc/powerpcspe/softfloat/milieu.h 307761 2016-10-22 01:57:15Z jhibbits $ */
+/* $FreeBSD$ */
 
 /*
 ===============================================================================

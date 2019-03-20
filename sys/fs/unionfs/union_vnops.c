@@ -36,7 +36,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)union_vnops.c	8.32 (Berkeley) 6/23/95
- * $FreeBSD: releng/12.0/sys/fs/unionfs/union_vnops.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  *
  */
 

@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_MAN_UTILS 323550 2017-09-13 16:35:16Z gordon $
+.\" $FreeBSD$
 Set to not build utilities for manual pages,
 .Xr apropos 1 ,
 .Xr makewhatis 1 ,

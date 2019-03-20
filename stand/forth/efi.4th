@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \
-\ $FreeBSD: releng/12.0/stand/forth/efi.4th 332985 2018-04-25 02:42:57Z kevans $
+\ $FreeBSD$
 
 only forth definitions
 

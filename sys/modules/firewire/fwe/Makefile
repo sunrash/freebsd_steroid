@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/firewire/fwe/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 # Makefile for the fwe(4) module (Ethernet over IEEE1394)
 

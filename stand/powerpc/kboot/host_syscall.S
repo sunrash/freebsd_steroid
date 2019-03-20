@@ -1,6 +1,6 @@
 /*
  * 
- * $FreeBSD: releng/12.0/stand/powerpc/kboot/host_syscall.S 328536 2018-01-29 09:24:28Z wma $
+ * $FreeBSD$
  */
 
 #include <machine/asm.h>

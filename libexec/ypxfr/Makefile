@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/ypxfr/Makefile 314653 2017-03-04 11:28:03Z ngie $
+# $FreeBSD$
 
 PROG=	ypxfr
 SRCS=	yp_dblookup.c yp_dbwrite.c yp_error.c \

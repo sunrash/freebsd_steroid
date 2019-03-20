@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)kvm_private.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/lib/libkvm/kvm_private.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/endian.h>

@@ -66,7 +66,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/sys_procdesc.c 339390 2018-10-16 20:06:56Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/capsicum.h>
@@ -416,7 +416,7 @@ procdesc_close(struct file *fp, struct thread *td)
 			 * terminate with prejudice.
 			 */
 			p->p_sigparent = SIGCHLD;
-			proc_reparent(p, p->p_reaper);
+			proc_reparent(p, p->p_reaper, true);
 			if ((pd->pd_flags & PDF_DAEMON) == 0)
 				kern_psignal(p, SIGKILL);
 			PROC_UNLOCK(p);

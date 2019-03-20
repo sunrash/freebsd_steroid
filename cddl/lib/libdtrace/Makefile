@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/lib/libdtrace/Makefile 338213 2018-08-22 21:23:32Z tuexen $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/cddl/contrib/opensolaris/lib/libdtrace/common
 .PATH: ${SRCTOP}/cddl/contrib/opensolaris/lib/libgen/common

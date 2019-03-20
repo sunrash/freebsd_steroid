@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/echo2.0 305305 2016-09-02 21:13:46Z jilles $
+# $FreeBSD$
 
 # Not specified by POSIX.
 

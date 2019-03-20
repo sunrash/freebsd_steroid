@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/usr.sbin/Makefile 288266 2015-09-26 14:13:51Z bdrewery $
+# $FreeBSD$
 
 SUBDIR=	iprop-log kstash ktutil
 SUBDIR_PARALLEL=

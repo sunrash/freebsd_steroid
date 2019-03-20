@@ -1,5 +1,5 @@
 /*	$NetBSD: i82365reg.h,v 1.3 1998/12/20 17:53:28 nathanw Exp $	*/
-/* $FreeBSD: releng/12.0/sys/dev/exca/excareg.h 333143 2018-05-01 16:29:22Z imp $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-FreeBSD

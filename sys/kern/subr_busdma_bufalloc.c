@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_busdma_bufalloc.c 340401 2018-11-13 18:21:47Z markj $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Buffer allocation support routines for bus_dmamem_alloc implementations.

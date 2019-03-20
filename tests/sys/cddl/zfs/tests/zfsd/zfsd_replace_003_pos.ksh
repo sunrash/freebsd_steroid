@@ -30,7 +30,7 @@
 # Portions taken from:
 # ident	"@(#)replacement_001_pos.ksh	1.4	08/02/27 SMI"
 #
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/zfsd/zfsd_replace_003_pos.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . $STF_SUITE/include/libtest.kshlib
 . $STF_SUITE/include/libgnop.kshlib

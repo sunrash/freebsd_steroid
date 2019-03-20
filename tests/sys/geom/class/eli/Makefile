@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/geom/class/eli/Makefile 329273 2018-02-14 20:15:32Z asomers $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/geom/eli ${SRCTOP}/sys/crypto/sha2
 
@@ -20,10 +20,6 @@ ATF_TESTS_SH+=	resize_test
 ATF_TESTS_SH+=	setkey_test
 
 ${PACKAGE}FILES+=		conf.sh
-
-.for t in ${TAP_TESTS_SH}
-TEST_METADATA.$t+=	required_user="root"
-.endfor
 
 CFLAGS.pbkdf2_test=	-I${SRCTOP}/sys
 

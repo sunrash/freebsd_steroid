@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/DECHanyu/citrus_dechanyu.c 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_dechanyu.c,v 1.4 2011/11/19 18:20:13 tnozaki Exp $ */
 
 /*-

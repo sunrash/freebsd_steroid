@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_table_value.c 316461 2017-04-03 13:35:04Z ae $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Multi-field value support for ipfw tables.
@@ -50,7 +50,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_table_value.c 316461 2017
 #include <sys/socketvar.h>
 #include <sys/queue.h>
 #include <net/if.h>	/* ip_fw.h requires IFNAMSIZ */
-#include <net/pfil.h>
 
 #include <netinet/in.h>
 #include <netinet/ip_var.h>	/* struct ipfw_rule_ref */

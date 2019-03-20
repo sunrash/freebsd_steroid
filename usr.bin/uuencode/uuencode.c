@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)uuencode.c	8.2 (Berkeley) 4/2/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/uuencode/uuencode.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * uuencode [input] output
@@ -77,7 +77,7 @@ main(int argc, char *argv[])
 	struct stat sb;
 	int base64;
 	int ch;
-	char *outfile;
+	const char *outfile;
 
 	base64 = 0;
 	outfile = NULL;

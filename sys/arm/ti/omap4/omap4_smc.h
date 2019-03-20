@@ -25,7 +25,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/arm/ti/omap4/omap4_smc.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef OMAP4_SMC_H_

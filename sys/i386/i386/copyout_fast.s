@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/i386/copyout_fast.s 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  */
 
 #include <machine/asmacros.h>

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/file/newfileops_on_fork_test.c 321824 2017-07-31 22:00:27Z bdrewery $
+ * $FreeBSD$
  */
 
 /*

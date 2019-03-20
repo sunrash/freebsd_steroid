@@ -69,7 +69,7 @@
  *
  * OpenBSD: if_bridge.h,v 1.14 2001/03/22 03:48:29 jason Exp
  *
- * $FreeBSD: releng/12.0/sys/net/bridgestp.h 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 /*

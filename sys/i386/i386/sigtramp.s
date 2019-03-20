@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)locore.s	7.3 (Berkeley) 5/13/91
- * $FreeBSD: releng/12.0/sys/i386/i386/sigtramp.s 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  *
  *		originally from: locore.s, by William F. Jolitz
  *

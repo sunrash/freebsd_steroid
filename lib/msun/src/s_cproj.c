@@ -27,9 +27,10 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_cproj.c 326219 2017-11-26 02:00:33Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <complex.h>
+#include <float.h>
 #include <math.h>
 
 #include "math_private.h"

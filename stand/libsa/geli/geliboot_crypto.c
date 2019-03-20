@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/libsa/geli/geliboot_crypto.c 336254 2018-07-13 18:19:33Z imp $
+ * $FreeBSD$
  */
 
 #include <stdio.h>

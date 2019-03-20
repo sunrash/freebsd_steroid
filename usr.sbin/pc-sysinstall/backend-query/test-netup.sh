@@ -30,7 +30,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/backend-query/test-netup.sh 326275 2017-11-27 15:28:26Z pfg $
+# $FreeBSD$
 
 
 # Script which tries to ping "home" to see if Internet connectivity is

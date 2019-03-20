@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD: releng/12.0/sys/dev/mly/mly.c 338130 2018-08-21 10:08:12Z jhb $
+ *	$FreeBSD$
  */
 
 #include <sys/param.h>

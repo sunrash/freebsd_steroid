@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libclang_rt/Makefile 336437 2018-07-17 23:23:54Z imp $
+# $FreeBSD$
 
 .if ${MACHINE_CPUARCH} == "i386" || ${MACHINE_CPUARCH} == "amd64"
 SUBDIR+=	include
@@ -6,6 +6,10 @@ SUBDIR+=	asan
 SUBDIR+=	asan-preinit
 SUBDIR+=	asan_cxx
 SUBDIR+=	asan_dynamic
+.if ${MACHINE_CPUARCH} == "amd64"
+SUBDIR+=	msan
+SUBDIR+=	msan_cxx
+.endif
 SUBDIR+=	safestack
 SUBDIR+=	stats
 SUBDIR+=	stats_client

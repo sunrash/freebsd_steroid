@@ -57,7 +57,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/exec_machdep.c 341149 2018-11-28 16:20:04Z vangyzen $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_fpu_emu.h"
 
@@ -94,6 +94,8 @@ __FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/exec_machdep.c 341149 2018-1
 #include <machine/trap.h>
 #include <machine/vmparam.h>
 
+#include <vm/pmap.h>
+
 #ifdef FPU_EMU
 #include <powerpc/fpu/fpu_extern.h>
 #endif
@@ -121,6 +123,10 @@ static int	grab_mcontext32(struct thread *td, mcontext32_t *, int flags);
 #endif
 
 static int	grab_mcontext(struct thread *, mcontext_t *, int);
+
+#ifdef __powerpc64__
+extern struct sysentvec elf64_freebsd_sysvec_v2;
+#endif
 
 void
 sendsig(sig_t catcher, ksiginfo_t *ksi, sigset_t *mask)
@@ -861,8 +867,6 @@ cpu_set_syscall_retval(struct thread *td, int error)
 	if (tf->fixreg[0] == SYS___syscall &&
 	    (SV_PROC_FLAG(p, SV_ILP32))) {
 		int code = tf->fixreg[FIRSTARG + 1];
-		if (p->p_sysent->sv_mask)
-			code &= p->p_sysent->sv_mask;
 		fixup = (
 #if defined(COMPAT_FREEBSD6) && defined(SYS_freebsd6_lseek)
 		    code != SYS_freebsd6_lseek &&
@@ -1012,11 +1016,18 @@ cpu_set_upcall(struct thread *td, void (*entry)(void *), void *arg,
 		#endif
 	} else {
 	    #ifdef __powerpc64__
-		register_t entry_desc[3];
-		(void)copyin((void *)entry, entry_desc, sizeof(entry_desc));
-		tf->srr0 = entry_desc[0];
-		tf->fixreg[2] = entry_desc[1];
-		tf->fixreg[11] = entry_desc[2];
+		if (td->td_proc->p_sysent == &elf64_freebsd_sysvec_v2) {
+			tf->srr0 = (register_t)entry;
+			/* ELFv2 ABI requires that the global entry point be in r12. */
+			tf->fixreg[12] = (register_t)entry;
+		}
+		else {
+			register_t entry_desc[3];
+			(void)copyin((void *)entry, entry_desc, sizeof(entry_desc));
+			tf->srr0 = entry_desc[0];
+			tf->fixreg[2] = entry_desc[1];
+			tf->fixreg[11] = entry_desc[2];
+		}
 		tf->srr1 = psl_userset | PSL_FE_DFLT;
 	    #endif
 	}
@@ -1101,6 +1112,14 @@ ppc_instr_emulate(struct trapframe *frame, struct pcb *pcb)
 	}
 	sig = fpu_emulate(frame, &pcb->pcb_fpu);
 #endif
+	if (sig == SIGILL) {
+		if (pcb->pcb_lastill != frame->srr0) {
+			/* Allow a second chance, in case of cache sync issues. */
+			sig = 0;
+			pmap_sync_icache(PCPU_GET(curpmap), frame->srr0, 4);
+			pcb->pcb_lastill = frame->srr0;
+		}
+	}
 
 	return (sig);
 }

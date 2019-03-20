@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/tsc.c 335634 2018-06-25 11:24:26Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_clock.h"
 

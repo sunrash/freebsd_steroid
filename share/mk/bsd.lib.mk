@@ -1,5 +1,5 @@
 #	from: @(#)bsd.lib.mk	5.26 (Berkeley) 5/2/91
-# $FreeBSD: releng/12.0/share/mk/bsd.lib.mk 340773 2018-11-22 18:59:05Z emaste $
+# $FreeBSD$
 #
 
 .include <bsd.init.mk>
@@ -69,6 +69,10 @@ TAGS+=		package=${PACKAGE:Uruntime}
 TAG_ARGS=	-T ${TAGS:[*]:S/ /,/g}
 .endif
 
+# ELF hardening knobs
+.if ${MK_BIND_NOW} != "no"
+LDFLAGS+= -Wl,-znow
+.endif
 .if ${MK_RETPOLINE} != "no"
 CFLAGS+= -mretpoline
 CXXFLAGS+= -mretpoline

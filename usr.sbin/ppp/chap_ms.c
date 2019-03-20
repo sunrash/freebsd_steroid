@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ppp/chap_ms.c 339270 2018-10-09 21:28:26Z gjb $
+ * $FreeBSD$
  */
 
 #include <ctype.h>

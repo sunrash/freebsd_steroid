@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/truss/powerpc64-freebsd32.c 309589 2016-12-06 00:39:00Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /* FreeBSD/powerpc64-freebsd32-specific system call handling. */
 

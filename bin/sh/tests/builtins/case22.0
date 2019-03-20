@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/case22.0 318269 2017-05-14 13:14:19Z jilles $
+# $FreeBSD$
 
 case 5 in
 [0"$((-9))"]) echo bad1 ;;

@@ -32,7 +32,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ichiic/ig4_var.h 338215 2018-08-22 22:56:01Z gonzo $
+ * $FreeBSD$
  */
 
 #ifndef _ICHIIC_IG4_VAR_H_

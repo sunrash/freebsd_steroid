@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mips/stdatomic.c 331441 2018-03-23 17:25:19Z cognet $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stdatomic.h>
 #include <sys/types.h>

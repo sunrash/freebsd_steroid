@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/wcsnrtombs.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <limits.h>
 #include <stdlib.h>
@@ -48,7 +48,7 @@ wcsnrtombs_l(char * __restrict dst, const wchar_t ** __restrict src, size_t nwc,
 {
 	FIX_LOCALE(locale);
 	if (ps == NULL)
-		ps = &locale->wcsnrtombs;
+		ps = &(XLOCALE_CTYPE(locale)->wcsnrtombs);
 	return (XLOCALE_CTYPE(locale)->__wcsnrtombs(dst, src, nwc, len, ps));
 }
 size_t

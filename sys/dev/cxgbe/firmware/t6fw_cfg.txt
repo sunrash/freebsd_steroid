@@ -278,5 +278,5 @@
 	version = 0x1
 	checksum = 0xf3e93001
 #
-# $FreeBSD: releng/12.0/sys/dev/cxgbe/firmware/t6fw_cfg.txt 338954 2018-09-26 21:16:07Z np $
+# $FreeBSD$
 #

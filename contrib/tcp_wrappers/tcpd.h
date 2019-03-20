@@ -3,7 +3,7 @@
   * 
   * Author: Wietse Venema, Eindhoven University of Technology, The Netherlands.
   *
-  * $FreeBSD: releng/12.0/contrib/tcp_wrappers/tcpd.h 311556 2017-01-06 21:40:30Z dim $
+  * $FreeBSD$
   */
 
 #ifdef INET6

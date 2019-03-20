@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/delay.4th 298831 2016-04-30 02:47:41Z pfg $
+\ $FreeBSD$
 
 marker task-delay.4th
 

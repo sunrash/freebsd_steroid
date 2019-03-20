@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mips/autoconf.c 326023 2017-11-20 19:43:44Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Setup the system to run on the current machine.

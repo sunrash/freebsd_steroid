@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/altera/softdma/a_api.h 332472 2018-04-13 14:18:04Z br $
+ * $FreeBSD$
  */
 /*
  * Altera, Embedded Peripherals IP, User Guide, v. 11.0, June 2011.

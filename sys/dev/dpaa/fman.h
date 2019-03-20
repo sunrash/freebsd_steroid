@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/dpaa/fman.h 325255 2017-11-01 00:46:48Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef FMAN_H_

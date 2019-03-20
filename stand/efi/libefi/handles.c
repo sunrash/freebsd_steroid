@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/libefi/handles.c 294068 2016-01-15 02:33:47Z smh $");
+__FBSDID("$FreeBSD$");
 
 #include <efi.h>
 #include <efilib.h>

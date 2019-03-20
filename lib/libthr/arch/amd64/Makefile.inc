@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/lib/libthr/arch/amd64/Makefile.inc 286317 2015-08-05 12:53:55Z vangyzen $
+#$FreeBSD$
 
 SRCS+=	_umtx_op_err.S
 

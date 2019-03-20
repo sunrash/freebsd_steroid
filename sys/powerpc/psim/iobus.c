@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/psim/iobus.c 332310 2018-04-08 22:59:34Z gonzo $
+ * $FreeBSD$
  */
 
 /*

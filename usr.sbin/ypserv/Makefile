@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ypserv/Makefile 314466 2017-03-01 04:24:56Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

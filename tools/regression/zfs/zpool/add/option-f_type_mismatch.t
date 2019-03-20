@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tools/regression/zfs/zpool/add/option-f_type_mismatch.t 303575 2016-07-31 06:28:40Z ngie $
+# $FreeBSD$
 
 dir=`dirname $0`
 . ${dir}/../../misc.sh

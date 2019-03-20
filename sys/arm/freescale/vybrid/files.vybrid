@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/freescale/vybrid/files.vybrid 327280 2017-12-28 07:31:14Z manu $
+# $FreeBSD$
 
 kern/kern_clocksource.c				standard
 

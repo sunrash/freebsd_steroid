@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 3/17/94
-# $FreeBSD: releng/12.0/sbin/bsdlabel/Makefile 338759 2018-09-18 20:52:24Z brd $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/geom
 

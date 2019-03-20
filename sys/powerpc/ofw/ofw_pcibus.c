@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/ofw/ofw_pcibus.c 326261 2017-11-27 15:09:59Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -100,7 +100,8 @@ static devclass_t pci_devclass;
 
 DEFINE_CLASS_1(pci, ofw_pcibus_driver, ofw_pcibus_methods,
     sizeof(struct pci_softc), pci_driver);
-DRIVER_MODULE(ofw_pcibus, pcib, ofw_pcibus_driver, pci_devclass, 0, 0);
+EARLY_DRIVER_MODULE(ofw_pcibus, pcib, ofw_pcibus_driver, pci_devclass, 0, 0,
+    BUS_PASS_BUS);
 MODULE_VERSION(ofw_pcibus, 1);
 MODULE_DEPEND(ofw_pcibus, pci, 1, 1, 1);
 

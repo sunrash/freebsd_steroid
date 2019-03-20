@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/packages/runtime-development.ucl 296531 2016-03-08 18:31:26Z gjb $
+# $FreeBSD$
 #
 
 name = "FreeBSD-%PKGNAME%"

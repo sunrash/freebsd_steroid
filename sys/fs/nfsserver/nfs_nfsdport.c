@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/nfsserver/nfs_nfsdport.c 340855 2018-11-23 21:08:11Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/capsicum.h>
 #include <sys/extattr.h>
@@ -996,8 +996,7 @@ nfsvno_createsub(struct nfsrv_descript *nd, struct nameidata *ndp,
 			if (nvap->na_type == VCHR && rdev == 0xffffffff)
 				nvap->na_type = VFIFO;
                         if (nvap->na_type != VFIFO &&
-			    (error = priv_check_cred(nd->nd_cred,
-			     PRIV_VFS_MKNOD_DEV, 0))) {
+			    (error = priv_check_cred(nd->nd_cred, PRIV_VFS_MKNOD_DEV))) {
 				vrele(ndp->ni_startdir);
 				nfsvno_relpathbuf(ndp);
 				vput(ndp->ni_dvp);
@@ -1091,7 +1090,7 @@ nfsvno_mknod(struct nameidata *ndp, struct nfsvattr *nvap, struct ucred *cred,
 		nfsvno_relpathbuf(ndp);
 	} else {
 		if (nvap->na_type != VFIFO &&
-		    (error = priv_check_cred(cred, PRIV_VFS_MKNOD_DEV, 0))) {
+		    (error = priv_check_cred(cred, PRIV_VFS_MKNOD_DEV))) {
 			vrele(ndp->ni_startdir);
 			nfsvno_relpathbuf(ndp);
 			vput(ndp->ni_dvp);
@@ -2422,10 +2421,22 @@ again:
 						}
 					}
 				}
-				if (!r) {
-				    if (refp == NULL &&
-					((nd->nd_flag & ND_NFSV3) ||
-					 NFSNONZERO_ATTRBIT(&attrbits))) {
+
+				/*
+				 * If we failed to look up the entry, then it
+				 * has become invalid, most likely removed.
+				 */
+				if (r != 0) {
+					if (needs_unbusy)
+						vfs_unbusy(new_mp);
+					goto invalid;
+				}
+				KASSERT(refp != NULL || nvp != NULL,
+				    ("%s: undetected lookup error", __func__));
+
+				if (refp == NULL &&
+				    ((nd->nd_flag & ND_NFSV3) ||
+				     NFSNONZERO_ATTRBIT(&attrbits))) {
 					r = nfsvno_getfh(nvp, &nfh, p);
 					if (!r)
 					    r = nfsvno_getattr(nvp, nvap, nd, p,
@@ -2446,17 +2457,25 @@ again:
 					    if (new_mp == mp)
 						new_mp = nvp->v_mount;
 					}
-				    }
-				} else {
-				    nvp = NULL;
 				}
-				if (r) {
+
+				/*
+				 * If we failed to get attributes of the entry,
+				 * then just skip it for NFSv3 (the traditional
+				 * behavior in the old NFS server).
+				 * For NFSv4 the behavior is controlled by
+				 * RDATTRERROR: we either ignore the error or
+				 * fail the request.
+				 * Note that RDATTRERROR is never set for NFSv3.
+				 */
+				if (r != 0) {
 					if (!NFSISSET_ATTRBIT(&attrbits,
 					    NFSATTRBIT_RDATTRERROR)) {
-						if (nvp != NULL)
-							vput(nvp);
+						vput(nvp);
 						if (needs_unbusy != 0)
 							vfs_unbusy(new_mp);
+						if ((nd->nd_flag & ND_NFSV3))
+							goto invalid;
 						nd->nd_repstat = r;
 						break;
 					}
@@ -2525,6 +2544,7 @@ again:
 			if (dirlen <= cnt)
 				entrycnt++;
 		}
+invalid:
 		cpos += dp->d_reclen;
 		dp = (struct dirent *)cpos;
 		cookiep++;
@@ -3594,8 +3614,7 @@ nfssvc_srvcall(struct thread *p, struct nfssvc_args *uap, struct ucred *cred)
 			error = EPERM;
 		if (!error) {
 		    len = sizeof (struct nfsd_dumpclients) * dumplist.ndl_size;
-		    dumpclients = (struct nfsd_dumpclients *)malloc(len,
-			M_TEMP, M_WAITOK);
+		    dumpclients = malloc(len, M_TEMP, M_WAITOK | M_ZERO);
 		    nfsrv_dumpclients(dumpclients, dumplist.ndl_size);
 		    error = copyout(dumpclients,
 			CAST_USER_ADDR_T(dumplist.ndl_list), len);
@@ -3613,8 +3632,7 @@ nfssvc_srvcall(struct thread *p, struct nfssvc_args *uap, struct ucred *cred)
 		if (!error) {
 			len = sizeof (struct nfsd_dumplocks) *
 				dumplocklist.ndllck_size;
-			dumplocks = (struct nfsd_dumplocks *)malloc(len,
-				M_TEMP, M_WAITOK);
+			dumplocks = malloc(len, M_TEMP, M_WAITOK | M_ZERO);
 			nfsrv_dumplocks(nd.ni_vp, dumplocks,
 			    dumplocklist.ndllck_size, p);
 			vput(nd.ni_vp);

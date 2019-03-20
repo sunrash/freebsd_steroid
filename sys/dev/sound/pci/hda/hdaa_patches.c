@@ -44,7 +44,7 @@
 #include <dev/sound/pci/hda/hdaa.h>
 #include <dev/sound/pci/hda/hda_reg.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pci/hda/hdaa_patches.c 332890 2018-04-23 16:38:27Z sbruno $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 static const struct {
 	uint32_t model;
@@ -407,6 +407,18 @@ hdac_pin_patch(struct hdaa_widget *w)
 	    subid == LENOVO_X120BS_SUBVENDOR) {
 		switch (nid) {
 		case 21:
+			patch = "as=1 seq=15";
+			break;
+		}
+	} else if (id == HDA_CODEC_ALC295 && subid == HP_AF006UR_SUBVENDOR) {
+		switch (nid) {
+		case 18:
+			patch = "as=2";
+			break;
+		case 25:
+			patch = "as=2 seq=15";
+			break;
+		case 33:
 			patch = "as=1 seq=15";
 			break;
 		}

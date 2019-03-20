@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/locale/tools/extract-colldef.awk 310198 2016-12-18 02:02:33Z bapt $
+# $FreeBSD$
 
 BEGIN {
 	print "# Warning: Do not edit. This is automatically extracted"

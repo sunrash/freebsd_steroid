@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/liby/yyerror.h 335295 2018-06-17 18:05:27Z eadler $
+ * $FreeBSD$
  */
 
 #ifndef YYERROR_H

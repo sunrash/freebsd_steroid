@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libmd/Makefile 338330 2018-08-26 17:05:43Z sbruno $
+# $FreeBSD$
 
 SHLIBDIR?= /lib
 

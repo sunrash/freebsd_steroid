@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/usr.sbin/uathload/uathload.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 /*

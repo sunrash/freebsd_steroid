@@ -8,7 +8,7 @@
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/sys/sys/smp.h 327056 2017-12-21 09:17:48Z bde $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SMP_H_
@@ -167,8 +167,10 @@ extern cpuset_t logical_cpus_mask;
 
 extern u_int mp_maxid;
 extern int mp_maxcpus;
+extern int mp_ncores;
 extern int mp_ncpus;
 extern volatile int smp_started;
+extern int smp_threads_per_core;
 
 extern cpuset_t all_cpus;
 extern cpuset_t cpuset_domain[MAXMEMDOM]; 	/* CPUs in each NUMA domain. */

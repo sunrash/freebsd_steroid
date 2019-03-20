@@ -24,7 +24,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_zip_traditional_encryption_data.c 311903 2017-01-10 21:59:35Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_read_format_zip_traditional_encryption_data)
 {

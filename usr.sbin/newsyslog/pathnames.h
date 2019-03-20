@@ -18,7 +18,7 @@ M.I.T. and the M.I.T. S.I.P.B. make no representations about
 the suitability of this software for any purpose.  It is
 provided "as is" without express or implied warranty.
 
- $FreeBSD: releng/12.0/usr.sbin/newsyslog/pathnames.h 316981 2017-04-15 20:37:34Z bapt $
+ $FreeBSD$
 
 */
 

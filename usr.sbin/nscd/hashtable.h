@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/nscd/hashtable.h 315213 2017-03-13 20:34:53Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __CACHELIB_HASHTABLE_H__

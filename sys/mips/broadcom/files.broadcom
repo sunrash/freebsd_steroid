@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/broadcom/files.broadcom 326079 2017-11-21 23:15:20Z landonf $
+# $FreeBSD$
 
 # TODO: Add attachment elsewhere in the tree
 # for USB 1.1 OHCI, Ethernet and IPSEC cores

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/arm/rtld_machdep.h 338486 2018-09-05 23:23:16Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef RTLD_MACHDEP_H

@@ -61,7 +61,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_lockf.c 333855 2018-05-19 05:04:38Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_debug_lockf.h"
 

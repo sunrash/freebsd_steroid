@@ -24,14 +24,23 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/cpucontrol/cpucontrol.h 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef CPUCONTROL_H
 #define	CPUCONTROL_H
 
+#include <stddef.h>
+
 typedef int ucode_probe_t(int fd);
-typedef void ucode_update_t(const char *dev, const char *image);
+struct ucode_update_params {
+	int devfd;		/* RDWR handle to cpucontrol device */
+	const void *fwimage;	/* READ mapping of firmware image */
+	size_t fwsize;		/* Non-zero size of firmware image */
+	const char *dev_path;	/* cpucontrol device path, for logging */
+	const char *fw_path;	/* firmware image path, for logging */
+};
+typedef void ucode_update_t(const struct ucode_update_params *params);
 
 extern int verbosity_level;
 

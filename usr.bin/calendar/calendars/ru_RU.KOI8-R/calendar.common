@@ -1,7 +1,7 @@
 /*
  * Российские праздники
  *
- * $FreeBSD: releng/12.0/usr.bin/calendar/calendars/ru_RU.KOI8-R/calendar.common 303569 2016-07-31 03:26:53Z ache $
+ * $FreeBSD$
  */
 
 #ifndef _ru_RU_KOI8_R_common_

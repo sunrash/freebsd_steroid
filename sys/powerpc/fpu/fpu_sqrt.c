@@ -47,7 +47,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_sqrt.c 326023 2017-11-20 19:43:44Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/systm.h>
@@ -226,12 +226,12 @@ fpu_sqrt(struct fpemu *fe)
 		return (x);
 	}
 	if (x->fp_sign) {
+		fe->fe_cx |= FPSCR_VXSQRT;
 		return (fpu_newnan(fe));
 	}
 	if (ISINF(x)) {
-		fe->fe_cx |= FPSCR_VXSQRT;
-		DUMPFPN(FPE_REG, 0);
-		return (0);
+		DUMPFPN(FPE_REG, x);
+		return (x);
 	}
 
 	/*

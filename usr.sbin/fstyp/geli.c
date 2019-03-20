@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/fstyp/geli.c 292829 2015-12-28 08:53:31Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/disk.h>
 #include <sys/types.h>

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/freebsd32/freebsd32_signal.h 326266 2017-11-27 15:13:23Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _COMPAT_FREEBSD32_SIGNAL_H_

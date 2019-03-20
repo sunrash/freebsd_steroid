@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/lpr/common_source/pathnames.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  *
  *      @(#)pathnames.h	8.1 (Berkeley) 6/6/93
  */

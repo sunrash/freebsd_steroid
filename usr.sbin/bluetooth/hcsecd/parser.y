@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  * $Id: parser.y,v 1.5 2003/06/07 21:22:30 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/hcsecd/parser.y 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/fcntl.h>

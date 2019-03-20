@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/allwinner/if_awgreg.h 324117 2017-09-30 10:34:07Z jmcneill $
+ * $FreeBSD$
  */
 
 /*

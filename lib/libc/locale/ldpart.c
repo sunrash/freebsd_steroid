@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/ldpart.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <sys/types.h>
@@ -63,7 +63,8 @@ __part_load_locale(const char *name,
 	size_t		namesize, bufsize;
 
 	/* 'name' must be already checked. */
-	if (strcmp(name, "C") == 0 || strcmp(name, "POSIX") == 0) {
+	if (strcmp(name, "C") == 0 || strcmp(name, "POSIX") == 0 ||
+	    strncmp(name, "C.", 2) == 0) {
 		*using_locale = 0;
 		return (_LDP_CACHE);
 	}

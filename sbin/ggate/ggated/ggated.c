@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/ggate/ggated/ggated.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -591,6 +591,7 @@ sendfail(int sfd, int error, const char *fmt, ...)
 	va_list ap;
 	ssize_t data;
 
+	memset(&sinit, 0, sizeof(sinit));
 	sinit.gs_error = error;
 	g_gate_swap2n_sinit(&sinit);
 	data = g_gate_send(sfd, &sinit, sizeof(sinit), 0);

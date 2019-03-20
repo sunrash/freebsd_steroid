@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/beri/files.beri 332441 2018-04-12 17:43:19Z br $
+# $FreeBSD$
 dev/altera/atse/if_atse.c		optional altera_atse
 dev/altera/atse/if_atse_fdt.c		optional altera_atse fdt
 dev/altera/atse/if_atse_nexus.c		optional altera_atse

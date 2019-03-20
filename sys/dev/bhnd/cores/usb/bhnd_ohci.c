@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/cores/usb/bhnd_ohci.c 326695 2017-12-08 15:57:29Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * USB Open Host Controller driver.

@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libkvm/kvm_private.c 325732 2017-11-12 01:36:48Z will $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/fnv_hash.h>

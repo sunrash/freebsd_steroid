@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ofw/ofw_subr.h 306065 2016-09-21 02:28:39Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef	_DEV_OFW_OFW_SUBR_H_

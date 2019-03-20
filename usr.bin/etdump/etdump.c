@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/etdump/etdump.c 332438 2018-04-12 17:00:36Z benno $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <getopt.h>

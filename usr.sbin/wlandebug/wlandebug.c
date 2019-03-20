@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/usr.sbin/wlandebug/wlandebug.c 329853 2018-02-23 03:11:43Z asomers $
+ * $FreeBSD$
  */
 
 /*

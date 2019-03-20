@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_csmapper.c 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_csmapper.c,v 1.11 2011/11/20 07:43:52 tnozaki Exp $	*/
 
 /*-

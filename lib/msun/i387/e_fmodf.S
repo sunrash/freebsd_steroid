@@ -4,7 +4,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/i387/e_fmodf.S 305385 2016-09-04 15:08:14Z bde $")
+__FBSDID("$FreeBSD$")
 
 ENTRY(fmodf)
 	flds	8(%esp)

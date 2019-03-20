@@ -29,7 +29,7 @@
 # * Author : David C Somayajulu, Cavium, Inc., San Jose, CA 95131.
 # */
 #
-# $FreeBSD: releng/12.0/sys/modules/qlnx/Makefile 336695 2018-07-25 02:36:55Z davidcs $
+# $FreeBSD$
 #
 
 SYSDIR?=${SRCTOP}/sys
@@ -37,5 +37,6 @@ SYSDIR?=${SRCTOP}/sys
 
 SUBDIR=qlnxe
 SUBDIR+=qlnxev
+SUBDIR+=qlnxr
 
 .include <bsd.subdir.mk>

@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/getprogname.c 93399 2002-03-29 22:43:43Z markm $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <stdlib.h>

@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * 	$FreeBSD: releng/12.0/sys/netgraph/netflow/netflow_v9.c 326272 2017-11-27 15:23:17Z pfg $
+ * 	$FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netgraph/netflow/netflow_v9.c 326272 2017-11-27 15:23:17Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 #include "opt_route.h"

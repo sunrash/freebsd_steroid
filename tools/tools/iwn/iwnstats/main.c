@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/iwn/iwnstats/main.c 287313 2015-08-30 21:54:47Z adrian $
+ * $FreeBSD$
  */
 
 #include <stdbool.h>

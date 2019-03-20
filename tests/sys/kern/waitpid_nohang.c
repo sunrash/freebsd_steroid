@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tests/sys/kern/waitpid_nohang.c 305676 2016-09-09 21:58:48Z jilles $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/wait.h>
 

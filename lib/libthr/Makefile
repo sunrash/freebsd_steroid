@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libthr/Makefile 334107 2018-05-23 17:05:12Z jhb $
+# $FreeBSD$
 #
 # All library objects contain FreeBSD revision strings by default; they may be
 # excluded as a space-saving measure.  To produce a library that does
@@ -9,6 +9,7 @@ PACKAGE=	clibs
 SHLIBDIR?= /lib
 
 .include <src.opts.mk>
+MK_BIND_NOW= no
 MK_SSP=	no
 
 LIB=thr
@@ -26,6 +27,7 @@ CFLAGS+=-I${SRCTOP}/lib/libthread_db
 CFLAGS+=-Winline
 
 CFLAGS.thr_stack.c+=	-Wno-cast-align
+CFLAGS.rtld_malloc.c+=	-Wno-cast-align
 .include <bsd.compiler.mk>
 .if !(${COMPILER_TYPE} == "gcc" && ${COMPILER_VERSION} < 40300)
 CFLAGS.thr_symbols.c+=	-Wno-missing-variable-declarations
@@ -49,12 +51,14 @@ CFLAGS+=-D_PTHREADS_INVARIANTS
 PRECIOUSLIB=
 
 .PATH: ${.CURDIR}/arch/${MACHINE_CPUARCH}/${MACHINE_CPUARCH}
+.PATH: ${SRCTOP}/libexec/rtld-elf
 
 .if exists(${.CURDIR}/arch/${MACHINE_CPUARCH}/Makefile.inc)
 .include "${.CURDIR}/arch/${MACHINE_CPUARCH}/Makefile.inc"
 .endif
 .include "${.CURDIR}/sys/Makefile.inc"
 .include "${.CURDIR}/thread/Makefile.inc"
+SRCS+= rtld_malloc.c
 
 .if ${MK_INSTALLLIB} != "no"
 SYMLINKS+=lib${LIB}.a ${LIBDIR}/libpthread.a

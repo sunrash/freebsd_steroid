@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/gen/utxdb.h 326193 2017-11-25 17:12:48Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _UTXDB_H_

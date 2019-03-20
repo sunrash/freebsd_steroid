@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_isorr_bz2.c 310868 2016-12-30 22:54:08Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
 PLEASE use old cdrtools; mkisofs version is 2.01.

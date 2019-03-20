@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libkvm/kvm_minidump_aarch64.c 325732 2017-11-12 01:36:48Z will $");
+__FBSDID("$FreeBSD$");
 
 /*
  * ARM64 (AArch64) machine dependent routines for kvm and minidumps.

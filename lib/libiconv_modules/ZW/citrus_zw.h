@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/ZW/citrus_zw.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_zw.h,v 1.1 2006/11/22 23:38:27 tnozaki Exp $ */
 
 /*-

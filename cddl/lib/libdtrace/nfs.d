@@ -20,7 +20,7 @@
  *
  * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/nfs.d 286420 2015-08-07 19:56:22Z markj $
+ * $FreeBSD$
  */
 
 /*

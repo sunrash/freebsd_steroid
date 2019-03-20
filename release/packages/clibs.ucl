@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/packages/clibs.ucl 295337 2016-02-05 21:01:08Z gjb $
+# $FreeBSD$
 #
 
 name = "FreeBSD-%PKGNAME%"

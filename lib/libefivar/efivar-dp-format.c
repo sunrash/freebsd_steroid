@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libefivar/efivar-dp-format.c 330279 2018-03-02 15:12:18Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <efivar.h>
 #include <stdio.h>
@@ -2413,12 +2413,19 @@ UefiDevicePathLibConvertDevicePathToText (
   }
 }
 
-
 ssize_t
 efidp_format_device_path(char *buf, size_t len, const_efidp dp, ssize_t max)
 {
 	char *str;
 	ssize_t retval;
+
+	/*
+	 * Basic sanity check on the device path.
+	 */
+	if (!IsDevicePathValid((CONST EFI_DEVICE_PATH_PROTOCOL *) dp, max)) {
+		*buf = '\0';
+		return 0;
+	}
 
 	str = UefiDevicePathLibConvertDevicePathToText (
 		__DECONST(EFI_DEVICE_PATH_PROTOCOL *, dp), FALSE, TRUE);

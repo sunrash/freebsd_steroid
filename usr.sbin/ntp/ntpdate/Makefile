@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/ntpdate/Makefile 314478 2017-03-01 05:19:35Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

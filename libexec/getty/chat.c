@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/libexec/getty/chat.c 329724 2018-02-21 15:57:24Z trasz $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/ioctl.h>
@@ -141,7 +141,7 @@ read_chat(char **chatstr)
 		int l;
 
 		if ((l=strlen(str)) > 0 && (tmp=malloc(l + 1)) != NULL &&
-		    (res=malloc((l / 2 + 1) * sizeof(char *))) != NULL) {
+		    (res=malloc(((l + 1) / 2 + 1) * sizeof(char *))) != NULL) {
 			static char ws[] = " \t";
 			char * p;
 
@@ -216,7 +216,7 @@ read_chat(char **chatstr)
 					q = strrchr(p+1, *p);
 					if (q != NULL && *q == *p && q[1] == '\0') {
 						*q = '\0';
-						strcpy(p, p+1);
+						p++;
 					}
 				}
 

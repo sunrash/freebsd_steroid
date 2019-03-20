@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/arm/cpu_asm-v6.S 331254 2018-03-20 17:58:51Z emaste $
+ * $FreeBSD$
  */
 #include "assym.inc"
 

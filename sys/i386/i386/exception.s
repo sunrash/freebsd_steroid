@@ -33,7 +33,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/i386/exception.s 334520 2018-06-02 04:25:09Z bde $
+ * $FreeBSD$
  */
 
 #include "opt_apic.h"

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.sbin/sesutil/eltsub.c 320478 2017-06-29 18:52:36Z bapt $ */
+/* $FreeBSD$ */
 /*
  * Copyright (c) 2000 by Matthew Jacob
  * All rights reserved.

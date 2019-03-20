@@ -27,7 +27,7 @@
  *
  * Written by: yen_cw@myson.com.tw  available at: http://www.myson.com.tw/
  *
- * $FreeBSD: releng/12.0/sys/dev/my/if_myreg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  *
  * Myson MTD80x register definitions.
  *

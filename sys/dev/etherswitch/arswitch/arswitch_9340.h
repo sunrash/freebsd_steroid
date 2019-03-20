@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/arswitch/arswitch_9340.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifndef	__ARSWITCH_9340_H__
 #define	__ARSWITCH_9340_H__

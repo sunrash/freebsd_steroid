@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/defaults/Makefile 330021 2018-02-26 15:41:20Z imp $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

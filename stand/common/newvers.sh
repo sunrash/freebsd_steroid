@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD: releng/12.0/stand/common/newvers.sh 310268 2016-12-19 14:45:59Z emaste $
+# $FreeBSD$
 #	$NetBSD: newvers.sh,v 1.1 1997/07/26 01:50:38 thorpej Exp $
 #
 # Copyright (c) 1984, 1986, 1990, 1993

@@ -43,7 +43,7 @@
  *    California, Berkeley and its contributors."
  */
 
-/* $FreeBSD: releng/12.0/sys/mips/cavium/octeon_pcmap_regs.h 326023 2017-11-20 19:43:44Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef __OCTEON_PCMAP_REGS_H__
 #define __OCTEON_PCMAP_REGS_H__

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/pcpu.h 336047 2018-07-06 19:50:44Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PCPU_H_
@@ -227,8 +227,7 @@ __curthread(void)
 {
 	struct thread *td;
 
-	__asm("movq %%gs:%1,%0" : "=r" (td)
-	    : "m" (*(char *)OFFSETOF_CURTHREAD));
+	__asm("movq %%gs:%P1,%0" : "=r" (td) : "n" (OFFSETOF_CURTHREAD));
 	return (td);
 }
 #ifdef __clang__
@@ -242,7 +241,7 @@ __curpcb(void)
 {
 	struct pcb *pcb;
 
-	__asm("movq %%gs:%1,%0" : "=r" (pcb) : "m" (*(char *)OFFSETOF_CURPCB));
+	__asm("movq %%gs:%P1,%0" : "=r" (pcb) : "n" (OFFSETOF_CURPCB));
 	return (pcb);
 }
 #define	curpcb		(__curpcb())

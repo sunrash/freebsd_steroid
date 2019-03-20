@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/security/mac/mac_syscalls.c 329336 2018-02-15 18:57:22Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_mac.h"
 

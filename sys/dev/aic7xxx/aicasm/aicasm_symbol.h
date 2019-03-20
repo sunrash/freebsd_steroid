@@ -41,7 +41,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aicasm/aicasm_symbol.h#17 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aicasm/aicasm_symbol.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

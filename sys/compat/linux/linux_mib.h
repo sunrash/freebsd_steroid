@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linux/linux_mib.h 331426 2018-03-23 14:39:34Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_MIB_H_

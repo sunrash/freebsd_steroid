@@ -1,11 +1,11 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_auth.h 264235 2014-04-07 19:32:56Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
  *
  * See the IPFILTER.LICENCE file for details on licencing.
  *
- * $FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_auth.h 264235 2014-04-07 19:32:56Z cy $
+ * $FreeBSD$
  * Id: ip_auth.h,v 2.16.2.2 2006/03/16 06:45:49 darrenr Exp $
  *
  */

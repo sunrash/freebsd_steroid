@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libsbuf/tests/sbuf_core_test.c 316558 2017-04-06 05:36:35Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/sbuf.h>

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/extres/syscon/syscon.c 333418 2018-05-09 16:44:19Z kevans $");
+__FBSDID("$FreeBSD$");
 #include "opt_platform.h"
 
 #include <sys/param.h>

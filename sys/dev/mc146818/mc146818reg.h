@@ -26,7 +26,7 @@
  *
  *	$NetBSD: mc146818reg.h,v 1.9 2006/03/08 23:46:25 lukem Exp $
  *
- * $FreeBSD: releng/12.0/sys/dev/mc146818/mc146818reg.h 326403 2017-11-30 15:48:35Z pfg $
+ * $FreeBSD$
  */
 
 /*

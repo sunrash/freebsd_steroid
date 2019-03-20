@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/stand/usb/usbcore.mk 328986 2018-02-07 18:49:06Z hselasky $
+# $FreeBSD$
 #
 # Copyright (c) 2013 Hans Petter Selasky.
 # Copyright (c) 2014 SRI International

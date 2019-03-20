@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_intr.c 322580 2017-08-16 16:51:55Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  *	New-style Interrupt Framework

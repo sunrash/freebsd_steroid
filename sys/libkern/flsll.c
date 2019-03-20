@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 #include <sys/libkern.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/libkern/flsll.c 326023 2017-11-20 19:43:44Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Find Last Set bit

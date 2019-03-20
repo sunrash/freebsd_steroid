@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/contrib/libarchive/tar/bsdtar.h 324148 2017-10-01 00:40:23Z mm $
+ * $FreeBSD$
  */
 
 #include "bsdtar_platform.h"

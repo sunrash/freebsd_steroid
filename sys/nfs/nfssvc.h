@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/nfs/nfssvc.h 335012 2018-06-12 19:36:32Z rmacklem $
+ * $FreeBSD$
  */
 
 #ifndef _NFS_NFSSVC_H_

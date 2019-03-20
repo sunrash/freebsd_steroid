@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/bhndb/bhndb_hwdata.c 326297 2017-11-28 00:12:14Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

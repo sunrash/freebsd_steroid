@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ofed/libibverbs/Makefile.inc 335253 2018-06-16 15:05:05Z kib $
+# $FreeBSD$
 
 _spath=${SRCTOP}/contrib/ofed/libibverbs
 .PATH: ${_spath}/examples ${_spath}/man

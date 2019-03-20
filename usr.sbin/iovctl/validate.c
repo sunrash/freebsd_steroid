@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/iovctl/validate.c 296865 2016-03-14 17:41:17Z rstone $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/iov.h>

@@ -27,7 +27,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/usr.sbin/bluetooth/btpand/btpand.c 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 
 #include <sys/cdefs.h>
 __COPYRIGHT("@(#) Copyright (c) 2008 Iain Hibbert. All rights reserved.");

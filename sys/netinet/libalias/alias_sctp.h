@@ -47,7 +47,7 @@
  *
  */
 
-/* $FreeBSD: releng/12.0/sys/netinet/libalias/alias_sctp.h 326272 2017-11-27 15:23:17Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef _ALIAS_SCTP_H_
 #define _ALIAS_SCTP_H_

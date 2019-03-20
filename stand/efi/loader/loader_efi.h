@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/efi/loader/loader_efi.h 322056 2017-08-04 16:33:36Z imp $
+ * $FreeBSD$
  */
 
 #ifndef	_LOADER_EFI_COPY_H_

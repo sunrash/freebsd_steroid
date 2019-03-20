@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/genassym.c 328467 2018-01-27 11:19:41Z mmel $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/cpuset.h>
 #include <sys/systm.h>

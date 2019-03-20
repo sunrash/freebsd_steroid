@@ -31,7 +31,7 @@
 /* ARM PrimeCell DMA Controller (PL330) driver. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/xdma/controller/pl330.c 338107 2018-08-20 15:57:27Z alc $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 #include <sys/param.h>

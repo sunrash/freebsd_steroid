@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/netinet/msocket_ifnet_remove/Makefile 264400 2014-04-13 05:21:56Z imp $
+# $FreeBSD$
 
 PROG=	msocket_ifnet_remove
 WARNS?=	3

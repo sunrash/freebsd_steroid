@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)icu.h	5.6 (Berkeley) 5/9/91
- * $FreeBSD: releng/12.0/sys/x86/isa/icu.h 338148 2018-08-21 17:13:51Z jhb $
+ * $FreeBSD$
  */
 
 /*

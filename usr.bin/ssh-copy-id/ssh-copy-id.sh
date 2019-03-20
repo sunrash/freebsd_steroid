@@ -26,7 +26,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/ssh-copy-id/ssh-copy-id.sh 333893 2018-05-19 20:35:15Z eadler $
+# $FreeBSD$
 
 usage() {
 	echo "usage: ssh-copy-id [-lv] [-i keyfile] [-o option] [-p port] [user@]hostname" >&2

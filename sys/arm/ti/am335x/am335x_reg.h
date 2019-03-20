@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/ti/am335x/am335x_reg.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _AM335X_REG_H_

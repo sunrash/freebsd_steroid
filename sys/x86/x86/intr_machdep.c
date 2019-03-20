@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/x86/intr_machdep.c 338415 2018-08-31 18:26:37Z jhb $
+ * $FreeBSD$
  */
 
 /*

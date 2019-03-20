@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/kmod_syms_prefix.awk 319719 2017-06-08 20:41:28Z jtl $
+# $FreeBSD$
 
 # Read global symbols from object file.
 BEGIN {

@@ -24,7 +24,7 @@
 # Copyright 2017 Spectra Logic Corp.  All rights reserved.
 # Use is subject to license terms.
 #
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/inuse/inuse_010_neg.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . $STF_SUITE/include/libtest.kshlib
 set_disks

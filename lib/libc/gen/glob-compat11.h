@@ -30,8 +30,8 @@
  * SUCH DAMAGE.
  *
  *	@(#)glob.h	8.1 (Berkeley) 6/2/93
- * from: $FreeBSD: releng/12.0/lib/libc/gen/glob-compat11.h 318736 2017-05-23 09:29:05Z kib $
- * $FreeBSD: releng/12.0/lib/libc/gen/glob-compat11.h 318736 2017-05-23 09:29:05Z kib $
+ * from: $FreeBSD$
+ * $FreeBSD$
  */
 
 #ifndef _GLOB_COMPAT11_H_

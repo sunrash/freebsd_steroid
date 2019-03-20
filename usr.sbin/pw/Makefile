@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pw/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 PROG=	pw
 MAN=	pw.conf.5 pw.8

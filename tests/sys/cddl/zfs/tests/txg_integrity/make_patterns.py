@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/txg_integrity/make_patterns.py 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 # Generate random IO patterns for the txg_integrity test
 # We do this statically and embed the results into the code so that the

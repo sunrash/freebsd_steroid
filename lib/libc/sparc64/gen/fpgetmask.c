@@ -6,7 +6,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/sparc64/gen/fpgetmask.c 103323 2002-09-14 18:06:21Z tmm $");
+__FBSDID("$FreeBSD$");
 
 
 #include <machine/fsr.h>

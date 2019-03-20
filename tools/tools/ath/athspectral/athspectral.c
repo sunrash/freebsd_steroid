@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/athspectral/athspectral.c 313084 2017-02-02 05:26:39Z adrian $
+ * $FreeBSD$
  */
 
 #include "diag.h"

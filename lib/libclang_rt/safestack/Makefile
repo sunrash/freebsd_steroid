@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libclang_rt/safestack/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 
@@ -24,14 +24,12 @@ SRCS+=		sanitizer_common/sanitizer_platform_limits_linux.cc
 SRCS+=		sanitizer_common/sanitizer_platform_limits_posix.cc
 SRCS+=		sanitizer_common/sanitizer_posix.cc
 SRCS+=		sanitizer_common/sanitizer_printf.cc
+SRCS+=		sanitizer_common/sanitizer_procmaps_bsd.cc
 SRCS+=		sanitizer_common/sanitizer_procmaps_common.cc
-SRCS+=		sanitizer_common/sanitizer_procmaps_freebsd.cc
 SRCS+=		sanitizer_common/sanitizer_stackdepot.cc
 SRCS+=		sanitizer_common/sanitizer_stacktrace.cc
 SRCS+=		sanitizer_common/sanitizer_stacktrace_printer.cc
 SRCS+=		sanitizer_common/sanitizer_suppressions.cc
-SRCS+=		sanitizer_common/sanitizer_symbolizer.cc
-SRCS+=		sanitizer_common/sanitizer_symbolizer_libbacktrace.cc
 SRCS+=		sanitizer_common/sanitizer_termination.cc
 SRCS+=		sanitizer_common/sanitizer_thread_registry.cc
 SRCS+=		sanitizer_common/sanitizer_tls_get_addr.cc

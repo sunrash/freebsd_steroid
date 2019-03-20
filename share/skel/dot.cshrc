@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/skel/dot.cshrc 337497 2018-08-08 19:24:20Z asomers $
+# $FreeBSD$
 #
 # .cshrc - csh resource script, read at beginning of execution by each shell
 #
@@ -15,7 +15,6 @@ alias ll	ls -lAF
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
 # set path = (/sbin /bin /usr/sbin /usr/bin /usr/local/sbin /usr/local/bin $HOME/bin)
-# setenv	BLOCKSIZE	K
 # A righteous umask
 # umask 22
 

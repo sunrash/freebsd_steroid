@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpi_support/atk0110.c 335296 2018-06-17 19:14:05Z dim $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/_inttypes.h>
 #include <sys/param.h>
@@ -122,12 +122,14 @@ static char* aibs_hids[] = {
 static int
 aibs_probe(device_t dev)
 {
-	if (acpi_disabled("aibs") ||
-	    ACPI_ID_PROBE(device_get_parent(dev), dev, aibs_hids) == NULL)
-		return (ENXIO);
+	int rv;
 
-	device_set_desc(dev, "ASUSTeK AI Booster (ACPI ASOC ATK0110)");
-	return (0);
+	if (acpi_disabled("aibs"))
+		return (ENXIO);
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, aibs_hids, NULL);
+	if (rv <= 0 )
+		device_set_desc(dev, "ASUSTeK AI Booster (ACPI ASOC ATK0110)");
+	return (rv);
 }
 
 static int

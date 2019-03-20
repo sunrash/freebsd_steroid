@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/diff3/tests/diff3_test.sh 318890 2017-05-25 17:58:01Z bapt $
+# $FreeBSD$
 
 atf_test_case diff3
 atf_test_case diff3_lesssimple

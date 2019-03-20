@@ -67,7 +67,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD: releng/12.0/share/examples/kld/cdev/module/cdevmod.c 328428 2018-01-26 04:24:39Z eadler $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/systm.h>

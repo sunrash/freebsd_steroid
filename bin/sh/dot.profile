@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/dot.profile 338374 2018-08-29 16:59:19Z brd $
+# $FreeBSD$
 #
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:~/bin
 export PATH
@@ -8,6 +8,9 @@ TERM=${TERM:-xterm}
 export TERM
 PAGER=less
 export PAGER
+
+# set ENV to a file invoked each time sh is started for interactive use.
+ENV=$HOME/.shrc; export ENV
 
 # Query terminal size; useful for serial lines.
 if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi

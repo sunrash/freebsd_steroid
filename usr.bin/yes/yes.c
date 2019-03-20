@@ -39,7 +39,7 @@ static const char copyright[] =
 #if 0
 static char sccsid[] = "@(#)yes.c	8.1 (Berkeley) 6/6/93";
 #else
-static const char rcsid[] = "$FreeBSD: releng/12.0/usr.bin/yes/yes.c 335395 2018-06-19 23:43:14Z oshogbo $";
+static const char rcsid[] = "$FreeBSD$";
 #endif
 #endif /* not lint */
 

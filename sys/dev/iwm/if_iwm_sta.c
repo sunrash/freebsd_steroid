@@ -73,7 +73,7 @@
  *****************************************************************************/
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_sta.c 321508 2017-07-26 05:29:08Z adrian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_wlan.h"
 #include "opt_iwm.h"
@@ -286,7 +286,7 @@ iwm_mvm_rm_sta(struct iwm_softc *sc, struct ieee80211vap *vap,
 	for (ac = 0; ac < WME_NUM_AC; ac++) {
 		tfd_queue_msk |= htole32(1 << iwm_mvm_ac_to_tx_fifo[ac]);
 	}
-	ret = iwm_mvm_flush_tx_path(sc, tfd_queue_msk, 0);
+	ret = iwm_mvm_flush_tx_path(sc, tfd_queue_msk, IWM_CMD_SYNC);
 	if (ret)
 		return ret;
 #ifdef notyet /* function not yet implemented */

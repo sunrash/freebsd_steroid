@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/asm/byteorder.h 331433 2018-03-23 15:50:01Z emaste $
+ * $FreeBSD$
  */
 #ifndef	_ASM_BYTEORDER_H_
 #define	_ASM_BYTEORDER_H_

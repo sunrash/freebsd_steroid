@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libefivar/uefi-dputil.c 330279 2018-03-02 15:12:18Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <efivar.h>
 #include <limits.h>

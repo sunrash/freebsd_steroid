@@ -28,7 +28,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/usr.sbin/pw/pw_conf.c 339380 2018-10-16 16:00:41Z yuripv $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/types.h>
@@ -221,12 +221,14 @@ passwd_val(char const * str, int dflt)
 char const     *
 boolean_str(int val)
 {
-	if (val == -1)
-		return "random";
-	else if (val == -2)
-		return "none";
+	if (val == P_NO)
+		return (boolfalse[0]);
+	else if (val == P_RANDOM)
+		return ("random");
+	else if (val == P_NONE)
+		return ("none");
 	else
-		return val ? booltrue[0] : boolfalse[0];
+		return (booltrue[0]);
 }
 
 char           *

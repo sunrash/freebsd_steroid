@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/loader/efi_main.c 324709 2017-10-17 23:38:27Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <efi.h>
 #include <eficonsctl.h>
@@ -94,8 +94,10 @@ efi_main(EFI_HANDLE image_handle, EFI_SYSTEM_TABLE *system_table)
 	heapsize = 64 * 1024 * 1024;
 	status = BS->AllocatePages(AllocateAnyPages, EfiLoaderData,
 	    EFI_SIZE_TO_PAGES(heapsize), &heap);
-	if (status != EFI_SUCCESS)
+	if (status != EFI_SUCCESS) {
+		ST->ConOut->OutputString(ST->ConOut, (CHAR16 *)L"Failed to allocate memory for heap.\r\n");
 		BS->Exit(IH, status, 0, NULL);
+	}
 
 	setheap((void *)(uintptr_t)heap, (void *)(uintptr_t)(heap + heapsize));
 

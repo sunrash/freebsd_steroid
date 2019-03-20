@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tools/boot/lua-lint.sh 331565 2018-03-26 19:08:19Z kevans $
+# $FreeBSD$
 
 # Run linter on the lua scripts in stand/lua. luacheck, available in ports as
 # devel/lua-luacheck, must be installed as a dependency of this script.

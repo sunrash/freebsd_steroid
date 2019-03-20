@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/wpa/wpa_passphrase/Makefile 314541 2017-03-02 05:04:45Z ngie $
+# $FreeBSD$
 
 .include "../Makefile.inc"
 

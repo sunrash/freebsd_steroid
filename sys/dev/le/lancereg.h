@@ -115,7 +115,7 @@
  * valid on the LANCE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/le/lancereg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef _DEV_LE_LANCEREG_H_
 #define	_DEV_LE_LANCEREG_H_

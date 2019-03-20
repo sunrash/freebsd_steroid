@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/skel/dot.shrc 327420 2017-12-31 06:58:58Z eadler $
+# $FreeBSD$
 #
 # .shrc - bourne shell startup file 
 #
@@ -32,12 +32,8 @@ alias g='egrep -i'
 # alias rm='rm -i'
 
 
-# # set prompt: ``username@hostname$ '' 
-# PS1="`whoami`@`hostname | sed 's/\..*//'`"
-# case `id -u` in
-# 	0) PS1="${PS1}# ";;
-# 	*) PS1="${PS1}$ ";;
-# esac
+# set prompt: ``username@hostname:directory $ '' 
+PS1="\u@\h:\w \\$ "
 
 # search path for cd(1)
 # CDPATH=:$HOME

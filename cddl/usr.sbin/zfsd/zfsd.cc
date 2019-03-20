@@ -73,7 +73,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__FBSDID("$FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/zfsd.cc 329284 2018-02-14 23:52:39Z asomers $");
+__FBSDID("$FreeBSD$");
 
 /*================================== Macros ==================================*/
 #define NUM_ELEMENTS(x) (sizeof(x) / sizeof(*x))

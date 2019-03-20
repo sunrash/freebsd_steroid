@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/heredoc1.0 222715 2011-06-05 12:46:26Z jilles $
+# $FreeBSD$
 
 f() { return $1; }
 

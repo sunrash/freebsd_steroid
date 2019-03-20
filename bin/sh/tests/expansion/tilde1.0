@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/tilde1.0 206149 2010-04-03 21:56:24Z jilles $
+# $FreeBSD$
 
 HOME=/tmp
 roothome=~root

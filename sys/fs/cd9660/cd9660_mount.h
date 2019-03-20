@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)cd9660_mount.h	8.1 (Berkeley) 5/24/95
- * $FreeBSD: releng/12.0/sys/fs/cd9660/cd9660_mount.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

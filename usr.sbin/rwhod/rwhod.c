@@ -43,7 +43,7 @@ static char sccsid[] = "@(#)rwhod.c	8.1 (Berkeley) 6/6/93";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/rwhod/rwhod.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/capsicum.h>
@@ -369,7 +369,7 @@ receiver_process(void)
 	}
 	cap_rights_init(&rights, CAP_CREATE, CAP_FSTAT, CAP_FTRUNCATE,
 	    CAP_LOOKUP, CAP_SEEK, CAP_WRITE);
-	if (cap_rights_limit(dirfd, &rights) < 0 && errno != ENOSYS) {
+	if (caph_rights_limit(dirfd, &rights) < 0) {
 		syslog(LOG_WARNING, "cap_rights_limit: %m");
 		exit(1);
 	}
@@ -415,7 +415,7 @@ receiver_process(void)
 			continue;
 		}
 		cap_rights_init(&rights, CAP_FSTAT, CAP_FTRUNCATE, CAP_WRITE);
-		if (cap_rights_limit(whod, &rights) < 0 && errno != ENOSYS) {
+		if (caph_rights_limit(whod, &rights) < 0) {
 			syslog(LOG_WARNING, "cap_rights_limit: %m");
 			exit(1);
 		}

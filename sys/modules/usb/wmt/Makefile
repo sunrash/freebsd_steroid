@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/usb/wmt/Makefile 322695 2017-08-19 17:00:10Z wulf $
+# $FreeBSD$
 
 S=     ${SRCTOP}/sys
 

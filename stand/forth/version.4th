@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/version.4th 281275 2015-04-08 20:10:42Z dteske $
+\ $FreeBSD$
 
 marker task-version.4th
 

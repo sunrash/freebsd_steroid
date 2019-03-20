@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/arm64/gic_v3_reg.h 335373 2018-06-19 16:14:23Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _GIC_V3_REG_H_

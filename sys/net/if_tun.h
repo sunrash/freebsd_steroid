@@ -13,7 +13,7 @@
  * UCL. This driver is based much more on read/write/select mode of
  * operation though.
  *
- * $FreeBSD: releng/12.0/sys/net/if_tun.h 300603 2016-05-24 11:47:14Z tuexen $
+ * $FreeBSD$
  */
 
 #ifndef _NET_IF_TUN_H_

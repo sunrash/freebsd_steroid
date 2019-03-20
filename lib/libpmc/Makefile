@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpmc/Makefile 338676 2018-09-14 01:11:10Z mmacy $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	pmc

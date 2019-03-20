@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD: releng/12.0/sys/dev/aacraid/aacraid_var.h 326255 2017-11-27 14:52:40Z pfg $
+ *	$FreeBSD$
  */
 
 #include <sys/bio.h>

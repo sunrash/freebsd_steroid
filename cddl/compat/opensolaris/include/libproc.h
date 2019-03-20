@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/cddl/compat/opensolaris/include/libproc.h 309597 2016-12-06 04:22:38Z markj $
+ * $FreeBSD$
  *
  */
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libmp/mp.h 189092 2009-02-26 21:43:15Z ed $ */
+/* $FreeBSD$ */
 
 #ifndef _MP_H_
 #define _MP_H_

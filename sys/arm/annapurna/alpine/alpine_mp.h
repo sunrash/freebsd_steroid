@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/annapurna/alpine/alpine_mp.h 320643 2017-07-04 12:26:47Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _ANNAPURNA_ALPINE_MP_H_

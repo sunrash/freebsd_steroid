@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/newsyslog/Makefile 337686 2018-08-12 13:24:53Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

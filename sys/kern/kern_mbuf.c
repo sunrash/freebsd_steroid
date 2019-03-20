@@ -28,14 +28,15 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_mbuf.c 340401 2018-11-13 18:21:47Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_param.h"
+#include "opt_kern_tls.h"
 
 #include <sys/param.h>
+#include <sys/conf.h>
 #include <sys/domainset.h>
 #include <sys/malloc.h>
-#include <sys/types.h>
 #include <sys/systm.h>
 #include <sys/mbuf.h>
 #include <sys/domain.h>
@@ -45,9 +46,17 @@ __FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_mbuf.c 340401 2018-11-13 18:21:47Z
 #include <sys/lock.h>
 #include <sys/mutex.h>
 #include <sys/protosw.h>
+#include <sys/refcount.h>
 #include <sys/sf_buf.h>
 #include <sys/smp.h>
+#include <sys/socketvar.h>
+#ifdef KERN_TLS
+#include <sys/sockbuf_tls.h>
+#endif
 #include <sys/sysctl.h>
+#include <sys/taskqueue.h>
+
+#include <net/vnet.h>
 
 #include <vm/vm.h>
 #include <vm/vm_extern.h>
@@ -265,11 +274,10 @@ sysctl_nmbufs(SYSCTL_HANDLER_ARGS)
 SYSCTL_PROC(_kern_ipc, OID_AUTO, nmbufs, CTLTYPE_INT|CTLFLAG_RW,
 &nmbufs, 0, sysctl_nmbufs, "IU",
     "Maximum number of mbufs allowed");
+
 SYSCTL_BOOL(_kern_ipc, OID_AUTO, mb_use_ext_pgs, CTLFLAG_RWTUN,
     &mb_use_ext_pgs, 0,
     "Use bundles of pages for sendfile(2) and TLS");
-
-
 
 /*
  * Zones from which we allocate.
@@ -378,7 +386,11 @@ mbuf_init(void *dummy)
 		nmbjumbo16 = uma_zone_set_max(zone_jumbo16, nmbjumbo16);
 	uma_zone_set_warning(zone_jumbo16, "kern.ipc.nmbjumbo16 limit reached");
 	uma_zone_set_maxaction(zone_jumbo16, mb_reclaim);
-        zone_extpgs = uma_zcreate(MBUF_EXTPGS_MEM_NAME, sizeof (struct mbuf_ext_pgs), NULL, NULL, NULL, NULL, UMA_ALIGN_CACHE, 0);
+
+
+	zone_extpgs = uma_zcreate(MBUF_EXTPGS_MEM_NAME,
+	    sizeof (struct mbuf_ext_pgs),
+	    NULL, NULL, NULL, NULL, UMA_ALIGN_CACHE, 0);
 
 	/*
 	 * Hook event handler for low-memory situation, used to
@@ -428,6 +440,8 @@ nd_buf_import(void *arg, void **store, int count, int domain __unused,
 		trash_init(m, q == &nd_mbufq ? MSIZE : nd_clsize, flags);
 		store[i] = m;
 	}
+	KASSERT((flags & M_WAITOK) == 0 || i == count,
+	    ("%s: ran out of pre-allocated mbufs", __func__));
 	return (i);
 }
 
@@ -466,6 +480,8 @@ nd_pack_import(void *arg __unused, void **store, int count, int domain __unused,
 		mb_ctor_clust(clust, nd_clsize, m, 0);
 		store[i] = m;
 	}
+	KASSERT((flags & M_WAITOK) == 0 || i == count,
+	    ("%s: ran out of pre-allocated mbufs", __func__));
 	return (i);
 }
 
@@ -826,15 +842,13 @@ mb_reclaim(uma_zone_t zone __unused, int pending __unused)
 void
 mb_free_notready(struct mbuf *m, int count)
 {
-	struct mbuf_ext_pgs *ext_pgs;
 	int i;
 
 	for (i = 0; i < count && m != NULL; i++) {
 		if ((m->m_flags & M_EXT) != 0 &&
 		    m->m_ext.ext_type == EXT_PGS) {
-			ext_pgs = (void *)m->m_ext.ext_buf;
-			ext_pgs->nrdy--;
-			if (ext_pgs->nrdy != 0)
+			m->m_ext.ext_pgs->nrdy--;
+			if (m->m_ext.ext_pgs->nrdy != 0)
 				continue;
 		}
 		m = m_free(m);
@@ -854,29 +868,52 @@ CTASSERT(MBUF_PEXT_HDR_LEN + MBUF_PEXT_TRAIL_LEN < MLEN);
  * and any data in the hdr/trailer portion of the mbuf_ext_pgs
  * struct are copied into the normal mbuf data.
  */
-void
+int
 mb_ext_pgs_downgrade(struct mbuf *m)
 {
-	struct mbuf_ext_pgs *pgs;
+	volatile u_int *refcnt;
+	struct mbuf m_temp;
 
 	/* XXXGL: why assert !M_PKTHDR? */
 	KASSERT((m->m_flags & M_PKTHDR) == 0 && (m->m_flags & M_EXT) &&
 	    m->m_ext.ext_type == EXT_PGS,
             ("%s: m %p !M_EXT or !EXT_PGS or M_PKTHDR", __func__, m));
-	pgs = (void *)m->m_ext.ext_buf;
+	KASSERT(m->m_data == 0, ("m_data != 0 %p", m));
+	KASSERT(m->m_len <= MLEN, ("m_len too large %p", m));
+
+	if (m->m_ext.ext_flags & EXT_FLAG_EMBREF) {
+		refcnt = &m->m_ext.ext_count;
+	} else {
+		KASSERT(m->m_ext.ext_cnt != NULL,
+		    ("%s: no refcounting pointer on %p", __func__, m));
+		refcnt = m->m_ext.ext_cnt;
+	}
+
+	if (*refcnt != 1)
+		return (EBUSY);
+
+	/*
+	 * Copy ext portion of mbuf to temp, so that
+	 * we can call the free functions with appropriate
+	 * arguments
+	 */
+	bcopy(m, &m_temp, offsetof(struct mbuf, m_ext) + sizeof (m->m_ext));
+	m_temp.m_next = NULL;
+	m_temp.m_nextpkt = NULL;
+
+	/* turn m into a "normal" mbuf */
+	m->m_flags &= ~(M_EXT | M_RDONLY | M_NOMAP);
+	m->m_data = m->m_dat;
+
+	/* copy data from template's ext_pgs */
+	m_copydata(&m_temp, 0, m_temp.m_len, mtod(m, caddr_t));
 
 	/* free the backing page(s) */
-	m->m_ext.ext_free(m);
-	m->m_flags &= ~(M_EXT | M_RDONLY | M_NOMAP);
+	m_temp.m_ext.ext_free(&m_temp);
 
-	/* copy hdr/trailer to in-line data */
-	m->m_data = m->m_dat;
-	bcopy(pgs->hdr, m->m_data, pgs->hdr_len);
-	bcopy(pgs->trail, m->m_data + pgs->hdr_len, pgs->trail_len);
-	m->m_len = pgs->hdr_len + pgs->trail_len;
-
-	/* finally free the ext pgs struct */
-	uma_zfree(zone_extpgs, (void *)pgs);
+	/* finally, free the extpgs memory */
+	uma_zfree(zone_extpgs, m_temp.m_ext.ext_buf);
+	return (0);
 }
 
 /*
@@ -911,8 +948,10 @@ _mb_unmapped_to_ext(struct mbuf *m)
 
 	/* for now, all unmapped mbufs are assumed to be EXT_PGS */
 	MBUF_EXT_PGS_ASSERT(m);
-	ext_pgs = (void *)m->m_ext.ext_buf;
+	ext_pgs = m->m_ext.ext_pgs;
 	len = m->m_len;
+	KASSERT(ext_pgs->tls == NULL, ("%s: can't convert TLS mbuf %p",
+	    __func__, m));
 
 	/* See if this is the mbuf that holds the embedded refcount. */
 	if (m->m_ext.ext_flags & EXT_FLAG_EMBREF) {
@@ -1095,19 +1134,57 @@ mb_alloc_ext_pgs(int how, bool pkthdr, m_ext_free_t ext_free)
 	ext_pgs->last_pg_len = 0;
 	ext_pgs->hdr_len = 0;
 	ext_pgs->trail_len = 0;
+	ext_pgs->tls = NULL;
+	ext_pgs->so = NULL;
 	m->m_data = NULL;
 	m->m_flags |= (M_EXT | M_RDONLY | M_NOMAP);
 	m->m_ext.ext_type = EXT_PGS;
 	m->m_ext.ext_flags = EXT_FLAG_EMBREF;
 	m->m_ext.ext_count = 1;
-	m->m_ext.ext_buf = (void *)ext_pgs;
+	m->m_ext.ext_pgs = ext_pgs;
 	m->m_ext.ext_size = 0;
 	m->m_ext.ext_free = ext_free;
 	return (m);
 }
 
+#ifdef INVARIANT_SUPPORT
+void
+mb_ext_pgs_check(struct mbuf_ext_pgs *ext_pgs)
+{
 
-
+	/*
+	 * NB: This expects a non-empty buffer (npgs > 0 and
+	 * last_pg_len > 0).
+	 */
+	KASSERT(ext_pgs->npgs > 0,
+	    ("ext_pgs with no valid pages: %p", ext_pgs));
+	KASSERT(ext_pgs->nrdy >= 0,
+	    ("ext_pgs with negative ready pages: %p", ext_pgs));
+	KASSERT(ext_pgs->nrdy <= ext_pgs->npgs,
+	    ("ext_pgs with too many ready pages: %p", ext_pgs));
+	KASSERT(ext_pgs->first_pg_off >= 0,
+	    ("ext_pgs with negative page offset: %p", ext_pgs));
+	KASSERT(ext_pgs->first_pg_off < PAGE_SIZE,
+	    ("ext_pgs with too large page offset: %p", ext_pgs));
+	KASSERT(ext_pgs->last_pg_len > 0,
+	    ("ext_pgs with zero last page length: %p", ext_pgs));
+	KASSERT(ext_pgs->last_pg_len <= PAGE_SIZE,
+	    ("ext_pgs with too large last page length: %p", ext_pgs));
+	if (ext_pgs->npgs == 1) {
+		KASSERT(ext_pgs->first_pg_off + ext_pgs->last_pg_len <=
+		    PAGE_SIZE, ("ext_pgs with single page too large: %p",
+		    ext_pgs));
+	}
+	KASSERT(ext_pgs->hdr_len >= 0,
+	    ("ext_pgs with negative header length: %p", ext_pgs));
+	KASSERT(ext_pgs->hdr_len < sizeof(ext_pgs->hdr),
+	    ("ext_pgs with too large header length: %p", ext_pgs));
+	KASSERT(ext_pgs->trail_len >= 0,
+	    ("ext_pgs with negative header length: %p", ext_pgs));
+	KASSERT(ext_pgs->trail_len < sizeof(ext_pgs->trail),
+	    ("ext_pgs with too large header length: %p", ext_pgs));
+}
+#endif
 
 /*
  * Clean up after mbufs with M_EXT storage attached to them if the
@@ -1143,7 +1220,8 @@ mb_free_ext(struct mbuf *m)
 	 */
 	if (m->m_flags & M_NOFREE) {
 		freembuf = 0;
-		KASSERT(m->m_ext.ext_type == EXT_EXTREF,
+		KASSERT(m->m_ext.ext_type == EXT_EXTREF ||
+		    m->m_ext.ext_type == EXT_RXRING,
 		    ("%s: no-free mbuf %p has wrong type", __func__, m));
 	} else
 		freembuf = 1;
@@ -1173,11 +1251,23 @@ mb_free_ext(struct mbuf *m)
 			uma_zfree(zone_jumbo16, m->m_ext.ext_buf);
 			uma_zfree(zone_mbuf, mref);
 			break;
-		case EXT_PGS:
+		case EXT_PGS: {
+#ifdef KERN_TLS
+			struct mbuf_ext_pgs *pgs;
+			struct sbtls_session *tls;
+
 			mref->m_ext.ext_free(mref);
-			uma_zfree(zone_extpgs, mref->m_ext.ext_buf);
+			pgs = mref->m_ext.ext_pgs;
+			tls = pgs->tls;
+			if (tls != NULL &&
+			    !refcount_release_if_not_last(&tls->refcount))
+				sbtls_enqueue_to_free(pgs);
+			else
+#endif
+				uma_zfree(zone_extpgs, mref->m_ext.ext_pgs);
 			uma_zfree(zone_mbuf, mref);
 			break;
+		}
 		case EXT_SFBUF:
 		case EXT_NET_DRV:
 		case EXT_MOD_TYPE:
@@ -1191,6 +1281,10 @@ mb_free_ext(struct mbuf *m)
 			KASSERT(m->m_ext.ext_free != NULL,
 			    ("%s: ext_free not set", __func__));
 			m->m_ext.ext_free(m);
+			break;
+		case EXT_RXRING:
+			KASSERT(m->m_ext.ext_free == NULL,
+			    ("%s: ext_free is set", __func__));
 			break;
 		default:
 			KASSERT(m->m_ext.ext_type == 0,
@@ -1332,8 +1426,7 @@ m_getjcl(int how, short type, int flags, int size)
  * Allocate a given length worth of mbufs and/or clusters (whatever fits
  * best) and return a pointer to the top of the allocated chain.  If an
  * existing mbuf chain is provided, then we will append the new chain
- * to the existing one but still return the top of the newly allocated
- * chain.
+ * to the existing one and return a pointer to the provided mbuf.
  */
 struct mbuf *
 m_getm2(struct mbuf *m, int len, int how, short type, int flags)

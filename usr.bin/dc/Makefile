@@ -1,4 +1,4 @@
-#	$FreeBSD: releng/12.0/usr.bin/dc/Makefile 326556 2017-12-05 04:22:35Z asomers $
+#	$FreeBSD$
 #	$OpenBSD: Makefile,v 1.2 2006/11/26 11:31:09 deraadt Exp $
 
 .include <src.opts.mk>

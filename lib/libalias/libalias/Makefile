@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libalias/libalias/Makefile 338760 2018-09-18 20:54:37Z brd $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/netinet/libalias
 

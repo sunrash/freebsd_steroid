@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mediatek/mtk_machdep.c 336245 2018-07-13 16:43:17Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 
@@ -233,6 +233,8 @@ platform_start(__register_t a0 __unused, __register_t a1 __unused,
 		while (1);
 
 	mtk_soc_try_early_detect();
+	mtk_soc_set_cpu_model();
+
 	if ((timer_clk = mtk_soc_get_timerclk()) == 0)
 		timer_clk = 1000000000; /* no such speed yet */
 

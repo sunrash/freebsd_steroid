@@ -30,7 +30,7 @@
  *
  *	@(#)socketvar.h	8.3 (Berkeley) 2/19/95
  *
- * $FreeBSD: releng/12.0/sys/sys/socketvar.h 337279 2018-08-04 00:03:21Z glebius $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SOCKETVAR_H_
@@ -211,6 +211,7 @@ struct socket {
 
 #define	SOCK_MTX(so)		&(so)->so_lock
 #define	SOCK_LOCK(so)		mtx_lock(&(so)->so_lock)
+#define	SOCK_TRYLOCK(so)	mtx_trylock(&(so)->so_lock)
 #define	SOCK_OWNED(so)		mtx_owned(&(so)->so_lock)
 #define	SOCK_UNLOCK(so)		mtx_unlock(&(so)->so_lock)
 #define	SOCK_LOCK_ASSERT(so)	mtx_assert(&(so)->so_lock, MA_OWNED)
@@ -379,7 +380,8 @@ struct uio;
 /*
  * From uipc_socket and friends
  */
-int	getsockaddr(struct sockaddr **namp, caddr_t uaddr, size_t len);
+int	getsockaddr(struct sockaddr **namp, const struct sockaddr *uaddr,
+	    size_t len);
 int	getsock_cap(struct thread *td, int fd, cap_rights_t *rightsp,
 	    struct file **fpp, u_int *fflagp, struct filecaps *havecaps);
 void	soabort(struct socket *so);

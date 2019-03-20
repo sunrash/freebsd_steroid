@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/smartpqi/smartpqi_main.c 336268 2018-07-13 22:49:48Z cem $ */
+/* $FreeBSD$ */
 
 /*
  * Driver for the Microsemi Smart storage controllers

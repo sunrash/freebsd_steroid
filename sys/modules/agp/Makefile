@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/agp/Makefile 320851 2017-07-09 22:53:24Z markj $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/agp
 

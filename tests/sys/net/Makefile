@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/net/Makefile 329874 2018-02-23 18:18:42Z asomers $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

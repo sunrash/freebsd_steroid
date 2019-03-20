@@ -1,6 +1,6 @@
 /*
  * $NetBSD: rpcb_stat.c,v 1.2 2000/07/04 20:27:40 matt Exp $
- * $FreeBSD: releng/12.0/usr.sbin/rpcbind/rpcb_stat.c 327464 2018-01-01 09:41:18Z delphij $
+ * $FreeBSD$
  */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

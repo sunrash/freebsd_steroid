@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/xargs/tests/regress.sh 287005 2015-08-21 18:42:57Z ngie $
+# $FreeBSD$
 
 echo 1..16
 

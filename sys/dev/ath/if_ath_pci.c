@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ath/if_ath_pci.c 336069 2018-07-07 15:55:58Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * PCI/Cardbus front-end for the Atheros Wireless LAN controller driver.

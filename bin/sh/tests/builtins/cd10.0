@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/cd10.0 320340 2017-06-25 21:53:08Z jilles $
+# $FreeBSD$
 
 # Precondition
 (cd /bin) || exit

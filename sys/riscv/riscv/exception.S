@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/exception.S 338467 2018-09-05 11:34:58Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "assym.inc"
 
@@ -107,8 +107,8 @@ __FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/exception.S 338467 2018-09-05 11
 	sd	t0, (TF_SEPC)(sp)
 	csrr	t0, sstatus
 	sd	t0, (TF_SSTATUS)(sp)
-	csrr	t0, sbadaddr
-	sd	t0, (TF_SBADADDR)(sp)
+	csrr	t0, stval
+	sd	t0, (TF_STVAL)(sp)
 	csrr	t0, scause
 	sd	t0, (TF_SCAUSE)(sp)
 .endm

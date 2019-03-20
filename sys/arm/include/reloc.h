@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)reloc.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/arm/include/reloc.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_RELOC_H_

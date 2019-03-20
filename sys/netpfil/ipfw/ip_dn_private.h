@@ -29,7 +29,7 @@
 /*
  * internal dummynet APIs.
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_dn_private.h 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _IP_DN_PRIVATE_H

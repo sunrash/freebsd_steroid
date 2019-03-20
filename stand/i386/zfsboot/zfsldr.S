@@ -12,7 +12,7 @@
  * warranties of merchantability and fitness for a particular
  * purpose.
  *
- * $FreeBSD: releng/12.0/stand/i386/zfsboot/zfsldr.S 326857 2017-12-14 17:00:24Z imp $
+ * $FreeBSD$
  */
 
 /* Memory Locations */

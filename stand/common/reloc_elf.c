@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/common/reloc_elf.c 327822 2018-01-11 13:57:30Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <machine/elf.h>

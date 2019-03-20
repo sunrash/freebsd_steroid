@@ -31,7 +31,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * $NetBSD: trap.h,v 1.7 2002/02/22 13:51:40 kleink Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/trap.h 339803 2018-10-27 03:16:32Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef	_POWERPC_TRAP_H_
@@ -102,6 +102,9 @@
 #define	EXC_VECAST_E	0x2f20		/* Altivec Assist (Book-E) */
 #define	EXC_SPFPD	0x2f30		/* SPE Floating-point Data */
 #define	EXC_SPFPR	0x2f40		/* SPE Floating-point Round */
+
+/* POWER8 */
+#define EXC_SOFT_PATCH	0x1500		/* POWER8 Soft Patch Exception */
 
 #define	EXC_LAST	0x2f00		/* Last possible exception vector */
 

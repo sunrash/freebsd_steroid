@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sym/sym_hipd.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #define SYM_DRIVER_NAME	"sym-1.6.5-20000902"
 
@@ -8387,8 +8387,7 @@ sym_pci_probe(device_t dev)
 	chip = sym_find_pci_chip(dev);
 	if (chip && sym_find_firmware(chip)) {
 		device_set_desc(dev, chip->name);
-		return (chip->lp_probe_bit & SYM_SETUP_LP_PROBE_MAP)?
-		  BUS_PROBE_LOW_PRIORITY : BUS_PROBE_DEFAULT;
+		return BUS_PROBE_DEFAULT;
 	}
 	return ENXIO;
 }

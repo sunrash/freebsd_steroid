@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libmagic/Makefile 335733 2018-06-27 19:29:15Z bdrewery $
+# $FreeBSD$
 # Copyright (c) David E. O'Brien, 2000-2004, 2006, 2009
 
 PACKAGE=lib${LIB}

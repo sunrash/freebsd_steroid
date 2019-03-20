@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/gvinum/gvinum.c 335267 2018-06-16 23:45:59Z eadler $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

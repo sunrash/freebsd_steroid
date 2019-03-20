@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/allwinner/files.allwinner 337345 2018-08-05 06:10:13Z manu $
+# $FreeBSD$
 kern/kern_clocksource.c			standard
 
 arm/allwinner/a10_ahci.c		optional	ahci

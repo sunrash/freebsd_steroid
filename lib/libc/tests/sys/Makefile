@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/sys/Makefile 334653 2018-06-05 13:06:06Z markj $
+# $FreeBSD$
 
 PACKAGE=			tests
 
@@ -8,6 +8,7 @@ PACKAGE=			tests
 ATF_TESTS_C+=			brk_test
 .endif
 ATF_TESTS_C+=			queue_test
+ATF_TESTS_C+=			sendfile_test
 
 # TODO: clone, lwp_create, lwp_ctl, posix_fadvise, recvmmsg,
 # swapcontext

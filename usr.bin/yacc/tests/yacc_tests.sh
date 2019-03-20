@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/usr.bin/yacc/tests/yacc_tests.sh 269884 2014-08-12 17:51:26Z ngie $
+# $FreeBSD$
 
 set -e
 

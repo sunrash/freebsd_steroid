@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc++experimental/Makefile 318598 2017-05-21 21:33:15Z dim $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -11,9 +11,6 @@ MK_PROFILE=	no
 
 .PATH:		${SRCDIR}/src/experimental
 
-SRCS+=		filesystem/directory_iterator.cpp
-SRCS+=		filesystem/operations.cpp
-SRCS+=		filesystem/path.cpp
 SRCS+=		memory_resource.cpp
 
 WARNS?=		0

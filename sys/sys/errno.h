@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)errno.h	8.5 (Berkeley) 1/21/94
- * $FreeBSD: releng/12.0/sys/sys/errno.h 326443 2017-12-02 00:07:09Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_ERRNO_H_
@@ -180,10 +180,11 @@ __END_DECLS
 #define	ECAPMODE	94		/* Not permitted in capability mode */
 #define	ENOTRECOVERABLE	95		/* State not recoverable */
 #define	EOWNERDEAD	96		/* Previous owner died */
+#define	EINTEGRITY	97		/* Integrity check failed */
 #endif /* _POSIX_SOURCE */
 
 #ifndef _POSIX_SOURCE
-#define	ELAST		96		/* Must be equal largest errno */
+#define	ELAST		97		/* Must be equal largest errno */
 #endif /* _POSIX_SOURCE */
 
 #if defined(_KERNEL) || defined(_WANT_KERNEL_ERRNO)

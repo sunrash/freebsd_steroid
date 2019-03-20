@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/asm.h 316756 2017-04-13 13:46:01Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_ASM_H_

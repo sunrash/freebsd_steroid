@@ -34,7 +34,7 @@
  *
  *	@(#)fbio.h	8.2 (Berkeley) 10/30/93
  *
- * $FreeBSD: releng/12.0/sys/sys/fbio.h 326611 2017-12-06 02:05:21Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_FBIO_H_

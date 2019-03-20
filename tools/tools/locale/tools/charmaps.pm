@@ -1,7 +1,7 @@
 #!/usr/local/bin/perl -w
 
 #
-# $FreeBSD: releng/12.0/tools/tools/locale/tools/charmaps.pm 286434 2015-08-08 00:28:23Z bapt $
+# $FreeBSD$
 #
 
 use strict;

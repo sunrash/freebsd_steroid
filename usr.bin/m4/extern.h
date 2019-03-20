@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.bin/m4/extern.h 328319 2018-01-24 07:01:44Z eadler $
+ * $FreeBSD$
  */
 
 /* eval.c */

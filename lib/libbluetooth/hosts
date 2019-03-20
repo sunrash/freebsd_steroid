@@ -1,5 +1,5 @@
 # $Id: hosts,v 1.1 2003/05/21 17:48:40 max Exp $
-# $FreeBSD: releng/12.0/lib/libbluetooth/hosts 338155 2018-08-21 19:28:53Z brd $
+# $FreeBSD$
 #
 # Bluetooth Host Database
 #

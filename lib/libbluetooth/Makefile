@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.5 2003/07/22 18:38:04 max Exp $
-# $FreeBSD: releng/12.0/lib/libbluetooth/Makefile 338155 2018-08-21 19:28:53Z brd $
+# $FreeBSD$
 
 PACKAGE=	lib${LIB}
 CONFS=		hosts protocols

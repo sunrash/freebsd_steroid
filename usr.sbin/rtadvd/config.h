@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/rtadvd/config.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: config.h,v 1.8 2003/06/17 08:26:22 itojun Exp $	*/
 
 /*-

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpe/Makefile 312487 2017-01-20 04:37:03Z ngie $
+# $FreeBSD$
 .include <bsd.own.mk>
 
 INTERNALLIB=

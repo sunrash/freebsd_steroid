@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/aacraid/aacraid.c 332122 2018-04-06 17:35:35Z brooks $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for the Adaptec by PMC Series 6,7,8,... families of RAID controllers

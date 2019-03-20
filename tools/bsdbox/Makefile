@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/tools/bsdbox/Makefile 325633 2017-11-10 07:53:02Z bdrewery $
+#$FreeBSD$
 #	@(#)Makefile	8.1 (Berkeley) 6/2/93
 
 MAN=

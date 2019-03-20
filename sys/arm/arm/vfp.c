@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/vfp.c 338336 2018-08-27 10:08:27Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #ifdef VFP
 #include <sys/param.h>

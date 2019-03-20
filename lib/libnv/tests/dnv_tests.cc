@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libnv/tests/dnv_tests.cc 319159 2017-05-29 19:02:52Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/dnv.h>

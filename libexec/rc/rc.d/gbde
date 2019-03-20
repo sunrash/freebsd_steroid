@@ -3,7 +3,7 @@
 # This file, originally written by Garrett A. Wollman, is in the public
 # domain.
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/gbde 298514 2016-04-23 16:10:54Z lme $
+# $FreeBSD$
 #
 
 # PROVIDE: disks

@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/nfsclient/nfs_kdtrace.h 326268 2017-11-27 15:15:37Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _NFSCL_NFS_KDTRACE_H_

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/bsdinstall/partedit/partedit_sparc64.c 326674 2017-12-08 00:57:13Z nwhitehorn $
+ * $FreeBSD$
  */
 
 #include <string.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcompiler_rt/Makefile.inc 328768 2018-02-02 05:04:43Z imp $
+# $FreeBSD$
 
 CRTARCH=	${MACHINE_CPUARCH:C/amd64/x86_64/}
 

@@ -29,7 +29,7 @@
  * (both async and sync), but which do not necessarily have anything to
  * do with tty processing.
  *
- * $FreeBSD: releng/12.0/sys/sys/serial.h 326256 2017-11-27 15:01:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SERIAL_H_

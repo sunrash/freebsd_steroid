@@ -33,7 +33,7 @@
  *
  *	@(#)null_subr.c	8.7 (Berkeley) 5/14/95
  *
- * $FreeBSD: releng/12.0/sys/fs/nullfs/null_subr.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

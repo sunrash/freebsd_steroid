@@ -1,4 +1,4 @@
-$ $FreeBSD: releng/12.0/lib/libc/nls/ja_JP.eucJP.msg 199128 2009-11-10 03:56:51Z ume $
+$ $FreeBSD$
 $
 $ Message catalog for ja_JP.eucJP locale
 $

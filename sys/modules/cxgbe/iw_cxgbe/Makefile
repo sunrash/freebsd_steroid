@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/cxgbe/iw_cxgbe/Makefile 326169 2017-11-24 14:50:28Z hselasky $
+# $FreeBSD$
 
 CXGBE=	${SRCTOP}/sys/dev/cxgbe
 .PATH: ${CXGBE}/iw_cxgbe

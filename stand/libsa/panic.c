@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/panic.c 328437 2018-01-26 17:13:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include <machine/stdarg.h>

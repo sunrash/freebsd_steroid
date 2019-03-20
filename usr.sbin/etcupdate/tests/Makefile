@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/etcupdate/tests/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 PLAIN_TESTS_SH=
 .for test in	always_test \

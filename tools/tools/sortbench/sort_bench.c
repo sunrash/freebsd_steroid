@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/sortbench/sort_bench.c 332796 2018-04-19 21:53:57Z brooks $
+ * $FreeBSD$
  */
 
 #include <math.h>

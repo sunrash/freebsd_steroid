@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)tcp_var.h	8.4 (Berkeley) 5/24/95
- * $FreeBSD: releng/12.0/sys/netinet/tcp_syncache.h 339430 2018-10-18 19:21:18Z tuexen $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_TCP_SYNCACHE_H_

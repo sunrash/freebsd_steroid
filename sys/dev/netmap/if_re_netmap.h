@@ -26,7 +26,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/dev/netmap/if_re_netmap.h 332423 2018-04-12 07:20:50Z vmaffione $
+ * $FreeBSD$
  *
  * netmap support for: re
  *

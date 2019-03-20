@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/arswitch/arswitch_8327.c 328838 2018-02-04 08:22:11Z adrian $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

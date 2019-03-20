@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/pcpu.h 338608 2018-09-12 08:05:33Z br $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_PCPU_H_

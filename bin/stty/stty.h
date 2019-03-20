@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)stty.h	8.1 (Berkeley) 5/31/93
- * $FreeBSD: releng/12.0/bin/stty/stty.h 314436 2017-02-28 23:42:47Z imp $
+ * $FreeBSD$
  */
 
 #include <sys/ioctl.h>

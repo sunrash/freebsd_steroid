@@ -14,7 +14,7 @@
  *
  * Ported to run under 386BSD by Julian Elischer (julian@tfs.com) Sept 1992
  *
- * $FreeBSD: releng/12.0/sys/cam/scsi/scsi_all.h 331261 2018-03-20 21:00:45Z jhb $
+ * $FreeBSD$
  */
 
 /*
@@ -4175,6 +4175,12 @@ int scsi_ata_read_log(struct ccb_scsiio *csio, uint32_t retries,
 		      uint32_t page_number, uint16_t block_count,
 		      uint8_t protocol, uint8_t *data_ptr, uint32_t dxfer_len,
 		      uint8_t sense_len, uint32_t timeout);
+
+int scsi_ata_setfeatures(struct ccb_scsiio *csio, uint32_t retries,
+			 void (*cbfcnp)(struct cam_periph *, union ccb *),
+			 uint8_t tag_action, uint8_t feature,
+			 uint64_t lba, uint32_t count,
+			 uint8_t sense_len, uint32_t timeout);
 
 int scsi_ata_pass(struct ccb_scsiio *csio, uint32_t retries,
 		  void (*cbfcnp)(struct cam_periph *, union ccb *),

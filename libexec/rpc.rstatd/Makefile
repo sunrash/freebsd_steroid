@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/rpc.rstatd/Makefile 275077 2014-11-25 21:18:18Z bapt $
+# $FreeBSD$
 
 PROG =	rpc.rstatd
 SRCS =	rstatd.c rstat_proc.c

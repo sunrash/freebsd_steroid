@@ -23,7 +23,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/screen.4th 280975 2015-04-02 01:48:12Z dteske $
+\ $FreeBSD$
 
 marker task-screen.4th
 

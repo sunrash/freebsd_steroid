@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/clang/Makefile 309124 2016-11-24 22:54:55Z dim $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -7,6 +7,7 @@ PROG_CXX=	clang
 SRCDIR=		tools/clang/tools/driver
 SRCS+=		cc1_main.cpp
 SRCS+=		cc1as_main.cpp
+SRCS+=		cc1gen_reproducer_main.cpp
 SRCS+=		driver.cpp
 
 .if ${MK_SHARED_TOOLCHAIN} == "no"

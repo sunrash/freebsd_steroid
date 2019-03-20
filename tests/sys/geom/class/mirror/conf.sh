@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/mirror/conf.sh 326863 2017-12-14 22:15:46Z markj $
+# $FreeBSD$
 
 name="$(mktemp -u mirror.XXXXXX)"
 class="mirror"
@@ -16,6 +16,37 @@ syncwait()
 {
 	while $(gmirror status -s $name | grep -q SYNCHRONIZING); do
 		sleep 0.1;
+	done
+}
+
+consumerrefs()
+{
+	gclass=$1
+	geom=$2
+
+	if [ $# -ne 2 ]; then
+		echo "Bad usage consumerrefs" >&2
+		exit 1
+	fi
+
+	geom "${gclass}" list "${geom}" | \
+	    grep -A5 ^Consumers | \
+	    grep Mode | \
+	    cut -d: -f2
+}
+
+disconnectwait()
+{
+	gclass=$1
+	geom=$2
+
+	if [ $# -ne 2 ]; then
+		echo "Bad usage disconnectwait" >&2
+		exit 1
+	fi
+
+	while [ $(consumerrefs "$gclass" "$geom") != r0w0e0 ]; do
+		sleep 0.05
 	done
 }
 

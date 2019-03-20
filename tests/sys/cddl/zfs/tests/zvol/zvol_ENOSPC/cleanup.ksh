@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/zvol/zvol_ENOSPC/cleanup.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 #
 # ident	"@(#)cleanup.ksh	1.3	08/11/03 SMI"

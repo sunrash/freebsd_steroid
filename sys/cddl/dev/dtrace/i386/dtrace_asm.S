@@ -19,7 +19,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/i386/dtrace_asm.S 331254 2018-03-20 17:58:51Z emaste $
+ * $FreeBSD$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.

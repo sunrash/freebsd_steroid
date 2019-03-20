@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libbz2/Makefile 312463 2017-01-20 03:58:50Z ngie $
+# $FreeBSD$
 
 PACKAGE=	lib${LIB}
 BZ2DIR=	${SRCTOP}/contrib/bzip2

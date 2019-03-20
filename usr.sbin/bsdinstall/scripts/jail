@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsdinstall/scripts/jail 287688 2015-09-11 20:59:13Z dteske $
+# $FreeBSD$
 #
 ############################################################ INCLUDES
 

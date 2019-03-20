@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/coresight/coresight-funnel.h 332077 2018-04-05 15:45:54Z br $
+ * $FreeBSD$
  */
 
 #ifndef	_ARM64_CORESIGHT_CORESIGHT_FUNNEL_H_

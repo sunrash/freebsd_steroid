@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/uart/uart_dev_lowrisc.c 339330 2018-10-12 15:19:41Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

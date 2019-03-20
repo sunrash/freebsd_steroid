@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/mips/beri/loader/beri_console.c 330788 2018-03-12 03:54:38Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

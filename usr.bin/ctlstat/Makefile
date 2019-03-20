@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ctlstat/Makefile 315170 2017-03-12 18:58:44Z imp $
+# $FreeBSD$
 
 PROG=		ctlstat
 MAN=		ctlstat.8

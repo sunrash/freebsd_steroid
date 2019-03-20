@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/powerpc/kboot/Makefile 329190 2018-02-13 03:44:50Z jhibbits $
+# $FreeBSD$
 
 LOADER_CD9660_SUPPORT?=	yes
 LOADER_MSDOS_SUPPORT?=	no

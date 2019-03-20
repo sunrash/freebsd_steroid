@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/sctp_usrreq.c 338134 2018-08-21 13:25:32Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #include <netinet/sctp_os.h>
 #include <sys/proc.h>
@@ -6828,6 +6828,10 @@ sctp_ctloutput(struct socket *so, struct sockopt *sopt)
 		return (error);
 	}
 	optsize = sopt->sopt_valsize;
+	if (optsize > SCTP_SOCKET_OPTION_LIMIT) {
+		SCTP_LTRACE_ERR_RET(so->so_pcb, NULL, NULL, SCTP_FROM_SCTP_USRREQ, ENOBUFS);
+		return (ENOBUFS);
+	}
 	if (optsize) {
 		SCTP_MALLOC(optval, void *, optsize, SCTP_M_SOCKOPT);
 		if (optval == NULL) {

@@ -37,7 +37,7 @@
  *
  * Author: Archie Cobbs <archie@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_bridge.c 328218 2018-01-21 15:42:36Z pfg $
+ * $FreeBSD$
  */
 
 /*

@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/beri/beri_mp.h 332441 2018-04-12 17:43:19Z br $
+ * $FreeBSD$
  */
 
 static inline int

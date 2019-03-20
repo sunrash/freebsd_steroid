@@ -1,3 +1,3 @@
-# $FreeBSD: releng/12.0/usr.bin/atm/Makefile.inc 121666 2003-10-29 10:30:54Z harti $
+# $FreeBSD$
 
 .include "../Makefile.inc"

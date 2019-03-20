@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/efivar/Makefile 326472 2017-12-02 15:25:45Z imp $
+# $FreeBSD$
 
 PROG=	efivar
 MAN=	efivar.8

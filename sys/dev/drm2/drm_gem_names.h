@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/drm2/drm_gem_names.h 338285 2018-08-24 00:02:00Z imp $
+ * $FreeBSD$
  *
  */
 

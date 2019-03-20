@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/dme/if_dmevar.h 308747 2016-11-17 11:48:07Z br $
+ * $FreeBSD$
  */
 
 #ifndef __IF_DMEVAR_H__

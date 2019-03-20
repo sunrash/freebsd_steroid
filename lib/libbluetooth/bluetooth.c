@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: bluetooth.c,v 1.3 2003/05/20 23:04:30 max Exp $
- * $FreeBSD: releng/12.0/lib/libbluetooth/bluetooth.c 326219 2017-11-26 02:00:33Z pfg $
+ * $FreeBSD$
  */
 #define L2CAP_SOCKET_CHECKED
 #include <bluetooth.h>

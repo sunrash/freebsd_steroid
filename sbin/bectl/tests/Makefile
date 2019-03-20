@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/bectl/tests/Makefile 340594 2018-11-19 02:30:12Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
 

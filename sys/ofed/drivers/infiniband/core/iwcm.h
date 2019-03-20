@@ -32,7 +32,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/drivers/infiniband/core/iwcm.h 330490 2018-03-05 11:49:45Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef IWCM_H

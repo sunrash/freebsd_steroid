@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/safe/safevar.h 336439 2018-07-18 00:56:25Z cem $
+ * $FreeBSD$
  */
 #ifndef _SAFE_SAFEVAR_H_
 #define	_SAFE_SAFEVAR_H_

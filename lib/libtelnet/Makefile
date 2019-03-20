@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.2 (Berkeley) 12/15/93
-# $FreeBSD: releng/12.0/lib/libtelnet/Makefile 321806 2017-07-31 19:07:45Z cy $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

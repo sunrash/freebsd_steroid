@@ -35,7 +35,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libutil/libutil.h 336746 2018-07-26 18:34:38Z ian $
+ * $FreeBSD$
  */
 
 #ifndef _LIBUTIL_H_

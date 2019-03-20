@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/diff/xmalloc.c 315051 2017-03-11 05:01:29Z bapt $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <stdarg.h>

@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libproc/crc32.c 309593 2016-12-06 04:18:09Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <stdint.h>
 

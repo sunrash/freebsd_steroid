@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/asmacros.h 334520 2018-06-02 04:25:09Z bde $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_ASMACROS_H_

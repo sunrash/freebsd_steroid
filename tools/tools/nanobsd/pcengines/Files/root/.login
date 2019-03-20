@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/nanobsd/pcengines/Files/root/.login 278616 2015-02-12 05:35:00Z cperciva $
+# $FreeBSD$
 #
 # .login - csh login script, read by login shell, after `.cshrc' at login.
 #

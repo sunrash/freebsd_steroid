@@ -21,7 +21,7 @@
  * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
  * Portions Copyright 2013 Justin Hibbits jhibbits@freebsd.org
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/fbt/powerpc/fbt_isa.c 338359 2018-08-28 20:21:36Z markj $
+ * $FreeBSD$
  *
  */
 
@@ -221,7 +221,7 @@ again:
 	if (*instr == FBT_BCTR)
 		fbt->fbtp_rval = DTRACE_INVOP_BCTR;
 	else if (*instr == FBT_BLR)
-		fbt->fbtp_rval = DTRACE_INVOP_RET;
+		fbt->fbtp_rval = DTRACE_INVOP_BLR;
 	else
 		fbt->fbtp_rval = DTRACE_INVOP_JUMP;
 

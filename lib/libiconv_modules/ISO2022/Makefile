@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libiconv_modules/ISO2022/Makefile 260334 2014-01-05 21:03:49Z dim $
+# $FreeBSD$
 
 SHLIB=	ISO2022
 SRCS+=	citrus_iso2022.c

@@ -31,7 +31,7 @@
 #define IF_FFECREG_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ffec/if_ffecreg.h 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Hardware defines for Freescale Fast Ethernet Controller.

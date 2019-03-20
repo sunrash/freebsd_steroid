@@ -34,7 +34,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ngctl/list.c 166529 2007-02-06 08:48:28Z kevlo $
+ * $FreeBSD$
  */
 
 #include <err.h>
@@ -125,6 +125,8 @@ ListCmd(int ac, char **av)
 				break;
 			ninfo++;
 			nlist->numnames--;
+			if (nlist->numnames > 0)
+				printf("\n");
 		}
 	} else {
 		while (nlist->numnames > 0) {

@@ -55,7 +55,7 @@
  * SUCH DAMAGE.
  *
  *
- *      $FreeBSD: releng/12.0/sys/dev/amr/amrvar.h 326255 2017-11-27 14:52:40Z pfg $
+ *      $FreeBSD$
  */
 
 #include <geom/geom_disk.h>

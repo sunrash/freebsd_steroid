@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/al_eth/al_init_eth_kr.h 307670 2016-10-20 11:31:11Z wma $
+ * $FreeBSD$
  */
 
 /**

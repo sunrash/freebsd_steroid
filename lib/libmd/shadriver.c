@@ -15,7 +15,7 @@
  * documentation and/or software. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libmd/shadriver.c 336126 2018-07-09 08:19:04Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

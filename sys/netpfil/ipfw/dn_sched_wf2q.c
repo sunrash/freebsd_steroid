@@ -28,7 +28,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_sched_wf2q.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 #ifdef _KERNEL

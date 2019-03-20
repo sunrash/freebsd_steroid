@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/aesni/Makefile 324037 2017-09-26 23:12:32Z cem $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/crypto/aesni
 .PATH: ${SRCTOP}/contrib/llvm/tools/clang/lib/Headers

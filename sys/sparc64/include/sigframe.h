@@ -28,7 +28,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	from:	FreeBSD: src/sys/alpha/include/sigframe.h,v 1.1 1999/09/29
- * $FreeBSD: releng/12.0/sys/sparc64/include/sigframe.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_SIGFRAME_H_

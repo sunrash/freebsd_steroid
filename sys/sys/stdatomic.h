@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/stdatomic.h 337399 2018-08-06 23:51:08Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _STDATOMIC_H_

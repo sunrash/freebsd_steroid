@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/meta.stage.mk 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 # $Id: meta.stage.mk,v 1.55 2017/10/27 01:17:09 sjg Exp $
 #
 #	@(#) Copyright (c) 2011-2017, Simon J. Gerraty

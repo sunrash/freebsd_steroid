@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/pmc/pmc.c 335045 2018-06-13 09:17:04Z eadler $
+ * $FreeBSD$
  *
  */
 

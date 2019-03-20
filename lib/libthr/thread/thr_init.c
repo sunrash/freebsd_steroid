@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_init.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <sys/types.h>
@@ -461,6 +461,7 @@ init_private(void)
 	 */
 	if (init_once == 0) {
 		__thr_pshared_init();
+		__thr_malloc_init();
 		/* Find the stack top */
 		mib[0] = CTL_KERN;
 		mib[1] = KERN_USRSTACK;
@@ -474,8 +475,9 @@ init_private(void)
 				PANIC("Cannot get stack rlimit");
 			_thr_stack_initial = rlim.rlim_cur;
 		}
-		len = sizeof(_thr_is_smp);
-		sysctlbyname("kern.smp.cpus", &_thr_is_smp, &len, NULL, 0);
+		_thr_is_smp = sysconf(_SC_NPROCESSORS_CONF);
+		if (_thr_is_smp == -1)
+			PANIC("Cannot get _SC_NPROCESSORS_CONF");
 		_thr_is_smp = (_thr_is_smp > 1);
 		_thr_page_size = getpagesize();
 		_thr_guard_default = _thr_page_size;

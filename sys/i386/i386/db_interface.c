@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/db_interface.c 332489 2018-04-13 20:30:49Z kib $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Interface to new debugger.
@@ -118,4 +118,5 @@ db_show_mdpcpu(struct pcpu *pc)
 	db_printf("trampstk     = 0x%x\n", pc->pc_trampstk);
 	db_printf("kesp0        = 0x%x\n", pc->pc_kesp0);
 	db_printf("common_tssp  = 0x%x\n", (u_int)pc->pc_common_tssp);
+	db_printf("tlb gen      = %u\n", pc->pc_smp_tlb_done);
 }

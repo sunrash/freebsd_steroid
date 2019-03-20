@@ -1,5 +1,5 @@
 
-# $FreeBSD: releng/12.0/sys/modules/puc/Makefile 332652 2018-04-17 16:46:08Z imp $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/dev/puc
 

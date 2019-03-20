@@ -40,7 +40,7 @@
 
 #include <mixer_if.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pci/hdspe.c 326255 2017-11-27 14:52:40Z pfg $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 static struct hdspe_channel chan_map_aio[] = {
 	{  0,  1,   "line", 1, 1 },

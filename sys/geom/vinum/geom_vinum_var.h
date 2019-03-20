@@ -37,7 +37,7 @@
  * otherwise) arising in any way out of the use of this software, even if
  * advised of the possibility of such damage.
  *  
- * $FreeBSD: releng/12.0/sys/geom/vinum/geom_vinum_var.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_GEOM_VINUM_VAR_H_

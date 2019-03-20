@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/net/usb_ethernet.h 334158 2018-05-24 15:24:42Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *
@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/net/usb_ethernet.h 334158 2018-05-24 15:24:42Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef _USB_ETHERNET_H_

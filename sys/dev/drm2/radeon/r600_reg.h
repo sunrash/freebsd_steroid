@@ -29,7 +29,7 @@
 #define __R600_REG_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/r600_reg.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define R600_PCIE_PORT_INDEX                0x0038
 #define R600_PCIE_PORT_DATA                 0x003c

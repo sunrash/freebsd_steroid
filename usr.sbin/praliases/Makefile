@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 9/21/96
-# $FreeBSD: releng/12.0/usr.sbin/praliases/Makefile 314659 2017-03-04 11:38:03Z ngie $
+# $FreeBSD$
 
 SENDMAIL_DIR=	${SRCTOP}/contrib/sendmail
 .PATH: ${SENDMAIL_DIR}/praliases

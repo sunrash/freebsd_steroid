@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/Makefile 337629 2018-08-11 16:06:32Z brd $
+# $FreeBSD$
 
 FILESDIR=	${LIBEXECDIR}/dwatch
 FILES=		chmod \

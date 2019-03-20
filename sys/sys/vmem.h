@@ -27,7 +27,7 @@
  */
 /* From	$NetBSD: vmem.h,v 1.20 2013/01/29 21:26:24 para Exp $	*/
 
-/* $FreeBSD: releng/12.0/sys/sys/vmem.h 326347 2017-11-28 23:40:54Z jeff $ */
+/* $FreeBSD$ */
 
 #ifndef _SYS_VMEM_H_
 #define	_SYS_VMEM_H_
@@ -41,8 +41,9 @@ typedef struct vmem vmem_t;
 typedef uintptr_t	vmem_addr_t;
 typedef size_t		vmem_size_t;
 
-#define	VMEM_ADDR_MIN	0
-#define	VMEM_ADDR_MAX	(~(vmem_addr_t)0)
+#define	VMEM_ADDR_MIN		0
+#define	VMEM_ADDR_QCACHE_MIN	1
+#define	VMEM_ADDR_MAX		(~(vmem_addr_t)0)
 
 typedef int (vmem_import_t)(void *, vmem_size_t, int, vmem_addr_t *);
 typedef void (vmem_release_t)(void *, vmem_addr_t, vmem_size_t);

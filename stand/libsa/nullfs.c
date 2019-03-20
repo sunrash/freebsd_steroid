@@ -61,7 +61,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/nullfs.c 330056 2018-02-27 12:53:25Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include "stand.h"
 

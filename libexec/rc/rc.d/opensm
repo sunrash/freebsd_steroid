@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/opensm 221006 2011-04-25 05:57:01Z dougb $
+# $FreeBSD$
 #
 
 # PROVIDE: opensm

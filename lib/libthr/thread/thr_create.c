@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_create.c 337992 2018-08-18 01:05:38Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <sys/types.h>
@@ -73,8 +73,7 @@ _pthread_create(pthread_t * __restrict thread,
 	 */
 	if (_thr_isthreaded() == 0) {
 		_malloc_first_thread();
-		if (_thr_setthreaded(1))
-			return (EAGAIN);
+		_thr_setthreaded(1);
 	}
 
 	curthread = _get_curthread();

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/usr.bin/kpasswd/Makefile 287216 2015-08-27 17:16:18Z ume $
+# $FreeBSD$
 
 PROG=	kpasswd
 CFLAGS+=-I${KRB5DIR}/lib/roken

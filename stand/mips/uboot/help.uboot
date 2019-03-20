@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/stand/mips/uboot/help.uboot 296183 2016-02-29 07:47:04Z sgalabov $
+$FreeBSD$
 
 ###############################################################################
 # Tubenv DShow or import U-Boot environment variables

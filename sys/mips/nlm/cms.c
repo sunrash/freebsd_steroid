@@ -30,7 +30,7 @@
  * NETLOGIC_BSD */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/nlm/cms.c 326259 2017-11-27 15:07:26Z pfg $");
+__FBSDID("$FreeBSD$");
 #include <sys/types.h>
 #include <sys/systm.h>
 #include <sys/param.h>
@@ -204,7 +204,7 @@ xlp_handle_msg_vc(u_int vcmask, int max_msgs)
 			nlm_restore_flags(mflags);
 			if (status != 0)	/*  no msg or error */
 				continue;
-			if (srcid < 0 && srcid >= 1024) {
+			if (srcid < 0 || srcid >= 1024) {
 				printf("[%s]: bad src id %d\n", __func__,
 				    srcid);
 				continue;

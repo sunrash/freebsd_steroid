@@ -30,7 +30,7 @@
  */
 
 #include <dev/drm2/drmP.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/drm_linux_list_sort.c 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 struct drm_list_sort_thunk {
 	int (*cmp)(void *, struct list_head *, struct list_head *);

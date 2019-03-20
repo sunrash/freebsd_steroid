@@ -24,7 +24,7 @@
 # SUCH DAMAGE.
 #
 # from: src/sys/kern/bus_if.m,v 1.21 2002/04/21 11:16:10 markm Exp
-# $FreeBSD: releng/12.0/sys/powerpc/powerpc/pic_if.m 257059 2013-10-24 15:37:32Z nwhitehorn $
+# $FreeBSD$
 #
 
 #include <sys/bus.h>
@@ -48,6 +48,7 @@ METHOD void bind {
 	device_t	dev;
 	u_int		irq;
 	cpuset_t	cpumask;
+	void		**priv;
 };
 
 METHOD void translate_code {
@@ -74,11 +75,13 @@ METHOD void enable {
 	device_t	dev;
 	u_int		irq;
 	u_int		vector;
+	void		**priv;
 };
 
 METHOD void eoi {
 	device_t	dev;
 	u_int		irq;
+	void		*priv;
 };
 
 METHOD void ipi {
@@ -89,10 +92,12 @@ METHOD void ipi {
 METHOD void mask {
 	device_t	dev;
 	u_int		irq;
+	void		*priv;
 };
 
 METHOD void unmask {
 	device_t	dev;
 	u_int		irq;
+	void		*priv;
 };
 

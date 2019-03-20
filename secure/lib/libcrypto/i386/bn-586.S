@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/i386/bn-586.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from bn-586.pl. */
 #ifdef PIC
 .text

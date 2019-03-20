@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/uefisign/uefisign.h 328335 2018-01-24 16:33:33Z trasz $
+ * $FreeBSD$
  */
 
 #ifndef EFISIGN_H

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/crypto/openssh/freebsd-configure.sh 339294 2018-10-10 22:29:06Z des $
+# $FreeBSD$
 #
 
 configure_args="

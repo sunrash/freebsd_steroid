@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcasper/Makefile 322450 2017-08-13 01:04:44Z ngie $
+# $FreeBSD$
 
 SUBDIR=		libcasper
 SUBDIR+=	services

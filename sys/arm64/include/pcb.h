@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/pcb.h 322786 2017-08-22 13:16:14Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PCB_H_

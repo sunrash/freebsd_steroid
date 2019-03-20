@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/msun/i387/fenv.c 334445 2018-05-31 20:22:47Z dim $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

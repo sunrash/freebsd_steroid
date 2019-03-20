@@ -31,7 +31,7 @@
  *
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_sdhost.c 336325 2018-07-16 01:07:28Z gonzo $");
+__FBSDID("$FreeBSD$");
 
 /*
  * pin 48-53 - card slot
@@ -1287,7 +1287,7 @@ static driver_t bcm_sdhost_driver = {
 
 DRIVER_MODULE(sdhost_bcm, simplebus, bcm_sdhost_driver, bcm_sdhost_devclass,
     NULL, NULL);
-MODULE_DEPEND(sdhost_bcm, sdhci, 1, 1, 1);
+SDHCI_DEPEND(sdhost_bcm);
 #ifndef MMCCAM
 MMC_DECLARE_BRIDGE(sdhost_bcm);
 #endif

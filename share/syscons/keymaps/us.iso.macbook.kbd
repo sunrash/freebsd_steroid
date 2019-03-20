@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/syscons/keymaps/us.iso.macbook.kbd 333195 2018-05-03 06:52:47Z rcyu $
+# $FreeBSD$
 # by Willian Theesfeld Jr <wtheesfeld@mailbox.org>
 #                                                         alt
 # scan                       cntrl          alt    alt   cntrl lock

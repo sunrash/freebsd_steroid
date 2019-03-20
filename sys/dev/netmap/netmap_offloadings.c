@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/netmap/netmap_offloadings.c 332319 2018-04-09 09:24:26Z vmaffione $ */
+/* $FreeBSD$ */
 
 #if defined(__FreeBSD__)
 #include <sys/cdefs.h> /* prerequisite */

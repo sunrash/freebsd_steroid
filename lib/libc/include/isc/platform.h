@@ -17,7 +17,7 @@
  */
 
 /* $Id: platform.h.in,v 1.2.6.2 2008/01/23 02:15:02 tbox Exp $ */
-/* $FreeBSD: releng/12.0/lib/libc/include/isc/platform.h 326695 2017-12-08 15:57:29Z pfg $ */
+/* $FreeBSD$ */
 
 /*! \file */
 

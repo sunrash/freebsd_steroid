@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/file/flock_helper.c 337930 2018-08-16 22:04:00Z asomers $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

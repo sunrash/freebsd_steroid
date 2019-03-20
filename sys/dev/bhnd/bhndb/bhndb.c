@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/bhndb/bhndb.c 331746 2018-03-29 19:48:50Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Abstract BHND Bridge Device Driver

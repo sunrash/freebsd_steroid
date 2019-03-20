@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcasper/services/cap_dns/cap_dns.c 329452 2018-02-17 12:22:29Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/dnv.h>
 #include <sys/nv.h>
@@ -474,7 +474,8 @@ dns_gethostbyname(const nvlist_t *limits, const nvlist_t *nvlin,
 	struct hostent *hp;
 	int family;
 
-	if (!dns_allowed_type(limits, "NAME"))
+	if (!dns_allowed_type(limits, "NAME2ADDR") &&
+	    !dns_allowed_type(limits, "NAME"))
 		return (NO_RECOVERY);
 
 	family = (int)nvlist_get_number(nvlin, "family");
@@ -498,7 +499,8 @@ dns_gethostbyaddr(const nvlist_t *limits, const nvlist_t *nvlin,
 	size_t addrsize;
 	int family;
 
-	if (!dns_allowed_type(limits, "ADDR"))
+	if (!dns_allowed_type(limits, "ADDR2NAME") &&
+	    !dns_allowed_type(limits, "ADDR"))
 		return (NO_RECOVERY);
 
 	family = (int)nvlist_get_number(nvlin, "family");
@@ -524,7 +526,8 @@ dns_getnameinfo(const nvlist_t *limits, const nvlist_t *nvlin, nvlist_t *nvlout)
 	socklen_t salen;
 	int error, flags;
 
-	if (!dns_allowed_type(limits, "NAME"))
+	if (!dns_allowed_type(limits, "ADDR2NAME") &&
+	    !dns_allowed_type(limits, "ADDR"))
 		return (NO_RECOVERY);
 
 	error = 0;
@@ -617,7 +620,8 @@ dns_getaddrinfo(const nvlist_t *limits, const nvlist_t *nvlin, nvlist_t *nvlout)
 	unsigned int ii;
 	int error, family, n;
 
-	if (!dns_allowed_type(limits, "ADDR"))
+	if (!dns_allowed_type(limits, "NAME2ADDR") &&
+	    !dns_allowed_type(limits, "NAME"))
 		return (NO_RECOVERY);
 
 	hostname = dnvlist_get_string(nvlin, "hostname", NULL);
@@ -702,7 +706,9 @@ dns_limit(const nvlist_t *oldlimits, const nvlist_t *newlimits)
 			if (strncmp(name, "type", sizeof("type") - 1) != 0)
 				return (EINVAL);
 			type = nvlist_get_string(newlimits, name);
-			if (strcmp(type, "ADDR") != 0 &&
+			if (strcmp(type, "ADDR2NAME") != 0 &&
+			    strcmp(type, "NAME2ADDR") != 0 &&
+			    strcmp(type, "ADDR") != 0 &&
 			    strcmp(type, "NAME") != 0) {
 				return (EINVAL);
 			}

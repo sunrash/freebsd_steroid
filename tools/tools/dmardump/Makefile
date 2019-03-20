@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/dmardump/Makefile 303887 2016-08-09 19:06:05Z jhb $
+# $FreeBSD$
 
 PROG=	dmardump
 SRCS=	dmardump.c

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: FreeBSD: src/sys/i386/include/sysarch.h,v 1.14 2000/09/21
- * $FreeBSD: releng/12.0/sys/sparc64/include/sysarch.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

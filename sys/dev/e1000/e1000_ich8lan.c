@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/e1000/e1000_ich8lan.c 333345 2018-05-08 01:39:45Z mmacy $*/
+/*$FreeBSD$*/
 
 /* 82562G 10/100 Network Connection
  * 82562G-2 10/100 Network Connection

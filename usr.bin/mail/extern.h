@@ -30,7 +30,7 @@
  *
  *	@(#)extern.h	8.2 (Berkeley) 4/20/95 
  *
- * $FreeBSD: releng/12.0/usr.bin/mail/extern.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 struct name *cat(struct name *, struct name *);

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/net/route_var.h 335250 2018-06-16 08:26:23Z ae $
+ * $FreeBSD$
  */
 
 #ifndef _NET_ROUTE_VAR_H_

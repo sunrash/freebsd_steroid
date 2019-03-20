@@ -24,7 +24,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_compat_solaris_tar_acl.c 314571 2017-03-02 22:59:35Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Verify reading entries with POSIX.1e and NFSv4 ACLs from archives created

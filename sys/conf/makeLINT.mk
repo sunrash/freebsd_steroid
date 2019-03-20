@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/makeLINT.mk 334364 2018-05-30 02:26:36Z rpokala $
+# $FreeBSD$
 
 # The LINT files need to end up in the kernel source directory.
 .OBJDIR: ${.CURDIR}

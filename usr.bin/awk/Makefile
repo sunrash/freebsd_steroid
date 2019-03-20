@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/awk/Makefile 328550 2018-01-29 14:15:44Z kevans $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

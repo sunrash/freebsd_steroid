@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libnetgraph/Makefile 325552 2017-11-08 12:34:47Z mav $
+# $FreeBSD$
 # $Whistle: Makefile,v 1.4 1999/01/17 03:41:02 julian Exp $
 
 PACKAGE=lib${LIB}

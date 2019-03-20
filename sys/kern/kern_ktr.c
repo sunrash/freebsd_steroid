@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_ktr.c 326271 2017-11-27 15:20:12Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_ktr.h"
@@ -341,7 +341,7 @@ ktr_tracepoint(uint64_t mask, const char *file, int line, const char *format,
 #ifdef KTR_ALQ
 	if (ktr_alq_enabled) {
 		if (td->td_critnest == 0 &&
-		    (td->td_flags & TDF_IDLETD) == 0 &&
+		    (TD_IS_IDLETHREAD(td)) == 0 &&
 		    td != ald_thread) {
 			if (ktr_alq_max && ktr_alq_cnt > ktr_alq_max)
 				goto done;

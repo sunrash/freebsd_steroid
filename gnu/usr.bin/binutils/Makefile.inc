@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/Makefile.inc 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 
 WARNS?=	3
 PACKAGE=	binutils

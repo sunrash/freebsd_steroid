@@ -38,7 +38,7 @@
 #ident	"@(#)svc_dg.c	1.17	94/04/24 SMI"
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/rpc/svc_dg.c 326023 2017-11-20 19:43:44Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * svc_dg.c, Server side for connectionless RPC.

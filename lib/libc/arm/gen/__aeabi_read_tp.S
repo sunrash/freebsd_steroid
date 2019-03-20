@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/arm/gen/__aeabi_read_tp.S 288373 2015-09-29 16:09:58Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/sysarch.h>
 

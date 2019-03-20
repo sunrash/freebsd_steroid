@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: ng_bluetooth.c,v 1.3 2003/04/26 22:37:31 max Exp $
- * $FreeBSD: releng/12.0/sys/netgraph/bluetooth/common/ng_bluetooth.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

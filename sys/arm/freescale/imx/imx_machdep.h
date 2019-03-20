@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/freescale/imx/imx_machdep.h 328349 2018-01-24 18:10:11Z ian $
+ * $FreeBSD$
  */
 
 #ifndef	IMX_MACHDEP_H

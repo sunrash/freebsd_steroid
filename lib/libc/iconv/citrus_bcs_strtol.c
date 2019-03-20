@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_bcs_strtol.c 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_bcs_strtol.c,v 1.4 2013/04/26 21:20:47 joerg Exp $ */
 
 /*-

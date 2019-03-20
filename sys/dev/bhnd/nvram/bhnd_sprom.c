@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_sprom.c 324070 2017-09-27 19:44:23Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * BHND SPROM driver.

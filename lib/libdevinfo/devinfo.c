@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libdevinfo/devinfo.c 334415 2018-05-31 02:58:03Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * An interface to the FreeBSD kernel's bus/device information interface.

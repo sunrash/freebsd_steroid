@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/cuse/cuse.c 333806 2018-05-18 17:58:09Z emaste $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2010-2017 Hans Petter Selasky. All rights reserved.
  *

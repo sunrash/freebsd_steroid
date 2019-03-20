@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)stdio.h	8.5 (Berkeley) 4/29/95
- * $FreeBSD: releng/12.0/include/stdio.h 331948 2018-04-03 20:59:46Z cy $
+ * $FreeBSD$
  */
 
 #ifndef	_STDIO_H_

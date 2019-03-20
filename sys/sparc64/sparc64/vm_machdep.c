@@ -41,7 +41,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/sparc64/sparc64/vm_machdep.c 329023 2018-02-08 19:28:51Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_pmap.h"
 

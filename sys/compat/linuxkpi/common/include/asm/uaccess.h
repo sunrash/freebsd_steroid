@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/asm/uaccess.h 334953 2018-06-11 15:42:29Z hselasky $
+ * $FreeBSD$
  */
 #ifndef _ASM_UACCESS_H_
 #define _ASM_UACCESS_H_

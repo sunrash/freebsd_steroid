@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/sg_pager.c 326272 2017-11-27 15:23:17Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This pager manages OBJT_SG objects.  These objects are backed by
@@ -100,9 +100,9 @@ sg_pager_alloc(void *handle, vm_ooffset_t size, vm_prot_t prot,
 	 * to map beyond that.
 	 */
 	size = round_page(size);
-	pindex = UOFF_TO_IDX(foff) + UOFF_TO_IDX(size);
-	if (pindex > npages || pindex < UOFF_TO_IDX(foff) ||
-	    pindex < UOFF_TO_IDX(size))
+	pindex = OFF_TO_IDX(foff) + OFF_TO_IDX(size);
+	if (pindex > npages || pindex < OFF_TO_IDX(foff) ||
+	    pindex < OFF_TO_IDX(size))
 		return (NULL);
 
 	/*

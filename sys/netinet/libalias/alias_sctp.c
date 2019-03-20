@@ -70,7 +70,7 @@
  * - Dynamic control of hash-table size
  */
 
-/* $FreeBSD: releng/12.0/sys/netinet/libalias/alias_sctp.c 327898 2018-01-12 23:12:30Z pfg $ */
+/* $FreeBSD$ */
 
 #ifdef _KERNEL
 #include <machine/stdarg.h>

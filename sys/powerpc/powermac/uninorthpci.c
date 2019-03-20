@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powermac/uninorthpci.c 327798 2018-01-10 22:19:11Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -101,7 +101,8 @@ static devclass_t	uninorth_devclass;
 
 DEFINE_CLASS_1(pcib, uninorth_driver, uninorth_methods,
     sizeof(struct uninorth_softc), ofw_pci_driver);
-DRIVER_MODULE(uninorth, ofwbus, uninorth_driver, uninorth_devclass, 0, 0);
+EARLY_DRIVER_MODULE(uninorth, ofwbus, uninorth_driver, uninorth_devclass, 0, 0,
+    BUS_PASS_BUS);
 
 static int
 uninorth_probe(device_t dev)

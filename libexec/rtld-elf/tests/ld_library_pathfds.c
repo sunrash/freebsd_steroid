@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/tests/ld_library_pathfds.c 337124 2018-08-02 11:55:16Z trasz $
+ * $FreeBSD$
  */
 
 #include <atf-c.h>

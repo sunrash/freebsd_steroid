@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/tools/fixwhite/fixwhite.c 298881 2016-05-01 16:20:14Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <stdbool.h>

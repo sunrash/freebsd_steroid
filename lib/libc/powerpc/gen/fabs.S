@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/powerpc/gen/fabs.S 272362 2014-10-01 15:00:21Z bapt $");
+__FBSDID("$FreeBSD$");
 
 /*
  * double fabs(double)

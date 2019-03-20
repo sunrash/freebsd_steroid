@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/mips/atheros/ar531x/ar5315_setup.h 306675 2016-10-04 16:27:36Z adrian $ */
+/* $FreeBSD$ */
 
 #ifndef	__AR5315_SETUP_H__
 #define	__AR5315_SETUP_H__

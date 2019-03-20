@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ppp/command.c 337961 2018-08-17 10:18:45Z n_hibma $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

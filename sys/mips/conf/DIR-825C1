@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/conf/DIR-825C1 320464 2017-06-29 03:57:22Z adrian $
+# $FreeBSD$
 #
 # Specific board setup for the D-Link DIR-825C1 router.
 #

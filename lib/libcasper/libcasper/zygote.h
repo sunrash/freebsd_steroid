@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libcasper/libcasper/zygote.h 328473 2018-01-27 12:55:34Z oshogbo $
+ * $FreeBSD$
  */
 
 #ifndef _ZYGOTE_H_

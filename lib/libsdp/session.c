@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: session.c,v 1.2 2003/09/04 22:12:13 max Exp $
- * $FreeBSD: releng/12.0/lib/libsdp/session.c 333109 2018-04-30 10:15:58Z wulf $
+ * $FreeBSD$
  */
 #define L2CAP_SOCKET_CHECKED
 #include <bluetooth.h>

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/ndis/subr_ntoskrnl.c 338107 2018-08-20 15:57:27Z alc $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/ctype.h>
 #include <sys/unistd.h>

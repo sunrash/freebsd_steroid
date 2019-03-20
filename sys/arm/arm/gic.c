@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/gic.c 338501 2018-09-06 17:25:01Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_acpi.h"
 #include "opt_platform.h"

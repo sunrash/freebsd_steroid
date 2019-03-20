@@ -19,7 +19,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/usr.bin/units/units.c 335395 2018-06-19 23:43:14Z oshogbo $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <ctype.h>
@@ -156,8 +156,7 @@ readunits(const char *userfile)
 		}
 	}
 	cap_rights_init(&unitfilerights, CAP_READ, CAP_FSTAT);
-	if (cap_rights_limit(fileno(unitfile), &unitfilerights) < 0
-		&& errno != ENOSYS)
+	if (caph_rights_limit(fileno(unitfile), &unitfilerights) < 0)
 		err(1, "cap_rights_limit() failed");
 	while (!feof(unitfile)) {
 		if (!fgets(line, sizeof(line), unitfile))

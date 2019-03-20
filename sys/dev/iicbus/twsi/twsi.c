@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/twsi/twsi.c 320161 2017-06-20 18:38:51Z loos $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -440,6 +440,7 @@ twsi_detach(device_t dev)
 	int rv;
 
 	sc = device_get_softc(dev);
+	debugf("");
 
 	if ((rv = bus_generic_detach(dev)) != 0)
 		return (rv);

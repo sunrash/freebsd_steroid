@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/net/if_ruereg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #define	RUE_CONFIG_IDX		0	/* config number 1 */

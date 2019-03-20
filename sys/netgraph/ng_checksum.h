@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_checksum.h 303612 2016-08-01 12:09:04Z julian $
+ * $FreeBSD$
  */
 
 #ifndef _NETGRAPH_NG_CHECKSUM_H_

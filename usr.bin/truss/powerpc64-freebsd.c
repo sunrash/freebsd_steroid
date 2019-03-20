@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/truss/powerpc64-freebsd.c 309589 2016-12-06 00:39:00Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /* FreeBSD/powerpc64-specific system call handling. */
 
@@ -117,3 +117,14 @@ static struct procabi powerpc64_freebsd = {
 };
 
 PROCABI(powerpc64_freebsd);
+
+static struct procabi powerpc64_freebsd_elfv2 = {
+	"FreeBSD ELF64 V2",
+	SYSDECODE_ABI_FREEBSD,
+	powerpc64_fetch_args,
+	powerpc64_fetch_retval,
+	STAILQ_HEAD_INITIALIZER(powerpc64_freebsd_elfv2.extra_syscalls),
+	{ NULL }
+};
+
+PROCABI(powerpc64_freebsd_elfv2);

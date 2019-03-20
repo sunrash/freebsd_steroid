@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/dma/dmagent/Makefile 301166 2016-06-01 20:44:28Z gjb $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

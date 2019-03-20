@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/ncurses/config.mk 312467 2017-01-20 04:27:40Z ngie $
+# $FreeBSD$
 
 # This Makefile is shared by libncurses, libform, libmenu, libpanel.
 

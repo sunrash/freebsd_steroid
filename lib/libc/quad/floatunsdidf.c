@@ -37,7 +37,7 @@
 static char sccsid[] = "@(#)floatunsdidf.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/floatunsdidf.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "quad.h"
 
@@ -46,8 +46,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/floatunsdidf.c 326025 2017-11-20 1
  * This is exactly like floatdidf.c except that negatives never occur.
  */
 double
-__floatunsdidf(x)
-	u_quad_t x;
+__floatunsdidf(u_quad_t x)
 {
 	double d;
 	union uu u;

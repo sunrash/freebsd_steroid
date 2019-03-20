@@ -33,7 +33,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/atomic-v6.h 332891 2018-04-23 16:50:37Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_ATOMIC_V6_H_
@@ -435,7 +435,7 @@ atomic_fetchadd_64(volatile uint64_t *p, uint64_t val)
 
 	__asm __volatile(
 	    "1:							\n"
-	    "   ldrexd	%Q[tmp], %R[tmp], [%[ptr]]		\n"
+	    "   ldrexd	%Q[ret], %R[ret], [%[ptr]]		\n"
 	    "   adds	%Q[tmp], %Q[ret], %Q[val]		\n"
 	    "   adc	%R[tmp], %R[ret], %R[val]		\n"
 	    "   strexd	%[exf], %Q[tmp], %R[tmp], [%[ptr]]	\n"

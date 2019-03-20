@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/sys/modules/ix/Makefile 327031 2017-12-20 18:15:06Z erj $
+#$FreeBSD$
 
 .PATH:  ${SRCTOP}/sys/dev/ixgbe
 

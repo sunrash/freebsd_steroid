@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/atomic.h 334328 2018-05-29 13:43:16Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_ATOMIC_H_

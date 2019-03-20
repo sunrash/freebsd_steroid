@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD: releng/12.0/sys/dev/pci/pci_host_generic.h 322697 2017-08-19 17:18:27Z andrew $
+ * $FreeBSD$
  *
  */
 
@@ -56,6 +56,8 @@ struct generic_pcie_core_softc {
 	struct rman		io_rman;
 	struct resource		*res;
 	struct resource		*res1;
+	int			bus_start;
+	int			bus_end;
 	int			ecam;
 	bus_space_tag_t		bst;
 	bus_space_handle_t	bsh;

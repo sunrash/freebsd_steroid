@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/tests/trig_test.c 322921 2017-08-26 06:44:50Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 
@@ -159,6 +159,10 @@ ATF_TC_BODY(reduction, tc)
 #endif
 
 	unsigned i;
+
+#if defined(__amd64__) && defined(__clang__) && __clang_major__ >= 7
+	atf_tc_expect_fail("test fails with clang 7+ - bug 234040");
+#endif
 
 	for (i = 0; i < nitems(f_pi_odd); i++) {
 		ATF_CHECK(fabs(sinf(f_pi_odd[i])) < FLT_EPSILON);

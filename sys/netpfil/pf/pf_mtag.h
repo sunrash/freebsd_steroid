@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netpfil/pf/pf_mtag.h 326272 2017-11-27 15:23:17Z pfg $	*/
+/*	$FreeBSD$	*/
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/smbfs/smbfs_vnops.c 328099 2018-01-17 22:36:58Z jhb $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -1120,8 +1120,8 @@ smbfs_advlock(ap)
 static int
 smbfs_pathcheck(struct smbmount *smp, const char *name, int nmlen, int nameiop)
 {
-	static const char *badchars = "*/:<>;?";
-	static const char *badchars83 = " +|,[]=";
+	static const char *badchars = "*/:<>?";
+	static const char *badchars83 = " +|,[]=;";
 	const char *cp;
 	int i, error;
 

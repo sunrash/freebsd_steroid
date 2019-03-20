@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fs.h	8.13 (Berkeley) 3/21/95
- * $FreeBSD: releng/12.0/sys/ufs/ffs/fs.h 329051 2018-02-08 23:06:58Z mckusick $
+ * $FreeBSD$
  */
 
 #ifndef _UFS_FFS_FS_H_
@@ -364,7 +364,8 @@ struct fs {
 	int32_t	 fs_save_cgsize;	/* save real cg size to use fs_bsize */
 	ufs_time_t fs_mtime;		/* Last mount or fsck time. */
 	int32_t  fs_sujfree;		/* SUJ free list */
-	int32_t	 fs_sparecon32[22];	/* reserved for future constants */
+	int32_t	 fs_sparecon32[21];	/* reserved for future constants */
+	u_int32_t fs_ckhash;		/* if CK_SUPERBLOCK, its check-hash */
 	u_int32_t fs_metackhash;	/* metadata check-hash, see CK_ below */
 	int32_t  fs_flags;		/* see FS_ flags below */
 	int32_t	 fs_contigsumsize;	/* size of cluster summary array */ 

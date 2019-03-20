@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/powerpc/aim/locore.S 304051 2016-08-13 18:46:49Z jhibbits $ */
+/* $FreeBSD$ */
 
 #ifdef __powerpc64__
 #include <powerpc/aim/locore64.S>

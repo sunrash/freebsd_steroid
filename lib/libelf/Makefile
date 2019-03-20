@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libelf/Makefile 338485 2018-09-05 21:47:22Z jhb $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?= /lib
@@ -60,6 +60,7 @@ SRCS=	elf.c							\
 	libelf_checksum.c					\
 	libelf_data.c						\
 	libelf_ehdr.c						\
+	libelf_elfmachine.c					\
 	libelf_extended.c					\
 	libelf_memory.c						\
 	libelf_open.c						\

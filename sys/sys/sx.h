@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
  * DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/sx.h 336230 2018-07-12 22:34:40Z mjg $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_SX_H_
@@ -273,7 +273,6 @@ __sx_xunlock(struct sx *sx, struct thread *td, const char *file, int line)
 #define	SX_NOPROFILE		0x02
 #define	SX_NOWITNESS		0x04
 #define	SX_QUIET		0x08
-#define	SX_NOADAPTIVE		0x10
 #define	SX_RECURSE		0x20
 #define	SX_NEW			0x40
 

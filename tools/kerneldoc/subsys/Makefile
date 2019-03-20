@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/kerneldoc/subsys/Makefile 298129 2016-04-16 20:41:13Z netchild $
+# $FreeBSD$
 #
 
 _ALL!=	cd ${.CURDIR} && ls Doxyfile-*

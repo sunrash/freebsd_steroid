@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/amd64/linux32/linux32_locore.s 328890 2018-02-05 17:29:12Z emaste $ */
+/* $FreeBSD$ */
 
 #include "linux32_assym.h"			/* system definitions */
 #include <machine/asmacros.h>			/* miscellaneous asm macros */

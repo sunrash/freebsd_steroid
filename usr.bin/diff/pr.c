@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/diff/pr.c 335002 2018-06-12 16:42:11Z bapt $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/procdesc.h>
 #include <sys/wait.h>

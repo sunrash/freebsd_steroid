@@ -28,7 +28,7 @@
  */
 
 #include "bsdcat_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/cat/cmdline.c 299425 2016-05-11 10:19:44Z mm $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>

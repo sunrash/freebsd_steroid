@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	@(#)00.contents	8.1 (Berkeley) 6/8/93
-.\" $FreeBSD: releng/12.0/share/doc/psd/contents/contents.ms 307806 2016-10-22 23:05:44Z bapt $
+.\" $FreeBSD$
 .\"
 .OH '''PSD Contents'
 .EH 'PSD Contents'''

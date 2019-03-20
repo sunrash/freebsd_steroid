@@ -38,7 +38,7 @@
  *
  *	@(#)procfs_status.c	8.4 (Berkeley) 6/15/94
  *
- * $FreeBSD: releng/12.0/sys/fs/procfs/procfs_rlimit.c 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 /*

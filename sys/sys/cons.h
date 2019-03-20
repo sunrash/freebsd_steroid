@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)cons.h	7.2 (Berkeley) 5/9/91
- * $FreeBSD: releng/12.0/sys/sys/cons.h 334340 2018-05-29 16:16:24Z avg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CONS_H_
@@ -137,6 +137,7 @@ int	cngetc(void);
 void	cngets(char *, size_t, int);
 void	cnputc(int);
 void	cnputs(char *);
+void	cnputsn(const char *, size_t);
 int	cnunavailable(void);
 void	constty_set(struct tty *tp);
 void	constty_clear(void);

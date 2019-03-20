@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/newsyslog/tests/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 TAP_TESTS_SH=	legacy_test
 

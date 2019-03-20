@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/usb/uhid_snes/Makefile 333633 2018-05-15 15:36:34Z hselasky $
+# $FreeBSD$
 #
 # Copyright (c) 2018 Johannes Lundberg. All rights reserved.
 #

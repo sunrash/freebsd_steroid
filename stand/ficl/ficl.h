@@ -41,7 +41,7 @@
 ** SUCH DAMAGE.
 */
 
-/* $FreeBSD: releng/12.0/stand/ficl/ficl.h 307324 2016-10-14 16:23:12Z imp $ */
+/* $FreeBSD$ */
 
 #if !defined (__FICL_H__)
 #define __FICL_H__

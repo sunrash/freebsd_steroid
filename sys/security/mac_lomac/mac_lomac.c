@@ -35,7 +35,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_lomac/mac_lomac.c 299187 2016-05-06 16:59:04Z pfg $
+ * $FreeBSD$
  */
 
 /*
@@ -1139,7 +1139,7 @@ lomac_ifnet_check_relabel(struct ucred *cred, struct ifnet *ifp,
 		 *
 		 * XXXRW: This is also redundant to a higher layer check.
 		 */
-		error = priv_check_cred(cred, PRIV_NET_SETIFMAC, 0);
+		error = priv_check_cred(cred, PRIV_NET_SETIFMAC);
 		if (error)
 			return (EPERM);
 

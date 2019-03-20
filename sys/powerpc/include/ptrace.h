@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ptrace.h	8.1 (Berkeley) 6/11/93
- * $FreeBSD: releng/12.0/sys/powerpc/include/ptrace.h 334535 2018-06-02 19:17:11Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PTRACE_H_

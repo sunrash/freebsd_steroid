@@ -1,5 +1,5 @@
 %/*-
-% * $FreeBSD: releng/12.0/include/rpc/rpcb_prot.x 258578 2013-11-25 19:04:36Z hrs $
+% * $FreeBSD$
 % *
 % * Copyright (c) 2009, Sun Microsystems, Inc.
 % * All rights reserved.

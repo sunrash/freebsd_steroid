@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/hexdump/tests/hexdump_test.sh 333419 2018-05-09 16:52:28Z kevans $
+# $FreeBSD$
 
 atf_test_case b_flag
 b_flag_head()

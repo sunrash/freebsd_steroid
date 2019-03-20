@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/tom/t4_cpl_io.c 338924 2018-09-25 05:52:42Z np $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
@@ -373,18 +373,15 @@ assign_rxopt(struct tcpcb *tp, unsigned int opt)
  * Completes some final bits of initialization for just established connections
  * and changes their state to TCPS_ESTABLISHED.
  *
- * The ISNs are from after the exchange of SYNs.  i.e., the true ISN + 1.
+ * The ISNs are from the exchange of SYNs.
  */
 void
-make_established(struct toepcb *toep, uint32_t snd_isn, uint32_t rcv_isn,
-    uint16_t opt)
+make_established(struct toepcb *toep, uint32_t iss, uint32_t irs, uint16_t opt)
 {
 	struct inpcb *inp = toep->inp;
 	struct socket *so = inp->inp_socket;
 	struct tcpcb *tp = intotcpcb(inp);
 	long bufsize;
-	uint32_t iss = be32toh(snd_isn) - 1;	/* true ISS */
-	uint32_t irs = be32toh(rcv_isn) - 1;	/* true IRS */
 	uint16_t tcpopt = be16toh(opt);
 	struct flowc_tx_params ftxp;
 
@@ -396,7 +393,7 @@ make_established(struct toepcb *toep, uint32_t snd_isn, uint32_t rcv_isn,
 	CTR6(KTR_CXGBE, "%s: tid %d, so %p, inp %p, tp %p, toep %p",
 	    __func__, toep->tid, so, inp, tp, toep);
 
-	tp->t_state = TCPS_ESTABLISHED;
+	tcp_state_change(tp, TCPS_ESTABLISHED);
 	tp->t_starttime = ticks;
 	TCPSTAT_INC(tcps_connects);
 
@@ -669,6 +666,8 @@ write_tx_sgl(void *dst, struct mbuf *start, struct mbuf *stop, int nsegs, int n)
 		if (IS_AIOTX_MBUF(m))
 			rc = sglist_append_vmpages(&sg, aiotx_mbuf_pages(m),
 			    aiotx_mbuf_pgoff(m), m->m_len);
+		else if (m->m_flags & M_NOMAP)
+			rc = sglist_append_mb_ext_pgs(&sg, m);
 		else
 			rc = sglist_append(&sg, mtod(m, void *), m->m_len);
 		if (__predict_false(rc != 0))
@@ -790,6 +789,8 @@ t4_push_frames(struct adapter *sc, struct toepcb *toep, int drop)
 			if (IS_AIOTX_MBUF(m))
 				n = sglist_count_vmpages(aiotx_mbuf_pages(m),
 				    aiotx_mbuf_pgoff(m), m->m_len);
+			else if (m->m_flags & M_NOMAP)
+				n = sglist_count_mb_ext_pgs(m);
 			else
 				n = sglist_count(mtod(m, void *), m->m_len);
 
@@ -1245,22 +1246,12 @@ do_peer_close(struct sge_iq *iq, const struct rss_header *rss, struct mbuf *m)
 	KASSERT(m == NULL, ("%s: wasn't expecting payload", __func__));
 
 	if (__predict_false(toep->flags & TPF_SYNQE)) {
-#ifdef INVARIANTS
-		struct synq_entry *synqe = (void *)toep;
-
-		INP_WLOCK(synqe->lctx->inp);
-		if (synqe->flags & TPF_SYNQE_HAS_L2TE) {
-			KASSERT(synqe->flags & TPF_ABORT_SHUTDOWN,
-			    ("%s: listen socket closed but tid %u not aborted.",
-			    __func__, tid));
-		} else {
-			/*
-			 * do_pass_accept_req is still running and will
-			 * eventually take care of this tid.
-			 */
-		}
-		INP_WUNLOCK(synqe->lctx->inp);
-#endif
+		/*
+		 * do_pass_establish must have run before do_peer_close and if
+		 * this is still a synqe instead of a toepcb then the connection
+		 * must be getting aborted.
+		 */
+		MPASS(toep->flags & TPF_ABORT_SHUTDOWN);
 		CTR4(KTR_CXGBE, "%s: tid %u, synqe %p (0x%x)", __func__, tid,
 		    toep, toep->flags);
 		return (0);
@@ -1303,11 +1294,11 @@ do_peer_close(struct sge_iq *iq, const struct rss_header *rss, struct mbuf *m)
 		/* FALLTHROUGH */ 
 
 	case TCPS_ESTABLISHED:
-		tp->t_state = TCPS_CLOSE_WAIT;
+		tcp_state_change(tp, TCPS_CLOSE_WAIT);
 		break;
 
 	case TCPS_FIN_WAIT_1:
-		tp->t_state = TCPS_CLOSING;
+		tcp_state_change(tp, TCPS_CLOSING);
 		break;
 
 	case TCPS_FIN_WAIT_2:
@@ -1389,7 +1380,7 @@ release:
 	case TCPS_FIN_WAIT_1:
 		if (so->so_rcv.sb_state & SBS_CANTRCVMORE)
 			soisdisconnected(so);
-		tp->t_state = TCPS_FIN_WAIT_2;
+		tcp_state_change(tp, TCPS_FIN_WAIT_2);
 		break;
 
 	default:
@@ -1568,22 +1559,12 @@ do_rx_data(struct sge_iq *iq, const struct rss_header *rss, struct mbuf *m)
 	uint32_t ddp_placed = 0;
 
 	if (__predict_false(toep->flags & TPF_SYNQE)) {
-#ifdef INVARIANTS
-		struct synq_entry *synqe = (void *)toep;
-
-		INP_WLOCK(synqe->lctx->inp);
-		if (synqe->flags & TPF_SYNQE_HAS_L2TE) {
-			KASSERT(synqe->flags & TPF_ABORT_SHUTDOWN,
-			    ("%s: listen socket closed but tid %u not aborted.",
-			    __func__, tid));
-		} else {
-			/*
-			 * do_pass_accept_req is still running and will
-			 * eventually take care of this tid.
-			 */
-		}
-		INP_WUNLOCK(synqe->lctx->inp);
-#endif
+		/*
+		 * do_pass_establish must have run before do_rx_data and if this
+		 * is still a synqe instead of a toepcb then the connection must
+		 * be getting aborted.
+		 */
+		MPASS(toep->flags & TPF_ABORT_SHUTDOWN);
 		CTR4(KTR_CXGBE, "%s: tid %u, synqe %p (0x%x)", __func__, tid,
 		    toep, toep->flags);
 		m_freem(m);

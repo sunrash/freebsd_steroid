@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/fs.h 325638 2017-11-10 09:49:08Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef _MLX5_FS_

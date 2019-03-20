@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_nat.c 333813 2018-05-18 20:13:34Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -45,7 +45,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_nat.c 333813 2018-05-18 2
 
 #include <net/if.h>
 #include <net/if_var.h>
-#include <net/pfil.h>
 #include <netinet/in.h>
 #include <netinet/ip.h>
 #include <netinet/ip_var.h>

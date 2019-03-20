@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/mlh_rule.c 298094 2016-04-16 03:44:50Z gjb $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.

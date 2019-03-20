@@ -30,7 +30,7 @@
  *
  *	@(#)talkd.h	8.1 (Berkeley) 6/2/93
  *
- * $FreeBSD: releng/12.0/include/protocols/talkd.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _PROTOCOLS_TALKD_H_
@@ -55,6 +55,15 @@
  */
 
 /*
+ * The talk protocol embeds a 4.3BSD sockaddr.  Define our own version
+ * rather then relying on namespace polution in kernel headers.
+ */
+struct tsockaddr {
+	unsigned short sa_family;
+	char	sa_data[14];
+};
+
+/*
  * Client->server request message format.
  */
 typedef struct {
@@ -63,8 +72,8 @@ typedef struct {
 	u_char	answer;		/* not used */
 	u_char	pad;
 	u_int32_t	id_num;		/* message id */
-	struct	osockaddr addr;		/* old (4.3) style */
-	struct	osockaddr ctl_addr;	/* old (4.3) style */
+	struct	tsockaddr addr;		/* old (4.3) style */
+	struct	tsockaddr ctl_addr;	/* old (4.3) style */
 	int32_t	pid;		/* caller's process id */
 #define	NAME_SIZE	12
 	char	l_name[NAME_SIZE];/* caller's name */
@@ -82,7 +91,7 @@ typedef struct {
 	u_char	answer;		/* respose to request message, see below */
 	u_char	pad;
 	u_int32_t	id_num;		/* message id */
-	struct	osockaddr addr;	/* address for establishing conversation */
+	struct	tsockaddr addr;	/* address for establishing conversation */
 } CTL_RESPONSE;
 
 #define	TALK_VERSION	1		/* protocol version */

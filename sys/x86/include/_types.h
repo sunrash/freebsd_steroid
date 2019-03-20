@@ -35,7 +35,7 @@
  *
  *	From: @(#)ansi.h	8.2 (Berkeley) 1/4/94
  *	From: @(#)types.h	8.3 (Berkeley) 1/5/94
- * $FreeBSD: releng/12.0/sys/x86/include/_types.h 329859 2018-02-23 04:04:25Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE__TYPES_H_
@@ -135,11 +135,7 @@ typedef	__uint64_t	__vm_size_t;
 #else
 typedef	__uint32_t	__u_register_t;
 typedef	__uint32_t	__vm_offset_t;
-#ifdef PAE
 typedef	__uint64_t	__vm_paddr_t;
-#else
-typedef	__uint32_t	__vm_paddr_t;
-#endif
 typedef	__uint32_t	__vm_size_t;
 #endif
 typedef	int		___wchar_t;

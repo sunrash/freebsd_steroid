@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/i386/include/resource.h 261790 2014-02-12 04:30:37Z jhb $ */
+/* $FreeBSD$ */
 /*-
  * Copyright 1998 Massachusetts Institute of Technology
  *

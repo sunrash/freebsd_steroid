@@ -24,7 +24,7 @@
  * This file was copied from tcpdump-2.1.1 and modified.
  * There is an e-mail list for tcpdump: <tcpdump@ee.lbl.gov>
  *
- * $FreeBSD: releng/12.0/libexec/bootpd/tools/bootptest/print-bootp.c 326274 2017-11-27 15:25:02Z pfg $
+ * $FreeBSD$
  */
 
 #include <stdio.h>

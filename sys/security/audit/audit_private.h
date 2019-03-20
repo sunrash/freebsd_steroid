@@ -34,7 +34,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/audit/audit_private.h 339085 2018-10-02 15:58:17Z rwatson $
+ * $FreeBSD$
  */
 
 /*

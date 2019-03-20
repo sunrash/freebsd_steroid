@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_armclk.c 335109 2018-06-14 05:46:57Z manu $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_armclk.c 335109 2018-06-14 05:46:57Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -163,17 +163,17 @@ rk_clk_armclk_set_freq(struct clknode *clk, uint64_t fparent, uint64_t *fout,
 	if (rate == sc->nrates)
 		return (0);
 
-	err = clknode_set_freq(p_main, best_p, 0, 1);
-	if (err != 0)
-		printf("Cannot set %s to %lu\n",
-		    clknode_get_name(p_main),
-		    best_p);
-
 	if ((flags & CLK_SET_DRYRUN) != 0) {
 		*fout = best;
 		*stop = 1;
 		return (0);
 	}
+
+	err = clknode_set_freq(p_main, best_p, 0, 1);
+	if (err != 0)
+		printf("Cannot set %s to %lu\n",
+		    clknode_get_name(p_main),
+		    best_p);
 
 	DEVICE_LOCK(clk);
 	READ4(clk, sc->muxdiv_offset, &val);

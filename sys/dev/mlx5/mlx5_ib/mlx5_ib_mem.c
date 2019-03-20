@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_ib/mlx5_ib_mem.c 326169 2017-11-24 14:50:28Z hselasky $
+ * $FreeBSD$
  */
 
 #include <linux/module.h>

@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/net/if_fwsubr.c 331648 2018-03-27 20:51:49Z brooks $
+ * $FreeBSD$
  */
 
 #include "opt_inet.h"

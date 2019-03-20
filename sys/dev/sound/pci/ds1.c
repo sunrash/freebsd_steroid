@@ -39,7 +39,7 @@
 #include <dev/sound/pci/ds1.h>
 #include <dev/sound/pci/ds1-fw.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pci/ds1.c 326255 2017-11-27 14:52:40Z pfg $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 /* -------------------------------------------------------------------- */
 

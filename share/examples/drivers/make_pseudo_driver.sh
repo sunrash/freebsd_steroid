@@ -6,7 +6,7 @@
 #
 # Trust me, RUN THIS SCRIPT :)
 #
-# $FreeBSD: releng/12.0/share/examples/drivers/make_pseudo_driver.sh 333391 2018-05-09 02:02:49Z imp $
+# $FreeBSD$
 #
 #-------cut here------------------
 

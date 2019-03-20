@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/Makefile 339391 2018-10-16 20:12:35Z kib $
+# $FreeBSD$
 
 SYSDIR?=${SRCTOP}/sys
 .include "${SYSDIR}/conf/kern.opts.mk"
@@ -26,14 +26,13 @@ SUBDIR=	\
 	${_aesni} \
 	age \
 	${_agp} \
-	aha \
 	ahci \
-	${_aic} \
 	aic7xxx \
 	alc \
 	ale \
 	alq \
 	${_amd_ecc_inject} \
+	${_amdgpio} \
 	${_amdsbwd} \
 	${_amdsmn} \
 	${_amdtemp} \
@@ -93,7 +92,6 @@ SUBDIR=	\
 	${_cloudabi32} \
 	${_cloudabi64} \
 	${_cmx} \
-	${_coff} \
 	${_coretemp} \
 	${_cp} \
 	${_cpsw} \
@@ -111,7 +109,6 @@ SUBDIR=	\
 	dcons_crom \
 	de \
 	${_dpms} \
-	${_dpt} \
 	${_drm} \
 	${_drm2} \
 	dummynet \
@@ -155,7 +152,6 @@ SUBDIR=	\
 	i2c \
 	${_iavf} \
         ${_ibcore} \
-	${_ibcs2} \
 	${_ichwd} \
 	${_ida} \
 	if_bridge \
@@ -173,6 +169,7 @@ SUBDIR=	\
 	if_tun \
 	if_vlan \
 	if_vxlan \
+	iflib \
 	${_iir} \
 	imgact_binmisc \
 	${_intelspi} \
@@ -207,7 +204,6 @@ SUBDIR=	\
 	${_ixv} \
 	${_ixl} \
 	jme \
-	joy \
 	kbdmux \
 	kgssapi \
 	kgssapi_krb5 \
@@ -253,14 +249,13 @@ SUBDIR=	\
 	${_mly} \
 	mmc \
 	mmcsd \
-	mpr \
-	mps \
+	${_mpr} \
+	${_mps} \
 	mpt \
 	mqueue \
 	mrsas \
 	msdosfs \
 	msdosfs_iconv \
-	${_mse} \
 	msk \
 	${_mthca} \
 	mvs \
@@ -270,9 +265,7 @@ SUBDIR=	\
 	my \
 	${_nandfs} \
 	${_nandsim} \
-	${_ncr} \
 	${_nctgpio} \
-	${_ncv} \
 	${_ndis} \
 	${_netgraph} \
 	${_nfe} \
@@ -284,7 +277,6 @@ SUBDIR=	\
 	nfssvc \
 	nge \
 	nmdm \
-	${_nsp} \
 	nullfs \
 	${_ntb} \
 	${_nvd} \
@@ -338,7 +330,6 @@ SUBDIR=	\
 	${_safe} \
 	${_sbni} \
 	scc \
-	${_scsi_low} \
 	sdhci \
 	${_sdhci_acpi} \
 	sdhci_pci \
@@ -363,7 +354,6 @@ SUBDIR=	\
 	${_splash} \
 	${_sppp} \
 	ste \
-	${_stg} \
 	stge \
 	${_sym} \
 	${_syscons} \
@@ -532,6 +522,13 @@ _rtwnfw=	rtwnfw
 _cxgbe=		cxgbe
 .endif
 
+# These rely on 64bit atomics
+.if ${MACHINE_ARCH} != "powerpc" && ${MACHINE_ARCH} != "powerpcspe" && \
+	${MACHINE_CPUARCH} != "mips"
+_mps=		mps
+_mpr=		mpr
+.endif
+
 .if ${MK_TESTS} != "no" || defined(ALL_MODULES)
 SUBDIR+=	tests
 .endif
@@ -621,7 +618,6 @@ _pccard=	pccard
 _rdma=		rdma
 .endif
 _safe=		safe
-_scsi_low=	scsi_low
 _speaker=	speaker
 _splash=	splash
 _sppp=		sppp
@@ -717,6 +713,7 @@ _x86bios=	x86bios
 .endif
 
 .if ${MACHINE_CPUARCH} == "amd64"
+_amdgpio=	amdgpio
 _ccp=		ccp
 _efirt=		efirt
 _iavf=		iavf
@@ -748,30 +745,21 @@ _vmm=		vmm
 # XXX some of these can move now, but are untested on other architectures.
 _3dfx=		3dfx
 _3dfx_linux=	3dfx_linux
-_aic=		aic
 _apm=		apm
 .if ${MK_SOURCELESS_UCODE} != "no"
 _ce=		ce
 .endif
-_coff=		coff
 .if ${MK_SOURCELESS_UCODE} != "no"
 _cp=		cp
 .endif
 _glxiic=	glxiic
 _glxsb=		glxsb
-#_ibcs2=		ibcs2
-_mse=		mse
-_ncr=		ncr
-_ncv=		ncv
-_nsp=		nsp
 _pcfclock=	pcfclock
 _pst=		pst
 _sbni=		sbni
-_stg=		stg
 .if ${MK_SOURCELESS_UCODE} != "no"
 _ctau=		ctau
 .endif
-_dpt=		dpt
 _ex=		ex
 .endif
 

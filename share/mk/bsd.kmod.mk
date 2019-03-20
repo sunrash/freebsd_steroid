@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.kmod.mk 332455 2018-04-12 20:48:17Z bdrewery $
+# $FreeBSD$
 
 # Search for kernel source tree in standard places.
 .if empty(KERNBUILDDIR)

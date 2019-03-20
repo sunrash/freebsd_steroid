@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/msdosfs/Makefile 319735 2017-06-09 12:06:22Z kib $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/fs/msdosfs
 

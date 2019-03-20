@@ -15,7 +15,7 @@
  * bad that happens because of using this software isn't the responsibility
  * of the author.  This software is distributed AS-IS.
  *
- * $FreeBSD: releng/12.0/sys/sys/aio.h 329174 2018-02-12 17:42:28Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_AIO_H_

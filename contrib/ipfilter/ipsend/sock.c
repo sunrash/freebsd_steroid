@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/ipfilter/ipsend/sock.c 315662 2017-03-21 06:39:49Z glebius $ */
+/* $FreeBSD$ */
 /*
  * sock.c (C) 1995-1998 Darren Reed
  *

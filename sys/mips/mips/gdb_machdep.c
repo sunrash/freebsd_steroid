@@ -87,7 +87,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	JNPR: gdb_machdep.c,v 1.1 2007/08/09 12:25:25 katta
- * $FreeBSD: releng/12.0/sys/mips/mips/gdb_machdep.c 326259 2017-11-27 15:07:26Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

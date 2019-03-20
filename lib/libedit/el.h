@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)el.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/lib/libedit/el.h 312997 2017-01-30 22:11:53Z pfg $
+ * $FreeBSD$
  */
 
 /*
@@ -56,7 +56,6 @@
 #define	NO_TTY		0x02
 #define	EDIT_DISABLED	0x04
 #define	UNBUFFERED	0x08
-#define	CHARSET_IS_UTF8 0x10
 #define	NARROW_HISTORY	0x40
 
 typedef unsigned char el_action_t;	/* Index to command array	*/

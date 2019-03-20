@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/random.c 326445 2017-12-02 00:07:19Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

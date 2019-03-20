@@ -27,7 +27,7 @@
  *
  *	from: FreeBSD: src/sys/i386/i386/busdma_machdep.c,v 1.25 2002/01/05
  *
- * $FreeBSD: releng/12.0/sys/sparc64/include/bus_private.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_BUS_PRIVATE_H_

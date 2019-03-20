@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/assfail.h 329984 2018-02-25 14:29:43Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_ASSFAIL_H_

@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/busdma_machdep.c 327901 2018-01-12 23:34:16Z jeff $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -99,14 +99,15 @@ bus_dma_dflt_lock(void *arg, bus_dma_lock_op_t op)
  * to check for a match, if there is no filter callback then assume a match.
  */
 int
-bus_dma_run_filter(struct bus_dma_tag_common *tc, bus_addr_t paddr)
+bus_dma_run_filter(struct bus_dma_tag_common *tc, vm_paddr_t paddr)
 {
 	int retval;
 
 	retval = 0;
 	do {
-		if (((paddr > tc->lowaddr && paddr <= tc->highaddr) ||
-		    ((paddr & (tc->alignment - 1)) != 0)) &&
+		if ((paddr >= BUS_SPACE_MAXADDR ||
+		    (paddr > tc->lowaddr && paddr <= tc->highaddr) ||
+		    (paddr & (tc->alignment - 1)) != 0) &&
 		    (tc->filter == NULL ||
 		    (*tc->filter)(tc->filterarg, paddr) != 0))
 			retval = 1;

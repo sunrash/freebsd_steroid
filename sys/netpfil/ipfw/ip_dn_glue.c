@@ -27,7 +27,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_dn_glue.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  *
  * Binary compatibility support for /sbin/ipfw RELENG_7 and RELENG_8
  */

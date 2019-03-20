@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/netgraph/ether/Makefile 193744 2009-06-08 19:57:35Z bz $
+# $FreeBSD$
 
 KMOD=	ng_ether
 SRCS= 	ng_ether.c

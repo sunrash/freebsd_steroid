@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bwi/bwiphy.c 326022 2017-11-20 19:36:21Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_wlan.h"

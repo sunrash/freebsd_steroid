@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/rockchip/rk30xx_mp.h 310019 2016-12-13 11:43:46Z ganbold $
+ * $FreeBSD$
  */
 
 #ifndef _RK30XX_MP_H_

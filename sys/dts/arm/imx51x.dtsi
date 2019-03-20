@@ -28,7 +28,7 @@
  *
  * Freescale i.MX515 Device Tree Source.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/imx51x.dtsi 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 / {

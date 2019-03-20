@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/altera/socfpga/socfpga_rstmgr.h 314389 2017-02-28 14:02:16Z br $
+ * $FreeBSD$
  */
 
 #define	RSTMGR_STAT		0x0	/* Status */

@@ -31,7 +31,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/uapi/rdma/mlx5-abi.h 330508 2018-03-05 14:34:52Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef MLX5_ABI_USER_H

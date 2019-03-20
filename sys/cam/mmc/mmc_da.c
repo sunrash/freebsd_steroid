@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cam/mmc/mmc_da.c 335366 2018-06-19 11:25:40Z kibab $");
+__FBSDID("$FreeBSD$");
 
 //#include "opt_sdda.h"
 

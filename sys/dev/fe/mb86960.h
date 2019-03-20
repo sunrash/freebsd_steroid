@@ -19,7 +19,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/fe/mb86960.h 298955 2016-05-03 03:41:25Z pfg $
+ * $FreeBSD$
  */
 
 /*

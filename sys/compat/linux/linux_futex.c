@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_futex.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 #if 0
 __KERNEL_RCSID(1, "$NetBSD: linux_futex.c,v 1.7 2006/07/24 19:01:49 manu Exp $");
 #endif

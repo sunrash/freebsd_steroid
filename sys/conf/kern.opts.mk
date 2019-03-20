@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/kern.opts.mk 338643 2018-09-13 14:52:59Z emaste $
+# $FreeBSD$
 
 # Options set in the build system that affect the kernel somehow.
 
@@ -38,8 +38,6 @@ __DEFAULT_YES_OPTIONS = \
     IPSEC_SUPPORT \
     ISCSI \
     KERNEL_SYMBOLS \
-    MODULE_DRM \
-    MODULE_DRM2 \
     NETGRAPH \
     PF \
     REPRODUCIBLE_BUILD \
@@ -52,6 +50,8 @@ __DEFAULT_YES_OPTIONS = \
 __DEFAULT_NO_OPTIONS = \
     EXTRA_TCP_STACKS \
     KERNEL_RETPOLINE \
+    MODULE_DRM \
+    MODULE_DRM2 \
     NAND \
     OFED \
     RATELIMIT

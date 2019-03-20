@@ -9,7 +9,7 @@
 # PCIe host controllers - there's two of them, and the existing
 # PCIe code here doesn't support that just yet.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/TL-ARCHERC7V2 304937 2016-08-28 04:08:26Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

@@ -42,7 +42,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mips/machdep.c 328978 2018-02-07 16:58:01Z arichardson $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_md.h"

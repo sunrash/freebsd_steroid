@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_getcwd.c 326266 2017-11-27 15:13:23Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 

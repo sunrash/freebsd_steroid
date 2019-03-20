@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_xhci.c 338318 2018-08-25 19:38:08Z alc $");
+__FBSDID("$FreeBSD$");
 
 /*
  * XHCI driver for Tegra SoCs.

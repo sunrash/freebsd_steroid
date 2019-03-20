@@ -32,7 +32,7 @@
 .\"
 .\" Author: Archie Cobbs <archie@FreeBSD.org>
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man4/ng_bpf.4 267938 2014-06-26 21:46:14Z bapt $
+.\" $FreeBSD$
 .\" $Whistle: ng_bpf.8,v 1.2 1999/12/03 01:57:12 archie Exp $
 .\"
 .Dd November 13, 2012
@@ -156,7 +156,7 @@ INHOOK="hook1"
 MATCHHOOK="hook2"
 NOTMATCHHOOK="hook3"
 
-BPFPROG=$( tcpdump -s 8192 -ddd ${PATTERN} | \\
+BPFPROG=$( tcpdump -s 8192 -p -ddd ${PATTERN} | \\
            ( read len ; \\
              echo -n "bpf_prog_len=$len" ; \\
              echo -n "bpf_prog=[" ; \\

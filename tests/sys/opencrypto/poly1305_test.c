@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/opencrypto/poly1305_test.c 337941 2018-08-17 00:32:00Z cem $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

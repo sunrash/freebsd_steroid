@@ -25,15 +25,13 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/qcow.c 315212 2017-03-13 20:14:07Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/errno.h>
 #include <assert.h>
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #include "endian.h"
 #include "image.h"

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/riscv/gen/flt_rounds.c 332792 2018-04-19 20:36:15Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

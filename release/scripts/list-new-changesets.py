@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/release/scripts/list-new-changesets.py 289002 2015-10-08 03:28:15Z rodrigc $
+# $FreeBSD$
 
 # Display SVN log entries for changesets which have files which were
 # Added or Deleted.

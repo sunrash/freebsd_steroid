@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/x86/sys/__vdso_gettc.c 322456 2017-08-13 14:42:23Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include "namespace.h"

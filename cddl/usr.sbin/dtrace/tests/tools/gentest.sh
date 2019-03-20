@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/tests/tools/gentest.sh 280835 2015-03-30 04:01:49Z markj $
+# $FreeBSD$
 
 usage()
 {

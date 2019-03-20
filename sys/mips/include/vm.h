@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/include/vm.h 337048 2018-08-01 18:35:17Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_VM_H_

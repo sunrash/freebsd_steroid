@@ -18,7 +18,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zpool_upgrade/zpool_upgrade_test.sh 330975 2018-03-15 08:52:49Z avg $
+# $FreeBSD$
 
 #
 # Copyright 2012 Spectra Logic.  All rights reserved.

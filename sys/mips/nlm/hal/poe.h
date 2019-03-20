@@ -27,7 +27,7 @@
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/nlm/hal/poe.h 326259 2017-11-27 15:07:26Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __NLM_POE_H__

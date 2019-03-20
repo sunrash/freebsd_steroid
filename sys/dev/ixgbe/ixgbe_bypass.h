@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_bypass.h 320688 2017-07-05 17:27:03Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _IXGBE_BYPASS_H_
 #define _IXGBE_BYPASS_H_

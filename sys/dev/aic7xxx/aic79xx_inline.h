@@ -41,7 +41,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aic79xx_inline.h#57 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aic79xx_inline.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _AIC79XX_INLINE_H_

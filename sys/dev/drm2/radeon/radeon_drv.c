@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/radeon_drv.c 338948 2018-09-26 17:12:14Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/drm2/drmP.h>
 #include <dev/drm2/radeon/radeon_drm.h>
@@ -329,10 +329,6 @@ radeon_attach(device_t kdev)
 	if (radeon_modeset == 1) {
 		kms_driver.driver_features |= DRIVER_MODESET;
 		kms_driver.num_ioctls = radeon_max_kms_ioctl;
-#ifdef COMPAT_FREEBSD32
-		kms_driver.compat_ioctls = radeon_compat_ioctls;
-		kms_driver.num_compat_ioctls = &radeon_num_compat_ioctls;
-#endif
 		radeon_register_atpx_handler();
 	}
 	return (-drm_attach_helper(kdev, pciidlist, &kms_driver));

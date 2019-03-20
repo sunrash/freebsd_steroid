@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/portsnap/make_index/Makefile 264400 2014-04-13 05:21:56Z imp $
+# $FreeBSD$
 
 PROG=	make_index
 MAN=

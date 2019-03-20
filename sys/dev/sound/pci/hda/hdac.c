@@ -51,7 +51,7 @@
 
 #define HDA_DRV_TEST_REV	"20120126_0002"
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pci/hda/hdac.c 337043 2018-08-01 14:50:41Z jhibbits $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 #define hdac_lock(sc)		snd_mtxlock((sc)->lock)
 #define hdac_unlock(sc)		snd_mtxunlock((sc)->lock)
@@ -171,7 +171,7 @@ static const struct {
 	{ HDA_AMD_HUDSON2,   "AMD Hudson-2",	0, 0 },
 	{ HDA_RDC_M3010,     "RDC M3010",	0, 0 },
 	{ HDA_VIA_VT82XX,    "VIA VT8251/8237A",0, 0 },
-	{ HDA_SIS_966,       "SiS 966",		0, 0 },
+	{ HDA_SIS_966,       "SiS 966/968",	0, 0 },
 	{ HDA_ULI_M5461,     "ULI M5461",	0, 0 },
 	/* Unknown */
 	{ HDA_INTEL_ALL,  "Intel",		0, 0 },

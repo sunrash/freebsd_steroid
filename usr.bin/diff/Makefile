@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/diff/Makefile 334894 2018-06-09 20:24:17Z bapt $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

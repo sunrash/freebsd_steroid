@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/ofw/ofw_pcib_pci.c 326261 2017-11-27 15:09:59Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -86,7 +86,8 @@ struct ofw_pcib_softc {
 
 DEFINE_CLASS_1(pcib, ofw_pcib_pci_driver, ofw_pcib_pci_methods,
     sizeof(struct ofw_pcib_softc), pcib_driver);
-DRIVER_MODULE(ofw_pcib, pci, ofw_pcib_pci_driver, pcib_devclass, 0, 0);
+EARLY_DRIVER_MODULE(ofw_pcib, pci, ofw_pcib_pci_driver, pcib_devclass, 0, 0,
+    BUS_PASS_BUS);
 
 static int
 ofw_pcib_pci_probe(device_t dev)

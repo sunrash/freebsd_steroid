@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/powermac/macio.c 333124 2018-04-30 19:37:32Z nwhitehorn $
+ * $FreeBSD$
  */
 
 /*
@@ -135,7 +135,8 @@ static driver_t macio_pci_driver = {
 
 devclass_t macio_devclass;
 
-DRIVER_MODULE(macio, pci, macio_pci_driver, macio_devclass, 0, 0);
+EARLY_DRIVER_MODULE(macio, pci, macio_pci_driver, macio_devclass, 0, 0,
+    BUS_PASS_BUS);
 
 /*
  * PCI ID search table

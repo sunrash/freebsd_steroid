@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/Makefile 339417 2018-10-18 02:07:30Z bz $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -15,8 +15,6 @@ CONFS=	DAEMON \
 	addswap \
 	adjkerntz \
 	archdep \
-	auditd \
-	auditdistd \
 	bgfsck \
 	${_blacklistd} \
 	${_bluetooth} \
@@ -164,6 +162,12 @@ APM+=		apmd
 APMPACKAGE=	apm
 .endif
 
+.if ${MK_AUDIT} != "no"
+CONFGROUPS+=	AUDIT
+AUDIT+=		auditd
+AUDIT+=		auditdistd
+.endif
+
 .if ${MK_AUTOFS} != "no"
 CONFS+=		automount
 CONFS+=		automountd
@@ -289,10 +293,6 @@ CONFS+=		routed
 CONFGROUPS+=	SMRCD
 SMRCD=		sendmail
 SMRCDPACKAGE=	sendmail
-.endif
-
-.if ${MK_TIMED} != "no"
-CONFS+=		timed
 .endif
 
 .if ${MK_UNBOUND} != "no"

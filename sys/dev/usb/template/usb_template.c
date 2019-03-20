@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/template/usb_template.c 334173 2018-05-24 18:02:02Z trasz $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

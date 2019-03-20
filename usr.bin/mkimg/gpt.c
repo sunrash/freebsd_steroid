@@ -25,14 +25,13 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/gpt.c 319125 2017-05-29 12:51:02Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/errno.h>
 #include <stddef.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #include <gpt.h>
 #include <mbr.h>

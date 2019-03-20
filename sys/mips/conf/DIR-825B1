@@ -11,7 +11,7 @@
 # + 64MB RAM
 # + uboot environment
 
-# $FreeBSD: releng/12.0/sys/mips/conf/DIR-825B1 336032 2018-07-06 13:31:06Z sbruno $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

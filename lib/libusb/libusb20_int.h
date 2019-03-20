@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libusb/libusb20_int.h 331419 2018-03-23 09:40:41Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

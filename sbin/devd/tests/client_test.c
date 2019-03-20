@@ -23,7 +23,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/devd/tests/client_test.c 334077 2018-05-23 07:39:02Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include <stdbool.h>
 #include <stdio.h>

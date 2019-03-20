@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sbin/rcorder/rcorder-visualize.sh 309625 2016-12-06 15:49:39Z vangyzen $
+# $FreeBSD$
 #
 # Simple script to show the dependency graph for rc scripts.
 # Output is in the dot(1) language and can be rendered using

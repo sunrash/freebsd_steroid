@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zfs_destroy/zfs_destroy_005_neg.ksh 330993 2018-03-15 12:40:43Z avg $
+# $FreeBSD$
 
 #
 # Copyright 2009 Sun Microsystems, Inc.  All rights reserved.

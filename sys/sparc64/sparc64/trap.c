@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/sparc64/sparc64/trap.c 333416 2018-05-09 15:25:26Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_ktr.h"
@@ -558,8 +558,6 @@ cpu_fetch_syscall_args(struct thread *td)
 		regcnt--;
 	}
 
-	if (p->p_sysent->sv_mask)
-		sa->code &= p->p_sysent->sv_mask;
 	if (sa->code >= p->p_sysent->sv_size)
 		sa->callp = &p->p_sysent->sv_table[0];
 	else

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/Makefile 307700 2016-10-21 04:54:43Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -20,6 +20,7 @@ TESTS_SUBDIRS+=	stdlib
 TESTS_SUBDIRS+=	string
 TESTS_SUBDIRS+=	sys
 TESTS_SUBDIRS+=	termios
+TESTS_SUBDIRS+=	time
 TESTS_SUBDIRS+=	tls
 TESTS_SUBDIRS+=	ttyio
 

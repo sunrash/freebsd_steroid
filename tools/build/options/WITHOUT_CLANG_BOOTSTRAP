@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_CLANG_BOOTSTRAP 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 Set to not build the Clang C/C++ compiler during the bootstrap phase of
 the build.
 To be able to build the system, either gcc or clang bootstrap must be

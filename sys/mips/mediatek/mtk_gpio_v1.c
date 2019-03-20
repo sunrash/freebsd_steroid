@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mediatek/mtk_gpio_v1.c 317874 2017-05-06 06:22:14Z adrian $");
+__FBSDID("$FreeBSD$");
         
 #include "opt_platform.h"
 

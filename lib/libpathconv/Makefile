@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpathconv/Makefile 325247 2017-10-31 19:52:30Z bdrewery $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

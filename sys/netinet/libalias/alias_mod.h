@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netinet/libalias/alias_mod.h 334545 2018-06-02 22:20:09Z mjg $
+ * $FreeBSD$
  */
 
 /*

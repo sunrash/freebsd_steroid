@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mii/pnaphy.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * driver for homePNA PHYs

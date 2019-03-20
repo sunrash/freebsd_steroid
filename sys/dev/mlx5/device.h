@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/device.h 339711 2018-10-25 14:07:28Z slavash $
+ * $FreeBSD$
  */
 
 #ifndef MLX5_DEVICE_H
@@ -1033,6 +1033,12 @@ enum mlx5_qcam_feature_groups {
 
 #define	MLX5_CAP_QCAM_FEATURE(mdev, fld) \
 	MLX5_GET(qcam_reg, (mdev)->caps.qcam, qos_feature_cap_mask.feature_cap.fld)
+
+#define MLX5_CAP_FPGA(mdev, cap) \
+	MLX5_GET(fpga_cap, (mdev)->caps.fpga, cap)
+
+#define MLX5_CAP64_FPGA(mdev, cap) \
+	MLX5_GET64(fpga_cap, (mdev)->caps.fpga, cap)
 
 enum {
 	MLX5_CMD_STAT_OK			= 0x0,

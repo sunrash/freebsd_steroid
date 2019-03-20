@@ -30,7 +30,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/chipc_spi.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_CORES_CHIPC_CHIPC_SPI_H_

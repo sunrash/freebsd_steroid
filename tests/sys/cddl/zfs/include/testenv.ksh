@@ -1,7 +1,7 @@
 . ${STF_SUITE}/include/libtest.kshlib
 . ${STF_SUITE}/include/commands.cfg
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/include/testenv.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 # Environment-dependent constants.
 for d in `geom disk list | awk '/Name:/ {print $3}'`; do

@@ -1,5 +1,5 @@
 #	@(#)bsd.README	8.2 (Berkeley) 4/2/94
-# $FreeBSD: releng/12.0/share/mk/bsd.README 336640 2018-07-23 16:11:03Z brd $
+# $FreeBSD$
 
 This is the README file for the "include" files for the FreeBSD
 source tree.  The files are installed in /usr/share/mk, and are by

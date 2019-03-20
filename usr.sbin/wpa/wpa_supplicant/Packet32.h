@@ -31,7 +31,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/wpa/wpa_supplicant/Packet32.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _PACKET32_H_

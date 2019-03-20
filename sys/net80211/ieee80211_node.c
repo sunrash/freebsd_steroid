@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/net80211/ieee80211_node.c 337572 2018-08-10 13:34:23Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_wlan.h"
 
@@ -1416,8 +1416,6 @@ ieee80211_alloc_node(struct ieee80211_node_table *nt,
 
 	IEEE80211_NOTE(vap, IEEE80211_MSG_INACT, ni,
 	    "%s: inact_reload %u", __func__, ni->ni_inact_reload);
-
-	ieee80211_ratectl_node_init(ni);
 
 	return ni;
 }

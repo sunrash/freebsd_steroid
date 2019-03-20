@@ -25,7 +25,7 @@
 #define __NI_REG_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/ni_reg.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* northern islands - DCE5 */
 

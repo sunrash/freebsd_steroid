@@ -56,7 +56,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/fuse/fuse_internal.c 341085 2018-11-27 17:58:25Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/module.h>
@@ -171,7 +171,7 @@ fuse_internal_access(struct vnode *vp,
 		    return 0;
 	}
 	if ((mode & VADMIN) != 0) {
-		err = priv_check_cred(cred, PRIV_VFS_ADMIN, 0);
+		err = priv_check_cred(cred, PRIV_VFS_ADMIN);
 		if (err) {
 			return err;
 		}
@@ -350,7 +350,7 @@ fuse_internal_readdir_processdata(struct uio *uio,
 		fiov_adjust(cookediov, bytesavail);
 
 		de = (struct dirent *)cookediov->base;
-		de->d_fileno = fudge->ino;	/* XXX: truncation */
+		de->d_fileno = fudge->ino;
 		de->d_reclen = bytesavail;
 		de->d_type = fudge->type;
 		de->d_namlen = fudge->namelen;

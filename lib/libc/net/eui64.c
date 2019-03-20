@@ -68,7 +68,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/net/eui64.c 298226 2016-04-18 21:05:15Z avos $");
+__FBSDID("$FreeBSD$");
 
 #include <stdio.h>
 #include <paths.h>

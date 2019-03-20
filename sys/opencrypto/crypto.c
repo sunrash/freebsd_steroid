@@ -23,7 +23,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/crypto.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Cryptographic Subsystem.

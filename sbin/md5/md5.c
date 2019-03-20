@@ -18,7 +18,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/md5/md5.c 338267 2018-08-23 18:19:01Z arichardson $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/time.h>
@@ -242,8 +242,8 @@ main(int argc, char *argv[])
 			if (*(argv + 1) == NULL) {
 #ifdef HAVE_CAPSICUM
 				cap_rights_init(&rights, CAP_READ);
-				if ((cap_rights_limit(fd, &rights) < 0 &&
-				    errno != ENOSYS) || caph_enter() < 0)
+				if (caph_rights_limit(fd, &rights) < 0 ||
+				    caph_enter() < 0)
 					err(1, "capsicum");
 #endif
 			}

@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/qlxgbe/ql_minidump.c 333003 2018-04-25 17:51:17Z davidcs $");
+__FBSDID("$FreeBSD$");
 
 #include "ql_os.h"
 

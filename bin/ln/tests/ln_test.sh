@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/bin/ln/tests/ln_test.sh 320173 2017-06-20 20:50:54Z ngie $
+# $FreeBSD$
 #
 
 set_umask()

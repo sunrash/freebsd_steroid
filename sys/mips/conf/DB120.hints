@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/conf/DB120.hints 328869 2018-02-05 04:48:41Z adrian $
+# $FreeBSD$
 
 # This is a placeholder until the hardware support is complete.
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/dtb/allwinner/Makefile 338294 2018-08-24 15:00:36Z manu $
+# $FreeBSD$
 # All the dts files for allwinner systems we support.
 
 .if ${MACHINE_ARCH} == "armv7"
@@ -20,6 +20,7 @@ DTS=	\
 	sun8i-h3-nanopi-m1-plus.dts \
 	sun8i-h3-nanopi-neo.dts \
 	sun8i-h3-orangepi-one.dts \
+	sun8i-h3-orangepi-pc.dts \
 	sun8i-h3-orangepi-plus2e.dts
 
 DTSO=	sun8i-a83t-sid.dtso \
@@ -44,7 +45,10 @@ DTS=	\
 	allwinner/sun50i-a64-sopine-baseboard.dts \
 	allwinner/sun50i-h5-orangepi-pc2.dts
 
-DTSO=	sun50i-a64-sid.dtso \
+DTSO=	sun50i-a64-opp.dtso \
+	sun50i-a64-pwm.dtso \
+	sun50i-a64-rpwm.dtso \
+	sun50i-a64-sid.dtso \
 	sun50i-a64-ths.dtso \
 	sun50i-a64-timer.dtso
 

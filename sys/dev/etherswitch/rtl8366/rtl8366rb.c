@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/rtl8366/rtl8366rb.c 328389 2018-01-25 05:48:42Z mizhka $
+ * $FreeBSD$
  */
 
 #include "opt_etherswitch.h"

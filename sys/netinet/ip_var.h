@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ip_var.h	8.2 (Berkeley) 1/9/95
- * $FreeBSD: releng/12.0/sys/netinet/ip_var.h 341262 2018-11-29 20:59:18Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_IP_VAR_H_
@@ -241,8 +241,9 @@ extern int	(*ip_rsvp_vif)(struct socket *, struct sockopt *);
 extern void	(*ip_rsvp_force_done)(struct socket *);
 extern int	(*rsvp_input_p)(struct mbuf **, int *, int);
 
-VNET_DECLARE(struct pfil_head, inet_pfil_hook);	/* packet filter hooks */
-#define	V_inet_pfil_hook	VNET(inet_pfil_hook)
+VNET_DECLARE(struct pfil_head *, inet_pfil_head);
+#define	V_inet_pfil_head	VNET(inet_pfil_head)
+#define	PFIL_INET_NAME		"inet"
 
 void	in_delayed_cksum(struct mbuf *m);
 

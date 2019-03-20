@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/sysent.h 333339 2018-05-07 22:29:32Z mjg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SYSENT_H_
@@ -95,7 +95,6 @@ struct vnode;
 struct sysentvec {
 	int		sv_size;	/* number of entries */
 	struct sysent	*sv_table;	/* pointer to sysent */
-	u_int		sv_mask;	/* optional mask to index */
 	int		sv_errsize;	/* size of errno translation table */
 	const int 	*sv_errtbl;	/* errno translation table */
 	int		(*sv_transtrap)(int, int);

@@ -37,7 +37,7 @@ We only pay attention to a subset of the information in the
 
 """
 RCSid:
-	$FreeBSD: releng/12.0/share/mk/meta2deps.py 337186 2018-08-02 21:33:45Z sjg $
+	$FreeBSD$
 	$Id: meta2deps.py,v 1.27 2017/05/24 00:04:04 sjg Exp $
 
 	Copyright (c) 2011-2013, Juniper Networks, Inc.

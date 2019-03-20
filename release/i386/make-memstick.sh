@@ -7,10 +7,13 @@
 #
 # Usage: make-memstick.sh <directory tree> <image filename>
 #
-# $FreeBSD: releng/12.0/release/i386/make-memstick.sh 332446 2018-04-12 19:00:22Z emaste $
+# $FreeBSD$
 #
 
 set -e
+
+scriptdir=$(dirname $(realpath $0))
+. ${scriptdir}/../../tools/boot/install-boot.sh
 
 PATH=/bin:/usr/bin:/sbin:/usr/sbin
 export PATH
@@ -36,9 +39,15 @@ makefs -B little -o label=FreeBSD_Install -o version=2 ${2}.part ${1}
 rm ${1}/etc/fstab
 rm ${1}/etc/rc.conf.local
 
+# Make an ESP in a file.
+espfilename=$(mktemp /tmp/efiboot.XXXXXX)
+make_esp_file ${espfilename} ${fat32min} ${1}/boot/loader.efi
+
 mkimg -s mbr \
     -b ${1}/boot/mbr \
+    -p efi:=${espfilename} \
     -p freebsd:-"mkimg -s bsd -b ${1}/boot/boot -p freebsd-ufs:=${2}.part" \
     -o ${2}
+rm ${espfilename}
 rm ${2}.part
 

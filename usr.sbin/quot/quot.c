@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/quot/quot.c 331095 2018-03-17 12:59:55Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/stdint.h>
@@ -550,7 +550,7 @@ quot(char *name, char *mp)
 		close(fd);
 		return;
 	}
-	switch (sbget(fd, &fs, -1)) {
+	switch (sbget(fd, &fs, STDSB)) {
 	case 0:
 		break;
 	case ENOENT:

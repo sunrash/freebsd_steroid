@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/esp.h 326023 2017-11-20 19:43:44Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: esp.h,v 1.16 2000/10/18 21:28:00 itojun Exp $	*/
 
 /*-

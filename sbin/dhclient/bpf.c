@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/dhclient/bpf.c 335602 2018-06-24 13:23:27Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include "dhcpd.h"
 #include "privsep.h"
@@ -56,6 +56,8 @@ __FBSDID("$FreeBSD: releng/12.0/sbin/dhclient/bpf.c 335602 2018-06-24 13:23:27Z 
 #include <netinet/ip.h>
 #include <netinet/udp.h>
 #include <netinet/if_ether.h>
+
+#include <capsicum_helpers.h>
 
 #define BPF_FORMAT "/dev/bpf%d"
 
@@ -164,7 +166,7 @@ if_register_send(struct interface_info *info)
 		error("Cannot lock bpf");
 
 	cap_rights_init(&rights, CAP_WRITE);
-	if (cap_rights_limit(info->wfdesc, &rights) < 0 && errno != ENOSYS)
+	if (caph_rights_limit(info->wfdesc, &rights) < 0)
 		error("Can't limit bpf descriptor: %m");
 
 	/*
@@ -270,9 +272,9 @@ if_register_receive(struct interface_info *info)
 		error("Cannot lock bpf");
 
 	cap_rights_init(&rights, CAP_IOCTL, CAP_EVENT, CAP_READ);
-	if (cap_rights_limit(info->rfdesc, &rights) < 0 && errno != ENOSYS)
+	if (caph_rights_limit(info->rfdesc, &rights) < 0)
 		error("Can't limit bpf descriptor: %m");
-	if (cap_ioctls_limit(info->rfdesc, cmds, 2) < 0 && errno != ENOSYS)
+	if (caph_ioctls_limit(info->rfdesc, cmds, 2) < 0)
 		error("Can't limit ioctls for bpf descriptor: %m");
 }
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/lib/libssl/Makefile 339732 2018-10-25 15:49:59Z kib $
+# $FreeBSD$
 
 LIB=		ssl
 SHLIB_MAJOR=	111

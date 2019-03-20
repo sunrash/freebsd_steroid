@@ -1,6 +1,6 @@
 # CANNA -- Kernel config for Ingenic CANNA board
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/CANNA 310333 2016-12-20 18:27:53Z br $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/quotacheck/Makefile 335268 2018-06-16 23:47:59Z eadler $
+# $FreeBSD$
 #	@(#)Makefile	8.1 (Berkeley) 6/5/93
 
 PACKAGE=quotacheck

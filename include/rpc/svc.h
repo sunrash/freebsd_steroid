@@ -31,7 +31,7 @@
  *
  *	from: @(#)svc.h 1.35 88/12/17 SMI
  *	from: @(#)svc.h      1.27    94/04/25 SMI
- * $FreeBSD: releng/12.0/include/rpc/svc.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 /*

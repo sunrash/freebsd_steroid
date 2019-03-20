@@ -26,7 +26,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_read_support_format_zip.c 338827 2018-09-20 11:44:36Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * The definitive documentation of the Zip file format is:

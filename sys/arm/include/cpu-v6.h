@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/cpu-v6.h 325438 2017-11-05 16:52:54Z mmel $
+ * $FreeBSD$
  */
 #ifndef MACHINE_CPU_V6_H
 #define MACHINE_CPU_V6_H

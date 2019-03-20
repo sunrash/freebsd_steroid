@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/sys/ck.h 333957 2018-05-21 01:53:23Z mmacy $
+ * $FreeBSD$
  */
 #ifdef _KERNEL
 #include <ck_queue.h>

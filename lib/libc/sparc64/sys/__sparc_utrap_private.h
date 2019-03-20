@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/sparc64/sys/__sparc_utrap_private.h 326193 2017-11-25 17:12:48Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	___SPARC_UTRAP_PRIVATE_H_

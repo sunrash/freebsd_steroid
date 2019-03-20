@@ -50,7 +50,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/liblua/lfs.c 329649 2018-02-20 18:21:30Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <lua.h>
 #include "lauxlib.h"

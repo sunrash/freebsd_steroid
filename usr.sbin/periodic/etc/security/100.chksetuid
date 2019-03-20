@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/security/100.chksetuid 322868 2017-08-25 00:28:56Z asomers $
+# $FreeBSD$
 #
 
 # If there is a global system configuration file, suck it in.

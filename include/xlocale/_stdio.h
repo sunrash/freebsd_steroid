@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/include/xlocale/_stdio.h 326192 2017-11-25 17:09:43Z pfg $
+ * $FreeBSD$
  */
 
 int	 asprintf_l(char **, locale_t, const char *, ...) __printflike(3, 4);

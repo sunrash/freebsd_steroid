@@ -32,7 +32,7 @@
 #include <unistd.h>
 
 /*
- * $FreeBSD: releng/12.0/tests/sys/kern/pipe/pipe_overcommit1_test.c 292822 2015-12-28 02:36:57Z ngie $
+ * $FreeBSD$
  * This program just allocates as many pipes as it can to ensure
  * that using up all pipe memory doesn't cause a panic.
  */

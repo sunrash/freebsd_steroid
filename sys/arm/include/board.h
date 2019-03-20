@@ -25,7 +25,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/arm/include/board.h 333142 2018-05-01 16:21:01Z imp $ */
+/* $FreeBSD$ */
 
 #ifndef _ARM_INCLUDE_BOARD_H_
 #define _ARM_INCLUDE_BOARD_H_

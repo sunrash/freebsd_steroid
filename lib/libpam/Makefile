@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/lib/libpam/Makefile 338621 2018-09-13 04:08:48Z brd $
+# $FreeBSD$
 
 # The modules link in libpam.  They build the static modules as well.
 SUBDIR+=	libpam modules pam.d

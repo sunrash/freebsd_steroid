@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/busdma_machdep-v4.c 338318 2018-08-25 19:38:08Z alc $");
+__FBSDID("$FreeBSD$");
 
 /*
  * ARM bus dma support routines.

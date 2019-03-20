@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_timeout.c 326218 2017-11-25 23:41:05Z nwhitehorn $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_callout_profiling.h"
 #include "opt_ddb.h"

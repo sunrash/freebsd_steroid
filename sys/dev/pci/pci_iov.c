@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/pci/pci_iov.c 303721 2016-08-03 17:09:12Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

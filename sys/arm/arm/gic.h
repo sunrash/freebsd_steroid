@@ -33,7 +33,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/arm/gic.h 336894 2018-07-30 10:55:02Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _ARM_GIC_H_

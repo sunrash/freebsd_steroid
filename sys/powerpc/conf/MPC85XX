@@ -1,7 +1,7 @@
 #
 # Custom kernel for Freescale MPC85XX development boards like the CDS etc.
 #
-# $FreeBSD: releng/12.0/sys/powerpc/conf/MPC85XX 338073 2018-08-19 19:07:59Z jhibbits $
+# $FreeBSD$
 #
 
 cpu		BOOKE
@@ -74,6 +74,7 @@ device		cryptodev
 device		da
 device  	ds1307
 device		ds1553
+device		iflib
 device		em
 device		alc
 device		ether

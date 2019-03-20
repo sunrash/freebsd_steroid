@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/fdt/fdt_intr.h 307965 2016-10-26 15:18:08Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _FDT_INTR_H_

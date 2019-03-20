@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/release/rc.local 312910 2017-01-28 02:22:15Z nyan $
+# $FreeBSD$
 
 : ${DIALOG_OK=0}
 : ${DIALOG_CANCEL=1}

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/clang/Makefile.inc 322824 2017-08-23 23:30:25Z jhb $
+# $FreeBSD$
 
 .include <bsd.compiler.mk>
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/i2c/Makefile 187712 2009-01-26 14:00:50Z raj $
+# $FreeBSD$
 
 PROG=	i2c
 MAN=	i2c.8

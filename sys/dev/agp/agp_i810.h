@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/agp/agp_i810.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef AGP_AGP_I810_H

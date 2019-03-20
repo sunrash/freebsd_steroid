@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/dwc/if_dwc_if.m 288023 2015-09-20 14:13:29Z loos $
+# $FreeBSD$
 #
 
 INTERFACE if_dwc;

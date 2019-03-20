@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_ccm.c 329999 2018-02-26 02:28:32Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Clocks and power control driver for Freescale i.MX6 family of SoCs.

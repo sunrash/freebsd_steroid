@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cs/if_cs.c 339735 2018-10-25 17:00:39Z brooks $");
+__FBSDID("$FreeBSD$");
 
 /*
  *

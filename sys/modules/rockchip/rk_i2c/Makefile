@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/rockchip/rk_i2c/Makefile 335115 2018-06-14 06:40:59Z manu $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/arm64/rockchip
 

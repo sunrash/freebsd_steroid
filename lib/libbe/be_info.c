@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libbe/be_info.c 340753 2018-11-22 04:39:06Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "be.h"
 #include "be_impl.h"

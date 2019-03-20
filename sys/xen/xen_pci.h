@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/xen/xen_pci.h 275649 2014-12-09 18:03:25Z royger $
+ * $FreeBSD$
  */
 
 #ifndef __XEN_PCI_H__

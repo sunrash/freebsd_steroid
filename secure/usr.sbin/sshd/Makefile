@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/usr.sbin/sshd/Makefile 338561 2018-09-10 16:20:12Z des $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_zip_nested.c 313074 2017-02-02 00:50:46Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_read_format_zip_nested)
 {

@@ -41,7 +41,7 @@
 #include "assym.inc"
 #include <machine/asm.h>
 #include <machine/armreg.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/copystr.S 332654 2018-04-17 17:20:04Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/errno.h>
 

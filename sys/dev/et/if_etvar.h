@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  * $DragonFly: src/sys/dev/netif/et/if_etvar.h,v 1.4 2007/10/23 14:28:42 sephe Exp $
- * $FreeBSD: releng/12.0/sys/dev/et/if_etvar.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _IF_ETVAR_H

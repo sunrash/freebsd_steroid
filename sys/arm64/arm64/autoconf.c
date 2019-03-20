@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/autoconf.c 302853 2016-07-14 17:31:29Z andrew $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Setup the system to run on the current machine.

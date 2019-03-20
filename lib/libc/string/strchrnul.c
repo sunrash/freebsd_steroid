@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/string/strchrnul.c 333420 2018-05-09 17:06:52Z zeising $");
+__FBSDID("$FreeBSD$");
 
 #include <stddef.h>
 #include <string.h>

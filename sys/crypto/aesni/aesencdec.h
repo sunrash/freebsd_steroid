@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/crypto/aesni/aesencdec.h 285254 2015-07-07 20:31:09Z jmg $
+ * $FreeBSD$
  *
  */
 

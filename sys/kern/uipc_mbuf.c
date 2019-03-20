@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/uipc_mbuf.c 334054 2018-05-22 15:54:25Z fabient $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_param.h"
 #include "opt_mbuf_stress_test.h"
@@ -54,8 +54,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/kern/uipc_mbuf.c 334054 2018-05-22 15:54:25Z
 #include <vm/vm_pageout.h>
 #include <vm/vm_page.h>
 #include <sys/vmmeter.h>
-
-
 
 SDT_PROBE_DEFINE5_XLATE(sdt, , , m__init,
     "struct mbuf *", "mbufinfo_t *",
@@ -208,8 +206,7 @@ mb_dupcl(struct mbuf *n, struct mbuf *m)
 	else
 		bcopy(&m->m_ext, &n->m_ext, m_ext_copylen);
 	n->m_flags |= M_EXT;
-//	n->m_flags |= m->m_flags & M_RDONLY;
-        n->m_flags |= m->m_flags & (M_RDONLY|M_NOMAP);
+	n->m_flags |= m->m_flags & (M_RDONLY|M_NOMAP);
 
 	/* See if this is the mbuf that holds the embedded refcount. */
 	if (m->m_ext.ext_flags & EXT_FLAG_EMBREF) {
@@ -253,8 +250,8 @@ m_demote(struct mbuf *m0, int all, int flags)
 		    __func__, m, m0));
 		if (m->m_flags & M_PKTHDR)
 			m_demote_pkthdr(m);
-		//m->m_flags = m->m_flags & (M_EXT | M_RDONLY | M_NOFREE | flags);
-		m->m_flags = m->m_flags & (M_EXT | M_RDONLY | M_NOFREE | M_NOMAP | flags);
+		m->m_flags = m->m_flags & (M_EXT | M_RDONLY | M_NOFREE |
+		    M_NOMAP | flags);
 	}
 }
 
@@ -381,8 +378,8 @@ m_move_pkthdr(struct mbuf *to, struct mbuf *from)
 	if (to->m_flags & M_PKTHDR)
 		m_tag_delete_chain(to, NULL);
 #endif
-	//to->m_flags = (from->m_flags & M_COPYFLAGS) | (to->m_flags & M_EXT);
-	to->m_flags = (from->m_flags & M_COPYFLAGS) | (to->m_flags & (M_EXT | M_NOMAP));
+	to->m_flags = (from->m_flags & M_COPYFLAGS) |
+	    (to->m_flags & (M_EXT | M_NOMAP));
 	if ((to->m_flags & M_EXT) == 0)
 		to->m_data = to->m_pktdat;
 	to->m_pkthdr = from->m_pkthdr;		/* especially tags */
@@ -416,8 +413,8 @@ m_dup_pkthdr(struct mbuf *to, const struct mbuf *from, int how)
 	if (to->m_flags & M_PKTHDR)
 		m_tag_delete_chain(to, NULL);
 #endif
-	//to->m_flags = (from->m_flags & M_COPYFLAGS) | (to->m_flags & M_EXT);
-	to->m_flags = (from->m_flags & M_COPYFLAGS) | (to->m_flags & (M_EXT | M_NOMAP));
+	to->m_flags = (from->m_flags & M_COPYFLAGS) |
+	    (to->m_flags & (M_EXT | M_NOMAP));
 	if ((to->m_flags & M_EXT) == 0)
 		to->m_data = to->m_pktdat;
 	to->m_pkthdr = from->m_pkthdr;
@@ -580,7 +577,6 @@ nospace:
 	return (NULL);
 }
 
-
 static void
 m_copyfromunmapped(const struct mbuf *m, int off, int len, caddr_t cp)
 {
@@ -604,7 +600,6 @@ m_copyfromunmapped(const struct mbuf *m, int off, int len, caddr_t cp)
 
 }
 
-
 /*
  * Copy data from an mbuf chain starting "off" bytes from the beginning,
  * continuing for "len" bytes, into the indicated buffer.
@@ -626,7 +621,6 @@ m_copydata(const struct mbuf *m, int off, int len, caddr_t cp)
 	while (len > 0) {
 		KASSERT(m != NULL, ("m_copydata, length > size of mbuf chain"));
 		count = min(m->m_len - off, len);
-		//bcopy(mtod(m, caddr_t) + off, cp, count);
 		if ((m->m_flags & M_NOMAP) != 0)
 			m_copyfromunmapped(m, off, count, cp);
 		else
@@ -724,7 +718,8 @@ m_cat(struct mbuf *m, struct mbuf *n)
 	while (m->m_next)
 		m = m->m_next;
 	while (n) {
-		if (!M_WRITABLE(m) || (n->m_flags & M_NOMAP) != 0 ||
+		if (!M_WRITABLE(m) ||
+		    (n->m_flags & M_NOMAP) != 0 ||
 		    M_TRAILINGSPACE(m) < n->m_len) {
 			/* just join the two chains */
 			m->m_next = n;
@@ -1384,6 +1379,27 @@ nospace:
 	return (NULL);
 }
 
+static int
+frags_per_mbuf(struct mbuf *m)
+{
+	struct mbuf_ext_pgs *ext_pgs;
+	int frags;
+
+
+	if (0 == (m->m_flags & M_NOMAP))
+		return (1);
+
+	ext_pgs = m->m_ext.ext_pgs;
+	frags = 0;
+	if (ext_pgs->hdr_len != 0)
+		frags++;
+	frags += ext_pgs->npgs;
+	if (ext_pgs->trail_len != 0)
+		frags++;
+
+	return (frags);
+}
+
 /*
  * Defragment an mbuf chain, returning at most maxfrags separate
  * mbufs+clusters.  If this is not possible NULL is returned and
@@ -1404,7 +1420,7 @@ m_collapse(struct mbuf *m0, int how, int maxfrags)
 	 */
 	curfrags = 0;
 	for (m = m0; m != NULL; m = m->m_next)
-		curfrags++;
+		curfrags += frags_per_mbuf(m);
 	/*
 	 * First, try to collapse mbufs.  Note that we always collapse
 	 * towards the front so we don't need to deal with moving the
@@ -1419,12 +1435,13 @@ again:
 			break;
 		if (M_WRITABLE(m) &&
 		    n->m_len < M_TRAILINGSPACE(m)) {
-			bcopy(mtod(n, void *), mtod(m, char *) + m->m_len,
-				n->m_len);
+			m_copydata(n, 0, n->m_len,
+			    mtod(m, char *) + m->m_len);
 			m->m_len += n->m_len;
 			m->m_next = n->m_next;
+			curfrags -= frags_per_mbuf(n);
 			m_free(n);
-			if (--curfrags <= maxfrags)
+			if (curfrags <= maxfrags)
 				return m0;
 		} else
 			m = n;
@@ -1441,15 +1458,18 @@ again:
 			m = m_getcl(how, MT_DATA, 0);
 			if (m == NULL)
 				goto bad;
-			bcopy(mtod(n, void *), mtod(m, void *), n->m_len);
-			bcopy(mtod(n2, void *), mtod(m, char *) + n->m_len,
-				n2->m_len);
+			m_copydata(n, 0,  n->m_len, mtod(m, char *));
+			m_copydata(n2, 0,  n2->m_len,
+			    mtod(m, char *) + n->m_len);
 			m->m_len = n->m_len + n2->m_len;
 			m->m_next = n2->m_next;
 			*prev = m;
+			curfrags += 1;  /* for the new cluster */
+			curfrags -= frags_per_mbuf(n);
+			curfrags -= frags_per_mbuf(n2);
 			m_free(n);
 			m_free(n2);
-			if (--curfrags <= maxfrags)	/* +1 cl -2 mbufs */
+			if (curfrags <= maxfrags)
 				return m0;
 			/*
 			 * Still not there, try the normal collapse
@@ -1549,7 +1569,6 @@ nospace:
 
 #endif
 
-
 /*
  * Free pages from mbuf_ext_pgs, assuming they aren't associated
  * with any object.  Complement to allocator from m_uiotombuf_nomap()
@@ -1565,8 +1584,7 @@ mb_free_mext_pgs(struct mbuf *m)
 	KASSERT(m->m_flags & M_EXT && m->m_ext.ext_type == EXT_PGS,
 	    ("%s: m %p !M_EXT or !EXT_PGS", __func__, m));
 
-	ext_pgs = (void *)m->m_ext.ext_buf;
-
+	ext_pgs = m->m_ext.ext_pgs;
 	wire_adj = 0;
 	for (int i = 0; i < ext_pgs->npgs; i++) {
 		pg = PHYS_TO_VM_PAGE(ext_pgs->pa[i]);
@@ -1578,7 +1596,7 @@ mb_free_mext_pgs(struct mbuf *m)
 		wire_adj++;
 	}
 	if (wire_adj)
-		vm_wire_add(wire_adj);
+		vm_wire_sub(wire_adj);
 }
 
 static struct mbuf *
@@ -1616,7 +1634,7 @@ m_uiotombuf_nomap(struct uio *uio, int how, int len, int maxseg, int flags)
 		else
 			prev->m_next = mb;
 		prev = mb;
-		pgs = (void *)mb->m_ext.ext_buf;
+		pgs = mb->m_ext.ext_pgs;
 		needed = length = MIN(maxseg, total);
 		for (i = 0; needed > 0; i++, needed -= PAGE_SIZE) {
 retry_page:
@@ -1627,18 +1645,19 @@ retry_page:
 				wire_adj = 0;
 				if (how & M_NOWAIT) {
 					goto failed;
-				}
-				else {
-					//VM_WAIT;
+				} else {
 					vm_wait(NULL);
 					goto retry_page;
 				}
 			}
 			wire_adj++;
+			if (pg_array[i]->flags & PG_ZERO)
+				pg_array[i]->flags &= ~PG_ZERO;
 			pgs->pa[i] = VM_PAGE_TO_PHYS(pg_array[i]);
 			pgs->npgs++;
 		}
 		pgs->last_pg_len = length - PAGE_SIZE * (pgs->npgs - 1);
+		MBUF_EXT_PGS_ASSERT_SANITY(pgs);
 		vm_wire_add(wire_adj);
 		wire_adj = 0;
 		total -= length;
@@ -1670,9 +1689,10 @@ m_uiotombuf(struct uio *uio, int how, int len, int align, int flags)
 	int error, length;
 	ssize_t total;
 	int progress = 0;
-        
+
 	if (flags & M_NOMAP)
 		return (m_uiotombuf_nomap(uio, how, len, align, flags));
+
 	/*
 	 * len can be zero or an arbitrary large value bound by
 	 * the total data supplied by the uio.
@@ -1728,7 +1748,7 @@ m_unmappedtouio(const struct mbuf *m, int m_off, struct uio *uio, int len)
 
 	/* for now, all unmapped mbufs are assumed to be EXT_PGS */
 	MBUF_EXT_PGS_ASSERT(m);
-	ext_pgs = (void *)m->m_ext.ext_buf;
+	ext_pgs = m->m_ext.ext_pgs;
 	error = 0;
 
 	/* somebody may have removed data from the front;
@@ -1771,7 +1791,9 @@ m_unmappedtouio(const struct mbuf *m, int m_off, struct uio *uio, int len)
 		error = uiomove_fromphys(&pg, segoff, seglen, uio);
 		pgoff = 0;
 	};
-	if (len) {
+
+	/* note we only want to do this if error == 0 */
+	if (len != 0 && error == 0) {
 		KASSERT((off + len) <= ext_pgs->trail_len,
 		    ("off + len > trail (%d + %d > %d, m_off = %d)\n",
 			off, len, ext_pgs->trail_len,
@@ -1780,6 +1802,7 @@ m_unmappedtouio(const struct mbuf *m, int m_off, struct uio *uio, int len)
 	}
 	return (error);
 }
+
 
 /*
  * Copy an mbuf chain into a uio limited by len if set.
@@ -1799,7 +1822,6 @@ m_mbuftouio(struct uio *uio, const struct mbuf *m, int len)
 	for (; m != NULL; m = m->m_next) {
 		length = min(m->m_len, total - progress);
 
-		//error = uiomove(mtod(m, void *), length, uio);
 		if ((m->m_flags & M_NOMAP) != 0)
 			error = m_unmappedtouio(m, 0, uio, length);
 		else

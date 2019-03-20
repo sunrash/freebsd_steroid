@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/broadcom/bcm_nvram_cfe.c 324070 2017-09-27 19:44:23Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * BHND CFE NVRAM driver.

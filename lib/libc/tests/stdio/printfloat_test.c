@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/stdio/printfloat_test.c 313376 2017-02-07 03:46:48Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <fenv.h>

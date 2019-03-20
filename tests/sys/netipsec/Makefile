@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netipsec/Makefile 326497 2017-12-03 13:52:35Z kp $
+# $FreeBSD$
 
 TESTSDIR=		${TESTSBASE}/sys/netipsec
 

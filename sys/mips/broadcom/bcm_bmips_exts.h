@@ -36,7 +36,7 @@
  *    TORT (INCLUDING NEGLIGENCE OR OTHERWISE), EVEN IF ADVISED OF
  *    THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bcm_bmips_exts.h 305953 2016-09-18 21:28:09Z landonf $
+ * $FreeBSD$
  */
 
 

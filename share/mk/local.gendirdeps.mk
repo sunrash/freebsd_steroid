@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/local.gendirdeps.mk 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 
 # we need a keyword, this noise is to prevent it being expanded
 GENDIRDEPS_HEADER= echo '\# ${FreeBSD:L:@v@$$$v$$ @:M*F*}';

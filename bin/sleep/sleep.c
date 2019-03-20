@@ -39,7 +39,7 @@ static char sccsid[] = "@(#)sleep.c	8.3 (Berkeley) 4/2/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/bin/sleep/sleep.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <capsicum_helpers.h>
 #include <ctype.h>

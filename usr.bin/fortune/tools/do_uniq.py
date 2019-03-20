@@ -1,6 +1,6 @@
 #!/usr/local/bin/python
 #
-# $FreeBSD: releng/12.0/usr.bin/fortune/tools/do_uniq.py 291041 2015-11-19 00:01:52Z rodrigc $
+# $FreeBSD$
 #
 # an aggressive little script for trimming duplicate cookies
 from __future__ import print_function

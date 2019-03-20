@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/i386/Makefile 337806 2018-08-14 18:44:41Z imp $
+# $FreeBSD$
 
 NO_OBJ=t
 
@@ -20,6 +20,6 @@ SUBDIR.yes+=	pxeldr
 SUBDIR.yes+=	kgzldr
 .endif
 
-SUBDIR.${MK_ZFS}+=	zfsboot gptzfsboot
+SUBDIR.${MK_LOADER_ZFS}+=	zfsboot gptzfsboot
 
 .include <bsd.subdir.mk>

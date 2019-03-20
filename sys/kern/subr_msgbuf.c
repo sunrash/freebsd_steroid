@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/kern/subr_msgbuf.c 337544 2018-08-09 17:42:27Z kevans $
+ * $FreeBSD$
  */
 
 /*

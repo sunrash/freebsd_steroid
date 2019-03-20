@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/mtkswitch/mtkswitch_rt3050.c 313988 2017-02-20 08:10:41Z sgalabov $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -4,7 +4,7 @@
 # configuration.  This kernel configration must be further specialized to
 # to include a root filesystem specification.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/BERI_DE4_BASE 332474 2018-04-13 15:59:24Z br $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

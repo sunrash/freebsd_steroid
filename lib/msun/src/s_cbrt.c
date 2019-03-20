@@ -13,8 +13,9 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_cbrt.c 298896 2016-05-01 19:37:33Z pfg $");
+__FBSDID("$FreeBSD$");
 
+#include <float.h>
 #include "math.h"
 #include "math_private.h"
 

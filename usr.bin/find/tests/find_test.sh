@@ -23,7 +23,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/find/tests/find_test.sh 327565 2018-01-04 22:59:24Z jilles $
+# $FreeBSD$
 #
 
 atf_test_case find_newer_link

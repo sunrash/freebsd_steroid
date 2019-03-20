@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/netrate/tcpp/tcpp_client.c 336914 2018-07-30 15:46:40Z asomers $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

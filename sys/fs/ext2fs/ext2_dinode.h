@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2_dinode.h 331095 2018-03-17 12:59:55Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _FS_EXT2FS_EXT2_DINODE_H_

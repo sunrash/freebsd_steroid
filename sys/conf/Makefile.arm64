@@ -2,7 +2,7 @@
 # Copyright 1990 W. Jolitz
 #	from: @(#)Makefile.i386	7.1 5/10/91
 #	from FreeBSD: src/sys/conf/Makefile.i386,v 1.255 2002/02/20 23:35:49
-# $FreeBSD: releng/12.0/sys/conf/Makefile.arm64 336414 2018-07-17 14:11:30Z kevans $
+# $FreeBSD$
 #
 # Makefile for FreeBSD
 #

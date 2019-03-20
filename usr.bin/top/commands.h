@@ -9,7 +9,7 @@
  *  Copyright (c) 1989, 1990, 1992, William LeFebvre, Northwestern University
  *  Copyright (c) 2016, Randy Westlund
  *
- * $FreeBSD: releng/12.0/usr.bin/top/commands.h 334988 2018-06-12 06:53:31Z eadler $
+ * $FreeBSD$
  */
 #ifndef COMMANDS_H
 #define COMMANDS_H

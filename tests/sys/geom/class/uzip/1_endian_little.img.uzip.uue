@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tests/sys/geom/class/uzip/1_endian_little.img.uzip.uue 307625 2016-10-19 10:01:04Z br $
+# $FreeBSD$
 #
 
 begin 644 1_endian_little.img.uzip

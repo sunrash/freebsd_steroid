@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/riscv/sys/vfork.S 317530 2017-04-27 22:40:39Z br $");
+__FBSDID("$FreeBSD$");
 #include "SYS.h"
 
 ENTRY(__sys_vfork)

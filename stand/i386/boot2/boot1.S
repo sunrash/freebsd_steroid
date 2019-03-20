@@ -12,7 +12,7 @@
  * warranties of merchantability and fitness for a particular
  * purpose.
  *
- * $FreeBSD: releng/12.0/stand/i386/boot2/boot1.S 232623 2012-03-06 20:45:13Z jhb $
+ * $FreeBSD$
  */
 
 /* Memory Locations */

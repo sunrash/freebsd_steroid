@@ -40,7 +40,7 @@
  *
  * Prototypes for cpu, mmu and tlb related functions.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/cpufunc.h 337762 2018-08-14 16:01:25Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CPUFUNC_H_

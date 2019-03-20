@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/cfi/Makefile 264400 2014-04-13 05:21:56Z imp $
+# $FreeBSD$
 
 PROG=	cfi
 BINDIR=	/usr/local/bin

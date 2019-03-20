@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/bugpoint/Makefile 309124 2016-11-24 22:54:55Z dim $
+# $FreeBSD$
 
 PROG_CXX=	bugpoint
 

@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/bzipfs.c 324551 2017-10-12 14:56:28Z imp $");
+__FBSDID("$FreeBSD$");
 
 #ifndef REGRESSION
 #include "stand.h"
@@ -360,7 +360,7 @@ bzf_stat(struct open_file *f, struct stat *sb)
 void
 bz_internal_error(int errorcode)
 {
-    panic("bzipfs: critical error %d in bzip2 library occured\n", errorcode);
+    panic("bzipfs: critical error %d in bzip2 library occured", errorcode);
 }
 
 #ifdef REGRESSION

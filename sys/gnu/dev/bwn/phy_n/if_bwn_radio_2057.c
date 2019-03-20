@@ -25,7 +25,7 @@
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_radio_2057.c 326454 2017-12-02 02:21:27Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * The Broadcom Wireless LAN controller driver.

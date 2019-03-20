@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mps/mps_pci.c 338949 2018-09-26 17:12:30Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* PCI/PCI-X/PCIe bus interface for the Avago Tech (LSI) MPT2 controllers */
 

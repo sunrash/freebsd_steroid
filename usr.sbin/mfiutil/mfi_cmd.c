@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/mfiutil/mfi_cmd.c 339344 2018-10-13 02:21:23Z allanjude $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/serial/uftdi.c 330385 2018-03-04 17:30:16Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * NOTE: all function names beginning like "uftdi_cfg_" can only

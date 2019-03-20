@@ -13,7 +13,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kqueue/libkqueue/proc.c 337812 2018-08-14 19:12:45Z dab $
+ * $FreeBSD$
  */
 
 #include <sys/stat.h>
@@ -45,7 +45,7 @@ add_and_delete(void)
         struct stat s;
         if (fstat(kqfd, &s) != -1)
             errx(1, "kqueue inherited across fork! (%s() at %s:%d)",
-	        __func__, __FILE__, __LINE__);
+                __func__, __FILE__, __LINE__);
 
         pause();
         exit(2);

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/ip_fil.c 315368 2017-03-16 04:40:07Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
@@ -482,14 +482,7 @@ ipf_fastroute(m, mpp, fin, fdp)
 	m->mb_ifp = ifp;
 	printpacket(fin->fin_out, m);
 
-#if defined(__sgi) && (IRIX < 60500)
-	(*ifp->if_output)(ifp, (void *)ip, NULL);
-# if TRU64 >= 1885
-	(*ifp->if_output)(ifp, (void *)m, NULL, 0, 0);
-# else
 	(*ifp->if_output)(ifp, (void *)m, NULL, 0);
-# endif
-#endif
 done:
 	fin->fin_ifp = sifp;
 	fin->fin_out = sout;

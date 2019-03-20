@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mii/ip1000phyreg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_DEV_MII_IP1000PHYREG_H_

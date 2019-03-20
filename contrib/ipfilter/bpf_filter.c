@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/bpf_filter.c 298030 2016-04-15 03:43:16Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/net/getaddrinfo/Makefile 305961 2016-09-19 06:59:17Z ngie $
+# $FreeBSD$
 
 PACKAGE=	tests
 

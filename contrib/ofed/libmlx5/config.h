@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/ofed/libmlx5/config.h 321936 2017-08-02 16:00:30Z hselasky $ */
+/* $FreeBSD$ */
 
 #define	min_t(type, x, y) ({			\
 	type __min1 = (x);			\

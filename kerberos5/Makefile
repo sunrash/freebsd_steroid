@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/Makefile 314657 2017-03-04 11:34:36Z ngie $
+# $FreeBSD$
 
 SUBDIR=	lib .WAIT \
 	libexec tools usr.bin usr.sbin

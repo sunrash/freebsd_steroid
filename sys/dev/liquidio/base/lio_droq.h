@@ -30,7 +30,7 @@
  *   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  *   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/*$FreeBSD: releng/12.0/sys/dev/liquidio/base/lio_droq.h 323509 2017-09-12 23:36:58Z sbruno $*/
+/*$FreeBSD$*/
 
 /*   \file  lio_droq.h
  *   \brief Implementation of Octeon Output queues. "Output" is with

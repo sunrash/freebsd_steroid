@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/daily/480.leapfile-ntpd 324738 2017-10-19 03:17:50Z cy $
+# $FreeBSD$
 #
 
 # If there is a global system configuration file, suck it in.

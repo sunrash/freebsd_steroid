@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.endian.mk 339825 2018-10-27 21:17:01Z yuripv $
+# $FreeBSD$
 
 .if ${MACHINE_ARCH} == "aarch64" || \
     ${MACHINE_ARCH} == "amd64" || \

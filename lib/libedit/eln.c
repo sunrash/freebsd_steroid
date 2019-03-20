@@ -30,7 +30,7 @@
 __RCSID("$NetBSD: eln.c,v 1.28 2016/02/28 23:02:24 christos Exp $");
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/eln.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <stdarg.h>

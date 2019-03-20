@@ -29,7 +29,7 @@
 #
 # mk-vmimage.sh: Create virtual machine disk images in various formats.
 #
-# $FreeBSD: releng/12.0/release/scripts/mk-vmimage.sh 281876 2015-04-23 01:04:14Z gjb $
+# $FreeBSD$
 #
 
 usage() {

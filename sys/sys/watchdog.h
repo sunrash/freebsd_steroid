@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/watchdog.h 327505 2018-01-03 00:56:30Z karels $
+ * $FreeBSD$
  */
 #ifndef _SYS_WATCHDOG_H
 #define	_SYS_WATCHDOG_H

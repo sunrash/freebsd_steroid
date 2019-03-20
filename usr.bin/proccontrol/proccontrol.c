@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/proccontrol/proccontrol.c 306261 2016-09-23 12:34:54Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/procctl.h>
 #include <err.h>

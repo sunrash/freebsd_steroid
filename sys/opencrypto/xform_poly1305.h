@@ -1,5 +1,5 @@
 /* This file is in the public domain. */
-/* $FreeBSD: releng/12.0/sys/opencrypto/xform_poly1305.h 337939 2018-08-17 00:30:04Z cem $ */
+/* $FreeBSD$ */
 #pragma once
 
 #include <sys/types.h>

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/ipropd_slave 271663 2014-09-16 05:45:38Z hrs $
+# $FreeBSD$
 #
 
 # PROVIDE: ipropd_slave

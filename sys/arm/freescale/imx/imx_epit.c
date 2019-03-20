@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx_epit.c 320651 2017-07-04 18:07:09Z andrew $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for imx Enhanced Programmable Interval Timer, a simple free-running

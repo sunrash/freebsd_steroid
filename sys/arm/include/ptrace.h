@@ -1,5 +1,5 @@
 /*	$NetBSD: ptrace.h,v 1.2 2001/02/23 21:23:52 reinoud Exp $	*/
-/* $FreeBSD: releng/12.0/sys/arm/include/ptrace.h 323582 2017-09-14 15:03:43Z jhb $ */
+/* $FreeBSD$ */
 
 #ifndef _MACHINE_PTRACE_H_
 #define _MACHINE_PTRACE_H_

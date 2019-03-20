@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/stdio/xprintf_int.c 329848 2018-02-23 01:11:57Z pfg $
+ * $FreeBSD$
  */
 
 #include <namespace.h>

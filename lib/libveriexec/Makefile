@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libveriexec/Makefile 335401 2018-06-20 00:55:18Z stevek $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

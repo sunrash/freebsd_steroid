@@ -32,11 +32,12 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/tcp_output.c 336934 2018-07-30 20:35:50Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
 #include "opt_ipsec.h"
+#include "opt_kern_tls.h"
 #include "opt_tcpdebug.h"
 
 #include <sys/param.h>
@@ -53,6 +54,10 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netinet/tcp_output.c 336934 2018-07-30 20:35
 #include <sys/sdt.h>
 #include <sys/socket.h>
 #include <sys/socketvar.h>
+#ifdef KERN_TLS
+#include <sys/ktr.h>
+#include <sys/sockbuf_tls.h>
+#endif
 #include <sys/sysctl.h>
 
 #include <net/if.h>
@@ -145,9 +150,6 @@ SYSCTL_INT(_net_inet_tcp, OID_AUTO, sendbuf_auto_lowat, CTLFLAG_VNET | CTLFLAG_R
 
 static void inline	cc_after_idle(struct tcpcb *tp);
 
-//static struct mbuf *tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen, int32_t seglimit, int32_t segsize, struct sockbuf *sb);
-struct mbuf *tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen, int32_t seglimit, int32_t segsize, struct sockbuf *sb);
-
 #ifdef TCP_HHOOK
 /*
  * Wrapper for the TCP established output helper hook.
@@ -201,7 +203,6 @@ tcp_output(struct tcpcb *tp)
 	struct ipovly *ipov = NULL;
 #endif
 	struct tcphdr *th;
-	//struct sockbuf *msb;
 	u_char opt[TCP_MAXOLEN];
 	unsigned ipoptlen, optlen, hdrlen;
 #if defined(IPSEC) || defined(IPSEC_SUPPORT)
@@ -660,7 +661,8 @@ after_sack_rexmit:
 		if (adv >= (int32_t)(2 * tp->t_maxseg) &&
 		    (adv >= (int32_t)(so->so_rcv.sb_hiwat / 4) ||
 		     recwin <= (so->so_rcv.sb_hiwat / 8) ||
-		     so->so_rcv.sb_hiwat <= 8 * tp->t_maxseg))
+		     so->so_rcv.sb_hiwat <= 8 * tp->t_maxseg ||
+		     adv >= TCP_MAXWIN << tp->rcv_scale))
 			goto send;
 		if (2 * adv >= (int32_t)so->so_rcv.sb_hiwat)
 			goto send;
@@ -899,6 +901,7 @@ send:
 					len = max_len;
 				}
 			}
+
 			/*
 			 * Prevent the last segment from being
 			 * fractional unless the send sockbuf can be
@@ -970,6 +973,61 @@ send:
 		struct sockbuf *msb;
 		u_int moff;
 
+		/*
+		 * Start the m_copy functions from the closest mbuf
+		 * to the offset in the socket buffer chain.
+		 */
+		mb = sbsndptr_noadv(&so->so_snd, off, &moff);
+
+#ifdef KERN_TLS
+		/*
+		 * XXX: A gross hack to avoid mixing records between
+		 * different TLS sessions.
+		 */
+		if (so->so_snd.sb_tls_flags & SB_TLS_IFNET) {
+			struct sbtls_session *tls, *ntls;
+			struct mbuf *n;
+			u_int new_len;
+
+			/*
+			 * Walk forward to the first mbuf with data we
+			 * want to send.
+			 */
+			while (moff >= mb->m_len) {
+				moff -= mb->m_len;
+				mb = mb->m_next;
+			}
+			if (mb->m_flags & M_NOMAP)
+				tls = mb->m_ext.ext_pgs->tls;
+			else
+				tls = NULL;
+			new_len = mb->m_len - moff;
+			for (n = mb->m_next; new_len < len; n = n->m_next) {
+				if (n->m_flags & M_NOMAP)
+					ntls = n->m_ext.ext_pgs->tls;
+				else
+					ntls = NULL;
+				if (tls != ntls)
+					break;
+				new_len += n->m_len;
+			}
+			MPASS(new_len > 0);
+
+			if (new_len < len) {
+				/* XXX: KTR_CXGBE */
+				CTR3(KTR_SPARE3,
+				    "%s: truncating len from %u to %u",
+				    __func__, len, new_len);
+
+				flags &= ~TH_FIN;
+				if (new_len <= tp->t_maxseg - optlen)
+					tso = 0;
+				len = new_len;
+				sendalot = 1;
+			}
+		}
+#endif
+
 		if ((tp->t_flags & TF_FORCEDATA) && len == 1)
 			TCPSTAT_INC(tcps_sndprobe);
 		else if (SEQ_LT(tp->snd_nxt, tp->snd_max) || sack_rxmit) {
@@ -997,18 +1055,8 @@ send:
 		m->m_data += max_linkhdr;
 		m->m_len = hdrlen;
 
-		/*
-		 * Start the m_copy functions from the closest mbuf
-		 * to the offset in the socket buffer chain.
-		 */
-		mb = sbsndptr_noadv(&so->so_snd, off, &moff);
-		if (SEQ_LT(tp->snd_nxt, tp->snd_max))
-			msb = NULL;
-		else
-			msb = &so->so_snd;
-		if (len <= MHLEN - hdrlen - max_linkhdr) {
-			if (msb != NULL)
-				sbsndptr_adv(&so->so_snd, mb, len);
+		if (len <= MHLEN - hdrlen - max_linkhdr &&
+		    !mbuf_has_tls_session(mb)) {
 			m_copydata(mb, moff, len,
 			    mtod(m, caddr_t) + hdrlen);
 			if (SEQ_LT(tp->snd_nxt, tp->snd_max))
@@ -1181,14 +1229,18 @@ send:
 	/*
 	 * Calculate receive window.  Don't shrink window,
 	 * but avoid silly window syndrome.
+	 * If a RST segment is sent, advertise a window of zero.
 	 */
-	if (recwin < (so->so_rcv.sb_hiwat / 4) &&
-	    recwin < tp->t_maxseg)
+	if (flags & TH_RST) {
 		recwin = 0;
-	if (SEQ_GT(tp->rcv_adv, tp->rcv_nxt) &&
-	    recwin < (tp->rcv_adv - tp->rcv_nxt))
-		recwin = (tp->rcv_adv - tp->rcv_nxt);
-
+	} else {
+		if (recwin < (so->so_rcv.sb_hiwat / 4) &&
+		    recwin < tp->t_maxseg)
+			recwin = 0;
+		if (SEQ_GT(tp->rcv_adv, tp->rcv_nxt) &&
+		    recwin < (tp->rcv_adv - tp->rcv_nxt))
+			recwin = (tp->rcv_adv - tp->rcv_nxt);
+	}
 	/*
 	 * According to RFC1323 the window field in a SYN (i.e., a <SYN>
 	 * or <SYN,ACK>) segment itself is never scaled.  The <SYN,ACK>
@@ -1818,7 +1870,9 @@ tcp_addoptions(struct tcpopt *to, u_char *optp)
  * This is a copy of m_copym(), taking the TSO segment size/limit
  * constraints into account, and advancing the sndptr as it goes.
  */
-struct mbuf *tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen, int32_t seglimit, int32_t segsize, struct sockbuf *sb)
+struct mbuf *
+tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen,
+    int32_t seglimit, int32_t segsize, struct sockbuf *sb)
 {
 	struct mbuf *n, **np;
 	struct mbuf *top;

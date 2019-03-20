@@ -25,7 +25,7 @@
 */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_phy_n_core.c 329228 2018-02-13 17:43:54Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * The Broadcom Wireless LAN controller driver.

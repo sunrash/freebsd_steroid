@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/mac/portacl/root_test.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 dir=`dirname $0`
 . ${dir}/misc.sh

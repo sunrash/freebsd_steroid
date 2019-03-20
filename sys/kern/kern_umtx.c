@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_umtx.c 340378 2018-11-12 18:21:17Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_umtx_profiling.h"
 
@@ -3795,6 +3795,9 @@ umtx_shm_object_terminated(vm_object_t object)
 {
 	struct umtx_shm_reg *reg, *reg1;
 	bool dofree;
+
+	if (LIST_EMPTY(USHM_OBJ_UMTX(object)))
+		return;
 
 	dofree = false;
 	mtx_lock(&umtx_shm_lock);

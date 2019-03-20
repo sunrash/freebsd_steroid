@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libmemstat/memstat_malloc.c 339320 2018-10-11 23:25:14Z mjg $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

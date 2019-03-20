@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/vfp.c 333791 2018-05-18 13:28:02Z cognet $");
+__FBSDID("$FreeBSD$");
 
 #ifdef VFP
 #include <sys/param.h>

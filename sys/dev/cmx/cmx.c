@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cmx/cmx.c 298955 2016-05-03 03:41:25Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * OMNIKEY CardMan 4040 a.k.a. CardMan eXtended (cmx) driver.

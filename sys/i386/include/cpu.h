@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)cpu.h	5.4 (Berkeley) 5/9/91
- * $FreeBSD: releng/12.0/sys/i386/include/cpu.h 340269 2018-11-08 22:39:38Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CPU_H_

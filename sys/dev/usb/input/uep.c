@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/input/uep.c 337720 2018-08-13 19:00:42Z wulf $
+ * $FreeBSD$
  */
 
 /*

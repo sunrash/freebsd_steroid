@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/genassym.c 336967 2018-07-31 12:53:27Z andrew $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/assym.h>
 #include <sys/pcpu.h>

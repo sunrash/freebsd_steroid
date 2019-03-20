@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 5/31/93
-# $FreeBSD: releng/12.0/bin/dd/Makefile 337865 2018-08-15 19:46:13Z kevans $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

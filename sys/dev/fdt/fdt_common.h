@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/fdt/fdt_common.h 334341 2018-05-29 17:44:40Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _FDT_COMMON_H_

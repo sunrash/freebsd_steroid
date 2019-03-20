@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/cc/c++/Makefile 265420 2014-05-06 04:22:01Z imp $
+# $FreeBSD$
 
 MAN=
 .include <src.opts.mk>

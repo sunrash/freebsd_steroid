@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/gvinum/Makefile 335273 2018-06-17 01:39:22Z eadler $
+# $FreeBSD$
 
 PACKAGE=runtime
 PROG=	gvinum

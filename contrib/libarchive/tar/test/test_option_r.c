@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/tar/test/test_option_r.c 309869 2016-12-12 02:21:56Z ngie $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Also see test_option_q for additional validation of -r support.

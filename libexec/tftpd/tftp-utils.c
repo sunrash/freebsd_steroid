@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/libexec/tftpd/tftp-utils.c 336609 2018-07-22 17:10:12Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/socket.h>
 #include <sys/stat.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/usb/muge/Makefile 333713 2018-05-17 14:04:59Z emaste $
+# $FreeBSD$
 
 S=     ${SRCTOP}/sys
 

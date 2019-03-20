@@ -28,7 +28,7 @@
 /* A driver for the Davicom DM9000 MAC. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/dme/if_dme.c 339735 2018-10-25 17:00:39Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

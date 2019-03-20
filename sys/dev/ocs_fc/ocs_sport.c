@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs_sport.c 334945 2018-06-11 07:57:32Z dim $
+ * $FreeBSD$
  */
 
 /**

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/ipsec.c 336676 2018-07-24 16:35:52Z andrew $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: ipsec.c,v 1.103 2001/05/24 07:14:18 sakane Exp $	*/
 
 /*-

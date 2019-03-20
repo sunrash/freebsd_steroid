@@ -27,7 +27,7 @@
  * those of the authors and should not be interpreted as representing official
  * policies, either expressed or implied, of the FreeBSD Project.
  *
- * $FreeBSD: releng/12.0/sys/dev/sfxge/sfxge_ioc.h 300607 2016-05-24 12:16:57Z arybchik $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_SFXGE_IOC_H

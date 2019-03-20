@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/atags.h 333142 2018-05-01 16:21:01Z imp $
+ * $FreeBSD$
  */
 
 #ifndef	__MACHINE_ATAGS_H__

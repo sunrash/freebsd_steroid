@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/tcp.d 336285 2018-07-14 17:12:04Z tuexen $
+ * $FreeBSD$
  */
 /*
  * Copyright (c) 2010, Oracle and/or its affiliates. All rights reserved.

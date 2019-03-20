@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/libefi/delay.c 113038 2003-04-03 21:36:33Z obrien $");
+__FBSDID("$FreeBSD$");
 
 #include <efi.h>
 #include <efilib.h>
@@ -33,15 +33,5 @@ __FBSDID("$FreeBSD: releng/12.0/stand/efi/libefi/delay.c 113038 2003-04-03 21:36
 void
 delay(int usecs)
 {
-	static EFI_EVENT ev = 0;
-	UINTN junk;
-
-	if (!ev) {
-		if (BS->CreateEvent(EVT_TIMER, TPL_APPLICATION, 0, 0, &ev)
-		    != EFI_SUCCESS)
-			return;
-	}
-
-	BS->SetTimer(ev, TimerRelative, usecs * 10);
-	BS->WaitForEvent(1, &ev, &junk);
+	BS->Stall(usecs);
 }

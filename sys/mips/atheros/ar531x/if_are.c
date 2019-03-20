@@ -32,7 +32,7 @@
 #include "opt_ar531x.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/atheros/ar531x/if_are.c 317868 2017-05-06 06:06:11Z adrian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * AR531x Ethernet interface driver

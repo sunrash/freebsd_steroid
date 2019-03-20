@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libclang_rt/stats_client/Makefile 305364 2016-09-03 21:41:29Z dim $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

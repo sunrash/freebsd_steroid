@@ -29,7 +29,7 @@ you didn't get a copy, you may request one from <license@inner.net>.
 		Bug fixes.
 	Created at NRL for OPIE 2.2.
 
-$FreeBSD: releng/12.0/contrib/opie/libopie/generator.c 257264 2013-10-28 18:24:31Z sbruno $
+$FreeBSD$
 */
 
 #include "opie_cfg.h"

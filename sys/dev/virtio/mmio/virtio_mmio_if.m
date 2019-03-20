@@ -27,7 +27,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/virtio/mmio/virtio_mmio_if.m 285091 2015-07-03 14:13:16Z br $
+# $FreeBSD$
 #
 
 #include <sys/types.h>

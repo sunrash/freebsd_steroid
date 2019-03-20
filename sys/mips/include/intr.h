@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/include/intr.h 326079 2017-11-21 23:15:20Z landonf $
+ * $FreeBSD$
  *
  */
 

@@ -49,7 +49,7 @@
     ********************************************************************* */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cfe/cfe_api.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/cfe/cfe_api.h>
 #include <dev/cfe/cfe_api_int.h>

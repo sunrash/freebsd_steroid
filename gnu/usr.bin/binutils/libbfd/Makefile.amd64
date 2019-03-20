@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/libbfd/Makefile.amd64 323365 2017-09-09 13:18:32Z jonathan $
+# $FreeBSD$
 
 .include "${.CURDIR}/Makefile.i386"
 

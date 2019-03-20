@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/sys/modules/ixl/Makefile 339338 2018-10-12 22:40:54Z erj $
+#$FreeBSD$
 
 .PATH:  ${SRCTOP}/sys/dev/ixl
 

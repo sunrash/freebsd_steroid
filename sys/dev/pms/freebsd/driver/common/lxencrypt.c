@@ -18,7 +18,7 @@
 *LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
 *SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 *
-* $FreeBSD: releng/12.0/sys/dev/pms/freebsd/driver/common/lxencrypt.c 324811 2017-10-21 07:23:45Z rlibby $
+* $FreeBSD$
 *
 *******************************************************************************/
 /*******************************************************************************

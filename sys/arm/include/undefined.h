@@ -44,7 +44,7 @@
  *
  * Created      : 08/02/95
  *
- * $FreeBSD: releng/12.0/sys/arm/include/undefined.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 

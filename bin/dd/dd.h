@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)dd.h	8.3 (Berkeley) 4/2/94
- * $FreeBSD: releng/12.0/bin/dd/dd.h 337505 2018-08-08 21:37:02Z kevans $
+ * $FreeBSD$
  */
 
 /* Input/output stream state. */
@@ -103,3 +103,7 @@ typedef struct {
 #define	C_PROGRESS	0x40000000
 
 #define	C_PARITY	(C_PAREVEN | C_PARODD | C_PARNONE | C_PARSET)
+
+#define	BISZERO(p, s)	((s) > 0 && *((const char *)p) == 0 && !memcmp( \
+			    (const void *)(p), (const void *) \
+			    ((const char *)p + 1), (s) - 1))

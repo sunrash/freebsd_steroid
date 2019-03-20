@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/rdma/krping/Makefile 326169 2017-11-24 14:50:28Z hselasky $
+# $FreeBSD$
 .PATH: ${SRCTOP}/sys/contrib/rdma/krping
 
 KMOD= krping

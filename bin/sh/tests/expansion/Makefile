@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/Makefile 333927 2018-05-20 17:25:52Z jilles $
+# $FreeBSD$
 
 PACKAGE=	tests
 
@@ -21,6 +21,7 @@ ${PACKAGE}FILES+=	arith11.0
 ${PACKAGE}FILES+=	arith12.0
 ${PACKAGE}FILES+=	arith13.0
 ${PACKAGE}FILES+=	arith14.0
+${PACKAGE}FILES+=	arith15.0
 ${PACKAGE}FILES+=	assign1.0
 ${PACKAGE}FILES+=	cmdsubst1.0
 ${PACKAGE}FILES+=	cmdsubst2.0
@@ -86,6 +87,7 @@ ${PACKAGE}FILES+=	plus-minus7.0
 ${PACKAGE}FILES+=	plus-minus8.0
 ${PACKAGE}FILES+=	plus-minus9.0
 ${PACKAGE}FILES+=	question1.0
+${PACKAGE}FILES+=	question2.0
 ${PACKAGE}FILES+=	readonly1.0
 ${PACKAGE}FILES+=	redir1.0
 ${PACKAGE}FILES+=	set-u1.0

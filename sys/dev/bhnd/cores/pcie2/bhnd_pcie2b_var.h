@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/pcie2/bhnd_pcie2b_var.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_CORES_PCIE2_BHND_PCIE2BVAR_H_

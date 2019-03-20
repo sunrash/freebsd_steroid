@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/security/mac_veriexec/mac_veriexec_internal.h 336286 2018-07-14 17:15:28Z stevek $
+ * $FreeBSD$
  *
  * Copyright (c) 2011, 2012, 2013, 2015, 2016, Juniper Networks, Inc.
  * All rights reserved.

@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_environment.c 336217 2018-07-12 02:51:50Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -249,6 +249,7 @@ init_static_kenv(char *buf, size_t len)
 {
 	char *eval;
 
+	KASSERT(!dynamic_kenv, ("kenv: dynamic_kenv already initialized"));
 	/*
 	 * Give the static environment a chance to disable the loader(8)
 	 * environment first.  This is done with loader_env.disabled=1.
@@ -839,10 +840,13 @@ getenv_quad(const char *name, quad_t *data)
 	switch (vtp[0]) {
 	case 't': case 'T':
 		iv *= 1024;
+		/* FALLTHROUGH */
 	case 'g': case 'G':
 		iv *= 1024;
+		/* FALLTHROUGH */
 	case 'm': case 'M':
 		iv *= 1024;
+		/* FALLTHROUGH */
 	case 'k': case 'K':
 		iv *= 1024;
 	case '\0':

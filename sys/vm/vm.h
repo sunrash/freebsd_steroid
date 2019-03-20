@@ -57,7 +57,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/vm/vm.h 331605 2018-03-27 03:27:02Z jeff $
+ * $FreeBSD$
  */
 
 #ifndef VM_H

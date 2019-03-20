@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/machdep.h 322361 2017-08-10 14:18:09Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_MACHDEP_H_

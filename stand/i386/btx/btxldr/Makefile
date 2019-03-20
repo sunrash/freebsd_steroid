@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/i386/btx/btxldr/Makefile 328769 2018-02-02 06:32:26Z imp $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 
@@ -17,6 +17,3 @@ ORG=${LOADER_ADDRESS}
 LDFLAGS+=${LDFLAGS_BIN}
 
 .include <bsd.prog.mk>
-
-# XXX: clang integrated-as doesn't grok .codeNN directives yet
-CFLAGS.btxldr.S=	${CLANG_NO_IAS}

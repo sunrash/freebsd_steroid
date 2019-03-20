@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)pathnames.h	8.2 (Berkeley) 3/27/94
- *	$FreeBSD: releng/12.0/sbin/mount/pathnames.h 326025 2017-11-20 19:49:47Z pfg $
+ *	$FreeBSD$
  */
 
 #define	_PATH_MOUNTDPID	"/var/run/mountd.pid"

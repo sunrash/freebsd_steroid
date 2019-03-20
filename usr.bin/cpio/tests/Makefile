@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/cpio/tests/Makefile 324148 2017-10-01 00:40:23Z mm $
+# $FreeBSD$
 
 PACKAGE=	tests
 

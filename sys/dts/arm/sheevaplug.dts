@@ -28,7 +28,7 @@
  *
  * Marvell SheevaPlug Device Tree Source.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/sheevaplug.dts 333031 2018-04-26 19:00:48Z mw $
+ * $FreeBSD$
  */
 
 /dts-v1/;

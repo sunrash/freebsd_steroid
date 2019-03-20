@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ppc/ppc.c 332489 2018-04-13 20:30:49Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ppc.h"
 

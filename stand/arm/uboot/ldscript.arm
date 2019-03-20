@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/arm/uboot/ldscript.arm 328156 2018-01-18 22:46:47Z kevans $ */
+/* $FreeBSD$ */
 
 OUTPUT_ARCH(arm)
 ENTRY(_start)

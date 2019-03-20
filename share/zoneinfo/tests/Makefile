@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/zoneinfo/tests/Makefile 320703 2017-07-06 04:30:06Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

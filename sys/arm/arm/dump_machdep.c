@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/dump_machdep.c 336783 2018-07-27 21:25:01Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_watchdog.h"
 

@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/firewire/fwohci_pci.c 331858 2018-04-01 00:25:47Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define BOUNCE_BUFFER_TEST	0
 

@@ -1,11 +1,11 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_log.c 304964 2016-08-28 19:35:29Z dim $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
  *
  * See the IPFILTER.LICENCE file for details on licencing.
  *
- * $FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_log.c 304964 2016-08-28 19:35:29Z dim $
+ * $FreeBSD$
  * Id: ip_log.c,v 2.75.2.19 2007/09/09 11:32:06 darrenr Exp $
  */
 #include <sys/param.h>
@@ -97,14 +97,8 @@ struct file;
 #include <netinet/in.h>
 #ifdef __sgi
 # include <sys/ddi.h>
-# ifdef IFF_DRVRLOCK /* IRIX6 */
-#  include <sys/hashing.h>
-# endif
 #endif
-#if !defined(__hpux) && !defined(linux) && \
-    !(defined(__sgi) && !defined(IFF_DRVRLOCK)) /*IRIX<6*/
 # include <netinet/in_var.h>
-#endif
 #include <netinet/in_systm.h>
 #include <netinet/ip.h>
 #include <netinet/tcp.h>

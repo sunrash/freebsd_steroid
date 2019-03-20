@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_portacl/mac_portacl.c 329994 2018-02-25 23:10:13Z eugen $
+ * $FreeBSD$
  */
 
 /*
@@ -419,7 +419,7 @@ rules_check(struct ucred *cred, int family, int type, u_int16_t port)
 	mtx_unlock(&rule_mtx);
 
 	if (error != 0 && portacl_suser_exempt != 0)
-		error = priv_check_cred(cred, PRIV_NETINET_RESERVEDPORT, 0);
+		error = priv_check_cred(cred, PRIV_NETINET_RESERVEDPORT);
 
 	return (error);
 }

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powermac/smu.c 326261 2017-11-27 15:09:59Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -630,7 +630,8 @@ static driver_t doorbell_driver = {
 
 static devclass_t doorbell_devclass;
 
-DRIVER_MODULE(smudoorbell, macgpio, doorbell_driver, doorbell_devclass, 0, 0);
+EARLY_DRIVER_MODULE(smudoorbell, macgpio, doorbell_driver, doorbell_devclass,
+    0, 0, BUS_PASS_SUPPORTDEV);
 
 static int
 doorbell_probe(device_t dev)

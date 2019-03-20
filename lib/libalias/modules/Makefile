@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libalias/modules/Makefile 312454 2017-01-20 03:34:59Z ngie $
+# $FreeBSD$
 
 .include "${SRCTOP}/sys/modules/libalias/modules/modules.inc"
 

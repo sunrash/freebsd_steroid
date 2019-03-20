@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * __FBSDID("$FreeBSD: releng/12.0/sys/netinet/tcp_stacks/sack_filter.h 334804 2018-06-07 18:18:13Z rrs $");
+ * __FBSDID("$FreeBSD$");
  */
 
 /*

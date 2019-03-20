@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/delay.c 340269 2018-11-08 22:39:38Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /* Generic x86 routines to handle delay */
 

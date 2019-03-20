@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/libthr/pthread.map 337983 2018-08-17 18:34:07Z kib $
+ * $FreeBSD$
  */
 
 /*

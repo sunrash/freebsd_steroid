@@ -1,4 +1,4 @@
-#	$FreeBSD: releng/12.0/libexec/tftp-proxy/Makefile 314653 2017-03-04 11:28:03Z ngie $
+#	$FreeBSD$
 
 .PATH:	${SRCTOP}/contrib/pf/tftp-proxy
 

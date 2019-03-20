@@ -21,7 +21,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.\" $FreeBSD: releng/12.0/share/doc/papers/contents/contents.ms 325096 2017-10-29 08:17:03Z eadler $
+.\" $FreeBSD$
 .\"
 .OH '''Papers Contents'
 .EH 'Papers Contents'''

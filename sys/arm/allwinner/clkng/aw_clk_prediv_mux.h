@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/allwinner/clkng/aw_clk_prediv_mux.h 314303 2017-02-26 16:00:20Z manu $
+ * $FreeBSD$
  */
 
 #ifndef	__AW_CLK_PREDIV_MUX_H__

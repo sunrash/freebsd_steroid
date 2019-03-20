@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/smartpqi/smartpqi_defines.h 336201 2018-07-11 16:44:14Z sbruno $ */
+/* $FreeBSD$ */
 
 #ifndef _PQI_DEFINES_H
 #define _PQI_DEFINES_H

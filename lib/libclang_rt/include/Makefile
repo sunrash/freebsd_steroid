@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libclang_rt/include/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 
@@ -16,6 +16,7 @@ INCS+=		hwasan_interface.h
 INCS+=		linux_syscall_hooks.h
 INCS+=		lsan_interface.h
 INCS+=		msan_interface.h
+INCS+=		netbsd_syscall_hooks.h
 INCS+=		scudo_interface.h
 INCS+=		tsan_interface.h
 INCS+=		tsan_interface_atomic.h

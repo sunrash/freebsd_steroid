@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/sysreg.h 326850 2017-12-14 13:19:43Z andrew $
+ * $FreeBSD$
  */
 
 /*

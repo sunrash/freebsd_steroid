@@ -28,7 +28,7 @@
 #include "opt_platform.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/vm_machdep.c 335649 2018-06-25 22:36:25Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -78,6 +78,7 @@ cpu_fork(struct thread *td1, struct proc *p2, struct thread *td2, int flags)
 		 * this may not have happened.
 		 */
 		td1->td_pcb->pcb_tpidr_el0 = READ_SPECIALREG(tpidr_el0);
+		td1->td_pcb->pcb_tpidrro_el0 = READ_SPECIALREG(tpidrro_el0);
 #ifdef VFP
 		if ((td1->td_pcb->pcb_fpflags & PCB_FP_STARTED) != 0)
 			vfp_save_state(td1, td1->td_pcb);
@@ -97,7 +98,7 @@ cpu_fork(struct thread *td1, struct proc *p2, struct thread *td2, int flags)
 	bcopy(td1->td_frame, tf, sizeof(*tf));
 	tf->tf_x[0] = 0;
 	tf->tf_x[1] = 0;
-	tf->tf_spsr = 0;
+	tf->tf_spsr = td1->td_frame->tf_spsr & PSR_M_32;
 
 	td2->td_frame = tf;
 
@@ -111,7 +112,7 @@ cpu_fork(struct thread *td1, struct proc *p2, struct thread *td2, int flags)
 
 	/* Setup to release spin count in fork_exit(). */
 	td2->td_md.md_spinlock_count = 1;
-	td2->td_md.md_saved_daif = 0;
+	td2->td_md.md_saved_daif = td1->td_md.md_saved_daif & ~DAIF_I_MASKED;
 }
 
 void
@@ -182,7 +183,7 @@ cpu_copy_thread(struct thread *td, struct thread *td0)
 
 	/* Setup to release spin count in fork_exit(). */
 	td->td_md.md_spinlock_count = 1;
-	td->td_md.md_saved_daif = 0;
+	td->td_md.md_saved_daif = td0->td_md.md_saved_daif & ~DAIF_I_MASKED;
 }
 
 /*
@@ -195,7 +196,11 @@ cpu_set_upcall(struct thread *td, void (*entry)(void *), void *arg,
 {
 	struct trapframe *tf = td->td_frame;
 
-	tf->tf_sp = STACKALIGN((uintptr_t)stack->ss_sp + stack->ss_size);
+	/* 32bits processes use r13 for sp */
+	if (td->td_frame->tf_spsr & PSR_M_32)
+		tf->tf_x[13] = STACKALIGN((uintptr_t)stack->ss_sp + stack->ss_size);
+	else
+		tf->tf_sp = STACKALIGN((uintptr_t)stack->ss_sp + stack->ss_size);
 	tf->tf_elr = (register_t)entry;
 	tf->tf_x[0] = (register_t)arg;
 }
@@ -209,9 +214,19 @@ cpu_set_user_tls(struct thread *td, void *tls_base)
 		return (EINVAL);
 
 	pcb = td->td_pcb;
-	pcb->pcb_tpidr_el0 = (register_t)tls_base;
-	if (td == curthread)
-		WRITE_SPECIALREG(tpidr_el0, tls_base);
+	if (td->td_frame->tf_spsr & PSR_M_32) {
+		/* 32bits arm stores the user TLS into tpidrro */
+		pcb->pcb_tpidrro_el0 = (register_t)tls_base;
+		pcb->pcb_tpidr_el0 = (register_t)tls_base;
+		if (td == curthread) {
+			WRITE_SPECIALREG(tpidrro_el0, tls_base);
+			WRITE_SPECIALREG(tpidr_el0, tls_base);
+		}
+	} else {
+		pcb->pcb_tpidr_el0 = (register_t)tls_base;
+		if (td == curthread)
+			WRITE_SPECIALREG(tpidr_el0, tls_base);
+	}
 
 	return (0);
 }
@@ -228,7 +243,7 @@ cpu_thread_alloc(struct thread *td)
 	td->td_pcb = (struct pcb *)(td->td_kstack +
 	    td->td_kstack_pages * PAGE_SIZE) - 1;
 	td->td_frame = (struct trapframe *)STACKALIGN(
-	    td->td_pcb - 1);
+	    (struct trapframe *)td->td_pcb - 1);
 }
 
 void

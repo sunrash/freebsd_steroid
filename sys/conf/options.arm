@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/sys/conf/options.arm 336813 2018-07-28 11:00:45Z andrew $
+#$FreeBSD$
 ARMV6			opt_global.h
 ARMV7			opt_global.h
 ARM_CACHE_LOCK_ENABLE	opt_global.h

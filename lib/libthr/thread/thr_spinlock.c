@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_spinlock.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <pthread.h>
@@ -58,7 +58,7 @@ static int			initialized;
 static void	init_spinlock(spinlock_t *lck);
 
 /*
- * These are for compatability only.  Spinlocks of this type
+ * These are for compatibility only.  Spinlocks of this type
  * are deprecated.
  */
 
@@ -76,7 +76,7 @@ __thr_spinlock(spinlock_t *lck)
 {
 	struct spinlock_extra *_extra;
 
-	if (!__isthreaded)
+	if (!_thr_isthreaded())
 		PANIC("Spinlock called when not threaded.");
 	if (!initialized)
 		PANIC("Spinlocks not initialized.");

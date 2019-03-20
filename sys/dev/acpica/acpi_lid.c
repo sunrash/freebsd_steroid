@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpica/acpi_lid.c 315166 2017-03-12 18:00:02Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_acpi.h"
 #include <sys/param.h>
@@ -88,13 +88,14 @@ static int
 acpi_lid_probe(device_t dev)
 {
     static char *lid_ids[] = { "PNP0C0D", NULL };
+    int rv;
 
-    if (acpi_disabled("lid") ||
-	ACPI_ID_PROBE(device_get_parent(dev), dev, lid_ids) == NULL)
+    if (acpi_disabled("lid"))
 	return (ENXIO);
-
-    device_set_desc(dev, "Control Method Lid Switch");
-    return (0);
+    rv = ACPI_ID_PROBE(device_get_parent(dev), dev, lid_ids, NULL);
+    if (rv <= 0)
+	device_set_desc(dev, "Control Method Lid Switch");
+    return (rv);
 }
 
 static int

@@ -57,7 +57,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/sym/sym_fw.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef	SYM_FW_H
 #define	SYM_FW_H

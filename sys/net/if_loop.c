@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)if_loop.c	8.2 (Berkeley) 1/9/95
- * $FreeBSD: releng/12.0/sys/net/if_loop.c 336676 2018-07-24 16:35:52Z andrew $
+ * $FreeBSD$
  */
 
 /*

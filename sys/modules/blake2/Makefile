@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/blake2/Makefile 333819 2018-05-19 00:04:01Z mmacy $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/contrib/libb2
 .PATH:	${SRCTOP}/sys/crypto/blake2

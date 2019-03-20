@@ -1,5 +1,5 @@
 #	Makefile.inc,v 1.2 1994/09/13 21:26:01 wollman Exp
-# $FreeBSD: releng/12.0/lib/libc/stdtime/Makefile.inc 312451 2017-01-20 03:23:24Z ngie $
+# $FreeBSD$
 
 .PATH:	${LIBC_SRCTOP}/stdtime ${SRCTOP}/contrib/tzcode/stdtime
 

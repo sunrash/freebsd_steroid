@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_BHYVE 277727 2015-01-26 06:44:48Z ngie $
+.\" $FreeBSD$
 Set to not build or install
 .Xr bhyve 8 ,
 associated utilities, and examples.

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/powerpc/aim/locore32.S 331254 2018-03-20 17:58:51Z emaste $ */
+/* $FreeBSD$ */
 
 /*-
  * Copyright (C) 2010-2016 Nathan Whitehorn
@@ -33,6 +33,7 @@
 #include <machine/param.h>
 #include <machine/spr.h>
 #include <machine/asm.h>
+#include <machine/vmparam.h>
 #include "opt_platform.h"
 
 /* Locate the per-CPU data structure */

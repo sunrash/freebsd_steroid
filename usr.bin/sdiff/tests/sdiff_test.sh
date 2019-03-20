@@ -1,5 +1,5 @@
 # $NetBSD: t_sdiff.sh,v 1.1 2012/03/17 16:33:15 jruoho Exp $
-# $FreeBSD: releng/12.0/usr.bin/sdiff/tests/sdiff_test.sh 315776 2017-03-23 03:28:24Z ngie $
+# $FreeBSD$
 #
 # Copyright (c) 2008, 2009 The NetBSD Foundation, Inc.
 # All rights reserved.

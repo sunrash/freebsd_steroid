@@ -30,7 +30,7 @@
 #include "opt_inet6.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/nlm/nlm_prot_impl.c 329097 2018-02-10 01:09:22Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/fail.h>

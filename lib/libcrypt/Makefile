@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/lib/libcrypt/Makefile 336126 2018-07-09 08:19:04Z cem $
+# $FreeBSD$
 #
 
 PACKAGE=lib${LIB}

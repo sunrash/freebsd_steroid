@@ -29,7 +29,7 @@
  * $Id: //depot/users/kenm/FreeBSD-test2/sys/cam/ctl/ctl_scsi_all.h#2 $
  */
 
-__FBSDID("$FreeBSD: releng/12.0/sys/cam/ctl/ctl_scsi_all.h 326265 2017-11-27 15:12:43Z pfg $");
+__FBSDID("$FreeBSD$");
 
 __BEGIN_DECLS
 const char *	ctl_scsi_status_string(struct ctl_scsiio *ctsio);

@@ -11,7 +11,7 @@
 #
 # Sort options by "Matthew Emmerton" <matt@gsicomp.on.ca>
 #
-# $FreeBSD: releng/12.0/tools/tools/kernxref/kernxref.sh 326408 2017-11-30 20:33:45Z pfg $
+# $FreeBSD$
 #
 # This shell script will make a cross reference of the symbols of a kernel.
 #

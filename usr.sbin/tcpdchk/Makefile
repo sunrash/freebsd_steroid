@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/tcpdchk/Makefile 314458 2017-03-01 04:17:18Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

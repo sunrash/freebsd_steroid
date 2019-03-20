@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/ficl/fileaccess.c 231042 2012-02-05 20:00:39Z rpaulo $ */
+/* $FreeBSD$ */
 
 #include <errno.h>
 #include <stdlib.h>

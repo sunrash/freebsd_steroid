@@ -27,7 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *	from: OpenBSD: schizoreg.h,v 1.8 2005/05/19 18:28:59 mickey Exp
- * $FreeBSD: releng/12.0/sys/sparc64/pci/schizoreg.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SPARC64_PCI_SCHIZOREG_H_

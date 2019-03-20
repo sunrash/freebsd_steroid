@@ -25,7 +25,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man3/timeradd.3 336914 2018-07-30 15:46:40Z asomers $
+.\" $FreeBSD$
 .\"
 .Dd July 30, 2018
 .Dt TIMERADD 3
@@ -94,7 +94,7 @@ structure is defined in
 as:
 .Bd -literal
 struct timespec {
-	time_t tv_nsec;		/* seconds */
+	time_t tv_sec;		/* seconds */
 	long   tv_nsec;		/* and nanoseconds */
 };
 .Ed

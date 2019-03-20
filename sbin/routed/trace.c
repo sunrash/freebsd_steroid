@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/routed/trace.c 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #define	RIPCMDS
@@ -41,7 +41,7 @@
 #ifdef __NetBSD__
 __RCSID("$NetBSD$");
 #elif defined(__FreeBSD__)
-__RCSID("$FreeBSD: releng/12.0/sbin/routed/trace.c 326025 2017-11-20 19:49:47Z pfg $");
+__RCSID("$FreeBSD$");
 #else
 __RCSID("$Revision: 2.27 $");
 #ident "$Revision: 2.27 $"

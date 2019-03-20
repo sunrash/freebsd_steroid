@@ -5,7 +5,7 @@
  *
  * Written by Artur Grabowski <art@openbsd.org> 2002 Public Domain.
  *
- * $FreeBSD: releng/12.0/tests/sys/file/dup_test.c 337930 2018-08-16 22:04:00Z asomers $
+ * $FreeBSD$
  */
 
 /*

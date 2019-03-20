@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/stripe/g_stripe.h 326270 2017-11-27 15:17:37Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_G_STRIPE_H_
@@ -76,7 +76,7 @@ struct g_stripe_softc {
 	uint32_t	 sc_id;		/* stripe unique ID */
 	struct g_consumer **sc_disks;
 	uint16_t	 sc_ndisks;
-	uint32_t	 sc_stripesize;
+	off_t		 sc_stripesize;
 	uint32_t	 sc_stripebits;
 	struct mtx	 sc_lock;
 };

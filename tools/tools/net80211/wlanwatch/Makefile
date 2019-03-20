@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/net80211/wlanwatch/Makefile 265420 2014-05-06 04:22:01Z imp $
+# $FreeBSD$
 
 PROG=	wlanwatch
 BINDIR=	/usr/local/bin

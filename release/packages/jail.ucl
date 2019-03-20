@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/packages/jail.ucl 308945 2016-11-21 23:29:28Z gjb $
+# $FreeBSD$
 #
 
 name = "FreeBSD-%PKGNAME%"

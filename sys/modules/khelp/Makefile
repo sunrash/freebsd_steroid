@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/khelp/Makefile 307082 2016-10-12 02:16:42Z jtl $
+# $FreeBSD$
 
 SUBDIR=	
 

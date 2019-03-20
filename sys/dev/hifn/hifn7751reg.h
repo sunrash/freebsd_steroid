@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/hifn/hifn7751reg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*	$OpenBSD: hifn7751reg.h,v 1.35 2002/04/08 17:49:42 jason Exp $	*/
 
 /*-

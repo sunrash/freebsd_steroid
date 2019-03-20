@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/invocation/Makefile 322455 2017-08-13 14:36:10Z jilles $
+# $FreeBSD$
 
 PACKAGE=	tests
 

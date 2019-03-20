@@ -1,6 +1,6 @@
-# $FreeBSD: releng/12.0/sys/dts/arm64/overlays/Makefile 338294 2018-08-24 15:00:36Z manu $
+# $FreeBSD$
 
-DTSO!=ls *.dtso
+DTSO!=ls ${.CURDIR}/*.dtso
 
 all: test-dtso
 

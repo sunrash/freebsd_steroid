@@ -28,7 +28,7 @@
  *
  *	from: NetBSD: gemreg.h,v 1.9 2006/11/24 13:01:07 martin Exp
  *
- * $FreeBSD: releng/12.0/sys/dev/gem/if_gemreg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_IF_GEMREG_H

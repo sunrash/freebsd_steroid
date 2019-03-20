@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mlx5ib/Makefile 334332 2018-05-29 14:04:57Z hselasky $
+# $FreeBSD$
 .PATH:	${SRCTOP}/sys/dev/mlx5/mlx5_ib
 
 KMOD=mlx5ib
@@ -22,6 +22,10 @@ CFLAGS+= -I${SRCTOP}/sys/ofed/include
 CFLAGS+= -I${SRCTOP}/sys/ofed/include/uapi
 CFLAGS+= -I${SRCTOP}/sys/compat/linuxkpi/common/include
 CFLAGS+= -DCONFIG_INFINIBAND_USER_MEM
+
+.if defined(CONFIG_BUILD_FPGA)
+CFLAGS+= -DCONFIG_MLX5_FPGA
+.endif
 
 .include <bsd.kmod.mk>
 

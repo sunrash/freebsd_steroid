@@ -25,7 +25,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/mips/gen/_ctx_start.S 328893 2018-02-05 18:10:28Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This requires makecontext() to setup a valid GP for locating

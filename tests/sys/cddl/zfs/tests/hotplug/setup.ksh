@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/hotplug/setup.ksh 330994 2018-03-15 12:42:19Z avg $
+# $FreeBSD$
 
 #
 # Copyright 2008 Sun Microsystems, Inc.  All rights reserved.

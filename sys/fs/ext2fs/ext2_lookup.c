@@ -40,7 +40,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ufs_lookup.c	8.6 (Berkeley) 4/1/94
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2_lookup.c 341085 2018-11-27 17:58:25Z markj $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -223,6 +223,8 @@ ext2_readdir(struct vop_readdir_args *ap)
 			dstdp.d_fileno = dp->e2d_ino;
 			dstdp.d_reclen = GENERIC_DIRSIZ(&dstdp);
 			bcopy(dp->e2d_name, dstdp.d_name, dstdp.d_namlen);
+			/* NOTE: d_off is the offset of the *next* entry. */
+			dstdp.d_off = offset + dp->e2d_reclen;
 			dirent_terminate(&dstdp);
 			if (dstdp.d_reclen > uio->uio_resid) {
 				if (uio->uio_resid == startresid)

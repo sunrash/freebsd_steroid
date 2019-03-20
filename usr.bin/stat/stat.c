@@ -37,7 +37,7 @@ __RCSID("$NetBSD: stat.c,v 1.33 2011/01/15 22:54:10 njoly Exp $"
 #endif
 #endif
 
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/stat/stat.c 337600 2018-08-11 02:56:43Z cem $");
+__FBSDID("$FreeBSD$");
 
 #if HAVE_CONFIG_H
 #include "config.h" 

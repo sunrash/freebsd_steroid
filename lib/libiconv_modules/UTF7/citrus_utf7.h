@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/UTF7/citrus_utf7.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_utf7.h,v 1.1 2005/03/05 18:05:15 tnozaki Exp $	*/
 
 /*-

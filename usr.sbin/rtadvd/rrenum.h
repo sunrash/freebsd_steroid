@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/rtadvd/rrenum.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: rrenum.h,v 1.3 2001/01/21 15:37:14 itojun Exp $	*/
 
 /*-

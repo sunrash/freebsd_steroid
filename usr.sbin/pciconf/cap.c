@@ -32,7 +32,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/usr.sbin/pciconf/cap.c 327581 2018-01-05 07:29:02Z imp $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/types.h>

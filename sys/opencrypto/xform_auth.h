@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/opencrypto/xform_auth.h 337939 2018-08-17 00:30:04Z cem $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: xform.h,v 1.8 2001/08/28 12:20:43 ben Exp $	*/
 
 /*-
@@ -36,6 +36,7 @@
 
 #include <sys/md5.h>
 #include <crypto/sha1.h>
+#include <crypto/sha2/sha224.h>
 #include <crypto/sha2/sha256.h>
 #include <crypto/sha2/sha384.h>
 #include <crypto/sha2/sha512.h>
@@ -89,6 +90,7 @@ union authctx {
 	MD5_CTX md5ctx;
 	SHA1_CTX sha1ctx;
 	RMD160_CTX rmd160ctx;
+	SHA224_CTX sha224ctx;
 	SHA256_CTX sha256ctx;
 	SHA384_CTX sha384ctx;
 	SHA512_CTX sha512ctx;

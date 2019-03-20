@@ -7,7 +7,7 @@
  *  Copyright (c) 1984, 1989, William LeFebvre, Rice University
  *  Copyright (c) 1989, 1990, 1992, William LeFebvre, Northwestern University
  *
- * $FreeBSD: releng/12.0/usr.bin/top/username.c 335043 2018-06-13 08:52:22Z eadler $
+ * $FreeBSD$
  */
 
 /*

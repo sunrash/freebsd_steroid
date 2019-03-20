@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/aarch64/gen/flt_rounds.c 281197 2015-04-07 09:52:14Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

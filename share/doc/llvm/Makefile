@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/doc/llvm/Makefile 314652 2017-03-04 11:26:40Z ngie $
+# $FreeBSD$
 
 SUBDIR=		clang
 

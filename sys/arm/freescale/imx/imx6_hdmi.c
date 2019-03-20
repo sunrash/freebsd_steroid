@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_hdmi.c 324416 2017-10-08 18:38:22Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * HDMI core module

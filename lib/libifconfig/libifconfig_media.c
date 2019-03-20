@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libifconfig/libifconfig_media.c 332895 2018-04-23 21:10:33Z brooks $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/ioctl.h>

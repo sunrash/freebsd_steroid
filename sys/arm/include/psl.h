@@ -43,7 +43,7 @@
  *
  * Created      : 21/07/95
  *
- * $FreeBSD: releng/12.0/sys/arm/include/psl.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PSL_H_

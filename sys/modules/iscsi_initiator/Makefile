@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/iscsi_initiator/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/iscsi_initiator
 KMOD=iscsi_initiator

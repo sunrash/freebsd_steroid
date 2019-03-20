@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/liblzma/Versions.def 278433 2015-02-09 06:20:34Z rpaulo $
+# $FreeBSD$
 
 XZ_5.0 {
 };

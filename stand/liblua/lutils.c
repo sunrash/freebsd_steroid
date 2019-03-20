@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/liblua/lutils.c 339978 2018-10-31 23:08:49Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

@@ -31,7 +31,7 @@
  *
  * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD userland interface
  *
- * $FreeBSD: releng/12.0/sys/dev/mps/mps_ioctl.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 /*-
  * Copyright (c) 2011-2015 LSI Corp.
@@ -61,7 +61,7 @@
  *
  * Avago Technologies (LSI) MPT-Fusion Host Adapter FreeBSD
  *
- * $FreeBSD: releng/12.0/sys/dev/mps/mps_ioctl.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MPS_IOCTL_H_

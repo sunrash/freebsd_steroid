@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/gnu/usr.bin/gdb/kgdb/trgt_amd64.c 330708 2018-03-09 22:58:05Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <machine/pcb.h>

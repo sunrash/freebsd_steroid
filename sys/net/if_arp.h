@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)if_arp.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/net/if_arp.h 332490 2018-04-13 21:18:04Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _NET_IF_ARP_H_

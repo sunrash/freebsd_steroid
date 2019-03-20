@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for dtrace_udp(4) $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/udp 333518 2018-05-12 06:18:15Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

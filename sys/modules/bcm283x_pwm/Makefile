@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bcm283x_pwm/Makefile 328223 2018-01-21 21:27:41Z phk $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/arm/broadcom/bcm2835/
 

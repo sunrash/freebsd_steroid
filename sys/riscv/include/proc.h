@@ -28,7 +28,7 @@
  *
  *      from: @(#)proc.h        7.1 (Berkeley) 5/15/91
  *	from: FreeBSD: src/sys/i386/include/proc.h,v 1.11 2001/06/29
- * $FreeBSD: releng/12.0/sys/riscv/include/proc.h 319871 2017-06-12 20:53:44Z kib $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PROC_H_

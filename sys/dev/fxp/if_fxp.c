@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/fxp/if_fxp.c 338948 2018-09-26 17:12:14Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Intel EtherExpress Pro/100B PCI Fast Ethernet driver
@@ -1627,7 +1627,7 @@ fxp_encap(struct fxp_softc *sc, struct mbuf **m_head)
 		cbp->tbd_number = nseg;
 	/* Configure TSO. */
 	if (m->m_pkthdr.csum_flags & CSUM_TSO) {
-		cbp->tbd[-1].tb_size = htole32(m->m_pkthdr.tso_segsz << 16);
+		cbp->tbdtso.tb_size = htole32(m->m_pkthdr.tso_segsz << 16);
 		cbp->tbd[1].tb_size |= htole32(tcp_payload << 16);
 		cbp->ipcb_ip_schedule |= FXP_IPCB_LARGESEND_ENABLE |
 		    FXP_IPCB_IP_CHECKSUM_ENABLE |

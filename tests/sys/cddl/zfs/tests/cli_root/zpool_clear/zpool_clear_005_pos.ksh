@@ -31,7 +31,7 @@
 # ident	"@(#)replacement_001_pos.ksh	1.4	08/02/27 SMI"
 #
 # $Id$
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zpool_clear/zpool_clear_005_pos.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . $STF_SUITE/include/libtest.kshlib
 . $STF_SUITE/include/libgnop.kshlib

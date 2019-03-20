@@ -40,7 +40,7 @@
 #include "opt_platform.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/mp_machdep.c 339367 2018-10-15 18:56:54Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -181,7 +181,7 @@ riscv64_cpu_attach(device_t dev)
 static void
 release_aps(void *dummy __unused)
 {
-	uintptr_t mask;
+	u_long mask;
 	int cpu, i;
 
 	if (mp_ncpus == 1)
@@ -227,7 +227,6 @@ init_secondary(uint64_t cpu)
 	__asm __volatile("mv gp, %0" :: "r"(pcpup));
 
 	/* Workaround: make sure wfi doesn't halt the hart */
-	intr_disable();
 	csr_set(sie, SIE_SSIE);
 	csr_set(sip, SIE_SSIE);
 
@@ -252,9 +251,6 @@ init_secondary(uint64_t cpu)
 
 	/* Start per-CPU event timers. */
 	cpu_initclocks_ap();
-
-	/* Enable interrupts */
-	intr_enable();
 
 	/* Enable external (PLIC) interrupts */
 	csr_set(sie, SIE_SEIE);

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)kvm.h	8.1 (Berkeley) 6/2/93
- * $FreeBSD: releng/12.0/lib/libkvm/kvm.h 335979 2018-07-05 13:13:48Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _KVM_H_

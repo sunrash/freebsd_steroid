@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/syscons/syscons.c 338324 2018-08-26 12:51:46Z markm $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_syscons.h"
 #include "opt_splash.h"
@@ -291,7 +291,7 @@ ec_putc(int c)
 #ifdef __amd64__
 		fb = KERNBASE + 0xb8000;
 #else /* __i386__ */
-		fb = PMAP_MAP_LOW + 0xb8000;
+		fb = pmap_get_map_low() + 0xb8000;
 #endif
 		xsize = 80;
 		ysize = 25;

@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ctld/ctld.h 333446 2018-05-10 03:50:20Z araujo $
+ * $FreeBSD$
  */
 
 #ifndef CTLD_H

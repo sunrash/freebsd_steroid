@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/libkern/bcmp.c 334534 2018-06-02 18:03:35Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/libkern.h>
 #include <machine/endian.h>

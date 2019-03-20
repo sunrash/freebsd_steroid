@@ -24,11 +24,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/gen/libc_dlopen.c 333449 2018-05-10 06:41:08Z delphij $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/libc_dlopen.c 333449 2018-05-10 06:41:08Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <dlfcn.h>
 #include <stddef.h>

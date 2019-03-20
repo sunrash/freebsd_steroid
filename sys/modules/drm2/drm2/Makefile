@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/drm2/drm2/Makefile 338285 2018-08-24 00:02:00Z imp $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/dev/drm2 ${SRCTOP}/sys/dev/drm2/ttm
 KMOD	= drm2

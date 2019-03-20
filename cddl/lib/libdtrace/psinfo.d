@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2006 John Birrell jb@freebsd.org
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/psinfo.d 329188 2018-02-12 23:53:38Z dteske $
+ * $FreeBSD$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.

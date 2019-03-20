@@ -17,7 +17,7 @@
  *
  * Command line interface for IP firewall facility
  *
- * $FreeBSD: releng/12.0/sbin/ipfw/main.c 331668 2018-03-28 12:44:28Z ae $
+ * $FreeBSD$
  */
 
 #include <sys/wait.h>
@@ -262,7 +262,7 @@ ipfw_main(int oldac, char **oldav)
 	save_av = av;
 
 	optind = optreset = 1;	/* restart getopt() */
-	while ((ch = getopt(ac, av, "abcdefhinNp:qs:STtv")) != -1)
+	while ((ch = getopt(ac, av, "abcdDefhinNp:qs:STtv")) != -1)
 		switch (ch) {
 		case 'a':
 			do_acct = 1;
@@ -281,8 +281,12 @@ ipfw_main(int oldac, char **oldav)
 			co.do_dynamic = 1;
 			break;
 
+		case 'D':
+			co.do_dynamic = 2;
+			break;
+
 		case 'e':
-			co.do_expired = 1;
+			/* nop for compatibility */
 			break;
 
 		case 'f':

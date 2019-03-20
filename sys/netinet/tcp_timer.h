@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)tcp_timer.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/netinet/tcp_timer.h 335924 2018-07-04 02:47:16Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_TCP_TIMER_H_

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/ti/twl/twl_clks.c 326258 2017-11-27 15:04:10Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Texas Instruments TWL4030/TWL5030/TWL60x0/TPS659x0 Power Management.

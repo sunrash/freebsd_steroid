@@ -32,7 +32,7 @@
  *	from: @(#)auth.h 1.17 88/02/08 SMI
  *	from: @(#)auth.h	2.3 88/08/07 4.0 RPCSRC
  *	from: @(#)auth.h	1.43 	98/02/02 SMI
- * $FreeBSD: releng/12.0/include/rpc/auth.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 /*

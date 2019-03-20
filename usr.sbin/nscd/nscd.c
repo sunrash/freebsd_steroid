@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/nscd/nscd.c 315213 2017-03-13 20:34:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/event.h>
@@ -405,6 +405,12 @@ process_socket_event(struct kevent *event_data, struct runtime_env *env,
 		 * process_socket_event).
 		 */
 		if (qstate->kevent_watermark > MAX_SOCKET_IO_SIZE) {
+#if 0
+			/*
+			 * XXX: Uncommenting this code makes nscd(8) fail for
+			 *      entries larger than a few kB, causing few second
+			 *      worth of delay for each call to retrieve them.
+			 */
 			if (qstate->io_buffer != NULL)
 				free(qstate->io_buffer);
 
@@ -421,6 +427,7 @@ process_socket_event(struct kevent *event_data, struct runtime_env *env,
 
 			if (qstate->kevent_filter == EVFILT_READ)
 				qstate->use_alternate_io = 1;
+#endif
 
 			qstate->io_buffer_watermark = MAX_SOCKET_IO_SIZE;
 			EV_SET(&eventlist[1], event_data->ident,

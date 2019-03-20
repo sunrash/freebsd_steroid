@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/rtld_utrace.h 314436 2017-02-28 23:42:47Z imp $
+ * $FreeBSD$
  */
 
 #ifndef RTLD_UTRACE_H

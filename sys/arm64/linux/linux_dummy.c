@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/linux/linux_dummy.c 335235 2018-06-15 19:42:52Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -161,7 +161,7 @@ linux_ ## s ## xattr(						\
     struct thread *td, struct linux_ ## s ## xattr_args *arg)	\
 {								\
 								\
-	return (ENOATTR);					\
+	return (EOPNOTSUPP);					\
 }
 DUMMY_XATTR(set);
 DUMMY_XATTR(lset);

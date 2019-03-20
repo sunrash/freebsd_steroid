@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)disklabel.c	8.2 (Berkeley) 5/3/95");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/disklabel.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #define DKTYPENAMES

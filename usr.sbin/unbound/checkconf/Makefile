@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/unbound/checkconf/Makefile 333573 2018-05-12 17:10:36Z des $
+# $FreeBSD$
 
 # Vendor sources and generated files
 LDNSDIR= ${SRCTOP}/contrib/ldns

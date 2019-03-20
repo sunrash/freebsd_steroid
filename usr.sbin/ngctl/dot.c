@@ -35,7 +35,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ngctl/dot.c 288082 2015-09-22 01:31:01Z cem $
+ * $FreeBSD$
  */
 
 #include <err.h>

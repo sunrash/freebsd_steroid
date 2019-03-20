@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_core/wq.h 336451 2018-07-18 10:12:53Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef __MLX5_WQ_H__
@@ -42,11 +42,22 @@ struct mlx5_wq_ctrl {
 	struct mlx5_db		db;
 };
 
+struct mlx5_frag_wq_ctrl {
+	struct mlx5_core_dev	*mdev;
+	struct mlx5_frag_buf	frag_buf;
+	struct mlx5_db		db;
+};
+
 struct mlx5_wq_cyc {
 	void			*buf;
 	__be32			*db;
 	u16			sz_m1;
 	u8			log_stride;
+};
+
+struct mlx5_wq_qp {
+	struct mlx5_wq_cyc	rq;
+	struct mlx5_wq_cyc	sq;
 };
 
 struct mlx5_cqwq {

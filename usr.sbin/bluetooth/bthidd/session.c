@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: session.c,v 1.3 2006/09/07 21:06:53 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidd/session.c 333113 2018-04-30 12:16:54Z wulf $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/sed/tests/Makefile 312521 2017-01-20 07:11:21Z ngie $
+# $FreeBSD$
 
 PACKAGE=	tests
 

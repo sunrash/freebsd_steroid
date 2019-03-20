@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/twa/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #
 # Copyright (c) 2004-06 Applied Micro Circuits Corporation.
 # All rights reserved.

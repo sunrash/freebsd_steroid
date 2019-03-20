@@ -1,6 +1,6 @@
 #
 # Test Case: ztest
-# $FreeBSD: releng/12.0/cddl/usr.bin/ztest/tests/ztest.sh 337840 2018-08-15 13:05:04Z will $
+# $FreeBSD$
 #
 atf_test_case ztest
 ztest_head()

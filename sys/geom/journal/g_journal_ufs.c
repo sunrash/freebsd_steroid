@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/geom/journal/g_journal_ufs.c 332387 2018-04-10 19:18:16Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -72,7 +72,7 @@ g_journal_ufs_dirty(struct g_consumer *cp)
 
 	fs = NULL;
 	if (SBLOCKSIZE % cp->provider->sectorsize != 0 ||
-	    ffs_sbget(cp, &fs, -1, M_GEOM, g_use_g_read_data) != 0) {
+	    ffs_sbget(cp, &fs, STDSB, M_GEOM, g_use_g_read_data) != 0) {
 		GJ_DEBUG(0, "Cannot find superblock to mark file system %s "
 		    "as dirty.", cp->provider->name);
 		KASSERT(fs == NULL,

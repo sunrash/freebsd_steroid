@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/libkern/x86/crc32_sse42.c 322407 2017-08-11 17:05:31Z rlibby $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This file is compiled in userspace in order to run ATF unit tests.

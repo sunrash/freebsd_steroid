@@ -29,7 +29,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/tools/makeroot/makeroot.sh 334381 2018-05-30 13:51:00Z emaste $
+# $FreeBSD$
 
 usage()
 {

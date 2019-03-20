@@ -26,7 +26,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/stack.h 278996 2015-02-19 12:06:57Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_STACK_H_

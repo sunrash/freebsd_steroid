@@ -1,5 +1,5 @@
 /* $OpenBSD: ssh-gss.h,v 1.14 2018/07/10 09:13:30 djm Exp $ */
-/* $FreeBSD: releng/12.0/crypto/openssh/ssh-gss.h 338561 2018-09-10 16:20:12Z des $ */
+/* $FreeBSD$ */
 /*
  * Copyright (c) 2001-2003 Simon Wilkinson. All rights reserved.
  *

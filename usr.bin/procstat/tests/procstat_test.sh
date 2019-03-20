@@ -23,7 +23,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/procstat/tests/procstat_test.sh 337133 2018-08-02 16:03:47Z markj $
+# $FreeBSD$
 #
 
 MAX_TRIES=20
@@ -79,6 +79,8 @@ command_line_arguments_head()
 }
 command_line_arguments_body()
 {
+	atf_skip "https://bugs.freebsd.org/233587"
+
 	arguments="my arguments"
 
 	start_program $arguments
@@ -103,6 +105,8 @@ environment_head()
 }
 environment_body()
 {
+	atf_skip "https://bugs.freebsd.org/233588"
+
 	var="MY_VARIABLE=foo"
 	eval "export $var"
 

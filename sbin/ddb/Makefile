@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/ddb/Makefile 337623 2018-08-11 13:25:39Z brd $
+# $FreeBSD$
 
 CONFS=	ddb.conf
 PACKAGE=runtime

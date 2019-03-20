@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/atkbdc/atkbdc_ebus.c 332310 2018-04-08 22:59:34Z gonzo $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_kbd.h"
 

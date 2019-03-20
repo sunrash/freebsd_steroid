@@ -37,7 +37,7 @@
 static char sccsid[] = "@(#)lshrdi3.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/lshrdi3.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "quad.h"
 
@@ -45,9 +45,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/lshrdi3.c 326025 2017-11-20 19:49:
  * Shift an (unsigned) quad value right (logical shift right).
  */
 quad_t
-__lshrdi3(a, shift)
-	quad_t a;
-	qshift_t shift;
+__lshrdi3(quad_t a, qshift_t shift)
 {
 	union uu aa;
 

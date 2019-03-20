@@ -1,7 +1,7 @@
 /*-
  * Test 0083:	Check that the last instruction is BPF_RET.
  *
- * $FreeBSD: releng/12.0/tools/regression/bpf/bpf_filter/tests/test0083.h 307708 2016-10-21 06:56:30Z jkim $
+ * $FreeBSD$
  */
 
 /* BPF program */

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/amd64/sys_machdep.c 338318 2018-08-25 19:38:08Z alc $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_capsicum.h"
 

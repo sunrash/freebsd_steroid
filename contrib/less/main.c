@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/less/main.c 326799 2017-12-12 17:34:35Z asomers $ */
+/* $FreeBSD$ */
 /*
  * Copyright (C) 1984-2017  Mark Nudelman
  *

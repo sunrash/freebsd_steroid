@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_LOADER_LUA 329166 2018-02-12 15:31:53Z imp $
+.\" $FreeBSD$
 Set to build LUA bindings for the boot loader.

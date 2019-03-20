@@ -36,7 +36,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_partition/mac_partition.c 227309 2011-11-07 15:43:11Z ed $
+ * $FreeBSD$
  */
 
 /*
@@ -128,7 +128,7 @@ partition_cred_check_relabel(struct ucred *cred, struct label *newlabel)
 		 * partition in the first place, but this didn't interact
 		 * well with sendmail.
 		 */
-		error = priv_check_cred(cred, PRIV_MAC_PARTITION, 0);
+		error = priv_check_cred(cred, PRIV_MAC_PARTITION);
 	}
 
 	return (error);

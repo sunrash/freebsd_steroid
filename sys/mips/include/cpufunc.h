@@ -55,7 +55,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	JNPR: cpufunc.h,v 1.5 2007/08/09 11:23:32 katta
- * $FreeBSD: releng/12.0/sys/mips/include/cpufunc.h 332907 2018-04-24 05:26:28Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CPUFUNC_H_

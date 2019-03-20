@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_read_open_filename.c 313074 2017-02-02 00:50:46Z mm $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_SYS_IOCTL_H
 #include <sys/ioctl.h>

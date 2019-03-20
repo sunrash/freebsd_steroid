@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_store.h 310297 2016-12-19 20:34:05Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_NVRAM_BHND_NVRAM_STORE_H_

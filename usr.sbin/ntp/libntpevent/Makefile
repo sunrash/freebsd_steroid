@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/libntpevent/Makefile 339261 2018-10-09 18:35:45Z emaste $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/contrib/libevent
 

@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/ascii.c 339435 2018-10-19 00:24:23Z gjb $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <limits.h>

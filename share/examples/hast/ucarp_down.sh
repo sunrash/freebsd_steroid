@@ -29,7 +29,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/share/examples/hast/ucarp_down.sh 326275 2017-11-27 15:28:26Z pfg $
+# $FreeBSD$
 
 # Resource name as defined in /etc/hast.conf.
 resource="test"

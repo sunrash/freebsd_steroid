@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.8 2003/08/14 20:06:20 max Exp $
-# $FreeBSD: releng/12.0/usr.sbin/bluetooth/hcsecd/Makefile 338320 2018-08-26 02:09:20Z brd $
+# $FreeBSD$
 
 CONFS=		hcsecd.conf
 CONFSDIR=	/etc/bluetooth

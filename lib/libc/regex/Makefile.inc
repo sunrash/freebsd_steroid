@@ -1,5 +1,5 @@
 #	from @(#)Makefile.inc	8.1 (Berkeley) 6/4/93
-# $FreeBSD: releng/12.0/lib/libc/regex/Makefile.inc 328240 2018-01-22 02:44:41Z kevans $
+# $FreeBSD$
 
 # regex sources
 .PATH: ${LIBC_SRCTOP}/regex

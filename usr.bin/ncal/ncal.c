@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/ncal/ncal.c 333798 2018-05-18 16:19:45Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <calendar.h>
 #include <ctype.h>

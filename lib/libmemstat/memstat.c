@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libmemstat/memstat.c 333475 2018-05-11 00:01:43Z des $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

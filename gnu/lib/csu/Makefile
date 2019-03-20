@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/lib/csu/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 .include <src.opts.mk>
 MK_SSP=		no
@@ -28,10 +28,6 @@ CRTS_CFLAGS=	-DCRTSTUFFS_O -DSHARED ${PICFLAG}
 CFLAGS+=	-DTARGET_ARM_EABI
 .endif
 
-.if ${MACHINE_CPUARCH} == "powerpc"
-TGTOBJS=	crtsavres.o
-SRCS+=		crtsavres.asm
-.endif
 .if ${MACHINE_CPUARCH} == "sparc64"
 TGTOBJS=	crtfastmath.o
 SRCS+=		crtfastmath.c

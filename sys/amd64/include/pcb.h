@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)pcb.h	5.10 (Berkeley) 5/12/91
- * $FreeBSD: releng/12.0/sys/amd64/include/pcb.h 328177 2018-01-19 22:10:29Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _AMD64_PCB_H_

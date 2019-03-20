@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/include/bootinfo.h 326259 2017-11-27 15:07:26Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_BOOTINFO_H_

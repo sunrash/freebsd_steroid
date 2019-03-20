@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/bin/pkill/tests/pgrep-j_test.sh 307629 2016-10-19 12:23:02Z br $
+# $FreeBSD$
 
 jail_name_to_jid()
 {

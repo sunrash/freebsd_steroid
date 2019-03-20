@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	$KAME: nd6.h,v 1.76 2001/12/18 02:10:31 itojun Exp $
- * $FreeBSD: releng/12.0/sys/netinet6/nd6.h 327173 2017-12-25 04:48:39Z kan $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET6_ND6_H_
@@ -90,6 +90,9 @@ struct nd_ifinfo {
 #define	ND6_IFF_NO_RADR		0x40
 #define ND6_IFF_NO_PREFER_IFACE	0x80 /* XXX: not related to ND. */
 #define ND6_IFF_NO_DAD		0x100
+#ifdef EXPERIMENTAL
+#define	ND6_IFF_IPV6_ONLY	0x200 /* draft-ietf-6man-ipv6only-flag */
+#endif
 
 #ifdef _KERNEL
 #define ND_IFINFO(ifp) \

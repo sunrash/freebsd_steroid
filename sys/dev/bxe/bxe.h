@@ -30,7 +30,7 @@
 #define __BXE_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bxe/bxe.h 339366 2018-10-15 18:39:33Z davidcs $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>

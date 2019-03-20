@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_BINUTILS_BOOTSTRAP 335210 2018-06-15 16:18:39Z emaste $
+.\" $FreeBSD$
 Set to not build binutils (as, ld, and objdump)
 as part of the bootstrap process.
 .Bf -symbolic

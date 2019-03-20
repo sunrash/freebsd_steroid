@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/net/if_urereg.h 308121 2016-10-31 05:58:11Z kevlo $
+ * $FreeBSD$
  */
 
 #define	URE_CONFIG_IDX		0	/* config number 1 */

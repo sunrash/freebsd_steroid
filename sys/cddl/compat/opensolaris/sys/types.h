@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/types.h 335920 2018-07-03 23:45:02Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_TYPES_H_

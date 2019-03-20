@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/ingenic/jz4780_codec.h 310776 2016-12-29 14:00:10Z jmcneill $
+ * $FreeBSD$
  */
 
 #define	CODEC_RGADW	0x00	/* Address, data in and write command */

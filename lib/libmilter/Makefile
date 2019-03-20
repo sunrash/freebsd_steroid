@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libmilter/Makefile 318736 2017-05-23 09:29:05Z kib $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

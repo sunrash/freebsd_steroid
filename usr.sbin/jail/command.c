@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/jail/command.c 337863 2018-08-15 18:35:42Z netchild $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/event.h>
@@ -374,7 +374,7 @@ run_command(struct cfjail *j)
 			argc = 4;
 		}
 
-		if (!down) {
+		if (!down && extrap != NULL) {
 			for (cs = strtok(extrap, " "); cs;
 			     cs = strtok(NULL, " ")) {
 				size_t len = strlen(cs) + 1;
@@ -497,7 +497,7 @@ run_command(struct cfjail *j)
 		argv = alloca(7 * sizeof(char *));
 		path = string_param(j->intparams[KP_PATH]);
 		if (path == NULL) {
-			jail_warnx(j, "mount.devfs: no path");
+			jail_warnx(j, "mount.devfs: no jail root path defined");
 			return -1;
 		}
 		devpath = alloca(strlen(path) + 5);
@@ -528,7 +528,7 @@ run_command(struct cfjail *j)
 		argv = alloca(7 * sizeof(char *));
 		path = string_param(j->intparams[KP_PATH]);
 		if (path == NULL) {
-			jail_warnx(j, "mount.fdescfs: no path");
+			jail_warnx(j, "mount.fdescfs: no jail root path defined");
 			return -1;
 		}
 		devpath = alloca(strlen(path) + 8);
@@ -554,7 +554,7 @@ run_command(struct cfjail *j)
 		argv = alloca(7 * sizeof(char *));
 		path = string_param(j->intparams[KP_PATH]);
 		if (path == NULL) {
-			jail_warnx(j, "mount.procfs: no path");
+			jail_warnx(j, "mount.procfs: no jail root path defined");
 			return -1;
 		}
 		devpath = alloca(strlen(path) + 6);

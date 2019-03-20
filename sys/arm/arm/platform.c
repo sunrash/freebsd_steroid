@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/platform.c 320894 2017-07-11 16:30:16Z andrew $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Dispatch platform calls to the appropriate platform implementation

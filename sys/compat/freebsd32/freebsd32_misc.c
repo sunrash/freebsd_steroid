@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/freebsd32/freebsd32_misc.c 340388 2018-11-12 21:51:36Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
@@ -332,12 +332,11 @@ freebsd32_sigaltstack(struct thread *td,
  * the pointers.
  */
 int
-freebsd32_exec_copyin_args(struct image_args *args, char *fname,
+freebsd32_exec_copyin_args(struct image_args *args, const char *fname,
     enum uio_seg segflg, u_int32_t *argv, u_int32_t *envv)
 {
 	char *argp, *envp;
 	u_int32_t *p32, arg;
-	size_t length;
 	int error;
 
 	bzero(args, sizeof(*args));
@@ -355,19 +354,9 @@ freebsd32_exec_copyin_args(struct image_args *args, char *fname,
 	/*
 	 * Copy the file name.
 	 */
-	if (fname != NULL) {
-		args->fname = args->buf;
-		error = (segflg == UIO_SYSSPACE) ?
-		    copystr(fname, args->fname, PATH_MAX, &length) :
-		    copyinstr(fname, args->fname, PATH_MAX, &length);
-		if (error != 0)
-			goto err_exit;
-	} else
-		length = 0;
-
-	args->begin_argv = args->buf + length;
-	args->endp = args->begin_argv;
-	args->stringspace = ARG_MAX;
+	error = exec_args_add_fname(args, fname, segflg);
+	if (error != 0)
+		goto err_exit;
 
 	/*
 	 * extract arguments first
@@ -380,19 +369,11 @@ freebsd32_exec_copyin_args(struct image_args *args, char *fname,
 		if (arg == 0)
 			break;
 		argp = PTRIN(arg);
-		error = copyinstr(argp, args->endp, args->stringspace, &length);
-		if (error) {
-			if (error == ENAMETOOLONG)
-				error = E2BIG;
+		error = exec_args_add_arg(args, argp, UIO_USERSPACE);
+		if (error != 0)
 			goto err_exit;
-		}
-		args->stringspace -= length;
-		args->endp += length;
-		args->argc++;
 	}
 			
-	args->begin_envv = args->endp;
-
 	/*
 	 * extract environment strings
 	 */
@@ -405,16 +386,9 @@ freebsd32_exec_copyin_args(struct image_args *args, char *fname,
 			if (arg == 0)
 				break;
 			envp = PTRIN(arg);
-			error = copyinstr(envp, args->endp, args->stringspace,
-			    &length);
-			if (error) {
-				if (error == ENAMETOOLONG)
-					error = E2BIG;
+			error = exec_args_add_env(args, envp, UIO_USERSPACE);
+			if (error != 0)
 				goto err_exit;
-			}
-			args->stringspace -= length;
-			args->endp += length;
-			args->envc++;
 		}
 	}
 

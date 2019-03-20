@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/tools/usb/print-usb-if-vids.sh 187107 2009-01-12 17:26:52Z obrien $
+# $FreeBSD$
 
 
 fetch -o /tmp/usb.if http://www.usb.org/developers/tools/comp_dump/

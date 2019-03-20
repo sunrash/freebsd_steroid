@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/linker_set.h 331290 2018-03-21 10:26:39Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_LINKER_SET_H_

@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/i40e_osdep.c 339338 2018-10-12 22:40:54Z erj $*/
+/*$FreeBSD$*/
 
 #include <sys/limits.h>
 

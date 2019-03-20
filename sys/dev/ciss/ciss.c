@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD: releng/12.0/sys/dev/ciss/ciss.c 338948 2018-09-26 17:12:14Z imp $
+ *	$FreeBSD$
  */
 
 /*

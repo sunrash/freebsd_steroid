@@ -49,7 +49,7 @@
 /*%
  *	@(#)resolv.h	8.1 (Berkeley) 6/2/93
  *	$Id: resolv.h,v 1.30 2009/03/03 01:52:48 each Exp $
- * $FreeBSD: releng/12.0/include/resolv.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _RESOLV_H_

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/cudbg/cudbg_entity.h 322014 2017-08-03 14:43:30Z np $
+ * $FreeBSD$
  *
  */
 

@@ -32,7 +32,7 @@
 
 /*
  * $Id$
- * $FreeBSD: releng/12.0/sys/geom/sched/g_sched.h 326270 2017-11-27 15:17:37Z pfg $
+ * $FreeBSD$
  *
  * Header for the geom_sched class (userland library and kernel part).
  * See g_sched.c for documentation.

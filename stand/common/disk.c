@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/common/disk.c 335883 2018-07-03 05:53:27Z allanjude $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/disk.h>
 #include <sys/queue.h>
@@ -265,9 +265,7 @@ disk_open(struct disk_devdesc *dev, uint64_t mediasize, u_int sectorsize)
 		rc = ENXIO;
 		goto out;
 	}
-	if (mediasize > od->mediasize) {
-		od->mediasize = mediasize;
-	}
+	od->mediasize = mediasize;
 
 	if (ptable_gettype(od->table) == PTABLE_BSD &&
 	    partition >= 0) {

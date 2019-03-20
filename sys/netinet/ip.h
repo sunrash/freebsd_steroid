@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ip.h	8.2 (Berkeley) 6/1/94
- * $FreeBSD: releng/12.0/sys/netinet/ip.h 335837 2018-07-01 08:37:07Z kp $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_IP_H_

@@ -44,7 +44,7 @@
 static char sccsid[] = "@(#)euc.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/param.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/euc.c 327248 2017-12-27 21:21:03Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <limits.h>

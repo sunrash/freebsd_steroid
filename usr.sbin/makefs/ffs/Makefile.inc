@@ -1,4 +1,4 @@
-#	$FreeBSD: releng/12.0/usr.sbin/makefs/ffs/Makefile.inc 332844 2018-04-20 22:23:38Z emaste $
+#	$FreeBSD$
 #
 
 .PATH:	${SRCDIR}/ffs ${SRCTOP}/sys/ufs/ffs

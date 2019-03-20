@@ -25,7 +25,7 @@
  *
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sdhci/fsl_sdhci.c 329480 2018-02-17 23:39:10Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * SDHCI driver glue for Freescale i.MX SoC and QorIQ families.
@@ -1005,7 +1005,7 @@ static driver_t fsl_sdhci_driver = {
 
 DRIVER_MODULE(sdhci_fsl, simplebus, fsl_sdhci_driver, fsl_sdhci_devclass,
     NULL, NULL);
-MODULE_DEPEND(sdhci_fsl, sdhci, 1, 1, 1);
+SDHCI_DEPEND(sdhci_fsl);
 
 #ifndef MMCCAM
 MMC_DECLARE_BRIDGE(sdhci_fsl);

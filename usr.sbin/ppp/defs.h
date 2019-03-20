@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ppp/defs.h 329105 2018-02-10 17:09:51Z eugen $
+ * $FreeBSD$
  */
 
 /* Check the following definitions for your machine environment */

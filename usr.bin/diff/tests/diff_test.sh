@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/diff/tests/diff_test.sh 338039 2018-08-19 03:57:20Z kevans $
+# $FreeBSD$
 
 atf_test_case simple
 atf_test_case unified

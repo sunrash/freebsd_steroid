@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sbin/setkey/Makefile 316759 2017-04-13 14:44:17Z ae $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

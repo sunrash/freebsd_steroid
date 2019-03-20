@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ips/ips.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifndef _IPS_H
 #define _IPS_H

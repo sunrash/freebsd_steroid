@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zpool_history/setup.ksh 331004 2018-03-15 14:47:53Z avg $
+# $FreeBSD$
 
 #
 # Copyright 2007 Sun Microsystems, Inc.  All rights reserved.

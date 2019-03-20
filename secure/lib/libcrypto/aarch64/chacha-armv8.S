@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/aarch64/chacha-armv8.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from chacha-armv8.pl. */
 #include "arm_arch.h"
 

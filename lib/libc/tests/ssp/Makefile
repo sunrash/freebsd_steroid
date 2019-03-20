@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/ssp/Makefile 335704 2018-06-27 16:56:46Z bdrewery $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

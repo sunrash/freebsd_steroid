@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)getgrouplist.c	8.2 (Berkeley) 12/8/94");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/getgrouplist.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /*
  * get credential

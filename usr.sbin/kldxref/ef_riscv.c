@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/kldxref/ef_riscv.c 339242 2018-10-08 19:15:58Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <machine/elf.h>

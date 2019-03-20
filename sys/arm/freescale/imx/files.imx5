@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/freescale/imx/files.imx5 329999 2018-02-26 02:28:32Z ian $
+# $FreeBSD$
 kern/kern_clocksource.c			standard
 
 # Init

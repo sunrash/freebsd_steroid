@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/crypto/aesni/aesni.h 336439 2018-07-18 00:56:25Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _AESNI_H_

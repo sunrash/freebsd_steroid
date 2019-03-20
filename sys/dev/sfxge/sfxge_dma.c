@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sfxge/sfxge_dma.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -136,6 +136,7 @@ sfxge_dma_free(efsys_mem_t *esmp)
 
 	esmp->esm_addr = 0;
 	esmp->esm_base = NULL;
+	esmp->esm_size = 0;
 }
 
 int
@@ -175,6 +176,7 @@ sfxge_dma_alloc(struct sfxge_softc *sc, bus_size_t len, efsys_mem_t *esmp)
 		goto fail_load_check;
 
 	esmp->esm_base = vaddr;
+	esmp->esm_size = len;
 
 	return (0);
 

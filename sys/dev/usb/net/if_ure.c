@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/net/if_ure.c 339026 2018-09-30 21:23:31Z allanjude $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -68,6 +68,8 @@ SYSCTL_INT(_hw_usb_ure, OID_AUTO, debug, CTLFLAG_RWTUN, &ure_debug, 0,
 static const STRUCT_USB_HOST_ID ure_devs[] = {
 #define	URE_DEV(v,p,i)	{ USB_VPI(USB_VENDOR_##v, USB_PRODUCT_##v##_##p, i) }
 	URE_DEV(LENOVO, RTL8153, 0),
+	URE_DEV(LENOVO, TBT3LAN, 0),
+	URE_DEV(LENOVO, USBCLAN, 0),
 	URE_DEV(NVIDIA, RTL8153, 0),
 	URE_DEV(REALTEK, RTL8152, URE_FLAG_8152),
 	URE_DEV(REALTEK, RTL8153, 0),

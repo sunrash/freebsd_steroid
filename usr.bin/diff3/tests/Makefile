@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/diff3/tests/Makefile 318888 2017-05-25 17:45:50Z bapt $
+# $FreeBSD$
 
 PACKAGE=	tests
 

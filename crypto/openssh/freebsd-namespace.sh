@@ -6,7 +6,7 @@
 # other libraries or applications which link with libssh, either directly
 # or indirectly (e.g. through PAM loading pam_ssh).
 #
-# $FreeBSD: releng/12.0/crypto/openssh/freebsd-namespace.sh 333389 2018-05-08 23:13:11Z des $
+# $FreeBSD$
 #
 
 set -e

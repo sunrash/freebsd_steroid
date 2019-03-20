@@ -1,5 +1,5 @@
 #	from @(#)Makefile.inc	8.3 (Berkeley) 2/4/95
-# $FreeBSD: releng/12.0/lib/libc/stdlib/Makefile.inc 338051 2018-08-19 14:39:57Z kib $
+# $FreeBSD$
 
 # machine-independent stdlib sources
 .PATH: ${LIBC_SRCTOP}/${LIBC_ARCH}/stdlib ${LIBC_SRCTOP}/stdlib

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/kld/khelp/Makefile 299293 2016-05-10 00:51:50Z gjb $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

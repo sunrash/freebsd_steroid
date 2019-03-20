@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/bin/csh/config.h 298626 2016-04-26 11:39:32Z andrew $ */
+/* $FreeBSD$ */
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.in by autoheader.  */
 

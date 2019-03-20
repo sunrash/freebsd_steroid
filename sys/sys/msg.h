@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/sys/msg.h 330298 2018-03-02 22:13:29Z brooks $ */
+/* $FreeBSD$ */
 /*	$NetBSD: msg.h,v 1.4 1994/06/29 06:44:43 cgd Exp $	*/
 
 /*-

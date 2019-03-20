@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/psci/psci_arm.S 337752 2018-08-14 13:56:49Z loos $");
+__FBSDID("$FreeBSD$");
 
 .arch_extension sec	/* For smc */
 .arch_extension virt	/* For hvc */

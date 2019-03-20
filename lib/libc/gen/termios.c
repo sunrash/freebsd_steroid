@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)termios.c	8.2 (Berkeley) 2/21/94");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/termios.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <sys/types.h>

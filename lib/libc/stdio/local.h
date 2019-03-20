@@ -37,7 +37,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)local.h	8.3 (Berkeley) 7/3/94
- * $FreeBSD: releng/12.0/lib/libc/stdio/local.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _STDIO_LOCAL_H

@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bhnd_nexusvar.h 313705 2017-02-13 19:58:55Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _MIPS_BROADCOM_BHND_NEXUSVAR_H_

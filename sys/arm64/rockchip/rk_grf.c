@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/rk_grf.c 333037 2018-04-26 21:35:04Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -49,6 +49,10 @@ __FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/rk_grf.c 333037 2018-04-26 21
 static struct ofw_compat_data compat_data[] = {
 #ifdef SOC_ROCKCHIP_RK3328
 	{"rockchip,rk3328-grf", 1},
+#endif
+#ifdef SOC_ROCKCHIP_RK3399
+	{"rockchip,rk3399-grf", 1},
+	{"rockchip,rk3399-pmugrf", 1},
 #endif
 	{NULL,             0}
 };

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/iconv/Makefile 315032 2017-03-11 00:02:05Z asomers $
+# $FreeBSD$
 
 TESTSDIR=	${TESTSBASE}/lib/libc/iconv
 

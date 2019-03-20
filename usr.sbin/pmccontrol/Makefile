@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/usr.sbin/pmccontrol/Makefile 334749 2018-06-07 02:03:22Z mmacy $
+# $FreeBSD$
 #
 
 PROG_CXX=	pmccontrol

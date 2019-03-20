@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/JOHAB/citrus_johab.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_johab.h,v 1.1 2006/10/18 17:54:55 tnozaki Exp $ */
 
 /*-

@@ -34,7 +34,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/geom.h 330977 2018-03-15 09:16:10Z avg $
+ * $FreeBSD$
  */
 
 #ifndef _GEOM_GEOM_H_
@@ -215,8 +215,8 @@ struct g_provider {
 	TAILQ_ENTRY(g_provider)	orphan;
 	off_t			mediasize;
 	u_int			sectorsize;
-	u_int			stripesize;
-	u_int			stripeoffset;
+	off_t			stripesize;
+	off_t			stripeoffset;
 	struct devstat		*stat;
 	u_int			nstart, nend;
 	u_int			flags;

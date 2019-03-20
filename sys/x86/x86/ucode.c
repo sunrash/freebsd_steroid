@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/ucode.c 339321 2018-10-11 23:28:04Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/cpuset.h>
@@ -278,12 +278,13 @@ ucode_load_ap(int cpu)
 }
 
 static void *
-map_ucode(vm_paddr_t free, size_t len)
+map_ucode(uintptr_t free, size_t len)
 {
-
 #ifdef __i386__
-	for (vm_paddr_t pa = free; pa < free + len; pa += PAGE_SIZE)
-		pmap_kenter(pa, pa);
+	uintptr_t va;
+
+	for (va = free; va < free + len; va += PAGE_SIZE)
+		pmap_kenter(va, (vm_paddr_t)va);
 #else
 	(void)len;
 #endif
@@ -291,12 +292,13 @@ map_ucode(vm_paddr_t free, size_t len)
 }
 
 static void
-unmap_ucode(vm_paddr_t free, size_t len)
+unmap_ucode(uintptr_t free, size_t len)
 {
-
 #ifdef __i386__
-	for (vm_paddr_t pa = free; pa < free + len; pa += PAGE_SIZE)
-		pmap_kremove((vm_offset_t)pa);
+	uintptr_t va;
+
+	for (va = free; va < free + len; va += PAGE_SIZE)
+		pmap_kremove(va);
 #else
 	(void)free;
 	(void)len;

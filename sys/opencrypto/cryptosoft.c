@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/cryptosoft.c 338953 2018-09-26 20:23:12Z sef $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -1091,6 +1091,9 @@ swcr_freesession(device_t dev, crypto_session_t cses)
 		case CRYPTO_SHA2_256:
 		case CRYPTO_SHA2_384:
 		case CRYPTO_SHA2_512:
+		case CRYPTO_AES_128_NIST_GMAC:
+		case CRYPTO_AES_192_NIST_GMAC:
+		case CRYPTO_AES_256_NIST_GMAC:
 			axf = swd->sw_axf;
 
 			if (swd->sw_ictx) {

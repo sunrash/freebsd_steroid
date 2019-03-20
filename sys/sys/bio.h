@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)buf.h	8.9 (Berkeley) 3/30/95
- * $FreeBSD: releng/12.0/sys/sys/bio.h 335066 2018-06-13 16:48:07Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_BIO_H_
@@ -66,6 +66,9 @@
 #define	BIO_UNMAPPED	0x10
 #define	BIO_TRANSIENT_MAPPING	0x20
 #define	BIO_VLIST	0x40
+
+#define	PRINT_BIO_FLAGS "\20\7vlist\6transient_mapping\5unmapped" \
+	"\4ordered\3onqueue\2done\1error"
 
 #ifdef _KERNEL
 struct disk;

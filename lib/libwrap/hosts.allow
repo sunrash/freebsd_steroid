@@ -1,6 +1,6 @@
 #
 # hosts.allow access control file for "tcp wrapped" applications.
-# $FreeBSD: releng/12.0/lib/libwrap/hosts.allow 338887 2018-09-22 13:17:30Z brd $
+# $FreeBSD$
 #
 # NOTE: The hosts.deny file is deprecated.
 #       Place both 'allow' and 'deny' rules in the hosts.allow file.

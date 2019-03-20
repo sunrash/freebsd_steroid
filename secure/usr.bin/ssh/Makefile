@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/usr.bin/ssh/Makefile 337852 2018-08-15 14:53:42Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

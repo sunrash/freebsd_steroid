@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libdpv/status.h 274116 2014-11-04 23:46:01Z dteske $
+ * $FreeBSD$
  */
 
 #ifndef _STATUS_H_

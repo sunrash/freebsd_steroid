@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.3 (Berkeley) 5/8/95
-# $FreeBSD: releng/12.0/bin/df/Makefile 314655 2017-03-04 11:31:08Z ngie $
+# $FreeBSD$
 
 PACKAGE=runtime
 MOUNT=	${SRCTOP}/sbin/mount

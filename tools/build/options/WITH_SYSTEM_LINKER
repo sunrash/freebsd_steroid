@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_SYSTEM_LINKER 335450 2018-06-20 16:10:14Z bdrewery $
+.\" $FreeBSD$
 Set to opportunistically skip building a cross-linker during the
 bootstrap phase of the build.
 If the currently installed linker matches the planned bootstrap linker

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/librpcsec_gss/Makefile 312486 2017-01-20 04:36:48Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	rpcsec_gss

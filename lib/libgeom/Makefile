@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libgeom/Makefile 324667 2017-10-16 17:21:52Z romain $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	geom

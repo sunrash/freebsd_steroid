@@ -36,7 +36,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/arm/string/memcpy_xscale.S 336783 2018-07-27 21:25:01Z imp $");
+__FBSDID("$FreeBSD$");
 
 .syntax	unified
 

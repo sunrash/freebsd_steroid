@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/sys/cddl/boot/zfs/README 268075 2014-07-01 06:43:15Z delphij $
+$FreeBSD$
 
 This directory contains various files derived from CDDL sources that
 are used by the ZFS bootstrap:

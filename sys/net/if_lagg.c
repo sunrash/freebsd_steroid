@@ -19,10 +19,11 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/net/if_lagg.c 339251 2018-10-09 13:26:06Z jtl $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
+#include "opt_kern_tls.h"
 #include "opt_ratelimit.h"
 
 #include <sys/param.h>
@@ -39,6 +40,9 @@ __FBSDID("$FreeBSD: releng/12.0/sys/net/if_lagg.c 339251 2018-10-09 13:26:06Z jt
 #include <sys/proc.h>
 #include <sys/lock.h>
 #include <sys/rmlock.h>
+#ifdef KERN_TLS
+#include <sys/socketvar.h>
+#endif
 #include <sys/sx.h>
 #include <sys/taskqueue.h>
 #include <sys/eventhandler.h>
@@ -57,6 +61,9 @@ __FBSDID("$FreeBSD: releng/12.0/sys/net/if_lagg.c 339251 2018-10-09 13:26:06Z jt
 #if defined(INET) || defined(INET6)
 #include <netinet/in.h>
 #include <netinet/ip.h>
+#ifdef KERN_TLS
+#include <netinet/in_pcb.h>
+#endif
 #endif
 #ifdef INET
 #include <netinet/in_systm.h>
@@ -113,6 +120,10 @@ VNET_DEFINE_STATIC(struct if_clone *, lagg_cloner);
 static const char laggname[] = "lagg";
 
 static void	lagg_capabilities(struct lagg_softc *);
+#ifdef KERN_TLS
+static int	lagg_create_tls_session(struct ifnet *ifp, struct socket *so,
+    struct sbtls_session *tls);
+#endif
 static int	lagg_port_create(struct lagg_softc *, struct ifnet *);
 static int	lagg_port_destroy(struct lagg_port *, int);
 static struct mbuf *lagg_input(struct ifnet *, struct mbuf *);
@@ -514,10 +525,11 @@ lagg_clone_create(struct if_clone *ifc, int unit, caddr_t params)
 	ifp->if_flags = IFF_SIMPLEX | IFF_BROADCAST | IFF_MULTICAST;
 #ifdef RATELIMIT
 	ifp->if_snd_tag_alloc = lagg_snd_tag_alloc;
-	ifp->if_capenable = ifp->if_capabilities = IFCAP_HWSTATS | IFCAP_TXRTLMT;
-#else
-	ifp->if_capenable = ifp->if_capabilities = IFCAP_HWSTATS;
 #endif
+#ifdef KERN_TLS
+	ifp->if_create_tls_session = lagg_create_tls_session;
+#endif
+	ifp->if_capenable = ifp->if_capabilities = IFCAP_HWSTATS;
 
 	/*
 	 * Attach as an ordinary ethernet device, children will be attached
@@ -633,10 +645,17 @@ lagg_port_create(struct lagg_softc *sc, struct ifnet *ifp)
 {
 	struct lagg_softc *sc_ptr;
 	struct lagg_port *lp, *tlp;
-	int error, i;
+	struct ifreq ifr;
+	int error, i, oldmtu;
 	uint64_t *pval;
 
 	LAGG_XLOCK_ASSERT(sc);
+
+	if (sc->sc_ifp == ifp) {
+		if_printf(sc->sc_ifp,
+		    "cannot add a lagg to itself as a port\n");
+		return (EINVAL);
+	}
 
 	/* Limit the maximal number of lagg ports */
 	if (sc->sc_count >= LAGG_MAX_PORTS)
@@ -656,12 +675,25 @@ lagg_port_create(struct lagg_softc *sc, struct ifnet *ifp)
 		return (EPROTONOSUPPORT);
 
 	/* Allow the first Ethernet member to define the MTU */
-	if (CK_SLIST_EMPTY(&sc->sc_ports))
+	oldmtu = -1;
+	if (CK_SLIST_EMPTY(&sc->sc_ports)) {
 		sc->sc_ifp->if_mtu = ifp->if_mtu;
-	else if (sc->sc_ifp->if_mtu != ifp->if_mtu) {
-		if_printf(sc->sc_ifp, "invalid MTU for %s\n",
-		    ifp->if_xname);
-		return (EINVAL);
+	} else if (sc->sc_ifp->if_mtu != ifp->if_mtu) {
+		if (ifp->if_ioctl == NULL) {
+			if_printf(sc->sc_ifp, "cannot change MTU for %s\n",
+			    ifp->if_xname);
+			return (EINVAL);
+		}
+		oldmtu = ifp->if_mtu;
+		strlcpy(ifr.ifr_name, ifp->if_xname, sizeof(ifr.ifr_name));
+		ifr.ifr_mtu = sc->sc_ifp->if_mtu;
+		error = (*ifp->if_ioctl)(ifp, SIOCSIFMTU, (caddr_t)&ifr);
+		if (error != 0) {
+			if_printf(sc->sc_ifp, "invalid MTU for %s\n",
+			    ifp->if_xname);
+			return (error);
+		}
+		ifr.ifr_mtu = oldmtu;
 	}
 
 	lp = malloc(sizeof(struct lagg_port), M_DEVBUF, M_WAITOK|M_ZERO);
@@ -673,6 +705,9 @@ lagg_port_create(struct lagg_softc *sc, struct ifnet *ifp)
 		if (ifp == sc_ptr->sc_ifp) {
 			LAGG_LIST_UNLOCK();
 			free(lp, M_DEVBUF);
+			if (oldmtu != -1)
+				(*ifp->if_ioctl)(ifp, SIOCSIFMTU,
+				    (caddr_t)&ifr);
 			return (EINVAL);
 			/* XXX disable stacking for the moment, its untested */
 #ifdef LAGG_PORT_STACKING
@@ -681,6 +716,9 @@ lagg_port_create(struct lagg_softc *sc, struct ifnet *ifp)
 			    LAGG_MAX_STACKING) {
 				LAGG_LIST_UNLOCK();
 				free(lp, M_DEVBUF);
+				if (oldmtu != -1)
+					(*ifp->if_ioctl)(ifp, SIOCSIFMTU,
+					    (caddr_t)&ifr);
 				return (E2BIG);
 			}
 #endif
@@ -746,6 +784,8 @@ lagg_port_create(struct lagg_softc *sc, struct ifnet *ifp)
 	if ((error = lagg_proto_addport(sc, lp)) != 0) {
 		/* Remove the port, without calling pr_delport. */
 		lagg_port_destroy(lp, 0);
+		if (oldmtu != -1)
+			(*ifp->if_ioctl)(ifp, SIOCSIFMTU, (caddr_t)&ifr);
 		return (error);
 	}
 
@@ -1464,8 +1504,31 @@ lagg_ioctl(struct ifnet *ifp, u_long cmd, caddr_t data)
 		break;
 
 	case SIOCSIFMTU:
-		/* Do not allow the MTU to be directly changed */
-		error = EINVAL;
+		LAGG_XLOCK(sc);
+		CK_SLIST_FOREACH(lp, &sc->sc_ports, lp_entries) {
+			if (lp->lp_ioctl != NULL)
+				error = (*lp->lp_ioctl)(lp->lp_ifp, cmd, data);
+			else
+				error = EINVAL;
+			if (error != 0) {
+				if_printf(ifp,
+				    "failed to change MTU to %d on port %s, "
+				    "reverting all ports to original MTU (%d)\n",
+				    ifr->ifr_mtu, lp->lp_ifp->if_xname, ifp->if_mtu);
+				break;
+			}
+		}
+		if (error == 0) {
+			ifp->if_mtu = ifr->ifr_mtu;
+		} else {
+			/* set every port back to the original MTU */
+			ifr->ifr_mtu = ifp->if_mtu;
+			CK_SLIST_FOREACH(lp, &sc->sc_ports, lp_entries) {
+				if (lp->lp_ioctl != NULL)
+					(*lp->lp_ioctl)(lp->lp_ifp, cmd, data);
+			}
+		}
+		LAGG_XUNLOCK(sc);
 		break;
 
 	default:
@@ -1518,6 +1581,58 @@ lagg_snd_tag_alloc(struct ifnet *ifp,
 
 	/* forward allocation request */
 	return (ifp->if_snd_tag_alloc(ifp, params, ppmt));
+}
+#endif
+
+#ifdef KERN_TLS
+static int
+lagg_create_tls_session(struct ifnet *ifp, struct socket *so,
+    struct sbtls_session *tls)
+{
+	struct lagg_softc *sc = (struct lagg_softc *)ifp->if_softc;
+	struct lagg_port *lp;
+	struct lagg_lb *lb;
+	struct inpcb *inp;
+	uint32_t p;
+
+	inp = so->so_pcb;
+	switch (sc->sc_proto) {
+	case LAGG_PROTO_FAILOVER:
+		lp = lagg_link_active(sc, sc->sc_primary);
+		break;
+	case LAGG_PROTO_LOADBALANCE:
+		if ((sc->sc_opts & LAGG_OPT_USE_FLOWID) == 0 ||
+		    inp->inp_flowtype == M_HASHTYPE_NONE)
+			return (EOPNOTSUPP);
+		p = inp->inp_flowid >> sc->flowid_shift;
+		p %= sc->sc_count;
+		lb = (struct lagg_lb *)sc->sc_psc;
+		lp = lb->lb_ports[p];
+		lp = lagg_link_active(sc, lp);
+		break;
+	case LAGG_PROTO_LACP:
+		if ((sc->sc_opts & LAGG_OPT_USE_FLOWID) == 0 ||
+		    inp->inp_flowtype == M_HASHTYPE_NONE)
+			return (EOPNOTSUPP);
+		lp = lacp_select_tx_port_by_hash(sc, inp->inp_flowid);
+		break;
+	default:
+		return (EOPNOTSUPP);
+	}
+	if (lp == NULL)
+		return (EOPNOTSUPP);
+	ifp = lp->lp_ifp;
+	if (ifp == NULL || ifp->if_create_tls_session == NULL)
+		return (EOPNOTSUPP);
+
+	if (inp->inp_vflag & INP_IPV6) {
+		if ((ifp->if_capenable & IFCAP_TXTLS6) == 0)
+			return (EOPNOTSUPP);
+	} else {
+		if ((ifp->if_capenable & IFCAP_TXTLS4) == 0)
+			return (EOPNOTSUPP);
+	}
+	return (ifp->if_create_tls_session(ifp, so, tls));
 }
 #endif
 

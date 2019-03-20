@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/ispfw/asm_2400.h 330292 2018-03-02 19:50:41Z mav $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

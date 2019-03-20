@@ -4,7 +4,7 @@
  *  Aug 1995, Godmar Back (gback@cs.utah.edu)
  *  University of Utah, Department of Computer Science
  *
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2fs.h 328885 2018-02-05 15:14:01Z pfg $
+ * $FreeBSD$
  */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/extattr/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 PROG=	rmextattr
 MAN=	rmextattr.8

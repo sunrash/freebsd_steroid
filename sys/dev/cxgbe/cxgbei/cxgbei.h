@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/cxgbei/cxgbei.h 305260 2016-09-01 23:58:36Z np $
+ * $FreeBSD$
  *
  */
 

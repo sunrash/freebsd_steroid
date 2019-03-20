@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/lib/libasn1/Makefile 301285 2016-06-03 19:25:41Z bdrewery $
+# $FreeBSD$
 
 LIB=	asn1
 LDFLAGS=	-Wl,--no-undefined
@@ -21,7 +21,8 @@ SRCS=	asn1_err.c \
 	timegm.c \
 	${GEN:S/.x$/.c/:S/.hx$/.h/}
 
-CFLAGS+=-I${KRB5DIR}/lib/asn1 -I${KRB5DIR}/lib/roken -I.
+CFLAGS+=-I${KRB5DIR}/lib/asn1 -I${KRB5DIR}/lib/roken \
+	-I${SRCTOP}/contrib/com_err -I.
 
 GEN_RFC2459=	asn1_rfc2459_asn1.x rfc2459_asn1.hx rfc2459_asn1-priv.hx
 GEN_CMS= 	asn1_cms_asn1.x cms_asn1.hx cms_asn1-priv.hx

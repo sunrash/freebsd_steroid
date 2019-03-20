@@ -38,7 +38,7 @@
  *	from: Utah Hdr: reg.h 1.1 90/07/09
  *	@(#)reg.h	8.2 (Berkeley) 1/11/94
  *	JNPR: reg.h,v 1.6 2006/09/15 12:52:34 katta
- * $FreeBSD: releng/12.0/sys/mips/include/reg.h 332122 2018-04-06 17:35:35Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_REG_H_

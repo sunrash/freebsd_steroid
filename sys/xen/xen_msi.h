@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/xen/xen_msi.h 276767 2015-01-06 21:26:35Z imp $
+ * $FreeBSD$
  */
 
 #ifndef __XEN_MSI_H__

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/lib/libkafs5/Makefile 322112 2017-08-06 06:31:47Z cy $
+# $FreeBSD$
 
 LIB=	kafs5
 LDFLAGS=	-Wl,--no-undefined

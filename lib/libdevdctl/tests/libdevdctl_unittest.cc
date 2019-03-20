@@ -29,7 +29,7 @@
  *
  * Authors: Alan Somers         (Spectra Logic Corporation)
  *
- * $FreeBSD: releng/12.0/lib/libdevdctl/tests/libdevdctl_unittest.cc 300906 2016-05-28 17:43:40Z asomers $
+ * $FreeBSD$
  */
 
 #include <gtest/gtest.h>

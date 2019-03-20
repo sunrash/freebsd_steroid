@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/forward.sh 324664 2017-10-16 15:05:32Z kp $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

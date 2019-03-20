@@ -1,5 +1,5 @@
 /*	$NetBSD: fpu_emu.h,v 1.3 2005/12/11 12:18:42 christos Exp $ */
-/* $FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_emu.h 326023 2017-11-20 19:43:44Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

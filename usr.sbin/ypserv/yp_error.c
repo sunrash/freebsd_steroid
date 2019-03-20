@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/ypserv/yp_error.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * error logging/reporting facilities

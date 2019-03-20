@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/crypto/ipsecstats.c 334054 2018-05-22 15:54:25Z fabient $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_core/mlx5_fs_tree.c 325976 2017-11-18 20:32:09Z hselasky $
+ * $FreeBSD$
  */
 
 #include <linux/module.h>
@@ -1601,9 +1601,10 @@ static char *get_dest_name(struct mlx5_flow_destination *dest)
 	case MLX5_FLOW_CONTEXT_DEST_TYPE_TIR:
 		snprintf(name, 20, "dest_%s_%u", "tir", dest->tir_num);
 		return name;
+	default:
+		kfree(name);
+		return NULL;
 	}
-
-	return NULL;
 }
 
 /* assumed fg is locked */

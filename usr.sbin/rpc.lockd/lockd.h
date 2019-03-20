@@ -1,5 +1,5 @@
 /*	$NetBSD: lockd.h,v 1.2 2000/06/07 14:34:40 bouyer Exp $	*/
-/*	$FreeBSD: releng/12.0/usr.sbin/rpc.lockd/lockd.h 325966 2017-11-18 14:26:50Z pfg $ */
+/*	$FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-4-Clause

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/ingenic/files.jz4780 310493 2016-12-24 02:31:26Z kan $
+# $FreeBSD$
 
 mips/ingenic/jz4780_dwc_fdt.c	optional dwcotg
 mips/ingenic/jz4780_ehci.c	optional ehci
@@ -29,7 +29,8 @@ mips/ingenic/jz4780_aic.c	optional sound xdma
 mips/ingenic/jz4780_codec.c	optional sound
 
 # SMP
-mips/ingenic/jz4780_mp.c	optional smp
+mips/ingenic/jz4780_mp.c	optional smp \
+	warning "* * * * * 32-bit mips SMP unsupported * * * * *"
 mips/ingenic/jz4780_mpboot.S	optional smp
 
 # Custom interface between pinctrl and gpio

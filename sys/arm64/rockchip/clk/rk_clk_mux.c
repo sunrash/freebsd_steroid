@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_mux.c 330036 2018-02-26 21:25:50Z manu $");
+__FBSDID("$FreeBSD$");
 
 
 #include <sys/param.h>

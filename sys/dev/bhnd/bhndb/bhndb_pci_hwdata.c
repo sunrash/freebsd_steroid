@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/bhndb/bhndb_pci_hwdata.c 326893 2017-12-16 04:35:37Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Resource specifications and register maps for Broadcom PCI/PCIe cores 

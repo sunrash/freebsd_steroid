@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/Makefile 325834 2017-11-14 23:02:19Z imp $
+# $FreeBSD$
 
 # Directories to include in cscope name file and TAGS.
 CSCOPEDIRS=	bsm cam cddl compat conf contrib crypto ddb dev fs gdb \

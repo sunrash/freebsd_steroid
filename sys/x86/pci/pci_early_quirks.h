@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/pci/pci_early_quirks.h 340224 2018-11-07 17:44:27Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _PCI_EARLY_QUIRKS_H_

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libpathconv/rel2abs.c 309035 2016-11-23 07:57:52Z julian $
+ * $FreeBSD$
  */
 #include <errno.h>
 #include <stdlib.h>

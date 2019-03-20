@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/dtc/Makefile 328641 2018-01-31 22:20:33Z kevans $
+# $FreeBSD$
 
 PROG_CXX=dtc
 SRCS=	dtc.cc input_buffer.cc string.cc dtb.cc fdt.cc checking.cc

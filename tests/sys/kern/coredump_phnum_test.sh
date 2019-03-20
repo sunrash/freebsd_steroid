@@ -27,7 +27,7 @@
 #  IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 #  POSSIBILITY OF SUCH DAMAGES.
 #
-# $FreeBSD: releng/12.0/tests/sys/kern/coredump_phnum_test.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 atf_test_case coredump_phnum cleanup
 coredump_phnum_head()

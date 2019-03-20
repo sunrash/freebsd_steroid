@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/dma/dma-mbox-create/Makefile 289087 2015-10-09 22:09:44Z bapt $
+# $FreeBSD$
 
 MAN=
 

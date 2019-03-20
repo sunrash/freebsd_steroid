@@ -25,10 +25,9 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/uuid.c 314577 2017-03-03 01:56:55Z sjg $");
+__FBSDID("$FreeBSD$");
 
 #include <stdint.h>
-#include <stdio.h>
 #include <string.h>
 
 #include "endian.h"

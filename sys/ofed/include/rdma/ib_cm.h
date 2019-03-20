@@ -34,7 +34,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/rdma/ib_cm.h 338541 2018-09-09 07:20:15Z hselasky $
+ * $FreeBSD$
  */
 
 #if !defined(IB_CM_H)

@@ -1,7 +1,7 @@
 /*-
  * Top - a top users display for Berkeley Unix
  *
- * $FreeBSD: releng/12.0/usr.bin/top/top.h 338189 2018-08-22 10:07:15Z eadler $
+ * $FreeBSD$
  */
 
 #ifndef TOP_H

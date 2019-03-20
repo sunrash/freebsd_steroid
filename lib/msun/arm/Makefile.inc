@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/msun/arm/Makefile.inc 324340 2017-10-05 23:01:33Z imp $
+# $FreeBSD$
 
 LDBL_PREC = 53
 SYM_MAPS += ${.CURDIR}/arm/Symbol.map

@@ -1,5 +1,5 @@
 #/bin/sh
-# $FreeBSD: releng/12.0/sys/gnu/dts/FreeBSD-upgrade 279385 2015-02-28 00:06:04Z imp $
+# $FreeBSD$
 #
 # These files are imported from Ian Campbell's git tree mirroring the linux
 # kernel.

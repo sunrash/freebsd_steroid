@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/fs/tmpfs/Makefile 336588 2018-07-21 20:14:01Z asomers $
+# $FreeBSD$
 
 PACKAGE=		tests
 

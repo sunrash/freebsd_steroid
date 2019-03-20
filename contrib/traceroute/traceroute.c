@@ -28,7 +28,7 @@ static const char rcsid[] =
     "@(#)$Id: traceroute.c,v 1.68 2000/12/14 08:04:33 leres Exp $ (LBL)";
 #endif
 static const char rcsid[] =
-    "$FreeBSD: releng/12.0/contrib/traceroute/traceroute.c 328488 2018-01-27 19:23:42Z tuexen $";
+    "$FreeBSD$";
 #endif
 
 /*
@@ -523,7 +523,7 @@ main(int argc, char **argv)
 	int sump = 0;
 	int sockerrno;
 #ifdef WITH_CASPER
-	const char *types[] = { "NAME", "ADDR" };
+	const char *types[] = { "NAME2ADDR", "ADDR2NAME" };
 	int families[1];
 	cap_channel_t *casper;
 #endif

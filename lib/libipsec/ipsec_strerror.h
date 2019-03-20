@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/lib/libipsec/ipsec_strerror.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: ipsec_strerror.h,v 1.8 2000/07/30 00:45:12 itojun Exp $	*/
 
 /*-

@@ -23,7 +23,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/ti/ti_wdt.h 273257 2014-10-18 16:59:21Z rpaulo $
+ * $FreeBSD$
  */
 #ifndef _TI_WDT_H_
 #define _TI_WDT_H_

@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/lib/libarchive/tests/functional_test.sh 288976 2015-10-07 05:20:44Z ngie $
+# $FreeBSD$
 
 SRCDIR=$(atf_get_srcdir)
 TESTER="${SRCDIR}/libarchive_test"

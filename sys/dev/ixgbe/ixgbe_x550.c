@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_x550.c 333870 2018-05-19 05:57:26Z mmacy $*/
+/*$FreeBSD$*/
 
 #include "ixgbe_x550.h"
 #include "ixgbe_x540.h"

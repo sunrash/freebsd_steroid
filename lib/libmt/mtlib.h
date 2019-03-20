@@ -29,7 +29,7 @@
  *
  * Authors: Ken Merry           (Spectra Logic Corporation)
  *
- * $FreeBSD: releng/12.0/lib/libmt/mtlib.h 279219 2015-02-23 21:59:30Z ken $
+ * $FreeBSD$
  */
 
 #ifndef	_MTLIB_H

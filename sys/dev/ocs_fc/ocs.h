@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs.h 336446 2018-07-18 07:01:34Z ram $
+ * $FreeBSD$
  */
 
 /**
@@ -84,6 +84,7 @@ typedef struct ocs_fcport_s {
 	struct cam_sim		*sim;
 	struct cam_path		*path;
 	uint32_t		role;
+	uint32_t                fc_id;
 
 	ocs_fc_target_t	tgt[OCS_MAX_TARGETS];
 	int lost_device_time;

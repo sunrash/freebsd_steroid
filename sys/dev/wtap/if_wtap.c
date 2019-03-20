@@ -31,7 +31,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/dev/wtap/if_wtap.c 334118 2018-05-23 21:02:14Z mmacy $
+ * $FreeBSD$
  */
 #include "if_wtapvar.h"
 #include <sys/uio.h>    /* uio struct */
@@ -91,6 +91,7 @@ wtap_node_write(struct cdev *dev, struct uio *uio, int ioflag)
 	struct ifnet *ifp;
 	struct wtap_softc *sc;
 	uint8_t buf[1024];
+	struct epoch_tracker et;
 	int buf_len;
 
 	uprintf("write device %s \"echo.\"\n", devtoname(dev));
@@ -106,7 +107,7 @@ wtap_node_write(struct cdev *dev, struct uio *uio, int ioflag)
 	m_copyback(m, 0, buf_len, buf);
 
 	CURVNET_SET(TD_TO_VNET(curthread));
-	IFNET_RLOCK_NOSLEEP();
+	NET_EPOCH_ENTER(et);
 
 	CK_STAILQ_FOREACH(ifp, &V_ifnet, if_link) {
 		printf("ifp->if_xname = %s\n", ifp->if_xname);
@@ -119,7 +120,7 @@ wtap_node_write(struct cdev *dev, struct uio *uio, int ioflag)
 		}
 	}
 
-	IFNET_RUNLOCK_NOSLEEP();
+	NET_EPOCH_EXIT(et);
 	CURVNET_RESTORE();
 
 	return(err);

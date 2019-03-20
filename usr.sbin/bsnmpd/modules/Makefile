@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/Makefile 317383 2017-04-24 21:21:49Z brooks $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

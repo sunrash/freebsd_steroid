@@ -27,7 +27,7 @@
  */
 
 #if 0
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/indent/indent.h 336333 2018-07-16 05:46:50Z pstef $");
+__FBSDID("$FreeBSD$");
 #endif
 
 void	add_typename(const char *);

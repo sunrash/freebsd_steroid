@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/gstat/gstat.c 338133 2018-08-21 11:22:49Z araujo $
+ * $FreeBSD$
  */
 
 

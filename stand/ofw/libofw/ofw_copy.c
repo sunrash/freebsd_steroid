@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/ofw/libofw/ofw_copy.c 328835 2018-02-03 23:49:21Z nwhitehorn $");
+__FBSDID("$FreeBSD$");
 
 /*
  * MD primitives supporting placement of module data 

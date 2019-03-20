@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/allwinner/if_awg.c 337371 2018-08-06 05:35:24Z manu $
+ * $FreeBSD$
  */
 
 /*
@@ -33,7 +33,7 @@
 #include "opt_device_polling.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/allwinner/if_awg.c 337371 2018-08-06 05:35:24Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -1466,6 +1466,12 @@ awg_setup_extres(device_t dev)
 		goto fail;
 	}
 	if (rst_ephy != NULL) {
+		/*
+		 * The ephy reset is left de-asserted by U-Boot.  Assert it
+		 * here to make sure that we're in a known good state going
+		 * into the PHY reset.
+		 */
+		hwreset_assert(rst_ephy);
 		error = hwreset_deassert(rst_ephy);
 		if (error != 0) {
 			device_printf(dev, "cannot de-assert ephy reset\n");

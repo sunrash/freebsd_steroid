@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ofed/infiniband-diags/Makefile 336569 2018-07-20 23:52:11Z kib $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/libbfd/Makefile.arm 322521 2017-08-14 22:25:20Z imp $
+# $FreeBSD$
 
 .if ${TARGET_ARCH:Marm*eb} != ""
 DEFAULT_VECTOR=	bfd_elf32_bigarm_vec

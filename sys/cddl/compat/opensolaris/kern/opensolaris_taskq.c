@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/kern/opensolaris_taskq.c 334844 2018-06-08 17:38:28Z sef $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -171,11 +171,11 @@ taskq_dispatch_ent(taskq_t *tq, task_func_t func, void *arg, u_int flags,
 void
 taskq_wait(taskq_t *tq)
 {
-	taskqueue_drain_all(tq->tq_queue);
+	taskqueue_quiesce(tq->tq_queue);
 }
 
 void
 taskq_wait_id(taskq_t *tq, taskqid_t id)
 {
-        taskq_wait(tq);
+	taskqueue_drain_all(tq->tq_queue);
 }

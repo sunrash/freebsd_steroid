@@ -17,7 +17,7 @@
  *
  * NEW command line interface for IP firewall facility
  *
- * $FreeBSD: releng/12.0/sbin/ipfw/nat.c 327040 2017-12-20 20:25:28Z pfg $
+ * $FreeBSD$
  *
  * In-kernel nat support
  */

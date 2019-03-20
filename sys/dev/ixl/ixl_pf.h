@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/ixl_pf.h 339338 2018-10-12 22:40:54Z erj $*/
+/*$FreeBSD$*/
 
 
 #ifndef _IXL_PF_H_
@@ -267,9 +267,6 @@ char *	ixl_switch_element_string(struct sbuf *,
 	    struct i40e_aqc_switch_config_element_resp *);
 void	ixl_add_sysctls_mac_stats(struct sysctl_ctx_list *,
 		    struct sysctl_oid_list *, struct i40e_hw_port_stats *);
-void	ixl_add_sysctls_eth_stats(struct sysctl_ctx_list *,
-		    struct sysctl_oid_list *,
-		    struct i40e_eth_stats *);
 
 void    ixl_media_status(struct ifnet *, struct ifmediareq *);
 int     ixl_media_change(struct ifnet *);

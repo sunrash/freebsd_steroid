@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/dot/dot 269027 2014-07-23 21:08:04Z dteske $
+# $FreeBSD$
 #
 ############################################################ INCLUDES
 

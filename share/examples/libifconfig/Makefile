@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/libifconfig/Makefile 329853 2018-02-23 03:11:43Z asomers $
+# $FreeBSD$
 default:
 	$(CC) -Wall -fPIC -lifconfig -g -o example_setdescription setdescription.c
 	$(CC) -Wall -fPIC -lifconfig -g -o example_setmtu setmtu.c

@@ -27,7 +27,7 @@
  *
  *	from: src/sys/alpha/include/gdb_machdep.h,v 1.3 2005/01/05 20:05:50 imp
  *	JNPR: gdb_machdep.h,v 1.1 2007/08/09 12:25:25 katta
- * $FreeBSD: releng/12.0/sys/mips/include/gdb_machdep.h 330539 2018-03-06 14:28:37Z jtl $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_GDB_MACHDEP_H_

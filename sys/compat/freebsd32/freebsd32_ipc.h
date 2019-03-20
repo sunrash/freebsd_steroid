@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/freebsd32/freebsd32_ipc.h 330297 2018-03-02 22:10:48Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _COMPAT_FREEBSD32_FREEBSD32_IPC_H_

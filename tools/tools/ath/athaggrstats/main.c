@@ -27,7 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/athaggrstats/main.c 295363 2016-02-07 04:28:03Z adrian $
+ * $FreeBSD$
  */
 
 /*

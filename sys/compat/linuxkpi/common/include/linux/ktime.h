@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/ktime.h 337232 2018-08-03 09:02:57Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_KTIME_H
@@ -176,6 +176,7 @@ timeval_to_ktime(struct timeval tv)
 #define	ktime_to_timespec64(kt)		ns_to_timespec(kt)
 #define	ktime_to_timeval(kt)		ns_to_timeval(kt)
 #define	ktime_to_ns(kt)			(kt)
+#define	ktime_get_ts64(ts)		ktime_get_ts(ts)
 
 static inline int64_t
 ktime_get_ns(void)

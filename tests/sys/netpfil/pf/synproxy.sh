@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/synproxy.sh 336297 2018-07-14 21:32:32Z kp $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

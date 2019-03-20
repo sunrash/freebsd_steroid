@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/atheros/ar531x/ar5315_gpiovar.h 306675 2016-10-04 16:27:36Z adrian $
+ * $FreeBSD$
  *
  */
 

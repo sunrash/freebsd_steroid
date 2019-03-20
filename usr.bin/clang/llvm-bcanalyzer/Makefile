@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/llvm-bcanalyzer/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 PROG_CXX=	llvm-bcanalyzer
 

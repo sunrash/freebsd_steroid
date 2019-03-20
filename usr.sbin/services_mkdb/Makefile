@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/services_mkdb/Makefile 338212 2018-08-22 21:22:40Z brd $
+# $FreeBSD$
 
 CONFS=	services
 PROG=	services_mkdb

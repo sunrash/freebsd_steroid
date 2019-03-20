@@ -29,7 +29,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/i387/s_remquo.S 217108 2011-01-07 16:13:12Z kib $"); 
+__FBSDID("$FreeBSD$"); 
 	
 ENTRY(remquo)
 	fldl	12(%esp)

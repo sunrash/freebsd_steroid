@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/aarch64/gen/Makefile.inc 297619 2016-04-06 16:09:10Z andrew $
+# $FreeBSD$
 
 CFLAGS+=	-DNO_COMPAT7
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/dtb/am335x/Makefile 337877 2018-08-15 21:47:03Z manu $
+# $FreeBSD$
 # All the dts files for am335x systems we support.
 DTS=	\
 	am335x-bone.dts \

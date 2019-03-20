@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcasper/services/cap_sysctl/tests/Makefile 327583 2018-01-05 09:31:41Z oshogbo $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/udf/ecma167-udf.h 326268 2017-11-27 15:15:37Z pfg $
+ * $FreeBSD$
  */
 
 /* ecma167-udf.h */

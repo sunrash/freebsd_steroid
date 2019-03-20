@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/timeout/tests/timeout_test.sh 314944 2017-03-09 04:20:00Z bdrewery $
+# $FreeBSD$
 
 atf_test_case nominal
 nominal_head()

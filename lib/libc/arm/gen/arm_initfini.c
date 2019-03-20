@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/arm/gen/arm_initfini.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * To properly implement setjmp/longjmp for the ARM AAPCS ABI, it has to be

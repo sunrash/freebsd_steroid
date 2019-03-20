@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: search.c,v 1.2 2003/09/08 17:35:15 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/sdpcontrol/search.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <netinet/in.h>

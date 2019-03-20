@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/in_pcbgroup.c 335093 2018-06-13 23:19:54Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 #include "opt_rss.h"

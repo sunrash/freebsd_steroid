@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcasper/services/cap_syslog/cap_syslog.c 329452 2018-02-17 12:22:29Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/dnv.h>
 #include <sys/nv.h>
@@ -198,4 +198,4 @@ syslog_command(const char *cmd, const nvlist_t *limits, nvlist_t *nvlin,
 	return (0);
 }
 
-CREATE_SERVICE("system.syslog", NULL, syslog_command, 0);
+CREATE_SERVICE("system.syslog", NULL, syslog_command, CASPER_SERVICE_STDIO);

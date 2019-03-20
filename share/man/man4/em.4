@@ -29,9 +29,9 @@
 .\"
 .\" * Other names and brands may be claimed as the property of others.
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man4/em.4 338834 2018-09-20 18:24:32Z shurd $
+.\" $FreeBSD$
 .\"
-.Dd September 20, 2018
+.Dd January 30, 2019
 .Dt EM 4
 .Os
 .Sh NAME
@@ -39,9 +39,10 @@
 .Nd "Intel(R) PRO/1000 Gigabit Ethernet adapter driver"
 .Sh SYNOPSIS
 To compile this driver into the kernel,
-place the following line in your
+place the following lines in your
 kernel configuration file:
 .Bd -ragged -offset indent
+.Cd "device iflib"
 .Cd "device em"
 .Ed
 .Pp

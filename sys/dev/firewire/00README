@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/sys/dev/firewire/00README 336757 2018-07-27 10:40:48Z eadler $
+$FreeBSD$
 
 IEEE 1394 support for FreeBSD-5.X and 4.X.
 

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/random/randomize_fd.h 181527 2008-08-10 11:31:56Z ache $
+ * $FreeBSD$
  */
 
 #ifndef __RANDOMIZE_FD__

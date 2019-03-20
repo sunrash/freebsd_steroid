@@ -13,7 +13,7 @@
  *          Thomas Moestl <tmoestl@gmx.net>
  *          Eitan Adler <eadler@FreeBSD.org>
  *
- * $FreeBSD: releng/12.0/usr.bin/top/machine.c 338315 2018-08-25 15:59:51Z markj $
+ * $FreeBSD$
  */
 
 #include <sys/errno.h>

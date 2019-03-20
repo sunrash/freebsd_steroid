@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)pwd_mkdb.c	8.5 (Berkeley) 4/20/94";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/pwd_mkdb/pwd_mkdb.c 333133 2018-05-01 00:53:46Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/endian.h>
@@ -123,18 +123,10 @@ main(int argc, char *argv[])
 	makeold = 0;
 	username = NULL;
 	oldfp = NULL;
-	while ((ch = getopt(argc, argv, "BCLNd:ips:u:v")) != -1)
+	while ((ch = getopt(argc, argv, "CNd:ips:u:v")) != -1)
 		switch(ch) {
-		case 'B':			/* big-endian output */
-			warnx("endiannes options (-B/-L) are deprecated");
-			openinfo.lorder = BIG_ENDIAN;
-			break;
 		case 'C':                       /* verify only */
 			Cflag = 1;
-			break;
-		case 'L':			/* little-endian output */
-			warnx("endiannes options (-B/-L) are deprecated");
-			openinfo.lorder = LITTLE_ENDIAN;
 			break;
 		case 'N':			/* do not wait for lock	*/
 			nblock = LOCK_NB;	/* will fail if locked */

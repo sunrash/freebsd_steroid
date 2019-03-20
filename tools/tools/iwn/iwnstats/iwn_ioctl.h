@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/iwn/iwnstats/iwn_ioctl.h 287313 2015-08-30 21:54:47Z adrian $
+ * $FreeBSD$
  */
 #ifndef	__IWN_IOCTL_H__
 #define	__IWN_IOCTL_H__

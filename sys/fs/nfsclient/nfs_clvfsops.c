@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/nfsclient/nfs_clvfsops.c 335012 2018-06-12 19:36:32Z rmacklem $");
+__FBSDID("$FreeBSD$");
 
 
 #include "opt_bootp.h"
@@ -1238,8 +1238,7 @@ nfs_mount(struct mount *mp)
 		bzero(&hst[hstlen], MNAMELEN - hstlen);
 		args.hostname = hst;
 		/* getsockaddr() call must be after above copyin() calls */
-		error = getsockaddr(&nam, (caddr_t)args.addr,
-		    args.addrlen);
+		error = getsockaddr(&nam, args.addr, args.addrlen);
 		if (error != 0)
 			goto out;
 	} else if (nfs_mount_parse_from(mp->mnt_optnew,

@@ -30,7 +30,7 @@
  *
  *	@(#)dump.h	8.2 (Berkeley) 4/28/95
  *
- * $FreeBSD: releng/12.0/sbin/dump/dump.h 328426 2018-01-26 00:58:32Z mckusick $
+ * $FreeBSD$
  */
 
 /*
@@ -126,7 +126,7 @@ void	dumpabort(int signo) __dead2;
 void	dump_getfstab(void);
 
 char	*rawname(char *cp);
-union	dinode *getinode(ino_t inum, int *mode);
+union	dinode *getino(ino_t inum, int *mode);
 
 /* rdump routines */
 #ifdef RDUMP

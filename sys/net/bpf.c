@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/net/bpf.c 336676 2018-07-24 16:35:52Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bpf.h"
 #include "opt_ddb.h"
@@ -2289,6 +2289,7 @@ bpf_mtap2(struct bpf_if *bp, void *data, u_int dlen, struct mbuf *m)
 	 * Note that we cut corners here; we only setup what's
 	 * absolutely needed--this mbuf should never go anywhere else.
 	 */
+	mb.m_flags = 0;
 	mb.m_next = m;
 	mb.m_data = data;
 	mb.m_len = dlen;

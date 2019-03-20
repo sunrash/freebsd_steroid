@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/ofw/libofw/devicename.c 336085 2018-07-08 07:42:58Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 

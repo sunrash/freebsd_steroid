@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/uzip/1_test.sh 307625 2016-10-19 10:01:04Z br $
+# $FreeBSD$
 
 testsdir=$(dirname $0)
 . $testsdir/conf.sh

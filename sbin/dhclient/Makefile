@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.9 2004/05/04 12:52:05 henning Exp $
-# $FreeBSD: releng/12.0/sbin/dhclient/Makefile 338740 2018-09-18 00:11:45Z brd $
+# $FreeBSD$
 #
 # Copyright (c) 1996, 1997 The Internet Software Consortium.
 # All rights reserved.

@@ -6,7 +6,7 @@
  * that we want it to.
  * XXX this is a work in progress.  It is not yet usable
  *
- * $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/txg_integrity/txg_integrity.d 329867 2018-02-23 16:31:00Z asomers $
+ * $FreeBSD$
  */
 
 /* zfs:kernel:dbuf_fix_old_data:entry

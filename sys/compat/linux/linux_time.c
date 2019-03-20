@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_time.c 328890 2018-02-05 17:29:12Z emaste $");
+__FBSDID("$FreeBSD$");
 #if 0
 __KERNEL_RCSID(0, "$NetBSD: linux_time.c,v 1.14 2006/05/14 03:40:54 christos Exp $");
 #endif

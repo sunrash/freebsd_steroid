@@ -28,7 +28,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE. 
  *
- * $FreeBSD: releng/12.0/sys/bsm/audit_errno.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _BSM_AUDIT_ERRNO_H_
@@ -208,6 +208,7 @@
 #define	BSM_ERRNO_EKEYREJECTED		222	/* Linux-specific. */
 #define	BSM_ERRNO_ENOTCAPABLE		223	/* FreeBSD-specific. */
 #define	BSM_ERRNO_ECAPMODE		224	/* FreeBSD-specific. */
+#define	BSM_ERRNO_EINTEGRITY		225	/* FreeBSD-specific. */
 
 /*
  * In the event that OpenBSM doesn't have a file representation of a local

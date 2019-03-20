@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dts/arm/overlays/spigen-rpi-b.dtso 335592 2018-06-23 22:55:22Z ian $ */
+/* $FreeBSD$ */
 
 /dts-v1/;
 /plugin/;

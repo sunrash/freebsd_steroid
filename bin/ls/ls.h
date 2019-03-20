@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)ls.h	8.1 (Berkeley) 5/31/93
- * $FreeBSD: releng/12.0/bin/ls/ls.h 328100 2018-01-17 22:47:34Z cem $
+ * $FreeBSD$
  */
 
 #define NO_PRINT	1

@@ -34,7 +34,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/intr.h 337845 2018-08-15 13:48:59Z andrew $
+ * $FreeBSD$
  *
  */
 

@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/riscv/gen/setjmp.S 336633 2018-07-23 09:54:28Z br $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/setjmp.h>
 

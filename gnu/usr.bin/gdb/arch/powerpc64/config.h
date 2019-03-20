@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/gnu/usr.bin/gdb/arch/powerpc64/config.h 338860 2018-09-21 17:44:05Z brooks $ */
+/* $FreeBSD$ */
 
 /* config.h.  Generated automatically by configure.  */
 /* config.in.  Generated automatically from configure.in by autoheader.  */

@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/12/93
-# $FreeBSD: releng/12.0/usr.bin/netstat/Makefile 321618 2017-07-27 13:03:36Z bz $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

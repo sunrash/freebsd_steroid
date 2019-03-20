@@ -35,7 +35,7 @@
  *
  *	From: @(#)ansi.h	8.2 (Berkeley) 1/4/94
  *	From: @(#)types.h	8.3 (Berkeley) 1/5/94
- * $FreeBSD: releng/12.0/sys/powerpc/include/_types.h 329859 2018-02-23 04:04:25Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE__TYPES_H_

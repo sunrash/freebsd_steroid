@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/amd64/mpboot.S 332073 2018-04-05 14:39:51Z royger $
+ * $FreeBSD$
  */
 
 #include <machine/asmacros.h>		/* miscellaneous asm macros */

@@ -59,7 +59,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_sleepqueue.c 333853 2018-05-19 05:00:16Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_sleepqueue_profiling.h"
 #include "opt_ddb.h"

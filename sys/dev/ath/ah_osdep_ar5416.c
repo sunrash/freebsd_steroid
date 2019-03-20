@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ath/ah_osdep_ar5416.c 318856 2017-05-25 04:18:46Z adrian $
+ * $FreeBSD$
  *
  */
 

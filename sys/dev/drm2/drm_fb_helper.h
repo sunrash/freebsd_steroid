@@ -27,7 +27,7 @@
  *      Dave Airlie <airlied@linux.ie>
  *      Jesse Barnes <jesse.barnes@intel.com>
  *
- * $FreeBSD: releng/12.0/sys/dev/drm2/drm_fb_helper.h 338285 2018-08-24 00:02:00Z imp $
+ * $FreeBSD$
  */
 #ifndef DRM_FB_HELPER_H
 #define DRM_FB_HELPER_H

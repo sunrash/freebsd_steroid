@@ -41,7 +41,7 @@ __RCSID("$NetBSD: sig.c,v 1.24 2016/02/16 19:08:41 christos Exp $");
 #endif
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/sig.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * sig.c: Signal handling stuff.

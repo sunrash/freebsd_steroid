@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/cxgbetool/tcb_common.c 330887 2018-03-14 00:04:58Z np $");
+__FBSDID("$FreeBSD$");
 
 #include "tcb_common.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/ti/std.ti 324341 2017-10-05 23:01:50Z imp $
+# $FreeBSD$
 
 machine 	arm	armv7
 makeoptions	CONF_CFLAGS="-march=armv7a"

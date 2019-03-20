@@ -32,7 +32,7 @@
  * SOFTWARE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/iw_cxgbe/cq.c 337659 2018-08-11 21:10:08Z np $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 
@@ -671,7 +671,7 @@ proc_cqe:
 		BUG_ON(wq->sq.in_use <= 0 && wq->sq.in_use >= wq->sq.size);
 
 		wq->sq.cidx = (uint16_t)idx;
-		CTR2(KTR_IW_CXGBE, "%s completing sq idx %u\n",
+		CTR2(KTR_IW_CXGBE, "%s completing sq idx %u",
 				__func__, wq->sq.cidx);
 		*cookie = wq->sq.sw_sq[wq->sq.cidx].wr_id;
 		t4_sq_consume(wq);

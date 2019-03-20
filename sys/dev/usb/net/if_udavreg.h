@@ -1,6 +1,6 @@
 /*	$NetBSD: if_udavreg.h,v 1.2 2003/09/04 15:17:39 tsutsui Exp $	*/
 /*	$nabe: if_udavreg.h,v 1.2 2003/08/21 16:26:40 nabe Exp $	*/
-/*	$FreeBSD: releng/12.0/sys/dev/usb/net/if_udavreg.h 326022 2017-11-20 19:36:21Z pfg $	*/
+/*	$FreeBSD$	*/
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

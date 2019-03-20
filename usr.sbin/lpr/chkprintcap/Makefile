@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/lpr/chkprintcap/Makefile 314475 2017-03-01 05:14:45Z ngie $
+# $FreeBSD$
 
 .PATH: ${.CURDIR:H}/common_source
 

@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/xform_sha2.c 336125 2018-07-09 07:28:13Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <crypto/sha2/sha224.h>
 #include <crypto/sha2/sha256.h>

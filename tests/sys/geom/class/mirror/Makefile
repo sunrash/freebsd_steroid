@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/geom/class/mirror/Makefile 327780 2018-01-10 19:41:05Z markj $
+# $FreeBSD$
 
 PACKAGE=	tests
 
@@ -18,6 +18,7 @@ TAP_TESTS_SH+=	11_test
 TAP_TESTS_SH+=	12_test
 TAP_TESTS_SH+=	13_test
 
+ATF_TESTS_SH+=	component_selection
 ATF_TESTS_SH+=	sync_error
 
 ${PACKAGE}FILES+=		conf.sh

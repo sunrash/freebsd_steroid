@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/contrib/rdma/krping/krping.c 338495 2018-09-06 14:03:11Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <linux/module.h>
 #include <linux/moduleparam.h>

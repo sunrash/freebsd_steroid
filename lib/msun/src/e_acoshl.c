@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/e_acoshl.c 251599 2013-06-10 06:04:58Z das $");
+__FBSDID("$FreeBSD$");
 
 /*
  * See e_acosh.c for complete comments.

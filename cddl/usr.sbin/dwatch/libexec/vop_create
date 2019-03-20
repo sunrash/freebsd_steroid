@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for VOP_CREATE(9) [or similar] entry $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/vop_create 333517 2018-05-12 06:01:41Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

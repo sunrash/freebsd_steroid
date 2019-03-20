@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/nvmecontrol/nvmecontrol_ext.h 335091 2018-06-13 22:00:02Z imp $
+ * $FreeBSD$
  */
 
 void nvme_print_controller(struct nvme_controller_data *cdata);

@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/aio/aio_kqueue_test.c 337930 2018-08-16 22:04:00Z asomers $
+ * $FreeBSD$
  */
 
 /* 

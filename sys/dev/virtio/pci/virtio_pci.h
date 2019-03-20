@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/virtio/pci/virtio_pci.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _VIRTIO_PCI_H

@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bxe/ecore_mfw_req.h 326022 2017-11-20 19:36:21Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #ifndef ECORE_MFW_REQ_H
 #define ECORE_MFW_REQ_H

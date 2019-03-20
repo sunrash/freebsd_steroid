@@ -33,7 +33,7 @@
  *
  *	from: NetBSD: db_disasm.c,v 1.9 2000/08/16 11:29:42 pk Exp
  *
- * $FreeBSD: releng/12.0/sys/sparc64/include/instr.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_INSTR_H_

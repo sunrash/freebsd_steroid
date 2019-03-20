@@ -55,7 +55,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/s35390a.c 330433 2018-03-05 00:43:53Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for Seiko Instruments S-35390A Real-time Clock

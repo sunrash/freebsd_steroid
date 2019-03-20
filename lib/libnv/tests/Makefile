@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libnv/tests/Makefile 335347 2018-06-18 22:57:32Z oshogbo $
+# $FreeBSD$
 
 ATF_TESTS_CXX=	\
 	cnv_tests \

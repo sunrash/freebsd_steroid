@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/kerberos5/lib/libkdc/Makefile 275022 2014-11-25 09:57:42Z bapt $
+#$FreeBSD$
 
 LIB=	kdc
 LDFLAGS=	-Wl,--no-undefined
@@ -28,7 +28,8 @@ SRCS=	\
 CFLAGS+=	-I${KRB5DIR}/lib/roken \
 		-I${KRB5DIR}/lib/krb5 \
 		-I${KRB5DIR}/lib/hdb \
-		-I${KRB5DIR}/kdc
+		-I${KRB5DIR}/kdc \
+		-I${SRCTOP}/contrib/com_err
 
 .include <bsd.lib.mk>
 

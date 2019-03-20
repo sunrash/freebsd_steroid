@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/smartpqi/smartpqi_ioctl.h 333019 2018-04-26 16:59:06Z sbruno $ */
+/* $FreeBSD$ */
 
 #ifndef	_PQI_IOCTL_H_
 #define	_PQI_IOCTL_H_

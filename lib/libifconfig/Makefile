@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libifconfig/Makefile 329853 2018-02-23 03:11:43Z asomers $
+# $FreeBSD$
 
 PACKAGE=	lib${LIB}
 LIB=		ifconfig

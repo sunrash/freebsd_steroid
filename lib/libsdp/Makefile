@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.2 2003/09/07 20:34:19 max Exp $
-# $FreeBSD: releng/12.0/lib/libsdp/Makefile 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=		sdp

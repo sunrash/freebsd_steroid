@@ -26,7 +26,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/tar/test/test_option_C_mtree.c 336854 2018-07-29 00:12:16Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_option_C_mtree)
 {

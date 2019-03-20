@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_stats.c 335201 2018-06-15 14:41:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 

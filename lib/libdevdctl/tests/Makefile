@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libdevdctl/tests/Makefile 312512 2017-01-20 04:55:14Z ngie $
+# $FreeBSD$
 
 TESTSDIR= ${TESTSBASE}/lib/libdevdctl
 

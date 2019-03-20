@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/tom/t4_ddp.c 338355 2018-08-28 18:16:02Z np $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 

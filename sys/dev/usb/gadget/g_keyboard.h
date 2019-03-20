@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/gadget/g_keyboard.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

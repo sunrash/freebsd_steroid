@@ -1,4 +1,4 @@
-#	$FreeBSD: releng/12.0/tools/tools/ath/Makefile 269762 2014-08-09 18:17:49Z adrian $
+#	$FreeBSD$
 
 SUBDIR=	arcode athdebug athdecode athkey athpoke athprom athrd athregs athalq
 SUBDIR+=	athstats ath_prom_read athradar athaggrstats

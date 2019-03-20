@@ -35,7 +35,7 @@ static const char sccsid[] = "@(#)setup.c	8.10 (Berkeley) 5/9/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/fsck_ffs/setup.c 328426 2018-01-26 00:58:32Z mckusick $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/disk.h>
@@ -127,7 +127,7 @@ setup(char *dev)
 		}
 	}
 	if ((fsreadfd = open(dev, O_RDONLY)) < 0 ||
-	    ufs_disk_fillout(&disk, dev) < 0) {
+	    ufs_disk_fillout_blank(&disk, dev) < 0) {
 		if (bkgrdflag) {
 			unlink(snapname);
 			bkgrdflag = 0;
@@ -208,6 +208,13 @@ setup(char *dev)
 		pwarn("USING ALTERNATE SUPERBLOCK AT %jd\n", bflag);
 		bflag = 0;
 	}
+	/* Save copy of things needed by libufs */
+	memcpy(&disk.d_fs, &sblock, sblock.fs_sbsize);
+	disk.d_ufs = (sblock.fs_magic == FS_UFS1_MAGIC) ? 1 : 2;
+	disk.d_bsize = sblock.fs_fsize / fsbtodb(&sblock, 1);
+	disk.d_sblock = sblock.fs_sblockloc / disk.d_bsize;
+	disk.d_sbcsum = sblock.fs_csp;
+
 	if (skipclean && ckclean && sblock.fs_clean) {
 		pwarn("FILE SYSTEM CLEAN; SKIPPING CHECKS\n");
 		return (-1);
@@ -320,15 +327,13 @@ readsb(int listerr)
 	int bad, ret;
 	struct fs *fs;
 
-	super = bflag ? bflag * dev_bsize : -1;
+	super = bflag ? bflag * dev_bsize : STDSB;
 	readcnt[sblk.b_type]++;
 	if ((ret = sbget(fsreadfd, &fs, super)) != 0) {
 		switch (ret) {
 		case EINVAL:
-			fprintf(stderr, "The previous newfs operation "
-			    "on this volume did not complete.\nYou must "
-			    "complete newfs before using this volume.\n");
-			exit(11);
+			/* Superblock check-hash failed */
+			return (0);
 		case ENOENT:
 			if (bflag)
 				fprintf(stderr, "%jd is not a file system "

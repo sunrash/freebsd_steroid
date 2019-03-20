@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for dtrace_proc(4) activity $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/proc 333517 2018-05-12 06:01:41Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

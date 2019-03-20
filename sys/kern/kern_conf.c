@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_conf.c 333857 2018-05-19 05:07:03Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -202,7 +202,8 @@ dev_refthread(struct cdev *dev, int *ref)
 			csw = NULL;
 	}
 	dev_unlock();
-	*ref = 1;
+	if (csw != NULL)
+		*ref = 1;
 	return (csw);
 }
 
@@ -629,7 +630,7 @@ prep_cdevsw(struct cdevsw *devsw, int flags)
 		return (0);
 	}
 
-	if (devsw->d_version != D_VERSION_03) {
+	if (devsw->d_version != D_VERSION_04) {
 		printf(
 		    "WARNING: Device driver \"%s\" has wrong version %s\n",
 		    devsw->d_name == NULL ? "???" : devsw->d_name,

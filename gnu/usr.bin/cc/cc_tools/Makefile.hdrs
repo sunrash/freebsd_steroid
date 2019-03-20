@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/cc/cc_tools/Makefile.hdrs 307761 2016-10-22 01:57:15Z jhibbits $
+# $FreeBSD$
 #
 # This is logic for common headers shared inside of gnu/lib.  It used to
 # live in gnu/usr.bin/cc/cc_tools/Makefile.

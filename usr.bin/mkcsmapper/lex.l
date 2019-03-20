@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/mkcsmapper/lex.l 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: lex.l,v 1.4 2006/02/09 22:03:15 dogcow Exp $	*/
 
 %{

@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/usb/wsp/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #
 # Copyright (c) 2012 Huang Wen Hui. All rights reserved.
 #

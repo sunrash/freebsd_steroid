@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/mountcritremote 301004 2016-05-30 19:59:51Z ngie $
+# $FreeBSD$
 #
 
 # PROVIDE: mountcritremote

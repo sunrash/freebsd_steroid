@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/release/scripts/pkg-stage.sh 339290 2018-10-10 19:57:10Z gjb $
+# $FreeBSD$
 #
 
 set -e

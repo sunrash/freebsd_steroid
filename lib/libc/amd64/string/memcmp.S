@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/amd64/string/memcmp.S 338973 2018-09-27 17:08:29Z mjg $
+ * $FreeBSD$
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/amd64/string/memcmp.S 338973 2018-09-27 17:08:29Z mjg $");
+__FBSDID("$FreeBSD$");
 
 ENTRY(memcmp)
 	cmpq	$16,%rdx

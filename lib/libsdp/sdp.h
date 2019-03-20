@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: sdp.h,v 1.3 2003/09/05 00:33:59 max Exp $
- * $FreeBSD: releng/12.0/lib/libsdp/sdp.h 333109 2018-04-30 10:15:58Z wulf $
+ * $FreeBSD$
  */
 
 #ifndef _SDP_H_
@@ -585,6 +585,24 @@ void               sdp_print      (uint32_t level, uint8_t const *start,
 #define SDP_PDU_SERVICE_REGISTER_REQUEST	0x81
 #define SDP_PDU_SERVICE_UNREGISTER_REQUEST	0x82
 #define SDP_PDU_SERVICE_CHANGE_REQUEST		0x83
+
+struct sdp_audio_sink_profile
+{
+	uint16_t psm;
+	uint16_t protover;
+	uint16_t features;
+};
+typedef struct sdp_audio_sink_profile	sdp_audio_sink_profile_t;
+typedef struct sdp_audio_sink_profile	*sdp_audio_sink_profile_p;
+
+struct sdp_audio_source_profile
+{
+	uint16_t psm;
+	uint16_t protover;
+	uint16_t features;
+};
+typedef struct sdp_audio_source_profile	sdp_audio_source_profile_t;
+typedef struct sdp_audio_source_profile *sdp_audio_source_profile_p;
 
 struct sdp_dun_profile
 {

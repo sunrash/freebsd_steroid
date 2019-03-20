@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/sbin/gbde/test.sh 168420 2007-04-06 11:16:11Z pjd $
+# $FreeBSD$
 
 set -e
 

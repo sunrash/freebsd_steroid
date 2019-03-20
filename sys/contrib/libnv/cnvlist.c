@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/contrib/libnv/cnvlist.c 335343 2018-06-18 21:26:58Z oshogbo $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/contrib/libnv/cnvlist.c 335343 2018-06-18 21:26:58Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #ifdef _KERNEL
 

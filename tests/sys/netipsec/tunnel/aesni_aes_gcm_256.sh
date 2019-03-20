@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netipsec/tunnel/aesni_aes_gcm_256.sh 336586 2018-07-21 19:28:07Z asomers $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

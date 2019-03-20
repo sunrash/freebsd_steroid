@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/lib/libwrap/Makefile 338887 2018-09-22 13:17:30Z brd $
+# $FreeBSD$
 #
 
 .include <src.opts.mk>

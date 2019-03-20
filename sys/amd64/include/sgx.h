@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/sgx.h 322574 2017-08-16 10:38:06Z br $
+ * $FreeBSD$
  */
 
 /* User-visible header. */

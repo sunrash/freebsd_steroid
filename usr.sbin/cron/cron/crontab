@@ -1,6 +1,6 @@
 # /etc/crontab - root's crontab for FreeBSD
 #
-# $FreeBSD: releng/12.0/usr.sbin/cron/cron/crontab 338497 2018-09-06 14:55:54Z brd $
+# $FreeBSD$
 #
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin

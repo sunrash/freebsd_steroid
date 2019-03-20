@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/fdt_machdep.c 326263 2017-11-27 15:11:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

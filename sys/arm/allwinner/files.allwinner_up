@@ -1,3 +1,3 @@
-# $FreeBSD: releng/12.0/sys/arm/allwinner/files.allwinner_up 313403 2017-02-07 19:28:32Z manu $
+# $FreeBSD$
 
 arm/allwinner/a10_timer.c		standard

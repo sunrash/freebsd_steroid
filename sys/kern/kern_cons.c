@@ -40,7 +40,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_cons.c 334340 2018-05-29 16:16:24Z avg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_syscons.h"
@@ -522,9 +522,9 @@ cnputc(int c)
 }
 
 void
-cnputs(char *p)
+cnputsn(const char *p, size_t n)
 {
-	int c;
+	size_t i;
 	int unlock_reqd = 0;
 
 	if (use_cnputs_mtx) {
@@ -539,11 +539,17 @@ cnputs(char *p)
 		unlock_reqd = 1;
 	}
 
-	while ((c = *p++) != '\0')
-		cnputc(c);
+	for (i = 0; i < n; i++)
+		cnputc(p[i]);
 
 	if (unlock_reqd)
 		mtx_unlock_spin(&cnputs_mtx);
+}
+
+void
+cnputs(char *p)
+{
+	cnputsn(p, strlen(p));
 }
 
 static int consmsgbuf_size = 8192;

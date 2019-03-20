@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ufsmount.h	8.6 (Berkeley) 3/30/95
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2_mount.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _FS_EXT2FS_EXT2_MOUNT_H_

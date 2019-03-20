@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/jails/README 339977 2018-10-31 23:07:47Z dteske $
+# $FreeBSD$
 
 The below 4 samples require a VIMAGE enabled kernel:
 

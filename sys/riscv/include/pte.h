@@ -32,7 +32,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/pte.h 339423 2018-10-18 15:25:07Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PTE_H_
@@ -78,7 +78,7 @@ typedef	uint64_t	pn_t;			/* page number */
 #define	PTE_V		(1 << 0) /* Valid */
 #define	PTE_RWX		(PTE_R | PTE_W | PTE_X)
 #define	PTE_RX		(PTE_R | PTE_X)
-#define	PTE_KERN	(PTE_V | PTE_RWX | PTE_A | PTE_D)
+#define	PTE_KERN	(PTE_V | PTE_R | PTE_W | PTE_A | PTE_D)
 
 #define	PTE_PPN0_S	10
 #define	PTE_PPN1_S	19

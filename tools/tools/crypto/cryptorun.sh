@@ -11,7 +11,7 @@
 #
 # Test aes with 1, 2 and 4 processes, and at sizes of 256 and 512 bytes.
 #
-# $FreeBSD: releng/12.0/tools/tools/crypto/cryptorun.sh 305307 2016-09-02 21:35:32Z gnn $
+# $FreeBSD$
 #
 
 threads=1

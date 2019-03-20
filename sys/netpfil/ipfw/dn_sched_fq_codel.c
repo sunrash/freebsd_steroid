@@ -1,7 +1,7 @@
 /* 
  * FQ_Codel - The FlowQueue-Codel scheduler/AQM
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_sched_fq_codel.c 327895 2018-01-12 22:48:23Z jeff $
+ * $FreeBSD$
  * 
  * Copyright (C) 2016 Centre for Advanced Internet Architectures,
  *  Swinburne University of Technology, Melbourne, Australia.

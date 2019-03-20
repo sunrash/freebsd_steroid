@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libelftc/Makefile 310186 2016-12-17 03:34:51Z ngie $
+# $FreeBSD$
 .include <bsd.own.mk>
 
 PACKAGE=lib${LIB}

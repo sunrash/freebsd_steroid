@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pw/tests/helper_functions.shin 285418 2015-07-12 09:42:10Z bapt $
+# $FreeBSD$
 
 # The pw command
 PW="pw -V ${HOME}"

@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mge/if_mgevar.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __IF_MGE_H__

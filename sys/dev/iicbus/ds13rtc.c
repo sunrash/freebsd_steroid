@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/ds13rtc.c 330405 2018-03-04 19:25:54Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for Dallas/Maxim DS13xx real-time clock/calendar chips:

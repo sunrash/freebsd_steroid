@@ -68,7 +68,7 @@
  *****************************************************************************/
 
 /*
- * $FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_config.h 331665 2018-03-28 07:59:16Z eadler $
+ * $FreeBSD$
  */
 
 #ifndef __IWM_CONFIG_H__
@@ -79,6 +79,8 @@ enum iwm_device_family {
 	IWM_DEVICE_FAMILY_7000,
 	IWM_DEVICE_FAMILY_8000,
 };
+
+#define IWM_DEFAULT_MAX_TX_POWER	22
 
 /* Antenna presence definitions */
 #define	IWM_ANT_NONE	0x0

@@ -26,7 +26,7 @@
 #define ATOM_NAMES_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/atom-names.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "atom.h"
 

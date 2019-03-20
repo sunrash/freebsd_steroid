@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: nap.c,v 1.1 2008/03/11 00:02:42 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/sdpd/nap.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

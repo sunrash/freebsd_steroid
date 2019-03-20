@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/src.sys.obj.mk 335711 2018-06-27 16:58:10Z bdrewery $
+# $FreeBSD$
 #
 # Early setup of MAKEOBJDIR
 #

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/zpool_upgrade/create_upgrade_pool_dat.sh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 scriptpath=$(realpath $0)
 parent=$(dirname $scriptpath)

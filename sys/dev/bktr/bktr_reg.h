@@ -1,5 +1,5 @@
 /*-
- * $FreeBSD: releng/12.0/sys/dev/bktr/bktr_reg.h 335606 2018-06-24 19:01:01Z imp $
+ * $FreeBSD$
  *
  * SPDX-License-Identifier: BSD-4-Clause
  *

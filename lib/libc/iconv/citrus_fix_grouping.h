@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_fix_grouping.h 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_fix_grouping.h,v 1.2 2009/01/11 02:46:24 christos Exp $ */
 
 /*-

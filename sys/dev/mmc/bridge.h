@@ -50,7 +50,7 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * $FreeBSD: releng/12.0/sys/dev/mmc/bridge.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef DEV_MMC_BRIDGE_H

@@ -38,7 +38,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/fiq_subr.S 308408 2016-11-07 11:01:09Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/armreg.h>
 

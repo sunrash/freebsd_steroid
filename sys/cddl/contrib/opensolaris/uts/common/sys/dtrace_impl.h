@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/contrib/opensolaris/uts/common/sys/dtrace_impl.h 313176 2017-02-03 22:26:19Z gnn $
+ * $FreeBSD$
  */
 
 /*

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/dumpcis/main.c 326276 2017-11-27 15:37:16Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <fcntl.h>
 #include <stdio.h>

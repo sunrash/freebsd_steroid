@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)mbuf.h	8.5 (Berkeley) 2/19/95
- * $FreeBSD: releng/12.0/sys/sys/mbuf.h 337423 2018-08-07 16:36:48Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_MBUF_H_
@@ -224,7 +224,15 @@ struct m_ext {
 		volatile u_int	 ext_count;
 		volatile u_int	*ext_cnt;
 	};
-	char		*ext_buf;	/* start of buffer */
+	union {
+		/*
+		 * If ext_type == EXT_PGS, 'ext_pgs' point to a
+		 * structure describing the buffer.  Otherwise,
+		 * 'ext_buf' points to the start of the buffer.
+		 */
+		struct mbuf_ext_pgs *ext_pgs;
+		char		*ext_buf;
+	};
 	uint32_t	 ext_size;	/* size of buffer, for ext_free */
 	uint32_t	 ext_type:8,	/* type of external storage */
 			 ext_flags:24;	/* external storage mbuf flags */
@@ -290,12 +298,11 @@ struct mbuf {
 	};
 };
 
-
-struct vm_page;
+struct socket;
 
 #define	MBUF_PEXT_HDR_LEN	32
 #define	MBUF_PEXT_TRAIL_LEN	64
-#define MBUF_PEXT_MAX_PGS	(144 / sizeof(vm_paddr_t))
+#define MBUF_PEXT_MAX_PGS	(136 / sizeof(vm_paddr_t))
 
 #define MBUF_PEXT_MAX_BYTES	(		\
     MBUF_PEXT_MAX_PGS * PAGE_SIZE +  MBUF_PEXT_HDR_LEN + MBUF_PEXT_TRAIL_LEN)
@@ -306,7 +313,7 @@ struct vm_page;
  * byte cacheline
  */
 
-struct mbuf_ext_pgs;
+struct sbtls_session;
 
 struct mbuf_ext_pgs {
 	int16_t		npgs;			/* Number of attached pgs */
@@ -319,10 +326,11 @@ struct mbuf_ext_pgs {
 	uint32_t	pad;			/* align pgs to 8b */
 	vm_paddr_t	pa[MBUF_PEXT_MAX_PGS];	/* phys addrs of pgs */
 	char		hdr[MBUF_PEXT_HDR_LEN];		/* TLS hdr */
+	struct sbtls_session *tls;
 	union {
 		char	trail[MBUF_PEXT_TRAIL_LEN];	/* TLS trailer */
 		struct {
-			void	*so;
+			struct socket *so;
 			void	*mbuf;
 			uint64_t seqno;
 			STAILQ_ENTRY(mbuf_ext_pgs)	stailq;
@@ -330,9 +338,12 @@ struct mbuf_ext_pgs {
 	};
 };
 
+#ifdef _KERNEL
 static inline int
 mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
 {
+	KASSERT(pgoff == 0 || pidx == 0,
+	    ("page %d with non-zero offset %d in %p", pidx, pgoff, ext_pgs));
 	if (pidx == ext_pgs->npgs - 1) {
 		return (ext_pgs->last_pg_len);
 	} else {
@@ -340,7 +351,15 @@ mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
 	}
 }
 
-
+#ifdef INVARIANT_SUPPORT
+void	mb_ext_pgs_check(struct mbuf_ext_pgs *ext_pgs);
+#endif
+#ifdef INVARIANTS
+#define	MBUF_EXT_PGS_ASSERT_SANITY(ext_pgs)	mb_ext_pgs_check((ext_pgs))
+#else
+#define	MBUF_EXT_PGS_ASSERT_SANITY(ext_pgs)
+#endif
+#endif
 
 /*
  * mbuf flags of global significance and layer crossing.
@@ -356,7 +375,7 @@ mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
 #define	M_MCAST		0x00000020 /* send/received as link-level multicast */
 #define	M_PROMISC	0x00000040 /* packet was not for us */
 #define	M_VLANTAG	0x00000080 /* ether_vtag is valid */
-#define	M_NOMAP		0x00000100 /* mbuf data is unmapped (soon from Drew) */
+#define	M_NOMAP		0x00000100 /* mbuf data is unmapped */
 #define	M_NOFREE	0x00000200 /* do not free mbuf, embedded in cluster */
 #define	M_TSTMP		0x00000400 /* rcv_tstmp field is valid */
 #define	M_TSTMP_HPREC	0x00000800 /* rcv_tstmp is high-prec, typically
@@ -397,7 +416,7 @@ mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
  */
 #define	M_FLAG_BITS \
     "\20\1M_EXT\2M_PKTHDR\3M_EOR\4M_RDONLY\5M_BCAST\6M_MCAST" \
-    "\7M_PROMISC\10M_VLANTAG\13M_TSTMP\14M_TSTMP_HPREC"
+    "\7M_PROMISC\10M_VLANTAG\11M_NOMAP\12M_NOFREE\13M_TSTMP\14M_TSTMP_HPREC"
 #define	M_FLAG_PROTOBITS \
     "\15M_PROTO1\16M_PROTO2\17M_PROTO3\20M_PROTO4\21M_PROTO5" \
     "\22M_PROTO6\23M_PROTO7\24M_PROTO8\25M_PROTO9\26M_PROTO10" \
@@ -495,7 +514,8 @@ mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
 #define	EXT_JUMBO16	5	/* jumbo cluster 16184 bytes */
 #define	EXT_PACKET	6	/* mbuf+cluster from packet zone */
 #define	EXT_MBUF	7	/* external mbuf reference */
-#define	EXT_PGS		8	/* array of unmapped pages */
+#define	EXT_RXRING	8	/* data in NIC receive ring */
+#define	EXT_PGS		9	/* array of unmapped pages */
 
 #define	EXT_VENDOR1	224	/* for vendor-internal use */
 #define	EXT_VENDOR2	225	/* for vendor-internal use */
@@ -543,7 +563,6 @@ mbuf_ext_pg_len(struct mbuf_ext_pgs *ext_pgs, int pidx, int pgoff)
 #define MBUF_EXT_PGS_ASSERT(m)						\
 	KASSERT((((m)->m_flags & M_EXT) != 0) &&			\
 	    ((m)->m_ext.ext_type == EXT_PGS), ("ext not EXT_PGS"))
-
 
 /*
  * Flags indicating checksum, segmentation and other offload work to be
@@ -670,12 +689,13 @@ extern uma_zone_t	zone_pack;
 extern uma_zone_t	zone_jumbop;
 extern uma_zone_t	zone_jumbo9;
 extern uma_zone_t	zone_jumbo16;
+extern uma_zone_t	zone_extpgs;
 
 void		 mb_dupcl(struct mbuf *, struct mbuf *);
 void		 mb_free_ext(struct mbuf *);
 void		 mb_free_mext_pgs(struct mbuf *);
 struct mbuf	*mb_alloc_ext_pgs(int, bool, m_ext_free_t);
-void		 mb_ext_pgs_downgrade(struct mbuf *m);
+int		 mb_ext_pgs_downgrade(struct mbuf *m);
 struct mbuf 	*mb_unmapped_to_ext(struct mbuf *m);
 void		 mb_free_notready(struct mbuf *m, int count);
 void		 m_adj(struct mbuf *, int);
@@ -965,7 +985,7 @@ m_extrefcnt(struct mbuf *m)
  * be both the local data payload, or an external buffer area, depending on
  * whether M_EXT is set).
  */
-#define	M_WRITABLE(m)	(!((m)->m_flags & (M_RDONLY|M_NOMAP)) &&			\
+#define	M_WRITABLE(m)	(!((m)->m_flags & (M_RDONLY|M_NOMAP)) &&	\
 			 (!(((m)->m_flags & M_EXT)) ||			\
 			 (m_extrefcnt(m) == 1)))
 
@@ -1450,6 +1470,19 @@ void	netdump_mbuf_drain(void);
 void	netdump_mbuf_dump(void);
 void	netdump_mbuf_reinit(int nmbuf, int nclust, int clsize);
 #endif
+
+static inline bool
+mbuf_has_tls_session(struct mbuf *m)
+{
+
+	if (m->m_flags & M_NOMAP) {
+		MBUF_EXT_PGS_ASSERT(m);
+		if (m->m_ext.ext_pgs->tls != NULL) {
+			return (true);
+		}
+	}
+	return (false);
+}
 
 #endif /* _KERNEL */
 #endif /* !_SYS_MBUF_H_ */

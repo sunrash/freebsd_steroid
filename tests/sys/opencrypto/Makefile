@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/opencrypto/Makefile 337941 2018-08-17 00:32:00Z cem $
+# $FreeBSD$
 
 PACKAGE=	tests
 

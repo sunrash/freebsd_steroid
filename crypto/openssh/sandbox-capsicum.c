@@ -15,7 +15,7 @@
  */
 
 #include "includes.h"
-__RCSID("$FreeBSD: releng/12.0/crypto/openssh/sandbox-capsicum.c 339216 2018-10-06 21:32:55Z emaste $");
+__RCSID("$FreeBSD$");
 
 #ifdef SANDBOX_CAPSICUM
 

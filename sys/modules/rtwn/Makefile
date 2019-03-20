@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/rtwn/Makefile 319733 2017-06-09 07:08:58Z avos $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/rtwn
 

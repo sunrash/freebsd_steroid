@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/prometheus_sysctl_exporter/prometheus_sysctl_exporter.c 321678 2017-07-29 08:35:07Z ed $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/resource.h>

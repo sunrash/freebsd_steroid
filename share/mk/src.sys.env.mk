@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/src.sys.env.mk 330363 2018-03-03 23:23:01Z bdrewery $
+# $FreeBSD$
 
 # early setup only see also src.sys.mk
 

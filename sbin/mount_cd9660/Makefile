@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.3 (Berkeley) 3/27/94
-# $FreeBSD: releng/12.0/sbin/mount_cd9660/Makefile 314656 2017-03-04 11:33:01Z ngie $
+# $FreeBSD$
 
 PACKAGE=runtime
 PROG=	mount_cd9660

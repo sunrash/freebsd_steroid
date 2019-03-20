@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/clang/include/llvm/Config/AsmPrinters.def 337552 2018-08-09 21:28:31Z dim $ */
+/* $FreeBSD$ */
 
 #ifndef LLVM_ASM_PRINTER
 #  error Please define the macro LLVM_ASM_PRINTER(TargetName)

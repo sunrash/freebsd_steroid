@@ -48,7 +48,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/opencrypto/xform_null.c 324019 2017-09-26 17:52:52Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <opencrypto/xform_auth.h>
 #include <opencrypto/xform_enc.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libldns/Makefile 339325 2018-10-12 05:27:58Z des $
+# $FreeBSD$
 
 # Vendor sources and generated files
 LDNSDIR = ${SRCTOP}/contrib/ldns

@@ -30,7 +30,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/iw_cxgbe/iw_cxgbe.h 337679 2018-08-12 03:36:09Z np $
+ * $FreeBSD$
  */
 #ifndef __IW_CXGB4_H__
 #define __IW_CXGB4_H__
@@ -70,6 +70,9 @@
 #define KTR_IW_CXGBE	KTR_SPARE3
 
 extern int c4iw_debug;
+extern int use_dsgl;
+extern int inline_threshold;
+
 #define PDBG(fmt, args...) \
 do { \
 	if (c4iw_debug) \

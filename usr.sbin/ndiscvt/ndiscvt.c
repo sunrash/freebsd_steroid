@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/ndiscvt/ndiscvt.c 327274 2017-12-28 05:34:14Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/queue.h>
@@ -372,7 +372,8 @@ main(int argc, char *argv[])
 			err(1, "opening .INF file '%s' failed", inffile);
 
 
-		inf_parse(fp, outfp);
+		if (inf_parse(fp, outfp) != 0)
+			errx(1, "creating .INF file - no entries created, are you using the correct files?");
 		fclose(fp);
 	}
 

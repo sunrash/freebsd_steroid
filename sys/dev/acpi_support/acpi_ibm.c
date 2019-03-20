@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpi_support/acpi_ibm.c 335304 2018-06-17 20:44:20Z eadler $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for extra ACPI-controlled gadgets found on IBM ThinkPad laptops.
@@ -411,14 +411,17 @@ acpi_ibm_mic_led_set (struct acpi_ibm_softc *sc, int arg)
 static int
 acpi_ibm_probe(device_t dev)
 {
+	int rv;
+
 	if (acpi_disabled("ibm") ||
-	    ACPI_ID_PROBE(device_get_parent(dev), dev, ibm_ids) == NULL ||
 	    device_get_unit(dev) != 0)
 		return (ENXIO);
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, ibm_ids, NULL);
 
-	device_set_desc(dev, "IBM ThinkPad ACPI Extras");
-
-	return (0);
+	if (rv <= 0) 
+		device_set_desc(dev, "IBM ThinkPad ACPI Extras");
+	
+	return (rv);
 }
 
 static int

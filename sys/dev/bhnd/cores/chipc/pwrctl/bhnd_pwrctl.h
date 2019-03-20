@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/pwrctl/bhnd_pwrctl.h 326102 2017-11-22 20:27:46Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_PWRCTL_BHND_PWRCTL_H_

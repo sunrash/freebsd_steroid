@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/mp_watchdog.h 326257 2017-11-27 15:03:07Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_MP_WATCHDOG_H_

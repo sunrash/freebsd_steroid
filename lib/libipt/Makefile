@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libipt/Makefile 331293 2018-03-21 14:37:04Z br $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?=	/lib

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/kern/subr_fattime.c 328956 2018-02-06 22:17:01Z ian $
+ * $FreeBSD$
  *
  * Convert MS-DOS FAT format timestamps to and from unix timespecs
  *

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.bin/ztest/tests/Makefile 337840 2018-08-15 13:05:04Z will $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

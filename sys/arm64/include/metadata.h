@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/metadata.h 324995 2017-10-25 18:55:04Z manu $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_METADATA_H_

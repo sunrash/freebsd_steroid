@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
- __FBSDID("$FreeBSD: releng/12.0/sys/fs/autofs/autofs_vfsops.c 328339 2018-01-24 16:40:26Z trasz $");
+ __FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

@@ -31,7 +31,7 @@
  *
  *	@(#)strfile.h	8.1 (Berkeley) 5/31/93
  */
-/* $FreeBSD: releng/12.0/usr.bin/fortune/strfile/strfile.h 203926 2010-02-15 15:10:21Z uqs $ */
+/* $FreeBSD$ */
 
 #include <sys/types.h>
 

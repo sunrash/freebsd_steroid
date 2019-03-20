@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/gcc/config/aarch64/freebsd.h 280437 2015-03-24 14:22:58Z andrew $ */
+/* $FreeBSD$ */
 
 #undef INIT_SECTION_ASM_OP
 #undef FINI_SECTION_ASM_OP

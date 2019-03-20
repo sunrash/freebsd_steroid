@@ -31,7 +31,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	$NetBSD: powerpc.h,v 1.3 2000/06/01 00:49:59 matt Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/platform.h 329891 2018-02-24 01:46:56Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PLATFORM_H_
@@ -58,6 +58,7 @@ int	platform_smp_get_bsp(struct cpuref *);
 int	platform_smp_start_cpu(struct pcpu *);
 void	platform_smp_timebase_sync(u_long tb, int ap);
 void	platform_smp_ap_init(void);
+void	platform_smp_probe_threads(void);
   
 const char *installed_platform(void);
 void platform_probe_and_attach(void);

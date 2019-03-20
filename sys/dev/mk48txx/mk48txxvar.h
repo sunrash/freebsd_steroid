@@ -30,7 +30,7 @@
  *
  *	$NetBSD: mk48txxvar.h,v 1.6 2008/04/28 20:23:50 martin Exp $
  *
- * $FreeBSD: releng/12.0/sys/dev/mk48txx/mk48txxvar.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 typedef uint8_t (*mk48txx_nvrd_t)(device_t dev, int off);

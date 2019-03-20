@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/Makefile 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 #	@(#)Makefile	8.1 (Berkeley) 6/8/93
 
 # Only parse this if executing make in this directory, not in other places

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/nxprtc.c 330406 2018-03-04 19:26:47Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for NXP real-time clock/calendar chips:

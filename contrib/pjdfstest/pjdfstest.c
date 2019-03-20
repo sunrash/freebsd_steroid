@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/contrib/pjdfstest/pjdfstest.c 320448 2017-06-28 09:22:45Z ngie $
+ * $FreeBSD$
  */
 
 /* Needs to be first to twiddle appropriate system configuration/HAVE_* flags */

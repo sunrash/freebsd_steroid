@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/fifo/fifo_io.c 327233 2017-12-27 03:23:58Z eadler $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

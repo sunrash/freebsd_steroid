@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.dirs.mk 338738 2018-09-17 22:15:12Z bdrewery $
+# $FreeBSD$
 #
 # Directory permissions management.
 

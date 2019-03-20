@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netinet/tcp_log_buf.h 338102 2018-08-20 12:43:18Z rrs $
+ * $FreeBSD$
  */
 
 #ifndef __tcp_log_buf_h__

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/ar/ar.h 335376 2018-06-19 17:28:05Z emaste $
+ * $FreeBSD$
  */
 
 #define	BSDAR_VERSION	"1.1.0"
@@ -52,10 +52,10 @@
 /*
  * Convenient wrapper for general libarchive error handling.
  */
-#define	AC(CALL) do {					\
-	if ((CALL))					\
-		bsdar_errc(bsdar, EX_SOFTWARE, 0, "%s",	\
-		    archive_error_string(a));		\
+#define	AC(CALL) do {							\
+	if ((CALL))							\
+		bsdar_errc(bsdar, EX_SOFTWARE, archive_errno(a), "%s",	\
+		    archive_error_string(a));				\
 } while (0)
 
 /*

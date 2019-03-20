@@ -1,5 +1,5 @@
 /*	$NetBSD: rpcb_svc_com.c,v 1.9 2002/11/08 00:16:39 fvdl Exp $	*/
-/*	$FreeBSD: releng/12.0/usr.sbin/rpcbind/rpcb_svc_com.c 330442 2018-03-05 03:38:31Z hrs $ */
+/*	$FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

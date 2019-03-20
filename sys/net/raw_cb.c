@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)raw_cb.c	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/net/raw_cb.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

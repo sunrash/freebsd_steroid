@@ -35,7 +35,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/drivers/infiniband/core/uverbs.h 336365 2018-07-17 08:52:29Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef UVERBS_H

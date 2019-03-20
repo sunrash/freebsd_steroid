@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/imx/imx6_ahci/Makefile 336079 2018-07-08 00:27:28Z ian $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/arm/freescale/imx
 

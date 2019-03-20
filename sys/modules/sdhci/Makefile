@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/sdhci/Makefile 320856 2017-07-10 03:38:07Z imp $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/sdhci
 

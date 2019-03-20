@@ -26,7 +26,7 @@
 */
 
 /*
- * $FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_phy_n_core.h 328912 2018-02-05 23:38:15Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef	__IF_BWN_PHY_N_CORE_H__

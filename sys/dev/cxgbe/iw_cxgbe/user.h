@@ -31,7 +31,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/iw_cxgbe/user.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifndef __C4IW_USER_H__
 #define __C4IW_USER_H__

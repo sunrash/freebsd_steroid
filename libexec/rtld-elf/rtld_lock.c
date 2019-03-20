@@ -25,7 +25,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	from: FreeBSD: src/libexec/rtld-elf/sparc64/lockdflt.c,v 1.3 2002/10/09
- * $FreeBSD: releng/12.0/libexec/rtld-elf/rtld_lock.c 326274 2017-11-27 15:25:02Z pfg $
+ * $FreeBSD$
  */
 
 /*
@@ -184,7 +184,7 @@ thread_mask_clear(int mask)
 }
 
 #define	RTLD_LOCK_CNT	3
-struct rtld_lock {
+static struct rtld_lock {
 	void	*handle;
 	int	 mask;
 } rtld_locks[RTLD_LOCK_CNT];

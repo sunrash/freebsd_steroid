@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/libefi/errno.c 322040 2017-08-04 04:20:11Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <efi.h>
 #include <efilib.h>

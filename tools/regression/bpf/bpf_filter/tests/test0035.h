@@ -1,7 +1,7 @@
 /*-
  * Test 0035:	BPF_ALU+BPF_DIV+BPF_K
  *
- * $FreeBSD: releng/12.0/tools/regression/bpf/bpf_filter/tests/test0035.h 307708 2016-10-21 06:56:30Z jkim $
+ * $FreeBSD$
  */
 
 /* BPF program */

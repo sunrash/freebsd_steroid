@@ -1,5 +1,5 @@
 #	@(#)Makefile.inc	8.3 (Berkeley) 4/17/94
-# $FreeBSD: releng/12.0/lib/libc/stdio/Makefile.inc 331936 2018-04-03 18:52:38Z cy $
+# $FreeBSD$
 
 # stdio sources
 .PATH: ${LIBC_SRCTOP}/stdio

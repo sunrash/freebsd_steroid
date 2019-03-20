@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/mv/files.mv 331995 2018-04-04 08:40:49Z mw $
+# $FreeBSD$
 #
 # The Marvell CPU cores
 # - Compliant with V5TE architecture

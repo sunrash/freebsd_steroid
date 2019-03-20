@@ -31,7 +31,7 @@
  *
  *	from: @(#)pmap_clnt.h 1.11 88/02/08 SMI 
  *	from: @(#)pmap_clnt.h	2.1 88/07/29 4.0 RPCSRC
- * $FreeBSD: releng/12.0/include/rpc/pmap_clnt.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 /*

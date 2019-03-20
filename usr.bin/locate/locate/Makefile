@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/6/93
-# $FreeBSD: releng/12.0/usr.bin/locate/locate/Makefile 338758 2018-09-18 20:50:07Z brd $
+# $FreeBSD$
 
 CONFS=	locate.rc
 PROG=	locate

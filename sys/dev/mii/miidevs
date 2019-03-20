@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/sys/dev/mii/miidevs 337425 2018-08-07 17:13:42Z markj $
+$FreeBSD$
 /*$NetBSD: miidevs,v 1.105 2011/11/25 23:28:14 jakllsch Exp $*/
 
 /*-

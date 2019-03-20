@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/cdev.h 331433 2018-03-23 15:50:01Z emaste $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_CDEV_H_
 #define	_LINUX_CDEV_H_
@@ -35,6 +35,8 @@
 #include <linux/sysfs.h>
 #include <linux/kdev_t.h>
 #include <linux/list.h>
+
+#include <asm/atomic-long.h>
 
 struct file_operations;
 struct inode;
@@ -50,6 +52,8 @@ struct linux_cdev {
 	struct cdev	*cdev;
 	dev_t		dev;
 	const struct file_operations *ops;
+	u_int		refs;
+	u_int		siref;
 };
 
 static inline void
@@ -58,6 +62,7 @@ cdev_init(struct linux_cdev *cdev, const struct file_operations *ops)
 
 	kobject_init(&cdev->kobj, &linux_cdev_static_ktype);
 	cdev->ops = ops;
+	cdev->refs = 1;
 }
 
 static inline struct linux_cdev *
@@ -66,8 +71,8 @@ cdev_alloc(void)
 	struct linux_cdev *cdev;
 
 	cdev = kzalloc(sizeof(struct linux_cdev), M_WAITOK);
-	if (cdev)
-		kobject_init(&cdev->kobj, &linux_cdev_ktype);
+	kobject_init(&cdev->kobj, &linux_cdev_ktype);
+	cdev->refs = 1;
 	return (cdev);
 }
 
@@ -130,13 +135,13 @@ cdev_add_ext(struct linux_cdev *cdev, dev_t dev, uid_t uid, gid_t gid, int mode)
 	return (0);
 }
 
+void linux_destroy_dev(struct linux_cdev *);
+
 static inline void
 cdev_del(struct linux_cdev *cdev)
 {
-	if (cdev->cdev) {
-		destroy_dev(cdev->cdev);
-		cdev->cdev = NULL;
-	}
+
+	linux_destroy_dev(cdev);
 	kobject_put(&cdev->kobj);
 }
 

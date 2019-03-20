@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/loader/arch/i386/i386_copy.c 281322 2015-04-09 19:48:42Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /*
  * MD primitives supporting placement of module data

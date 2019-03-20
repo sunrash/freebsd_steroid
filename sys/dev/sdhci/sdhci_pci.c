@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sdhci/sdhci_pci.c 333613 2018-05-14 21:46:06Z marius $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_mmccam.h"
 
@@ -526,7 +526,7 @@ static devclass_t sdhci_pci_devclass;
 
 DRIVER_MODULE(sdhci_pci, pci, sdhci_pci_driver, sdhci_pci_devclass, NULL,
     NULL);
-MODULE_DEPEND(sdhci_pci, sdhci, 1, 1, 1);
+SDHCI_DEPEND(sdhci_pci);
 
 #ifndef MMCCAM
 MMC_DECLARE_BRIDGE(sdhci_pci);

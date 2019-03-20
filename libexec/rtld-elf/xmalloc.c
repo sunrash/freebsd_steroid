@@ -24,7 +24,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/xmalloc.c 326274 2017-11-27 15:25:02Z pfg $
+ * $FreeBSD$
  */
 
 #include <stddef.h>
@@ -33,13 +33,14 @@
 #include <unistd.h>
 #include "rtld.h"
 #include "rtld_printf.h"
+#include "rtld_malloc.h"
 
 void *
 xcalloc(size_t number, size_t size)
 {
 	void *p;
 
-	p = calloc(number, size);
+	p = __crt_calloc(number, size);
 	if (p == NULL) {
 		rtld_fdputstr(STDERR_FILENO, "Out of memory\n");
 		_exit(1);
@@ -50,12 +51,15 @@ xcalloc(size_t number, size_t size)
 void *
 xmalloc(size_t size)
 {
-    void *p = malloc(size);
-    if (p == NULL) {
-	rtld_fdputstr(STDERR_FILENO, "Out of memory\n");
-	_exit(1);
-    }
-    return p;
+
+	void *p;
+
+	p = __crt_malloc(size);
+	if (p == NULL) {
+		rtld_fdputstr(STDERR_FILENO, "Out of memory\n");
+		_exit(1);
+	}
+	return (p);
 }
 
 char *

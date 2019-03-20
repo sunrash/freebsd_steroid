@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 1/25/94
-# $FreeBSD: releng/12.0/usr.bin/mail/Makefile 338757 2018-09-18 20:47:06Z brd $
+# $FreeBSD$
 
 CONFS=	misc/mail.rc
 PROG=	mail

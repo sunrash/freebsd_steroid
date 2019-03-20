@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/dpaa/if_dtsec.h 325305 2017-11-02 04:07:41Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef IF_DTSEC_H_

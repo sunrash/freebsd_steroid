@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/e_rem_pio2l.h 336545 2018-07-20 12:42:24Z bde $");
+__FBSDID("$FreeBSD$");
 
 /* ld80 version of __ieee754_rem_pio2l(x,y)
  * 

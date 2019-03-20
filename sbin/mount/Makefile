@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.6 (Berkeley) 5/8/95
-# $FreeBSD: releng/12.0/sbin/mount/Makefile 319079 2017-05-28 18:07:53Z trasz $
+# $FreeBSD$
 
 PACKAGE=runtime
 PROG=	mount

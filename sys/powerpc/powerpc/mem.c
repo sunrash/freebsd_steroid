@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/mem.c 330610 2018-03-07 17:08:07Z nwhitehorn $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Memory special file

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libbegemot/Makefile 312458 2017-01-20 03:55:43Z ngie $
+# $FreeBSD$
 
 LIBBEGEMOT_DIR=${SRCTOP}/contrib/libbegemot
 

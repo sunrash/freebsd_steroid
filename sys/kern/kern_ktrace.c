@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_ktrace.c 333390 2018-05-09 00:00:47Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ktrace.h"
 

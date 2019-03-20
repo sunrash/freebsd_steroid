@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/ofw/libofw/ofw_console.c 183198 2008-09-19 19:49:58Z sobomax $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

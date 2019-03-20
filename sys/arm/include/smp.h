@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/arm/include/smp.h 336806 2018-07-28 07:54:21Z andrew $ */
+/* $FreeBSD$ */
 
 #ifndef _MACHINE_SMP_H_
 #define _MACHINE_SMP_H_

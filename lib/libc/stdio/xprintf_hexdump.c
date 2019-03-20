@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/stdio/xprintf_hexdump.c 326246 2017-11-27 09:57:37Z phk $
+ * $FreeBSD$
  */
 
 #include <namespace.h>

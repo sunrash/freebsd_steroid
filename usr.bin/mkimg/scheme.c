@@ -25,14 +25,12 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/scheme.c 306621 2016-10-03 02:37:28Z marcel $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stat.h>
 #include <assert.h>
-#include <err.h>
 #include <errno.h>
 #include <limits.h>
-#include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>

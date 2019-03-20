@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/contrib/zstd/lib/freebsd/zstd_kfreebsd.h 329238 2018-02-13 19:18:00Z markj $
+ * $FreeBSD$
  */
 
 #ifndef ZSTD_KFREEBSD_H

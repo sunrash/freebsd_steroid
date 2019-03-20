@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/tcp_syncache.c 339430 2018-10-18 19:21:18Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
@@ -154,7 +154,12 @@ static int	 syncookie_cmp(struct in_conninfo *inc, struct syncache_head *sch,
 
 /*
  * Transmit the SYN,ACK fewer times than TCP_MAXRXTSHIFT specifies.
- * 3 retransmits corresponds to a timeout of 3 * (1 + 2 + 4 + 8) == 45 seconds,
+ * 3 retransmits corresponds to a timeout with default values of
+ * TCPTV_RTOBASE * (                 1 +
+ *                  tcp_syn_backoff[1] +
+ *                  tcp_syn_backoff[2] +
+ *                  tcp_syn_backoff[3]) + 3 * tcp_rexmit_slop,
+ * 3000 ms * (1 + 1 + 1 + 1) +  3 * 200 ms = 12600 ms,
  * the odds are that the user has given up attempting to connect by then.
  */
 #define SYNCACHE_MAXREXMTS		3
@@ -581,15 +586,28 @@ syncache_chkrst(struct in_conninfo *inc, struct tcphdr *th, struct mbuf *m)
 	/*
 	 * If the RST bit is set, check the sequence number to see
 	 * if this is a valid reset segment.
+	 *
 	 * RFC 793 page 37:
 	 *   In all states except SYN-SENT, all reset (RST) segments
 	 *   are validated by checking their SEQ-fields.  A reset is
 	 *   valid if its sequence number is in the window.
 	 *
-	 *   The sequence number in the reset segment is normally an
-	 *   echo of our outgoing acknowlegement numbers, but some hosts
-	 *   send a reset with the sequence number at the rightmost edge
-	 *   of our receive window, and we have to handle this case.
+	 * RFC 793 page 69:
+	 *   There are four cases for the acceptability test for an incoming
+	 *   segment:
+	 *
+	 * Segment Receive  Test
+	 * Length  Window
+	 * ------- -------  -------------------------------------------
+	 *    0       0     SEG.SEQ = RCV.NXT
+	 *    0      >0     RCV.NXT =< SEG.SEQ < RCV.NXT+RCV.WND
+	 *   >0       0     not acceptable
+	 *   >0      >0     RCV.NXT =< SEG.SEQ < RCV.NXT+RCV.WND
+	 *               or RCV.NXT =< SEG.SEQ+SEG.LEN-1 < RCV.NXT+RCV.WND
+	 *
+	 * Note that when receiving a SYN segment in the LISTEN state,
+	 * IRS is set to SEG.SEQ and RCV.NXT is set to SEG.SEQ+1, as
+	 * described in RFC 793, page 66.
 	 */
 	if ((SEQ_GEQ(th->th_seq, sc->sc_irs + 1) &&
 	    SEQ_LT(th->th_seq, sc->sc_irs + 1 + sc->sc_wnd)) ||

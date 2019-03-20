@@ -6,7 +6,7 @@
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/smp.h 332073 2018-04-05 14:39:51Z royger $
+ * $FreeBSD$
  *
  */
 

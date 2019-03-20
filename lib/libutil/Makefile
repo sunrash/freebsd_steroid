@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/4/93
-#	$FreeBSD: releng/12.0/lib/libutil/Makefile 336779 2018-07-27 19:47:42Z ian $
+#	$FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?= /lib

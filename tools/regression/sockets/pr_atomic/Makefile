@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/sockets/pr_atomic/Makefile 281409 2015-04-11 07:33:04Z ngie $
+# $FreeBSD$
 
 PROG=	pr_atomic
 MAN=

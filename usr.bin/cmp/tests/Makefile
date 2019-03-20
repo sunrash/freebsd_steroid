@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/cmp/tests/Makefile 311572 2017-01-07 00:59:06Z asomers $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

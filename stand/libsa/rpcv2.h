@@ -33,7 +33,7 @@
  *
  *	@(#)rpcv2.h	8.1 (Berkeley) 6/10/93
  *
- * $FreeBSD: releng/12.0/stand/libsa/rpcv2.h 324551 2017-10-12 14:56:28Z imp $
+ * $FreeBSD$
  */
 
 /*

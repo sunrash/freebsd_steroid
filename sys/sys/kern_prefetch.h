@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/kern_prefetch.h 334813 2018-06-07 19:57:55Z rrs $
+ * $FreeBSD$
  */
 #ifndef __kern_prefetch_h__
 #define __kern_prefetch_h__

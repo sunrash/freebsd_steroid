@@ -32,7 +32,7 @@
 # IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/pc-sysinstall/pc-sysinstall.sh 326275 2017-11-27 15:28:26Z pfg $
+# $FreeBSD$
 #####################################################################
 
 # User-editable configuration variables

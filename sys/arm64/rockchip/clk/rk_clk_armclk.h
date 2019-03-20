@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_armclk.h 334112 2018-05-23 19:07:03Z manu $
+ * $FreeBSD$
  */
 
 #ifndef _RK_CLK_ARMCLK_H_

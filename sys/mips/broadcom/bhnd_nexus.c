@@ -30,11 +30,11 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bhnd_nexus.c 331746 2018-03-29 19:48:50Z landonf $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/broadcom/bhnd_nexus.c 331746 2018-03-29 19:48:50Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * bhnd(4) driver mix-in providing shared common methods for

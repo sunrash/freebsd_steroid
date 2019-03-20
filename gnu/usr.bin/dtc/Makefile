@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/dtc/Makefile 315010 2017-03-10 17:37:55Z gonzo $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

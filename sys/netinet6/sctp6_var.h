@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet6/sctp6_var.h 336511 2018-07-19 20:16:33Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #ifndef _NETINET6_SCTP6_VAR_H_
 #define _NETINET6_SCTP6_VAR_H_

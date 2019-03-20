@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)msgbuf.h	8.1 (Berkeley) 6/2/93
- * $FreeBSD: releng/12.0/sys/sys/msgbuf.h 337545 2018-08-09 17:47:47Z kevans $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_MSGBUF_H_

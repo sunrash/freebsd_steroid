@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcompat/4.4/cuserid.c 334911 2018-06-10 02:34:41Z jhb $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)cuserid.c	8.1 (Berkeley) 6/4/93");
 
 #include <pwd.h>

@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libnv/msgio.c 326219 2017-11-26 02:00:33Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/socket.h>
@@ -65,11 +65,6 @@ msghdr_add_fd(struct cmsghdr *cmsg, int fd)
 {
 
 	PJDLOG_ASSERT(fd >= 0);
-
-	if (!fd_is_valid(fd)) {
-		errno = EBADF;
-		return (-1);
-	}
 
 	cmsg->cmsg_level = SOL_SOCKET;
 	cmsg->cmsg_type = SCM_RIGHTS;
@@ -162,6 +157,14 @@ msg_send(int sock, const struct msghdr *msg)
 	return (0);
 }
 
+/*
+ * MacOS/Linux do not define struct cmsgcred but we need to bootstrap libnv
+ * when building on non-FreeBSD systems. Since they are not used during
+ * bootstrap we can just omit these two functions there.
+ */
+#ifndef __FreeBSD__
+#warning "cred_send() not supported on non-FreeBSD systems"
+#else
 int
 cred_send(int sock)
 {
@@ -237,6 +240,7 @@ cred_recv(int sock, struct cmsgcred *cred)
 
 	return (0);
 }
+#endif
 
 static int
 fd_package_send(int sock, const int *fds, size_t nfds)

@@ -20,7 +20,7 @@
 # CDDL HEADER END
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/zvol/zvol_cli/zvol_cli_002_pos.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 #
 # ident	"@(#)zvol_cli_002_pos.ksh	1.2	07/01/09 SMI"

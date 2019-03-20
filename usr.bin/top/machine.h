@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/usr.bin/top/machine.h 335551 2018-06-22 10:17:12Z eadler $
+ * $FreeBSD$
  */
 
 /*

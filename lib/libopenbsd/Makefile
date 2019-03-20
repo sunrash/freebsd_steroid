@@ -1,11 +1,16 @@
-# $FreeBSD: releng/12.0/lib/libopenbsd/Makefile 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	openbsd
-SRCS=	getdtablecount.c \
-	imsg-buffer.c \
+SRCS=	imsg-buffer.c \
 	imsg.c \
 	ohash.c
+.if !defined(BOOTSTRAPPING)
+# Skip getdtablecount.c when bootstrapping since it doesn't compile for Linux
+# and is not used by any of the bootstrap tools
+SRCS+=	getdtablecount.c
+.endif
+
 INTERNALLIB=
 
 CFLAGS+= -I${.CURDIR}

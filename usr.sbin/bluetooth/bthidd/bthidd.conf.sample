@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidd/bthidd.conf.sample 333112 2018-04-30 10:49:29Z wulf $
+# $FreeBSD$
 
 device {
 	bdaddr			00:50:f2:e5:68:84;

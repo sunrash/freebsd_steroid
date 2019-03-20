@@ -17,7 +17,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/dc/stack.c 314704 2017-03-05 16:10:35Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <stdlib.h>

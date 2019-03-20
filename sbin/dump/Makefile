@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/5/93
-# $FreeBSD: releng/12.0/sbin/dump/Makefile 336742 2018-07-26 16:45:25Z brd $
+# $FreeBSD$
 
 #	dump.h			header file
 #	itime.c			reads /etc/dumpdates

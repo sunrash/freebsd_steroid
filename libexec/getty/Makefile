@@ -1,5 +1,5 @@
 #	from: @(#)Makefile	8.1 (Berkeley) 6/4/93
-# $FreeBSD: releng/12.0/libexec/getty/Makefile 338471 2018-09-05 15:25:23Z brd $
+# $FreeBSD$
 
 CONFS=	gettytab
 PROG=	getty

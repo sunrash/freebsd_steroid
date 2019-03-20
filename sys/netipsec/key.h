@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/key.h 338945 2018-09-26 14:47:51Z ae $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: key.h,v 1.21 2001/07/27 03:51:30 itojun Exp $	*/
 
 /*-

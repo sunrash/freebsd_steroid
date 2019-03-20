@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/bin/ed/buf.c 310091 2016-12-14 21:14:43Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/file.h>
 #include <sys/stat.h>

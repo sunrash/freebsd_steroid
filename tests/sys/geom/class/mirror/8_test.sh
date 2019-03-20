@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/mirror/8_test.sh 326862 2017-12-14 22:14:07Z markj $
+# $FreeBSD$
 
 # Regression test for r317712.
 

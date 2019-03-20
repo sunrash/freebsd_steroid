@@ -23,7 +23,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/cores/pmu/bhnd_pmu_subr.c 327558 2018-01-04 19:47:01Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 
@@ -1036,7 +1036,7 @@ bhnd_pmu_res_init(struct bhnd_pmu_softc *sc)
 			return (error);
 		}
 
-		PMU_DEBUG(sc, "Applying %s=%s to rsrc %d res_updn_timer\n",
+		PMU_DEBUG(sc, "Applying %s=%d to rsrc %d res_updn_timer\n",
 		    name, val, i);
 
 		BHND_PMU_WRITE_4(sc, BHND_PMU_RES_TABLE_SEL, i);
@@ -1111,7 +1111,7 @@ bhnd_pmu_res_init(struct bhnd_pmu_softc *sc)
 			return (error);
 		}
 
-		PMU_DEBUG(sc, "Applying %s=%s to rsrc %d res_dep_mask\n", name,
+		PMU_DEBUG(sc, "Applying %s=%d to rsrc %d res_dep_mask\n", name,
 		    val, i);
 
 		BHND_PMU_WRITE_4(sc, BHND_PMU_RES_TABLE_SEL, i);

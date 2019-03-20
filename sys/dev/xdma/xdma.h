@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/xdma/xdma.h 332435 2018-04-12 15:36:24Z br $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_XDMA_XDMA_H_

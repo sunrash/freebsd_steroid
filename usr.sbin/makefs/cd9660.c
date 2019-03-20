@@ -98,7 +98,7 @@
   */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/makefs/cd9660.c 331843 2018-03-31 15:04:41Z benno $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/queue.h>

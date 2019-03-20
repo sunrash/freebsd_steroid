@@ -1,5 +1,5 @@
 #	from @(#)Makefile.inc	8.2 (Berkeley) 9/5/93
-# $FreeBSD: releng/12.0/lib/libc/net/Makefile.inc 338729 2018-09-17 18:56:47Z brd $
+# $FreeBSD$
 
 # machine-independent net sources
 .PATH: ${LIBC_SRCTOP}/net

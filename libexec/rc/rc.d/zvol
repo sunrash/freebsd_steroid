@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/zvol 299839 2016-05-15 04:38:50Z ngie $
+# $FreeBSD$
 #
 
 # PROVIDE: zvol

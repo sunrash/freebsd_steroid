@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/syscons/plasma/plasma_saver.c 312910 2017-01-28 02:22:15Z nyan $
+ * $FreeBSD$
  *
  * To CJA, in appreciation of Nighthawk brunches past and future.
  */

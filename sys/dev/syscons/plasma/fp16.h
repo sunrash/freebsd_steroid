@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/syscons/plasma/fp16.h 293049 2016-01-02 16:40:37Z des $
+ * $FreeBSD$
  */
 
 #ifndef FP16_H_INCLUDED

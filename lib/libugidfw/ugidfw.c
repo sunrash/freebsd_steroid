@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libugidfw/ugidfw.c 335921 2018-07-03 23:47:20Z jamie $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/errno.h>

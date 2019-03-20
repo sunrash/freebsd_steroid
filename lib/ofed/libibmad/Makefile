@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/ofed/libibmad/Makefile 335253 2018-06-16 15:05:05Z kib $
+# $FreeBSD$
 
 _spath=	${SRCTOP}/contrib/ofed/libibmad
 .PATH: ${_spath}

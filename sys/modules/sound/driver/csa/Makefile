@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/sound/driver/csa/Makefile 338424 2018-09-01 15:07:38Z gjb $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/sound/pci
 

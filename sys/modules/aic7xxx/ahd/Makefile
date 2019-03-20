@@ -1,5 +1,5 @@
 
-# $FreeBSD: releng/12.0/sys/modules/aic7xxx/ahd/Makefile 326377 2017-11-29 23:41:49Z scottl $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/dev/aic7xxx
 KMOD=	ahd

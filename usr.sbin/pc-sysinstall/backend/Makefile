@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/backend/Makefile 284255 2015-06-11 04:22:17Z sjg $
+# $FreeBSD$
 
 FILES=	functions-bsdlabel.sh functions-cleanup.sh functions-disk.sh \
 	functions-extractimage.sh functions-ftp.sh functions-installcomponents.sh \

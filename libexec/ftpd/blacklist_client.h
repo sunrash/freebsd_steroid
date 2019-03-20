@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE. */
 
-/* $FreeBSD: releng/12.0/libexec/ftpd/blacklist_client.h 317862 2017-05-06 04:17:48Z lidl $ */
+/* $FreeBSD$ */
 
 #ifndef BLACKLIST_CLIENT_H
 #define BLACKLIST_CLIENT_H

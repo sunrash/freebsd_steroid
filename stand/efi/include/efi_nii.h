@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/efi/include/efi_nii.h 293724 2016-01-12 02:17:39Z smh $ */
+/* $FreeBSD$ */
 #ifndef _EFI_NII_H
 #define _EFI_NII_H
 

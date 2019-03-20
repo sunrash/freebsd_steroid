@@ -23,7 +23,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/ti/ti_smc.S 308417 2016-11-07 11:56:18Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/armreg.h>
 

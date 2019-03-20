@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/db/mpool/mpool-compat.c 333449 2018-05-10 06:41:08Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <db.h>
 #include <mpool.h>

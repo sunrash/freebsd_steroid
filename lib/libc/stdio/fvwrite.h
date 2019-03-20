@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fvwrite.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/lib/libc/stdio/fvwrite.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

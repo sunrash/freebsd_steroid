@@ -33,7 +33,7 @@
 
 #include <sys/param.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/cam/ctl/ctl_scsi_all.c 326265 2017-11-27 15:12:43Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #ifdef _KERNEL

@@ -50,7 +50,7 @@
 # or the SD Card Association to disclose or distribute any technical
 # information, know-how or other confidential information to any third party.
 #
-# $FreeBSD: releng/12.0/sys/dev/mmc/mmcbr_if.m 321385 2017-07-23 16:11:47Z marius $
+# $FreeBSD$
 #
 
 #include <sys/types.h>

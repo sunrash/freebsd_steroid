@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/controller/ehci_msm.c 328402 2018-01-25 16:58:23Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

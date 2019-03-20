@@ -1,6 +1,6 @@
 # isci driver Makefile
 #
-# $FreeBSD: releng/12.0/sys/modules/isci/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 ISCI_SRC_PATH = ${SRCTOP}/sys
 

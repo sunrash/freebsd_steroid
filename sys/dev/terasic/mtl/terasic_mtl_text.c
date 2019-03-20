@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/terasic/mtl/terasic_mtl_text.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -131,6 +131,7 @@ terasic_mtl_text_mmap(struct cdev *dev, vm_ooffset_t offset,
 	sc = dev->si_drv1;
 	error = 0;
 	if (trunc_page(offset) == offset &&
+	    offset + PAGE_SIZE > offset &&
 	    rman_get_size(sc->mtl_text_res) >= offset + PAGE_SIZE) {
 		*paddr = rman_get_start(sc->mtl_text_res) + offset;
 		*memattr = VM_MEMATTR_UNCACHEABLE;

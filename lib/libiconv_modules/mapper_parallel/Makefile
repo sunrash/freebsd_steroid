@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libiconv_modules/mapper_parallel/Makefile 312506 2017-01-20 04:53:26Z ngie $
+# $FreeBSD$
 
 .PATH: ${.CURDIR:H}/mapper_serial
 

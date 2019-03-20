@@ -8,7 +8,7 @@
 # * 16MB flash
 # * Integrated 1x1 2GHz wifi and optional 10/100 ethernet
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/ONIONOMEGA 303731 2016-08-03 19:18:53Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

@@ -87,7 +87,7 @@
 #include <machine/sysreg.h>
 #include <machine/vfp.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/swtch-v6.S 331254 2018-03-20 17:58:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #if defined(SMP)
 #define GET_PCPU(tmp, tmp2) \

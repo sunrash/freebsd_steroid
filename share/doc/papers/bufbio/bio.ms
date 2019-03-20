@@ -5,7 +5,7 @@
 .\" this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 .\" ----------------------------------------------------------------------------
 .\"
-.\" $FreeBSD: releng/12.0/share/doc/papers/bufbio/bio.ms 283967 2015-06-03 20:04:39Z bapt $
+.\" $FreeBSD$
 .\"
 .if n .ftr C R
 .nr PI 2n

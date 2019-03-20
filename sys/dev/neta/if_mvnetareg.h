@@ -25,7 +25,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/neta/if_mvnetareg.h 319907 2017-06-13 18:46:29Z zbb $
+ * $FreeBSD$
  *
  */
 

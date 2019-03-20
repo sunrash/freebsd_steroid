@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/geom/mirror/geom_mirror.c 328849 2018-02-04 14:49:55Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <err.h>

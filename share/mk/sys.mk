@@ -1,5 +1,5 @@
 #	from: @(#)sys.mk	8.2 (Berkeley) 3/21/94
-# $FreeBSD: releng/12.0/share/mk/sys.mk 335452 2018-06-20 17:20:39Z bdrewery $
+# $FreeBSD$
 
 unix		?=	We run FreeBSD, not UNIX.
 .FreeBSD	?=	true

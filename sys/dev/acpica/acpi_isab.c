@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpica/acpi_isab.c 227843 2011-11-22 21:28:20Z marius $");
+__FBSDID("$FreeBSD$");
 
 /*
  * ISA Bridge driver for Generic ISA Bus Devices.  See section 10.7 of the
@@ -92,14 +92,15 @@ static int
 acpi_isab_probe(device_t dev)
 {
 	static char *isa_ids[] = { "PNP0A05", "PNP0A06", NULL };
-
+	int rv;
+	
 	if (acpi_disabled("isab") ||
-	    ACPI_ID_PROBE(device_get_parent(dev), dev, isa_ids) == NULL ||
 	    devclass_get_device(isab_devclass, 0) != dev)
 		return (ENXIO);
-
-	device_set_desc(dev, "ACPI Generic ISA bridge");
-	return (0);
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, isa_ids, NULL);
+	if (rv <= 0)
+		device_set_desc(dev, "ACPI Generic ISA bridge");
+	return (rv);
 }
 
 static int

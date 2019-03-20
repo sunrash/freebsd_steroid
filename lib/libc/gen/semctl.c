@@ -29,7 +29,7 @@
 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/semctl.c 330299 2018-03-02 22:32:53Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #ifndef NO_COMPAT7
 #define _WANT_SEMUN_OLD

@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2016-2018 Ruslan Bukin <br@bsdpad.com>
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/riscv/dtrace_subr.c 338444 2018-09-03 14:34:09Z br $
+ * $FreeBSD$
  *
  */
 /*
@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cddl/dev/dtrace/riscv/dtrace_subr.c 338444 2018-09-03 14:34:09Z br $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

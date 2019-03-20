@@ -17,7 +17,7 @@
  * information: Portions Copyright [yyyy] [name of copyright owner]
  *
  * CDDL HEADER END
- * $FreeBSD: releng/12.0/tests/sys/cddl/zfs/bin/devname2devid.c 331613 2018-03-27 11:49:15Z avg $
+ * $FreeBSD$
  */
 
 /*

@@ -1,7 +1,7 @@
 #
 # This file adds to the values in AR91XX_BASE.hints.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/CARAMBOLA2.hints 321380 2017-07-23 07:10:41Z adrian $
+# $FreeBSD$
 
 # mdiobus on arge1
 hint.argemdio.0.at="nexus0"

@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.bin/sed/extern.h 338375 2018-08-29 17:09:03Z markj $
+ * $FreeBSD$
  */
 
 extern struct s_command *prog;

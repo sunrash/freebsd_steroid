@@ -2,7 +2,7 @@
 #
 # Add additional swap files
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/addswap 252310 2013-06-27 18:28:45Z hrs $
+# $FreeBSD$
 #
 
 # PROVIDE: addswap

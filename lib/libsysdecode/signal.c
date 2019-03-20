@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libsysdecode/signal.c 307538 2016-10-17 22:37:07Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <signal.h>

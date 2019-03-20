@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/ubsec/ubsecreg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*	$OpenBSD: ubsecreg.h,v 1.27 2002/09/11 22:40:31 jason Exp $	*/
 
 /*-

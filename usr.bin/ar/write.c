@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/ar/write.c 335376 2018-06-19 17:28:05Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/endian.h>
 #include <sys/mman.h>
@@ -291,12 +291,13 @@ read_objs(struct bsdar *bsdar, const char *archive, int checkargv)
 	for (;;) {
 		r = archive_read_next_header(a, &entry);
 		if (r == ARCHIVE_FATAL)
-			bsdar_errc(bsdar, EX_DATAERR, 0, "%s",
+			bsdar_errc(bsdar, EX_DATAERR, archive_errno(a), "%s",
 			    archive_error_string(a));
 		if (r == ARCHIVE_EOF)
 			break;
 		if (r == ARCHIVE_WARN || r == ARCHIVE_RETRY)
-			bsdar_warnc(bsdar, 0, "%s", archive_error_string(a));
+			bsdar_warnc(bsdar, archive_errno(a), "%s",
+			    archive_error_string(a));
 		if (r == ARCHIVE_RETRY) {
 			bsdar_warnc(bsdar, 0, "Retrying...");
 			continue;
@@ -341,7 +342,7 @@ read_objs(struct bsdar *bsdar, const char *archive, int checkargv)
 				bsdar_errc(bsdar, EX_SOFTWARE, errno,
 				    "malloc failed");
 			if (archive_read_data(a, buff, size) != (ssize_t)size) {
-				bsdar_warnc(bsdar, 0, "%s",
+				bsdar_warnc(bsdar, archive_errno(a), "%s",
 				    archive_error_string(a));
 				free(buff);
 				continue;
@@ -594,7 +595,7 @@ write_data(struct bsdar *bsdar, struct archive *a, const void *buf, size_t s)
 	while (s > 0) {
 		written = archive_write_data(a, buf, s);
 		if (written < 0)
-			bsdar_errc(bsdar, EX_SOFTWARE, 0, "%s",
+			bsdar_errc(bsdar, EX_SOFTWARE, archive_errno(a), "%s",
 			    archive_error_string(a));
 		buf = (const char *)buf + written;
 		s -= written;
@@ -627,6 +628,9 @@ write_objs(struct bsdar *bsdar)
 		if (strlen(obj->name) > _MAXNAMELEN_SVR4)
 			add_to_ar_str_table(bsdar, obj->name);
 		bsdar->rela_off += _ARHDR_LEN + obj->size + obj->size % 2;
+		if (bsdar->rela_off > UINT32_MAX)
+			bsdar_errc(bsdar, EX_SOFTWARE, 0,
+			    "Symbol table offset overflow");
 	}
 
 	/*
@@ -658,9 +662,13 @@ write_objs(struct bsdar *bsdar)
 		pm_sz = _ARMAG_LEN + (_ARHDR_LEN + s_sz);
 		if (bsdar->as != NULL)
 			pm_sz += _ARHDR_LEN + bsdar->as_sz;
-		for (i = 0; (size_t)i < bsdar->s_cnt; i++)
+		for (i = 0; (size_t)i < bsdar->s_cnt; i++) {
+			if (*(bsdar->s_so + i) > UINT32_MAX - pm_sz)
+				bsdar_errc(bsdar, EX_SOFTWARE, 0,
+				    "Symbol table offset overflow");
 			*(bsdar->s_so + i) = htobe32(*(bsdar->s_so + i) +
 			    pm_sz);
+		}
 	}
 
 	if ((a = archive_write_new()) == NULL)

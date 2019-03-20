@@ -8,7 +8,7 @@
 # Copyright (c) 1998-2012 Douglas Barton, All rights reserved
 # Please see detailed copyright below
 
-# $FreeBSD: releng/12.0/usr.sbin/mergemaster/mergemaster.sh 338114 2018-08-20 19:39:49Z imp $
+# $FreeBSD$
 
 PATH=/bin:/usr/bin:/usr/sbin
 

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/rtadvd/rtadvd.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: rtadvd.h,v 1.26 2003/08/05 12:34:23 itojun Exp $	*/
 
 /*-
@@ -196,6 +196,9 @@ struct	rainfo {
 	uint16_t	rai_mininterval;	/* MinRtrAdvInterval */
 	int 	rai_managedflg;		/* AdvManagedFlag */
 	int	rai_otherflg;		/* AdvOtherConfigFlag */
+#ifdef DRAFT_IETF_6MAN_IPV6ONLY_FLAG
+	int	rai_ipv6onlyflg;	/* AdvIPv6OnlyFlag */
+#endif
 
 	int	rai_rtpref;		/* router preference */
 	uint32_t	rai_linkmtu;		/* AdvLinkMTU */

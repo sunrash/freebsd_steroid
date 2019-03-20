@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/assert.c 324551 2017-10-12 14:56:28Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 
@@ -35,10 +35,10 @@ void
 __assert(const char *func, const char *file, int line, const char *expression)
 {
 	if (func == NULL)
-		panic("Assertion failed: (%s), file %s, line %d.\n",
+		panic("Assertion failed: (%s), file %s, line %d.",
 		    expression, file, line);
 	else
 		panic(
-		    "Assertion failed: (%s), function %s, file %s, line %d.\n",
+		    "Assertion failed: (%s), function %s, file %s, line %d.",
 		    expression, func, file, line);
 }

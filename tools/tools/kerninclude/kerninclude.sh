@@ -6,7 +6,7 @@
 # this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
 # ----------------------------------------------------------------------------
 #
-# $FreeBSD: releng/12.0/tools/tools/kerninclude/kerninclude.sh 312910 2017-01-28 02:22:15Z nyan $
+# $FreeBSD$
 #
 # This script tries to find #include statements which are not needed in
 # the FreeBSD kernel tree.

@@ -37,7 +37,7 @@
  * SUCH DAMAGE.
  *
  *      @(#)pr.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.bin/pr/pr.h 326419 2017-12-01 03:22:40Z eadler $
+ * $FreeBSD$
  */
 
 /*

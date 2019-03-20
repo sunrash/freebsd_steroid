@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.snmpmod.mk 335885 2018-07-03 08:44:40Z harti $
+# $FreeBSD$
 
 INCSDIR=	${INCLUDEDIR}/bsnmp
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/arm/bsaes-armv7.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from bsaes-armv7.pl. */
 @ Copyright 2012-2018 The OpenSSL Project Authors. All Rights Reserved.
 @

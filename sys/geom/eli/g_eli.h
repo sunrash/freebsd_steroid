@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/eli/g_eli.h 336352 2018-07-16 19:01:05Z cem $
+ * $FreeBSD$
  */
 
 #ifndef	_G_ELI_H_

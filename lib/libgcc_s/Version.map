@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/libgcc_s/Version.map 320673 2017-07-05 13:13:38Z emaste $
+ * $FreeBSD$
  */
 
 GCC_3.0 {

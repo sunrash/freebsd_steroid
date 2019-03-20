@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_features.h 320688 2017-07-05 17:27:03Z erj $*/
+/*$FreeBSD$*/
 
 
 #ifndef _IXGBE_FEATURES_H_

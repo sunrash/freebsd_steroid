@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/security/mac_veriexec/mac_veriexec_sha256.c 335399 2018-06-20 00:41:30Z stevek $
+ * $FreeBSD$
  *
  * Copyright (c) 2011, 2012, 2013, 2015, 2016, Juniper Networks, Inc.
  * All rights reserved.

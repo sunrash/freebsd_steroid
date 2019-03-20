@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/aarch64/keccak1600-armv8.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from keccak1600-armv8.pl. */
 .text
 

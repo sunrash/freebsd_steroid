@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_fabs.c 306409 2016-09-28 14:48:34Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /*
  * fabs(x) returns the absolute value of x.

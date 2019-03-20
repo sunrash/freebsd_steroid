@@ -30,7 +30,7 @@
  *
  *	@(#)pathnames.h	8.1 (Berkeley) 6/5/93
  *
- * $FreeBSD: releng/12.0/sbin/routed/pathnames.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #include <paths.h>

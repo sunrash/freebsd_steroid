@@ -28,7 +28,7 @@
  */
 
 static const char rcsid[] =
-    "$FreeBSD: releng/12.0/usr.bin/truncate/truncate.c 336865 2018-07-29 07:51:42Z eadler $";
+    "$FreeBSD$";
 
 #include <sys/stat.h>
 

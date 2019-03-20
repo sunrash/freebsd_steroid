@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sbin/setkey/parse.y 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: parse.y,v 1.83 2004/05/18 08:48:23 sakane Exp $	*/
 
 /*-

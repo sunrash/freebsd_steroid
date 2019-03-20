@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/nfs/nfs_var.h 336839 2018-07-28 20:21:04Z rmacklem $
+ * $FreeBSD$
  */
 
 /*
@@ -474,7 +474,7 @@ int nfsrpc_rename(vnode_t, vnode_t, char *, int, vnode_t, vnode_t, char *, int,
 int nfsrpc_link(vnode_t, vnode_t, char *, int,
     struct ucred *, NFSPROC_T *, struct nfsvattr *, struct nfsvattr *,
     int *, int *, void *);
-int nfsrpc_symlink(vnode_t, char *, int, char *, struct vattr *,
+int nfsrpc_symlink(vnode_t, char *, int, const char *, struct vattr *,
     struct ucred *, NFSPROC_T *, struct nfsvattr *, struct nfsvattr *,
     struct nfsfh **, int *, int *, void *);
 int nfsrpc_mkdir(vnode_t, char *, int, struct vattr *,

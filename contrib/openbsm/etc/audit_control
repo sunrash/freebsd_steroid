@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/contrib/openbsm/etc/audit_control 292432 2015-12-18 09:48:01Z brueffer $
+# $FreeBSD$
 #
 dir:/var/audit
 dist:off

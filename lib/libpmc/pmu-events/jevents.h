@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libpmc/pmu-events/jevents.h 334244 2018-05-26 19:29:19Z mmacy $ */
+/* $FreeBSD$ */
 #ifndef JEVENTS_H
 #define JEVENTS_H 1
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tools/regression/poll/sockpoll.c 196554 2009-08-25 20:33:37Z jilles $ */
+/* $FreeBSD$ */
 
 #include <sys/poll.h>
 #include <sys/socket.h>

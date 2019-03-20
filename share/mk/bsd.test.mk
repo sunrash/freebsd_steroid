@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.test.mk 336758 2018-07-27 10:44:38Z eadler $
+# $FreeBSD$
 #
 # Generic build infrastructure for test programs.
 #

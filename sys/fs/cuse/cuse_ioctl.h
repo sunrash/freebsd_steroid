@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/cuse/cuse_ioctl.h 325362 2017-11-03 14:10:57Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2014 Hans Petter Selasky. All rights reserved.
  *

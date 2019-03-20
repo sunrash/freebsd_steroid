@@ -1,5 +1,5 @@
 # Makefile for ntpd.
-# $FreeBSD: releng/12.0/usr.sbin/ntp/Makefile 287520 2015-09-06 18:58:33Z ngie $
+# $FreeBSD$
 
 SUBDIR=	libopts libntp libntpevent libparse ntpd ntpdc ntpq ntpdate \
 	ntptime ntp-keygen sntp

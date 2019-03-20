@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/networking/share/Makefile 291347 2015-11-26 01:14:27Z bdrewery $
+# $FreeBSD$
 
 FILESDIR=	${SHAREDIR}/bsdconfig/networking
 FILES=		common.subr device.subr hostname.subr ipaddr.subr media.subr \

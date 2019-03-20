@@ -33,7 +33,7 @@
  *    WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  *    OR OTHERWISE), EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cfe/cfe_error.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /*  *********************************************************************

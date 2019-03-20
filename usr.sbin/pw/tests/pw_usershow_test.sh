@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pw/tests/pw_usershow_test.sh 319026 2017-05-28 02:15:57Z ngie $
+# $FreeBSD$
 
 # Import helper functions
 . $(atf_get_srcdir)/helper_functions.shin

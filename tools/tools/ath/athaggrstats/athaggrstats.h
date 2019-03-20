@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/athaggrstats/athaggrstats.h 262827 2014-03-06 07:45:53Z adrian $
+ * $FreeBSD$
  */
 
 #ifndef _ATHAGGRSTATS_H_

@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/sched/schedgraph.py 291041 2015-11-19 00:01:52Z rodrigc $
+# $FreeBSD$
 
 from __future__ import print_function
 import sys

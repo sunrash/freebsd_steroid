@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/geom/class/Makefile 329275 2018-02-14 20:26:09Z asomers $
+# $FreeBSD$
 
 PACKAGE=	tests
 

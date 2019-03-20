@@ -4,7 +4,7 @@
  *  This file contains all the definitions necessary to use the hand-written
  *  screen package in "screen.c"
  *
- *  $FreeBSD: releng/12.0/usr.bin/top/screen.h 335547 2018-06-22 09:45:18Z eadler $
+ *  $FreeBSD$
  */
 
 #define TCputs(str)	tputs(str, 1, putchar)

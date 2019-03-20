@@ -1,6 +1,6 @@
 /*	$OpenBSD: if_zydreg.h,v 1.19 2006/11/30 19:28:07 damien Exp $	*/
 /*	$NetBSD: if_zydreg.h,v 1.2 2007/06/16 11:18:45 kiyohara Exp $	*/
-/*	$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_zydreg.h 306591 2016-10-02 20:35:55Z avos $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 2006 by Damien Bergamini <damien.bergamini@free.fr>
@@ -420,10 +420,6 @@
 #define ZYD_CR253		0x93f4
 #define ZYD_CR254		0x93f8
 #define ZYD_CR255		0x93fc
-
-/* nitems(ZYD_*_CHANTABLE) */
-static const uint8_t zyd_chan_2ghz[] =
-	{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
 
 /* copied nearly verbatim from the Linux driver rewrite */
 #define	ZYD_DEF_PHY							\

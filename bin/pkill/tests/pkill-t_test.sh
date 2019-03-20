@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/bin/pkill/tests/pkill-t_test.sh 263351 2014-03-19 12:46:04Z jmmv $
+# $FreeBSD$
 
 base=`basename $0`
 

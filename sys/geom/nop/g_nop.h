@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/nop/g_nop.h 328108 2018-01-18 05:57:10Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef	_G_NOP_H_

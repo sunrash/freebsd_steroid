@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.own.mk 337543 2018-08-09 16:42:13Z jhb $
+# $FreeBSD$
 #
 # The include file <bsd.own.mk> set common variables for owner,
 # group, mode, and directories. Defaults are in brackets.

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/doc/papers/Makefile 289393 2015-10-15 22:55:08Z bdrewery $
+# $FreeBSD$
 
 SUBDIR=	beyond4.3 \
 	bufbio \

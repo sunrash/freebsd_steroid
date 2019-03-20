@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/gen/dir2_test.c 326640 2017-12-06 22:06:48Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include <dirent.h>
 #include <fcntl.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/fdformat/Makefile 326558 2017-12-05 05:02:46Z cy $
+# $FreeBSD$
 
 .PATH: ${.CURDIR:H}/fdread
 

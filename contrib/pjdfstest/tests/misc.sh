@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/contrib/pjdfstest/tests/misc.sh 320448 2017-06-28 09:22:45Z ngie $
+# $FreeBSD$
 
 ntest=1
 

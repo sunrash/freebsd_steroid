@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_RATELIMIT 315763 2017-03-23 01:44:17Z ngie $
+.\" $FreeBSD$
 Set to build the system with rate limit support.
 .Pp
 This makes

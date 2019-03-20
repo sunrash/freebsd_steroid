@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/man/Makefile 315057 2017-03-11 06:51:21Z bapt $
+# $FreeBSD$
 
 SCRIPTS= man.sh
 LINKS=	${BINDIR}/man ${BINDIR}/manpath

@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD: releng/12.0/share/doc/papers/jail/paper.ms 69676 2000-12-06 11:56:34Z ru $
+.\" $FreeBSD$
 .\"
 .if n .ftr C R
 .ig TL

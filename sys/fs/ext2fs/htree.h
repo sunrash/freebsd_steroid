@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/htree.h 327977 2018-01-14 20:46:39Z fsu $
+ * $FreeBSD$
  */
 
 #ifndef _FS_EXT2FS_HTREE_H_

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/broadcom/std.broadcom 302190 2016-06-25 04:34:54Z landonf $
+# $FreeBSD$
 #
 
 machine		mips mipsel

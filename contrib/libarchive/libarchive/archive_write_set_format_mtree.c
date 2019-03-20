@@ -25,7 +25,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_write_set_format_mtree.c 309590 2016-12-06 01:35:27Z mm $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_SYS_TYPES_H
 #include <sys/types.h>
@@ -1810,10 +1810,10 @@ mtree_entry_setup_filenames(struct archive_write *a, struct mtree_entry *file,
 		if (p[0] == '/') {
 			if (p[1] == '/')
 				/* Convert '//' --> '/' */
-				strcpy(p, p+1);
+				memmove(p, p+1, strlen(p+1) + 1);
 			else if (p[1] == '.' && p[2] == '/')
 				/* Convert '/./' --> '/' */
-				strcpy(p, p+2);
+				memmove(p, p+2, strlen(p+2) + 1);
 			else if (p[1] == '.' && p[2] == '.' && p[3] == '/') {
 				/* Convert 'dir/dir1/../dir2/'
 				 *     --> 'dir/dir2/'

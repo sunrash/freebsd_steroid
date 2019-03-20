@@ -1,5 +1,5 @@
 
-# $FreeBSD: releng/12.0/sys/modules/aic7xxx/ahc/Makefile 335923 2018-07-04 00:18:40Z bdrewery $
+# $FreeBSD$
 
 SYSDIR?=${SRCTOP}/sys
 .include "${SYSDIR}/conf/kern.opts.mk"

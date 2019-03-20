@@ -31,7 +31,7 @@
  */
 
 #include "includes.h"
-__RCSID("$FreeBSD: releng/12.0/crypto/openssh/mux.c 338561 2018-09-10 16:20:12Z des $");
+__RCSID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/stat.h>

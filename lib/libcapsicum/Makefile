@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcapsicum/Makefile 335313 2018-06-18 04:58:48Z eadler $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 
@@ -8,6 +8,9 @@ MAN+=	capsicum_helpers.3
 
 MLINKS+=capsicum_helpers.3 caph_enter.3
 MLINKS+=capsicum_helpers.3 caph_enter_casper.3
+MLINKS+=capsicum_helpers.3 caph_rights_limit.3
+MLINKS+=capsicum_helpers.3 caph_fcntls_limit.3
+MLINKS+=capsicum_helpers.3 caph_ioctls_limit.3
 MLINKS+=capsicum_helpers.3 caph_limit_stream.3
 MLINKS+=capsicum_helpers.3 caph_limit_stdin.3
 MLINKS+=capsicum_helpers.3 caph_limit_stderr.3

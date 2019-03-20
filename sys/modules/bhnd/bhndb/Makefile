@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bhnd/bhndb/Makefile 326102 2017-11-22 20:27:46Z landonf $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/bhnd/bhndb
 

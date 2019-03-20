@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/amd64/db_disasm.c 314068 2017-02-22 02:35:59Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Instruction disassembler.

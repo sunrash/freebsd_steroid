@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_sdma.h 310344 2016-12-21 01:38:44Z gonzo $
+ * $FreeBSD$
  */
 
 #define	SDMAARM_MC0PTR		0x00	/* ARM platform Channel 0 Pointer */

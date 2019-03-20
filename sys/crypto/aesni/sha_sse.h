@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/crypto/aesni/sha_sse.h 324037 2017-09-26 23:12:32Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _CRYPTO__SHA_SSE_H_

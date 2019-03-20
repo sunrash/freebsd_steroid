@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/ofw/libofw/ofw_reboot.c 139738 2005-01-05 22:16:58Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include "openfirm.h"

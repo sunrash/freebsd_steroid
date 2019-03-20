@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_GNU_GREP_COMPAT 317255 2017-04-21 14:50:29Z emaste $
+.\" $FreeBSD$
 Set this option to include GNU extensions in
 .Xr bsdgrep 1
 by linking against libgnuregex.

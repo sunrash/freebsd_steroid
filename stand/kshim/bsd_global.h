@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/kshim/bsd_global.h 294546 2016-01-22 06:05:31Z wma $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2013 Hans Petter Selasky. All rights reserved.
  *

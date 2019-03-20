@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/tls/Makefile 313651 2017-02-11 20:14:50Z ngie $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

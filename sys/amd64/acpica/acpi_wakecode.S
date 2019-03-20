@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/acpica/acpi_wakecode.S 331254 2018-03-20 17:58:51Z emaste $
+ * $FreeBSD$
  */
 
 #include <machine/asmacros.h>

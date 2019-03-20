@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/kqueue/Makefile 305468 2016-09-06 08:50:21Z ngie $
+# $FreeBSD$
 
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/kernel/kqueue
 

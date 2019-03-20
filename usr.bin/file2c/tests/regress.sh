@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/file2c/tests/regress.sh 263227 2014-03-16 08:04:06Z jmmv $
+# $FreeBSD$
 
 echo 1..9
 

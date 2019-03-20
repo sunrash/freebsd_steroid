@@ -1,5 +1,5 @@
 #	@(#)Makefile	5.3 (Berkeley) 5/12/90
-# $FreeBSD: releng/12.0/usr.bin/yacc/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

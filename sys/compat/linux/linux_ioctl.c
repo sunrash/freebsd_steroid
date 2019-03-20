@@ -29,7 +29,7 @@
 #include "opt_compat.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_ioctl.c 340258 2018-11-08 19:56:29Z tijl $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -686,6 +686,7 @@ bsd_to_linux_termio(struct termios *bios, struct linux_termio *lio)
 {
 	struct linux_termios lios;
 
+	memset(lio, 0, sizeof(*lio));
 	bsd_to_linux_termios(bios, &lios);
 	lio->c_iflag = lios.c_iflag;
 	lio->c_oflag = lios.c_oflag;
@@ -2843,6 +2844,8 @@ linux_to_bsd_v4l_window(struct l_video_window *lvw, struct video_window *vw)
 static int
 bsd_to_linux_v4l_window(struct video_window *vw, struct l_video_window *lvw)
 {
+	memset(lvw, 0, sizeof(*lvw));
+
 	lvw->x = vw->x;
 	lvw->y = vw->y;
 	lvw->width = vw->width;

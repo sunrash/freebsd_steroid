@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/kmem.h 329759 2018-02-21 23:15:06Z mav $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_KMEM_H_

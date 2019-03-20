@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/powerpc/conf/dpaa/config.dpaa 325118 2017-10-30 03:41:04Z jhibbits $
+# $FreeBSD$
 
 files		"dpaa/files.dpaa"
 

@@ -37,7 +37,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
  * DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/net/altq/altq_codel.c 338209 2018-08-22 19:38:48Z pkelsey $
+ * $FreeBSD$
  */
 #include "opt_altq.h"
 #include "opt_inet.h"

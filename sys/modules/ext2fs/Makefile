@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ext2fs/Makefile 320145 2017-06-20 14:28:51Z pfg $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/fs/ext2fs
 KMOD=	ext2fs

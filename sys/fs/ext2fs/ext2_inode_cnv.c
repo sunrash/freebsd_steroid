@@ -21,7 +21,7 @@
  * improvements that they make and grant CSL redistribution rights.
  *
  *      Utah $Hdr$
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2_inode_cnv.c 333586 2018-05-13 19:48:30Z fsu $
+ * $FreeBSD$
  */
 
 /*

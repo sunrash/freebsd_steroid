@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/sys/compat-stub.c 336182 2018-07-10 22:00:20Z kib $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

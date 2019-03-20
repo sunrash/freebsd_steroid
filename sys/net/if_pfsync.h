@@ -44,7 +44,7 @@
 
 /*
  *	$OpenBSD: if_pfsync.h,v 1.35 2008/06/29 08:42:15 mcbride Exp $
- *	$FreeBSD: releng/12.0/sys/net/if_pfsync.h 326272 2017-11-27 15:23:17Z pfg $
+ *	$FreeBSD$
  */
 
 

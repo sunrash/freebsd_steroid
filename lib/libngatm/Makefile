@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libngatm/Makefile 312493 2017-01-20 04:41:53Z ngie $
+# $FreeBSD$
 #
 # Author: Harti Brandt <harti@freebsd.org>
 #

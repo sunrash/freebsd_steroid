@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/liblzma/Symbol.map 282808 2015-05-12 05:42:13Z delphij $
+ * $FreeBSD$
  */
 
 XZ_5.0 {

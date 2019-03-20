@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/security/security.functions 322868 2017-08-25 00:28:56Z asomers $
+# $FreeBSD$
 #
 
 # This is a library file, so we only try to do something when sourced.

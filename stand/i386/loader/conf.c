@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/i386/loader/conf.c 336085 2018-07-08 07:42:58Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include <bootstrap.h>
@@ -51,8 +51,9 @@ extern struct devsw fwohci;
 
 /* Exported for libstand */
 struct devsw *devsw[] = {
+    &biosfd,
     &bioscd,
-    &biosdisk,
+    &bioshd,
 #if defined(LOADER_NFS_SUPPORT) || defined(LOADER_TFTP_SUPPORT)
     &pxedisk,
 #endif

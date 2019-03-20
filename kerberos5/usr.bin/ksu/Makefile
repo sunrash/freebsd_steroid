@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/usr.bin/ksu/Makefile 275022 2014-11-25 09:57:42Z bapt $
+# $FreeBSD$
 
 PROG=	ksu
 .if defined(ENABLE_SUID_K5SU)

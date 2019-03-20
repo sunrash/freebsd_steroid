@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/identcpu.c 338994 2018-09-28 11:57:40Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -49,8 +49,28 @@ static int ident_lock;
 
 char machine[] = "arm64";
 
-SYSCTL_STRING(_hw, HW_MACHINE, machine, CTLFLAG_RD, machine, 0,
-    "Machine class");
+#ifdef SCTL_MASK32
+extern int adaptive_machine_arch;
+#endif
+
+static int
+sysctl_hw_machine(SYSCTL_HANDLER_ARGS)
+{
+#ifdef SCTL_MASK32
+	static const char machine32[] = "arm";
+#endif
+	int error;
+#ifdef SCTL_MASK32
+	if ((req->flags & SCTL_MASK32) != 0 && adaptive_machine_arch)
+		error = SYSCTL_OUT(req, machine32, sizeof(machine32));
+	else
+#endif
+		error = SYSCTL_OUT(req, machine, sizeof(machine));
+	return (error);
+}
+
+SYSCTL_PROC(_hw, HW_MACHINE, machine, CTLTYPE_STRING | CTLFLAG_RD |
+	CTLFLAG_MPSAFE, NULL, 0, sysctl_hw_machine, "A", "Machine class");
 
 /*
  * Per-CPU affinity as provided in MPIDR_EL1
@@ -201,13 +221,13 @@ static struct mrs_field id_aa64isar0_fields[] = {
 };
 
 static struct mrs_field id_aa64isar1_fields[] = {
-	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_GPI_SHIFT),
-	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_GPA_SHIFT),
+	MRS_FIELD(false, MRS_EXACT, ID_AA64ISAR1_GPI_SHIFT),
+	MRS_FIELD(false, MRS_EXACT, ID_AA64ISAR1_GPA_SHIFT),
 	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_LRCPC_SHIFT),
 	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_FCMA_SHIFT),
 	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_JSCVT_SHIFT),
-	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_API_SHIFT),
-	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_APA_SHIFT),
+	MRS_FIELD(false, MRS_EXACT, ID_AA64ISAR1_API_SHIFT),
+	MRS_FIELD(false, MRS_EXACT, ID_AA64ISAR1_APA_SHIFT),
 	MRS_FIELD(false, MRS_LOWER, ID_AA64ISAR1_DPB_SHIFT),
 	MRS_FIELD_END,
 };

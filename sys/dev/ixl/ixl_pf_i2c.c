@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/ixl_pf_i2c.c 335339 2018-06-18 20:32:53Z erj $*/
+/*$FreeBSD$*/
 
 #include "ixl_pf.h"
 

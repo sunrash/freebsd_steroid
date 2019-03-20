@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/pmap.h 339423 2018-10-18 15:25:07Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PMAP_H_

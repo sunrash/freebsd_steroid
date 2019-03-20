@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/conf/ldscript.mips.octeon1 303442 2016-07-28 13:54:46Z emaste $ */
+/* $FreeBSD$ */
 
 ENTRY(_start)
 

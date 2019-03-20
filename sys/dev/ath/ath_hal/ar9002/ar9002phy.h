@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ath/ath_hal/ar9002/ar9002phy.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifndef	__ATH_AR9002PHY_H__
 #define	__ATH_AR9002PHY_H__

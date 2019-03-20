@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/iplang/iplang_l.l 315368 2017-03-16 04:40:07Z cy $	*/
+/*	$FreeBSD$	*/
 
 %{
 /*

@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/mv/mpic.c 331951 2018-04-03 21:17:19Z mw $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

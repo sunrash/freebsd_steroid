@@ -1,5 +1,5 @@
 #	$OpenBSD: Makefile,v 1.13 2014/05/12 19:11:19 espie Exp $
-# $FreeBSD: releng/12.0/usr.bin/m4/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 # -DEXTENDED 
 # 	if you want the paste & spaste macros.

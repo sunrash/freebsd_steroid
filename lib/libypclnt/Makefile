@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libypclnt/Makefile 312469 2017-01-20 04:28:41Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	ypclnt

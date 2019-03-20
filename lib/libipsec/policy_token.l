@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/lib/libipsec/policy_token.l 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: policy_token.l,v 1.13 2003/05/09 05:19:55 sakane Exp $	*/
 
 /*-

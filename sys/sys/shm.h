@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/sys/shm.h 329348 2018-02-16 01:33:01Z brooks $ */
+/* $FreeBSD$ */
 /*	$NetBSD: shm.h,v 1.15 1994/06/29 06:45:17 cgd Exp $	*/
 
 /*-
@@ -52,6 +52,7 @@
 
 #define SHM_RDONLY  010000  /* Attach read-only (else read-write) */
 #define SHM_RND     020000  /* Round attach address to SHMLBA */
+#define	SHM_REMAP   030000  /* Unmap before mapping */
 #define SHMLBA      PAGE_SIZE /* Segment low boundary address multiple */
 
 /* "official" access mode definitions; somewhat braindead since you have

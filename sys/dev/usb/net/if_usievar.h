@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/net/if_usievar.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * Copyright (c) 2011 Anybots Inc

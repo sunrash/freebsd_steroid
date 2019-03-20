@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/part/g_part.h 333233 2018-05-04 00:34:27Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _GEOM_PART_H_
@@ -202,6 +202,7 @@ enum g_part_ctl {
 #define	G_PART_PARM_BOOTCODE	0x1000
 #define	G_PART_PARM_ATTRIB	0x2000
 #define	G_PART_PARM_FORCE	0x4000
+#define G_PART_PARM_SKIP_DSN	0x8000
 
 struct g_part_parms {
 	unsigned int	gpp_parms;
@@ -220,6 +221,7 @@ struct g_part_parms {
 	unsigned int	gpp_codesize;
 	const char	*gpp_attrib;
 	unsigned int	gpp_force;
+	unsigned int	gpp_skip_dsn;
 };
 
 void g_part_geometry_heads(off_t, u_int, off_t *, u_int *);

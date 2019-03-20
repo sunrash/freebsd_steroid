@@ -22,7 +22,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/powernv/opalcall.S 327810 2018-01-11 07:40:06Z wma $
+ * $FreeBSD$
  */
 
 #include <machine/asm.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/etc/mtree/BSD.include.dist 334288 2018-05-28 17:08:37Z zeising $
+# $FreeBSD$
 #
 # Please see the file src/etc/mtree/README before making changes to this file.
 #

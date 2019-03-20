@@ -26,7 +26,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/include/tlb.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_TLB_H_
@@ -152,12 +152,8 @@ typedef struct tlb_entry {
 	uint32_t mas7;
 } tlb_entry_t;
 
-void tlb0_print_tlbentries(void);
-
 void tlb1_inval_entry(unsigned int);
 void tlb1_init(void);
-void tlb1_print_entries(void);
-void tlb1_print_tlbentries(void);
 #endif /* !LOCORE */
 
 #elif defined(BOOKE_PPC4XX)

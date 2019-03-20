@@ -30,7 +30,7 @@
  *
  *	@(#)saioctl.h	8.1 (Berkeley) 6/11/93
  *
- * $FreeBSD: releng/12.0/stand/libsa/saioctl.h 324551 2017-10-12 14:56:28Z imp $
+ * $FreeBSD$
  */
 
 /* ioctl's -- for disks just now */

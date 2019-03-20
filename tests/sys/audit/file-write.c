@@ -22,7 +22,7 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/audit/file-write.c 335067 2018-06-13 17:01:57Z asomers $
+ * $FreeBSD$
  */
 
 #include <atf-c.h>

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)err.h	8.1 (Berkeley) 6/2/93
- * $FreeBSD: releng/12.0/include/err.h 328517 2018-01-28 19:37:30Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _ERR_H_

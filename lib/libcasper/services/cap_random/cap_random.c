@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcasper/services/cap_random/cap_random.c 329452 2018-02-17 12:22:29Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/nv.h>
 

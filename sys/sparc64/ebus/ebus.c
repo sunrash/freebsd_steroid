@@ -59,7 +59,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/sparc64/ebus/ebus.c 332310 2018-04-08 22:59:34Z gonzo $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for JBus to EBus and PCI to EBus bridges

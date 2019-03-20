@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/atheros/ar71xx_ehci.c 326259 2017-11-27 15:07:26Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

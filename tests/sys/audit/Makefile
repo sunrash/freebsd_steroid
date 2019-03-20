@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/audit/Makefile 336875 2018-07-29 20:34:44Z asomers $
+# $FreeBSD$
 
 TESTSDIR=	${TESTSBASE}/sys/audit
 
@@ -49,6 +49,7 @@ SRCS.miscellaneous+=		utils.c
 TEST_METADATA+= timeout="30"
 TEST_METADATA+= required_user="root"
 TEST_METADATA+= is_exclusive="true"
+TEST_METADATA+=	required_files="/etc/rc.d/auditd"
 
 WARNS?=	6
 

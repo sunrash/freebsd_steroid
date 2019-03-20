@@ -24,7 +24,7 @@
 # Copyright (c) 2012,2013 Spectra Logic Corporation.  All rights reserved.
 # Use is subject to license terms.
 #
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/zfsd/cleanup.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . ${STF_SUITE}/include/libtest.kshlib
 . ${STF_SUITE}/include/libgnop.kshlib

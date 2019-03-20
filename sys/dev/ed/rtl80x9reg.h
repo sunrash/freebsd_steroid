@@ -30,7 +30,7 @@
  *
  * Based on patches subitted by: David Madole, edited by M. Warner Losh.
  *
- * $FreeBSD: releng/12.0/sys/dev/ed/rtl80x9reg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /*

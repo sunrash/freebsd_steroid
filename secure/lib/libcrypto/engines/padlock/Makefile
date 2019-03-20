@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/lib/libcrypto/engines/padlock/Makefile 338844 2018-09-20 21:59:47Z jkim $
+# $FreeBSD$
 
 SHLIB_NAME?=	padlock.so
 

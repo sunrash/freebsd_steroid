@@ -56,7 +56,7 @@
 *
 *******************************************************************************/
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/aesni/intel_sha256.c 324106 2017-09-29 19:56:09Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <crypto/aesni/aesni_os.h>

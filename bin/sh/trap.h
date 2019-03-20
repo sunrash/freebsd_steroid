@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)trap.h	8.3 (Berkeley) 6/5/95
- * $FreeBSD: releng/12.0/bin/sh/trap.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 extern volatile sig_atomic_t pendingsig;

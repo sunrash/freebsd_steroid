@@ -27,7 +27,7 @@
  *
  *	from: NetBSD: psychovar.h,v 1.15 2008/05/29 14:51:26 mrg Exp
  *
- * $FreeBSD: releng/12.0/sys/sparc64/pci/psychovar.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SPARC64_PCI_PSYCHOVAR_H_

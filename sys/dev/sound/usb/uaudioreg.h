@@ -1,5 +1,5 @@
 /*	$NetBSD: uaudioreg.h,v 1.12 2004/11/05 19:08:29 kent Exp $	*/
-/* $FreeBSD: releng/12.0/sys/dev/sound/usb/uaudioreg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD
@@ -36,7 +36,7 @@
 #ifndef _UAUDIOREG_H_
 #define	_UAUDIOREG_H_
 
-#define	UAUDIO_VERSION		0x0100
+#define	UAUDIO_VERSION_10	0x0100
 #define	UAUDIO_VERSION_20	0x0200
 #define	UAUDIO_VERSION_30	0x0300
 

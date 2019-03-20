@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/hdmi/dwc_hdmi.c 310777 2016-12-29 14:08:24Z jmcneill $");
+__FBSDID("$FreeBSD$");
 
 /*
  * HDMI core module

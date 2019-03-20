@@ -30,7 +30,7 @@
 #define BXE_STATS_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bxe/bxe_stats.h 326022 2017-11-20 19:36:21Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

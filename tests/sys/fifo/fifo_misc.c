@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/fifo/fifo_misc.c 285891 2015-07-26 14:46:42Z rodrigc $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

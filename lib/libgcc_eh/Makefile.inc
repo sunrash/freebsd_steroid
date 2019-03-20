@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libgcc_eh/Makefile.inc 337585 2018-08-10 19:57:55Z dim $
+# $FreeBSD$
 
 COMPILERRTDIR=	${SRCTOP}/contrib/compiler-rt
 UNWINDINCDIR=	${SRCTOP}/contrib/llvm/projects/libunwind/include

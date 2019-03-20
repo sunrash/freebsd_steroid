@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/virtio/scsi/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

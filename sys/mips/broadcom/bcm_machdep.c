@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/broadcom/bcm_machdep.c 326079 2017-11-21 23:15:20Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

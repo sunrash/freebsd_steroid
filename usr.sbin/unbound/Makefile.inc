@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/unbound/Makefile.inc 339277 2018-10-10 08:20:14Z des $
+# $FreeBSD$
 
 NO_WERROR=	true
 NO_WTHREAD_SAFETY= true

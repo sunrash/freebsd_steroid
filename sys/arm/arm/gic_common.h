@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/arm/gic_common.h 335373 2018-06-19 16:14:23Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _GIC_COMMON_H_

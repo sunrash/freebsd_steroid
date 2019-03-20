@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/mips/gen/makecontext.c 328632 2018-01-31 18:00:23Z jhb $");
+__FBSDID("$FreeBSD$");
 #if defined(LIBC_SCCS) && !defined(lint)
 __RCSID("$NetBSD: makecontext.c,v 1.5 2009/12/14 01:07:42 matt Exp $");
 #endif

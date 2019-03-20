@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)mtree.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.sbin/fmtree/mtree.h 160083 2006-07-03 10:55:22Z maxim $
+ * $FreeBSD$
  */
 
 #include <string.h>

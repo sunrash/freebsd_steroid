@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/linux/linux_machdep.c 337431 2018-08-07 18:29:10Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/capsicum.h>
@@ -201,6 +201,7 @@ linux_sigaltstack(struct thread *td, struct linux_sigaltstack_args *uap)
 	l_stack_t lss;
 	int error;
 
+	memset(&lss, 0, sizeof(lss));
 	LINUX_CTR2(sigaltstack, "%p, %p", uap->uss, uap->uoss);
 
 	if (uap->uss != NULL) {

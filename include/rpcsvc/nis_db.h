@@ -26,7 +26,7 @@
  * 2550 Garcia Avenue
  * Mountain View, California  94043
  *
- * $FreeBSD: releng/12.0/include/rpcsvc/nis_db.h 93032 2002-03-23 17:24:55Z imp $
+ * $FreeBSD$
  */
 
 /*

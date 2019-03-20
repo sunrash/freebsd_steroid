@@ -21,7 +21,7 @@ License Agreement applies to this software.
 	Modified by cmetz for OPIE 2.2. Use FUNCTION declaration et al.
         Created at NRL for OPIE 2.2 from opiesubr2.c
 
-$FreeBSD: releng/12.0/contrib/opie/libopie/challenge.c 269806 2014-08-11 12:26:48Z ache $
+$FreeBSD$
 
 */
 #include "opie_cfg.h"

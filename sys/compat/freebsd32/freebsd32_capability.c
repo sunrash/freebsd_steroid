@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/freebsd32/freebsd32_capability.c 326266 2017-11-27 15:13:23Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_capsicum.h"
 

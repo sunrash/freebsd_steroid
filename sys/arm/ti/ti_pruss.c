@@ -27,7 +27,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/ti/ti_pruss.c 326258 2017-11-27 15:04:10Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/poll.h>
 #include <sys/time.h>
@@ -704,7 +704,7 @@ ti_pruss_mmap(struct cdev *cdev, vm_ooffset_t offset, vm_paddr_t *paddr,
 	device_t dev = cdev->si_drv1;
 	struct ti_pruss_softc *sc = device_get_softc(dev);
 
-	if (offset > rman_get_size(sc->sc_mem_res))
+	if (offset >= rman_get_size(sc->sc_mem_res))
 		return (ENOSPC);
 	*paddr = rman_get_start(sc->sc_mem_res) + offset;
 	*memattr = VM_MEMATTR_UNCACHEABLE;

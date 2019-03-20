@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/libsa/stand.h 334665 2018-06-05 17:18:10Z ian $
+ * $FreeBSD$
  * From	$NetBSD: stand.h,v 1.22 1997/06/26 19:17:40 drochner Exp $	
  */
 
@@ -268,6 +268,7 @@ extern void	*reallocf(void *ptr, size_t size);
 extern void	mallocstats(void);
 
 extern int	printf(const char *fmt, ...) __printflike(1, 2);
+extern int	asprintf(char **buf, const char *cfmt, ...) __printflike(2, 3);
 extern int	sprintf(char *buf, const char *cfmt, ...) __printflike(2, 3);
 extern int	snprintf(char *buf, size_t size, const char *cfmt, ...) __printflike(3, 4);
 extern int	vprintf(const char *fmt, __va_list);

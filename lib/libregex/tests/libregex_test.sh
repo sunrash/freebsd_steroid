@@ -23,7 +23,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/lib/libregex/tests/libregex_test.sh 328549 2018-01-29 14:00:33Z kevans $
+# $FreeBSD$
 
 check()
 {

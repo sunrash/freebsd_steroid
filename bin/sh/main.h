@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)main.h	8.2 (Berkeley) 5/4/95
- * $FreeBSD: releng/12.0/bin/sh/main.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 extern int rootpid;	/* pid of main shell */

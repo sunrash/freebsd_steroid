@@ -33,7 +33,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/fwcontrol/fwdv.c 327571 2018-01-05 05:34:20Z imp $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/ioctl.h>

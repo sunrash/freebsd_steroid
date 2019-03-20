@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/geom/Makefile 335645 2018-06-25 19:55:15Z brooks $
+# $FreeBSD$
 
 SUBDIR=${GEOM_CLASSES}
 

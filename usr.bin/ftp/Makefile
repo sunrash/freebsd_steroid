@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ftp/Makefile 315170 2017-03-12 18:58:44Z imp $
+# $FreeBSD$
 #	$NetBSD: Makefile,v 1.15 1997/10/18 15:31:20 lukem Exp $
 #	from: @(#)Makefile	8.2 (Berkeley) 4/3/94
 

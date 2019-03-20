@@ -1,5 +1,5 @@
 /* $NetBSD: edid.c,v 1.12 2013/02/08 16:35:10 skrll Exp $ */
-/* $FreeBSD: releng/12.0/sys/dev/videomode/edid.c 278798 2015-02-15 11:37:40Z hselasky $ */
+/* $FreeBSD$ */
 
 /*-
  * Copyright (c) 2006 Itronix Inc.
@@ -33,7 +33,7 @@
  */ 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/videomode/edid.c 278798 2015-02-15 11:37:40Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

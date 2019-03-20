@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/i2c/isl/Makefile 331868 2018-04-01 18:22:24Z ian $
+# $FreeBSD$
 
 .PATH:		${SRCTOP}/sys/dev/isl
 KMOD		= isl

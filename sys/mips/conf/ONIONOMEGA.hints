@@ -1,7 +1,7 @@
 #
 # This file adds to the values in AR933X_BASE.hints.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/ONIONOMEGA.hints 313474 2017-02-09 15:16:08Z allanjude $
+# $FreeBSD$
 
 # mdiobus on arge1
 hint.argemdio.0.at="nexus0"

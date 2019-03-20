@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/truss/syscall.h 331716 2018-03-29 00:12:50Z jhb $
+ * $FreeBSD$
  */
 
 /*
@@ -151,6 +151,7 @@ enum Argtype {
 	PQuadHex,
 	PUInt,
 	Readlinkres,
+	ShmName,
 	StringArray,
 
 	/* Pointers to structures. */

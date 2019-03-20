@@ -36,7 +36,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mips/bcopy.S 334181 2018-05-24 21:11:24Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <machine/endian.h>
 

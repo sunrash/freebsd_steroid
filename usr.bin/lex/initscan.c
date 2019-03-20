@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/lex/initscan.c 298241 2016-04-19 02:05:32Z araujo $ */
+/* $FreeBSD$ */
 
 #line 3 "<stdout>"
 

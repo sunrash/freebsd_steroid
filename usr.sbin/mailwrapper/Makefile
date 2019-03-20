@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/mailwrapper/Makefile 327494 2018-01-02 16:50:57Z bapt $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/x86/sys/Makefile.inc 312422 2017-01-19 18:07:24Z ngie $
+# $FreeBSD$
 
 .PATH:	${LIBC_SRCTOP}/x86/sys
 

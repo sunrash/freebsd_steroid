@@ -37,7 +37,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_bsdextended/ugidfw_vnode.c 189533 2009-03-08 12:32:06Z rwatson $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

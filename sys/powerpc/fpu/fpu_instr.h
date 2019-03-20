@@ -1,5 +1,5 @@
 /*	$NetBSD: instr.h,v 1.4 2005/12/11 12:18:43 christos Exp $ */
-/* $FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_instr.h 326023 2017-11-20 19:43:44Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

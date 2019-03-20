@@ -19,7 +19,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/rtwn/pci/rtwn_pci_reg.c 307529 2016-10-17 20:38:24Z avos $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/lock.h>
@@ -118,6 +118,6 @@ rtwn_pci_delay(struct rtwn_softc *sc, int usec)
 		DELAY(usec);
 	else {
 		(void) mtx_sleep(sc, &sc->sc_mtx, 0, "rtwn_pci",
-		    MAX(msecs_to_ticks(usec / 1000), 1));
+		    msecs_to_ticks(usec / 1000));
 	}
 }

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/history/Makefile 333495 2018-05-11 16:11:24Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

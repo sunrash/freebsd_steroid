@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/cxgbe/common/t4_tcb.h 329788 2018-02-22 02:02:31Z jhb $
+ * $FreeBSD$
  *
  */
 
@@ -752,6 +752,9 @@
 
 #define S_TF_CCTRL_RFR    62
 #define V_TF_CCTRL_RFR(x) ((__u64)(x) << S_TF_CCTRL_RFR)
+
+#define S_TF_CORE_BYPASS    63
+#define V_TF_CORE_BYPASS(x) ((__u64)(x) << S_TF_CORE_BYPASS)
 
 #define S_TF_DDP_INDICATE_OUT    16
 #define V_TF_DDP_INDICATE_OUT(x) ((x) << S_TF_DDP_INDICATE_OUT)

@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/extattr/tests/extattr_test.sh 316505 2017-04-04 21:36:13Z ngie $
+# $FreeBSD$
 
 atf_test_case bad_namespace
 bad_namespace_head() {

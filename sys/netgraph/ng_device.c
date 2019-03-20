@@ -29,7 +29,7 @@
  * This node presents a /dev/ngd%d device that interfaces to an other
  * netgraph node.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_device.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  *
  */
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/rpc/netconfig 338732 2018-09-17 19:20:50Z brd $
+# $FreeBSD$
 #
 # The network configuration file. This file is currently only used in
 # conjunction with the (TI-) RPC code in the C library, unlike its

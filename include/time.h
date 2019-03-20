@@ -37,7 +37,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/include/time.h 338751 2018-09-18 15:31:24Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _TIME_H_

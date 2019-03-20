@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/pci/pci_cfgreg.c 326260 2017-11-27 15:08:52Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -490,15 +490,13 @@ pcie_cfgregopen(uint64_t base, uint8_t minbus, uint8_t maxbus)
 	if (minbus != 0)
 		return (0);
 
-#ifndef PAE
-	if (base >= 0x100000000) {
+	if (!pae_mode && base >= 0x100000000) {
 		if (bootverbose)
 			printf(
 	    "PCI: Memory Mapped PCI configuration area base 0x%jx too high\n",
 			    (uintmax_t)base);
 		return (0);
 	}
-#endif
 		
 	if (bootverbose)
 		printf("PCIe: Memory Mapped configuration base @ 0x%jx\n",

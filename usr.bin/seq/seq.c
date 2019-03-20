@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/seq/seq.c 333155 2018-05-02 01:04:13Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <err.h>

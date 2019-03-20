@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/stand/kshim/kshim.mk 269541 2014-08-04 23:00:13Z brooks $
+# $FreeBSD$
 #
 # Copyright (c) 2013 Hans Petter Selasky.
 # Copyright (c) 2014 SRI International

@@ -39,7 +39,7 @@
 static char sccsid[] = "@(#)dirs.c	8.7 (Berkeley) 5/1/95";
 #endif
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/sbin/restore/dirs.c 331095 2018-03-17 12:59:55Z emaste $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/param.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/timezone/share/Makefile 291347 2015-11-26 01:14:27Z bdrewery $
+# $FreeBSD$
 
 FILESDIR=	${SHAREDIR}/bsdconfig/timezone
 FILES=		continents.subr countries.subr iso3166.subr menus.subr \

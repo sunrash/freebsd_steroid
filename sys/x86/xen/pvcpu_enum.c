@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/xen/pvcpu_enum.c 338631 2018-09-13 07:14:11Z royger $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -199,7 +199,7 @@ xenpv_setup_io(void)
 		 * this is legacy code so just keep using the previous
 		 * behaviour and assume a maximum of 256 interrupts.
 		 */
-		num_io_irqs = max(MINIMUM_MSI_INT - 1, num_io_irqs);
+		num_io_irqs = max(255, num_io_irqs);
 
 		acpi_SetDefaultIntrModel(ACPI_INTR_APIC);
 	}

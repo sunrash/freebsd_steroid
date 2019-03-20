@@ -17,7 +17,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/xen/hvm.h 336474 2018-07-19 08:44:52Z royger $
+ * $FreeBSD$
  */
 
 #ifndef	__XEN_HVM_H__
@@ -104,5 +104,6 @@ void xen_hvm_suspend(void);
 void xen_hvm_resume(bool suspend_cancelled);
 
 extern uint32_t hvm_start_flags;
+extern bool xen_evtchn_needs_ack;
 
 #endif	/* __XEN_HVM_H__ */

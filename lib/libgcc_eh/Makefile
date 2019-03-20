@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libgcc_eh/Makefile 308563 2016-11-11 23:28:07Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

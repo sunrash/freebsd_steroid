@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_cru.h 334112 2018-05-23 19:07:03Z manu $
+ * $FreeBSD$
  */
 
 #ifndef __RK_CRU_H__
@@ -61,7 +61,8 @@ struct rk_cru_gate {
 
 enum rk_clk_type {
 	RK_CLK_UNDEFINED = 0,
-	RK_CLK_PLL,
+	RK3328_CLK_PLL,
+	RK3399_CLK_PLL,
 	RK_CLK_COMPOSITE,
 	RK_CLK_MUX,
 	RK_CLK_ARMCLK,

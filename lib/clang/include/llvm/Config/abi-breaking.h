@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/clang/include/llvm/Config/abi-breaking.h 321369 2017-07-22 11:08:25Z dim $ */
+/* $FreeBSD$ */
 /*===------- llvm/Config/abi-breaking.h - llvm configuration -------*- C -*-===*/
 /*                                                                            */
 /*                     The LLVM Compiler Infrastructure                       */

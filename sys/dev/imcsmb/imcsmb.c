@@ -4,7 +4,6 @@
  * Authors: Joe Kloss; Ravi Pokala (rpokala@freebsd.org)
  *
  * Copyright (c) 2017-2018 Panasas
- * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -27,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/imcsmb/imcsmb.c 330304 2018-03-03 01:53:51Z rpokala $
+ * $FreeBSD$
  */
 
 /* A detailed description of this device is present in imcsmb_pci.c */

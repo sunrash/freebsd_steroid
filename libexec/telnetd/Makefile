@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/telnetd/Makefile 325178 2017-10-31 00:03:25Z bdrewery $
+# $FreeBSD$
 
 # Do not define -DKLUDGELINEMODE, as it does not interact well with many
 # telnet implementations.

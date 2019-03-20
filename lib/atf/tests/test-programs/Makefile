@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/atf/tests/test-programs/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

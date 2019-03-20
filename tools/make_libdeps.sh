@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/make_libdeps.sh 325897 2017-11-16 15:26:39Z hselasky $
+# $FreeBSD$
 
 export PATH=/bin:/usr/bin
 

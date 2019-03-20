@@ -30,7 +30,7 @@
  *
  *	@(#)socketvar.h	8.3 (Berkeley) 2/19/95
  *
- * $FreeBSD: releng/12.0/sys/sys/sockbuf.h 337328 2018-08-04 20:26:54Z markj $
+ * $FreeBSD$
  */
 #ifndef _SYS_SOCKBUF_H_
 #define _SYS_SOCKBUF_H_
@@ -68,13 +68,14 @@ struct sockaddr;
 struct socket;
 struct thread;
 struct selinfo;
-struct sbtls_info;
+struct sbtls_session;
 
 /*
  * Variables for socket buffering.
  *
  * Locking key to struct sockbuf:
  * (a) locked by SOCKBUF_LOCK().
+ * (b) locked by sblock()
  */
 struct	sockbuf {
 	struct	mtx sb_mtx;		/* sockbuf lock */
@@ -99,9 +100,9 @@ struct	sockbuf {
 	u_int	sb_ctl;		/* (a) non-data chars in buffer */
 	int	sb_lowat;	/* (a) low water mark */
 	sbintime_t	sb_timeo;	/* (a) timeout for read/write */
-	uint64_t sb_tls_seqno;	/* TLS seqno */
-	struct	sbtls_info *sb_tls_info; /* TLS state */
-	u_int	sb_tls_flags;	/* flags used by TLS */
+	uint64_t sb_tls_seqno;	/* (a) TLS seqno */
+	struct	sbtls_session *sb_tls_info; /* (a + b) TLS state */
+	u_int	sb_tls_flags;	/* (a + b) flags used by TLS */
 	short	sb_flags;	/* (a) flags, see below */
 	int	(*sb_upcall)(struct socket *, void *, int); /* (a) */
 	void	*sb_upcallarg;	/* (a) */
@@ -143,16 +144,20 @@ int	sbappendaddr_locked(struct sockbuf *sb, const struct sockaddr *asa,
 	    struct mbuf *m0, struct mbuf *control);
 int	sbappendaddr_nospacecheck_locked(struct sockbuf *sb,
 	    const struct sockaddr *asa, struct mbuf *m0, struct mbuf *control);
-void	sbappendcontrol(struct sockbuf *sb, struct mbuf *m0, struct mbuf *control);
-void	sbappendcontrol_locked(struct sockbuf *sb, struct mbuf *m0, struct mbuf *control);
+void	sbappendcontrol(struct sockbuf *sb, struct mbuf *m0,
+	    struct mbuf *control);
+void	sbappendcontrol_locked(struct sockbuf *sb, struct mbuf *m0,
+	    struct mbuf *control);
 void	sbappendrecord(struct sockbuf *sb, struct mbuf *m0);
 void	sbappendrecord_locked(struct sockbuf *sb, struct mbuf *m0);
 void	sbcompress(struct sockbuf *sb, struct mbuf *m, struct mbuf *n);
-struct mbuf *sbcreatecontrol(caddr_t p, int size, int type, int level);
+struct mbuf *
+	sbcreatecontrol(caddr_t p, int size, int type, int level);
 void	sbdestroy(struct sockbuf *sb, struct socket *so);
 void	sbdrop(struct sockbuf *sb, int len);
 void	sbdrop_locked(struct sockbuf *sb, int len);
-struct mbuf *sbcut_locked(struct sockbuf *sb, int len);
+struct mbuf *
+	sbcut_locked(struct sockbuf *sb, int len);
 void	sbdroprecord(struct sockbuf *sb);
 void	sbdroprecord_locked(struct sockbuf *sb);
 void	sbflush(struct sockbuf *sb);
@@ -161,11 +166,13 @@ void	sbrelease(struct sockbuf *sb, struct socket *so);
 void	sbrelease_internal(struct sockbuf *sb, struct socket *so);
 void	sbrelease_locked(struct sockbuf *sb, struct socket *so);
 int	sbsetopt(struct socket *so, int cmd, u_long cc);
-int	sbreserve_locked(struct sockbuf *sb, u_long cc, struct socket *so, struct thread *td);
-struct mbuf *sbsndptr(struct sockbuf *sb, uint32_t off, uint32_t *moff);
-struct mbuf *sbsndptr_noadv(struct sockbuf *sb, u_int off, u_int *moff);
-void	sbsndptr_adv(struct sockbuf *sb, struct mbuf *mb, uint32_t len);
-struct mbuf *sbsndmbuf(struct sockbuf *sb, u_int off, u_int *moff);
+int	sbreserve_locked(struct sockbuf *sb, u_long cc, struct socket *so,
+	    struct thread *td);
+void	sbsndptr_adv(struct sockbuf *sb, struct mbuf *mb, u_int len);
+struct mbuf *
+	sbsndptr_noadv(struct sockbuf *sb, u_int off, u_int *moff);
+struct mbuf *
+	sbsndmbuf(struct sockbuf *sb, u_int off, u_int *moff);
 int	sbwait(struct sockbuf *sb);
 int	sblock(struct sockbuf *sb, int flags);
 void	sbunlock(struct sockbuf *sb);

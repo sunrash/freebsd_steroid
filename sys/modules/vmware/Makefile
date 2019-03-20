@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/vmware/Makefile 331510 2018-03-25 00:57:00Z mp $
+# $FreeBSD$
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions

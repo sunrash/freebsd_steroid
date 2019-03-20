@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/include/busdma_impl.h 327901 2018-01-12 23:34:16Z jeff $
+ * $FreeBSD$
  */
 
 #ifndef	__X86_BUSDMA_IMPL_H
@@ -87,7 +87,7 @@ struct bus_dma_impl {
 };
 
 void bus_dma_dflt_lock(void *arg, bus_dma_lock_op_t op);
-int bus_dma_run_filter(struct bus_dma_tag_common *dmat, bus_addr_t paddr);
+int bus_dma_run_filter(struct bus_dma_tag_common *dmat, vm_paddr_t paddr);
 int common_bus_dma_tag_create(struct bus_dma_tag_common *parent,
     bus_size_t alignment,
     bus_addr_t boundary, bus_addr_t lowaddr, bus_addr_t highaddr,

@@ -3,7 +3,7 @@
  * For conditions of distribution and use, see copyright notice in zlib.h
  */
 
-/* @(#) $FreeBSD: releng/12.0/contrib/zlib/zconf.h 311285 2017-01-04 16:09:08Z delphij $ */
+/* @(#) $FreeBSD$ */
 
 #ifndef ZCONF_H
 #define ZCONF_H

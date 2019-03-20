@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/common/isapnp.h 312910 2017-01-28 02:22:15Z nyan $
+ * $FreeBSD$
  */
 
 #ifndef _I386_ISA_PNP_H_

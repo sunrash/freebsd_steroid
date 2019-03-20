@@ -1,5 +1,5 @@
 .\"	$OpenBSD: sort.1,v 1.45 2015/03/19 13:51:10 jmc Exp $
-.\"	$FreeBSD: releng/12.0/usr.bin/sort/sort.1.in 305613 2016-09-08 14:50:23Z gabor $
+.\"	$FreeBSD$
 .\"
 .\" Copyright (c) 1991, 1993
 .\"	The Regents of the University of California.  All rights reserved.

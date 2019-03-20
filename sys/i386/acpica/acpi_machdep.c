@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/acpica/acpi_machdep.c 326260 2017-11-27 15:08:52Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -134,7 +134,7 @@ table_map(vm_paddr_t pa, int offset, vm_offset_t length)
 
 	off = pa & PAGE_MASK;
 	length = round_page(length + off);
-	pa = pa & PG_FRAME;
+	pa = pmap_pg_frame(pa);
 	va = (vm_offset_t)pmap_kenter_temporary(pa, offset) +
 	    (offset * PAGE_SIZE);
 	data = (void *)(va + off);

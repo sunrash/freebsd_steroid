@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/usr.sbin/amd/include/config.h 311472 2017-01-06 04:22:25Z ngie $
+ * $FreeBSD$
  *
  * portions derived from
  *      $NetBSD: config.h,v 1.11 1998/08/08 22:33:37 christos Exp $

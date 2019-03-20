@@ -42,7 +42,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/mips/beri/boot2/boot2.c 330788 2018-03-12 03:54:38Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/disklabel.h>
@@ -650,4 +650,20 @@ xgetc(int fn)
 	if (fn)
 	    return 0;
     }
+}
+
+int
+getchar(void)
+{
+
+	return xgetc(0);
+}
+
+void
+exit(int code)
+{
+
+        printf("error: loader exit\n");
+        while (1);
+        __unreachable();
 }

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/efidp/efidp.c 327574 2018-01-05 07:09:24Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <efivar.h>

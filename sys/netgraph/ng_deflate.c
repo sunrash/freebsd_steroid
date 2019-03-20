@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_deflate.c 328218 2018-01-21 15:42:36Z pfg $
+ * $FreeBSD$
  */
 
 /*

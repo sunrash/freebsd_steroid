@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/TEST/wtc1.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <stdio.h>
 #include <string.h>

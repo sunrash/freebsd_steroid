@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/amdsbwd/amd_chipset.h 333269 2018-05-05 05:22:11Z avg $
+ * $FreeBSD$
  */
 
 /*

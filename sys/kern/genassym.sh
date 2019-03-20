@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/sys/kern/genassym.sh 316764 2017-04-13 15:43:44Z andrew $
+# $FreeBSD$
 
 usage()
 {

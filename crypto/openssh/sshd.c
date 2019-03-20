@@ -43,7 +43,7 @@
  */
 
 #include "includes.h"
-__RCSID("$FreeBSD: releng/12.0/crypto/openssh/sshd.c 339216 2018-10-06 21:32:55Z emaste $");
+__RCSID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/ioctl.h>

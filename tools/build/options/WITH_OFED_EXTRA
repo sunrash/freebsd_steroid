@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_OFED_EXTRA 336569 2018-07-20 23:52:11Z kib $
+.\" $FreeBSD$
 Set to build the non-essential components of the
 .Dq "OpenFabrics Enterprise Distribution"
 Infiniband software stack, mostly examples.

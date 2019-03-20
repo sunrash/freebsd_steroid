@@ -25,10 +25,10 @@
 .\" This document is derived in part from the enet man page (enet.4)
 .\" distributed with 4.3BSD Unix.
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man4/vale.4 339839 2018-10-28 07:50:15Z vmaffione $
+.\" $FreeBSD$
 .\" $Id: $
 .\"
-.Dd July 27, 2012
+.Dd Jan 9, 2019
 .Dt VALE 4
 .Os
 .Sh NAME
@@ -85,7 +85,7 @@ changed to sysctl variables in future releases.
 .Nm
 uses the following sysctl variables to control operation:
 .Bl -tag -width dev.netmap.verbose
-.It dev.netmap.bridge
+.It dev.netmap.bridge_batch
 The maximum number of packets processed internally
 in each iteration.
 Defaults to 1024, use lower values to trade latency

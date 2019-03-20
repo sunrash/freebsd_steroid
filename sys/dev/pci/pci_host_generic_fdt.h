@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD: releng/12.0/sys/dev/pci/pci_host_generic_fdt.h 308931 2016-11-21 18:24:05Z andrew $
+ * $FreeBSD$
  *
  */
 

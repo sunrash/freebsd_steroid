@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/i386/libi386/biosmem.c 323707 2017-09-18 15:17:01Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Obtain memory configuration information from the BIOS
@@ -74,6 +74,7 @@ struct bios_getmem_quirks {
 
 static struct bios_getmem_quirks quirks[] = {
 	{"coreboot", "Acer", "Peppy", BQ_DISTRUST_E820_EXTMEM},
+	{"coreboot", "Dell", "Wolf", BQ_DISTRUST_E820_EXTMEM},
 	{NULL, NULL, NULL, 0}
 };
 

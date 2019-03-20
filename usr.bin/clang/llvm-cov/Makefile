@@ -1,6 +1,12 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/llvm-cov/Makefile 314564 2017-03-02 20:49:40Z dim $
+# $FreeBSD$
+
+.include <src.opts.mk>
 
 PROG_CXX=	llvm-cov
+.if ${MK_GCOV} == "no"
+LINKS=		${BINDIR}/llvm-cov	${BINDIR}/gcov
+MLINKS=		llvm-cov.1		gcov.1
+.endif
 
 SRCDIR=		tools/llvm-cov
 SRCS+=		CodeCoverage.cpp

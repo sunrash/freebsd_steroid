@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/etc/mtree/BSD.root.dist 331212 2018-03-19 16:16:12Z kevans $
+# $FreeBSD$
 #
 # Please see the file src/etc/mtree/README before making changes to this file.
 #
@@ -29,6 +29,8 @@
     ..
     etc
         X11
+        ..
+        authpf
         ..
         autofs
         ..
@@ -87,6 +89,8 @@
         casper
         ..
         geom
+        ..
+        nvmecontrol
         ..
     ..
     libexec

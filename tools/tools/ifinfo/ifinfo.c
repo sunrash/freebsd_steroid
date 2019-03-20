@@ -26,7 +26,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/ifinfo/ifinfo.c 263102 2014-03-13 03:42:24Z glebius $
+ * $FreeBSD$
  */
 #include <sys/types.h>
 #include <sys/socket.h>		/* for PF_LINK */

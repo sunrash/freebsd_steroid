@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.4 (Berkeley) 6/16/94
- * $FreeBSD: releng/12.0/lib/libc/db/hash/extern.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 BUFHEAD	*__add_ovflpage(HTAB *, BUFHEAD *);

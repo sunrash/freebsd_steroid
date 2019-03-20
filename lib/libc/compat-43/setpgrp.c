@@ -33,7 +33,7 @@
 static char sccsid[] = "@(#)setpgrp.c	8.1 (Berkeley) 6/2/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/compat-43/setpgrp.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <unistd.h>

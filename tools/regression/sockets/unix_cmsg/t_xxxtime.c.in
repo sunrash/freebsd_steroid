@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/regression/sockets/unix_cmsg/t_xxxtime.c.in 309773 2016-12-09 22:13:00Z sobomax $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/time.h>
 #include <sys/types.h>

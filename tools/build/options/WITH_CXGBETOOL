@@ -1,3 +1,3 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_CXGBETOOL 314579 2017-03-03 03:11:58Z np $
+.\" $FreeBSD$
 Set to build
 .Xr cxgbetool 8

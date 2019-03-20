@@ -25,7 +25,7 @@ if [ ! "$_USERMGMT_GROUP_SUBR" ]; then _USERMGMT_GROUP_SUBR=1
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/usermgmt/share/group.subr 284609 2015-06-19 21:32:20Z dteske $
+# $FreeBSD$
 #
 ############################################################ INCLUDES
 

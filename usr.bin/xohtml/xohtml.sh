@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/usr.bin/xohtml/xohtml.sh 334068 2018-05-23 01:20:31Z phil $
+# $FreeBSD$
 #!/bin/sh
 #
 # Copyright (c) 2014, Juniper Networks, Inc.

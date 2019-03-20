@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/bin/setfacl/util.c 332396 2018-04-10 23:29:57Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <stdlib.h>

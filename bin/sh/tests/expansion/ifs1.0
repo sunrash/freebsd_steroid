@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/ifs1.0 194981 2009-06-25 17:36:08Z jilles $
+# $FreeBSD$
 
 c=: e= s=' '
 failures=''

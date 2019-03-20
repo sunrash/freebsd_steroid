@@ -17,7 +17,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/pfctl/pfctl_qstats.c 338209 2018-08-22 19:38:48Z pkelsey $");
+__FBSDID("$FreeBSD$");
 
 #define PFIOC_USE_LATEST
 

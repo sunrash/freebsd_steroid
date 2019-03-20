@@ -20,7 +20,7 @@
  *
  * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/profile/profile.c 334550 2018-06-03 03:53:11Z jhibbits $
+ * $FreeBSD$
  *
  */
 

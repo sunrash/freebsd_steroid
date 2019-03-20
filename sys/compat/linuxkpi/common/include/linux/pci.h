@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/pci.h 334429 2018-05-31 13:17:34Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_PCI_H_
 #define	_LINUX_PCI_H_
@@ -71,7 +71,7 @@ struct pci_device_id {
 #define	PCI_BASE_CLASS_BRIDGE		0x06
 #define	PCI_CLASS_BRIDGE_ISA		0x0601
 
-#define	PCI_ANY_ID		(-1)
+#define	PCI_ANY_ID			-1U
 #define	PCI_VENDOR_ID_APPLE		0x106b
 #define	PCI_VENDOR_ID_ASUSTEK		0x1043
 #define	PCI_VENDOR_ID_ATI		0x1002
@@ -601,9 +601,11 @@ pci_enable_msix_range(struct pci_dev *dev, struct msix_entry *entries,
 	return (nvec);
 }
 
-static inline int pci_channel_offline(struct pci_dev *pdev)
+static inline int
+pci_channel_offline(struct pci_dev *pdev)
 {
-	return false;
+
+	return (pci_get_vendor(pdev->dev.bsddev) == 0xffff);
 }
 
 static inline int pci_enable_sriov(struct pci_dev *dev, int nr_virtfn)

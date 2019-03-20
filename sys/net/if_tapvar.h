@@ -36,7 +36,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/net/if_tapvar.h 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  * $Id: if_tapvar.h,v 0.6 2000/07/11 02:16:08 max Exp $
  */
 

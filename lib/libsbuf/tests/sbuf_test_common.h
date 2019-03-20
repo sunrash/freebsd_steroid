@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libsbuf/tests/sbuf_test_common.h 316557 2017-04-06 05:29:28Z ngie $
+ * $FreeBSD$
  */
 
 #ifndef	__LIBSBUF_TEST_COMMON_H__

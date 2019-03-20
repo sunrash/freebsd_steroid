@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/mkimg/mkimg.h 314577 2017-03-03 01:56:55Z sjg $
+ * $FreeBSD$
  */
 
 #ifndef _MKIMG_MKIMG_H_

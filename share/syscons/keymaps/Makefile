@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/syscons/keymaps/Makefile 333195 2018-05-03 06:52:47Z rcyu $
+# $FreeBSD$
 
 FILES=	INDEX.keymaps \
 	be.iso.kbd be.iso.acc.kbd \

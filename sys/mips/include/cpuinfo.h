@@ -37,7 +37,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/include/cpuinfo.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  *	@(#)cpu.h	8.4 (Berkeley) 1/4/94
  */
 

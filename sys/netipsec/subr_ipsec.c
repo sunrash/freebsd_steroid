@@ -29,7 +29,7 @@
 #include "opt_ipsec.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netipsec/subr_ipsec.c 338945 2018-09-26 14:47:51Z ae $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

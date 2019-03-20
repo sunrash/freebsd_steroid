@@ -36,7 +36,7 @@
  *	Id: lptreg.h,v 1.6 1997/02/22 09:36:52 peter Exp
  *	From Id: nlpt.h,v 1.3 1999/01/10 12:04:54 nsouch Exp
  *
- * $FreeBSD: releng/12.0/sys/dev/ppbus/lpt.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /*

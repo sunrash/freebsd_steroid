@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/ld/Makefile 335447 2018-06-20 16:10:02Z bdrewery $
+# $FreeBSD$
 
 ELF_SCR_EXT=	x xbn xc xd xdc xdw xn xr xs xsc xsw xu xw
 .include "../Makefile.inc0"
@@ -63,6 +63,9 @@ FILESDIR=	${SCRIPTDIR}
 HOST=		${TARGET_TUPLE}
 LIBSEARCHPATH=	\"=/lib\":\"=/usr/lib\"
 .for ext in ${ELF_SCR_EXT}
+.if !empty(LDSCRIPTS) && ${LDSCRIPTS:M${NATIVE_EMULATION}.${ext}} != ""
+.error "NATIVE_EMULATION scripts were added to LDSCRIPTS: ${LDSCRIPTS:M${NATIVE_EMULATION}.${ext}}"
+.endif
 LDSCRIPTS+=	${NATIVE_EMULATION}.${ext}
 ldscripts/${NATIVE_EMULATION}.${ext}: e${NATIVE_EMULATION}.c
 .endfor

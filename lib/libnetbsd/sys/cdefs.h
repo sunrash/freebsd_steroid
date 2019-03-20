@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libnetbsd/sys/cdefs.h 326025 2017-11-20 19:49:47Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

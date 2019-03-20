@@ -29,7 +29,7 @@
 /* Driver for VirtIO network devices. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/virtio/network/if_vtnet.c 340461 2018-11-15 18:51:37Z vmaffione $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/eventhandler.h>
@@ -2748,7 +2748,7 @@ vtnet_free_taskqueues(struct vtnet_softc *sc)
 		rxq = &sc->vtnet_rxqs[i];
 		if (rxq->vtnrx_tq != NULL) {
 			taskqueue_free(rxq->vtnrx_tq);
-			rxq->vtnrx_vq = NULL;
+			rxq->vtnrx_tq = NULL;
 		}
 
 		txq = &sc->vtnet_txqs[i];

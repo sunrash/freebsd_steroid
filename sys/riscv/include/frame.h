@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/frame.h 312691 2017-01-24 09:41:44Z lwhsu $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_FRAME_H_
@@ -55,7 +55,7 @@ struct trapframe {
 	uint64_t tf_a[8];
 	uint64_t tf_sepc;
 	uint64_t tf_sstatus;
-	uint64_t tf_sbadaddr;
+	uint64_t tf_stval;
 	uint64_t tf_scause;
 };
 

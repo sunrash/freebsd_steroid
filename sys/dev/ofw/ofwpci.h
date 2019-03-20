@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ofw/ofwpci.h 302952 2016-07-17 13:43:46Z mmel $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_OFW_OFWPCI_H_

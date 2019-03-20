@@ -40,7 +40,7 @@ static const char copyright[] =
 static char sccsid[] = "@(#)talkd.c	8.1 (Berkeley) 6/4/93";
 #endif
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/libexec/talkd/talkd.c 326025 2017-11-20 19:49:47Z pfg $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 /*
@@ -114,7 +114,8 @@ main(int argc, char *argv[])
 			continue;
 		}
 		lastmsgtime = time(0);
-		(void)memcpy(&ctl_addr, &mp->ctl_addr, sizeof(ctl_addr));
+		(void)memcpy(&ctl_addr.sa_data, &mp->ctl_addr.sa_data,
+		    sizeof(ctl_addr.sa_data));
 		ctl_addr.sa_family = ntohs(mp->ctl_addr.sa_family);
 		ctl_addr.sa_len = sizeof(ctl_addr);
 		process_request(mp, &response);

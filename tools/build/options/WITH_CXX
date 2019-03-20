@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_CXX 317167 2017-04-19 20:35:47Z ngie $
+.\" $FreeBSD$
 Set to build
 .Xr c++ 1
 and related libraries.

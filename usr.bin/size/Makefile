@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/size/Makefile 298401 2016-04-21 12:58:29Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

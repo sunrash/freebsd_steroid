@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/linux/linux_copyout.c 332930 2018-04-24 12:50:21Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 

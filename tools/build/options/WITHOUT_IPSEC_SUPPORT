@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_IPSEC_SUPPORT 315765 2017-03-23 02:13:59Z ngie $
+.\" $FreeBSD$
 Set to not build the kernel with
 .Xr ipsec 4
 support.

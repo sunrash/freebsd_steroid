@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/stdio/fopencookie.c 299456 2016-05-11 14:38:27Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/fcntl.h>
 

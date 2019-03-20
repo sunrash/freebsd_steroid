@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/mediatek/mtk_pinctrl.h 325231 2017-10-31 11:29:16Z mizhka $
+ * $FreeBSD$
  */
 
 #ifndef _MTK_PINCTRL_H_

@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/ixl_iw_int.h 335339 2018-06-18 20:32:53Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _IXL_IW_INT_H_
 #define _IXL_IW_INT_H_

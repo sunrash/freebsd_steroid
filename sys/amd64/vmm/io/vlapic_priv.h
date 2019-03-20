@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/vmm/io/vlapic_priv.h 326257 2017-11-27 15:03:07Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _VLAPIC_PRIV_H_

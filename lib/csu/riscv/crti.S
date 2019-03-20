@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/csu/riscv/crti.S 322361 2017-08-10 14:18:09Z br $");
+__FBSDID("$FreeBSD$");
 
 # this puts __global_pointer$ into .dynsym, so symlook_obj can now find that
 # (see reloc.c)

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/tar/tests/Makefile 336854 2018-07-29 00:12:16Z mm $
+# $FreeBSD$
 
 PACKAGE=	tests
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/mips/cavium/usb/octusb.h 326259 2017-11-27 15:07:26Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD

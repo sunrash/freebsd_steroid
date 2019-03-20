@@ -28,7 +28,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/mm.h 334660 2018-06-05 15:37:28Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_MM_H_
 #define	_LINUX_MM_H_
@@ -180,12 +180,8 @@ apply_to_page_range(struct mm_struct *mm, unsigned long address,
 	return (-ENOTSUP);
 }
 
-static inline int
-zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
-    unsigned long size)
-{
-	return (-ENOTSUP);
-}
+int zap_vma_ptes(struct vm_area_struct *vma, unsigned long address,
+    unsigned long size);
 
 static inline int
 remap_pfn_range(struct vm_area_struct *vma, unsigned long addr,

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/lua/Makefile 338086 2018-08-20 02:40:10Z kevans $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

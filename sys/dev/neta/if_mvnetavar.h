@@ -24,7 +24,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/neta/if_mvnetavar.h 323361 2017-09-09 11:49:36Z mw $
+ * $FreeBSD$
  *
  */
 

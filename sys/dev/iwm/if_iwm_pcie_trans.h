@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_pcie_trans.h 313415 2017-02-08 06:53:23Z adrian $ */
+/*	$FreeBSD$ */
 /*
  * Copyright (c) 2014 genua mbh <info@genua.de>
  * Copyright (c) 2014 Fixup Software Ltd.

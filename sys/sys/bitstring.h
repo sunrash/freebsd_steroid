@@ -59,7 +59,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/sys/bitstring.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 #ifndef _SYS_BITSTRING_H_
 #define	_SYS_BITSTRING_H_

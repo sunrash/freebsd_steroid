@@ -31,7 +31,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	$NetBSD: pcb.h,v 1.4 2000/06/04 11:57:17 tsubai Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/pcb.h 338500 2018-09-06 17:07:21Z leitao $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PCB_H_
@@ -89,6 +89,7 @@ struct pcb {
 			register_t	dbcr0;
 		} booke;
 	} pcb_cpu;
+	vm_offset_t pcb_lastill;	/* Last illegal instruction */
 };
 #endif
 

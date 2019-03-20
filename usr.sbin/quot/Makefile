@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/quot/Makefile 328426 2018-01-26 00:58:32Z mckusick $
+# $FreeBSD$
 
 PROG=	quot
 MAN=	quot.8

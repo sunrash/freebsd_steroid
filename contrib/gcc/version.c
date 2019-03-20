@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/gcc/version.c 267483 2014-06-14 18:45:40Z gavin $ */
+/* $FreeBSD$ */
 #include "version.h"
 
 /* This is the trailing component of the string reported as the

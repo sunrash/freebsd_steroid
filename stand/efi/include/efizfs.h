@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/efi/include/efizfs.h 335229 2018-06-15 19:07:26Z imp $
+ * $FreeBSD$
  */
 
 #include <stdint.h>

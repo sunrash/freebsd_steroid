@@ -34,7 +34,7 @@
 	.asciz "@(#)fabs.s	5.2 (Berkeley) 12/17/90"
 #endif /* LIBC_SCCS and not lint */
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/i386/gen/fabs.S 314436 2017-02-28 23:42:47Z imp $");
+__FBSDID("$FreeBSD$");
 
 ENTRY(fabs)
 	fldl	4(%esp)

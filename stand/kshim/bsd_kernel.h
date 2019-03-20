@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/kshim/bsd_kernel.h 328987 2018-02-07 18:50:36Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2011 Hans Petter Selasky. All rights reserved.
  *

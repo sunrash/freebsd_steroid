@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/UTF8/citrus_utf8.c 326025 2017-11-20 19:49:47Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_utf8.c,v 1.17 2008/06/14 16:01:08 tnozaki Exp $	*/
 
 /*-

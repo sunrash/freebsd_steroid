@@ -37,7 +37,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/include/timeconv.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _TIMECONV_H_

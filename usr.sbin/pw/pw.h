@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/pw/pw.h 339380 2018-10-16 16:00:41Z yuripv $
+ * $FreeBSD$
  */
 
 #include <sys/stat.h>

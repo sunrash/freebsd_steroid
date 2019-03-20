@@ -8,7 +8,7 @@
 # * 16MB flash
 # * Integrated 1x1 2GHz wifi and 10/100 bridge
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/CARAMBOLA2 317727 2017-05-03 05:45:43Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

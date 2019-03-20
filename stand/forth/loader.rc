@@ -1,5 +1,5 @@
 \ Loader.rc
-\ $FreeBSD: releng/12.0/stand/forth/loader.rc 332413 2018-04-11 18:02:13Z imp $
+\ $FreeBSD$
 \
 \ You should not edit this file! Put any overrides in loader.rc.local
 \ instead as this file can be replaced during system updates.

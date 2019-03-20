@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  * 
- * $FreeBSD: releng/12.0/contrib/telnet/libtelnet/pk.h 339270 2018-10-09 21:28:26Z gjb $
+ * $FreeBSD$
  */
 
 /* header for the des routines that we will use */

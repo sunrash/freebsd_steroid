@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/vt/keymaps/Makefile 337526 2018-08-09 09:06:30Z kevlo $
+# $FreeBSD$
 
 FILES=	INDEX.keymaps \
 	am.kbd \
@@ -74,6 +74,7 @@ FILES=	INDEX.keymaps \
 	uk.capsctrl.kbd \
 	uk.dvorak.kbd \
 	uk.kbd \
+	uk.macbook.kbd \
 	us.acc.kbd \
 	us.ctrl.kbd \
 	us.dvorak.kbd \

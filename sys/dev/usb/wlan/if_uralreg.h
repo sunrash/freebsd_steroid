@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_uralreg.h 258780 2013-11-30 22:17:27Z eadler $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 2005, 2006

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libmagic/config.h 323683 2017-09-17 19:14:38Z gordon $ */
+/* $FreeBSD$ */
 
 /* Get __FreeBSD_version. */
 #include <osreldate.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/arith2.0 209652 2010-07-02 21:31:24Z jilles $
+# $FreeBSD$
 
 failures=0
 

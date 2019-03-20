@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/mips/beri/common/altera_jtag_uart.c 330788 2018-03-12 03:54:38Z kevans $
+ * $FreeBSD$
  */
 
 #include "stand.h"

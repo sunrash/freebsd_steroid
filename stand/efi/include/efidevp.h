@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/efi/include/efidevp.h 336264 2018-07-13 21:03:32Z imp $ */
+/* $FreeBSD$ */
 #ifndef _DEVPATH_H
 #define _DEVPATH_H
 

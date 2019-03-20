@@ -29,13 +29,13 @@
 /*
  * Binary heap and hash tables, used in dummynet
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_heap.c 327829 2018-01-11 15:29:29Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
 #include <sys/param.h>
 #ifdef _KERNEL
-__FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_heap.c 327829 2018-01-11 15:29:29Z pfg $");
+__FBSDID("$FreeBSD$");
 #include <sys/systm.h>
 #include <sys/malloc.h>
 #include <sys/kernel.h>

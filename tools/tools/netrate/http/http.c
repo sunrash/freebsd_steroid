@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/netrate/http/http.c 335269 2018-06-16 23:49:22Z eadler $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

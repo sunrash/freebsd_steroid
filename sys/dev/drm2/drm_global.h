@@ -27,7 +27,7 @@
 /*
  * Authors: Thomas Hellstrom <thellstrom-at-vmware-dot-com>
  */
-/* $FreeBSD: releng/12.0/sys/dev/drm2/drm_global.h 338285 2018-08-24 00:02:00Z imp $ */
+/* $FreeBSD$ */
 
 #ifndef _DRM_GLOBAL_H_
 #define _DRM_GLOBAL_H_

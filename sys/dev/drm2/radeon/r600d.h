@@ -28,7 +28,7 @@
 #define R600D_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/r600d.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define CP_PACKET2			0x80000000
 #define		PACKET2_PAD_SHIFT		0

@@ -13,7 +13,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kqueue/libkqueue/user.c 305467 2016-09-06 08:45:29Z ngie $
+ * $FreeBSD$
  */
 
 #include "common.h"
@@ -117,7 +117,7 @@ oneshot(void)
 void
 test_evfilt_user()
 {
-	kqfd = kqueue();
+    kqfd = kqueue();
 
     add_and_delete();
     event_wait();
@@ -125,5 +125,5 @@ test_evfilt_user()
     oneshot();
     /* TODO: try different fflags operations */
 
-	close(kqfd);
+    close(kqfd);
 }

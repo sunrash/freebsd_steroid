@@ -28,7 +28,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/aarch64/gen/_ctx_start.S 285352 2015-07-10 08:36:22Z andrew $");
+__FBSDID("$FreeBSD$");
 
 ENTRY(_ctx_start)
 	blr	x19		/* Call func from makecontext */

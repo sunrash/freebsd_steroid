@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/amd64/initcpu.c 336876 2018-07-29 20:47:00Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_cpu.h"
 
@@ -253,6 +253,7 @@ initializecpu(void)
 	}
 	hw_ibrs_recalculate();
 	hw_ssb_recalculate(false);
+	amd64_syscall_ret_flush_l1d_recalc();
 	switch (cpu_vendor_id) {
 	case CPU_VENDOR_AMD:
 		init_amd();

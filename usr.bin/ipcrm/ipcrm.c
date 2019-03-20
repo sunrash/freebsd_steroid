@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/ipcrm/ipcrm.c 330300 2018-03-02 23:31:55Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #define	_WANT_SYSVMSG_INTERNALS

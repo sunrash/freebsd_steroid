@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/Makefile 306649 2016-10-03 17:49:26Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -8,9 +8,13 @@ SUBDIR=	doc\
 	libopcodes \
 	libbinutils \
 	as \
-	ld \
 	objdump
 
+# When we use ld.lld as /usr/bin/ld, do not install the non-ifunc-capable
+# GNU binutils 2.17.50 ld.
+.if ${MK_LLD_IS_LD} == "no"
+SUBDIR+=ld
+.endif
 
 SUBDIR_DEPEND_libbinutils=libbfd		# for bfdver.h
 SUBDIR_DEPEND_as=libbfd libiberty libopcodes

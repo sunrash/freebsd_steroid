@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)socket.h	8.4 (Berkeley) 2/21/94
- * $FreeBSD: releng/12.0/sys/sys/socket.h 338136 2018-08-21 14:04:30Z tuexen $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SOCKET_H_

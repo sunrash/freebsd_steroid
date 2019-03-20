@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_EFI 311135 2017-01-02 20:07:56Z ngie $
+.\" $FreeBSD$
 Set to build
 .Xr efivar 3
 and

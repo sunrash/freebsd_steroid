@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)btree.h	8.11 (Berkeley) 8/17/94
- * $FreeBSD: releng/12.0/lib/libc/db/btree/btree.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /* Macros to set/clear/test flags. */

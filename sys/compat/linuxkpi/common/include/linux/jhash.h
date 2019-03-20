@@ -21,7 +21,7 @@
  * I've modified Bob's hash to be useful in the Linux kernel, and
  * any bugs present are surely my fault.  -DaveM
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/jhash.h 290335 2015-11-03 12:37:55Z hselasky $
+ * $FreeBSD$
  */
 
 /* NOTE: Arguments are modified. */

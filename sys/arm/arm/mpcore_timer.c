@@ -45,7 +45,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/mpcore_timer.c 327432 2017-12-31 09:24:41Z cperciva $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -420,7 +420,7 @@ arm_tmr_attach(device_t dev)
 			tc_err = attach_tc(sc);
 		else if (bootverbose)
 			device_printf(sc->dev,
-			    "not using variable-frequency device as timecounter");
+			    "not using variable-frequency device as timecounter\n");
 		sc->memrid++;
 		sc->irqrid++;
 	}

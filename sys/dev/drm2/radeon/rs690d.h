@@ -29,7 +29,7 @@
 #define __RS690D_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/rs690d.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* Registers */
 #define R_000078_MC_INDEX                            0x000078

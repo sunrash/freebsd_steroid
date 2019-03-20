@@ -23,7 +23,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/i386/libi386/smbios.h 281138 2015-04-06 06:55:47Z rpaulo $
+ * $FreeBSD$
  */
 #ifndef _SMBIOS_H_
 #define	_SMBIOS_H_

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/i386/conf/GENERIC.hints 297243 2016-03-24 20:52:35Z mav $
+# $FreeBSD$
 hint.fdc.0.at="isa"
 hint.fdc.0.port="0x3F0"
 hint.fdc.0.irq="6"

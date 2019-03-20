@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/mv/mvwin.h 332344 2018-04-09 23:36:52Z mw $
+ * $FreeBSD$
  */
 
 #ifndef _MVWIN_H_

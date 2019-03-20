@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/pfctl/pf.os 337627 2018-08-11 13:58:26Z brd $
+# $FreeBSD$
 # $OpenBSD: pf.os,v 1.27 2016/09/03 17:08:57 sthen Exp $
 # passive OS fingerprinting
 # -------------------------

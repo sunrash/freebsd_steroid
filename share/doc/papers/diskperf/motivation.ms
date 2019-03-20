@@ -27,7 +27,7 @@
 .\"
 .\"	@(#)motivation.ms	6.2 (Berkeley) 4/16/91
 .\"
-.\"	$FreeBSD: releng/12.0/share/doc/papers/diskperf/motivation.ms 263142 2014-03-14 03:07:51Z eadler $
+.\"	$FreeBSD$
 .\"
 .ds RH Motivation
 .NH

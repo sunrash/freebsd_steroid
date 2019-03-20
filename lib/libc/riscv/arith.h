@@ -1,7 +1,7 @@
 /*
  * MD header for contrib/gdtoa
  *
- * $FreeBSD: releng/12.0/lib/libc/riscv/arith.h 294227 2016-01-17 15:21:23Z br $
+ * $FreeBSD$
  */
 
 /*

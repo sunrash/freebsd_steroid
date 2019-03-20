@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/input/wmt.c 338458 2018-09-04 19:22:31Z wulf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * MS Windows 7/8/10 compatible USB HID Multi-touch Device driver.
@@ -856,6 +856,12 @@ wmt_cont_max_parse(struct wmt_softc *sc, const void *r_ptr, uint16_t r_len)
 	}
 }
 
+static const STRUCT_USB_HOST_ID wmt_devs[] = {
+	/* generic HID class w/o boot interface */
+	{USB_IFACE_CLASS(UICLASS_HID),
+	 USB_IFACE_SUBCLASS(0),},
+};
+
 static devclass_t wmt_devclass;
 
 static device_method_t wmt_methods[] = {
@@ -876,3 +882,4 @@ DRIVER_MODULE(wmt, uhub, wmt_driver, wmt_devclass, NULL, 0);
 MODULE_DEPEND(wmt, usb, 1, 1, 1);
 MODULE_DEPEND(wmt, evdev, 1, 1, 1);
 MODULE_VERSION(wmt, 1);
+USB_PNP_HOST_INFO(wmt_devs);

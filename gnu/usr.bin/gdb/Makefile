@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/gdb/Makefile 328925 2018-02-06 11:54:20Z bapt $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

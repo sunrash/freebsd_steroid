@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/msdosfs/denode.h 336935 2018-07-30 20:36:51Z emaste $ */
+/* $FreeBSD$ */
 /*	$NetBSD: denode.h,v 1.25 1997/11/17 15:36:28 ws Exp $	*/
 
 /*-

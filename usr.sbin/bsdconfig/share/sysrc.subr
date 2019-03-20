@@ -24,7 +24,7 @@ if [ ! "$_SYSRC_SUBR" ]; then _SYSRC_SUBR=1
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/share/sysrc.subr 335302 2018-06-17 20:32:43Z dteske $
+# $FreeBSD$
 #
 ############################################################ INCLUDES
 

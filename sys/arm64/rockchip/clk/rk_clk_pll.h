@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_pll.h 335108 2018-06-14 05:43:45Z manu $
+ * $FreeBSD$
  */
 
 #ifndef _RK_CLK_PLL_H_
@@ -63,6 +63,7 @@ struct rk_clk_pll_def {
 
 #define	RK_CLK_PLL_MASK	0xFFFF0000
 
-int rk_clk_pll_register(struct clkdom *clkdom, struct rk_clk_pll_def *clkdef);
+int rk3328_clk_pll_register(struct clkdom *clkdom, struct rk_clk_pll_def *clkdef);
+int rk3399_clk_pll_register(struct clkdom *clkdom, struct rk_clk_pll_def *clkdef);
 
 #endif /* _RK_CLK_PLL_H_ */

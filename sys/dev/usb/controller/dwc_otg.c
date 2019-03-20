@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/controller/dwc_otg.c 340315 2018-11-10 10:30:01Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

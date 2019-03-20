@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/i2c/Makefile 337033 2018-08-01 08:24:34Z rpokala $
+# $FreeBSD$
 
 SUBDIR = \
 	controllers \

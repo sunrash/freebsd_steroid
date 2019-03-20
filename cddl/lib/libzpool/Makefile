@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/lib/libzpool/Makefile 338128 2018-08-21 03:45:09Z mmacy $
+# $FreeBSD$
 
 .include "${SRCTOP}/sys/cddl/contrib/opensolaris/uts/common/Makefile.files"
 

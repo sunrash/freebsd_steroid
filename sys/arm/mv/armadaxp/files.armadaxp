@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/mv/armadaxp/files.armadaxp 265694 2014-05-08 18:36:42Z ian $
+# $FreeBSD$
 
 arm/mv/armadaxp/armadaxp.c	standard
 arm/mv/mpic.c			standard

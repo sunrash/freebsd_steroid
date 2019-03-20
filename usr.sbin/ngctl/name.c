@@ -34,7 +34,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/ngctl/name.c 160423 2006-07-17 08:35:47Z stefanf $
+ * $FreeBSD$
  */
 
 #include <err.h>

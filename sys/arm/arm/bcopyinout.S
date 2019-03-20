@@ -46,7 +46,7 @@
 .L_min_memcpy_size:
 	.word	_C_LABEL(_min_memcpy_size)
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/bcopyinout.S 336783 2018-07-27 21:25:01Z imp $");
+__FBSDID("$FreeBSD$");
 #ifdef _ARM_ARCH_5E
 #include <arm/arm/bcopyinout_xscale.S>
 #else

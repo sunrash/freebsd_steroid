@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/net80211/wlanwds/wlanwds.c 321800 2017-07-31 17:33:57Z adrian $
+ * $FreeBSD$
  */
 
 /*

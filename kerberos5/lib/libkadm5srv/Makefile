@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/lib/libkadm5srv/Makefile 275022 2014-11-25 09:57:42Z bapt $
+# $FreeBSD$
 
 LIB=	kadm5srv
 LDFLAGS=	-Wl,--no-undefined
@@ -35,7 +35,8 @@ SRCS=	acl.c \
 	set_keys.c \
 	set_modifier.c
 
-CFLAGS+=-I${KRB5DIR}/lib/kadm5 -I${KRB5DIR}/lib/asn1 -I${KRB5DIR}/lib/roken -I.
+CFLAGS+=-I${KRB5DIR}/lib/kadm5 -I${KRB5DIR}/lib/asn1 -I${KRB5DIR}/lib/roken \
+	-I${SRCTOP}/contrib/com_err -I.
 
 .include <bsd.lib.mk>
 

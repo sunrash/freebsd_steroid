@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/conf/Makefile 243581 2012-11-27 01:17:50Z marcel $
+# $FreeBSD$
 
 TARGET=arm
 

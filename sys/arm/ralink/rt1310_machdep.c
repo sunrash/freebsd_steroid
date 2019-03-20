@@ -39,7 +39,7 @@
 #include "opt_platform.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/ralink/rt1310_machdep.c 317872 2017-05-06 06:14:46Z adrian $");
+__FBSDID("$FreeBSD$");
 
 #define	_ARM32_BUS_DMA_PRIVATE
 #include <sys/param.h>

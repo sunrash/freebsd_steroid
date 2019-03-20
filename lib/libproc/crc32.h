@@ -2,7 +2,7 @@
  *  COPYRIGHT (C) 1986 Gary S. Brown.  You may use this program, or
  *  code or tables extracted from it, as desired without restriction.
  *
- * $FreeBSD: releng/12.0/lib/libproc/crc32.h 309593 2016-12-06 04:18:09Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _CRC32_H_

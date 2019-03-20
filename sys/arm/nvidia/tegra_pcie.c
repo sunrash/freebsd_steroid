@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_pcie.c 338107 2018-08-20 15:57:27Z alc $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Nvidia Integrated PCI/PCI-Express controller driver.

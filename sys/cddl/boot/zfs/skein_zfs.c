@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/boot/zfs/skein_zfs.c 304321 2016-08-18 00:37:07Z tsoome $
+ * $FreeBSD$
  */
 /*
  * Copyright 2013 Saso Kiselkov.  All rights reserved.

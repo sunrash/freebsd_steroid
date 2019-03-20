@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_clkman.h 328257 2018-01-22 07:10:30Z phk $
+ * $FreeBSD$
  */
 
 #ifndef	_BCM2835_CLKMAN_H_

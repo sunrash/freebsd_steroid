@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $FreeBSD: releng/12.0/sys/tools/acpi_quirks2h.awk 326272 2017-11-27 15:23:17Z pfg $
+# $FreeBSD$
 
 #-
 # SPDX-License-Identifier: BSD-2-Clause-FreeBSD

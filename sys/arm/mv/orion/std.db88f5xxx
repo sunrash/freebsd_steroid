@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/mv/orion/std.db88f5xxx 337841 2018-08-15 13:13:19Z andrew $
+# $FreeBSD$
 
 include	"../mv/std.mv"
 files	"../mv/orion/files.db88f5xxx"

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/liby/Makefile 335270 2018-06-16 23:50:34Z eadler $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	y

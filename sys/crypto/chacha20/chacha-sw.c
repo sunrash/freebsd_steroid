@@ -1,7 +1,7 @@
 /* This file is in the public domain. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/chacha20/chacha-sw.c 331724 2018-03-29 04:02:50Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <crypto/chacha20/chacha.h>
 #include <opencrypto/xform_enc.h>

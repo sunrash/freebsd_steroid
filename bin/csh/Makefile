@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/csh/Makefile 338374 2018-08-29 16:59:19Z brd $
+# $FreeBSD$
 #	@(#)Makefile	8.1 (Berkeley) 5/31/93
 #
 # C Shell with process control; VM/UNIX VAX Makefile

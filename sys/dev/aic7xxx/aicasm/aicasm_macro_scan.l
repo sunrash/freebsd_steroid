@@ -42,7 +42,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aicasm/aicasm_macro_scan.l#8 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aicasm/aicasm_macro_scan.l 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

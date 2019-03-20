@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/hcomp/Makefile 118425 2003-08-04 13:10:01Z des $
+# $FreeBSD$
 
 BINDIR		?= ${HOME}/bin
 BINOWN		?= ${USER}

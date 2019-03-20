@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/ralink/rt1310var.h 337822 2018-08-14 20:45:43Z imp $
+ * $FreeBSD$
  */
 
 #ifndef	_ARM_RT_RTVAR_H

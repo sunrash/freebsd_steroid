@@ -31,7 +31,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/tmpfs/tmpfs_vnops.h 327004 2017-12-19 22:39:05Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _FS_TMPFS_TMPFS_VNOPS_H_

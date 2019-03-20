@@ -70,7 +70,7 @@ static char sccsid[] = "@(#)diff3.c	8.1 (Berkeley) 6/6/93";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/diff3/diff3.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/capsicum.h>
 #include <sys/procdesc.h>
@@ -717,19 +717,19 @@ main(int argc, char **argv)
 	fp[0] = fopen(file1, "r");
 	if (fp[0] == NULL)
 		err(2, "Can't open %s", file1);
-	if (cap_rights_limit(fileno(fp[0]), &rights_ro) < 0)
+	if (caph_rights_limit(fileno(fp[0]), &rights_ro) < 0)
 		err(2, "unable to limit rights on: %s", file1);
 
 	fp[1] = fopen(file2, "r");
 	if (fp[1] == NULL)
 		err(2, "Can't open %s", file2);
-	if (cap_rights_limit(fileno(fp[1]), &rights_ro) < 0)
+	if (caph_rights_limit(fileno(fp[1]), &rights_ro) < 0)
 		err(2, "unable to limit rights on: %s", file2);
 
 	fp[2] = fopen(file3, "r");
 	if (fp[2] == NULL)
 		err(2, "Can't open %s", file3);
-	if (cap_rights_limit(fileno(fp[2]), &rights_ro) < 0)
+	if (caph_rights_limit(fileno(fp[2]), &rights_ro) < 0)
 		err(2, "unable to limit rights on: %s", file3);
 
 	if (pipe(fd13))

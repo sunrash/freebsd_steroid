@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/nfs/nfsclstate.h 336292 2018-07-14 19:51:44Z rmacklem $
+ * $FreeBSD$
  */
 
 #ifndef _NFS_NFSCLSTATE_H_

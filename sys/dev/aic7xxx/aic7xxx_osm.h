@@ -31,7 +31,7 @@
  *
  * $Id: //depot/aic7xxx/freebsd/dev/aic7xxx/aic7xxx_osm.h#18 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aic7xxx_osm.h 320860 2017-07-10 05:08:01Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _AIC7XXX_FREEBSD_H_

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/execution/Makefile 308229 2016-11-02 22:33:37Z jilles $
+# $FreeBSD$
 
 PACKAGE=	tests
 
@@ -17,6 +17,7 @@ ${PACKAGE}FILES+=		bg7.0
 ${PACKAGE}FILES+=		bg8.0
 ${PACKAGE}FILES+=		bg9.0
 ${PACKAGE}FILES+=		bg10.0 bg10.0.stdout
+${PACKAGE}FILES+=		env1.0
 ${PACKAGE}FILES+=		fork1.0
 ${PACKAGE}FILES+=		fork2.0
 ${PACKAGE}FILES+=		fork3.0

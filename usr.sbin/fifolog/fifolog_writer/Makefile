@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/fifolog/fifolog_writer/Makefile 314479 2017-03-01 05:21:21Z ngie $
+# $FreeBSD$
 
 PROG=	fifolog_writer
 

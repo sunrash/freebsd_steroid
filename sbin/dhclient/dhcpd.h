@@ -40,7 +40,7 @@
  * see ``http://www.vix.com/isc''.  To learn more about Vixie
  * Enterprises, see ``http://www.vix.com''.
  *
- * $FreeBSD: releng/12.0/sbin/dhclient/dhcpd.h 335602 2018-06-24 13:23:27Z eadler $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

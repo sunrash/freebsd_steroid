@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/pnfsdscopymr/pnfsdscopymr.c 337502 2018-08-08 20:30:12Z rmacklem $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <errno.h>

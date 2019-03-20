@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/bin/rm/tests/rm_test.sh 338620 2018-09-12 19:41:16Z emaste $
+# $FreeBSD$
 #
 
 atf_test_case unlink_dash_filename

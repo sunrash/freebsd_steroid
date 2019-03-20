@@ -22,7 +22,7 @@
 #   VAP on a physical interface, which shares the MAC address of
 #   the physical NIC.
 #
-# $FreeBSD: releng/12.0/tools/tools/net80211/scripts/setup.wdsmain 317728 2017-05-03 07:53:15Z adrian $
+# $FreeBSD$
 #
 PATH=.:$PATH
 . config

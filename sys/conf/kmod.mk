@@ -1,5 +1,5 @@
 #	From: @(#)bsd.prog.mk	5.26 (Berkeley) 6/25/91
-# $FreeBSD: releng/12.0/sys/conf/kmod.mk 335922 2018-07-04 00:18:36Z bdrewery $
+# $FreeBSD$
 #
 # The include file <bsd.kmod.mk> handles building and installing loadable
 # kernel modules.
@@ -376,6 +376,9 @@ ${_src}:
 .endif
 .endfor
 .endif
+
+# Add the sanitizer C flags
+CFLAGS+=	${SAN_CFLAGS}
 
 # Respect configuration-specific C flags.
 CFLAGS+=	${ARCH_FLAGS} ${CONF_CFLAGS}

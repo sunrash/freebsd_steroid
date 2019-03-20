@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.sbin/kldxref/ef.h 328052 2018-01-16 18:20:12Z emaste $ */
+/* $FreeBSD$ */
 
 #ifndef _EF_H_
 #define _EF_H_

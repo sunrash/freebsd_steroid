@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cam/ctl/ctl_frontend_iscsi.h 331013 2018-03-15 17:36:13Z trasz $
+ * $FreeBSD$
  */
 
 #ifndef CTL_FRONTEND_ISCSI_H

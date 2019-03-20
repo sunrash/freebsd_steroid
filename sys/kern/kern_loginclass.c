@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/kern/kern_loginclass.c 332816 2018-04-20 13:08:04Z avg $
+ * $FreeBSD$
  */
 
 /*
@@ -45,7 +45,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_loginclass.c 332816 2018-04-20 13:08:04Z avg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/eventhandler.h>
@@ -84,10 +84,8 @@ loginclass_hold(struct loginclass *lc)
 void
 loginclass_free(struct loginclass *lc)
 {
-	int old;
 
-	old = lc->lc_refcount;
-	if (old > 1 && atomic_cmpset_int(&lc->lc_refcount, old, old - 1))
+	if (refcount_release_if_not_last(&lc->lc_refcount))
 		return;
 
 	rw_wlock(&loginclasses_lock);

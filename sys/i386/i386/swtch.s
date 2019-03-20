@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/i386/swtch.s 338313 2018-08-25 15:31:23Z kib $
+ * $FreeBSD$
  */
 
 #include "opt_sched.h"

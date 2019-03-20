@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/compat.h 314040 2017-02-21 12:43:02Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_COMPAT_H_
 #define	_LINUX_COMPAT_H_

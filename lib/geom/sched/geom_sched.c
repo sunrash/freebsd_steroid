@@ -29,7 +29,7 @@
 
 /*
  * $Id$
- * $FreeBSD: releng/12.0/lib/geom/sched/geom_sched.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  *
  * This file implements the userspace library used by the 'geom'
  * command to load and manipulate disk schedulers.

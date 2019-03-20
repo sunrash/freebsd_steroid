@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/utils.subr 325022 2017-10-26 20:55:33Z kp $
+# $FreeBSD$
 # Utility functions
 ##
 
@@ -10,6 +10,15 @@ pft_init()
 
 	if [ "`sysctl -i -n kern.features.vimage`" != 1 ]; then
 		atf_skip "This test requires VIMAGE"
+	fi
+}
+
+pfsynct_init()
+{
+	pft_init
+
+	if ! kldstat -q -m pfsync; then
+		atf_skip "This test requires pfsync"
 	fi
 }
 
@@ -40,8 +49,14 @@ pft_set_rules()
 	jname=$1
 	shift
 
-	# Flush all states, rules, fragments, ...
-	jexec ${jname} pfctl -F all
+	if [ $jname == "noflush" ];
+	then
+		jname=$1
+		shift
+	else
+		# Flush all states, rules, fragments, ...
+		jexec ${jname} pfctl -F all
+	fi
 
 	while [ $# -gt 0 ]; do
 		printf "$1\n"
@@ -66,4 +81,9 @@ pft_cleanup()
 		done
 		rm created_interfaces.lst
 	fi
+}
+
+pfsynct_cleanup()
+{
+	pft_cleanup
 }

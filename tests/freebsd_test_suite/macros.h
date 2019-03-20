@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/freebsd_test_suite/macros.h 337933 2018-08-16 23:49:56Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef	_FREEBSD_TEST_MACROS_H_

@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/chipc_slicer.h 326695 2017-12-08 15:57:29Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_CORES_CHIPC_CHIPC_SLICER_H_

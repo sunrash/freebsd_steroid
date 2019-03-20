@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_bus_dma.c 326271 2017-11-27 15:20:12Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 
@@ -121,7 +121,7 @@ _bus_dmamap_load_unmapped_mbuf_sg(bus_dma_tag_t dmat, bus_dmamap_t map,
 	int len, seglen, error, pgoff, pglen, i;
 
 
-	ext_pgs = (void *)m->m_ext.ext_buf;
+	ext_pgs = m->m_ext.ext_pgs;
 
 
 	/* for now, all unmapped mbufs are assumed to be EXT_PGS */
@@ -167,6 +167,8 @@ _bus_dmamap_load_unmapped_mbuf_sg(bus_dma_tag_t dmat, bus_dmamap_t map,
 			segoff = pgoff;
 		}
 		seglen = min(seglen, len);
+		if (__predict_false(seglen == 0))
+			continue;
 		len -= seglen;
 		error = _bus_dmamap_load_phys(dmat, map,
 		    ext_pgs->pa[i] + segoff, seglen,
@@ -185,10 +187,10 @@ _bus_dmamap_load_unmapped_mbuf_sg(bus_dma_tag_t dmat, bus_dmamap_t map,
 		    &ext_pgs->trail[off], seglen, kernel_pmap,
 		    flags, segs, nsegs);
 	}
+	KASSERT(len == 0 || error != 0,
+	    ("len = %d, m = %p\n", len, m));
 	return (error);
 }
-
-
 
 /*
  * Load an mbuf chain.
@@ -203,7 +205,7 @@ _bus_dmamap_load_mbuf_sg(bus_dma_tag_t dmat, bus_dmamap_t map,
 	error = 0;
 	for (m = m0; m != NULL && error == 0; m = m->m_next) {
 		if (m->m_len > 0) {
-                        if ((m->m_flags & M_NOMAP) != 0) {
+			if ((m->m_flags & M_NOMAP) != 0) {
 				error = _bus_dmamap_load_unmapped_mbuf_sg(
 				    dmat, map, m, segs, nsegs, flags);
 				continue;

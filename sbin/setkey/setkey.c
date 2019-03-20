@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sbin/setkey/setkey.c 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: setkey.c,v 1.28 2003/06/27 07:15:45 itojun Exp $	*/
 
 /*-

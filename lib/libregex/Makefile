@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libregex/Makefile 328263 2018-01-22 18:40:19Z kevans $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

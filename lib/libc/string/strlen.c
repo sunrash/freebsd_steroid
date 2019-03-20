@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/string/strlen.c 333449 2018-05-10 06:41:08Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/limits.h>
 #include <sys/types.h>

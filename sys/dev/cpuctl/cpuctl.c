@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cpuctl/cpuctl.c 338687 2018-09-14 17:04:36Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -521,6 +521,9 @@ cpuctl_do_eval_cpu_features(int cpu, struct thread *td)
 	hw_ibrs_recalculate();
 	restore_cpu(oldcpu, is_bound, td);
 	hw_ssb_recalculate(true);
+#ifdef __amd64__
+	amd64_syscall_ret_flush_l1d_recalc();
+#endif
 	printcpuinfo();
 	return (0);
 }

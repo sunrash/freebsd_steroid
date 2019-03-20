@@ -36,7 +36,7 @@
  *
  *	@(#)openpromio.h	8.1 (Berkeley) 6/11/93
  *
- * $FreeBSD: releng/12.0/sys/dev/ofw/openfirmio.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_OFW_OPENFIRMIO_H_

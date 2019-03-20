@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/cc/Makefile.inc 335717 2018-06-27 18:14:33Z jhb $
+# $FreeBSD$
 
 .include <src.opts.mk>
 .include "../Makefile.inc"

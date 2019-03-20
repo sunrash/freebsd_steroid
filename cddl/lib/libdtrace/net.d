@@ -20,7 +20,7 @@
  *
  * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/net.d 179189 2008-05-22 04:26:42Z jb $
+ * $FreeBSD$
  */
 
 /*

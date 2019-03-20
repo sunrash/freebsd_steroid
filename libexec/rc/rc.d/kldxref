@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/kldxref 333491 2018-05-11 14:43:21Z trasz $
+# $FreeBSD$
 #
 
 # PROVIDE: kldxref

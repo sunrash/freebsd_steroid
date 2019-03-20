@@ -16,7 +16,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/usr.bin/m4/tokenizer.l 250926 2013-05-23 05:42:35Z jkim $
+ * $FreeBSD$
  */
 #include "parser.h"
 #include <assert.h>

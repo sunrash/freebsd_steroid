@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ofed/infiniband-diags/ibstat/Makefile 335253 2018-06-16 15:05:05Z kib $
+# $FreeBSD$
 
 PROG=	ibstat
 SRCS=	ibstat.c

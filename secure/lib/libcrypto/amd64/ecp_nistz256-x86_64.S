@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/amd64/ecp_nistz256-x86_64.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from ecp_nistz256-x86_64.pl. */
 .text	
 .globl	ecp_nistz256_precomputed

@@ -1,7 +1,7 @@
 # This file tells config what files go into building a kernel,
 # files marked standard are always included.
 #
-# $FreeBSD: releng/12.0/sys/conf/files.sparc64 338963 2018-09-27 14:05:44Z mjg $
+# $FreeBSD$
 #
 # The long compile-with and dependency lines are required because of
 # limitations in config: backslash-newline doesn't work in strings, and
@@ -149,3 +149,6 @@ sparc64/sparc64/uio_machdep.c	standard
 sparc64/sparc64/upa.c		optional	creator
 sparc64/sparc64/vm_machdep.c	standard
 sparc64/sparc64/zeus.c		standard
+
+# Zstd
+contrib/zstd/lib/freebsd/zstd_kfreebsd.c		optional zstdio compile-with ${ZSTD_C}

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/libsa/zfs/libzfs.h 336084 2018-07-08 07:42:49Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _BOOT_LIBZFS_H_
@@ -43,31 +43,6 @@ struct zfs_devdesc {
 #ifdef LOADER_GELI_SUPPORT
 #include <crypto/intake.h>
 #endif
-
-struct zfs_boot_args
-{
-    uint32_t		size;
-    uint32_t		reserved;
-    uint64_t		pool;
-    uint64_t		root;
-    uint64_t		primary_pool;
-    uint64_t		primary_vdev;
-    union {
-	char		gelipw[256];
-	struct {
-            char                notapw;	/* 
-					 * single null byte to stop keybuf
-					 * being interpreted as a password
-					 */
-	    uint32_t		keybuf_sentinel;
-#ifdef LOADER_GELI_SUPPORT
-	    struct keybuf	*keybuf;
-#else
-	    void		*keybuf;
-#endif
-	};
-    };
-};
 
 int	zfs_parsedev(struct zfs_devdesc *dev, const char *devspec,
 		     const char **path);

@@ -25,7 +25,7 @@
  */
 
 #include "includes.h"
-__RCSID("$FreeBSD: releng/12.0/crypto/openssh/sftp-common.c 333389 2018-05-08 23:13:11Z des $");
+__RCSID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/stat.h>

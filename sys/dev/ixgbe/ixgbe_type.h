@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_type.h 331224 2018-03-19 20:55:05Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _IXGBE_TYPE_H_
 #define _IXGBE_TYPE_H_
@@ -4426,5 +4426,12 @@ struct ixgbe_bypass_eeprom {
 #define IXGBE_NW_MNG_IF_SEL_MDIO_PHY_ADD_SHIFT 3
 #define IXGBE_NW_MNG_IF_SEL_MDIO_PHY_ADD	\
 				(0x1F << IXGBE_NW_MNG_IF_SEL_MDIO_PHY_ADD_SHIFT)
+
+#define IXGBE_REQUEST_TASK_MOD		0x01
+#define IXGBE_REQUEST_TASK_MSF		0x02
+#define IXGBE_REQUEST_TASK_MBX		0x04
+#define IXGBE_REQUEST_TASK_FDIR		0x08
+#define IXGBE_REQUEST_TASK_PHY		0x10
+#define IXGBE_REQUEST_TASK_LSC		0x20
 
 #endif /* _IXGBE_TYPE_H_ */

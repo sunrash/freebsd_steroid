@@ -33,7 +33,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/tws/tws_services.h 326022 2017-11-20 19:36:21Z pfg $
+ * $FreeBSD$
  */
 
 
@@ -131,12 +131,5 @@ struct error_desc {
 
 
 /* ------------------------ */
-#if (__FreeBSD_version >= 700000)
 #include <sys/clock.h>
 #define TWS_LOCAL_TIME (time_second - utc_offset())
-#else
-#include <machine/clock.h>
-#define TWS_LOCAL_TIME (time_second - (tz_minuteswest * 60) -   \
-                  (wall_cmos_clock ? adjkerntz : 0))
-#endif
-

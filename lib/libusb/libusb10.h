@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libusb/libusb10.h 338679 2018-09-14 13:41:37Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

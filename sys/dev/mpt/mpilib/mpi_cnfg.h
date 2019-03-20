@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/mpt/mpilib/mpi_cnfg.h 326022 2017-11-20 19:36:21Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

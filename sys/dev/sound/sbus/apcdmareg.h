@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/sound/sbus/apcdmareg.h 326255 2017-11-27 14:52:40Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: apcdmareg.h,v 1.2 2003/06/02 18:53:18 jason Exp $	*/
 
 /*-

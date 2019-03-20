@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/uipc_debug.c 334719 2018-06-06 15:45:57Z sbruno $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

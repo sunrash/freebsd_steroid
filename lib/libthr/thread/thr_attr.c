@@ -94,7 +94,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_attr.c 338125 2018-08-21 01:33:25Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <errno.h>

@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/contrib/libarchive/cpio/test/test.h 314571 2017-03-02 22:59:35Z mm $
+ * $FreeBSD$
  */
 
 /* Every test program should #include "test.h" as the first thing. */

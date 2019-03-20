@@ -1,5 +1,5 @@
 #	$NetBSD: Makefile,v 1.18 2013/11/13 11:12:24 pettai Exp $
-# $FreeBSD: releng/12.0/usr.bin/gzip/Makefile 326560 2017-12-05 07:01:10Z delphij $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

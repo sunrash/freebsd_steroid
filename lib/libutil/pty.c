@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libutil/pty.c 334106 2018-05-23 17:02:12Z jhb $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)pty.c	8.3 (Berkeley) 5/16/94");
 
 #include <sys/types.h>

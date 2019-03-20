@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/svn/lib/libapr_util/Makefile 265420 2014-05-06 04:22:01Z imp $
+# $FreeBSD$
 
 .include "${.CURDIR}/../Makefile.inc"
 

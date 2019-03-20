@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tests/sys/geom/class/uzip/Makefile 307947 2016-10-25 18:43:36Z br $
+# $FreeBSD$
 #
 # Regression test for geom_uzip.
 #

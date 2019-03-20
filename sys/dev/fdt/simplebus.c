@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/fdt/simplebus.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/systm.h>
 #include <sys/module.h>
@@ -60,13 +60,6 @@ static struct resource_list *simplebus_get_resource_list(device_t bus,
  */
 static const struct ofw_bus_devinfo *simplebus_get_devinfo(device_t bus,
     device_t child);
-
-/*
- * local methods
- */
-
-static int simplebus_fill_ranges(phandle_t node,
-    struct simplebus_softc *sc);
 
 /*
  * Driver methods.
@@ -184,7 +177,7 @@ simplebus_init(device_t dev, phandle_t node)
 	OF_getencprop(node, "#size-cells", &sc->scells, sizeof(sc->scells));
 }
 
-static int
+int
 simplebus_fill_ranges(phandle_t node, struct simplebus_softc *sc)
 {
 	int host_address_cells;

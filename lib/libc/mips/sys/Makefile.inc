@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/mips/sys/Makefile.inc 334626 2018-06-04 19:35:15Z markj $
+# $FreeBSD$
 
 SRCS+=	trivial-vdso_tc.c
 

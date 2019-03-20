@@ -38,7 +38,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/template/usb_template_serialnet.c 334476 2018-06-01 09:17:20Z trasz $");
+__FBSDID("$FreeBSD$");
 
 #ifdef USB_GLOBAL_INCLUDE_FILE
 #include USB_GLOBAL_INCLUDE_FILE

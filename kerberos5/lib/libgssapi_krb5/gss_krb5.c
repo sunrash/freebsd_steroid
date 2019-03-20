@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- *	$FreeBSD: releng/12.0/kerberos5/lib/libgssapi_krb5/gss_krb5.c 326276 2017-11-27 15:37:16Z pfg $
+ *	$FreeBSD$
  */
 
 #include <gssapi/gssapi.h>

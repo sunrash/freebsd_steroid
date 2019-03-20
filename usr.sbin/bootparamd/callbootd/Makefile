@@ -1,5 +1,5 @@
 #	from: @(#)Makefile	5.8 (Berkeley) 7/28/90
-# $FreeBSD: releng/12.0/usr.sbin/bootparamd/callbootd/Makefile 320122 2017-06-19 20:47:24Z bdrewery $
+# $FreeBSD$
 
 PROG=	callbootd
 MAN=

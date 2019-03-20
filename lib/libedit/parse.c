@@ -41,7 +41,7 @@ __RCSID("$NetBSD: parse.c,v 1.35 2016/02/17 19:47:49 christos Exp $");
 #endif
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/parse.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * parse.c: parse an editline extended command

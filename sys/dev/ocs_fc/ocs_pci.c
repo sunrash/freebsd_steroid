@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs_pci.c 336446 2018-07-18 07:01:34Z ram $
+ * $FreeBSD$
  */
 
 #define OCS_COPYRIGHT "Copyright (C) 2017 Broadcom. All rights reserved."
@@ -591,7 +591,7 @@ ocs_device_detach(ocs_t *ocs)
                 }
 
 		ocs_cam_detach(ocs);
-		ocs_free(ocs, ocs->fcports, sizeof(ocs->fcports));
+		ocs_free(ocs, ocs->fcports, sizeof(*(ocs->fcports)));
 
 		for (i = 0; (io = ocs_io_get_instance(ocs, i)); i++) {
 			if (bus_dmamap_destroy(ocs->buf_dmat, io->tgt_io.dmap)) {

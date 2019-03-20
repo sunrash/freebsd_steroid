@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/legacy.c 313839 2017-02-16 21:57:35Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This code implements a system driver for legacy systems that do not

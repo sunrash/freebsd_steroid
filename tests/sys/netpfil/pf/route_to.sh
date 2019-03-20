@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/route_to.sh 334877 2018-06-09 14:21:07Z kp $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

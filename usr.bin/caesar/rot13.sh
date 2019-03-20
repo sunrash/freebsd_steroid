@@ -28,6 +28,6 @@
 # SUCH DAMAGE.
 #
 #	@(#)rot13.sh	8.1 (Berkeley) 5/31/93
-# $FreeBSD: releng/12.0/usr.bin/caesar/rot13.sh 278616 2015-02-12 05:35:00Z cperciva $
+# $FreeBSD$
 
 exec /usr/bin/caesar 13 "$@"

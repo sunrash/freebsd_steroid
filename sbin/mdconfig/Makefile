@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/mdconfig/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

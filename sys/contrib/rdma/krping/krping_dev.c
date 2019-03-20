@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/contrib/rdma/krping/krping_dev.c 326169 2017-11-24 14:50:28Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/module.h>
@@ -187,7 +187,7 @@ krping_write(struct cdev *dev, struct uio *uio, int ioflag)
 		err = uiomove(cp, amt, uio);
 		if (err) {
 			uprintf("Write failed: bad address!\n");
-			return err;
+			goto done;
 		}
 		cp += amt;
 		remain -= amt;
@@ -195,7 +195,8 @@ krping_write(struct cdev *dev, struct uio *uio, int ioflag)
 
 	if (uio->uio_resid != 0) {
 		uprintf("Message too big. max size is %d!\n", BUFFERSIZE);
-		return EMSGSIZE;
+		err = EMSGSIZE;
+		goto done;
 	}
 
 	/* null terminate and remove the \n */
@@ -204,6 +205,7 @@ krping_write(struct cdev *dev, struct uio *uio, int ioflag)
 	krpingmsg->len = (unsigned long)(cp - krpingmsg->msg);
 	uprintf("krping: write string = |%s|\n", krpingmsg->msg);
 	err = krping_doit(krpingmsg->msg);
+done:
 	free(krpingmsg, M_DEVBUF);
 	return(err);
 }

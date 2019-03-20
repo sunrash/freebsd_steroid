@@ -1,7 +1,7 @@
 /* This file is in the public domain. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/blake2/blake2-sw.c 331312 2018-03-21 16:18:14Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <contrib/libb2/blake2.h>
 #include <opencrypto/xform_auth.h>

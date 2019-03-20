@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_HYPERV 338752 2018-09-18 16:06:24Z brooks $
+.\" $FreeBSD$
 Set to build or install HyperV utilities.

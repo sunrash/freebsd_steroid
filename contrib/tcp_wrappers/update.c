@@ -12,7 +12,7 @@
   * 
   * Author: Wietse Venema, Eindhoven University of Technology, The Netherlands.
   *
-  * $FreeBSD: releng/12.0/contrib/tcp_wrappers/update.c 257398 2013-10-30 21:18:14Z sbruno $
+  * $FreeBSD$
   */
 
 #ifndef lint

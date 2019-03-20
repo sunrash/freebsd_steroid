@@ -6,7 +6,7 @@
 #
 # This code is released to the public domain.
 #----------------------------------------------------------------
-# $FreeBSD: releng/12.0/sys/crypto/skein/amd64/skein_block_asm.s 333883 2018-05-19 18:27:14Z mmacy $
+# $FreeBSD$
 #
     .text
     .altmacro

@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/tty_compat.c 332122 2018-04-06 17:35:35Z brooks $");
+__FBSDID("$FreeBSD$");
 
 /*
  * mapping routines for old line discipline (yuck)

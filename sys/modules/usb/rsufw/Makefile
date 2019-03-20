@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/usb/rsufw/Makefile 253760 2013-07-29 06:55:28Z rpaulo $
+# $FreeBSD$
 
 SUBDIR=	rsurtl8712fw
 

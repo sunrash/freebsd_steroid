@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/string.h 329377 2018-02-16 15:52:28Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_STRING_H_
 #define	_LINUX_STRING_H_

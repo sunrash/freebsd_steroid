@@ -29,7 +29,7 @@
 #
 #  Authors: Alan Somers         (Spectra Logic Corporation)
 #
-# $FreeBSD: releng/12.0/tests/sys/netinet/fibs_test.sh 322255 2017-08-08 15:37:21Z asomers $
+# $FreeBSD$
 
 # All of the tests in this file requires the test-suite config variable "fibs"
 # to be defined to a space-delimited list of FIBs that may be used for testing.

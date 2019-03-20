@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libsqlite3/Makefile 333358 2018-05-08 06:09:49Z peter $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 PRIVATELIB=	yes
@@ -33,9 +33,6 @@ CFLAGS+=	-I${SQLITE} \
 		-DHAVE_STRERROR_R=1 \
 		-DHAVE_POSIX_FALLOCATE=1 \
 		-D_REENTRANT=1 \
-		-DSQLITE_THREADSAFE=1 \
-		-DSQLITE_ENABLE_FTS3 \
-		-DSQLITE_ENABLE_FTS4 \
-		-DSQLITE_ENABLE_RTREE
+		-DSQLITE_THREADSAFE=1
 
 .include <bsd.lib.mk>

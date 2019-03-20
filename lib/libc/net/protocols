@@ -1,7 +1,7 @@
 #
 # Internet protocols
 #
-# $FreeBSD: releng/12.0/lib/libc/net/protocols 338729 2018-09-17 18:56:47Z brd $
+# $FreeBSD$
 #	from: @(#)protocols	5.1 (Berkeley) 4/17/89
 #
 # See also http://www.iana.org/assignments/protocol-numbers

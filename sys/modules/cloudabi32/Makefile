@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/cloudabi32/Makefile 326167 2017-11-24 14:02:32Z ed $
+# $FreeBSD$
 
 SYSDIR?=${SRCTOP}/sys
 

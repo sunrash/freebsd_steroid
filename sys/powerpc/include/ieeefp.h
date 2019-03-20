@@ -2,7 +2,7 @@
  * Written by J.T. Conklin, Apr 6, 1995
  * Public domain.
  * $NetBSD: ieeefp.h,v 1.2 1999/07/07 01:52:26 danw Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/ieeefp.h 336688 2018-07-24 22:04:56Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_IEEEFP_H_

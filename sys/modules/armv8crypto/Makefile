@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/armv8crypto/Makefile 336348 2018-07-16 15:39:33Z andrew $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/crypto/armv8
 

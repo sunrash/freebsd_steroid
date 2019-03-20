@@ -26,7 +26,7 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/qlxgbe/ql_ver.h 333003 2018-04-25 17:51:17Z davidcs $
+ * $FreeBSD$
  */
 /*
  * File: ql_ver.h

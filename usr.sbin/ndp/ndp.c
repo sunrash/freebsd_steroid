@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/ndp/ndp.c 338243 2018-08-23 10:38:59Z garga $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: ndp.c,v 1.104 2003/06/27 07:48:39 itojun Exp $	*/
 
 /*-
@@ -1096,6 +1096,9 @@ rtrlist()
 		printf(", flags=%s%s",
 		    p->flags & ND_RA_FLAG_MANAGED ? "M" : "",
 		    p->flags & ND_RA_FLAG_OTHER   ? "O" : "");
+#ifdef DRAFT_IETF_6MAN_IPV6ONLY_FLAG
+		printf("%s", p->flags & ND_RA_FLAG_IPV6_ONLY ? "S" : "");
+#endif
 		rtpref = ((p->flags & ND_RA_FLAG_RTPREF_MASK) >> 3) & 0xff;
 		printf(", pref=%s", rtpref_str[rtpref]);
 

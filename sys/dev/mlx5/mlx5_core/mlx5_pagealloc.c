@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_core/mlx5_pagealloc.c 331455 2018-03-23 18:35:59Z hselasky $
+ * $FreeBSD$
  */
 
 #include <linux/kernel.h>
@@ -128,7 +128,7 @@ mlx5_fwp_alloc(struct mlx5_core_dev *dev, gfp_t flags, unsigned num)
 
 		/* load memory into DMA */
 		MLX5_DMA_LOCK(dev);
-		err = bus_dmamap_load(
+		(void) bus_dmamap_load(
 		    dev->cmd.dma_tag, fwp[x].dma_map, fwp[x].virt_addr,
 		    MLX5_ADAPTER_PAGE_SIZE, &mlx5_fwp_load_mem_cb,
 		    fwp + x, BUS_DMA_WAITOK | BUS_DMA_COHERENT);
@@ -153,6 +153,7 @@ failure:
 		bus_dmamem_free(dev->cmd.dma_tag, fwp[x].virt_addr, fwp[x].dma_map);
 	}
 	sx_xunlock(&dev->cmd.dma_sx);
+	kfree(fwp);
 	return (NULL);
 }
 

@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_DIRDEPS_BUILD 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 This is an experimental build system.
 For details see
 http://www.crufty.net/sjg/docs/freebsd-meta-mode.htm.

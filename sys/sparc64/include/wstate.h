@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  *	from: BSDI: wstate.h,v 1.4 1997/09/18 13:05:51 torek Exp
- * $FreeBSD: releng/12.0/sys/sparc64/include/wstate.h 326262 2017-11-27 15:10:39Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_WSTATE_H_

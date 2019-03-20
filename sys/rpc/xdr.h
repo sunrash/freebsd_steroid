@@ -31,7 +31,7 @@
  *
  *	from: @(#)xdr.h 1.19 87/04/22 SMI
  *	from: @(#)xdr.h	2.2 88/07/29 4.0 RPCSRC
- * $FreeBSD: releng/12.0/sys/rpc/xdr.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

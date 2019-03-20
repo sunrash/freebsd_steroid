@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/lua.mk 329859 2018-02-23 04:04:25Z imp $
+# $FreeBSD$
 
 # Common flags to build lua related files
 

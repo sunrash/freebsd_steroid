@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/atomic_common.h 326971 2017-12-19 09:59:20Z kib $
+ * $FreeBSD$
  */
 #ifndef _SYS_ATOMIC_COMMON_H_
 #define	_SYS_ATOMIC_COMMON_H_

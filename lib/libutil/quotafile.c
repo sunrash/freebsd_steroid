@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libutil/quotafile.c 336017 2018-07-05 22:56:13Z sef $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>
@@ -103,7 +103,7 @@ hasquota(struct fstab *fs, int type, char *qfnamep, int qfbufsize)
 		return (0);
 	}
 	if (cp) {
-		strncpy(qfnamep, cp, qfbufsize);
+		strlcpy(qfnamep, cp, qfbufsize);
 	} else {
 		(void)snprintf(qfnamep, qfbufsize, "%s/%s.%s", fs->fs_file,
 		    QUOTAFILENAME, qfextension[type]);

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/net/usb_ethernet.c 334158 2018-05-24 15:24:42Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *
@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/net/usb_ethernet.c 334158 2018-05-24 15:24:42Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

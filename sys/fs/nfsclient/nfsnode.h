@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/nfsclient/nfsnode.h 328417 2018-01-25 22:25:13Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _NFSCLIENT_NFSNODE_H_

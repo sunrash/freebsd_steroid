@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/powermac/uninorth.c 332310 2018-04-08 22:59:34Z gonzo $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -146,7 +146,8 @@ static devclass_t	unin_chip_devclass;
  */
 static device_t		unin_chip;
 
-DRIVER_MODULE(unin, ofwbus, unin_chip_driver, unin_chip_devclass, 0, 0);
+EARLY_DRIVER_MODULE(unin, ofwbus, unin_chip_driver, unin_chip_devclass, 0, 0,
+    BUS_PASS_BUS);
 
 /*
  * Add an interrupt to the dev's resource list if present

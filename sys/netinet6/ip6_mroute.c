@@ -81,7 +81,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet6/ip6_mroute.c 340980 2018-11-26 16:36:38Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/pjdfstest/tests/utimensat/Makefile 320448 2017-06-28 09:22:45Z ngie $
+# $FreeBSD$
 
 TAP_TESTS_SH=	00
 TAP_TESTS_SH+=	01

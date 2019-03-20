@@ -4,7 +4,7 @@
 # This includes all the common drivers for the AR71XX boards along with
 # the usb, net80211 and atheros driver code.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/AR71XX_BASE 336006 2018-07-05 17:11:55Z sbruno $
+# $FreeBSD$
 #
 
 machine		mips mips

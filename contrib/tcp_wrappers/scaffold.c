@@ -3,7 +3,7 @@
   * 
   * Author: Wietse Venema, Eindhoven University of Technology, The Netherlands.
   *
-  * $FreeBSD: releng/12.0/contrib/tcp_wrappers/scaffold.c 320151 2017-06-20 16:40:31Z avg $
+  * $FreeBSD$
   */
 
 #ifndef lint

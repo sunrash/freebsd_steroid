@@ -1,5 +1,5 @@
 /*	$OpenBSD: yp.c,v 1.14 2015/02/11 01:26:00 pelikan Exp $ */
-/*	$FreeBSD: releng/12.0/usr.sbin/ypldap/yp.c 309393 2016-12-02 06:07:27Z araujo $ */
+/*	$FreeBSD$ */
 /*
  * Copyright (c) 2008 Pierre-Yves Ritschard <pyr@openbsd.org>
  *

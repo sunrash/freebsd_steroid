@@ -22,7 +22,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/powerpc/kboot/host_syscall.h 328536 2018-01-29 09:24:28Z wma $
+ * $FreeBSD$
  */
 
 #ifndef _HOST_SYSCALL_H

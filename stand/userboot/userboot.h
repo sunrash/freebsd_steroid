@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/userboot/userboot.h 338418 2018-09-01 02:23:45Z kevans $
+ * $FreeBSD$
  */
 
 /*

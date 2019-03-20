@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe.h 336313 2018-07-15 19:04:23Z marius $*/
+/*$FreeBSD$*/
 
 
 #ifndef _IXGBE_H_
@@ -428,16 +428,11 @@ struct adapter {
 
 	/* Support for pluggable optics */
 	bool                    sfp_probe;
-	struct grouptask        mod_task;   /* SFP tasklet */
-	struct grouptask        msf_task;   /* Multispeed Fiber */
-	struct grouptask        mbx_task;   /* VF -> PF mailbox interrupt */
-	int                     sfp_reinit;
 
 	/* Flow Director */
 	int                     fdir_reinit;
-	struct grouptask        fdir_task;
 
-	struct grouptask        phy_task;   /* PHY intr tasklet */
+	u32			task_requests;
 
 	/*
 	 * Queues:

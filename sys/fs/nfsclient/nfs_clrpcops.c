@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/nfsclient/nfs_clrpcops.c 341085 2018-11-27 17:58:25Z markj $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Rpc op calls, generally called from the vnode op calls or through the
@@ -2627,7 +2627,7 @@ nfsmout:
  * nfs symbolic link create rpc
  */
 APPLESTATIC int
-nfsrpc_symlink(vnode_t dvp, char *name, int namelen, char *target,
+nfsrpc_symlink(vnode_t dvp, char *name, int namelen, const char *target,
     struct vattr *vap, struct ucred *cred, NFSPROC_T *p, struct nfsvattr *dnap,
     struct nfsvattr *nnap, struct nfsfh **nfhpp, int *attrflagp,
     int *dattrflagp, void *dstuff)

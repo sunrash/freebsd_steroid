@@ -30,7 +30,7 @@
  *
  *	@(#)radix.h	8.2 (Berkeley) 10/31/94
  *
- * $FreeBSD: releng/12.0/sbin/routed/radix.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __RADIX_H_

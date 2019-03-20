@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/npe/npestats/npestats.h 262832 2014-03-06 07:50:54Z adrian $
+ * $FreeBSD$
  */
 
 #ifndef _NPESTATS_H_

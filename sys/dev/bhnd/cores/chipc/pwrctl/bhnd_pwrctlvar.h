@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/pwrctl/bhnd_pwrctlvar.h 304871 2016-08-27 00:06:20Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_PWRCTL_BHND_PWRCTLVAR_H_

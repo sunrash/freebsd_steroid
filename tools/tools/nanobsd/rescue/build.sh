@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/tools/tools/nanobsd/rescue/build.sh 277937 2015-01-30 15:42:52Z mr $
+# $FreeBSD$
 #
 
 today=`date '+%Y%m%d'`

@@ -36,7 +36,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/makefs/ffs/buf.h 336736 2018-07-26 13:33:10Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _FFS_BUF_H

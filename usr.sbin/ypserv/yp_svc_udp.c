@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/ypserv/yp_svc_udp.c 329018 2018-02-08 14:53:34Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <rpc/rpc.h>
 #include <rpc/svc_dg.h>

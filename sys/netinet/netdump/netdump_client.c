@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/netdump/netdump_client.c 334118 2018-05-23 21:02:14Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/conf.h>
@@ -117,18 +117,6 @@ static int restore_gw_addr;
 static uint64_t rcvd_acks;
 CTASSERT(sizeof(rcvd_acks) * NBBY == NETDUMP_MAX_IN_FLIGHT);
 
-/*
- * Times to poll the NIC (0.5ms each poll) before assuming packetloss
- * occurred (default to 1s).
- */
-static int nd_polls = 2000;
-
-/* Times to retransmit lost packets. */
-static int nd_retries = 10;
-
-/* Number of ARP retries. */
-static int nd_arp_retries = 3;
-
 /* Configuration parameters. */
 static struct netdump_conf nd_conf;
 #define	nd_server	nd_conf.ndc_server
@@ -157,6 +145,18 @@ static char nd_path[MAXPATHLEN];
 SYSCTL_STRING(_net_netdump, OID_AUTO, path, CTLFLAG_RW,
     nd_path, sizeof(nd_path),
     "Server path for output files");
+static int nd_polls = 2000;
+SYSCTL_INT(_net_netdump, OID_AUTO, polls, CTLFLAG_RWTUN,
+    &nd_polls, 0,
+    "Number of times to poll before assuming packet loss (0.5ms per poll)");
+static int nd_retries = 10;
+SYSCTL_INT(_net_netdump, OID_AUTO, retries, CTLFLAG_RWTUN,
+    &nd_retries, 0,
+    "Number of retransmit attempts before giving up");
+static int nd_arp_retries = 3;
+SYSCTL_INT(_net_netdump, OID_AUTO, arp_retries, CTLFLAG_RWTUN,
+    &nd_arp_retries, 0,
+    "Number of ARP attempts before giving up");
 
 /*
  * Checks for netdump support on a network interface
@@ -1061,6 +1061,7 @@ static struct cdev *netdump_cdev;
 static int
 netdump_configure(struct netdump_conf *conf, struct thread *td)
 {
+	struct epoch_tracker et;
 	struct ifnet *ifp;
 
 	CURVNET_SET(TD_TO_VNET(td));
@@ -1068,13 +1069,13 @@ netdump_configure(struct netdump_conf *conf, struct thread *td)
 		CURVNET_RESTORE();
 		return (EINVAL);
 	}
-	IFNET_RLOCK_NOSLEEP();
+	NET_EPOCH_ENTER(et);
 	CK_STAILQ_FOREACH(ifp, &V_ifnet, if_link) {
 		if (strcmp(ifp->if_xname, conf->ndc_iface) == 0)
 			break;
 	}
 	/* XXX ref */
-	IFNET_RUNLOCK_NOSLEEP();
+	NET_EPOCH_EXIT(et);
 	CURVNET_RESTORE();
 
 	if (ifp == NULL)

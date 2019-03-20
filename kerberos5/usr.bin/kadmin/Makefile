@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/usr.bin/kadmin/Makefile 288200 2015-09-24 23:23:58Z bdrewery $
+# $FreeBSD$
 
 PROG=	kadmin
 MAN=	kadmin.8
@@ -25,7 +25,7 @@ SRCS=	add_enctype.c \
 	util.c
 
 CFLAGS+=-I${KRB5DIR}/lib/asn1 -I${KRB5DIR}/lib/krb5 -I${KRB5DIR}/lib/roken \
-	-I${KRB5DIR}/lib/sl -I. ${LDAPCFLAGS}
+	-I${KRB5DIR}/lib/sl -I${SRCTOP}/contrib/com_err -I. ${LDAPCFLAGS}
 LIBADD=	kadm5clnt kadm5srv hdb krb5 roken vers sl asn1 crypto edit
 DPADD=	${LDAPDPADD}
 LDADD=	${LDAPLDADD}

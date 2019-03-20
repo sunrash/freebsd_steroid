@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/nvidia/tegra124/tegra124_pmc.c 308638 2016-11-14 11:41:22Z andrew $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

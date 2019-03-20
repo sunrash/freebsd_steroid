@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/truss/main.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * The main module for truss.  Surprisingly simple, but, then, the other
@@ -71,6 +71,7 @@ main(int ac, char **av)
 	struct trussinfo *trussinfo;
 	char *fname;
 	char **command;
+	const char *errstr;
 	pid_t pid;
 	int c;
 
@@ -118,7 +119,9 @@ main(int ac, char **av)
 			fname = optarg;
 			break;
 		case 's':	/* Specified string size */
-			trussinfo->strsize = atoi(optarg);
+			trussinfo->strsize = strtonum(optarg, 0, INT_MAX, &errstr);
+			if (errstr)
+				errx(1, "maximum string size is %s: %s", errstr, optarg);
 			break;
 		case 'S':	/* Don't trace signals */
 			trussinfo->flags |= NOSIGS;

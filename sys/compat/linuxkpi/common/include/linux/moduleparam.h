@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/moduleparam.h 330399 2018-03-04 19:10:30Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_MODULEPARAM_H_
 #define	_LINUX_MODULEPARAM_H_

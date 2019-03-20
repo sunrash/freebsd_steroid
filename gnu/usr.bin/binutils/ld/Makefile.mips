@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/ld/Makefile.mips 311567 2017-01-06 23:30:54Z jhb $
+# $FreeBSD$
 
 .if ${TARGET_ARCH:Mmips*el*} != ""
 _EMULATION_ENDIAN=l
@@ -18,14 +18,14 @@ NATIVE_EMULATION?=elf32${_EMULATION_ENDIAN}tsmip_fbsd
 MIPS_ABIS=elf32btsmip_fbsd elf32ltsmip_fbsd elf64btsmip_fbsd elf64ltsmip_fbsd \
     elf32btsmipn32_fbsd elf32ltsmipn32_fbsd
 .for abi in ${MIPS_ABIS}
-#.if (${abi} != ${NATIVE_EMULATION})
 EMS+= ${abi}
-#.endif
+.if ${abi} != ${NATIVE_EMULATION}
 .for ext in ${ELF_SCR_EXT}
 LDSCRIPTS+= ${abi}.${ext}
 ldscripts/${abi}.${ext}: e${abi}.c
 .endfor
-SRCS+=	e${abi}.c 
+.endif
+SRCS+=	e${abi}.c
 CLEANFILES+=	e${abi}.c
 # nb: elf32 handles both elf32 and elf64 targets
 e${abi}.c:	${.CURDIR}/${abi}.sh emultempl/elf32.em \

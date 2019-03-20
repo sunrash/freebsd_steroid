@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libpmc/libpmc_json.cc 334753 2018-06-07 03:19:21Z mmacy $
+ * $FreeBSD$
  *
  */
 

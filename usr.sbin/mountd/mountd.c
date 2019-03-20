@@ -45,7 +45,7 @@ static char sccsid[] = "@(#)mountd.c	8.15 (Berkeley) 5/1/95";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/mountd/mountd.c 332559 2018-04-16 09:17:36Z avg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/fcntl.h>
@@ -908,8 +908,12 @@ complete_service(struct netconfig *nconf, char *port_str)
 		if (fd < 0)
 			continue;
 
+		/*
+		 * Using -1 tells listen(2) to use
+		 * kern.ipc.soacceptqueue for the backlog.
+		 */
 		if (nconf->nc_semantics != NC_TPI_CLTS)
-			listen(fd, SOMAXCONN);
+			listen(fd, -1);
 
 		if (nconf->nc_semantics == NC_TPI_CLTS )
 			transp = svc_dg_create(fd, 0, 0);
@@ -1022,8 +1026,13 @@ mntsrv(struct svc_req *rqstp, SVCXPRT *transp)
 		syslog(LOG_ERR, "request from unknown address family");
 		return;
 	}
-	lookup_failed = getnameinfo(saddr, saddr->sa_len, host, sizeof host, 
-	    NULL, 0, 0);
+	switch (rqstp->rq_proc) {
+	case MOUNTPROC_MNT:
+	case MOUNTPROC_UMNT:
+	case MOUNTPROC_UMNTALL:
+		lookup_failed = getnameinfo(saddr, saddr->sa_len, host,
+		    sizeof host, NULL, 0, 0);
+	}
 	getnameinfo(saddr, saddr->sa_len, numerichost,
 	    sizeof numerichost, NULL, 0, NI_NUMERICHOST);
 	switch (rqstp->rq_proc) {

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_nat.c 338047 2018-08-19 13:45:03Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
@@ -112,7 +112,7 @@ extern struct ifnet vpnif;
 
 #if !defined(lint)
 static const char sccsid[] = "@(#)ip_nat.c	1.11 6/5/96 (C) 1995 Darren Reed";
-static const char rcsid[] = "@(#)$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_nat.c 338047 2018-08-19 13:45:03Z cy $";
+static const char rcsid[] = "@(#)$FreeBSD$";
 /* static const char rcsid[] = "@(#)$Id: ip_nat.c,v 2.195.2.102 2007/10/16 10:08:10 darrenr Exp $"; */
 #endif
 
@@ -1866,7 +1866,7 @@ ipf_nat_getent(softc, data, getlock)
 	 */
 	if (nat->nat_ptr != NULL)
 		bcopy((char *)nat->nat_ptr, (char *)&ipn->ipn_ipnat,
-		      ipn->ipn_ipnat.in_size);
+		      sizeof(nat->nat_ptr));
 
 	/*
 	 * If we also know the NAT entry has an associated filter rule,
@@ -1904,20 +1904,16 @@ ipf_nat_getent(softc, data, getlock)
 		}
 	}
 	if (error == 0) {
-		if (getlock) {
-			READ_ENTER(&softc->ipf_nat);
-			getlock = 0;
-		}
 		error = ipf_outobjsz(softc, data, ipn, IPFOBJ_NATSAVE,
 				     ipns.ipn_dsize);
 	}
 
 finished:
-	if (getlock) {
-		READ_ENTER(&softc->ipf_nat);
-	}
 	if (ipn != NULL) {
 		KFREES(ipn, ipns.ipn_dsize);
+	}
+	if (getlock) {
+		RWLOCK_EXIT(&softc->ipf_nat);
 	}
 	return error;
 }

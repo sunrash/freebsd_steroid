@@ -25,7 +25,7 @@
 
 #include "archive_platform.h"
 
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_write_add_filter_lz4.c 316095 2017-03-28 10:39:17Z mm $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>

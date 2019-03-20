@@ -47,7 +47,7 @@
 
 #include "_elftc.h"
 
-ELFTC_VCSID("$Id: readelf.c 3580 2017-09-15 23:29:59Z emaste $");
+ELFTC_VCSID("$Id: readelf.c 3649 2018-11-24 03:26:23Z emaste $");
 
 /* Backwards compatability for older FreeBSD releases. */
 #ifndef	STB_GNU_UNIQUE
@@ -293,6 +293,8 @@ static void dump_dwarf_ranges_foreach(struct readelf *re, Dwarf_Die die,
 static void dump_dwarf_str(struct readelf *re);
 static void dump_eflags(struct readelf *re, uint64_t e_flags);
 static void dump_elf(struct readelf *re);
+static void dump_dt_flags_val(uint64_t d_val);
+static void dump_dt_flags_1_val(uint64_t d_val);
 static void dump_dyn_val(struct readelf *re, GElf_Dyn *dyn, uint32_t stab);
 static void dump_dynamic(struct readelf *re);
 static void dump_liblist(struct readelf *re);
@@ -1121,6 +1123,7 @@ note_type_freebsd(unsigned int nt)
 	case 1: return "NT_FREEBSD_ABI_TAG";
 	case 2: return "NT_FREEBSD_NOINIT_TAG";
 	case 3: return "NT_FREEBSD_ARCH_TAG";
+	case 4: return "NT_FREEBSD_FEATURE_CTL";
 	default: return (note_type_unknown(nt));
 	}
 }
@@ -2803,9 +2806,147 @@ dump_dyn_val(struct readelf *re, GElf_Dyn *dyn, uint32_t stab)
 	case DT_GNU_PRELINKED:
 		printf(" %s\n", timestamp(dyn->d_un.d_val));
 		break;
+	case DT_FLAGS:
+		dump_dt_flags_val(dyn->d_un.d_val);
+		break;
+	case DT_FLAGS_1:
+		dump_dt_flags_1_val(dyn->d_un.d_val);
+		break;
 	default:
 		printf("\n");
 	}
+}
+
+static void
+dump_dt_flags_val(uint64_t d_val)
+{
+	if (d_val & 0x1) {
+		d_val ^= 0x1;
+		printf(" ORIGIN");
+	}
+	if (d_val & 0x2) {
+		d_val ^= 0x2;
+		printf(" SYMBOLIC");
+	}
+	if (d_val & 0x4) {
+		d_val ^= 0x4;
+		printf(" TEXTREL");
+	}
+	if (d_val & 0x8) {
+		d_val ^= 0x8;
+		printf(" BIND_NOW");
+	}
+	if (d_val & 0x10) {
+		d_val ^= 0x10;
+		printf(" STATIC_TLS");
+	}
+	if (d_val)
+		printf(" %jx", (uintmax_t)d_val);
+	printf("\n");
+}
+
+static void
+dump_dt_flags_1_val(uint64_t d_val)
+{
+	if (d_val & 0x1) {
+		d_val ^= 0x1;
+		printf(" NOW");
+	}
+	if (d_val & 0x2) {
+		d_val ^= 0x2;
+		printf(" GLOBAL");
+	}
+	if (d_val & 0x4) {
+		d_val ^= 0x4;
+		printf(" GROUP");
+	}
+	if (d_val & 0x8) {
+		d_val ^= 0x8;
+		printf(" NODELETE");
+	}
+	if (d_val & 0x10) {
+		d_val ^= 0x10;
+		printf(" LOADFLTR");
+	}
+	if (d_val & 0x20) {
+		d_val ^= 0x20;
+		printf(" INITFIRST");
+	}
+	if (d_val & 0x40) {
+		d_val ^= 0x40;
+		printf(" NOOPEN");
+	}
+	if (d_val & 0x80) {
+		d_val ^= 0x80;
+		printf(" ORIGIN");
+	}
+	if (d_val & 0x100) {
+		d_val ^= 0x100;
+		printf(" DIRECT");
+	}
+	if (d_val & 0x400) {
+		d_val ^= 0x400;
+		printf(" INTERPOSE");
+	}
+	if (d_val & 0x800) {
+		d_val ^= 0x800;
+		printf(" NODEFLIB");
+	}
+	if (d_val & 0x1000) {
+		d_val ^= 0x1000;
+		printf(" NODUMP");
+	}
+	if (d_val & 0x2000) {
+		d_val ^= 0x2000;
+		printf(" CONFALT");
+	}
+	if (d_val & 0x4000) {
+		d_val ^= 0x4000;
+		printf(" ENDFILTEE");
+	}
+	if (d_val & 0x8000) {
+		d_val ^= 0x8000;
+		printf(" DISPRELDNE");
+	}
+	if (d_val & 0x10000) {
+		d_val ^= 0x10000;
+		printf(" DISPRELPND");
+	}
+	if (d_val & 0x20000) {
+		d_val ^= 0x20000;
+		printf(" NODIRECT");
+	}
+	if (d_val & 0x40000) {
+		d_val ^= 0x40000;
+		printf(" IGNMULDEF");
+	}
+	if (d_val & 0x80000) {
+		d_val ^= 0x80000;
+		printf(" NOKSYMS");
+	}
+	if (d_val & 0x100000) {
+		d_val ^= 0x100000;
+		printf(" NOHDR");
+	}
+	if (d_val & 0x200000) {
+		d_val ^= 0x200000;
+		printf(" EDITED");
+	}
+	if (d_val & 0x400000) {
+		d_val ^= 0x400000;
+		printf(" NORELOC");
+	}
+	if (d_val & 0x800000) {
+		d_val ^= 0x800000;
+		printf(" SYMINTPOSE");
+	}
+	if (d_val & 0x1000000) {
+		d_val ^= 0x1000000;
+		printf(" GLOBAUDIT");
+	}
+	if (d_val)
+		printf(" %jx", (uintmax_t)d_val);
+	printf("\n");
 }
 
 static void
@@ -3426,6 +3567,7 @@ dump_notes_content(struct readelf *re, const char *buf, size_t sz, off_t off)
 {
 	Elf_Note *note;
 	const char *end, *name;
+	uint32_t i;
 
 	printf("\nNotes at offset %#010jx with length %#010jx:\n",
 	    (uintmax_t) off, (uintmax_t) sz);
@@ -3437,7 +3579,9 @@ dump_notes_content(struct readelf *re, const char *buf, size_t sz, off_t off)
 			return;
 		}
 		note = (Elf_Note *)(uintptr_t) buf;
-		name = (char *)(uintptr_t)(note + 1);
+		buf += sizeof(Elf_Note);
+		name = buf;
+		buf += roundup2(note->n_namesz, 4);
 		/*
 		 * The name field is required to be nul-terminated, and
 		 * n_namesz includes the terminating nul in observed
@@ -3455,8 +3599,11 @@ dump_notes_content(struct readelf *re, const char *buf, size_t sz, off_t off)
 		printf("  %-13s %#010jx", name, (uintmax_t) note->n_descsz);
 		printf("      %s\n", note_type(name, re->ehdr.e_type,
 		    note->n_type));
-		buf += sizeof(Elf_Note) + roundup2(note->n_namesz, 4) +
-		    roundup2(note->n_descsz, 4);
+		printf("   description data:");
+		for (i = 0; i < note->n_descsz; i++)
+			printf(" %02x", (unsigned char)buf[i]);
+		printf("\n");
+		buf += roundup2(note->n_descsz, 4);
 	}
 }
 
@@ -4719,7 +4866,7 @@ dump_dwarf_line_decoded(struct readelf *re)
 		    DW_DLV_OK)
 			dir = NULL;
 		printf("CU: ");
-		if (dir && file)
+		if (dir && file && file[0] != '/')
 			printf("%s/", dir);
 		if (file)
 			printf("%s", file);

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  * $Id: lexer.l,v 1.1 2002/11/24 20:22:39 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/hcsecd/lexer.l 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <string.h>

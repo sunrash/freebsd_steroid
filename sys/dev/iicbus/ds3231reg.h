@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/iicbus/ds3231reg.h 321823 2017-07-31 22:00:00Z ian $
+ * $FreeBSD$
  */
 
 /*

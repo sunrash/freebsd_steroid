@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
-/* $FreeBSD: releng/12.0/tools/tools/zfsboottest/zfsboottest.c 336536 2018-07-20 05:26:14Z imp $ */
+/* $FreeBSD$ */
 
 #include <sys/param.h>
 #include <sys/disk.h>

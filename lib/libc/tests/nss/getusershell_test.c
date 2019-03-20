@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/nss/getusershell_test.c 319038 2017-05-28 04:12:02Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 #include <errno.h>

@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netinet/netdump/netdump.h 333283 2018-05-06 00:38:29Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_NETDUMP_H_

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/bmake/config.h 330260 2018-03-02 01:53:50Z sjg $ */
+/* $FreeBSD$ */
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.in by autoheader.  */
 

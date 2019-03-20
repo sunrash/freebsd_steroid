@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/ddb/db_sym.c 326567 2017-12-05 14:22:08Z avg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_kstack_pages.h"
 

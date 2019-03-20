@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/msun/arm/fenv-softfp.c 263210 2014-03-15 21:58:07Z andrew $
+ * $FreeBSD$
  */
 
 #define	FENV_MANGLE(x)	__softfp_ ##x

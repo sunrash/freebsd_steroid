@@ -27,7 +27,7 @@
  * those of the authors and should not be interpreted as representing official
  * policies, either expressed or implied, of the FreeBSD Project.
  *
- * $FreeBSD: releng/12.0/sys/dev/sfxge/common/medford_impl.h 300607 2016-05-24 12:16:57Z arybchik $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_MEDFORD_IMPL_H
@@ -36,14 +36,6 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
-/* Alignment requirement for value written to RX WPTR:
- *  the WPTR must be aligned to an 8 descriptor boundary
- *
- * FIXME: Is this the same on Medford as Huntington?
- */
-#define	MEDFORD_RX_WPTR_ALIGN	8
-
 
 
 #ifndef	ER_EZ_TX_PIOBUF_SIZE

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/firewire/fwip/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 # Makefile for the fwip(4) module (IP over IEEE1394)
 

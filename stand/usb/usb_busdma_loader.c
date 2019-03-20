@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/usb/usb_busdma_loader.c 291399 2015-11-27 18:13:28Z zbb $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2013 Hans Petter Selasky. All rights reserved.
  *

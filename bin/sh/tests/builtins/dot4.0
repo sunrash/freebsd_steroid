@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/dot4.0 222174 2011-05-22 12:15:14Z jilles $
+# $FreeBSD$
 
 v=abcd
 v=$v$v$v$v

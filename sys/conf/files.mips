@@ -1,7 +1,7 @@
 # This file tells config what files go into building a kernel,
 # files marked standard are always included.
 #
-# $FreeBSD: releng/12.0/sys/conf/files.mips 338963 2018-09-27 14:05:44Z mjg $
+# $FreeBSD$
 #
 
 # Arch dependent files

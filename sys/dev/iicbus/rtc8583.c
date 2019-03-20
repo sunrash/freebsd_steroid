@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iicbus/rtc8583.c 330416 2018-03-04 21:58:32Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for realtime clock EPSON RTC-8583

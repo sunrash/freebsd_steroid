@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/clang-tblgen/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 PROG_CXX=	clang-tblgen
 MAN=

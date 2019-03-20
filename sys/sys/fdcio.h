@@ -26,7 +26,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
  * DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/fdcio.h 326256 2017-11-27 15:01:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_IOCTL_FD_H_

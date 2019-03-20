@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/dev/bwn/if_bwnreg.h 328912 2018-02-05 23:38:15Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _IF_BWNREG_H

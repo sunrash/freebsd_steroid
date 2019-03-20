@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/imx/imx_i2c/Makefile 329841 2018-02-22 22:25:26Z ian $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/arm/freescale/imx
 

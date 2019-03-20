@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/daily/Makefile 337648 2018-08-11 17:11:08Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

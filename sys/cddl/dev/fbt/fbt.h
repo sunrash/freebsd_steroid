@@ -20,7 +20,7 @@
  *
  * Portions Copyright 2006-2008 John Birrell jb@freebsd.org
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/fbt/fbt.h 338359 2018-08-28 20:21:36Z markj $
+ * $FreeBSD$
  *
  */
 

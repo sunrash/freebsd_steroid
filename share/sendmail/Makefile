@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/sendmail/Makefile 314652 2017-03-04 11:26:40Z ngie $
+# $FreeBSD$
 #
 # Doing a make install builds /usr/share/sendmail/
 

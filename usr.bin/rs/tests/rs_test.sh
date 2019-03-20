@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/rs/tests/rs_test.sh 326289 2017-11-27 20:01:58Z asomers $
+# $FreeBSD$
 #
 
 atf_test_case c_flag

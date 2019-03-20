@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bwn/if_bwn_phy_g.c 329184 2018-02-12 22:21:11Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bwn.h"
 #include "opt_wlan.h"

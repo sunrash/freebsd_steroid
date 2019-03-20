@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/meta.sys.mk 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 # $Id: meta.sys.mk,v 1.32 2017/06/11 03:24:04 sjg Exp $
 
 #

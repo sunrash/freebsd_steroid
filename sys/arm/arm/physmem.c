@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/physmem.c 338539 2018-09-08 23:39:26Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 
@@ -265,7 +265,7 @@ regions_to_avail(vm_paddr_t *avail, uint32_t exflags, size_t maxavail,
 	if (pavail != NULL)
 		*pavail = availmem;
 	if (prealmem != NULL)
-		*prealmem = realmem;
+		*prealmem = totalmem;
 	return (acnt);
 }
 

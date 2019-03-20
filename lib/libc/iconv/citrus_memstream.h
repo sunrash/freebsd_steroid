@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_memstream.h 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_memstream.h,v 1.3 2005/05/14 17:55:42 tshiozak Exp $ */
 
 /*-

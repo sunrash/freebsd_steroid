@@ -28,7 +28,7 @@
  *
  * Marvell DB-88F6281 Device Tree Source.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/db88f6281.dts 333031 2018-04-26 19:00:48Z mw $
+ * $FreeBSD$
  */
 
 /dts-v1/;

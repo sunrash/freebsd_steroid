@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/device.h 334774 2018-06-07 11:29:07Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_DEVICE_H_
 #define	_LINUX_DEVICE_H_

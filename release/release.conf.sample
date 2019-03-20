@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/release/release.conf.sample 339435 2018-10-19 00:24:23Z gjb $
+# $FreeBSD$
 #
 
 ## Redefine environment variables here to override prototypes
@@ -16,7 +16,7 @@ CHROOTDIR="/scratch"
 SVNROOT="svn://svn.FreeBSD.org/"
 
 ## Set the src/, ports/, and doc/ branches or tags.
-SRCBRANCH="base/stable/12@rHEAD"
+SRCBRANCH="base/head@rHEAD"
 DOCBRANCH="doc/head@rHEAD"
 PORTBRANCH="ports/head@rHEAD"
 

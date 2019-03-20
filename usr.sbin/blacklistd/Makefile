@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/blacklistd/Makefile 336977 2018-07-31 16:39:38Z brd $
+# $FreeBSD$
 
 BLACKLIST_DIR=${SRCTOP}/contrib/blacklist
 .PATH: ${BLACKLIST_DIR}/bin ${BLACKLIST_DIR}/port

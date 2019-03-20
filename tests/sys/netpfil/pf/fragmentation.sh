@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/netpfil/pf/fragmentation.sh 337971 2018-08-17 15:02:58Z kp $
+# $FreeBSD$
 
 . $(atf_get_srcdir)/utils.subr
 

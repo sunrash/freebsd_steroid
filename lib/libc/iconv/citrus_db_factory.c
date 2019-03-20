@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_db_factory.c 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_db_factory.c,v 1.10 2013/09/14 13:05:51 joerg Exp $	*/
 
 /*-

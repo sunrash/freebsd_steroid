@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/uart/uart_cpu_fdt.h 314362 2017-02-27 20:08:42Z br $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_UART_CPU_FDT_H_

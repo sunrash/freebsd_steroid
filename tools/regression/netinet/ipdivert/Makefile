@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/regression/netinet/ipdivert/Makefile 264400 2014-04-13 05:21:56Z imp $
+# $FreeBSD$
 #
 
 PROG=	ipdivert

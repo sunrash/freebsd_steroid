@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/5/93
-# $FreeBSD: releng/12.0/usr.sbin/ifmcstat/Makefile 279028 2015-02-19 22:42:33Z glebius $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

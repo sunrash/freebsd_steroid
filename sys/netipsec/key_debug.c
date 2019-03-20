@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/key_debug.c 335796 2018-06-29 14:51:36Z emaste $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: key_debug.c,v 1.26 2001/06/27 10:46:50 sakane Exp $	*/
 
 /*-

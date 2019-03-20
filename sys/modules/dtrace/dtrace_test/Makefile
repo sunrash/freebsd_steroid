@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/dtrace/dtrace_test/Makefile 326178 2017-11-24 19:08:54Z markj $
+# $FreeBSD$
 
 SYSDIR?=	${SRCTOP}/sys
 

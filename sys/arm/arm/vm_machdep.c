@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/vm_machdep.c 337843 2018-08-15 13:40:16Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -190,8 +190,6 @@ cpu_set_syscall_retval(struct thread *td, int error)
 	if (call == SYS___syscall) {
 		register_t *ap = &frame->tf_r0;
 		register_t code = ap[_QUAD_LOWWORD];
-		if (td->td_proc->p_sysent->sv_mask)
-			code &= td->td_proc->p_sysent->sv_mask;
 		fixup = (code != SYS_lseek);
 	}
 #endif

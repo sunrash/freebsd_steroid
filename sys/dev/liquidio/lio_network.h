@@ -30,7 +30,7 @@
  *   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  *   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/*$FreeBSD: releng/12.0/sys/dev/liquidio/lio_network.h 338318 2018-08-25 19:38:08Z alc $*/
+/*$FreeBSD$*/
 
 /* \file  lio_network.h
  * \brief Host NIC Driver: Structure and Macro definitions used by NIC Module.

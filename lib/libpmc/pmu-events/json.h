@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libpmc/pmu-events/json.h 334244 2018-05-26 19:29:19Z mmacy $ */
+/* $FreeBSD$ */
 #ifndef JSON_H
 #define JSON_H 1
 

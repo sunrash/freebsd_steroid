@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/crypto/skein/skein_freebsd.h 307584 2016-10-18 23:20:49Z asomers $
+ * $FreeBSD$
  */
 
 #ifndef _SKEIN_FREEBSD_H_

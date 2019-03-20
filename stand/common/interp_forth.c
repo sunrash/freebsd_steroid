@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/common/interp_forth.c 338418 2018-09-01 02:23:45Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>		/* to pick up __FreeBSD_version */
 #include <string.h>
@@ -142,9 +142,10 @@ bf_command(FICL_VM *vm)
 	switch (result) {
 	case CMD_CRIT:
 		printf("%s\n", command_errmsg);
+		command_errmsg = NULL;
 		break;
 	case CMD_FATAL:
-		panic("%s\n", command_errmsg);
+		panic("%s", command_errmsg);
 	}
 
 	free(line);

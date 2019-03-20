@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_urtwvar.h 289168 2015-10-12 05:21:51Z adrian $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 2008 Weongyo Jeong <weongyo@FreeBSD.org>
@@ -46,10 +46,6 @@ struct urtw_data {
 	STAILQ_ENTRY(urtw_data)	next;
 };
 typedef STAILQ_HEAD(, urtw_data) urtw_datahead;
-
-/* XXX not correct..  */
-#define	URTW_MIN_RXBUFSZ						\
-	(sizeof(struct ieee80211_frame_min))
 
 #define URTW_RX_DATA_LIST_COUNT		4
 #define URTW_TX_DATA_LIST_COUNT		16

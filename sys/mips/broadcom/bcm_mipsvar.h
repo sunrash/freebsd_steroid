@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bcm_mipsvar.h 326079 2017-11-21 23:15:20Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _MIPS_BROADCOM_BCM_MIPSVAR_H_

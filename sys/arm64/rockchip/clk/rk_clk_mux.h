@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_mux.h 330036 2018-02-26 21:25:50Z manu $
+ * $FreeBSD$
  */
 #ifndef _RK_CLK_MUX_H_
 #define _RK_CLK_MUX_H_

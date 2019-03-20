@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/isp/ispvar.h 330121 2018-02-28 16:24:32Z mav $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

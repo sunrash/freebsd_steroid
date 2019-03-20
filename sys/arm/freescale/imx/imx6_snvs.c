@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx6_snvs.c 336096 2018-07-08 19:35:41Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Driver for imx6 Secure Non-Volatile Storage system, which really means "all

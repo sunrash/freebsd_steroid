@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/sys/sem.h 330299 2018-03-02 22:32:53Z brooks $ */
+/* $FreeBSD$ */
 /*	$NetBSD: sem.h,v 1.5 1994/06/29 06:45:15 cgd Exp $	*/
 
 /*

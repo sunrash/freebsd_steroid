@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_en/en_rl.h 334332 2018-05-29 14:04:57Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef __MLX5_EN_RL_H__
@@ -129,7 +129,7 @@ struct mlx5e_rl_channel_param {
 };
 
 struct mlx5e_rl_channel {
-	struct m_snd_tag m_snd_tag;
+	struct mlx5e_snd_tag tag;
 	STAILQ_ENTRY(mlx5e_rl_channel) entry;
 	struct mlx5e_sq * volatile sq;
 	struct mlx5e_rl_worker *worker;
@@ -166,6 +166,7 @@ struct mlx5e_rl_priv_data {
 
 int mlx5e_rl_init(struct mlx5e_priv *priv);
 void mlx5e_rl_cleanup(struct mlx5e_priv *priv);
+void mlx5e_rl_refresh_sq_inline(struct mlx5e_rl_priv_data *rl);
 if_snd_tag_alloc_t mlx5e_rl_snd_tag_alloc;
 if_snd_tag_modify_t mlx5e_rl_snd_tag_modify;
 if_snd_tag_query_t mlx5e_rl_snd_tag_query;

@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/asm/atomic-long.h 337527 2018-08-09 09:39:32Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_ATOMIC_LONG_H_
 #define	_ATOMIC_LONG_H_

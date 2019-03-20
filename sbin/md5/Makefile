@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/9/93
-# $FreeBSD: releng/12.0/sbin/md5/Makefile 338267 2018-08-23 18:19:01Z arichardson $
+# $FreeBSD$
 
 PACKAGE=runtime
 PROG=	md5

@@ -7,10 +7,9 @@
 # The output file looks like this (tab-delimited):
 #  foo1.txz SHA256-checksum Number-of-files foo1 Description Install-by-default
 #
-# $FreeBSD: releng/12.0/release/scripts/make-manifest.sh 340457 2018-11-15 16:42:59Z gjb $
+# $FreeBSD$
 
 base="Base system"
-doc="Additional Documentation"
 kernel="Kernel"
 ports="Ports tree"
 src="System source tree"
@@ -19,7 +18,6 @@ tests="Test suite"
 
 desc_base="${base} (MANDATORY)"
 desc_base_dbg="${base} (Debugging)"
-desc_doc="${doc}"
 desc_kernel="${kernel} (MANDATORY)"
 desc_kernel_dbg="${kernel} (Debugging)"
 desc_kernel_alt="Alternate ${kernel}"
@@ -30,7 +28,6 @@ desc_ports="${ports}"
 desc_src="${src}"
 desc_tests="${tests}"
 
-default_doc=off
 default_src=off
 default_ports=off
 default_tests=off

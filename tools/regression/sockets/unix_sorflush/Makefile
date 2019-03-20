@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/sockets/unix_sorflush/Makefile 281403 2015-04-11 03:57:35Z ngie $
+# $FreeBSD$
 
 PROG=	unix_sorflush
 MAN=

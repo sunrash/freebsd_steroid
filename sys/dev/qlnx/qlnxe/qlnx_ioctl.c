@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/qlnx/qlnxe/qlnx_ioctl.c 336695 2018-07-25 02:36:55Z davidcs $");
+__FBSDID("$FreeBSD$");
 
 #include "qlnx_os.h"
 #include "bcm_osal.h"

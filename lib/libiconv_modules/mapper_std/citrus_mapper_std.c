@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/mapper_std/citrus_mapper_std.c 336115 2018-07-08 23:22:04Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_mapper_std.c,v 1.11 2018/06/11 18:03:38 kamil Exp $ */
 
 /*-

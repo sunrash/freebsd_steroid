@@ -50,7 +50,7 @@
 #
 ###############################################################################
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/userquota/userquota_010_pos.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . $STF_SUITE/include/libtest.kshlib
 . $STF_SUITE/tests/userquota/userquota_common.kshlib

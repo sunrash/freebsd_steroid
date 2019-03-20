@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/sparc64/sys/cerror.S 314436 2017-02-28 23:42:47Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "SYS.h"
 

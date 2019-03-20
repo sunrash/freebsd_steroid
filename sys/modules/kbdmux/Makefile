@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.1 2005/06/23 00:30:50 max Exp $
-# $FreeBSD: releng/12.0/sys/modules/kbdmux/Makefile 332122 2018-04-06 17:35:35Z brooks $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/kbdmux
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/lib/libregex/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 LIB=		gnuregex
 SHLIB_MAJOR=	5

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/arswitch/arswitchvar.h 328924 2018-02-06 08:35:49Z adrian $
+ * $FreeBSD$
  */
 #ifndef	__ARSWITCHVAR_H__
 #define	__ARSWITCHVAR_H__

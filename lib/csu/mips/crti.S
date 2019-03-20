@@ -1,5 +1,5 @@
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/csu/mips/crti.S 323028 2017-08-30 19:19:31Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #ifndef __clang__
 	.gnu_attribute 4, 0

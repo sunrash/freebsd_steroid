@@ -44,7 +44,7 @@
 
 #include "feeder_if.h"
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pcm/sound.c 326255 2017-11-27 14:52:40Z pfg $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 devclass_t pcm_devclass;
 

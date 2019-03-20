@@ -30,7 +30,7 @@
 #define _NET_NETMAP_LEGACY_H_
 
 /*
- * $FreeBSD: releng/12.0/sys/net/netmap_legacy.h 332423 2018-04-12 07:20:50Z vmaffione $
+ * $FreeBSD$
  *
  * ioctl names and related fields
  *

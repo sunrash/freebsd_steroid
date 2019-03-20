@@ -18,7 +18,7 @@
  *
  * From: Version 2.4, Thu Apr 30 17:17:21 MSD 1997
  *
- * $FreeBSD: releng/12.0/sys/net/if_spppsubr.c 333813 2018-05-18 20:13:34Z mmacy $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

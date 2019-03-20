@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/ipsend/44arp.c 281143 2015-04-06 09:42:23Z glebius $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Based upon 4.4BSD's /usr/sbin/arp

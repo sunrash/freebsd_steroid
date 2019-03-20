@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/allwinner/h3/files.h3 324383 2017-10-07 16:48:42Z manu $
+# $FreeBSD$
 
 arm/allwinner/clkng/ccu_h3.c		standard
 arm/allwinner/clkng/ccu_sun8i_r.c	standard

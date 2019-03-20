@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ahci/ahci.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /* ATA register defines */
@@ -461,6 +461,8 @@ struct ahci_channel {
 	struct mtx_padalign	mtx;		/* state lock */
 	STAILQ_HEAD(, ccb_hdr)	doneq;		/* queue of completed CCBs */
 	int			batch;		/* doneq is in use */
+
+	int			disablephy;	/* keep PHY disabled */
 };
 
 struct ahci_enclosure {

@@ -25,10 +25,10 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/malta/malta_machdep.c 335783 2018-06-28 21:27:34Z jhb $
+ * $FreeBSD$
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/malta/malta_machdep.c 335783 2018-06-28 21:27:34Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

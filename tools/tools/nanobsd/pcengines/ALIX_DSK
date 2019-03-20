@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/tools/nanobsd/pcengines/ALIX_DSK 276826 2015-01-08 15:20:42Z jhb $
+# $FreeBSD$
 #
 
 cpu		I586_CPU
@@ -54,7 +54,6 @@ device		miibus
 device		vr		
 device		wlan		
 options 	IEEE80211_DEBUG	
-options 	IEEE80211_AMPDU_AGE 
 options 	IEEE80211_SUPPORT_MESH	
 device		wlan_wep	
 device		wlan_ccmp	
@@ -63,7 +62,6 @@ device		wlan_amrr
 device		an		
 device		ath		
 device		ath_hal		
-options 	AH_SUPPORT_AR5416	
 device		ath_rate_sample	
 device		wi		
 device		loop		

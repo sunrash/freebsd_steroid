@@ -34,7 +34,7 @@
  *
  *	@(#)procfs_status.c	8.3 (Berkeley) 2/17/94
  *
- * $FreeBSD: releng/12.0/sys/fs/procfs/procfs_map.c 332122 2018-04-06 17:35:35Z brooks $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

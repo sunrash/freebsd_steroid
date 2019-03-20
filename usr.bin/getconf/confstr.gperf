@@ -2,7 +2,7 @@
 /*
  * Copyright is disclaimed as to the contents of this file.
  *
- * $FreeBSD: releng/12.0/usr.bin/getconf/confstr.gperf 323631 2017-09-15 22:55:15Z jhb $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/nscd/Makefile 336850 2018-07-28 23:29:36Z brd $
+# $FreeBSD$
 
 CONFS=	nscd.conf
 PROG=	nscd

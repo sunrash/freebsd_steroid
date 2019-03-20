@@ -1,5 +1,5 @@
 #	@(#)Makefile    5.11 (Berkeley) 9/6/90
-# $FreeBSD: releng/12.0/lib/libc/rpc/Makefile.inc 338744 2018-09-18 01:38:44Z brd $
+# $FreeBSD$
 
 .PATH: ${LIBC_SRCTOP}/rpc ${LIBC_SRCTOP}/.
 CONFS+=	rpc/netconfig rpc/rpc

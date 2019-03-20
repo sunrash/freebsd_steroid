@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/isci/scil/scif_sas_controller.c 327231 2017-12-27 03:23:21Z eadler $");
+__FBSDID("$FreeBSD$");
 
 /**
  * @file

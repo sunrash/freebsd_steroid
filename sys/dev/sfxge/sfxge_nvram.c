@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sfxge/sfxge_nvram.c 300607 2016-05-24 12:16:57Z arybchik $");
+__FBSDID("$FreeBSD$");
 
 
 #include <sys/types.h>
@@ -104,7 +104,7 @@ sfxge_nvram_rw(struct sfxge_softc *sc, sfxge_ioc_t *ip, efx_nvram_type_t type,
 
 fail3:
 	free(buf, M_TEMP);
-	efx_nvram_rw_finish(enp, type);
+	efx_nvram_rw_finish(enp, type, NULL);
 fail1:
 	return (rc);
 }
@@ -125,7 +125,7 @@ sfxge_nvram_erase(struct sfxge_softc *sc, efx_nvram_type_t type)
 
 	rc = efx_nvram_erase(enp, type);
 
-	efx_nvram_rw_finish(enp, type);
+	efx_nvram_rw_finish(enp, type, NULL);
 	return (rc);
 }
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/serial/umoscom.c 303346 2016-07-26 22:26:49Z ian $ */
+/* $FreeBSD$ */
 /*	$OpenBSD: umoscom.c,v 1.2 2006/10/26 06:02:43 jsg Exp $	*/
 
 /*

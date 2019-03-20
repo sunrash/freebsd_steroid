@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$FreeBSD: releng/12.0/usr.bin/getconf/tests/arch_type.c 318436 2017-05-18 01:43:30Z ngie $");
+__RCSID("$FreeBSD$");
 
 #include <assert.h>
 #include <stdbool.h>

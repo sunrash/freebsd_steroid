@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/build/cross-build/mkimg/Makefile 314577 2017-03-03 01:56:55Z sjg $
+# $FreeBSD$
 
 # allow building mkimg as a host tool.
 

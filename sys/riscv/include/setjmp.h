@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/setjmp.h 336633 2018-07-23 09:54:28Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_SETJMP_H_

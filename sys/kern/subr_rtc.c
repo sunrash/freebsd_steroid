@@ -55,7 +55,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_rtc.c 338435 2018-09-02 20:17:51Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ffclock.h"
 

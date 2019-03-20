@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/npe/npestats/Makefile 283002 2015-05-16 06:18:39Z adrian $
+# $FreeBSD$
 
 PROG=	npestats
 SRCS=	main.c npestats.c

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/iwnfw/Makefile 270734 2014-08-28 00:05:02Z adrian $
+# $FreeBSD$
 
 SUBDIR=	iwn100		\
 	iwn105		\

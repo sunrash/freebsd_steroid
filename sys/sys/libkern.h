@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)libkern.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/sys/libkern.h 334534 2018-06-02 18:03:35Z mjg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_LIBKERN_H_

@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/sys/arm/ti/am335x/files.am335x 305115 2016-08-31 07:42:46Z loos $
+#$FreeBSD$
 
 arm/ti/aintc.c				standard
 

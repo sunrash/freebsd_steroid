@@ -1,7 +1,7 @@
 #
 # Custom kernel for Marvell DB-88F5xxx boards.
 #
-# $FreeBSD: releng/12.0/sys/arm/conf/DB-88F5XXX 307082 2016-10-12 02:16:42Z jtl $
+# $FreeBSD$
 #
 
 ident		DB-88F5XXX

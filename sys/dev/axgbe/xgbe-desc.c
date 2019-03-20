@@ -115,7 +115,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/axgbe/xgbe-desc.c 313768 2017-02-15 13:56:04Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "xgbe.h"
 #include "xgbe-common.h"

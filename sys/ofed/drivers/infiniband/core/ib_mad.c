@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/ofed/drivers/infiniband/core/ib_mad.c 336391 2018-07-17 09:47:14Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #define	LINUXKPI_PARAM_PREFIX ibcore_
 #define	KBUILD_MODNAME "ibcore"
@@ -1753,7 +1753,7 @@ find_mad_agent(struct ib_mad_port_private *port_priv,
 			if (!class)
 				goto out;
 			if (convert_mgmt_class(mad_hdr->mgmt_class) >=
-			    IB_MGMT_MAX_METHODS)
+			    ARRAY_SIZE(class->method_table))
 				goto out;
 			method = class->method_table[convert_mgmt_class(
 							mad_hdr->mgmt_class)];

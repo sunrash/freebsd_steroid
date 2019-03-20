@@ -31,7 +31,7 @@
 /* xDMA memcpy test driver. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/xdma/xdma_fdt_test.c 332435 2018-04-12 15:36:24Z br $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

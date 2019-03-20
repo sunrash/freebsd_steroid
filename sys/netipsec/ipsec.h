@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/ipsec.h 336269 2018-07-13 23:46:07Z cem $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: ipsec.h,v 1.53 2001/11/20 08:32:38 itojun Exp $	*/
 
 /*-

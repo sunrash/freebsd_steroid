@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/hastd/Makefile 313192 2017-02-04 06:12:48Z allanjude $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

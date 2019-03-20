@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/Makefile 336320 2018-07-15 21:55:17Z jilles $
+# $FreeBSD$
 
 PACKAGE=	tests
 

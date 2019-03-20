@@ -28,7 +28,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ena/ena_sysctl.c 325592 2017-11-09 13:36:42Z mw $");
+__FBSDID("$FreeBSD$");
 
 #include "ena_sysctl.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bhnd/Makefile 327872 2018-01-12 12:14:14Z lwhsu $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/bhnd
 .PATH: ${SRCTOP}/sys/dev/bhnd/cores/chipc

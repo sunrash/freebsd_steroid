@@ -1,5 +1,5 @@
 # $OpenBSD: Makefile,v 1.8 2015/09/09 15:33:18 deraadt Exp $
-# $FreeBSD: releng/12.0/usr.sbin/ypldap/Makefile 314460 2017-03-01 04:18:28Z ngie $
+# $FreeBSD$
 
 PROG=		ypldap
 SRCS=		parse.y ypldap.c log.c	\

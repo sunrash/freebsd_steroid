@@ -11,7 +11,7 @@
 # + 64mb RAM
 # + uboot environment
 
-# $FreeBSD: releng/12.0/sys/mips/conf/AP96 295945 2016-02-24 00:39:36Z sobomax $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

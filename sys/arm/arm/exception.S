@@ -53,7 +53,7 @@
 #include <machine/asmacros.h>
 #include <machine/trap.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/exception.S 336783 2018-07-27 21:25:01Z imp $");
+__FBSDID("$FreeBSD$");
 
 #ifdef KDTRACE_HOOKS
 	.bss

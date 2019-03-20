@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/taskqueue.h 326256 2017-11-27 15:01:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_TASKQUEUE_H_
@@ -93,6 +93,7 @@ void	taskqueue_drain(struct taskqueue *queue, struct task *task);
 void	taskqueue_drain_timeout(struct taskqueue *queue,
 	    struct timeout_task *timeout_task);
 void	taskqueue_drain_all(struct taskqueue *queue);
+void	taskqueue_quiesce(struct taskqueue *queue);
 void	taskqueue_free(struct taskqueue *queue);
 void	taskqueue_run(struct taskqueue *queue);
 void	taskqueue_block(struct taskqueue *queue);

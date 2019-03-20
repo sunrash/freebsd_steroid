@@ -30,7 +30,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/psci/psci_arm64.S 337752 2018-08-14 13:56:49Z loos $");
+__FBSDID("$FreeBSD$");
 
 /*
  * uint64_t psci_hvc_despatch(uint64_t psci_fnid, uint64_t, uint64_t, uint64_t)

@@ -28,7 +28,7 @@
  *
  * Copyright (c) 2000 Andrew Miklic
  *
- * $FreeBSD: releng/12.0/sys/dev/fb/gfb.h 326403 2017-11-30 15:48:35Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _FB_GFB_H_

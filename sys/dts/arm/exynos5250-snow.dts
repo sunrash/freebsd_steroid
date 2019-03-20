@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/exynos5250-snow.dts 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 /dts-v1/;

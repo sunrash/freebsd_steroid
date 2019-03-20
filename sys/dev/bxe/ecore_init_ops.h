@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bxe/ecore_init_ops.h 326022 2017-11-20 19:36:21Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #ifndef ECORE_INIT_OPS_H
 #define ECORE_INIT_OPS_H

@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# $FreeBSD: releng/12.0/tools/tools/vt/keymaps/convert-INDEX.pl 270131 2014-08-18 09:40:19Z se $
+# $FreeBSD$
 
 use Text::Iconv;
 use Encode;

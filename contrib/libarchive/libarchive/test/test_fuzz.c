@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_fuzz.c 324148 2017-10-01 00:40:23Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This was inspired by an ISO fuzz tester written by Michal Zalewski
@@ -433,7 +433,7 @@ DEFINE_TEST(test_fuzz_tar)
 		{0, fileset9}, /* Exercise lzo decompressor. */
 #endif
 #if HAVE_ZSTD_H && HAVE_LIBZSTD
-		{0, fileset10}, /* Excercise zstd decompressor. */
+		{0, fileset10}, /* Exercise zstd decompressor. */
 #endif
 		{1, NULL}
 	};

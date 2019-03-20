@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/bhyve/ps2kbd.h 339435 2018-10-19 00:24:23Z gjb $
+ * $FreeBSD$
  */
 
 #ifndef _PS2KBD_H_

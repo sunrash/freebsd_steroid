@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)lam.c	8.1 (Berkeley) 6/6/93";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/lam/lam.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 /*
  *	lam - laminate files
@@ -136,8 +136,7 @@ getargs(char *av[])
 			else if ((ip->fp = fopen(p, "r")) == NULL) {
 				err(1, "%s", p);
 			}
-			if (cap_rights_limit(fileno(ip->fp), &rights_ro) < 0
-			    && errno != ENOSYS)
+			if (caph_rights_limit(fileno(ip->fp), &rights_ro) < 0)
 				err(1, "unable to limit rights on: %s", p);
 			ip->pad = P;
 			if (!ip->sepstring)

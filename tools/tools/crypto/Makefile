@@ -1,4 +1,4 @@
-#	$FreeBSD: releng/12.0/tools/tools/crypto/Makefile 331418 2018-03-23 05:37:18Z cem $
+#	$FreeBSD$
 #
 # Copyright (c) 2018		Conrad Meyer <cem@FreeBSD.org>
 # Copyright (c) 2002, 2003	Sam Leffler, Errno Consulting
@@ -32,10 +32,7 @@ MAN=
 BINDIR?=	/usr/local/bin
 
 # cryptocheck: test symmetric crypto functions
-# Use openssl from ports for Blake2 algorithms
-CFLAGS.cryptocheck.c+=	$$(pkg-config --cflags openssl)
-LDFLAGS.cryptocheck+=	$$(pkg-config --libs openssl)
-LIBADD.cryptocheck+=	util
+LIBADD.cryptocheck+=	crypto util
 
 # cryptokeytest: test asymmetric crypto functions
 LIBADD.cryptokeytest+=	crypto

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.bin/dc/bcode.h 326556 2017-12-05 04:22:35Z asomers $						*/
+/*	$FreeBSD$						*/
 /*	$OpenBSD: bcode.h,v 1.7 2012/11/07 11:06:14 otto Exp $	*/
 
 /*

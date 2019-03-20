@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/nghook/Makefile 275054 2014-11-25 16:57:27Z bapt $
+# $FreeBSD$
 # $Whistle: Makefile,v 1.4 1999/01/16 04:44:33 archie Exp $
 
 PROG=	nghook

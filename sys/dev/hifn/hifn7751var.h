@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/hifn/hifn7751var.h 336439 2018-07-18 00:56:25Z cem $ */
+/* $FreeBSD$ */
 /*	$OpenBSD: hifn7751var.h,v 1.42 2002/04/08 17:49:42 jason Exp $	*/
 
 /*-

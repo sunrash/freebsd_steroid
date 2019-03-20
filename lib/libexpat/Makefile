@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libexpat/Makefile 338190 2018-08-22 11:56:42Z arichardson $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 EXPAT=		${SRCTOP}/contrib/expat

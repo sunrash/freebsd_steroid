@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bcm_bmipsreg.h 305953 2016-09-18 21:28:09Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef	_MIPS_BROADCOM_BMIPSREG_H_

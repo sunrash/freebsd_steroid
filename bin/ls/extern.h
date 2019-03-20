@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)extern.h	8.1 (Berkeley) 5/31/93
- * $FreeBSD: releng/12.0/bin/ls/extern.h 337956 2018-08-17 04:15:51Z kevans $
+ * $FreeBSD$
  */
 
 #include <stdbool.h>

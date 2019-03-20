@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_misc.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -1089,9 +1089,8 @@ linux_waitid(struct thread *td, struct linux_waitid_args *args)
 	}
 	if (args->info != NULL) {
 		p = td->td_proc;
-		if (td->td_retval[0] == 0)
-			bzero(&lsi, sizeof(lsi));
-		else {
+		bzero(&lsi, sizeof(lsi));
+		if (td->td_retval[0] != 0) {
 			sig = bsd_to_linux_signal(siginfo.si_signo);
 			siginfo_to_lsiginfo(&siginfo, &lsi, sig);
 		}
@@ -1336,7 +1335,7 @@ linux_setgroups(struct thread *td, struct linux_setgroups_args *args)
 	 * Keep cr_groups[0] unchanged to prevent that.
 	 */
 
-	if ((error = priv_check_cred(oldcred, PRIV_CRED_SETGROUPS, 0)) != 0) {
+	if ((error = priv_check_cred(oldcred, PRIV_CRED_SETGROUPS)) != 0) {
 		PROC_UNLOCK(p);
 		crfree(newcred);
 		goto out;

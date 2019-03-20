@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/nvme/nvme_ns_cmd.c 338182 2018-08-22 04:29:24Z chuck $");
+__FBSDID("$FreeBSD$");
 
 #include "nvme_private.h"
 

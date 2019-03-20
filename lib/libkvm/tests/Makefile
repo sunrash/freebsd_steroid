@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libkvm/tests/Makefile 316099 2017-03-28 17:37:49Z ngie $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

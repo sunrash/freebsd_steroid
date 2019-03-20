@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/include/init.h 332073 2018-04-05 14:39:51Z royger $
+ * $FreeBSD$
  */
 
 #ifndef __X86_INIT_H__

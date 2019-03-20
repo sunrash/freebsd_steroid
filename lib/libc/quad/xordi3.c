@@ -37,7 +37,7 @@
 static char sccsid[] = "@(#)xordi3.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/xordi3.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "quad.h"
 
@@ -45,8 +45,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/xordi3.c 326025 2017-11-20 19:49:4
  * Return a ^ b, in quad.
  */
 quad_t
-__xordi3(a, b)
-	quad_t a, b;
+__xordi3(quad_t a, quad_t b)
 {
 	union uu aa, bb;
 

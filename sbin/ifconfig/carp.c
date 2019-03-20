@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sbin/ifconfig/carp.c 326276 2017-11-27 15:37:16Z pfg $ */
+/*	$FreeBSD$ */
 /*	from $OpenBSD: ifconfig.c,v 1.82 2003/10/19 05:43:35 mcbride Exp $ */
 
 /*-

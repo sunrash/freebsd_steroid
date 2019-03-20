@@ -17,7 +17,7 @@
  * OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/* $FreeBSD: releng/12.0/lib/libc/include/isc/list.h 326695 2017-12-08 15:57:29Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef LIST_H
 #define LIST_H 1

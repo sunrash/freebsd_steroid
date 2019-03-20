@@ -39,7 +39,7 @@
  *
  * From: src/sys/sys/vnioctl.h,v 1.4
  *
- * $FreeBSD: releng/12.0/sys/sys/mdioctl.h 330881 2018-03-13 20:54:18Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_MDIOCTL_H_
@@ -92,5 +92,6 @@ struct md_ioctl {
 #define MD_FORCE	0x20	/* Don't try to prevent foot-shooting */
 #define MD_ASYNC	0x40	/* Asynchronous mode */
 #define MD_VERIFY	0x80	/* Open file with O_VERIFY (vnode only) */
+#define	MD_CACHE	0x100	/* Cache vnode data */
 
 #endif	/* _SYS_MDIOCTL_H_*/

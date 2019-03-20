@@ -22,13 +22,11 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/mouse/include/messages.subr 258592 2013-11-25 20:37:53Z dteske $
+# $FreeBSD$
 
 hline_press_enter_or_space="Press enter or space"
 msg_auto="Auto"
 msg_auto_desc="Bus mouse, PS/2 style mouse or PnP serial mouse"
-msg_busmouse="BusMouse"
-msg_busmouse_desc="Logitech, ATI or MS bus mouse (/dev/mse0)"
 msg_cancel="Cancel"
 msg_com1="COM1"
 msg_com1_desc="Serial mouse on COM1 (/dev/cuau0)"

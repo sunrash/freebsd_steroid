@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_AUTO_OBJ 284708 2015-06-22 20:21:57Z sjg $
+.\" $FreeBSD$
 Enable automatic creation of objdirs.

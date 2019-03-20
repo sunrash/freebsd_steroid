@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libulog/Makefile 312471 2017-01-20 04:29:23Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?=/lib

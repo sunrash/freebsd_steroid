@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mlx5en/Makefile 334332 2018-05-29 14:04:57Z hselasky $
+# $FreeBSD$
 .PATH:	${SRCTOP}/sys/dev/mlx5/mlx5_en
 
 KMOD=mlx5en
@@ -19,6 +19,10 @@ CFLAGS+= -DHAVE_PER_CQ_EVENT_PACKET
 
 .if defined(HAVE_TCP_LRO_RX)
 CFLAGS+= -DHAVE_TCP_LRO_RX
+.endif
+
+.if defined(CONFIG_BUILD_FPGA)
+CFLAGS+= -DCONFIG_MLX5_FPGA
 .endif
 
 CFLAGS+= -I${SRCTOP}/sys/ofed/include

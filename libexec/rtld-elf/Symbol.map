@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/libexec/rtld-elf/Symbol.map 276627 2015-01-03 18:09:53Z kib $
+ * $FreeBSD$
  */
 
 FBSD_1.0 {

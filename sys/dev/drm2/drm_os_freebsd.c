@@ -1,6 +1,6 @@
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/drm_os_freebsd.c 338807 2018-09-19 19:35:02Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/drm2/drmP.h>
 

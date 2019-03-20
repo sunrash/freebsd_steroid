@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/mtkswitch/mtkswitchvar.h 299910 2016-05-16 07:00:49Z sgalabov $
+ * $FreeBSD$
  */
 
 #ifndef	__MTKSWITCHVAR_H__

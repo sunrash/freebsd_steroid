@@ -38,7 +38,7 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/oce/oce_queue.c 326022 2017-11-20 19:36:21Z pfg $ */
+/* $FreeBSD$ */
 
 #include "oce_if.h"
 

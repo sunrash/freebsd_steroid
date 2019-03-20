@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/ddb 332773 2018-04-19 15:02:53Z kevans $
+# $FreeBSD$
 #
 
 # PROVIDE: ddb

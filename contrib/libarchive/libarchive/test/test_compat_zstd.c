@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_compat_zstd.c 324148 2017-10-01 00:40:23Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Verify our ability to read sample files compatibly with 'zstd -d'.

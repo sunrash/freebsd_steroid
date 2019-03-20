@@ -18,7 +18,7 @@
  * 5. Modifications may be freely made to this file if the above conditions
  *    are met.
  *
- * $FreeBSD: releng/12.0/sys/sys/pipe.h 312235 2017-01-15 18:00:45Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_PIPE_H_

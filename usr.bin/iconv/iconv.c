@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/iconv/iconv.c 335395 2018-06-19 23:43:14Z oshogbo $ */
+/* $FreeBSD$ */
 /* $NetBSD: iconv.c,v 1.16 2009/02/20 15:28:21 yamt Exp $ */
 
 /*-

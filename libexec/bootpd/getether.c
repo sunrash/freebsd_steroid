@@ -7,7 +7,7 @@
  * If you figure out how to do this on another system,
  * please let me know.  <gwr@mc.com>
  *
- * $FreeBSD: releng/12.0/libexec/bootpd/getether.c 297865 2016-04-12 18:18:26Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

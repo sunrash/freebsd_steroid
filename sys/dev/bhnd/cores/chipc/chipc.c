@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/cores/chipc/chipc.c 328187 2018-01-20 01:55:34Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Broadcom ChipCommon driver.

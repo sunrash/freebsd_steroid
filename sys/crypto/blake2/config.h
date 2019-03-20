@@ -1,5 +1,5 @@
 /* This file is in the public domain */
-/* $FreeBSD: releng/12.0/sys/crypto/blake2/config.h 331620 2018-03-27 14:55:01Z cem $ */
+/* $FreeBSD$ */
 #pragma once
 
 #include <sys/endian.h>

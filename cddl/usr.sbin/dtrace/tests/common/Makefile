@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/tests/common/Makefile 326499 2017-12-03 16:57:28Z markj $
+# $FreeBSD$
 
 # We exclude several subdirectories: nfs and sysevent do not compile on
 # FreeBSD, and docsExamples doesn't seem amenable to automated testing.

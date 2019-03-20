@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/imx/imx_gpio.c 335982 2018-07-05 14:09:48Z ian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

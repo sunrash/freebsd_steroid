@@ -31,7 +31,7 @@
  * This software includes fragments of the following programs:
  *	tcpmssd		Ruslan Ermilov <ru@FreeBSD.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_tcpmss.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 /*

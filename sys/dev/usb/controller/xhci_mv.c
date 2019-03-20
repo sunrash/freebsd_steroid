@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/controller/xhci_mv.c 323353 2017-09-09 10:54:13Z mw $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

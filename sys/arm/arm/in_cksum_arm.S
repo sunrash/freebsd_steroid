@@ -44,7 +44,7 @@
 
 #include <machine/asm.h>
 #include "assym.inc"
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/in_cksum_arm.S 331254 2018-03-20 17:58:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 	.syntax	unified
 /*

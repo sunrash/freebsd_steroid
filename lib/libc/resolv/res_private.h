@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/resolv/res_private.h 292216 2015-12-14 17:21:06Z vangyzen $ */
+/* $FreeBSD$ */
 
 #ifndef res_private_h
 #define res_private_h

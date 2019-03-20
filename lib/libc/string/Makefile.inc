@@ -1,5 +1,5 @@
 #	@(#)Makefile.inc	8.1 (Berkeley) 6/4/93
-# $FreeBSD: releng/12.0/lib/libc/string/Makefile.inc 329361 2018-02-16 05:48:45Z cy $
+# $FreeBSD$
 
 .PATH: ${LIBC_SRCTOP}/${LIBC_ARCH}/string ${LIBC_SRCTOP}/string
 .PATH: ${SRCTOP}/sys/libkern

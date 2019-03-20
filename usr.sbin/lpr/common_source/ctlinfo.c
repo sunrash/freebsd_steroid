@@ -34,7 +34,7 @@
  */
 
 #include "lp.cdefs.h"		/* A cross-platform version of <sys/cdefs.h> */
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/lpr/common_source/ctlinfo.c 330787 2018-03-12 01:41:16Z gad $");
+__FBSDID("$FreeBSD$");
 
 /*
  * ctlinfo - This collection of routines will know everything there is to

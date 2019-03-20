@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libgssapi/Makefile 312505 2017-01-20 04:53:20Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=		gssapi

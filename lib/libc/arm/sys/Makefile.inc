@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/arm/sys/Makefile.inc 334626 2018-06-04 19:35:15Z markj $
+# $FreeBSD$
 
 SRCS+=	__vdso_gettc.c
 

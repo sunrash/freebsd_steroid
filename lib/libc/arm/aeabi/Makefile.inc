@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/arm/aeabi/Makefile.inc 324340 2017-10-05 23:01:33Z imp $
+# $FreeBSD$
 
 .PATH: ${LIBC_SRCTOP}/arm/aeabi
 

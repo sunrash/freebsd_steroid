@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mac_veriexec_sha1/Makefile 335399 2018-06-20 00:41:30Z stevek $
+# $FreeBSD$
 
 .PATH: ${.PARSEDIR:H:H}/security/mac_veriexec
 .PATH: ${.PARSEDIR:H:H}/crypto

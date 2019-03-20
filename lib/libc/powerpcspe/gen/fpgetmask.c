@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/powerpcspe/gen/fpgetmask.c 336688 2018-07-24 22:04:56Z jhibbits $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <machine/spr.h>

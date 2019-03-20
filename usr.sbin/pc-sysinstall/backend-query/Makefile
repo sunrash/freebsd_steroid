@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/backend-query/Makefile 284255 2015-06-11 04:22:17Z sjg $
+# $FreeBSD$
 
 FILES=	detect-laptop.sh detect-nics.sh detect-emulation.sh disk-info.sh \
 	disk-list.sh disk-part.sh enable-net.sh get-packages.sh list-config.sh \

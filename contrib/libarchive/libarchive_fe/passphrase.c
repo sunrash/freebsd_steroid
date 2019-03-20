@@ -48,7 +48,7 @@
 
 
 #include "lafe_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive_fe/passphrase.c 302294 2016-06-30 08:51:50Z mm $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #ifdef HAVE_STDLIB_H

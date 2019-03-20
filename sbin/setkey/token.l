@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sbin/setkey/token.l 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: token.l,v 1.43 2003/07/25 09:35:28 itojun Exp $	*/
 
 /*-

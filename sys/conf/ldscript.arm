@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/conf/ldscript.arm 303442 2016-07-28 13:54:46Z emaste $ */
+/* $FreeBSD$ */
 OUTPUT_ARCH(arm)
 ENTRY(_start)
 

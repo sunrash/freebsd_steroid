@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/ggate/Makefile 265420 2014-05-06 04:22:01Z imp $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

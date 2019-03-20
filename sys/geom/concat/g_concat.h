@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/concat/g_concat.h 326270 2017-11-27 15:17:37Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_G_CONCAT_H_
@@ -74,6 +74,7 @@ struct g_concat_disk {
 	struct g_concat_softc	*d_softc;
 	off_t			 d_start;
 	off_t			 d_end;
+	int			 d_candelete;
 	int			 d_removed;
 };
 

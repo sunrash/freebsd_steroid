@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/lib/libauditd/Makefile 336838 2018-07-28 20:04:39Z asomers $
+# $FreeBSD$
 #
 
 PACKAGE=lib${LIB}

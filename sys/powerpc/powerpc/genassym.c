@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)genassym.c	5.11 (Berkeley) 5/10/91
- * $FreeBSD: releng/12.0/sys/powerpc/powerpc/genassym.c 336918 2018-07-30 17:03:15Z jhibbits $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -225,7 +225,6 @@ ASSYM(TDF_NEEDRESCHED, TDF_NEEDRESCHED);
 
 ASSYM(SF_UC, offsetof(struct sigframe, sf_uc));
 
-ASSYM(KERNBASE, KERNBASE);
 ASSYM(DMAP_BASE_ADDRESS, DMAP_BASE_ADDRESS);
 ASSYM(MAXCOMLEN, MAXCOMLEN);
 

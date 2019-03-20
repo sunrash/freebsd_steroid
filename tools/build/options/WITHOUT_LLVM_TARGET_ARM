@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_LLVM_TARGET_ARM 335712 2018-06-27 17:13:36Z bdrewery $
+.\" $FreeBSD$
 Set to not build LLVM target support for ARM.
 The
 .Va LLVM_TARGET_ALL

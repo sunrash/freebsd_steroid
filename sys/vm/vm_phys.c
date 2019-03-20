@@ -39,7 +39,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/vm_phys.c 340007 2018-11-01 16:50:19Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_vm.h"
@@ -106,7 +106,8 @@ static struct rwlock_padalign vm_phys_fictitious_reg_lock;
 MALLOC_DEFINE(M_FICT_PAGES, "vm_fictitious", "Fictitious VM pages");
 
 static struct vm_freelist __aligned(CACHE_LINE_SIZE)
-    vm_phys_free_queues[MAXMEMDOM][VM_NFREELIST][VM_NFREEPOOL][VM_NFREEORDER];
+    vm_phys_free_queues[MAXMEMDOM][VM_NFREELIST][VM_NFREEPOOL]
+    [VM_NFREEORDER_MAX];
 
 static int __read_mostly vm_nfreelists;
 

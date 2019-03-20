@@ -1,7 +1,7 @@
 /* 
  * FQ_PIE - The FlowQueue-PIE scheduler/AQM
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_sched_fq_pie.c 327829 2018-01-11 15:29:29Z pfg $
+ * $FreeBSD$
  * 
  * Copyright (C) 2016 Centre for Advanced Internet Architectures,
  *  Swinburne University of Technology, Melbourne, Australia.

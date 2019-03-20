@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libblocksruntime/Makefile 312459 2017-01-20 03:56:10Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB:tl}
 LIB=	BlocksRuntime

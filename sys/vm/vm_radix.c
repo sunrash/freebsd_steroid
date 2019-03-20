@@ -51,7 +51,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/vm_radix.c 335600 2018-06-24 13:08:05Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

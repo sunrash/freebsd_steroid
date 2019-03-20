@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/mpc85xx/mpc85xx.h 333135 2018-05-01 04:31:17Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _MPC85XX_H_

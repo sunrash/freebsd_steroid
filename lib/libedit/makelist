@@ -1,5 +1,5 @@
 #!/bin/sh -
-# $FreeBSD: releng/12.0/lib/libedit/makelist 312997 2017-01-30 22:11:53Z pfg $
+# $FreeBSD$
 #	$NetBSD: makelist,v 1.18 2012/03/21 05:34:54 matt Exp $
 #
 # Copyright (c) 1992, 1993

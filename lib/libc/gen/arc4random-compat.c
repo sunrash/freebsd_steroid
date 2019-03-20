@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/gen/arc4random-compat.c 338059 2018-08-19 17:40:50Z delphij $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/arc4random-compat.c 338059 2018-08-19 17:40:50Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <stdbool.h>

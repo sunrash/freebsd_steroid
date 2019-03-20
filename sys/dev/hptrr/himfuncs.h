@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hptrr/himfuncs.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #include <dev/hptrr/hptrr_config.h>
 /* $Id: himfuncs.h,v 1.14 2005/12/22 00:13:11 gmm Exp $

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/pflogd/Makefile 314656 2017-03-04 11:33:01Z ngie $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/contrib/pf/pflogd
 

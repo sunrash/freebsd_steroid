@@ -21,7 +21,7 @@
 /* Driver for NVIDIA nForce MCP Fast Ethernet and Gigabit Ethernet */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/nfe/if_nfe.c 298307 2016-04-19 23:37:24Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_KERNEL_OPTION_HEADERS
 #include "opt_device_polling.h"
@@ -265,6 +265,8 @@ static struct nfe_type nfe_devs[] = {
 	    "NVIDIA nForce MCP79 Networking Adapter"},
 	{PCI_VENDOR_NVIDIA, PCI_PRODUCT_NVIDIA_MCP79_LAN4,
 	    "NVIDIA nForce MCP79 Networking Adapter"},
+	{PCI_VENDOR_NVIDIA, PCI_PRODUCT_NVIDIA_MCP89_LAN,
+	    "NVIDIA nForce MCP89 Networking Adapter"},
 	{0, 0, NULL}
 };
 
@@ -531,6 +533,7 @@ nfe_attach(device_t dev)
 	case PCI_PRODUCT_NVIDIA_MCP79_LAN2:
 	case PCI_PRODUCT_NVIDIA_MCP79_LAN3:
 	case PCI_PRODUCT_NVIDIA_MCP79_LAN4:
+	case PCI_PRODUCT_NVIDIA_MCP89_LAN:
 		/* XXX flow control */
 		sc->nfe_flags |= NFE_JUMBO_SUP | NFE_40BIT_ADDR | NFE_HW_CSUM |
 		    NFE_PWR_MGMT | NFE_CORRECT_MACADDR | NFE_MIB_V3;

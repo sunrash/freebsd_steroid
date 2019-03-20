@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/exca/excavar.h 333143 2018-05-01 16:29:22Z imp $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-4-Clause AND BSD-2-Clause-FreeBSD

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/dhclient 337382 2018-08-06 16:22:01Z markj $
+# $FreeBSD$
 #
 
 # PROVIDE: dhclient

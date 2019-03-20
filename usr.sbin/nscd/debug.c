@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/nscd/debug.c 194093 2009-06-13 00:43:56Z des $");
+__FBSDID("$FreeBSD$");
 
 #include <stdio.h>
 
@@ -131,7 +131,7 @@ nscd_trace_out(const char *s, const char *f, int l)
 		for (i = 0; i < trace_level; ++i)
 			printf("\t");
 
-		printf("<= %s\n", s);
+		printf("<= %s, %s: %d\n", s, f, l);
 	}
 }
 

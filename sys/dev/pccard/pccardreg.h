@@ -1,5 +1,5 @@
 /*	$NetBSD: pcmciareg.h,v 1.7 1998/10/29 09:45:52 enami Exp $	*/
-/* $FreeBSD: releng/12.0/sys/dev/pccard/pccardreg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-4-Clause

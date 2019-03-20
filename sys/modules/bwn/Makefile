@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bwn/Makefile 329184 2018-02-12 22:21:11Z landonf $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/bwn
 

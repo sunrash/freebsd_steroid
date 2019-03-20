@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/exect.c 332443 2018-04-12 18:23:14Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/ptrace.h>
 

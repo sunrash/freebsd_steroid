@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/cloudabi64/cloudabi64_module.c 325555 2017-11-08 14:21:52Z ed $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/imgact.h>
@@ -54,7 +54,7 @@ cloudabi64_copyout_strings(struct image_params *imgp)
 
 	/* Copy out program arguments. */
 	args = imgp->args;
-	len = args->begin_envv - args->begin_argv;
+	len = exec_args_get_begin_envv(args) - args->begin_argv;
 	begin = rounddown2(imgp->sysent->sv_usrstack - len, sizeof(register_t));
 	copyout(args->begin_argv, (void *)begin, len);
 	return ((register_t *)begin);
@@ -109,7 +109,8 @@ cloudabi64_fixup(register_t **stack_base, struct image_params *imgp)
 	 * exec_copyin_data_fds(). Undo this by reducing the length.
 	 */
 	args = (Elf64_Auxargs *)imgp->auxargs;
-	argdatalen = imgp->args->begin_envv - imgp->args->begin_argv;
+	argdatalen = exec_args_get_begin_envv(imgp->args) -
+	    imgp->args->begin_argv;
 	if (argdatalen > 0)
 		--argdatalen;
 

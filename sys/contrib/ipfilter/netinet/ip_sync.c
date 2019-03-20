@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_sync.c 318998 2017-05-27 18:01:14Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.

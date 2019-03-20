@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/arm/arm/platform_if.m 310153 2016-12-16 10:31:13Z andrew $
+# $FreeBSD$
 #
 
 #include <sys/param.h>

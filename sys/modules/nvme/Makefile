@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/nvme/Makefile 325795 2017-11-14 05:05:21Z imp $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/nvme
 

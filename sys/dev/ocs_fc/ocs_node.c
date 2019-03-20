@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ocs_fc/ocs_node.c 331766 2018-03-30 15:28:25Z ken $
+ * $FreeBSD$
  */
 
 /**
@@ -253,7 +253,7 @@ ocs_node_create_pool(ocs_t *ocs, uint32_t node_count)
 
 	if (0 == ocs_hw_get(&ocs->hw, OCS_HW_MAX_SGE, &max_sge) &&
 	    0 == ocs_hw_get(&ocs->hw, OCS_HW_N_SGL, &num_sgl)) {
-		max_xfer_size = max_sge * num_sgl;
+		max_xfer_size = (max_sge * (uint64_t)num_sgl);
 	} else {
 		max_xfer_size = 65536;
 	}

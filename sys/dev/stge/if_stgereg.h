@@ -31,7 +31,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/stge/if_stgereg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 /*
  * Sundance Technology PCI vendor ID

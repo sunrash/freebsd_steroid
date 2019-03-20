@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/lib/libxo/add.man 334068 2018-05-23 01:20:31Z phil $
+.\" $FreeBSD$
 .Sh ADDITIONAL DOCUMENTATION
 .Fx
 uses

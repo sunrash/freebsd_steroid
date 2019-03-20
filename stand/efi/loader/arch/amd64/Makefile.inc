@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/efi/loader/arch/amd64/Makefile.inc 325093 2017-10-29 05:26:59Z imp $
+# $FreeBSD$
 
 SRCS+=	amd64_tramp.S \
 	start.S \

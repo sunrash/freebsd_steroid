@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THEPOSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/sound/pci/als4000.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #define ALS_PCI_ID0 		0x40004005

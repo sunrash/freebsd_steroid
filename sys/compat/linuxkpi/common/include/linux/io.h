@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/io.h 339733 2018-10-25 16:01:10Z tijl $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_IO_H_
 #define	_LINUX_IO_H_

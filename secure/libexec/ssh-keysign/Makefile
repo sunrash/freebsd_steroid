@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/libexec/ssh-keysign/Makefile 338561 2018-09-10 16:20:12Z des $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

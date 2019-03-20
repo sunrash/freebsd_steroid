@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/versatile/files.versatile 327280 2017-12-28 07:31:14Z manu $
+# $FreeBSD$
 
 arm/versatile/pl050.c				optional sc
 arm/versatile/sp804.c				standard

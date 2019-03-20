@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/include/ifaddrs.h 326823 2017-12-13 16:13:17Z pfg $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * SPDX-License-Identifier: BSD-1-Clause

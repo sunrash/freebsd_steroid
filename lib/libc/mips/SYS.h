@@ -1,5 +1,5 @@
 /*	$NetBSD: SYS.h,v 1.19 2009/12/14 01:07:41 matt Exp $ */
-/* $FreeBSD: releng/12.0/lib/libc/mips/SYS.h 327248 2017-12-27 21:21:03Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: (BSD-4-Clause AND BSD-3-Clause)

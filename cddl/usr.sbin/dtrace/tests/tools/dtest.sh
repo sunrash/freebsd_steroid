@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/tests/tools/dtest.sh 321472 2017-07-25 13:18:28Z lwhsu $
+# $FreeBSD$
 
 usage()
 {

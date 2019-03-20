@@ -24,7 +24,7 @@
  * USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  **************************************************************************/
-/* $FreeBSD: releng/12.0/sys/dev/drm2/ttm/ttm_memory.h 338285 2018-08-24 00:02:00Z imp $ */
+/* $FreeBSD$ */
 
 #ifndef TTM_MEMORY_H
 #define TTM_MEMORY_H

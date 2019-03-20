@@ -103,7 +103,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_mac_ctxt.c 318219 2017-05-12 05:50:38Z adrian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_wlan.h"
 #include "opt_iwm.h"
@@ -309,7 +309,12 @@ iwm_mvm_mac_ctxt_cmd_common(struct iwm_softc *sc, struct iwm_node *in,
 	 *     iwm_mvm_mac_ctxt_changed() when already authenticating or
 	 *     associating, ni->ni_bssid should always make sense here.
 	 */
-	IEEE80211_ADDR_COPY(cmd->bssid_addr, ni->ni_bssid);
+	if (ivp->iv_auth) {
+		IEEE80211_ADDR_COPY(cmd->bssid_addr, ni->ni_bssid);
+	} else {
+		/* XXX Or maybe all zeroes address? */
+		IEEE80211_ADDR_COPY(cmd->bssid_addr, ieee80211broadcastaddr);
+	}
 #endif
 
 	/*

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/serial/ugensa.c 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: ugensa.c,v 1.9.2.1 2007/03/24 14:55:50 yamt Exp $	*/
 
 /*-

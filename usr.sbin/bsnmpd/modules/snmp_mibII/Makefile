@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_mibII/Makefile 312329 2017-01-17 03:41:23Z ngie $
+# $FreeBSD$
 #
 # Author: Harti Brandt <harti@freebsd.org>
 

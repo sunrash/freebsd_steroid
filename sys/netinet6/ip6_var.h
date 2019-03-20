@@ -60,7 +60,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ip_var.h	8.1 (Berkeley) 6/10/93
- * $FreeBSD: releng/12.0/sys/netinet6/ip6_var.h 337783 2018-08-14 17:27:41Z jtl $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET6_IP6_VAR_H_
@@ -346,8 +346,10 @@ VNET_DECLARE(int, ip6_use_defzone);	/* Whether to use the default scope
 					 * zone when unspecified */
 #define	V_ip6_use_defzone		VNET(ip6_use_defzone)
 
-VNET_DECLARE (struct pfil_head, inet6_pfil_hook);	/* packet filter hooks */
-#define	V_inet6_pfil_hook	VNET(inet6_pfil_hook)
+VNET_DECLARE(struct pfil_head *, inet6_pfil_head);
+#define	V_inet6_pfil_head	VNET(inet6_pfil_head)
+#define	PFIL_INET6_NAME		"inet6"
+
 #ifdef IPSTEALTH
 VNET_DECLARE(int, ip6stealth);
 #define	V_ip6stealth			VNET(ip6stealth)

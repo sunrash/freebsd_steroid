@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/hdmi/hdmi_if.m 310306 2016-12-20 01:34:29Z jmcneill $
+# $FreeBSD$
 #
 
 #include <sys/bus.h>

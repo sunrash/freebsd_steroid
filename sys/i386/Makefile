@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/i386/Makefile 224063 2011-07-15 17:27:26Z mckusick $
+# $FreeBSD$
 #	@(#)Makefile	8.1 (Berkeley) 6/11/93
 
 # Makefile for i386 links, tags file
@@ -14,7 +14,7 @@ all:
 	@echo "make links or tags only"
 
 # Directories in which to place i386 tags links
-DI386=	apm i386 ibcs2 include isa linux
+DI386=	apm i386 include isa linux
 
 links::
 	-for i in ${COMMDIR1}; do \
@@ -25,9 +25,9 @@ links::
 	    (cd $$i && { rm -f tags; ln -s ../tags tags; }) done
 
 SI386=	${SYS}/i386/acpica/*.[ch] ${SYS}/i386/bios/*.[ch] \
-	${SYS}/i386/i386/*.[ch] ${SYS}/i386/ibcs2/*.[ch] \
-	${SYS}/i386/include/*.[ch] ${SYS}/i386/isa/*.[ch] \
-	${SYS}/i386/linux/*.[ch] ${SYS}/i386/pci/*.[ch]
+	${SYS}/i386/i386/*.[ch] ${SYS}/i386/include/*.[ch] \
+	${SYS}/i386/isa/*.[ch] ${SYS}/i386/linux/*.[ch] \
+	${SYS}/i386/pci/*.[ch]
 AI386=	${SYS}/i386/i386/*.s
 
 tags::

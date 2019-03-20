@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sbin/dhclient/tests/fake.c 329754 2018-02-21 21:13:08Z asomers $ */
+/* $FreeBSD$ */
 
 #include <setjmp.h>
 #include <stdarg.h>

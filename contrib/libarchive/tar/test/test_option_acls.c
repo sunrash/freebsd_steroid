@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/tar/test/test_option_acls.c 328332 2018-01-24 14:24:17Z mm $");
+__FBSDID("$FreeBSD$");
 
 #if ARCHIVE_ACL_FREEBSD || ARCHIVE_ACL_DARWIN || ARCHIVE_ACL_LIBACL
 static const acl_perm_t acl_perms[] = {

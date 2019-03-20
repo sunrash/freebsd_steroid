@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/ichwd/ichwd.h 340190 2018-11-06 17:31:09Z avg $
+ * $FreeBSD$
  */
 
 #ifndef _ICHWD_H_
@@ -58,6 +58,9 @@ struct ichwd_softc {
 
 	int			 gcs_rid;
 	struct resource		*gcs_res;
+
+	int			 gc_rid;
+	struct resource		*gc_res;
 
 	eventhandler_tag	 ev_tag;
 };
@@ -273,6 +276,7 @@ struct ichwd_softc {
 #define	DEVICEID_WCPT_LP7	0x9cc7
 #define	DEVICEID_WCPT_LP9	0x9cc9
 #define	DEVICEID_LEWISBURG_SMB	0xa1a3
+#define	DEVICEID_SRPTLP_SMB	0x9d23
 
 /* ICH LPC Interface Bridge Registers (ICH5 and older) */
 #define	ICH_GEN_STA		0xd4
@@ -299,6 +303,18 @@ struct ichwd_softc {
 #define	ICH_TCOCTL			0x54    /* TCO Control */
 #define	ICH_TCOCTL_TCO_BASE_EN		0x0100  /* TCO Base decoding enabled */
 #define	ICH_TCOCTL_TCO_BASE_LOCK	0x0001  /* TCOBASE is locked */
+
+/*
+ * Configuration registers in Sunrise Point and Lewisburg PCH Sideband Interface
+ * and Private Configuration Space.
+ */
+#define	SBREG_BAR		0x10
+#define	SMB_GC_REG		0xc
+#define	SMB_GC_SIZE		4
+#define	SMB_GC_NO_REBOOT	0x2
+#define	SMB_PORT_ID		0xc6
+#define	PCR_PORTID_SHIFT	16
+#define	PCR_REG_OFF(pid, reg)	(((pid) << PCR_PORTID_SHIFT) | (reg))
 
 /* register names and locations (relative to PMBASE) */
 #define	SMI_BASE		0x30 /* base address for SMI registers */

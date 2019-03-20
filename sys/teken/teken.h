@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/teken/teken.h 333669 2018-05-16 09:01:02Z dumbbell $
+ * $FreeBSD$
  */
 
 #ifndef _TEKEN_H_
@@ -157,6 +157,7 @@ struct __teken {
 
 	unsigned int	 t_utf8_left;
 	teken_char_t	 t_utf8_partial;
+	teken_char_t	 t_last;
 
 	unsigned int	 t_curscs;
 	teken_scs_t	*t_saved_curscs;

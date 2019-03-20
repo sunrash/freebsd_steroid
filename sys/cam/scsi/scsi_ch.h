@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/cam/scsi/scsi_ch.h 326265 2017-11-27 15:12:43Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: scsi_changer.h,v 1.11 1998/02/13 08:28:32 enami Exp $	*/
 
 /*-

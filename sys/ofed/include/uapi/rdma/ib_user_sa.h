@@ -31,7 +31,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/uapi/rdma/ib_user_sa.h 330490 2018-03-05 11:49:45Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef IB_USER_SA_H

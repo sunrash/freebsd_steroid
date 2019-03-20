@@ -39,7 +39,7 @@
  *
  *	@(#)procfs_vfsops.c	8.7 (Berkeley) 5/10/95
  *
- * $FreeBSD: releng/12.0/sys/fs/procfs/procfs.c 333263 2018-05-04 20:54:27Z jamie $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_composite.c 333317 2018-05-07 07:29:48Z manu $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_clk_composite.c 333317 2018-05-07 07:29:48Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -126,7 +126,7 @@ rk_clk_composite_set_mux(struct clknode *clk, int index)
 
 	DEVICE_LOCK(clk);
 	READ4(clk, sc->muxdiv_offset, &val);
-	val &= ~(sc->mux_mask >> sc->mux_shift);
+	val &= ~sc->mux_mask;
 	val |= index << sc->mux_shift;
 	WRITE4(clk, sc->muxdiv_offset, val);
 	DEVICE_UNLOCK(clk);

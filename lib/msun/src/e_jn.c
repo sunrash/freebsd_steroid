@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/e_jn.c 336089 2018-07-08 16:26:13Z markj $");
+__FBSDID("$FreeBSD$");
 
 /*
  * __ieee754_jn(n, x), __ieee754_yn(n, x)

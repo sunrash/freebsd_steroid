@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/evdev/uinput.h 333111 2018-04-30 10:34:16Z wulf $
+ * $FreeBSD$
  */
 
 #ifndef _EVDEV_UINPUT_H_

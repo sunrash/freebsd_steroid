@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/suite.test.mk 325419 2017-11-05 00:26:28Z bdrewery $
+# $FreeBSD$
 #
 # You must include bsd.test.mk instead of this file from your Makefile.
 #

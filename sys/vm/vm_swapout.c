@@ -71,7 +71,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/vm_swapout.c 339968 2018-10-31 19:28:05Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_kstack_pages.h"
 #include "opt_kstack_max_pages.h"
@@ -742,8 +742,7 @@ swapper_selector(bool wkilled_only)
 /*
  * Limit swapper to swap in one non-WKILLED process in MAXSLP/2
  * interval, assuming that there is:
- * - there exists at least one domain that is not suffering from a shortage of
- *   free memory;
+ * - at least one domain that is not suffering from a shortage of free memory;
  * - no parallel swap-ins;
  * - no other swap-ins in the current SWAPIN_INTERVAL.
  */

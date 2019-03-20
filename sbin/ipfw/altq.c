@@ -17,7 +17,7 @@
  *
  * NEW command line interface for IP firewall facility
  *
- * $FreeBSD: releng/12.0/sbin/ipfw/altq.c 338209 2018-08-22 19:38:48Z pkelsey $
+ * $FreeBSD$
  *
  * altq interface
  */

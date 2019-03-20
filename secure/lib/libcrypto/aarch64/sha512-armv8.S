@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/aarch64/sha512-armv8.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from sha512-armv8.pl. */
 // Copyright 2014-2018 The OpenSSL Project Authors. All Rights Reserved.
 //

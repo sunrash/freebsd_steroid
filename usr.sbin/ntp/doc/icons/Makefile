@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/doc/icons/Makefile 314472 2017-03-01 04:54:06Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

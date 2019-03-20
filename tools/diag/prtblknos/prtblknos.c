@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/diag/prtblknos/prtblknos.c 338117 2018-08-20 20:44:11Z mckusick $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

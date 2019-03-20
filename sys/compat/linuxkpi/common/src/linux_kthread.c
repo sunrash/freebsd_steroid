@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linuxkpi/common/src/linux_kthread.c 320078 2017-06-18 19:22:05Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <linux/compat.h>
 #include <linux/kthread.h>

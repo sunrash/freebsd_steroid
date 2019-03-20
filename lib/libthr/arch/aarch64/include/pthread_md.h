@@ -27,7 +27,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libthr/arch/aarch64/include/pthread_md.h 318955 2017-05-26 15:56:28Z vangyzen $
+ * $FreeBSD$
  */
 
 /*

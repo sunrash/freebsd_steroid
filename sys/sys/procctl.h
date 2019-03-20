@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/procctl.h 332825 2018-04-20 15:19:27Z kib $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_PROCCTL_H_

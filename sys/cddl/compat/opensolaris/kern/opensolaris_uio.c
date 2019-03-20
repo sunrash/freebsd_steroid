@@ -37,7 +37,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/kern/opensolaris_uio.c 326067 2017-11-21 18:01:43Z avg $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

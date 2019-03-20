@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/image.c 314577 2017-03-03 01:56:55Z sjg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/mman.h>
 #include <sys/stat.h>

@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/cc/cc_chd.c 336676 2018-07-24 16:35:52Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -77,8 +77,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netinet/cc/cc_chd.c 336676 2018-07-24 16:35:
 #include <netinet/cc/cc_module.h>
 
 #include <netinet/khelp/h_ertt.h>
-
-#define	CAST_PTR_INT(X)	(*((int*)(X)))
 
 /*
  * Private signal type for rate based congestion signal.
@@ -421,7 +419,7 @@ chd_loss_fair_handler(SYSCTL_HANDLER_ARGS)
 	new = V_chd_loss_fair;
 	error = sysctl_handle_int(oidp, &new, 0, req);
 	if (error == 0 && req->newptr != NULL) {
-		if (CAST_PTR_INT(req->newptr) > 1)
+		if (new > 1)
 			error = EINVAL;
 		else
 			V_chd_loss_fair = new;
@@ -439,8 +437,7 @@ chd_pmax_handler(SYSCTL_HANDLER_ARGS)
 	new = V_chd_pmax;
 	error = sysctl_handle_int(oidp, &new, 0, req);
 	if (error == 0 && req->newptr != NULL) {
-		if (CAST_PTR_INT(req->newptr) == 0 ||
-		    CAST_PTR_INT(req->newptr) > 100)
+		if (new == 0 || new > 100)
 			error = EINVAL;
 		else
 			V_chd_pmax = new;
@@ -458,7 +455,7 @@ chd_qthresh_handler(SYSCTL_HANDLER_ARGS)
 	new = V_chd_qthresh;
 	error = sysctl_handle_int(oidp, &new, 0, req);
 	if (error == 0 && req->newptr != NULL) {
-		if (CAST_PTR_INT(req->newptr) <= V_chd_qmin)
+		if (new <= V_chd_qmin)
 			error = EINVAL;
 		else
 			V_chd_qthresh = new;

@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ffs_balloc.c	8.4 (Berkeley) 9/23/93
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/ext2_balloc.c 327584 2018-01-05 10:04:01Z fsu $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/bpf/bpf_filter/Makefile 307708 2016-10-21 06:56:30Z jkim $
+# $FreeBSD$
 
 TEST_CASES?=	test0001 test0002 test0003 test0004	\
 		test0005 test0006 test0007 test0008	\

@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: dun.c,v 1.5 2004/01/13 01:54:39 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/sdpd/dun.c 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

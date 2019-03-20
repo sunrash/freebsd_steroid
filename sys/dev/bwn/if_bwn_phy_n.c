@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bwn/if_bwn_phy_n.c 328912 2018-02-05 23:38:15Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This is the top-level N-PHY support for the Broadcom softmac driver.

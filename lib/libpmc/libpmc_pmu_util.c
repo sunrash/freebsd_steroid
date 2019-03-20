@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libpmc/libpmc_pmu_util.c 340719 2018-11-21 03:22:37Z mjg $
+ * $FreeBSD$
  *
  */
 

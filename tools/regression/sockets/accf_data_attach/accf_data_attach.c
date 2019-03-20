@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/regression/sockets/accf_data_attach/accf_data_attach.c 322858 2017-08-24 20:52:02Z glebius $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

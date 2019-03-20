@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/mips/tlb.c 326259 2017-11-27 15:07:26Z pfg $
+ * $FreeBSD$
  */
 
 #include "opt_ddb.h"
@@ -348,7 +348,7 @@ DB_SHOW_COMMAND(tlb, ddb_dump_tlb)
 	else
 		cpu = PCPU_GET(cpuid);
 
-	if (cpu < 0 || cpu >= mp_ncpus) {
+	if (cpu >= mp_ncpus) {
 		db_printf("Invalid CPU %u\n", cpu);
 		return;
 	}

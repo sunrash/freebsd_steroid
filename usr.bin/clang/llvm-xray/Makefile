@@ -1,13 +1,19 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/llvm-xray/Makefile 321369 2017-07-22 11:08:25Z dim $
+# $FreeBSD$
 
 PROG_CXX=	llvm-xray
 MAN=
 
 SRCDIR=		tools/llvm-xray
-SRCS+=		func-id-helper.cc
-SRCS+=		llvm-xray.cc
-SRCS+=		xray-extract.cc
-SRCS+=		xray-registry.cc
+SRCS+=		func-id-helper.cpp
+SRCS+=		llvm-xray.cpp
+SRCS+=		xray-account.cpp
+SRCS+=		xray-color-helper.cpp
+SRCS+=		xray-converter.cpp
+SRCS+=		xray-extract.cpp
+SRCS+=		xray-graph-diff.cpp
+SRCS+=		xray-graph.cpp
+SRCS+=		xray-registry.cpp
+SRCS+=		xray-stacks.cpp
 
 LIBADD+=	z
 

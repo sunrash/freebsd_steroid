@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/tcp/Makefile 336672 2018-07-24 14:55:47Z rrs $
+# $FreeBSD$
 #
 
 SYSDIR?=${SRCTOP}/sys

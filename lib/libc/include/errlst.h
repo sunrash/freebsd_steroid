@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/include/errlst.h 326193 2017-11-25 17:12:48Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __ERRLST_H__
@@ -41,5 +41,7 @@ extern const int __hidden_sys_nerr __hidden;
 #define __hidden_sys_errlist sys_errlist
 #define __hidden_sys_nerr sys_nerr
 #endif
+
+extern const char __uprefix[] __hidden;
 
 #endif /* __ERRLST_H__ */

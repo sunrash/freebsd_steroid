@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/netmap/netmap_pt.c 333778 2018-05-18 03:38:17Z mmacy $
+ * $FreeBSD$
  */
 
 /*

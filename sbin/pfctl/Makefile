@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/pfctl/Makefile 337627 2018-08-11 13:58:26Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

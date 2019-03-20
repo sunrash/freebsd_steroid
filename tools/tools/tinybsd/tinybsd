@@ -3,7 +3,7 @@
 #				       <jmelo@FreeBSD.org>
 #		     Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
 #
-# $FreeBSD: releng/12.0/tools/tools/tinybsd/tinybsd 199812 2009-11-25 19:00:30Z julian $
+# $FreeBSD$
 #set -xv
 CURRENTDIR=/usr/src/tools/tools/tinybsd
 if [ ! -d $CURRENTDIR ]
@@ -206,7 +206,7 @@ loadconfig () {
       break
     fi
   done
-  MFSROOT=`confirm_action "$MFSROOT" "Use an MFSROOT? (YES/NO)"`
+  MFSROOT=`confirm_action "$MFSROOT" "Use an MFSROOT? (yes/no)"`
   IMG=`confirm_action "$IMG" "Image file to generate?"`
 
 # example of formatted value (NNN in this case)

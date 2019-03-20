@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.7 2003/08/14 20:06:17 max Exp $
-# $FreeBSD: releng/12.0/usr.sbin/bluetooth/hccontrol/Makefile 338155 2018-08-21 19:28:53Z brd $
+# $FreeBSD$
 
 CONFS=		bluetooth.device.conf
 CONFSDIR=	/etc/defaults

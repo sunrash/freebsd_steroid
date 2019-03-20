@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/dumpcis/printcis.c 327576 2018-01-05 07:09:40Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* 
  * Code cleanup, bug-fix and extension

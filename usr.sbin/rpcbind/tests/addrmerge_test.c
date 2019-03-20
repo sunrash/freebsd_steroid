@@ -27,7 +27,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/usr.sbin/rpcbind/tests/addrmerge_test.c 327464 2018-01-01 09:41:18Z delphij $
+ * $FreeBSD$
  */
 
 #include <rpc/rpc.h>

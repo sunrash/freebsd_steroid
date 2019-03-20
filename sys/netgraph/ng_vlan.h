@@ -28,7 +28,7 @@
  *
  * Author: Ruslan Ermilov <ru@FreeBSD.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_vlan.h 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _NETGRAPH_NG_VLAN_H_

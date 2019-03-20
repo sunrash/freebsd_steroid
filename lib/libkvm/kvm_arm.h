@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libkvm/kvm_arm.h 325728 2017-11-11 23:30:58Z will $
+ * $FreeBSD$
  */
 
 #ifndef __KVM_ARM_H__

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/liblzma/Makefile 312498 2017-01-20 04:46:20Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=		lzma

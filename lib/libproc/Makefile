@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libproc/Makefile 326498 2017-12-03 16:50:16Z markj $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

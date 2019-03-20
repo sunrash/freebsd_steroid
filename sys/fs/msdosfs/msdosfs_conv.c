@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/msdosfs/msdosfs_conv.c 336966 2018-07-31 12:44:28Z emaste $ */
+/* $FreeBSD$ */
 /*	$NetBSD: msdosfs_conv.c,v 1.25 1997/11/17 15:36:40 ws Exp $	*/
 
 /*-

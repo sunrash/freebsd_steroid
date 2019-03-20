@@ -36,7 +36,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/locate/bigram/locate.bigram.c 335395 2018-06-19 23:43:14Z oshogbo $
+ * $FreeBSD$
  */
 
 #if 0

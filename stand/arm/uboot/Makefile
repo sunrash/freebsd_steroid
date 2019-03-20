@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/arm/uboot/Makefile 328783 2018-02-02 15:40:49Z imp $
+# $FreeBSD$
 
 LOADER_UFS_SUPPORT?=	yes
 LOADER_CD9660_SUPPORT?=	no

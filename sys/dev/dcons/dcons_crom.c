@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  * 
  * $Id: dcons_crom.c,v 1.8 2003/10/23 15:47:21 simokawa Exp $
- * $FreeBSD: releng/12.0/sys/dev/dcons/dcons_crom.c 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

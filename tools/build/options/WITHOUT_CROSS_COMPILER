@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_CROSS_COMPILER 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 Set to not build any cross compiler in the cross-tools stage of buildworld.
 When compiling a different version of
 .Fx

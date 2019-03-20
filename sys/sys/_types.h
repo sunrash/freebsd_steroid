@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/_types.h 329859 2018-02-23 04:04:25Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS__TYPES_H_

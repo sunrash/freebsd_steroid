@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/llvm-tblgen/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 PROG_CXX=	llvm-tblgen
 
@@ -32,7 +32,9 @@ SRCS+=		InstrDocsEmitter.cpp
 SRCS+=		InstrInfoEmitter.cpp
 SRCS+=		IntrinsicEmitter.cpp
 SRCS+=		OptParserEmitter.cpp
+SRCS+=		PredicateExpander.cpp
 SRCS+=		PseudoLoweringEmitter.cpp
+SRCS+=		RISCVCompressInstEmitter.cpp
 SRCS+=		RegisterBankEmitter.cpp
 SRCS+=		RegisterInfoEmitter.cpp
 SRCS+=		SDNodeProperties.cpp
@@ -41,6 +43,7 @@ SRCS+=		SubtargetEmitter.cpp
 SRCS+=		SubtargetFeatureInfo.cpp
 SRCS+=		TableGen.cpp
 SRCS+=		Types.cpp
+SRCS+=		WebAssemblyDisassemblerEmitter.cpp
 SRCS+=		X86DisassemblerTables.cpp
 SRCS+=		X86EVEX2VEXTablesEmitter.cpp
 SRCS+=		X86FoldTablesEmitter.cpp

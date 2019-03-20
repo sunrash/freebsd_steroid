@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/i2c/controllers/Makefile 330304 2018-03-03 01:53:51Z rpokala $
+# $FreeBSD$
 
 SUBDIR = alpm amdpm amdsmb ichiic ichsmb intpm ismt nfsmb viapm lpbb pcf
 

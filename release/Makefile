@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/release/Makefile 339980 2018-10-31 23:54:36Z gjb $
+# $FreeBSD$
 #
 # Makefile for building releases and release media.
 #
@@ -194,7 +194,7 @@ disc1: packagesystem
 	cd ${WORLDDIR} && ${IMAKE} installkernel installworld distribution \
 	    DESTDIR=${.OBJDIR}/${.TARGET} MK_AMD=no MK_AT=no \
 	    MK_INSTALLLIB=no MK_LIB32=no MK_MAIL=no \
-	    MK_NCP=no MK_TOOLCHAIN=no MK_PROFILE=no \
+	    MK_TOOLCHAIN=no MK_PROFILE=no \
 	    MK_RESCUE=no MK_DICT=no \
 	    MK_KERNEL_SYMBOLS=no MK_TESTS=no MK_DEBUG_FILES=no \
 	    -DDB_FROM_SRC
@@ -211,6 +211,7 @@ disc1: packagesystem
 	ln -fs /tmp/bsdinstall_etc/resolv.conf ${.TARGET}/etc/resolv.conf
 	echo sendmail_enable=\"NONE\" > ${.TARGET}/etc/rc.conf
 	echo hostid_enable=\"NO\" >> ${.TARGET}/etc/rc.conf
+	echo debug.witness.trace=0 >> ${.TARGET}/etc/sysctl.conf
 	echo vfs.mountroot.timeout=\"10\" >> ${.TARGET}/boot/loader.conf
 	echo kernels_autodetect=\"NO\" >> ${.TARGET}/boot/loader.conf
 	cp ${.CURDIR}/rc.local ${.TARGET}/etc
@@ -223,7 +224,7 @@ bootonly: packagesystem
 	    DESTDIR=${.OBJDIR}/${.TARGET} MK_AMD=no MK_AT=no \
 	    MK_GAMES=no \
 	    MK_INSTALLLIB=no MK_LIB32=no MK_MAIL=no \
-	    MK_NCP=no MK_TOOLCHAIN=no MK_PROFILE=no \
+	    MK_TOOLCHAIN=no MK_PROFILE=no \
 	    MK_RESCUE=no MK_DICT=no \
 	    MK_KERNEL_SYMBOLS=no MK_TESTS=no MK_DEBUG_FILES=no \
 	    -DDB_FROM_SRC
@@ -238,6 +239,7 @@ bootonly: packagesystem
 	ln -fs /tmp/bsdinstall_etc/resolv.conf ${.TARGET}/etc/resolv.conf
 	echo sendmail_enable=\"NONE\" > ${.TARGET}/etc/rc.conf
 	echo hostid_enable=\"NO\" >> ${.TARGET}/etc/rc.conf
+	echo debug.witness.trace=0 >> ${.TARGET}/etc/sysctl.conf
 	echo vfs.mountroot.timeout=\"10\" >> ${.TARGET}/boot/loader.conf
 	echo kernels_autodetect=\"NO\" >> ${.TARGET}/boot/loader.conf
 	cp ${.CURDIR}/rc.local ${.TARGET}/etc
@@ -262,6 +264,7 @@ dvd: packagesystem
 	ln -fs /tmp/bsdinstall_etc/resolv.conf ${.TARGET}/etc/resolv.conf
 	echo sendmail_enable=\"NONE\" > ${.TARGET}/etc/rc.conf
 	echo hostid_enable=\"NO\" >> ${.TARGET}/etc/rc.conf
+	echo debug.witness.trace=0 >> ${.TARGET}/etc/sysctl.conf
 	echo vfs.mountroot.timeout=\"10\" >> ${.TARGET}/boot/loader.conf
 	echo kernels_autodetect=\"NO\" >> ${.TARGET}/boot/loader.conf
 	cp ${.CURDIR}/rc.local ${.TARGET}/etc

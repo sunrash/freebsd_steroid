@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/db_interface.c 339367 2018-10-15 18:56:54Z jhb $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/proc.h>
 #include <vm/vm.h>
@@ -98,7 +98,7 @@ struct db_variable db_regs[] = {
 	{ "a7",		DB_OFFSET(tf_a[7]),	db_frame },
 	{ "sepc",	DB_OFFSET(tf_sepc),	db_frame },
 	{ "sstatus",	DB_OFFSET(tf_sstatus),	db_frame },
-	{ "sbadaddr",	DB_OFFSET(tf_sbadaddr),	db_frame },
+	{ "stval",	DB_OFFSET(tf_stval),	db_frame },
 	{ "scause",	DB_OFFSET(tf_scause),	db_frame },
 };
 

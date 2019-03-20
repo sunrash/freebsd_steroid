@@ -35,7 +35,7 @@
  *
  * @(#)rm_class.c  1.48     97/12/05 SMI
  * $KAME: altq_rmclass.c,v 1.19 2005/04/13 03:44:25 suz Exp $
- * $FreeBSD: releng/12.0/sys/net/altq/altq_rmclass.c 287009 2015-08-21 22:02:22Z loos $
+ * $FreeBSD$
  */
 #include "opt_altq.h"
 #include "opt_inet.h"
@@ -49,17 +49,9 @@
 #include <sys/systm.h>
 #include <sys/errno.h>
 #include <sys/time.h>
-#ifdef ALTQ3_COMPAT
-#include <sys/kernel.h>
-#endif
 
 #include <net/if.h>
 #include <net/if_var.h>
-#ifdef ALTQ3_COMPAT
-#include <netinet/in.h>
-#include <netinet/in_systm.h>
-#include <netinet/ip.h>
-#endif
 
 #include <net/altq/if_altq.h>
 #include <net/altq/altq.h>

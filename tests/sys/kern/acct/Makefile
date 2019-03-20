@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/kern/acct/Makefile 312226 2017-01-15 10:29:53Z ngie $
+# $FreeBSD$
 
 TESTSDIR=	${TESTSBASE}/sys/kern/acct
 

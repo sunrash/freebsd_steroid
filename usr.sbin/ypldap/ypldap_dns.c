@@ -1,5 +1,5 @@
 /*	$OpenBSD: ypldap_dns.c,v 1.8 2015/01/16 06:40:22 deraadt Exp $ */
-/*	$FreeBSD: releng/12.0/usr.sbin/ypldap/ypldap_dns.c 309393 2016-12-02 06:07:27Z araujo $ */
+/*	$FreeBSD$ */
 
 /*
  * Copyright (c) 2003-2008 Henning Brauer <henning@openbsd.org>

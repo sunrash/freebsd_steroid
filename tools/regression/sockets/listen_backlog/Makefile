@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/sockets/listen_backlog/Makefile 281360 2015-04-10 09:26:21Z ngie $
+# $FreeBSD$
 
 PROG=	listen_backlog
 MAN=

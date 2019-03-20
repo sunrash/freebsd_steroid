@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/Makefile.sys.inc 326580 2017-12-05 21:29:47Z bdrewery $
+# $FreeBSD$
 #
 # This is included very early from share/mk/src.sys.env.mk, after
 # /etc/src-env.conf but before /etc/make.conf, /etc/src.conf, or OBJDIR

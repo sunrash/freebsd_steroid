@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/users/users.cc 335636 2018-06-25 11:44:41Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/capsicum.h>
 

@@ -33,7 +33,7 @@
  * LC_CTYPE database generation routines for localedef.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/localedef/ctype.c 339825 2018-10-27 21:17:01Z yuripv $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/tree.h>
 
@@ -120,7 +120,13 @@ add_ctype_impl(ctype_node_t *ctn)
 		ctn->ctype |= (_ISDIGIT | _ISGRAPH | _ISPRINT | _ISXDIGIT | _E4);
 		break;
 	case T_ISSPACE:
-		ctn->ctype |= _ISSPACE;
+		/*
+		 * This can be troublesome as <form-feed>, <newline>,
+		 * <carriage-return>, <tab>, and <vertical-tab> are defined both
+		 * as space and cntrl, and POSIX doesn't allow cntrl/print
+		 * combination.  We will take care of this in dump_ctype().
+		 */
+		ctn->ctype |= (_ISSPACE | _ISPRINT);
 		break;
 	case T_ISCNTRL:
 		ctn->ctype |= _ISCNTRL;
@@ -378,9 +384,15 @@ dump_ctype(void)
 			ctn->ctype |= _ISPRINT;
 
 		/*
-		 * Finally, POSIX requires that certain combinations
-		 * are invalid.  We don't flag this as a fatal error,
-		 * but we will warn about.
+		 * POSIX requires that certain combinations are invalid.
+		 * Try fixing the cases we know about (see add_ctype_impl()).
+		 */
+		if ((ctn->ctype & (_ISSPACE|_ISCNTRL)) == (_ISSPACE|_ISCNTRL))
+			ctn->ctype &= ~_ISPRINT;
+
+		/*
+		 * Finally, don't flag remaining cases as a fatal error,
+		 * and just warn about them.
 		 */
 		if ((ctn->ctype & _ISALPHA) &&
 		    (ctn->ctype & (_ISPUNCT|_ISDIGIT)))

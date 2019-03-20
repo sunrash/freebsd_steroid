@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/allwinner/a10/a10_intc.c 327184 2017-12-25 22:09:25Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

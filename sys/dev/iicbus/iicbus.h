@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/iicbus/iicbus.h 329526 2018-02-18 19:33:28Z ian $
+ * $FreeBSD$
  *
  */
 #ifndef __IICBUS_H

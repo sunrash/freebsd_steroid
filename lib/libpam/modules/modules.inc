@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpam/modules/modules.inc 278182 2015-02-04 06:53:45Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

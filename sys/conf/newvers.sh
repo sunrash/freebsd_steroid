@@ -30,7 +30,7 @@
 # SUCH DAMAGE.
 #
 #	@(#)newvers.sh	8.1 (Berkeley) 4/20/94
-# $FreeBSD: releng/12.0/sys/conf/newvers.sh 341666 2018-12-07 00:00:12Z gjb $
+# $FreeBSD$
 
 # Command line options:
 #
@@ -45,8 +45,8 @@
 #                      included if the tree is modified.
 
 TYPE="FreeBSD"
-REVISION="12.0"
-BRANCH="RELEASE"
+REVISION="13.0"
+BRANCH="CURRENT"
 if [ -n "${BRANCH_OVERRIDE}" ]; then
 	BRANCH=${BRANCH_OVERRIDE}
 fi
@@ -75,6 +75,34 @@ findvcs()
 	cd ${savedir}
 	return 1
 }
+
+git_tree_modified()
+{
+	# git diff-index lists both files that are known to have changes as
+	# well as those with metadata that does not match what is recorded in
+	# git's internal state.  The latter case is indicated by an all-zero
+	# destination file hash.
+
+	local fifo
+
+	fifo=$(mktemp -u)
+	mkfifo -m 600 $fifo || exit 1
+	$git_cmd --work-tree=${VCSTOP} diff-index HEAD > $fifo &
+	while read smode dmode ssha dsha status file; do
+		if ! expr $dsha : '^00*$' >/dev/null; then
+			rm $fifo
+			return 0
+		fi
+		if ! $git_cmd --work-tree=${VCSTOP} diff --quiet -- "${file}"; then
+			rm $fifo
+			return 0
+		fi
+	done < $fifo
+	# No files with content differences.
+	rm $fifo
+	return 1
+}
+
 
 if [ -z "${SYSDIR}" ]; then
     SYSDIR=$(dirname $0)/..
@@ -174,12 +202,6 @@ if [ -z "${svnversion}" ] && [ -x /usr/bin/svnliteversion ] ; then
 	fi
 fi
 
-for dir in /usr/bin /usr/local/bin; do
-	if [ -x "${dir}/p4" ] && [ -z ${p4_cmd} ] ; then
-		p4_cmd=${dir}/p4
-	fi
-done
-
 if findvcs .git; then
 	for dir in /usr/bin /usr/local/bin; do
 		if [ -x "${dir}/git" ] ; then
@@ -216,21 +238,25 @@ fi
 
 if [ -n "$git_cmd" ] ; then
 	git=`$git_cmd rev-parse --verify --short HEAD 2>/dev/null`
-	svn=`$git_cmd svn find-rev $git 2>/dev/null`
-	if [ -n "$svn" ] ; then
-		svn=" r${svn}"
+	gitsvn=`$git_cmd svn find-rev $git 2>/dev/null`
+	if [ -n "$gitsvn" ] ; then
+		svn=" r${gitsvn}"
 		git="=${git}"
 	else
-		svn=`$git_cmd log --grep '^git-svn-id:' | \
+#		Log searches are limited to 10k commits to speed up failures.
+#		We assume that if a tree is more than 10k commits out-of-sync
+#		with FreeBSD, it has forked the the OS and the SVN rev no
+#		longer matters.
+		gitsvn=`$git_cmd log -n 10000 |
 		    grep '^    git-svn-id:' | head -1 | \
 		    sed -n 's/^.*@\([0-9][0-9]*\).*$/\1/p'`
-		if [ -z "$svn" ] ; then
-			svn=`$git_cmd log --format='format:%N' | \
+		if [ -z "$gitsvn" ] ; then
+			gitsvn=`$git_cmd log -n 10000 --format='format:%N' | \
 			     grep '^svn ' | head -1 | \
 			     sed -n 's/^.*revision=\([0-9][0-9]*\).*$/\1/p'`
 		fi
-		if [ -n "$svn" ] ; then
-			svn=" r${svn}"
+		if [ -n "$gitsvn" ] ; then
+			svn=" r${gitsvn}"
 			git="+${git}"
 		else
 			git=" ${git}"
@@ -240,38 +266,18 @@ if [ -n "$git_cmd" ] ; then
 	if [ -n "$git_b" ] ; then
 		git="${git}(${git_b})"
 	fi
-	if $git_cmd --work-tree=${VCSTOP} diff-index \
-	    --name-only HEAD | read dummy; then
+	if git_tree_modified; then
 		git="${git}-dirty"
 		modified=true
 	fi
 fi
 
-if [ -n "$p4_cmd" ] ; then
-	p4version=`cd ${SYSDIR} && $p4_cmd changes -m1 "./...#have" 2>&1 | \
-		awk '{ print $2 }'`
-	case "$p4version" in
-	[0-9]*)
-		p4version=" ${p4version}"
-		p4opened=`cd ${SYSDIR} && $p4_cmd opened ./... 2>&1`
-		case "$p4opened" in
-		File*) ;;
-		//*)
-			p4version="${p4version}+edit"
-			modified=true
-			;;
-		esac
-		;;
-	*)	unset p4version ;;
-	esac
-fi
-
 if [ -n "$hg_cmd" ] ; then
 	hg=`$hg_cmd id 2>/dev/null`
-	svn=`$hg_cmd svn info 2>/dev/null | \
+	hgsvn=`$hg_cmd svn info 2>/dev/null | \
 		awk -F': ' '/Revision/ { print $2 }'`
-	if [ -n "$svn" ] ; then
-		svn=" r${svn}"
+	if [ -n "$hgsvn" ] ; then
+		svn=" r${hgsvn}"
 	fi
 	if [ -n "$hg" ] ; then
 		hg=" ${hg}"
@@ -293,14 +299,14 @@ done
 shift $((OPTIND - 1))
 
 if [ -z "${include_metadata}" ]; then
-	VERINFO="${VERSION}${svn}${git}${hg}${p4version} ${i}"
+	VERINFO="${VERSION}${svn}${git}${hg} ${i}"
 	VERSTR="${VERINFO}\\n"
 else
-	VERINFO="${VERSION} #${v}${svn}${git}${hg}${p4version}: ${t}"
+	VERINFO="${VERSION} #${v}${svn}${git}${hg}: ${t}"
 	VERSTR="${VERINFO}\\n    ${u}@${h}:${d}\\n"
 fi
 
-cat << EOF > vers.c
+vers_content_new=$(cat << EOF
 $COPYRIGHT
 #define SCCSSTR "@(#)${VERINFO}"
 #define VERSTR "${VERSTR}"
@@ -314,5 +320,10 @@ char osrelease[sizeof(RELSTR) > 32 ? sizeof(RELSTR) : 32] = RELSTR;
 int osreldate = ${RELDATE};
 char kern_ident[] = "${i}";
 EOF
+)
+vers_content_old=$(cat vers.c 2>/dev/null || true)
+if [ "$vers_content_new" != "$vers_content_old" ]; then
+	echo "$vers_content_new" > vers.c
+fi
 
 echo $((v + 1)) > version

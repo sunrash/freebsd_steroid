@@ -35,7 +35,7 @@
 
 #include <machine/asm.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/swtch.S 334851 2018-06-08 18:32:26Z kib $");
+__FBSDID("$FreeBSD$");
 
 .macro clear_step_flag pcbflags, tmp
 	tbz	\pcbflags, #PCB_SINGLE_STEP_SHIFT, 999f
@@ -236,12 +236,12 @@ ENTRY(fork_trampoline)
 	msr	daifset, #2
 
 	/* Restore sp and lr */
-	ldp	x0, x1, [sp]
+	ldp	x0, x1, [sp, #TF_SP]
 	msr	sp_el0, x0
 	mov	lr, x1
 
 	/* Restore elr and spsr */
-	ldp	x0, x1, [sp, #16]
+	ldp	x0, x1, [sp, #TF_ELR]
 	msr	elr_el1, x0
 	msr	spsr_el1, x1
 

@@ -59,7 +59,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/vm/vm_kern.h 338836 2018-09-20 18:29:55Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _VM_VM_KERN_H_
@@ -74,7 +74,6 @@ extern struct vmem *kmem_arena;
 extern struct vmem *buffer_arena;
 extern struct vmem *transient_arena;
 extern struct vmem *memguard_arena;
-extern vm_offset_t swapbkva;
 extern u_long vm_kmem_size;
 extern u_int exec_map_entries;
 extern u_int exec_map_entry_size;

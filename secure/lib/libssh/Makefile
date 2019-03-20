@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/lib/libssh/Makefile 339213 2018-10-06 14:38:34Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

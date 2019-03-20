@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libclang_rt/Makefile.inc 337270 2018-08-03 18:52:51Z jhb $
+# $FreeBSD$
 
 .include <bsd.compiler.mk>
 
@@ -14,7 +14,7 @@ CRTSRC=		${SRCTOP}/contrib/compiler-rt
 
 .PATH:		${CRTSRC}/lib
 
-CLANGDIR=	/usr/lib/clang/6.0.1
+CLANGDIR=	/usr/lib/clang/7.0.1
 LIBDIR=		${CLANGDIR}/lib/freebsd
 SHLIBDIR=	${LIBDIR}
 

@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/efi/libefi/wchar.c 313042 2017-02-01 08:46:59Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include <efi.h>
 #include <efilib.h>

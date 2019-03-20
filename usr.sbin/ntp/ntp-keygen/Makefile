@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/ntp-keygen/Makefile 330104 2018-02-28 07:59:55Z delphij $
+# $FreeBSD$
 
 MAN=
 

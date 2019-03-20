@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/userboot/userboot/copy.c 239057 2012-08-05 11:59:46Z ae $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 

@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/mips/beri/loader/loader.h 335117 2018-06-14 06:41:33Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _BOOT_LOADER_H_

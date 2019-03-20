@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/case7.0 302829 2016-07-14 09:34:42Z ache $
+# $FreeBSD$
 
 # Character ranges in a locale other than the POSIX locale, not specified
 # by POSIX.

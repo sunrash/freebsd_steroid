@@ -1,3 +1,3 @@
-# $FreeBSD: releng/12.0/libexec/atf/atf-check/Makefile.inc 257853 2013-11-08 14:33:41Z jmmv $
+# $FreeBSD$
 
 .include "../Makefile.inc"

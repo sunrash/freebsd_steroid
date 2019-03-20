@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/geli/pwgets.c 335321 2018-06-18 16:24:42Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "stand.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/man/man4/man4.powerpc/Makefile 325306 2017-11-02 04:17:10Z jhibbits $
+# $FreeBSD$
 
 PACKAGE=runtime-manuals
 

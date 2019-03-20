@@ -1,8 +1,9 @@
-# $FreeBSD: releng/12.0/lib/libcasper/services/Makefile 325739 2017-11-12 08:34:25Z oshogbo $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
 SUBDIR=		cap_dns
+SUBDIR+=	cap_fileargs
 SUBDIR+=	cap_grp
 SUBDIR+=	cap_pwd
 SUBDIR+=	cap_random

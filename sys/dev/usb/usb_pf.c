@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/usb_pf.c 326022 2017-11-20 19:36:21Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-3-Clause
  *

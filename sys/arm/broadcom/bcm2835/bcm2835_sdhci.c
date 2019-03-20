@@ -27,7 +27,7 @@
  *
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_sdhci.c 330072 2018-02-27 15:01:17Z mmel $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -683,7 +683,7 @@ static driver_t bcm_sdhci_driver = {
 
 DRIVER_MODULE(sdhci_bcm, simplebus, bcm_sdhci_driver, bcm_sdhci_devclass,
     NULL, NULL);
-MODULE_DEPEND(sdhci_bcm, sdhci, 1, 1, 1);
+SDHCI_DEPEND(sdhci_bcm);
 #ifndef MMCCAM
 MMC_DECLARE_BRIDGE(sdhci_bcm);
 #endif

@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_en/mlx5_en_rx.c 336411 2018-07-17 11:53:37Z hselasky $
+ * $FreeBSD$
  */
 
 #include "en.h"
@@ -482,6 +482,7 @@ mlx5e_poll_rx_cq(struct mlx5e_rq *rq, int budget)
 		}
 
 		mlx5e_build_rx_mbuf(cqe, rq, mb, byte_cnt);
+		rq->stats.bytes += byte_cnt;
 		rq->stats.packets++;
 
 #if !defined(HAVE_TCP_LRO_RX)

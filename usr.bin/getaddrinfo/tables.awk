@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 
-#	$FreeBSD: releng/12.0/usr.bin/getaddrinfo/tables.awk 315640 2017-03-20 16:44:55Z vangyzen $
+#	$FreeBSD$
 #	$NetBSD: tables.awk,v 1.2 2014/02/27 01:17:13 ginsbach Exp $
 
 # Copyright (c) 2013 The NetBSD Foundation, Inc.

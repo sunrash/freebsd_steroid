@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/netgraph/atm/sscfu/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #
 # Author: Harti Brandt <harti@freebsd.org>
 #

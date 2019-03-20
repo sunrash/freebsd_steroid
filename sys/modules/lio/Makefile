@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/sys/modules/lio/Makefile 323509 2017-09-12 23:36:58Z sbruno $
+#$FreeBSD$
 
 #.PATH:  ${.CURDIR}
 .PATH: ${.CURDIR}/../../dev/liquidio

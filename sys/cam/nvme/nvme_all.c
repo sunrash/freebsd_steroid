@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cam/nvme/nvme_all.c 338182 2018-08-22 04:29:24Z chuck $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

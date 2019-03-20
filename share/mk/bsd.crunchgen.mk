@@ -27,7 +27,7 @@
 # If CRUNCH_GENERATE_LINKS is set to no, no links will be generated.
 #
 
-# $FreeBSD: releng/12.0/share/mk/bsd.crunchgen.mk 334177 2018-05-24 18:49:19Z bdrewery $
+# $FreeBSD$
 
 ##################################################################
 #  The following is pretty nearly a generic crunchgen-handling makefile

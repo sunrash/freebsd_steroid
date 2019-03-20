@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/tests/tests/tap/Makefile 320443 2017-06-28 08:22:04Z ngie $
+# $FreeBSD$
 
 # The release package to use for the tests contained within the directory
 #

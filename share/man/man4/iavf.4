@@ -29,9 +29,9 @@
 .\"
 .\" * Other names and brands may be claimed as the property of others.
 .\"
-.\" $FreeBSD: releng/12.0/share/man/man4/iavf.4 339340 2018-10-12 22:57:52Z erj $
+.\" $FreeBSD$
 .\"
-.Dd October 5, 2018
+.Dd January 30, 2019
 .Dt IAVF 4
 .Os
 .Sh NAME
@@ -41,6 +41,7 @@
 To compile this driver into the kernel, place the following lines in your
 kernel configuration file:
 .Bd -ragged -offset indent
+.Cd "device iflib"
 .Cd "device iavf"
 .Ed
 .Pp

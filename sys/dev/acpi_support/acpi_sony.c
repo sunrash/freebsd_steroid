@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpi_support/acpi_sony.c 273377 2014-10-21 07:31:21Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_acpi.h"
 #include <sys/param.h>
@@ -114,11 +114,11 @@ static char    *sny_id[] = {"SNY5001", NULL};
 static int
 acpi_sony_probe(device_t dev)
 {
-	int ret = ENXIO;
+	int ret;
 
-	if (ACPI_ID_PROBE(device_get_parent(dev), dev, sny_id)) {
+	ret = ACPI_ID_PROBE(device_get_parent(dev), dev, sny_id, NULL);
+	if (ret <= 0) {
 		device_set_desc(dev, "Sony notebook controller");
-		ret = 0;
 	}
 	return (ret);
 }

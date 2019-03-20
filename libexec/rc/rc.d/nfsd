@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/nfsd 335566 2018-06-22 20:58:51Z rmacklem $
+# $FreeBSD$
 #
 
 # PROVIDE: nfsd

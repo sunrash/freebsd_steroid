@@ -30,7 +30,7 @@
  */ 
 #include <sys/cdefs.h>
 #ifdef __FreeBSD__
-__FBSDID("$FreeBSD: releng/12.0/sys/net80211/ieee80211_hwmp.c 337589 2018-08-10 20:37:32Z dteske $");
+__FBSDID("$FreeBSD$");
 #endif
 
 /*

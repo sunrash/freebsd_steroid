@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkuzip/mkuz_blk.c 298504 2016-04-23 07:23:43Z sobomax $");
+__FBSDID("$FreeBSD$");
 
 #include <stdint.h>
 #include <stdlib.h>

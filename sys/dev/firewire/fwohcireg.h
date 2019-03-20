@@ -33,7 +33,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  * 
- * $FreeBSD: releng/12.0/sys/dev/firewire/fwohcireg.h 331858 2018-04-01 00:25:47Z imp $
+ * $FreeBSD$
  *
  */
 #define		PCI_CBMEM		PCIR_BAR(0)

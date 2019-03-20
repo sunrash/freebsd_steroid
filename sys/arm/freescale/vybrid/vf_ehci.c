@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/freescale/vybrid/vf_ehci.c 335988 2018-07-05 15:52:26Z ian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

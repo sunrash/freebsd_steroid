@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: releng/12.0/tools/boot/universe.sh 336135 2018-07-09 18:02:23Z imp $
+# $FreeBSD$
 
 #
 # Full list of all arches, but we only build a subset. All different mips add any

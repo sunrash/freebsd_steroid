@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powernv/opal_dev.c 337503 2018-08-08 21:19:07Z leitao $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -69,6 +69,9 @@ static device_method_t  opaldev_methods[] = {
 	/* clock interface */
 	DEVMETHOD(clock_gettime,	opal_gettime),
 	DEVMETHOD(clock_settime,	opal_settime),
+
+	/* Bus interface */
+	DEVMETHOD(bus_child_pnpinfo_str, ofw_bus_gen_child_pnpinfo_str),
 
         /* ofw_bus interface */
 	DEVMETHOD(ofw_bus_get_devinfo,	opaldev_get_devinfo),

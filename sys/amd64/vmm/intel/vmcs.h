@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/vmm/intel/vmcs.h 326257 2017-11-27 15:03:07Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _VMCS_H_
@@ -338,6 +338,14 @@ vmcs_write(uint32_t encoding, uint64_t val)
 #define EXIT_REASON_WBINVD		54
 #define EXIT_REASON_XSETBV		55
 #define	EXIT_REASON_APIC_WRITE		56
+#define	EXIT_REASON_RDRAND		57
+#define	EXIT_REASON_INVPCID		58
+#define	EXIT_REASON_VMFUNC		59
+#define	EXIT_REASON_ENCLS		60
+#define	EXIT_REASON_RDSEED		61
+#define	EXIT_REASON_PM_LOG_FULL		62
+#define	EXIT_REASON_XSAVES		63
+#define	EXIT_REASON_XRSTORS		64
 
 /*
  * NMI unblocking due to IRET.

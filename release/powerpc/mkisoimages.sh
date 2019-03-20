@@ -4,7 +4,7 @@
 # Author: Jordan K Hubbard
 # Date:   22 June 2001
 #
-# $FreeBSD: releng/12.0/release/powerpc/mkisoimages.sh 327456 2018-01-01 03:33:01Z nwhitehorn $
+# $FreeBSD$
 #
 # This script is used by release/Makefile to build the (optional) ISO images
 # for a FreeBSD release.  It is considered architecture dependent since each
@@ -23,6 +23,7 @@
 # extra-bits-dir, if provided, contains additional files to be merged
 # into base-bits-dir as part of making the image.
 
+set -e
 
 if [ "$1" = "-b" ]; then
 	bootable=1

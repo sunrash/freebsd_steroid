@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/Makefile.inc 270358 2014-08-22 20:04:51Z delphij $
+# $FreeBSD$
 
 OPENSOLARIS_USR_DISTDIR= ${.CURDIR}/../../../cddl/contrib/opensolaris
 OPENSOLARIS_SYS_DISTDIR= ${.CURDIR}/../../../sys/cddl/contrib/opensolaris

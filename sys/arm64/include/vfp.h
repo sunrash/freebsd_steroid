@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/vfp.h 329878 2018-02-23 20:15:19Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_VFP_H_
@@ -64,6 +64,11 @@ void fpu_kern_enter(struct thread *, struct fpu_kern_ctx *, u_int);
 int fpu_kern_leave(struct thread *, struct fpu_kern_ctx *);
 int fpu_kern_thread(u_int);
 int is_fpu_kern_thread(u_int);
+
+/* Convert to and from Aarch32 FPSCR to Aarch64 FPCR/FPSR */
+#define VFP_FPSCR_FROM_SRCR(vpsr, vpcr) ((vpsr) | ((vpcr) & 0x7c00000))
+#define VFP_FPSR_FROM_FPSCR(vpscr) ((vpscr) &~ 0x7c00000)
+#define VFP_FPCR_FROM_FPSCR(vpsrc) ((vpsrc) & 0x7c00000)
 
 #endif
 

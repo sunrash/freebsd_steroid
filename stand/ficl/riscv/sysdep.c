@@ -7,7 +7,7 @@
 **
 *******************************************************************/
 
-/* $FreeBSD: releng/12.0/stand/ficl/riscv/sysdep.c 330864 2018-03-13 16:33:00Z imp $ */
+/* $FreeBSD$ */
 
 #ifdef TESTMAIN
 #include <stdio.h>

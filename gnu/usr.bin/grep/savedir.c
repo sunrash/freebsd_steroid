@@ -18,7 +18,7 @@
 /* Written by David MacKenzie <djm@gnu.ai.mit.edu>. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/gnu/usr.bin/grep/savedir.c 290350 2015-11-04 05:38:08Z rodrigc $");
+__FBSDID("$FreeBSD$");
 
 #if HAVE_CONFIG_H
 # include <config.h>

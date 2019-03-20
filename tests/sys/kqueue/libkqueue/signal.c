@@ -13,7 +13,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kqueue/libkqueue/signal.c 305467 2016-09-06 08:45:29Z ngie $
+ * $FreeBSD$
  */
 
 #include "common.h"
@@ -188,12 +188,12 @@ test_kevent_signal_oneshot(void)
 void
 test_evfilt_signal()
 {
-	kqfd = kqueue();
-        test_kevent_signal_add();
-        test_kevent_signal_del();
-        test_kevent_signal_get();
-        test_kevent_signal_disable();
-        test_kevent_signal_enable();
-        test_kevent_signal_oneshot();
-	close(kqfd);
+    kqfd = kqueue();
+    test_kevent_signal_add();
+    test_kevent_signal_del();
+    test_kevent_signal_get();
+    test_kevent_signal_disable();
+    test_kevent_signal_enable();
+    test_kevent_signal_oneshot();
+    close(kqfd);
 }

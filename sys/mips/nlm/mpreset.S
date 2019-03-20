@@ -26,7 +26,7 @@
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
  * NETLOGIC_BSD
- * $FreeBSD: releng/12.0/sys/mips/nlm/mpreset.S 331254 2018-03-20 17:58:51Z emaste $
+ * $FreeBSD$
  */
 
 #include <machine/asm.h>

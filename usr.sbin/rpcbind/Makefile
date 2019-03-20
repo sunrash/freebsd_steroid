@@ -1,5 +1,5 @@
 #	$NetBSD: Makefile,v 1.3 2000/06/20 13:56:43 fvdl Exp $
-# $FreeBSD: releng/12.0/usr.sbin/rpcbind/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

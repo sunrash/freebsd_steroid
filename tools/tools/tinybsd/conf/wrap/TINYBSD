@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/tinybsd/conf/wrap/TINYBSD 333173 2018-05-02 15:59:15Z sbruno $
+# $FreeBSD$
 machine		i386
 cpu		I586_CPU
 ident		TINYBSD

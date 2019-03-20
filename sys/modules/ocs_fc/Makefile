@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ocs_fc/Makefile 333099 2018-04-30 07:24:31Z ram $
+# $FreeBSD$
 
 .PATH:	${SRCTOP}/sys/dev/ocs_fc
 KMOD = ocs_fc

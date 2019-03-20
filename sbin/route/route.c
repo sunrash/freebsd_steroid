@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)route.c	8.6 (Berkeley) 4/28/95";
 #endif /* not lint */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/route/route.c 331844 2018-03-31 15:06:14Z melifaro $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/file.h>
@@ -1050,10 +1050,13 @@ newroute(int argc, char **argv)
 			}
 			printf("\n");
 		}
+	}
 
-		fibnum = 0;
-		TAILQ_FOREACH(fl, &fibl_head, fl_next) {
-			if (fl->fl_error != 0) {
+	fibnum = 0;
+	TAILQ_FOREACH(fl, &fibl_head, fl_next) {
+		if (fl->fl_error != 0) {
+			error = 1;
+			if (!qflag) {
 				printf("%s %s %s", cmd, (nrflags & F_ISHOST)
 				    ? "host" : "net", dest);
 				if (*gateway)
@@ -1087,7 +1090,6 @@ newroute(int argc, char **argv)
 					break;
 				}
 				printf(": %s\n", errmsg);
-				error = 1;
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/efi/loader/Makefile 337914 2018-08-16 16:30:23Z imp $
+# $FreeBSD$
 
 LOADER_NET_SUPPORT?=	yes
 LOADER_MSDOS_SUPPORT?=	yes
@@ -26,7 +26,7 @@ SRCS=	autoload.c \
 	vers.c
 
 CFLAGS+=	-I${.CURDIR}/../loader
-.if ${MK_ZFS} != "no"
+.if ${MK_LOADER_ZFS} != "no"
 CFLAGS+=	-I${ZFSSRC}
 CFLAGS+=	-DEFI_ZFS_BOOT
 HAVE_ZFS=	yes

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/tests/Makefile 318011 2017-05-09 05:22:51Z ngie $
+# $FreeBSD$
 
 SUBDIR+=	framework
 SUBDIR+=	.WAIT

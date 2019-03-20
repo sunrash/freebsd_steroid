@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/etc/mtree/BSD.tests.dist 340753 2018-11-22 04:39:06Z kevans $
+# $FreeBSD$
 #
 # Please see the file src/etc/mtree/README before making changes to this file.
 #
@@ -268,6 +268,14 @@
                 ..
             ..
             test-programs
+            ..
+        ..
+        csu
+            dynamic
+            ..
+            dynamiclib
+            ..
+            static
             ..
         ..
         libarchive
@@ -752,6 +760,8 @@
             tunnel
             ..
         ..
+    netmap
+    ..
         netpfil
             pf
                 ioctl

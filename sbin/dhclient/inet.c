@@ -45,7 +45,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/dhclient/inet.c 326853 2017-12-14 15:41:32Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "dhcpd.h"
 

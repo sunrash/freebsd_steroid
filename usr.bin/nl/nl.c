@@ -34,7 +34,7 @@
 __COPYRIGHT(
 "@(#) Copyright (c) 1999\
  The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$FreeBSD: releng/12.0/usr.bin/nl/nl.c 326276 2017-11-27 15:37:16Z pfg $");
+__RCSID("$FreeBSD$");
 #endif    
 
 #include <sys/types.h>

@@ -29,7 +29,7 @@
 #define __R500_REG_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/r500_reg.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* pipe config regs */
 #define R300_GA_POLY_MODE				0x4288

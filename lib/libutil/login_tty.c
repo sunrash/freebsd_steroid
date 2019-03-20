@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libutil/login_tty.c 334106 2018-05-23 17:02:12Z jhb $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)login_tty.c	8.1 (Berkeley) 6/4/93");
 
 #include <sys/param.h>

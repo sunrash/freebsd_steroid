@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/usr.sbin/periodic/etc/daily/500.queuerun 94342 2002-04-10 03:58:40Z gshapiro $
+# $FreeBSD$
 #
 
 # If there is a global system configuration file, suck it in.

@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/mips/atheros/ar933x_chip.h 326259 2017-11-27 15:07:26Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef	__AR933X_CHIP_H__
 #define	__AR933X_CHIP_H__

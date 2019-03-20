@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/nfs/nfsrvstate.h 335870 2018-07-02 19:21:33Z rmacklem $
+ * $FreeBSD$
  */
 
 #ifndef _NFS_NFSRVSTATE_H_

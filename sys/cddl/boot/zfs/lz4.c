@@ -31,7 +31,7 @@
  * - LZ4 homepage : http://fastcompression.blogspot.com/p/lz4.html
  * - LZ4 source repository : http://code.google.com/p/lz4/
  *
- * $FreeBSD: releng/12.0/sys/cddl/boot/zfs/lz4.c 300800 2016-05-26 23:20:17Z bdrewery $
+ * $FreeBSD$
  */
 
 #include <netinet/in.h>

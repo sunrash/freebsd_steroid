@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/xilinx/zy7_reg.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 /*

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/opencrypto/xform_enc.h 331724 2018-03-29 04:02:50Z cem $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: xform.h,v 1.8 2001/08/28 12:20:43 ben Exp $	*/
 
 /*-

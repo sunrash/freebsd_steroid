@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/kerberos5/include/crypto-headers.h 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 #ifndef __crypto_headers_h__
 #define __crypto_headers_h__
 

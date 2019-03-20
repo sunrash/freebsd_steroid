@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/dev/veriexec/veriexec_ioctl.h 335400 2018-06-20 00:48:46Z stevek $
+ * $FreeBSD$
  *
  * Copyright (c) 2011-2013, 2015, Juniper Networks, Inc.
  * All rights reserved.

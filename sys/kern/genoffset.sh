@@ -26,7 +26,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/kern/genoffset.sh 335880 2018-07-03 02:50:07Z mmacy $
+# $FreeBSD$
 
 usage()
 {

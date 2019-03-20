@@ -25,19 +25,14 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mkimg/format.c 306621 2016-10-03 02:37:28Z marcel $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stat.h>
-#include <err.h>
 #include <errno.h>
-#include <stdint.h>
-#include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
 
 #include "image.h"
 #include "format.h"
-#include "mkimg.h"
 
 static struct mkimg_format *first;
 static struct mkimg_format *format;

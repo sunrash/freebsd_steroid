@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)ioccom.h	8.2 (Berkeley) 3/28/94
- * $FreeBSD: releng/12.0/sys/sys/ioccom.h 331077 2018-03-16 22:23:04Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_IOCCOM_H_

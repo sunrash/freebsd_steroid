@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/efi/libefi/Makefile 330813 2018-03-12 21:40:14Z imp $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 
@@ -44,7 +44,7 @@ CFLAGS+= -fPIC -mno-red-zone
 .endif
 CFLAGS+= -I${EFIINC}
 CFLAGS+= -I${EFIINCMD}
-.if ${MK_ZFS} != "no"
+.if ${MK_LOADER_ZFS} != "no"
 CFLAGS+=	-I${ZFSSRC}
 CFLAGS+=	-DEFI_ZFS_BOOT
 .endif

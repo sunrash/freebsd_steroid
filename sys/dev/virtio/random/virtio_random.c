@@ -29,7 +29,7 @@
 /* Driver for VirtIO entropy device. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/virtio/random/virtio_random.c 338324 2018-08-26 12:51:46Z markm $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)limits.h	8.2 (Berkeley) 1/4/94
- * $FreeBSD: releng/12.0/include/limits.h 339184 2018-10-04 21:55:58Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _LIMITS_H_

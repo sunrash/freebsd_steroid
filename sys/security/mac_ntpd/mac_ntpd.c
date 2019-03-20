@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_ntpd/mac_ntpd.c 336525 2018-07-19 23:55:29Z ian $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

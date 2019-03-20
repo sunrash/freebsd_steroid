@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libthr/sys/Makefile.inc 144518 2005-04-02 01:20:00Z davidxu $
+# $FreeBSD$
 
 .PATH:	 ${.CURDIR}/sys
 

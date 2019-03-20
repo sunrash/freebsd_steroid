@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/reg.h 308731 2016-11-16 15:21:32Z br $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_REG_H_

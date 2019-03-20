@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/opencrypto/xform_userland.h 326443 2017-12-02 00:07:09Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _CRYPTO_XFORM_USERLAND_H_

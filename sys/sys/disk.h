@@ -8,7 +8,7 @@
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/sys/sys/disk.h 326408 2017-11-30 20:33:45Z pfg $
+ * $FreeBSD$
  *
  */
 

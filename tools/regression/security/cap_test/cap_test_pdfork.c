@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/regression/security/cap_test/cap_test_pdfork.c 263234 2014-03-16 11:04:44Z rwatson $
+ * $FreeBSD$
  */
 
 /*
@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/regression/security/cap_test/cap_test_pdfork.c 263234 2014-03-16 11:04:44Z rwatson $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

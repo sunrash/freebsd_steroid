@@ -23,7 +23,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/spibus/spigen.c 336202 2018-07-11 17:54:41Z ian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 #include "opt_spi.h"

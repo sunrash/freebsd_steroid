@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/usb_ioctl.h 333760 2018-05-17 19:54:11Z trasz $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

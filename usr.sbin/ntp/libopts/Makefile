@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/libopts/Makefile 314472 2017-03-01 04:54:06Z ngie $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/contrib/ntp/sntp/libopts
 

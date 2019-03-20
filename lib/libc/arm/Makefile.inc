@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/arm/Makefile.inc 324340 2017-10-05 23:01:33Z imp $
+# $FreeBSD$
 #
 # Machine dependent definitions for the arm architecture.
 #

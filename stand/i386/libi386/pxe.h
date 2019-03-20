@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/i386/libi386/pxe.h 337524 2018-08-09 03:45:47Z kevans $
+ * $FreeBSD$
  */
 
 /*

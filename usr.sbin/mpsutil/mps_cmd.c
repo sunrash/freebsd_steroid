@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__RCSID("$FreeBSD: releng/12.0/usr.sbin/mpsutil/mps_cmd.c 321604 2017-07-27 05:31:48Z scottl $");
+__RCSID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/errno.h>

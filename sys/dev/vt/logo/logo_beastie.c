@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/vt/logo/logo_beastie.c 285766 2015-07-21 20:33:36Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/vt/vt.h>
 

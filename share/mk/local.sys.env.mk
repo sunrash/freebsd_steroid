@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/local.sys.env.mk 325557 2017-11-08 16:03:58Z bdrewery $
+# $FreeBSD$
 
 # This makefile is for customizations that should be done early
 

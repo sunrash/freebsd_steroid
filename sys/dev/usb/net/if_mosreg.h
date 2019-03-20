@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/net/if_mosreg.h 325966 2017-11-18 14:26:50Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2010, 2011 Rick van der Zwet <info@rickvanderzwet.nl>
  *

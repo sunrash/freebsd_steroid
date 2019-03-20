@@ -1,7 +1,12 @@
-# $FreeBSD: releng/12.0/sys/modules/dtb/rpi/Makefile 337276 2018-08-03 22:06:15Z manu $
+# $FreeBSD$
 # DTS files for the Raspberry Pi-B
+.if ${MACHINE_ARCH:Marmv[67]*} != ""
 DTSO=	\
 	spigen-rpi-b.dtso \
-	spigen-rpi2.dtso \
+	spigen-rpi2.dtso
+.elif ${MACHINE_ARCH} == "aarch64"
+DTSO=	\
+	spigen-rpi3.dtso
+.endif
 
 .include <bsd.dtb.mk>

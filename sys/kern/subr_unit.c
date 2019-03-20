@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/kern/subr_unit.c 326271 2017-11-27 15:20:12Z pfg $
+ * $FreeBSD$
  *
  *
  * Unit number allocation functions.
@@ -97,6 +97,19 @@ static MALLOC_DEFINE(M_UNIT, "Unitno", "Unit number allocation");
 static struct mtx unitmtx;
 
 MTX_SYSINIT(unit, &unitmtx, "unit# allocation", MTX_DEF);
+
+#ifdef UNR64_LOCKED
+uint64_t
+alloc_unr64(struct unrhdr64 *unr64)
+{
+	uint64_t item;
+
+	mtx_lock(&unitmtx);
+	item = unr64->counter++;
+	mtx_unlock(&unitmtx);
+	return (item);
+}
+#endif
 
 #else /* ...USERLAND */
 

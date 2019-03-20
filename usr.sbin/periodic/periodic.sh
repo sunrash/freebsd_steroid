@@ -1,6 +1,6 @@
 #!/bin/sh -
 #
-# $FreeBSD: releng/12.0/usr.sbin/periodic/periodic.sh 326041 2017-11-20 23:51:51Z asomers $
+# $FreeBSD$
 #
 # Run nightly periodic scripts
 #

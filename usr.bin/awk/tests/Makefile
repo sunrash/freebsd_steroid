@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/awk/tests/Makefile 327806 2018-01-11 05:36:13Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
 

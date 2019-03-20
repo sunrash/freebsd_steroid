@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libufs/sblock.c 330264 2018-03-02 04:34:53Z mckusick $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/mount.h>
@@ -54,7 +54,7 @@ sbread(struct uufsd *disk)
 
 	ERROR(disk, NULL);
 
-	if ((errno = sbget(disk->d_fd, &fs, -1)) != 0) {
+	if ((errno = sbget(disk->d_fd, &fs, STDSB)) != 0) {
 		switch (errno) {
 		case EIO:
 			ERROR(disk, "non-existent or truncated superblock");

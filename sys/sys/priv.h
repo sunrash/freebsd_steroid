@@ -28,7 +28,7 @@
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/priv.h 331622 2018-03-27 15:29:32Z kib $
+ * $FreeBSD$
  */
 
 /*
@@ -532,7 +532,7 @@
 struct thread;
 struct ucred;
 int	priv_check(struct thread *td, int priv);
-int	priv_check_cred(struct ucred *cred, int priv, int flags);
+int	priv_check_cred(struct ucred *cred, int priv);
 #endif
 
 #endif /* !_SYS_PRIV_H_ */

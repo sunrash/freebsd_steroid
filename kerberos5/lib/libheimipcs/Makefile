@@ -1,4 +1,4 @@
-#$FreeBSD: releng/12.0/kerberos5/lib/libheimipcs/Makefile 275022 2014-11-25 09:57:42Z bapt $
+#$FreeBSD$
 
 LIB=	heimipcs
 PRIVATELIB=

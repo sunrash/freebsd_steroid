@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/controller/dwc_otg_fdt.h 308755 2016-11-17 15:12:03Z br $
+ * $FreeBSD$
  */
 
 #ifndef _DWC_OTG_FDT_H_

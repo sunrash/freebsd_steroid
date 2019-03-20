@@ -33,7 +33,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/geom_disk.h 327996 2018-01-15 11:20:00Z avg $
+ * $FreeBSD$
  */
 
 #ifndef _GEOM_GEOM_DISK_H_
@@ -109,8 +109,8 @@ struct disk {
 	u_int			d_fwheads;
 	u_int			d_maxsize;
 	off_t			d_delmaxsize;
-	u_int			d_stripeoffset;
-	u_int			d_stripesize;
+	off_t			d_stripeoffset;
+	off_t			d_stripesize;
 	char			d_ident[DISK_IDENT_SIZE];
 	char			d_descr[DISK_IDENT_SIZE];
 	uint16_t		d_hba_vendor;
@@ -151,7 +151,8 @@ void disk_add_alias(struct disk *disk, const char *);
 #define DISK_VERSION_03		0x5856105c
 #define DISK_VERSION_04		0x5856105d
 #define DISK_VERSION_05		0x5856105e
-#define DISK_VERSION		DISK_VERSION_05
+#define DISK_VERSION_06		0x5856105f
+#define DISK_VERSION		DISK_VERSION_06
 
 #endif /* _KERNEL */
 #endif /* _GEOM_GEOM_DISK_H_ */

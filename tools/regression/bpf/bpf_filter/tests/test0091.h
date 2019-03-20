@@ -1,7 +1,7 @@
 /*-
  * Test 0091:	Divide by 0 (BPF_ALU+BPF_MOD+BPF_K)
  *
- * $FreeBSD: releng/12.0/tools/regression/bpf/bpf_filter/tests/test0091.h 307708 2016-10-21 06:56:30Z jkim $
+ * $FreeBSD$
  */
 
 /* BPF program */

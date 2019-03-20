@@ -29,7 +29,7 @@ POSSIBILITY OF SUCH DAMAGE.
 ***************************************************************************/
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgb/cxgb_sge.c 333288 2018-05-06 00:48:43Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 #include "opt_inet.h"

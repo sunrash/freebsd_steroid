@@ -13,7 +13,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/dev/iwm/if_iwm_debug.h 319578 2017-06-04 21:10:14Z adrian $
+ * $FreeBSD$
  */
 
 #ifndef	__IF_IWM_DEBUG_H__
@@ -44,6 +44,7 @@ enum {
 	IWM_DEBUG_TEMP		= 0x00100000,	/* Thermal Sensor handling */
 	IWM_DEBUG_FW		= 0x00200000,	/* Firmware management */
 	IWM_DEBUG_LAR		= 0x00400000,	/* Location Aware Regulatory */
+	IWM_DEBUG_TE		= 0x00800000,	/* Time Event handling */
 	IWM_DEBUG_REGISTER	= 0x20000000,	/* print chipset register */
 	IWM_DEBUG_TRACE		= 0x40000000,	/* Print begin and start driver function */
 	IWM_DEBUG_FATAL		= 0x80000000,	/* fatal errors */

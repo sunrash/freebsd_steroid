@@ -54,7 +54,7 @@
  * SUCH DAMAGE.
  *
  *
- *	$FreeBSD: releng/12.0/sys/dev/amr/amrio.h 326255 2017-11-27 14:52:40Z pfg $
+ *	$FreeBSD$
  */
 
 /*

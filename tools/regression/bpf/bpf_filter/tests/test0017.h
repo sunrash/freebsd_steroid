@@ -1,7 +1,7 @@
 /*-
  * Test 0017:	BPF_JMP+BPF_JGE+BPF_K
  *
- * $FreeBSD: releng/12.0/tools/regression/bpf/bpf_filter/tests/test0017.h 307708 2016-10-21 06:56:30Z jkim $
+ * $FreeBSD$
  */
 
 /* BPF program */

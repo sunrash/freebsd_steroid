@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/controller/usb_controller.c 336770 2018-07-27 18:28:22Z imp $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/mkcsmapper/yacc.y 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 /*     $NetBSD: yacc.y,v 1.11 2016/06/28 09:22:16 wiz Exp $    */
 
 %{

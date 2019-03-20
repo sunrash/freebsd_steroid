@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ffec/Makefile 319899 2017-06-13 14:07:13Z ian $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/ffec
 

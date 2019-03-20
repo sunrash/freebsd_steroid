@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/security/audit/bsm_errno.c 326023 2017-11-20 19:43:44Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 
@@ -243,6 +243,13 @@ static const struct bsm_errno bsm_errnos[] = {
 	ERRNO_NO_LOCAL_MAPPING,
 #endif
 	ES("Process died with the lock") },
+	{ BSM_ERRNO_EINTEGRITY,
+#ifdef EINTEGRITY
+	EINTEGRITY,
+#else
+	ERRNO_NO_LOCAL_MAPPING,
+#endif
+	ES("Integrity check failed") },
 	{ BSM_ERRNO_ENOTRECOVERABLE,
 #ifdef ENOTRECOVERABLE
 	ENOTRECOVERABLE,

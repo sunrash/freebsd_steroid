@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_cru.c 334112 2018-05-23 19:07:03Z manu $
+ * $FreeBSD$
  */
 
 /*
@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk_cru.c 334112 2018-05-23 19:07:03Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -220,8 +220,11 @@ rk_cru_attach(device_t dev)
 		switch (sc->clks[i].type) {
 		case RK_CLK_UNDEFINED:
 			break;
-		case RK_CLK_PLL:
-			rk_clk_pll_register(sc->clkdom, sc->clks[i].clk.pll);
+		case RK3328_CLK_PLL:
+			rk3328_clk_pll_register(sc->clkdom, sc->clks[i].clk.pll);
+			break;
+		case RK3399_CLK_PLL:
+			rk3399_clk_pll_register(sc->clkdom, sc->clks[i].clk.pll);
 			break;
 		case RK_CLK_COMPOSITE:
 			rk_clk_composite_register(sc->clkdom,

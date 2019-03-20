@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/nss/getpw_test.c 319043 2017-05-28 04:41:06Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <pwd.h>

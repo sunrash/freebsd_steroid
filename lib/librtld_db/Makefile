@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/librtld_db/Makefile 303531 2016-07-30 03:05:23Z markj $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

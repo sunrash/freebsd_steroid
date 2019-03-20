@@ -26,7 +26,7 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/getconf/getconf.h 334070 2018-05-23 02:51:56Z wollman $
+ * $FreeBSD$
  */
 
 #ifdef STABLE

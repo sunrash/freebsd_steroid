@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/geom/geom_label/Makefile 328432 2018-01-26 06:21:24Z lwhsu $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/geom/label
 

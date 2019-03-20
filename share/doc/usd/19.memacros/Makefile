@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.1 (Berkeley) 6/8/93
-# $FreeBSD: releng/12.0/share/doc/usd/19.memacros/Makefile 314652 2017-03-04 11:26:40Z ngie $
+# $FreeBSD$
 
 VOLUME=		usd/19.memacros
 SRCS=		meintro.me-sed

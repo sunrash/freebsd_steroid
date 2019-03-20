@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/iicbus/iic_recover_bus.h 320461 2017-06-29 01:50:58Z ian $
+ * $FreeBSD$
  */
 
 /*

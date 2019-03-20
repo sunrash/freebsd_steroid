@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/route6d/route6d.c 337500 2018-08-08 20:15:40Z markj $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: route6d.c,v 1.104 2003/10/31 00:30:20 itojun Exp $	*/
 
 /*-

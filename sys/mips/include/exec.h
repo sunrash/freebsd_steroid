@@ -31,7 +31,7 @@
  *	@(#)exec.h	8.1 (Berkeley) 6/11/93
  *	from: src/sys/i386/include/exec.h,v 1.8 1999/08/28 00:44:11 peter
  *	JNPR: exec.h,v 1.3 2006/08/07 05:38:57 katta
- * $FreeBSD: releng/12.0/sys/mips/include/exec.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_EXEC_H_

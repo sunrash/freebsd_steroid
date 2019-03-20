@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/powerpc/kboot/kbootfdt.c 326384 2017-11-30 05:01:56Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <fdt_platform.h>

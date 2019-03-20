@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/auto.obj.mk 325404 2017-11-04 21:02:26Z sjg $
+# $FreeBSD$
 # $Id: auto.obj.mk,v 1.12 2015/12/16 01:57:06 sjg Exp $
 #
 #	@(#) Copyright (c) 2004, Simon J. Gerraty

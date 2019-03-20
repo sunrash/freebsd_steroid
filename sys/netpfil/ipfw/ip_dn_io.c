@@ -30,7 +30,7 @@
  * Dummynet portions related to packet handling.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_dn_io.c 337860 2018-08-15 16:36:29Z loos $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 

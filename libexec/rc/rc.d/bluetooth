@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/bluetooth 325287 2017-11-01 18:58:54Z cem $
+# $FreeBSD$
 
 # PROVIDE: bluetooth
 # REQUIRE: DAEMON

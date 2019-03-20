@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fs.h	8.7 (Berkeley) 4/19/94
- * $FreeBSD: releng/12.0/sys/fs/ext2fs/fs.h 333584 2018-05-13 19:19:10Z fsu $
+ * $FreeBSD$
  */
 
 #ifndef _FS_EXT2FS_FS_H_

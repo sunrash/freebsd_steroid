@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/devd/devd.hh 338888 2018-09-22 15:32:53Z imp $
+ * $FreeBSD$
  */
 
 #ifndef DEVD_HH

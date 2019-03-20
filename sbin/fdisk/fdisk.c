@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/fdisk/fdisk.c 298861 2016-04-30 19:58:54Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/disk.h>
 #include <sys/disklabel.h>
@@ -67,7 +67,7 @@ static char lbuf[LBUF];
 
 #define Decimal(str, ans, tmp, maxval) if (decimal(str, &tmp, ans, maxval)) ans = tmp
 
-#define MAX_SEC_SIZE 2048	/* maximum section size that is supported */
+#define MAX_SEC_SIZE 65536	/* maximum sector size that is supported */
 #define MIN_SEC_SIZE 512	/* the sector size to start sensing at */
 static int secsize = 0;		/* the sensed sector size */
 

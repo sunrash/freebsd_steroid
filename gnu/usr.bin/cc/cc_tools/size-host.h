@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/gnu/usr.bin/cc/cc_tools/size-host.h 169718 2007-05-19 04:25:59Z kan $ */
+/* $FreeBSD$ */
 
 #ifdef	SIZEOF_INT
 # undef	SIZEOF_INT

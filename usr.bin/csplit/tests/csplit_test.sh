@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/csplit/tests/csplit_test.sh 317942 2017-05-08 15:51:29Z cem $
+# $FreeBSD$
 
 atf_test_case lines_lt_count
 lines_lt_count_head()

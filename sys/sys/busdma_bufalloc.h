@@ -27,7 +27,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/sys/busdma_bufalloc.h 327903 2018-01-12 23:41:12Z jeff $
+ * $FreeBSD$
  */
 
 /*

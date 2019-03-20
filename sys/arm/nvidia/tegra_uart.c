@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_uart.c 338074 2018-08-19 21:10:21Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 
 /*

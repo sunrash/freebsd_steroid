@@ -29,7 +29,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/crypto/cryptotest.c 331725 2018-03-29 04:07:53Z cem $
+ * $FreeBSD$
  */
 
 /*

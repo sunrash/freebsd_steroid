@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  * 
  * $Id: dconschat.c,v 1.76 2003/10/23 06:21:13 simokawa Exp $
- * $FreeBSD: releng/12.0/usr.sbin/dconschat/dconschat.c 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

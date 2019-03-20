@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libnetbsd/Makefile 316572 2017-04-06 14:36:08Z emaste $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

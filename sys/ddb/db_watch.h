@@ -25,7 +25,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/ddb/db_watch.h 326403 2017-11-30 15:48:35Z pfg $
+ * $FreeBSD$
  */
 
 /*

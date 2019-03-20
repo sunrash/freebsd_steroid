@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/files.bcm283x 335779 2018-06-28 21:14:33Z gonzo $
+# $FreeBSD$
 
 arm/broadcom/bcm2835/bcm2835_bsc.c		optional bcm2835_bsc
 arm/broadcom/bcm2835/bcm2835_cpufreq.c		standard

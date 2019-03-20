@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/packages/kernel.ucl 330929 2018-03-14 14:45:57Z kevans $
+# $FreeBSD$
 #
 
 name = "FreeBSD-%PKGNAME%"

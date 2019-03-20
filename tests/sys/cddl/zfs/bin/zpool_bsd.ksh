@@ -1,7 +1,7 @@
 #!/usr/local/bin/ksh93 -p
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/bin/zpool_bsd.ksh 331613 2018-03-27 11:49:15Z avg $
+# $FreeBSD$
 
 cmd=$1
 

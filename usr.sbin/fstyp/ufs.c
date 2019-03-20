@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/fstyp/ufs.c 328426 2018-01-26 00:58:32Z mckusick $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <ufs/ufs/dinode.h>
@@ -50,7 +50,7 @@ fstyp_ufs(FILE *fp, char *label, size_t labelsize)
 {
 	struct fs *fs;
 
-	switch (sbget(fileno(fp), &fs, -1)) {
+	switch (sbget(fileno(fp), &fs, STDSB)) {
 	case 0:
 		strlcpy(label, fs->fs_volname, labelsize);
 		return (0);

@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.bin/sed/tests/sed2_test.sh 338375 2018-08-29 17:09:03Z markj $
+# $FreeBSD$
 #
 
 atf_test_case inplace_hardlink_src

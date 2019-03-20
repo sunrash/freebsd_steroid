@@ -68,7 +68,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD: releng/12.0/share/examples/kld/cdev/module/cdev.h 326275 2017-11-27 15:28:26Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef __CDEV_H_

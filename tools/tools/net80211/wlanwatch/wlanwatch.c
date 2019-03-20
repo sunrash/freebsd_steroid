@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/net80211/wlanwatch/wlanwatch.c 263152 2014-03-14 06:29:43Z glebius $
+ * $FreeBSD$
  */
 
 /*

@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *
- *	$FreeBSD: releng/12.0/sys/crypto/aesni/aesni_ghash.c 322600 2017-08-16 22:54:35Z rlibby $
+ *	$FreeBSD$
  *
  */
 

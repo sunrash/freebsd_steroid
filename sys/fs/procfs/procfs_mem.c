@@ -35,7 +35,7 @@
  *
  *	@(#)procfs_mem.c	8.5 (Berkeley) 6/15/94
  *
- * $FreeBSD: releng/12.0/sys/fs/procfs/procfs_mem.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

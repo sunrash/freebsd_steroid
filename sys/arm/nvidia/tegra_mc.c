@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_mc.c 308286 2016-11-04 11:39:19Z mmel $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Memory controller driver for Tegra SoCs.

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/regex/Makefile.inc 328240 2018-01-22 02:44:41Z kevans $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

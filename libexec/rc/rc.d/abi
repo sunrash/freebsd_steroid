@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/abi 314373 2017-02-28 05:14:42Z glebius $
+# $FreeBSD$
 #
 
 # PROVIDE: abi

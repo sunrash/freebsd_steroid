@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/lex/initskel.c 250881 2013-05-21 19:32:35Z jkim $ */
+/* $FreeBSD$ */
 /* File created from flex.skl via mkskel.sh */
 
 #include "flexdef.h"

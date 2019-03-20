@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/powernv/opal.h 334015 2018-05-22 03:57:32Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _POWERNV_OPAL_H

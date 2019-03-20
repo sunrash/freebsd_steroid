@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_common.h 331224 2018-03-19 20:55:05Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _IXGBE_COMMON_H_
 #define _IXGBE_COMMON_H_

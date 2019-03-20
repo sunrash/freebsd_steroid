@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/atomic.h 337433 2018-08-07 18:56:51Z marius $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_ATOMIC_H_

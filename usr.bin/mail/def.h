@@ -30,7 +30,7 @@
  *
  *	@(#)def.h	8.4 (Berkeley) 4/20/95
  *
- * $FreeBSD: releng/12.0/usr.bin/mail/def.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /*

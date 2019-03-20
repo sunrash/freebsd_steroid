@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcasper/services/cap_sysctl/Makefile 331137 2018-03-18 17:27:37Z oshogbo $
+# $FreeBSD$
 
 SHLIBDIR?=	/lib/casper
 

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_bscvar.h 332262 2018-04-08 00:56:19Z gonzo $
+ * $FreeBSD$
  */
 
 #ifndef _BCM2835_BSCVAR_H

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/aio/Makefile 332631 2018-04-16 18:12:15Z asomers $
+# $FreeBSD$
 
 TESTSDIR=	${TESTSBASE}/sys/aio
 

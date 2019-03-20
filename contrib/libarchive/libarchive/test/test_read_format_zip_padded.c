@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_zip_padded.c 313074 2017-02-02 00:50:46Z mm $");
+__FBSDID("$FreeBSD$");
 
 static void
 verify_padded_archive(const char *refname)

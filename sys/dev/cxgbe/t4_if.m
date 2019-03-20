@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/cxgbe/t4_if.m 303722 2016-08-03 17:11:08Z jhb $
+# $FreeBSD$
 #
 
 #include <sys/bus.h>

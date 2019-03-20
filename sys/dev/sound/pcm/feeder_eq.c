@@ -46,7 +46,7 @@
 #define SND_USE_FXDIV
 #include "snd_fxdiv_gen.h"
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pcm/feeder_eq.c 326255 2017-11-27 14:52:40Z pfg $");
+SND_DECLARE_FILE("$FreeBSD$");
 #endif
 
 #include "feeder_eq_gen.h"

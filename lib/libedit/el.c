@@ -41,7 +41,7 @@ __RCSID("$NetBSD: el.c,v 1.83 2016/02/24 17:13:22 christos Exp $");
 #endif
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/el.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * el.c: EditLine interface functions
@@ -99,10 +99,6 @@ el_init_fd(const char *prog, FILE *fin, FILE *fout, FILE *ferr,
          * Initialize all the modules. Order is important!!!
          */
 	el->el_flags = 0;
-	if (setlocale(LC_CTYPE, NULL) != NULL){
-		if (strcmp(nl_langinfo(CODESET), "UTF-8") == 0)
-			el->el_flags |= CHARSET_IS_UTF8;
-	}
 
 	if (terminal_init(el) == -1) {
 		el_free(el->el_prog);
@@ -293,7 +289,7 @@ FUN(el,set)(EditLine *el, int op, ...)
 		void *ptr = va_arg(ap, void *);
 
 		rv = hist_set(el, func, ptr);
-		if (!(el->el_flags & CHARSET_IS_UTF8))
+		if (MB_CUR_MAX == 1)
 			el->el_flags &= ~NARROW_HISTORY;
 		break;
 	}

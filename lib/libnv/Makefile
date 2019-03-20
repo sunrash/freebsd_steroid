@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libnv/Makefile 337549 2018-08-09 20:29:44Z kevans $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 SHLIBDIR?= /lib

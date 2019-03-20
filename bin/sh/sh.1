@@ -30,9 +30,9 @@
 .\" SUCH DAMAGE.
 .\"
 .\"	from: @(#)sh.1	8.6 (Berkeley) 5/4/95
-.\" $FreeBSD: releng/12.0/bin/sh/sh.1 336483 2018-07-19 13:09:29Z 0mp $
+.\" $FreeBSD$
 .\"
-.Dd July 19, 2018
+.Dd January 24, 2019
 .Dt SH 1
 .Os
 .Sh NAME
@@ -1402,6 +1402,8 @@ which are replaced by the given information:
 This system's fully-qualified hostname (FQDN).
 .It Li \eh
 This system's hostname.
+.It Li \eu
+User name.
 .It Li \eW
 The final component of the current working directory.
 .It Li \ew
@@ -2485,8 +2487,8 @@ lines, suitable for re-input to the shell.
 See the
 .Sx Functions
 subsection.
-.It Ic set Oo Fl /+abCEefIimnpTuVvx Oc Oo Fl /+o Ar longname Oc Oo
-.Fl c Ar string Oc Op Fl - Ar arg ...
+.It Ic set Oo Fl /+abCEefIimnpTuVvx Oc Oo Fl /+o Ar longname
+.Oc Op Fl - Ar arg ...
 The
 .Ic set
 command performs three different functions:
@@ -2819,7 +2821,11 @@ Shell database.
 Privileged shell profile.
 .El
 .Sh EXIT STATUS
-Errors that are detected by the shell, such as a syntax error, will
+If the
+.Ar script
+cannot be found, the exit status will be 127;
+if it cannot be opened for another reason, the exit status will be 126.
+Other errors that are detected by the shell, such as a syntax error, will
 cause the shell to exit with a non-zero exit status.
 If the shell is not an interactive shell, the execution of the shell
 file will be aborted.

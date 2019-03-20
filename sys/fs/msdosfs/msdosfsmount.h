@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/fs/msdosfs/msdosfsmount.h 326268 2017-11-27 15:15:37Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: msdosfsmount.h,v 1.17 1997/11/17 15:37:07 ws Exp $	*/
 
 /*-

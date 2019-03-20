@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_REPRODUCIBLE_BUILD 310271 2016-12-19 15:09:30Z gjb $
+.\" $FreeBSD$
 Set to exclude build metadata (such as the build time, user, or host)
 from the kernel, boot loaders, and uname output, so that builds produce
 bit-for-bit identical output.

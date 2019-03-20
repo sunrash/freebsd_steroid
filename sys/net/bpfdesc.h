@@ -35,7 +35,7 @@
  *
  *      @(#)bpfdesc.h	8.1 (Berkeley) 6/10/93
  *
- * $FreeBSD: releng/12.0/sys/net/bpfdesc.h 335362 2018-06-19 10:34:45Z ae $
+ * $FreeBSD$
  */
 
 #ifndef _NET_BPFDESC_H_

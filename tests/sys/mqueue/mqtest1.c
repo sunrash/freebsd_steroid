@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tests/sys/mqueue/mqtest1.c 282137 2015-04-28 10:56:59Z ngie $ */
+/* $FreeBSD$ */
 
 #include <err.h>
 #include <errno.h>

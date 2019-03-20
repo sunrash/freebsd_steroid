@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/physmem.h 334162 2018-05-24 15:32:49Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PHYSMEM_H_

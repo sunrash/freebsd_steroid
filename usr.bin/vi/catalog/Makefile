@@ -1,5 +1,5 @@
 #	$Id: Makefile,v 9.0 2012/10/19 15:13:11 zy Exp $
-# $FreeBSD: releng/12.0/usr.bin/vi/catalog/Makefile 335733 2018-06-27 19:29:15Z bdrewery $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

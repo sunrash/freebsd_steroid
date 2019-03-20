@@ -39,7 +39,7 @@
  * Authors: Archie Cobbs <archie@freebsd.org>
  *	    Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_ether.c 337844 2018-08-15 13:42:22Z loos $
+ * $FreeBSD$
  */
 
 /*

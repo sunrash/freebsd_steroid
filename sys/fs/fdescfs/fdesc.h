@@ -33,7 +33,7 @@
  *
  *	@(#)fdesc.h	8.5 (Berkeley) 1/21/94
  *
- * $FreeBSD: releng/12.0/sys/fs/fdescfs/fdesc.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _FS_FDESC_H_

@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/bus_machdep.c 330610 2018-03-07 17:08:07Z nwhitehorn $");
+__FBSDID("$FreeBSD$");
 
 #define	KTR_BE_IO	0
 #define	KTR_LE_IO	0

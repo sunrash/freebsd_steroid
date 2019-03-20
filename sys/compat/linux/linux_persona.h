@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/compat/linux/linux_persona.h 328890 2018-02-05 17:29:12Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef LINUX_PERSONALITY_H

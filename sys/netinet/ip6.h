@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netinet/ip6.h 335837 2018-07-01 08:37:07Z kp $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: ip6.h,v 1.18 2001/03/29 05:34:30 itojun Exp $	*/
 
 /*-

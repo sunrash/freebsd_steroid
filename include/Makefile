@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 1/4/94
-# $FreeBSD: releng/12.0/include/Makefile 338266 2018-08-23 18:18:52Z arichardson $
+# $FreeBSD$
 #
 # Doing a "make install" builds /usr/include.
 

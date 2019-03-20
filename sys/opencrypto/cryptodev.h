@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/opencrypto/cryptodev.h 337939 2018-08-17 00:30:04Z cem $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: cryptodev.h,v 1.31 2002/06/11 11:14:29 beck Exp $	*/
 
 /*-
@@ -563,6 +563,8 @@ extern	void crypto_copydata(int flags, caddr_t buf, int off, int size,
 	    caddr_t out);
 extern	int crypto_apply(int flags, caddr_t buf, int off, int len,
 	    int (*f)(void *, void *, u_int), void *arg);
+
+extern void *crypto_contiguous_subsegment(int, void *, size_t, size_t);
 
 #endif /* _KERNEL */
 #endif /* _CRYPTO_CRYPTO_H_ */

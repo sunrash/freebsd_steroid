@@ -38,7 +38,7 @@
  *	...and...
  *	@(#)null_vnodeops.c 1.20 92/07/07 UCLA Ficus project
  *
- * $FreeBSD: releng/12.0/sys/fs/nullfs/null_vnops.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

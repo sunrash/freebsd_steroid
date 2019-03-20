@@ -22,7 +22,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/ofw/ofwcall64.S 330845 2018-03-13 15:03:58Z nwhitehorn $
+ * $FreeBSD$
  */
 
 #include <sys/syscall.h>

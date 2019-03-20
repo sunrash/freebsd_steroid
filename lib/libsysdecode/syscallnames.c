@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libsysdecode/syscallnames.c 333029 2018-04-26 18:54:00Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Map system call codes to names for the supported ABIs on each

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libkvm/kvm_aarch64.h 325732 2017-11-12 01:36:48Z will $
+ * $FreeBSD$
  */
 
 #ifndef __KVM_AARCH64_H__

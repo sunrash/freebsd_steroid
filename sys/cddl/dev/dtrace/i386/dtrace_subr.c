@@ -19,7 +19,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/i386/dtrace_subr.c 331650 2018-03-27 20:57:51Z jhb $
+ * $FreeBSD$
  *
  */
 /*

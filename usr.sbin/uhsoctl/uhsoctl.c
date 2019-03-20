@@ -24,7 +24,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/uhsoctl/uhsoctl.c 340282 2018-11-09 09:26:10Z hselasky $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

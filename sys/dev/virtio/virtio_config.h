@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/virtio/virtio_config.h 335305 2018-06-17 20:45:48Z bryanv $
+ * $FreeBSD$
  */
 
 #ifndef _VIRTIO_CONFIG_H_

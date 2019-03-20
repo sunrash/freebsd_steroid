@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)encrypt.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/contrib/telnet/libtelnet/encrypt.h 339270 2018-10-09 21:28:26Z gjb $
+ * $FreeBSD$
  */
 
 /*

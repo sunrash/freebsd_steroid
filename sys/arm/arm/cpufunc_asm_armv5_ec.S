@@ -37,7 +37,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/cpufunc_asm_armv5_ec.S 336829 2018-07-28 12:50:09Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #ifndef ELF_TRAMPOLINE
 /*

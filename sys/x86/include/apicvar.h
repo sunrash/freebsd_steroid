@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/include/apicvar.h 338360 2018-08-28 21:09:19Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _X86_APICVAR_H_

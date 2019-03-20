@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/include/pcpu.h 338500 2018-09-06 17:07:21Z leitao $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PCPU_H_

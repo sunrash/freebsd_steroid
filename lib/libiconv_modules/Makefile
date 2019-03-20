@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libiconv_modules/Makefile 289393 2015-10-15 22:55:08Z bdrewery $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

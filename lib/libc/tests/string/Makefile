@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/string/Makefile 316213 2017-03-30 04:57:26Z kib $
+# $FreeBSD$
 
 ATF_TESTS_C+=		memcmp_test
 ATF_TESTS_C+=		memset_s_test

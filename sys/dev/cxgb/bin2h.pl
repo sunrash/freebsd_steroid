@@ -1,6 +1,6 @@
 #!/usr/bin/perl -w 
 
-#$FreeBSD: releng/12.0/sys/dev/cxgb/bin2h.pl 326255 2017-11-27 14:52:40Z pfg $
+#$FreeBSD$
 
 if ($#ARGV != 1) {
   print "bin2h.pl <firmware> <headername>\n";

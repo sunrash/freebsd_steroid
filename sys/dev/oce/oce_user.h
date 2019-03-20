@@ -36,7 +36,7 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/oce/oce_user.h 306219 2016-09-22 22:51:11Z jpaetzel $ */
+/* $FreeBSD$ */
 
 struct oce_mbx;
 struct oce_softc;

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/sparc64/gen/Makefile.inc 277078 2015-01-12 18:13:38Z emaste $
+# $FreeBSD$
 
 SRCS+=	_ctx_start.S _setjmp.S fabs.S fixunsdfsi.S flt_rounds.c fpgetmask.c \
 	fpgetround.c fpgetsticky.c fpsetmask.c fpsetround.c \

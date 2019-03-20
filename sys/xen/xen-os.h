@@ -24,7 +24,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/xen/xen-os.h 336470 2018-07-19 07:54:45Z royger $
+ * $FreeBSD$
  */
 
 #ifndef _XEN_XEN_OS_H_

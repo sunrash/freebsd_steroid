@@ -35,7 +35,7 @@ static char sccsid[] = "@(#)cmd3.c	8.2 (Berkeley) 4/20/95";
 #endif
 #endif /* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/mail/cmd3.c 327230 2017-12-27 03:23:01Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include "rcv.h"
 #include "extern.h"

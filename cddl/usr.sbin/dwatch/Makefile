@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/Makefile 330559 2018-03-06 23:44:19Z dteske $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

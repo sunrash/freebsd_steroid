@@ -28,7 +28,7 @@
  */
 
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_write_format_zip_empty.c 310623 2016-12-27 01:10:28Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_write_format_zip_empty)
 {

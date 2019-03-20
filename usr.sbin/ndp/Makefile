@@ -11,7 +11,9 @@
 # AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT
 # LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
 # A PARTICULAR PURPOSE.
-# $FreeBSD: releng/12.0/usr.sbin/ndp/Makefile 338243 2018-08-23 10:38:59Z garga $
+# $FreeBSD$
+
+.include <src.opts.mk>
 
 .PATH: ${SRCTOP}/contrib/tcpdump
 
@@ -21,6 +23,11 @@ SRCS=	ndp.c gmt2local.c
 
 CFLAGS+= -I. -I${.CURDIR} -I${SRCTOP}/contrib/tcpdump
 CFLAGS+= -D_U_=""
+
+.if ${MK_EXPERIMENTAL} != "no"
+CFLAGS+=	-DEXPERIMENTAL
+CFLAGS+=	-DDRAFT_IETF_6MAN_IPV6ONLY_FLAG
+.endif
 
 WARNS?=	3
 

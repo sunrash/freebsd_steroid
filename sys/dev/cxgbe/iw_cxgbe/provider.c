@@ -32,7 +32,7 @@
  * SOFTWARE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/iw_cxgbe/provider.c 330508 2018-03-05 14:34:52Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #define	LINUXKPI_PARAM_PREFIX iw_cxgbe_
 
@@ -46,7 +46,7 @@ __FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/iw_cxgbe/provider.c 330508 2018-03
 
 #include "iw_cxgbe.h"
 #include "user.h"
-extern int use_dsgl;
+
 static int fastreg_support = 1;
 module_param(fastreg_support, int, 0644);
 MODULE_PARM_DESC(fastreg_support, "Advertise fastreg support (default = 1)");

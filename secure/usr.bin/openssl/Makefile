@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/usr.bin/openssl/Makefile 339270 2018-10-09 21:28:26Z gjb $
+# $FreeBSD$
 
 CONFS=	openssl.cnf
 CONFSDIR=	/etc/ssl

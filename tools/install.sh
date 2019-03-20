@@ -26,7 +26,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/install.sh 326239 2017-11-27 02:28:40Z brd $
+# $FreeBSD$
 
 # parse install's options and ignore them completely.
 dirmode=""

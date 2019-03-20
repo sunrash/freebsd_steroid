@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/extres/phy/phydev_if.m 328201 2018-01-20 17:02:17Z mmel $
+# $FreeBSD$
 #
 
 #ifdef FDT

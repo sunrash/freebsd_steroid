@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/ntpdc/Makefile 320122 2017-06-19 20:47:24Z bdrewery $
+# $FreeBSD$
 
 MAN=
 

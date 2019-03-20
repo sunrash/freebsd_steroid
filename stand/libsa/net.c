@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/net.c 337037 2018-08-01 11:40:52Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/socket.h>
@@ -48,7 +48,6 @@ __FBSDID("$FreeBSD: releng/12.0/stand/libsa/net.c 337037 2018-08-01 11:40:52Z ts
 #include <netinet/if_ether.h>
 #include <netinet/in_systm.h>
 
-#include <netinet/in_pcb.h>
 #include <netinet/ip.h>
 #include <netinet/ip_var.h>
 #include <netinet/udp.h>
@@ -64,7 +63,7 @@ __FBSDID("$FreeBSD: releng/12.0/stand/libsa/net.c 337037 2018-08-01 11:40:52Z ts
  * timeout is hit.
  */
 #ifndef MAXWAIT
-#define MAXWAIT 0	/* seconds */
+#define MAXWAIT 300	/* seconds */
 #endif
 
 #if MAXWAIT < 0

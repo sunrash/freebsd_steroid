@@ -16,7 +16,7 @@
 # Kerberos services are for Kerberos v4, and are unofficial.  Sites running
 # v5 should uncomment v5 entries and comment v4 entries.
 #
-# $FreeBSD: releng/12.0/usr.sbin/services_mkdb/services 338503 2018-09-06 18:34:11Z obrien $
+# $FreeBSD$
 #	From: @(#)services	5.8 (Berkeley) 5/9/91
 #
 # WELL KNOWN PORT NUMBERS

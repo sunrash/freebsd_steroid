@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.libnames.mk 337663 2018-08-11 23:50:09Z kevans $
+# $FreeBSD$
 
 # The include file <bsd.libnames.mk> define library names.
 # Other include files (e.g. bsd.prog.mk, bsd.lib.mk) include this

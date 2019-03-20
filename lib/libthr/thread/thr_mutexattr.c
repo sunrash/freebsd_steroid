@@ -60,7 +60,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_mutexattr.c 337992 2018-08-18 01:05:38Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "namespace.h"
 #include <string.h>

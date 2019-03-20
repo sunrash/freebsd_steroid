@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/bufobj.h 329612 2018-02-20 00:06:07Z jeff $
+ * $FreeBSD$
  */
 
 /*

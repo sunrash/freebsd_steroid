@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/chflags/tests/Makefile 323275 2017-09-07 16:54:47Z asomers $
+# $FreeBSD$
 
 ATF_TESTS_SH+=  chflags_test
 

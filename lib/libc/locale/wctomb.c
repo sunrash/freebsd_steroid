@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/wctomb.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <stdlib.h>
 #include <wchar.h>
@@ -47,10 +47,11 @@ wctomb_l(char *s, wchar_t wchar, locale_t locale)
 
 	if (s == NULL) {
 		/* No support for state dependent encodings. */
-		locale->wctomb = initial;
+		XLOCALE_CTYPE(locale)->wctomb = initial;
 		return (0);
 	}
-	if ((rval = XLOCALE_CTYPE(locale)->__wcrtomb(s, wchar, &locale->wctomb)) == (size_t)-1)
+	if ((rval = XLOCALE_CTYPE(locale)->__wcrtomb(s, wchar,
+	    &(XLOCALE_CTYPE(locale)->wctomb))) == (size_t)-1)
 		return (-1);
 	return ((int)rval);
 }

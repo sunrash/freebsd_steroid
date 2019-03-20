@@ -1,5 +1,5 @@
 # $Id: protocols,v 1.2 2003/05/21 22:17:14 max Exp $
-# $FreeBSD: releng/12.0/lib/libbluetooth/protocols 338155 2018-08-21 19:28:53Z brd $
+# $FreeBSD$
 #
 # Bluetooth Protocol/Service Multiplexor (PSM) names and numbers
 #

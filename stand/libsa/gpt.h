@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/libsa/gpt.h 324554 2017-10-12 14:56:54Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _GPT_H_

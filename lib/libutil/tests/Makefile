@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libutil/tests/Makefile 321201 2017-07-19 14:07:38Z emaste $
+# $FreeBSD$
 
 TAP_TESTS_C+=	flopen_test
 TAP_TESTS_C+=	grp_test

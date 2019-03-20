@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/pathname1.0 302937 2016-07-16 13:26:18Z ache $
+# $FreeBSD$
 
 unset LC_ALL
 LC_COLLATE=C

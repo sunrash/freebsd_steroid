@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/ipfw/Makefile 335921 2018-07-03 23:47:20Z jamie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

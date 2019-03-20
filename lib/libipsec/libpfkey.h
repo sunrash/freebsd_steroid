@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/lib/libipsec/libpfkey.h 326025 2017-11-20 19:49:47Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: libpfkey.h,v 1.6 2001/03/05 18:22:17 thorpej Exp $	*/
 
 /*-

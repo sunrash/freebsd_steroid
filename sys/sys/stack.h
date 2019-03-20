@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/stack.h 326256 2017-11-27 15:01:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_STACK_H_
@@ -47,6 +47,8 @@ void		 stack_print_short(const struct stack *);
 void		 stack_print_short_ddb(const struct stack *);
 void		 stack_sbuf_print(struct sbuf *, const struct stack *);
 void		 stack_sbuf_print_ddb(struct sbuf *, const struct stack *);
+int		 stack_sbuf_print_flags(struct sbuf *, const struct stack *,
+		 int);
 #ifdef KTR
 void		 stack_ktr(u_int, const char *, int, const struct stack *,
 		    u_int, int);

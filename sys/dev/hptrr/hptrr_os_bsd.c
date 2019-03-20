@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hptrr/hptrr_os_bsd.c 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #include <dev/hptrr/hptrr_config.h>
 /* $Id: os_bsd.c,v 1.11 2005/06/03 14:06:38 kdh Exp $

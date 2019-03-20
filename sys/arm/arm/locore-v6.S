@@ -36,7 +36,7 @@
 #include <machine/sysreg.h>
 #include <machine/pte-v6.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/locore-v6.S 331254 2018-03-20 17:58:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /* We map 64MB of kernel unless overridden in assym.inc by the kernel option. */
 #ifndef LOCORE_MAP_MB

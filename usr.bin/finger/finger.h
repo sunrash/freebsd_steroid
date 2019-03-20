@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)finger.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.bin/finger/finger.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_FINGER_H_

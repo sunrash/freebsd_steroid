@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)union_vfsops.c	8.20 (Berkeley) 5/20/95
- * $FreeBSD: releng/12.0/sys/fs/unionfs/union_vfsops.c 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

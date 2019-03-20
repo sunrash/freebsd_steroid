@@ -1,3 +1,3 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_GNU_GREP 307674 2016-10-20 14:48:57Z emaste $
+.\" $FreeBSD$
 Set to not build GNU
 .Xr grep 1 .

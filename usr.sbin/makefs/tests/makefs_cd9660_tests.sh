@@ -24,7 +24,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/usr.sbin/makefs/tests/makefs_cd9660_tests.sh 328822 2018-02-02 23:34:33Z brooks $
+# $FreeBSD$
 #
 
 # A note on specs:

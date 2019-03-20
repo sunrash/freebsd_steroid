@@ -1,7 +1,7 @@
 # This is a generated file, do NOT edit!
 # See contrib/bmake/bsd.after-import.mk
 #
-# $FreeBSD: releng/12.0/usr.bin/bmake/Makefile 325340 2017-11-02 20:08:00Z sjg $
+# $FreeBSD$
 
 .sinclude "Makefile.inc"
 

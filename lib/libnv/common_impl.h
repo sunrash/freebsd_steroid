@@ -28,12 +28,21 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libnv/common_impl.h 326219 2017-11-26 02:00:33Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_COMMON_IMPL_H_
 #define	_COMMON_IMPL_H_
 
-#define	fd_is_valid(fd)	(fcntl((fd), F_GETFL) != -1 || errno != EBADF)
+#include <errno.h>
+#include <fcntl.h>
+#include <stdbool.h>
+
+static inline bool
+fd_is_valid(int fd)
+{
+
+	return (fcntl(fd, F_GETFD) != -1 || errno != EBADF);
+}
 
 #endif	/* !_COMMON_IMPL_H_ */

@@ -38,10 +38,9 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/oce/oce_mbox.c 333146 2018-05-01 17:39:20Z jpaetzel $ */
+/* $FreeBSD$ */
 
 #include "oce_if.h"
-extern uint32_t sfp_vpd_dump_buffer[TRANSCEIVER_DATA_NUM_ELE];
 
 int
 oce_wait_ready(POCE_SOFTC sc)
@@ -1966,15 +1965,15 @@ oce_mbox_read_transrecv_data(POCE_SOFTC sc, uint32_t page_num)
 	if(fwcmd->params.rsp.page_num == PAGE_NUM_A0)
 	{
 		bcopy((char *)fwcmd->params.rsp.page_data, 
-				(char *)&sfp_vpd_dump_buffer[0], 
-				TRANSCEIVER_A0_SIZE);
+		      &sfp_vpd_dump_buffer[0], 
+		      TRANSCEIVER_A0_SIZE);
 	}
 
 	if(fwcmd->params.rsp.page_num == PAGE_NUM_A2)
 	{
 		bcopy((char *)fwcmd->params.rsp.page_data, 
-				(char *)&sfp_vpd_dump_buffer[32], 
-				TRANSCEIVER_A2_SIZE);
+		      &sfp_vpd_dump_buffer[TRANSCEIVER_A0_SIZE],
+		      TRANSCEIVER_A2_SIZE);
 	}
 error:
 	oce_dma_free(sc, &dma);

@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/elf_machdep.c 338211 2018-08-22 20:44:30Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_cpu.h"
 
@@ -54,7 +54,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/elf_machdep.c 338211 2018-08-22 20
 struct sysentvec elf32_freebsd_sysvec = {
 	.sv_size	= SYS_MAXSYSCALL,
 	.sv_table	= sysent,
-	.sv_mask	= 0,
 	.sv_errsize	= 0,
 	.sv_errtbl	= NULL,
 	.sv_transtrap	= NULL,

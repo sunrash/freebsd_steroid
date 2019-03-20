@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/userboot/test/test.c 326609 2017-12-06 02:00:00Z imp $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

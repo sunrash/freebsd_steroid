@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/execution/set-C1.0 308229 2016-11-02 22:33:37Z jilles $
+# $FreeBSD$
 
 T=$(mktemp -d "${TMPDIR:-/tmp}/sh-test.XXXXXXXX") || exit
 trap 'rm -rf "$T"' 0

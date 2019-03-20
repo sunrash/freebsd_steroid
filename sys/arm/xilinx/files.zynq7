@@ -1,7 +1,7 @@
 #
 # files.zynq7
 #
-# $FreeBSD: releng/12.0/sys/arm/xilinx/files.zynq7 328404 2018-01-25 17:16:29Z br $
+# $FreeBSD$
 
 kern/kern_clocksource.c				standard
 

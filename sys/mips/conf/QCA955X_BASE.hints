@@ -4,7 +4,7 @@
 # then override the default options (adding devices as needed) and adding
 # hints as needed (for example, the GPIO and LAN PHY.)
 
-# $FreeBSD: releng/12.0/sys/mips/conf/QCA955X_BASE.hints 328755 2018-02-01 22:00:05Z adrian $
+# $FreeBSD$
 
 hint.apb.0.at="nexus0"
 # The default APB is on IP6 (irq4); we need to add

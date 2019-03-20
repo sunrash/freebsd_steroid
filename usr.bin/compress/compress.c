@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)compress.c	8.2 (Berkeley) 1/7/94";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/compress/compress.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/stat.h>
@@ -322,6 +322,8 @@ decompress(const char *in, const char *out, int bits)
 	if ((ofp = fopen(out, "w")) == NULL ||
 	    (nr != 0 && fwrite(buf, 1, nr, ofp) != nr)) {
 		cwarn("%s", out);
+		if (ofp)
+			(void)fclose(ofp);
 		(void)fclose(ifp);
 		return;
 	}

@@ -25,7 +25,7 @@
 -- OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 -- SUCH DAMAGE.
 --
--- $FreeBSD: releng/12.0/stand/lua/color.lua 334986 2018-06-12 03:44:34Z kevans $
+-- $FreeBSD$
 --
 
 local core = require("core")

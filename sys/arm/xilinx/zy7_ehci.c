@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/xilinx/zy7_ehci.c 333074 2018-04-27 21:05:58Z manu $
+ * $FreeBSD$
  */
 
 /*
@@ -38,7 +38,7 @@
 
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/xilinx/zy7_ehci.c 333074 2018-04-27 21:05:58Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for send(2)/recv(2) $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/sendrecv 333519 2018-05-12 06:23:30Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

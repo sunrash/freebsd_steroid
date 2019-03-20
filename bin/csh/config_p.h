@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/bin/csh/config_p.h 297673 2016-04-07 14:25:15Z mp $ */
+/* $FreeBSD$ */
 /*
  * config.h -- configure various defines for tcsh
  *

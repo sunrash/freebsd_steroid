@@ -37,7 +37,7 @@
  *
  * Author: Julian Elischer <julian@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_socket.c 298431 2016-04-21 19:40:10Z pfg $
+ * $FreeBSD$
  * $Whistle: ng_socket.c,v 1.28 1999/11/01 09:24:52 julian Exp $
  */
 

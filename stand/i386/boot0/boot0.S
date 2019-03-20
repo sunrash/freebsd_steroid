@@ -14,7 +14,7 @@
  * warranties of merchantability and fitness for a particular
  * purpose.
  *
- * $FreeBSD: releng/12.0/stand/i386/boot0/boot0.S 283006 2015-05-16 10:31:15Z thomas $
+ * $FreeBSD$
  */
 
 /* build options: */

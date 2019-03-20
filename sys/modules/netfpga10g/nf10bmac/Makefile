@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/netfpga10g/nf10bmac/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/netfpga10g/nf10bmac
 

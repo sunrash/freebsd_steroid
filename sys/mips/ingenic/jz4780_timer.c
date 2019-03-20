@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/ingenic/jz4780_timer.c 327432 2017-12-31 09:24:41Z cperciva $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -185,7 +185,7 @@ jz4780_timer_attach(device_t dev)
 	CSR_WRITE_4(sc, JZ_TC_TECR, TESR_OST);
 	/* Stop all other channels as well */
 	CSR_WRITE_4(sc, JZ_TC_TECR, TESR_TCST0 | TESR_TCST1 | TESR_TCST2 |
-	    TESR_TCST3 | TESR_TCST4 | TESR_TCST5 | TESR_TCST6 | TESR_TCST3);
+	    TESR_TCST3 | TESR_TCST4 | TESR_TCST5 | TESR_TCST6 | TESR_TCST7);
 	/* Clear detect mask flags */
 	CSR_WRITE_4(sc, JZ_TC_TFCR, 0xFFFFFFFF);
 	/* Mask all interrupts */

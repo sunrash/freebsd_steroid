@@ -29,11 +29,11 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_phy_n_sprom.c 328912 2018-02-05 23:38:15Z landonf $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_phy_n_sprom.c 328912 2018-02-05 23:38:15Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/malloc.h>

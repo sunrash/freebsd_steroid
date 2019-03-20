@@ -1,5 +1,5 @@
 # ex:ts=8
-$FreeBSD: releng/12.0/contrib/amd/FREEBSD-upgrade 337821 2018-08-14 20:33:48Z 0mp $
+$FreeBSD$
 
 AMD (am-utils) 6.1.5
     originals can be found at: ftp://ftp.am-utils.org/pub/am-utils/

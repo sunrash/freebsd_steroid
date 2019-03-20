@@ -59,7 +59,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/vm/pmap.h 337051 2018-08-01 18:45:51Z kib $
+ * $FreeBSD$
  */
 
 /*

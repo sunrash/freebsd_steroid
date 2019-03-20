@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/linuxkpi/Makefile 340002 2018-11-01 15:47:07Z hselasky $
+# $FreeBSD$
 .PATH:	${SRCTOP}/sys/compat/linuxkpi/common/src
 
 KMOD=	linuxkpi

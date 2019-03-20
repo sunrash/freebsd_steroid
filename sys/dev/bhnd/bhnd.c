@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/bhnd.c 326836 2017-12-14 01:58:05Z landonf $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Broadcom Home Networking Division (HND) Bus Driver.

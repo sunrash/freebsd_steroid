@@ -61,7 +61,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/write.c 335125 2018-06-14 08:58:10Z tsoome $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include "stand.h"

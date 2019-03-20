@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/isci/scil/sati_write_long.c 329877 2018-02-23 20:01:42Z emaste $");
+__FBSDID("$FreeBSD$");
 
 /**
  * @file

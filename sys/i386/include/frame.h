@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/frame.h 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _I386_FRAME_H_

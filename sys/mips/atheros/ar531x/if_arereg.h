@@ -23,7 +23,7 @@
  * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/atheros/ar531x/if_arereg.h 317868 2017-05-06 06:06:11Z adrian $
+ * $FreeBSD$
  *
  */
 

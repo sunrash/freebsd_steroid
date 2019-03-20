@@ -39,7 +39,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)fnmatch.c	8.2 (Berkeley) 4/16/94");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/fnmatch.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Function fnmatch() as specified in POSIX 1003.2-1992, section B.6.

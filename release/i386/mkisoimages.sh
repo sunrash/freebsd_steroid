@@ -4,7 +4,7 @@
 # Author: Jordan K Hubbard
 # Date:   22 June 2001
 #
-# $FreeBSD: releng/12.0/release/i386/mkisoimages.sh 325096 2017-10-29 08:17:03Z eadler $
+# $FreeBSD$
 #
 # This script is used by release/Makefile to build the (optional) ISO images
 # for a FreeBSD release.  It is considered architecture dependent since each
@@ -22,6 +22,8 @@
 # resulting ISO image, base-bits-dir contains the image contents and
 # extra-bits-dir, if provided, contains additional files to be merged
 # into base-bits-dir as part of making the image.
+
+set -e
 
 if [ "$1" = "-b" ]; then
 	# This is highly x86-centric and will be used directly below.

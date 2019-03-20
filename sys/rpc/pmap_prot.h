@@ -31,7 +31,7 @@
  *
  *	from: @(#)pmap_prot.h 1.14 88/02/08 SMI 
  *	from: @(#)pmap_prot.h	2.1 88/07/29 4.0 RPCSRC
- * $FreeBSD: releng/12.0/sys/rpc/pmap_prot.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /*

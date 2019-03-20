@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/sockets/unix_cmsg/Makefile 336466 2018-07-19 00:22:18Z asomers $
+# $FreeBSD$
 
 PROG=	unix_cmsg
 SRCS=	${AUTOSRCS} unix_cmsg.c uc_common.h uc_common.c \

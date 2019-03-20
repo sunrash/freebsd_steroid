@@ -27,7 +27,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libpmc/pmu-events/json.c 334244 2018-05-26 19:29:19Z mmacy $
+ * $FreeBSD$
  *
 */
 

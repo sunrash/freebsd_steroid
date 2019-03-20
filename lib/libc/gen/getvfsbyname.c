@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)kvm_getvfsbyname.c	8.1 (Berkeley) 4/3/95");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/getvfsbyname.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/mount.h>

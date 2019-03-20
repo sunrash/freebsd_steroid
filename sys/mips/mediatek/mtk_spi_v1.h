@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/mediatek/mtk_spi_v1.h 297671 2016-04-07 11:21:42Z sgalabov $
+ * $FreeBSD$
  */
 
 #ifndef _MTK_SPIVAR_H_

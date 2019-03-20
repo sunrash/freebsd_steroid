@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/opencrypto/dpkt.py 275732 2014-12-12 19:56:36Z jmg $
+# $FreeBSD$
 # $Id: dpkt.py 114 2005-09-11 15:15:12Z dugsong $
 
 """fast, simple packet creation / parsing, with definitions for the

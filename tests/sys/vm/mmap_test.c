@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/vm/mmap_test.c 313657 2017-02-11 20:31:57Z ngie $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

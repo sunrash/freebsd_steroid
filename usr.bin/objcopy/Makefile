@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/objcopy/Makefile 338599 2018-09-11 20:32:57Z emaste $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

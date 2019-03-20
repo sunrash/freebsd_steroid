@@ -34,7 +34,7 @@
 static char sccsid[] = "@(#)traverse.c	8.7 (Berkeley) 6/15/95";
 #endif
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/sbin/dump/traverse.c 334969 2018-06-11 19:32:36Z imp $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/param.h>
@@ -195,7 +195,7 @@ mapfiles(ino_t maxino, long *tapesize)
 		}
 		for (i = 0; i < inosused; i++, ino++) {
 			if (ino < UFS_ROOTINO ||
-			    (dp = getinode(ino, &mode)) == NULL ||
+			    (dp = getino(ino, &mode)) == NULL ||
 			    (mode & IFMT) == 0)
 				continue;
 			if (ino >= maxino) {
@@ -277,7 +277,7 @@ mapdirs(ino_t maxino, long *tapesize)
 		nodump = !nonodump && (TSTINO(ino, usedinomap) == 0);
 		if ((isdir & 1) == 0 || (TSTINO(ino, dumpinomap) && !nodump))
 			continue;
-		dp = getinode(ino, &i);
+		dp = getino(ino, &i);
 		/*
 		 * inode buf may change in searchdir().
 		 */
@@ -421,7 +421,7 @@ searchdir(
 				continue;
 		}
 		if (nodump) {
-			ip = getinode(dp->d_ino, &mode);
+			ip = getino(dp->d_ino, &mode);
 			if (TSTINO(dp->d_ino, dumpinomap)) {
 				CLRINO(dp->d_ino, dumpinomap);
 				*tapesize -= blockest(ip);
@@ -875,7 +875,7 @@ writeheader(ino_t ino)
 }
 
 union dinode *
-getinode(ino_t inum, int *modep)
+getino(ino_t inum, int *modep)
 {
 	static ino_t minino, maxino;
 	static caddr_t inoblock;

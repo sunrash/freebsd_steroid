@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/devicestat.h 338220 2018-08-23 01:42:45Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _DEVICESTAT_H

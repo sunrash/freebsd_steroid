@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/sys/dev/ath/if_ath_drv.c 318856 2017-05-25 04:18:46Z adrian $
+ * $FreeBSD$
  */
 #include "opt_ah.h"
 

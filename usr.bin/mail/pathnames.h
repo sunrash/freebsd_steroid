@@ -30,7 +30,7 @@
  *
  *	@(#)pathnames.h	8.1 (Berkeley) 6/6/93
  *
- * $FreeBSD: releng/12.0/usr.bin/mail/pathnames.h 337497 2018-08-08 19:24:20Z asomers $
+ * $FreeBSD$
  */
 
 #define	_PATH_EX	"/usr/bin/ex"

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/mpt/mpt.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * Generic defines for LSI '909 FC  adapters.
  * FreeBSD Version.

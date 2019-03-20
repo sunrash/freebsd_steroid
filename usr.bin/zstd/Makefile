@@ -1,10 +1,13 @@
-# $FreeBSD: releng/12.0/usr.bin/zstd/Makefile 332993 2018-04-25 13:23:58Z bapt $
+# $FreeBSD$
 
 PROG=	zstd
-SRCS=	bench.c \
+SRCS=	\
+	benchfn.c \
+	benchzstd.c \
 	datagen.c \
 	dibio.c \
 	fileio.c \
+	util.c \
 	zstdcli.c
 
 CFLAGS+=	-I${SRCTOP}/sys/contrib/zstd/programs \

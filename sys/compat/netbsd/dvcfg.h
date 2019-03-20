@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/compat/netbsd/dvcfg.h 326266 2017-11-27 15:13:23Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD$	*/
 /*-
  * SPDX-License-Identifier: BSD-3-Clause

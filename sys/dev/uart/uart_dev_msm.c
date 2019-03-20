@@ -27,7 +27,7 @@
 /* Qualcomm MSM7K/8K uart driver */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/uart/uart_dev_msm.c 328132 2018-01-18 17:43:32Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

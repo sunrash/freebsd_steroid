@@ -29,7 +29,7 @@
 /*
  * Userland code for testing binary heaps and hash tables
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/test/test_dn_heap.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

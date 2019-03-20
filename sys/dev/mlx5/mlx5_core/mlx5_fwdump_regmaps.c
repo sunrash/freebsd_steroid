@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_core/mlx5_fwdump_regmaps.c 330653 2018-03-08 15:21:56Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/mlx5/driver.h>
 #include <dev/mlx5/device.h>

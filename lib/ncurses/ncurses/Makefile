@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/ncurses/ncurses/Makefile 335733 2018-06-27 19:29:15Z bdrewery $
+# $FreeBSD$
 
 PACKAGE=	clibs
 SHLIBDIR?=	/lib
@@ -350,7 +350,8 @@ expanded.c: MKexpanded.sh
 	sh ${NCURSES_DIR}/ncurses/tty/MKexpanded.sh "${CC:N${CCACHE_BIN}} -E" ${CFLAGS} >expanded.c
 
 fallback.c: MKfallback.sh
-	sh ${NCURSES_DIR}/ncurses/tinfo/MKfallback.sh > fallback.c
+	sh -e ${NCURSES_DIR}/ncurses/tinfo/MKfallback.sh "" "" "" > ${.TARGET}.tmp && \
+	    mv -f ${.TARGET}.tmp ${.TARGET}
 
 # Generated headers
 nomacros.h: MKlib_gen.sh curses.h

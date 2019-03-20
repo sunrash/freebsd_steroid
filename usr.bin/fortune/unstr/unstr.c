@@ -42,7 +42,7 @@ static const char sccsid[] = "@(#)unstr.c     8.1 (Berkeley) 5/31/93";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/fortune/unstr/unstr.c 300705 2016-05-26 01:33:24Z truckman $");
+__FBSDID("$FreeBSD$");
 
 /*
  *	This program un-does what "strfile" makes, thereby obtaining the

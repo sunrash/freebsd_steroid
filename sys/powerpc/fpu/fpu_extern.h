@@ -1,5 +1,5 @@
 /*	$NetBSD: fpu_extern.h,v 1.3 2005/12/11 12:18:42 christos Exp $	*/
-/* $FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_extern.h 326261 2017-11-27 15:09:59Z pfg $ */
+/* $FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD

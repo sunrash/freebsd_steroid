@@ -29,7 +29,7 @@
 # * Author : David C Somayajulu, Qlogic Corporation, Aliso Viejo, CA 92656.
 # */
 #
-# $FreeBSD: releng/12.0/sys/modules/qlxgbe/Makefile 322771 2017-08-21 20:27:45Z davidcs $
+# $FreeBSD$
 #
 
 .PATH: ${SRCTOP}/sys/dev/qlxgbe

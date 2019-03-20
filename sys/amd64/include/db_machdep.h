@@ -23,7 +23,7 @@
  * any improvements or extensions that they make and grant Carnegie Mellon
  * the rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/db_machdep.h 334009 2018-05-22 00:45:00Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_DB_MACHDEP_H_

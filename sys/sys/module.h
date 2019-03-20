@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/module.h 338948 2018-09-26 17:12:14Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_MODULE_H_

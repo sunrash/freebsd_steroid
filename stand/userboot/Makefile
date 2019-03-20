@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/userboot/Makefile 338418 2018-09-01 02:23:45Z kevans $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

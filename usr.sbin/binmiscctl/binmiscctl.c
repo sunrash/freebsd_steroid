@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/binmiscctl/binmiscctl.c 327262 2017-12-28 05:32:59Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <errno.h>

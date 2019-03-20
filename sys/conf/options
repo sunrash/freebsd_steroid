@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/options 338324 2018-08-26 12:51:46Z markm $
+# $FreeBSD$
 #
 #        On the handling of kernel options
 #
@@ -42,7 +42,6 @@ AHD_DEBUG		opt_aic79xx.h
 AHD_DEBUG_OPTS		opt_aic79xx.h
 AHD_TMODE_ENABLE	opt_aic79xx.h	
 AHD_REG_PRETTY_PRINT	opt_aic79xx.h
-ADW_ALLOW_MEMIO		opt_adw.h
 
 TWA_DEBUG		opt_twa.h
 
@@ -96,6 +95,7 @@ _COMPAT_LINUX32	opt_compat.h	# XXX: make sure opt_compat.h exists
 COMPILING_LINT	opt_global.h
 CY_PCI_FASTINTR
 DEADLKRES	opt_watchdog.h
+EXPERIMENTAL	opt_global.h
 EXT_RESOURCES	opt_global.h
 DIRECTIO
 FILEMON		opt_dontuse.h
@@ -186,7 +186,7 @@ NO_ADAPTIVE_SX
 NO_EVENTTIMERS		opt_timer.h
 NO_OBSOLETE_CODE	opt_global.h
 NO_SYSCTL_DESCR	opt_global.h
-NSWBUF_MIN	opt_swap.h
+NSWBUF_MIN	opt_param.h
 MBUF_PACKET_ZONE_DISABLE	opt_global.h
 PANIC_REBOOT_WAIT_TIME	opt_panic.h
 PCI_HP		opt_pci.h
@@ -231,6 +231,11 @@ UMTX_PROFILING
 UMTX_CHAINS	opt_global.h
 VERBOSE_SYSINIT
 ZSTDIO		opt_zstdio.h
+
+# Sanitizers
+COVERAGE	opt_global.h
+KCOV
+KUBSAN		opt_global.h
 
 # POSIX kernel options
 P1003_1B_MQUEUE			opt_posix.h
@@ -375,23 +380,12 @@ SCSI_PT_DEFAULT_TIMEOUT	opt_pt.h
 SES_ENABLE_PASSTHROUGH	opt_ses.h
 
 # Options used in dev/sym/ (Symbios SCSI driver).
-SYM_SETUP_LP_PROBE_MAP	opt_sym.h	#-Low Priority Probe Map (bits)
-					# Allows the ncr to take precedence
-					# 1 (1<<0) -> 810a, 860
-					# 2 (1<<1) -> 825a, 875, 885, 895
-					# 4 (1<<2) -> 895a, 896, 1510d 
 SYM_SETUP_SCSI_DIFF	opt_sym.h	#-HVD support for 825a, 875, 885
 					# disabled:0 (default), enabled:1
 SYM_SETUP_PCI_PARITY	opt_sym.h	#-PCI parity checking
 					# disabled:0, enabled:1 (default)
 SYM_SETUP_MAX_LUN	opt_sym.h	#-Number of LUNs supported
 					# default:8, range:[1..64]
-
-# Options used only in dev/ncr/*
-SCSI_NCR_DEBUG		opt_ncr.h
-SCSI_NCR_MAX_SYNC	opt_ncr.h
-SCSI_NCR_MAX_WIDE	opt_ncr.h
-SCSI_NCR_MYADDR		opt_ncr.h
 
 # Options used only in dev/isp/*
 ISP_TARGET_MODE		opt_isp.h
@@ -439,7 +433,6 @@ IPFIREWALL		opt_ipfw.h
 IPFIREWALL_DEFAULT_TO_ACCEPT	opt_ipfw.h
 IPFIREWALL_NAT		opt_ipfw.h
 IPFIREWALL_NAT64	opt_ipfw.h
-IPFIREWALL_NAT64_DIRECT_OUTPUT	opt_ipfw.h
 IPFIREWALL_NPTV6	opt_ipfw.h
 IPFIREWALL_VERBOSE	opt_ipfw.h
 IPFIREWALL_VERBOSE_LIMIT	opt_ipfw.h
@@ -513,6 +506,7 @@ NETGRAPH_BLUETOOTH_UBTBCMFW	opt_netgraph.h
 NETGRAPH_BPF		opt_netgraph.h
 NETGRAPH_BRIDGE		opt_netgraph.h
 NETGRAPH_CAR		opt_netgraph.h
+NETGRAPH_CHECKSUM	opt_netgraph.h
 NETGRAPH_CISCO		opt_netgraph.h
 NETGRAPH_DEFLATE	opt_netgraph.h
 NETGRAPH_DEVICE		opt_netgraph.h
@@ -567,10 +561,6 @@ DRM_DEBUG		opt_drm.h
 
 TI_SF_BUF_JUMBO		opt_ti.h
 TI_JUMBO_HDRSPLIT	opt_ti.h
-
-# DPT driver debug flags
-DPT_MEASURE_PERFORMANCE	opt_dpt.h
-DPT_RESET_HBA		opt_dpt.h
 
 # Misc debug flags.  Most of these should probably be replaced with
 # 'DEBUG', and then let people recompile just the interesting modules
@@ -839,7 +829,6 @@ ATH_DEBUG_ALQ		opt_ath.h
 ATH_KTR_INTR_DEBUG	opt_ath.h
 
 # options for the Atheros hal
-AH_SUPPORT_AR5416	opt_ah.h
 # XXX For now, this breaks non-AR9130 chipsets, so only use it
 # XXX when actually targeting AR9130.
 AH_SUPPORT_AR9130	opt_ah.h
@@ -919,7 +908,6 @@ HWPMC_MIPS_BACKTRACE 	opt_hwpmc_hooks.h
 # 802.11 support layer
 IEEE80211_DEBUG		opt_wlan.h
 IEEE80211_DEBUG_REFCNT	opt_wlan.h
-IEEE80211_AMPDU_AGE	opt_wlan.h
 IEEE80211_SUPPORT_MESH	opt_wlan.h
 IEEE80211_SUPPORT_SUPERG	opt_wlan.h
 IEEE80211_SUPPORT_TDMA	opt_wlan.h

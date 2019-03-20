@@ -1,7 +1,7 @@
 #
 #	@(#)ttys	5.1 (Berkeley) 4/17/89
 #
-# $FreeBSD: releng/12.0/release/picobsd/floppy.tree/etc/ttys 285281 2015-07-08 16:42:28Z luigi $
+# $FreeBSD$
 #
 # name	getty				type	status		comments
 #

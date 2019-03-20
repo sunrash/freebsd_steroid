@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/setjmp.h 309617 2016-12-06 13:46:12Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_SETJMP_H_

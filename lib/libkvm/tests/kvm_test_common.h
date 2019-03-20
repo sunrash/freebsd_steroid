@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libkvm/tests/kvm_test_common.h 316099 2017-03-28 17:37:49Z ngie $
+ * $FreeBSD$
  */
 
 #ifndef	__KVM_TEST_COMMON_H__

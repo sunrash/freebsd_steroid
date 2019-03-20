@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/idr.h 334423 2018-05-31 12:35:21Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_IDR_H_
 #define	_LINUX_IDR_H_
@@ -122,7 +122,15 @@ void	ida_simple_remove(struct ida *ida, unsigned int id);
 static inline int
 ida_get_new(struct ida *ida, int *p_id)
 {
+
 	return (ida_get_new_above(ida, 0, p_id));
+}
+
+static inline bool
+ida_is_empty(struct ida *ida)
+{
+
+	return (idr_is_empty(&ida->idr));
 }
 
 #endif	/* _LINUX_IDR_H_ */

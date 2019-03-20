@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/samsung/exynos/exynos5_xhci.c 307518 2016-10-17 10:20:38Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

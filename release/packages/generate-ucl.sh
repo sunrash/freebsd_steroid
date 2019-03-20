@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/release/packages/generate-ucl.sh 335762 2018-06-28 13:48:59Z brd $
+# $FreeBSD$
 #
 
 main() {

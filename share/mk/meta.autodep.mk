@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/meta.autodep.mk 337186 2018-08-02 21:33:45Z sjg $
+# $FreeBSD$
 # $Id: meta.autodep.mk,v 1.50 2018/06/08 01:25:31 sjg Exp $
 
 #

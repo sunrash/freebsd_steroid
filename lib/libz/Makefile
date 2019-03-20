@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/lib/libz/Makefile 316649 2017-04-09 03:50:48Z kan $
+# $FreeBSD$
 #
 
 PACKAGE=lib${LIB}
@@ -7,6 +7,7 @@ LIB=		z
 SHLIBDIR?=	/lib
 SHLIB_MAJOR=	6
 MAN=		zlib.3 zopen.3
+MLINKS+=	zopen.3 zdopen.3
 
 ZLIBSRC=	${SRCTOP}/contrib/zlib
 

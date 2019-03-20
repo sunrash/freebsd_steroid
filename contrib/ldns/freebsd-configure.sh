@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/contrib/ldns/freebsd-configure.sh 339303 2018-10-11 08:14:31Z des $
+# $FreeBSD$
 #
 
 set -e

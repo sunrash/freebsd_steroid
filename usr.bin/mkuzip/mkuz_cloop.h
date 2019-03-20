@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/mkuzip/mkuz_cloop.h 295943 2016-02-23 23:59:08Z sobomax $
+ * $FreeBSD$
  */
 
 /* CLOOP format and related constants */

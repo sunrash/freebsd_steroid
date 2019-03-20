@@ -25,7 +25,7 @@
  */
 
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_write_filter_zstd.c 336854 2018-07-29 00:12:16Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_write_filter_zstd)
 {

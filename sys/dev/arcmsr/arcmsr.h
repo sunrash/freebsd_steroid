@@ -34,7 +34,7 @@
 **(INCLUDING NEGLIGENCE OR OTHERWISE)ARISING IN ANY WAY OUT OF THE USE OF
 ** THIS SOFTWARE,EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 **************************************************************************
-* $FreeBSD: releng/12.0/sys/dev/arcmsr/arcmsr.h 326255 2017-11-27 14:52:40Z pfg $
+* $FreeBSD$
 */
 #define ARCMSR_SCSI_INITIATOR_ID	255
 #define ARCMSR_DEV_SECTOR_SIZE		512

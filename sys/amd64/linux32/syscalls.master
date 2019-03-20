@@ -1,4 +1,4 @@
- $FreeBSD: releng/12.0/sys/amd64/linux32/syscalls.master 332122 2018-04-06 17:35:35Z brooks $
+ $FreeBSD$
 
 ;	@(#)syscalls.master	8.1 (Berkeley) 7/19/93
 ; System call name/number master file (or rather, slave, from LINUX).

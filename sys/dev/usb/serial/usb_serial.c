@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/serial/usb_serial.c 332996 2018-04-25 15:28:46Z trasz $");
+__FBSDID("$FreeBSD$");
 
 /*-
  * Copyright (c) 1998, 2000 The NetBSD Foundation, Inc.

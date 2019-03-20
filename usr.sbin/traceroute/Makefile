@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/traceroute/Makefile 323866 2017-09-21 14:41:41Z oshogbo $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

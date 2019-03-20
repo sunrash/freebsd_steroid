@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/net80211/w00t/ap/ap.c 329599 2018-02-19 19:01:46Z eadler $
+ * $FreeBSD$
  */
 #include <sys/types.h>
 #include <sys/select.h>

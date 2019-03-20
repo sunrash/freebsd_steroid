@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/uchcom/Makefile 336052 2018-07-06 22:07:26Z ian $
+# $FreeBSD$
 
 S=	${SRCTOP}/sys
 .PATH: $S/dev/usb/serial

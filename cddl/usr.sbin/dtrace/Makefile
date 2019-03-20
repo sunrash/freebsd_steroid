@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/Makefile 314654 2017-03-04 11:30:04Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

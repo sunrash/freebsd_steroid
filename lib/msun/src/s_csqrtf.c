@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_csqrtf.c 336412 2018-07-17 12:01:59Z bde $");
+__FBSDID("$FreeBSD$");
 
 #include <complex.h>
 #include <math.h>

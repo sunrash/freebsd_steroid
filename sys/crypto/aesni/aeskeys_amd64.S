@@ -220,4 +220,4 @@ ENTRY(aesni_set_deckey)
 	.cfi_endproc
 END(aesni_set_deckey)
 
-	.ident	"$FreeBSD: releng/12.0/sys/crypto/aesni/aeskeys_amd64.S 255187 2013-09-03 18:31:23Z jmg $"
+	.ident	"$FreeBSD$"

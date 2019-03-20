@@ -25,7 +25,7 @@
 #define NI_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/nid.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define CAYMAN_MAX_SH_GPRS           256
 #define CAYMAN_MAX_TEMP_GPRS         16

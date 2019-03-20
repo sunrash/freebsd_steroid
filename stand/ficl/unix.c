@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/ficl/unix.c 167850 2007-03-23 22:26:01Z jkim $ */
+/* $FreeBSD$ */
 
 #include <string.h>
 #include <netinet/in.h>

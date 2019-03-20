@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/cc/cc1/Makefile 335733 2018-06-27 19:29:15Z bdrewery $
+# $FreeBSD$
 
 MAN=
 .include <src.opts.mk>

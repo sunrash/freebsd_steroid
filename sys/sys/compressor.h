@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/compressor.h 329240 2018-02-13 19:28:02Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _SYS__COMPRESSOR_H_

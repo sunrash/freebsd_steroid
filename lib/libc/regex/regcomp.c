@@ -44,7 +44,7 @@
 static char sccsid[] = "@(#)regcomp.c	8.5 (Berkeley) 3/20/94";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/regex/regcomp.c 328241 2018-01-22 02:58:33Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <stdio.h>
@@ -1846,7 +1846,7 @@ computejumps(struct parse *p, struct re_guts *g)
 	if (p->error != 0)
 		return;
 
-	g->charjump = (int*) malloc((NC + 1) * sizeof(int));
+	g->charjump = (int *)malloc((NC_MAX + 1) * sizeof(int));
 	if (g->charjump == NULL)	/* Not a fatal error */
 		return;
 	/* Adjust for signed chars, if necessary */

@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/altera/atse/if_atsereg.h 332474 2018-04-13 15:59:24Z br $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_IF_ATSEREG_H

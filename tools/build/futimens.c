@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/build/futimens.c 301763 2016-06-09 21:57:34Z jilles $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stat.h>
 

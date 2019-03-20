@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/arm/altera/socfpga/files.socfpga 327392 2017-12-30 22:01:17Z manu $
+# $FreeBSD$
 
 kern/kern_clocksource.c				standard
 

@@ -28,7 +28,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
  * IN THE SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/xen/xen_intr.h 338631 2018-09-13 07:14:11Z royger $
+ * $FreeBSD$
  */
 #ifndef _XEN_INTR_H_
 #define _XEN_INTR_H_

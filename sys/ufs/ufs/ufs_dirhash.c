@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/ufs/ufs/ufs_dirhash.c 328346 2018-01-24 17:58:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ufs.h"
 

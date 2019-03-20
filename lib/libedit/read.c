@@ -41,7 +41,7 @@ __RCSID("$NetBSD: read.c,v 1.86 2016/03/02 19:24:20 christos Exp $");
 #endif
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/read.c 313002 2017-01-30 23:00:51Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * read.c: Clean this junk up! This is horrible code.
@@ -363,13 +363,7 @@ read_char(EditLine *el, wchar_t *cp)
 				goto again;
 			}
 		case (size_t)-2:
-			/*
-			 * We don't support other multibyte charsets.
-			 * The second condition shouldn't happen
-			 * and is here merely for additional safety.
-			 */
-			if ((el->el_flags & CHARSET_IS_UTF8) == 0 ||
-			    cbp >= MB_LEN_MAX) {
+			if (cbp >= MB_LEN_MAX) {
 				errno = EILSEQ;
 				*cp = L'\0';
 				return -1;

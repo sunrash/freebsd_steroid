@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcom_err/Makefile 312501 2017-01-20 04:51:36Z ngie $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 LIB=	com_err

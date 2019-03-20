@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/smbfs/smbfs_io.c 341085 2018-11-27 17:58:25Z markj $
+ * $FreeBSD$
  *
  */
 #include <sys/param.h>
@@ -63,7 +63,7 @@
 
 /*#define SMBFS_RWGENERIC*/
 
-extern int smbfs_pbuf_freecnt;
+extern uma_zone_t smbfs_pbuf_zone;
 
 static int smbfs_fastlookup = 1;
 
@@ -468,7 +468,7 @@ smbfs_getpages(ap)
 	scred = smbfs_malloc_scred();
 	smb_makescred(scred, td, cred);
 
-	bp = getpbuf(&smbfs_pbuf_freecnt);
+	bp = uma_zalloc(smbfs_pbuf_zone, M_WAITOK);
 
 	kva = (vm_offset_t) bp->b_data;
 	pmap_qenter(kva, pages, npages);
@@ -490,7 +490,7 @@ smbfs_getpages(ap)
 	smbfs_free_scred(scred);
 	pmap_qremove(kva, npages);
 
-	relpbuf(bp, &smbfs_pbuf_freecnt);
+	uma_zfree(smbfs_pbuf_zone, bp);
 
 	if (error && (uio.uio_resid == count)) {
 		printf("smbfs_getpages: error %d\n",error);
@@ -593,7 +593,7 @@ smbfs_putpages(ap)
 		rtvals[i] = VM_PAGER_ERROR;
 	}
 
-	bp = getpbuf(&smbfs_pbuf_freecnt);
+	bp = uma_zalloc(smbfs_pbuf_zone, M_WAITOK);
 
 	kva = (vm_offset_t) bp->b_data;
 	pmap_qenter(kva, pages, npages);
@@ -621,7 +621,7 @@ smbfs_putpages(ap)
 
 	pmap_qremove(kva, npages);
 
-	relpbuf(bp, &smbfs_pbuf_freecnt);
+	uma_zfree(smbfs_pbuf_zone, bp);
 
 	if (error == 0) {
 		vnode_pager_undirty_pages(pages, rtvals, count - uio.uio_resid,

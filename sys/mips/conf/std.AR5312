@@ -3,7 +3,7 @@
 #
 # This includes all the common drivers for the AR5312 boards
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/std.AR5312 307082 2016-10-12 02:16:42Z jtl $
+# $FreeBSD$
 #
 
 machine		mips mips

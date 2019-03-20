@@ -34,7 +34,7 @@
 
 #include <isa/isavar.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/isa/sndbuf_dma.c 326255 2017-11-27 14:52:40Z pfg $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 int
 sndbuf_dmasetup(struct snd_dbuf *b, struct resource *drq)

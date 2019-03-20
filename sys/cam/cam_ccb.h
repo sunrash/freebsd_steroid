@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cam/cam_ccb.h 337583 2018-08-10 19:19:07Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _CAM_CAM_CCB_H

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)syslimits.h	8.1 (Berkeley) 6/2/93
- * $FreeBSD: releng/12.0/sys/sys/syslimits.h 327598 2018-01-05 22:26:23Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SYSLIMITS_H_

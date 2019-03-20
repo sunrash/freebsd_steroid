@@ -1,8 +1,9 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/kqueue/libkqueue/kqueue_test.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 i=1
-"$(dirname $0)/kqtest" | while read line; do
+# Temporarily disable evfilt_proc tests: https://bugs.freebsd.org/233586
+"$(dirname $0)/kqtest" --no-proc | while read line; do
 	echo $line | grep -q passed
 	if [ $? -eq 0 ]; then
 		echo "ok - $i $line"

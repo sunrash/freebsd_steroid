@@ -60,7 +60,7 @@
 
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/cpufunc_asm_arm11x6.S 307925 2016-10-25 16:25:06Z andrew $");
+__FBSDID("$FreeBSD$");
 
 	.cpu arm1176jz-s
 

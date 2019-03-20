@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/include/mmuvar.h 335160 2018-06-14 17:23:51Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_MMUVAR_H_

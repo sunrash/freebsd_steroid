@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/amd64/x86_64cpuid.S 339270 2018-10-09 21:28:26Z gjb $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from x86_64cpuid.pl. */
 
 .hidden	OPENSSL_cpuid_setup

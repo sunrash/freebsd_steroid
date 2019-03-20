@@ -49,7 +49,7 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * $FreeBSD: releng/12.0/sys/dev/mmc/mmc_private.h 321385 2017-07-23 16:11:47Z marius $
+ * $FreeBSD$
  */
 
 #ifndef DEV_MMC_PRIVATE_H

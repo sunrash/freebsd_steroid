@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/conf/std.XLP 322476 2017-08-13 22:07:42Z ian $
+# $FreeBSD$
 
 include		"../nlm/std.xlp"
 makeoptions	MODULES_OVERRIDE=""
@@ -75,6 +75,7 @@ device		ether
 device		xlpge
 #device		re
 device		msk
+device		iflib
 device		em
 
 # Disks

@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/iostat/iostat.c 332662 2018-04-18 02:25:03Z allanjude $
+ * $FreeBSD$
  */
 /*
  * Parts of this program are derived from the original FreeBSD iostat

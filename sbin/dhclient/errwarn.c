@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/dhclient/errwarn.c 329754 2018-02-21 21:13:08Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 

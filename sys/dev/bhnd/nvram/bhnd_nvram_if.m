@@ -22,7 +22,7 @@
 # OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
 # USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_if.m 304243 2016-08-16 21:32:05Z landonf $
+# $FreeBSD$
 
 #include <sys/types.h>
 #include <sys/bus.h>

@@ -33,7 +33,7 @@
  *
  *	@(#)fdesc_vnops.c	8.9 (Berkeley) 1/21/94
  *
- * $FreeBSD: releng/12.0/sys/fs/fdescfs/fdesc_vnops.c 341085 2018-11-27 17:58:25Z markj $
+ * $FreeBSD$
  */
 
 /*
@@ -575,6 +575,8 @@ fdesc_readdir(struct vop_readdir_args *ap)
 			dirent_terminate(dp);
 			break;
 		}
+		/* NOTE: d_off is the offset of the *next* entry. */
+		dp->d_off = UIO_MX * (i + 1);
 		if (dp->d_namlen != 0) {
 			/*
 			 * And ship to userland

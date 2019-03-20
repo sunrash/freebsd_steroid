@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)profile.h	8.1 (Berkeley) 6/11/93
- * $FreeBSD: releng/12.0/sys/i386/include/profile.h 334528 2018-06-02 09:59:27Z bde $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_PROFILE_H_

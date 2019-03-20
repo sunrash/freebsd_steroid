@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/firewire/sbp/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 # Makefile for the SBP-II (Serial Bus Protocol 2/SCSI over IEEE1394)
 

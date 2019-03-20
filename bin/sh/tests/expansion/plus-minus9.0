@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/plus-minus9.0 333927 2018-05-20 17:25:52Z jilles $
+# $FreeBSD$
 
 a=1
 b=${a+

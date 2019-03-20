@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/net/netdb_private.h 326193 2017-11-25 17:12:48Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _NETDB_PRIVATE_H_

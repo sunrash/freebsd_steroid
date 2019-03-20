@@ -1,6 +1,6 @@
 # X1000 -- Kernel config for Ingenic X1000 boards
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/X1000 315141 2017-03-12 07:09:50Z manu $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

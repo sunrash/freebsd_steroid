@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tests/sys/kern/reaper.c 339390 2018-10-16 20:06:56Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/procctl.h>
 #include <sys/procdesc.h>

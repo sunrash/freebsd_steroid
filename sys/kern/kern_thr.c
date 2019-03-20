@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_thr.c 336205 2018-07-11 19:38:42Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_posix.h"
 #include "opt_hwpmc_hooks.h"

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/powerpc/uboot/conf.c 324558 2017-10-12 15:16:22Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include "bootstrap.h"
@@ -95,9 +95,11 @@ struct netif_driver *netif_drivers[] = {
  * Sort formats so that those that can detect based on arguments
  * rather than reading the file go first.
  */
+extern struct file_format uboot_elf64;
 
 struct file_format *file_formats[] = {
 	&uboot_elf,
+	&uboot_elf64,
 	NULL
 };
 

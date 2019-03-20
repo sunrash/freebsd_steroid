@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/doc/Makefile 279529 2015-03-02 17:24:04Z bapt $
+# $FreeBSD$
 
 .include "../Makefile.inc0"
 

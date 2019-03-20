@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcasper/libcasper/libcasper.c 329452 2018-02-17 12:22:29Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -100,12 +100,12 @@ cap_init(void)
 
 	pid = pdfork(&pfd, 0);
 	if (pid == 0) {
-		/* Parent. */
+		/* Child. */
 		close(sock[0]);
 		casper_main_loop(sock[1]);
 		/* NOTREACHED. */
 	} else if (pid > 0) {
-		/* Child. */
+		/* Parent. */
 		close(sock[1]);
 		chan = cap_wrap(sock[0], 0);
 		if (chan == NULL) {

@@ -1,7 +1,7 @@
 #
 # DEFAULTS -- Default kernel configuration file for FreeBSD/i386
 #
-# $FreeBSD: releng/12.0/sys/i386/conf/DEFAULTS 337967 2018-08-17 14:47:21Z imp $
+# $FreeBSD$
 
 machine		i386
 

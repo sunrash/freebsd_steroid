@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/stdio/scanfloat_test.c 290860 2015-11-15 12:48:42Z bapt $");
+__FBSDID("$FreeBSD$");
 
 #include <fenv.h>
 #include <float.h>

@@ -248,5 +248,5 @@
 	version = 0x1
 	checksum = 0x159b9295
 #
-# $FreeBSD: releng/12.0/sys/dev/cxgbe/firmware/t4fw_cfg.txt 338954 2018-09-26 21:16:07Z np $
+# $FreeBSD$
 #

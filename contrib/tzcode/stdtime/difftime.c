@@ -9,7 +9,7 @@
 static char	elsieid[] __unused = "@(#)difftime.c	8.1";
 #endif /* !defined NOID */
 #endif /* !defined lint */
-__FBSDID("$FreeBSD: releng/12.0/contrib/tzcode/stdtime/difftime.c 289027 2015-10-08 11:42:15Z rodrigc $");
+__FBSDID("$FreeBSD$");
 
 /*LINTLIBRARY*/
 

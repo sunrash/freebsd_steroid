@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/svn/lib/Makefile 290431 2015-11-06 00:06:10Z bdrewery $
+# $FreeBSD$
 
 SUBDIR=	libapr libapr_util libserf \
 	libsvn_client libsvn_delta libsvn_diff libsvn_fs libsvn_fs_fs \

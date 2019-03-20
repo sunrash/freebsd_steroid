@@ -25,7 +25,7 @@
 #define SI_H
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/sid.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #define TAHITI_RB_BITMAP_WIDTH_PER_SH  2
 

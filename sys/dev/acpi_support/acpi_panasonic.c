@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/acpi_support/acpi_panasonic.c 312887 2017-01-27 14:17:48Z akiyama $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_acpi.h"
 #include <sys/param.h>
@@ -137,14 +137,16 @@ static int
 acpi_panasonic_probe(device_t dev)
 {
 	static char *mat_ids[] = { "MAT0019", NULL };
-
+	int rv;
+	
 	if (acpi_disabled("panasonic") ||
-	    ACPI_ID_PROBE(device_get_parent(dev), dev, mat_ids) == NULL ||
 	    device_get_unit(dev) != 0)
 		return (ENXIO);
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, mat_ids, NULL);
 
-	device_set_desc(dev, "Panasonic Notebook Hotkeys");
-	return (0);
+	if (rv <= 0)
+		device_set_desc(dev, "Panasonic Notebook Hotkeys");
+	return (rv);
 }
 
 static int

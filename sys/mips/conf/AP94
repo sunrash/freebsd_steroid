@@ -11,7 +11,7 @@
 # + 32mb RAM
 # + uboot environment
 
-# $FreeBSD: releng/12.0/sys/mips/conf/AP94 291049 2015-11-19 01:58:12Z imp $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

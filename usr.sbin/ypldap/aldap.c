@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/usr.sbin/ypldap/aldap.c 318915 2017-05-26 03:27:06Z araujo $ */
+/*	$FreeBSD$ */
 /*	$Id: aldap.c,v 1.32 2016/04/27 10:53:27 schwarze Exp $ */
 /*	$OpenBSD: aldap.c,v 1.32 2016/04/27 10:53:27 schwarze Exp $ */
 

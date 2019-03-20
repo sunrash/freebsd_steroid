@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/cli_root/Makefile 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

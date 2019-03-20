@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: bthidd.c,v 1.8 2006/09/07 21:06:53 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidd/bthidd.c 333113 2018-04-30 12:16:54Z wulf $
+ * $FreeBSD$
  */
 
 #include <sys/time.h>

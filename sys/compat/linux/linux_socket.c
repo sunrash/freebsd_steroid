@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_socket.c 340762 2018-11-22 13:12:17Z tijl $");
+__FBSDID("$FreeBSD$");
 
 /* XXX we use functions that might not exist. */
 #include "opt_compat.h"
@@ -1533,7 +1533,7 @@ linux_setsockopt(struct thread *td, struct linux_setsockopt_args *args)
 		int s;
 		int level;
 		int name;
-		caddr_t val;
+		const void *val;
 		int valsize;
 	} */ bsd_args;
 	l_timeval linux_tv;
@@ -1583,10 +1583,11 @@ linux_setsockopt(struct thread *td, struct linux_setsockopt_args *args)
 	bsd_args.valsize = args->optlen;
 
 	if (name == IPV6_NEXTHOP) {
-		linux_to_bsd_sockaddr((struct sockaddr *)bsd_args.val,
-			bsd_args.valsize);
+		linux_to_bsd_sockaddr(__DECONST(struct sockaddr *,
+		    bsd_args.val), bsd_args.valsize);
 		error = sys_setsockopt(td, &bsd_args);
-		bsd_to_linux_sockaddr((struct sockaddr *)bsd_args.val);
+		bsd_to_linux_sockaddr(__DECONST(struct sockaddr *,
+		    bsd_args.val));
 	} else
 		error = sys_setsockopt(td, &bsd_args);
 
@@ -1632,6 +1633,11 @@ linux_getsockopt(struct thread *td, struct linux_getsockopt_args *args)
 		case LOCAL_PEERCRED:
 			if (args->optlen < sizeof(lxu))
 				return (EINVAL);
+			/*
+			 * LOCAL_PEERCRED is not served at the SOL_SOCKET level,
+			 * but by the Unix socket's level 0.
+			 */
+			bsd_args.level = 0;
 			xulen = sizeof(xu);
 			error = kern_getsockopt(td, args->s, bsd_args.level,
 			    name, &xu, UIO_SYSSPACE, &xulen);

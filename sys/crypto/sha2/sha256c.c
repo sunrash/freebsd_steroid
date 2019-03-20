@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/sha2/sha256c.c 336539 2018-07-20 07:01:28Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/endian.h>
 #include <sys/types.h>

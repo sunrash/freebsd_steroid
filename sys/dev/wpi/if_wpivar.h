@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/wpi/if_wpivar.h 306878 2016-10-08 20:41:08Z avos $	*/
+/*	$FreeBSD$	*/
 
 /*-
  * Copyright (c) 2006,2007

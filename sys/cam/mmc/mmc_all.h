@@ -50,7 +50,7 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * $FreeBSD: releng/12.0/sys/cam/mmc/mmc_all.h 328070 2018-01-16 23:19:57Z pfg $
+ * $FreeBSD$
  */
 
 /*

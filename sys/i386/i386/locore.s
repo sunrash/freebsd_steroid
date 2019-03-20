@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)locore.s	7.3 (Berkeley) 5/13/91
- * $FreeBSD: releng/12.0/sys/i386/i386/locore.s 337715 2018-08-13 17:13:09Z markj $
+ * $FreeBSD$
  *
  *		originally from: locore.s, by William F. Jolitz
  *
@@ -52,15 +52,6 @@
 #include <machine/specialreg.h>
 
 #include "assym.inc"
-
-/*
- * PTmap is recursive pagemap at top of virtual address space.
- * Within PTmap, the page directory can be found (third indirection).
- */
-	.globl	PTmap,PTD,PTDpde
-	.set	PTmap,(PTDPTDI << PDRSHIFT)
-	.set	PTD,PTmap + (PTDPTDI * PAGE_SIZE)
-	.set	PTDpde,PTD + (PTDPTDI * PDESIZE)
 
 /*
  * Compiled KERNBASE location and the kernel load address, now identical.
@@ -120,8 +111,8 @@ NON_GPROF_ENTRY(btext)
  * inactive from now until we switch to new ones, since we don't load any
  * more segment registers or permit interrupts until after the switch.
  */
-	movl	$end,%ecx
-	movl	$edata,%edi
+	movl	$__bss_end,%ecx
+	movl	$__bss_start,%edi
 	subl	%edi,%ecx
 	xorl	%eax,%eax
 	cld

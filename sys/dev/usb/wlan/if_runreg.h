@@ -16,7 +16,7 @@
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/wlan/if_runreg.h 300748 2016-05-26 15:05:37Z avos $
+ * $FreeBSD$
  */
 
 #ifndef _IF_RUNREG_H_
@@ -1086,9 +1086,6 @@ struct rt2860_rxwi {
 /*
  * Channel map for run(4) driver; taken from the table below.
  */
-static const uint8_t run_chan_2ghz[] =
-	{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-
 static const uint8_t run_chan_5ghz[] =
 	{ 36, 38, 40, 44, 46, 48, 52, 54, 56, 60, 62, 64, 100, 102, 104,
 	  108, 110, 112, 116, 118, 120, 124, 126, 128, 132, 134, 136, 140,

@@ -26,7 +26,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/vnic/lmac_if.m 289551 2015-10-18 22:02:58Z zbb $
+# $FreeBSD$
 
 # LMAC (BGX controller) interface description
 #

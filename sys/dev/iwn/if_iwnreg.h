@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/iwn/if_iwnreg.h 315958 2017-03-25 15:57:47Z avos $	*/
+/*	$FreeBSD$	*/
 /*	$OpenBSD: if_iwnreg.h,v 1.40 2010/05/05 19:41:57 damien Exp $	*/
 
 /*-
@@ -1378,10 +1378,17 @@ struct iwn_ucode_info {
 
 #define	IWN_AGG_TX_STATUS_MSK		0x00000fff
 #define	IWN_AGG_TX_TRY_MSK		0x0000f000
+#define	IWN_AGG_TX_TRY_POS		12
+#define	IWN_AGG_TX_TRY_COUNT(status)	\
+	(((status) & IWN_AGG_TX_TRY_MSK) >> IWN_AGG_TX_TRY_POS)
 
 #define	IWN_AGG_TX_STATE_LAST_SENT_MSK		\
 	    (IWN_AGG_TX_STATE_LAST_SENT_TTL_MSK | \
 	     IWN_AGG_TX_STATE_LAST_SENT_TRY_CNT_MSK)
+
+#define IWN_AGG_TX_STATE_IGNORE_MASK		\
+	    (IWN_AGG_TX_STATE_FEW_BYTES_MSK | \
+	     IWN_AGG_TX_STATE_ABORT_MSK)
 
 /* # tx attempts for first frame in aggregation */
 #define	IWN_AGG_TX_STATE_TRY_CNT_POS	12

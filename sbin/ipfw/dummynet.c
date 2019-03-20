@@ -17,7 +17,7 @@
  *
  * This software is provided ``AS IS'' without any warranties of any kind.
  *
- * $FreeBSD: releng/12.0/sbin/ipfw/dummynet.c 327040 2017-12-20 20:25:28Z pfg $
+ * $FreeBSD$
  *
  * dummynet support
  */

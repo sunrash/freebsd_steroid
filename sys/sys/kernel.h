@@ -41,7 +41,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)kernel.h	8.3 (Berkeley) 1/21/94
- * $FreeBSD: releng/12.0/sys/sys/kernel.h 331290 2018-03-21 10:26:39Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_KERNEL_H_

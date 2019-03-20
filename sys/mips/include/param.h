@@ -38,7 +38,7 @@
  *	from: Utah Hdr: machparam.h 1.11 89/08/14
  *	from: @(#)param.h	8.1 (Berkeley) 6/10/93
  *	JNPR: param.h,v 1.6.2.1 2007/09/10 07:49:36 girish
- * $FreeBSD: releng/12.0/sys/mips/include/param.h 330817 2018-03-12 22:10:06Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _MIPS_INCLUDE_PARAM_H_

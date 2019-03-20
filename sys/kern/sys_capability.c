@@ -58,7 +58,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/sys_capability.c 339341 2018-10-12 23:48:10Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_capsicum.h"
 #include "opt_ktrace.h"
@@ -86,7 +86,7 @@ __FBSDID("$FreeBSD: releng/12.0/sys/kern/sys_capability.c 339341 2018-10-12 23:4
 #include <vm/vm.h>
 
 bool __read_frequently trap_enotcap;
-SYSCTL_BOOL(_kern, OID_AUTO, trap_enotcap, CTLFLAG_RW, &trap_enotcap, 0,
+SYSCTL_BOOL(_kern, OID_AUTO, trap_enotcap, CTLFLAG_RWTUN, &trap_enotcap, 0,
     "Deliver SIGTRAP on ENOTCAPABLE");
 
 #ifdef CAPABILITY_MODE

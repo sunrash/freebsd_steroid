@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/i386/include/if_wl_wavelan.h 326260 2017-11-27 15:08:52Z pfg $ */
+/* $FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
  *

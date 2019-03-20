@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_lm75/Makefile 266936 2014-06-01 03:14:03Z loos $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

@@ -12,7 +12,7 @@
  * warranties of merchantability and fitness for a particular
  * purpose.
  *
- * $FreeBSD: releng/12.0/stand/i386/btx/btxldr/btxldr.S 310702 2016-12-28 14:25:04Z emaste $
+ * $FreeBSD$
  */
 
 #include <bootargs.h>

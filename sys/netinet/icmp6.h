@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netinet/icmp6.h 327336 2017-12-29 07:23:18Z cy $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: icmp6.h,v 1.46 2001/04/27 15:09:48 itojun Exp $	*/
 
 /*-
@@ -243,6 +243,10 @@ struct nd_router_advert {	/* router advertisement */
 #define ND_RA_FLAG_RTPREF_MEDIUM	0x00 /* 00000000 */
 #define ND_RA_FLAG_RTPREF_LOW	0x18 /* 00011000 */
 #define ND_RA_FLAG_RTPREF_RSV	0x10 /* 00010000 */
+
+#ifdef EXPERIMENTAL
+#define	ND_RA_FLAG_IPV6_ONLY	0x02 /* draft-ietf-6man-ipv6only-flag */
+#endif
 
 #define nd_ra_router_lifetime	nd_ra_hdr.icmp6_data16[1]
 

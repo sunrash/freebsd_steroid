@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tests/sys/geom/class/part/misc.sh 329275 2018-02-14 20:26:09Z asomers $
+# $FreeBSD$
 
 MD_DEVS="md.devs"
 

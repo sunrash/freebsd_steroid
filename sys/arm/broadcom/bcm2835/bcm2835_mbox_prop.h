@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2835_mbox_prop.h 298383 2016-04-20 22:38:00Z gonzo $
+ * $FreeBSD$
  */
 
 #ifndef _BCM2835_MBOX_PROP_H_

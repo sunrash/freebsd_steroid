@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdinstall/scripts/Makefile 327487 2018-01-02 05:27:24Z nwhitehorn $
+# $FreeBSD$
 
 SCRIPTS= auto adduser bootconfig checksum config docsinstall entropy hardening \
 	 hostname jail keymap mirrorselect mount netconfig netconfig_ipv4 \

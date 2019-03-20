@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/btxld/Makefile 270168 2014-08-19 15:04:32Z bdrewery $
+# $FreeBSD$
 
 PROG=	btxld
 MAN=	btxld.8

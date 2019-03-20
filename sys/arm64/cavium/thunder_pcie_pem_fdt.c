@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/cavium/thunder_pcie_pem_fdt.c 315421 2017-03-16 17:49:37Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

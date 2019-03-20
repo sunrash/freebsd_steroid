@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/ipf/ipf/Makefile 325632 2017-11-10 07:52:58Z bdrewery $
+# $FreeBSD$
 
 PACKAGE=	ipf
 PROG=		ipf

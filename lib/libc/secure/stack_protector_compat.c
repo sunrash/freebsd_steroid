@@ -4,7 +4,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/secure/stack_protector_compat.c 286760 2015-08-14 03:03:13Z pfg $");
+__FBSDID("$FreeBSD$");
 
 void __stack_chk_fail(void);
 

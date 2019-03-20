@@ -74,7 +74,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/vm_fault.c 338999 2018-09-28 14:11:38Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ktrace.h"
 #include "opt_vm.h"
@@ -1181,6 +1181,16 @@ readrest:
 			 */
 			vm_object_pip_wakeup(fs.object);
 			VM_OBJECT_WUNLOCK(fs.object);
+
+			/*
+			 * We only try to prefault read-only mappings to the
+			 * neighboring pages when this copy-on-write fault is
+			 * a hard fault.  In other cases, trying to prefault
+			 * is typically wasted effort.
+			 */
+			if (faultcount == 0)
+				faultcount = 1;
+
 			/*
 			 * Only use the new page below...
 			 */

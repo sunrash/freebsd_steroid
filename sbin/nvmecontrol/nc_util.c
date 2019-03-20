@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/nvmecontrol/nc_util.c 335091 2018-06-13 22:00:02Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/endian.h>
 #include "nvmecontrol.h"

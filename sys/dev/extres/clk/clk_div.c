@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/extres/clk/clk_div.c 337346 2018-08-05 06:15:35Z manu $");
+__FBSDID("$FreeBSD$");
 
 
 #include <sys/param.h>

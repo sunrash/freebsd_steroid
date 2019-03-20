@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/LOGIN 278706 2015-02-13 20:52:23Z ngie $
+# $FreeBSD$
 #
 
 # PROVIDE: LOGIN

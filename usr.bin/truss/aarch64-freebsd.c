@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/truss/aarch64-freebsd.c 309589 2016-12-06 00:39:00Z jhb $");
+__FBSDID("$FreeBSD$");
 
 /* FreeBSD/arm64-specific system call handling. */
 

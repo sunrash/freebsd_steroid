@@ -28,7 +28,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 # THE POSSIBILITY OF SUCH DAMAGES.
 # 
-# $FreeBSD: releng/12.0/sys/dev/bhnd/tools/nvram_map_gen.awk 333882 2018-05-19 18:15:41Z mmacy $
+# $FreeBSD$
 
 BEGIN	{ main() }
 END	{ at_exit() }

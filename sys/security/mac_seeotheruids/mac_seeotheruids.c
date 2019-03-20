@@ -35,7 +35,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/security/mac_seeotheruids/mac_seeotheruids.c 227309 2011-11-07 15:43:11Z ed $
+ * $FreeBSD$
  */
 
 /*
@@ -123,7 +123,7 @@ seeotheruids_check(struct ucred *cr1, struct ucred *cr2)
 		return (0);
 
 	if (suser_privileged) {
-		if (priv_check_cred(cr1, PRIV_SEEOTHERUIDS, 0) == 0)
+		if (priv_check_cred(cr1, PRIV_SEEOTHERUIDS) == 0)
 			return (0);
 	}
 

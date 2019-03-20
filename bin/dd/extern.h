@@ -33,7 +33,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)extern.h	8.3 (Berkeley) 4/2/94
- * $FreeBSD: releng/12.0/bin/dd/extern.h 337869 2018-08-15 20:50:38Z kevans $
+ * $FreeBSD$
  */
 
 void block(void);

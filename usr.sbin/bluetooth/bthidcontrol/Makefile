@@ -1,5 +1,5 @@
 # $Id: Makefile,v 1.2 2004/02/13 21:44:41 max Exp $
-# $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidcontrol/Makefile 333112 2018-04-30 10:49:29Z wulf $
+# $FreeBSD$
 
 .PATH:	${.CURDIR:H}/bthidd
 

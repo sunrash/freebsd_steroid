@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/zfs/zfsimpl.c 336084 2018-07-08 07:42:49Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  *	Stand-alone ZFS file reader.
@@ -62,6 +62,7 @@ static const char *features_for_read[] = {
 	"org.illumos:sha512",
 	"org.illumos:skein",
 	"org.zfsonlinux:large_dnode",
+	"com.joyent:multi_vdev_crash_dump",
 	NULL
 };
 

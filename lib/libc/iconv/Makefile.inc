@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/iconv/Makefile.inc 312451 2017-01-20 03:23:24Z ngie $
+# $FreeBSD$
 
 # iconv sources
 .PATH: ${LIBC_SRCTOP}/iconv

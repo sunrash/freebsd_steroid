@@ -31,7 +31,7 @@
 # /usr may kill your NFS server -- all clients start makewhatis at the same
 # time! So use this wrapper instead calling makewhatis directly.
 #
-# $FreeBSD: releng/12.0/libexec/makewhatis.local/makewhatis.local.sh 323550 2017-09-13 16:35:16Z gordon $
+# $FreeBSD$
 
 PATH=/bin:/usr/bin:$PATH; export PATH
 opt= dirs= localdirs=
@@ -47,10 +47,10 @@ done
 dirs=`echo $dirs | sed 's/:/ /g'`
 case X"$dirs" in X) echo "usage: $0 [options] directories ..."; exit 1;; esac
 
-localdirs=`find -H $dirs -fstype local -type d -prune -print`
+localdirs=`find -H $dirs -fstype local \! -fstype rdonly -type d -prune -print`
 
 case X"$localdirs" in
-	X) 	echo "$0: no local-mounted manual directories found: $dirs"
+	X) 	echo "$0: no local rw-mounted manual directories found: $dirs"
 		exit 1;;
 	*) 	exec `basename $0 .local` $opt $localdirs;;
 esac

@@ -50,7 +50,7 @@ static char sccsid[] = "@(#)pr.c	8.2 (Berkeley) 4/16/94";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/pr/pr.c 326419 2017-12-01 03:22:40Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/time.h>

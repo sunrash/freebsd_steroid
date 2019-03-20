@@ -35,7 +35,7 @@
  * SUCH DAMAGE.
  *
  * from: NetBSD: zopen.c,v 1.8 2003/08/07 11:13:29 agc Exp
- * $FreeBSD: releng/12.0/usr.bin/gzip/zuncompress.c 326185 2017-11-25 09:03:38Z delphij $
+ * $FreeBSD$
  */
 
 /* This file is #included by gzip.c */

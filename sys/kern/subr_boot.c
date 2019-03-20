@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_boot.c 336244 2018-07-13 16:43:05Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* Note: This is compiled in both the kernel and boot loader contexts */
 

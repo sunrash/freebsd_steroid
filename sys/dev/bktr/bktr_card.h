@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/bktr/bktr_card.h 334285 2018-05-28 13:12:34Z eadler $ */
+/* $FreeBSD$ */
 
 /*
  * This is part of the Driver for Video Capture Cards (Frame grabbers)

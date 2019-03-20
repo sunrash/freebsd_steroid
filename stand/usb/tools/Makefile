@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/usb/tools/Makefile 294608 2016-01-22 21:33:27Z emaste $
+# $FreeBSD$
 
 PROG=	sysinit
 MAN=

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/aio/lio_test.c 332631 2018-04-16 18:12:15Z asomers $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

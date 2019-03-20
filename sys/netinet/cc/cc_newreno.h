@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netinet/cc/cc_newreno.h 331214 2018-03-19 16:37:47Z lstewart $
+ * $FreeBSD$
  */
 
 #ifndef _CC_NEWRENO_H

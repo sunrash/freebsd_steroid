@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/readelf/Makefile 315170 2017-03-12 18:58:44Z imp $
+# $FreeBSD$
 
 ELFTCDIR=	${SRCTOP}/contrib/elftoolchain
 READELFDIR=	${ELFTCDIR}/readelf

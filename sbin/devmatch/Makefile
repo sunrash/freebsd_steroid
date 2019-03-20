@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/devmatch/Makefile 329161 2018-02-12 14:44:21Z imp $
+# $FreeBSD$
 
 PROG=	devmatch
 MAN=	devmatch.8

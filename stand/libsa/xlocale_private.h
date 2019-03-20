@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/libsa/xlocale_private.h 328613 2018-01-31 04:29:00Z imp $
+ * $FreeBSD$
  */
 
 #ifndef STAND_XLOCALE_PRIVATE_H

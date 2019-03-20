@@ -29,7 +29,7 @@
 #define __RS400D_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/rs400d.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* Registers */
 #define R_000148_MC_FB_LOCATION                      0x000148

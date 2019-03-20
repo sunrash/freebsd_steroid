@@ -23,7 +23,7 @@
  * Portions Copyright 2013 Howard Su howardsu@freebsd.org
  * Portions Copyright 2016-2018 Ruslan Bukin <br@bsdpad.com>
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/fbt/riscv/fbt_isa.c 339367 2018-10-15 18:56:54Z jhb $
+ * $FreeBSD$
  */
 
 /*

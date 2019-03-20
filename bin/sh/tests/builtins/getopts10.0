@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/builtins/getopts10.0 293359 2016-01-07 20:48:24Z jilles $
+# $FreeBSD$
 
 set -- -x arg
 opt=not

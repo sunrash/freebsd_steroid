@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/flash/cqspi.c 332885 2018-04-23 10:35:00Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

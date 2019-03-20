@@ -26,7 +26,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/share/examples/bhyve/vmrun.sh 335604 2018-06-24 15:22:38Z kib $
+# $FreeBSD$
 #
 
 LOADER=/usr/sbin/bhyveload

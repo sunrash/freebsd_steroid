@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/lib/libsysdecode/mkioctls 338095 2018-08-20 10:39:37Z arichardson $
+# $FreeBSD$
 
 set -e
 

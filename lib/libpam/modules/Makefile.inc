@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpam/modules/Makefile.inc 312452 2017-01-20 03:27:47Z ngie $
+# $FreeBSD$
 
 PAMDIR=		${SRCTOP}/contrib/openpam
 

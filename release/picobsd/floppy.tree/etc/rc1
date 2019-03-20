@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/release/picobsd/floppy.tree/etc/rc1 256641 2013-10-16 16:53:00Z luigi $
+# $FreeBSD$
 ### rc1, next stage 'rc' for PicoBSD -- THIS IS NOT THE NORMAL /etc/rc 
 
 . /etc/rc.conf.defaults		# Load default procedures

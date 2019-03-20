@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pw/tests/pw_etcdir_test.sh 315776 2017-03-23 03:28:24Z ngie $
+# $FreeBSD$
 
 # When the '-V directory' option is provided, the directory must exist
 atf_test_case etcdir_must_exist

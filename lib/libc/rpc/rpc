@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/lib/libc/rpc/rpc 338732 2018-09-17 19:20:50Z brd $
+# $FreeBSD$
 # rpc 88/08/01 4.0 RPCSRC; from 1.12   99/07/25 SMI
 #
 rpcbind		100000  portmap sunrpc rpcbind

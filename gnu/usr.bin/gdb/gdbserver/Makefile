@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/gdb/gdbserver/Makefile 312514 2017-01-20 05:51:25Z ngie $
+# $FreeBSD$
 
 # Not elf specific so don't install in /usr/libexec/elf
 BINDIR=/usr/bin

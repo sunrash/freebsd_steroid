@@ -38,7 +38,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/cpufunc_asm_armv4.S 337760 2018-08-14 15:42:27Z andrew $");
+__FBSDID("$FreeBSD$");
 
 /*
  * TLB functions

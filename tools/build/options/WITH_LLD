@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_LLD 309124 2016-11-24 22:54:55Z dim $
+.\" $FreeBSD$
 Set to build LLVM's lld linker.

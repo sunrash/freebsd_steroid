@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/Makefile 325705 2017-11-11 07:21:49Z eadler $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

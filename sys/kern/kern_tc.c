@@ -19,7 +19,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_tc.c 336914 2018-07-30 15:46:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ntp.h"
 #include "opt_ffclock.h"
@@ -145,7 +145,8 @@ sysctl_kern_boottime(SYSCTL_HANDLER_ARGS)
 
 	getboottime(&boottime);
 
-#ifndef __mips__
+/* i386 is the only arch which uses a 32bits time_t */
+#ifdef __amd64__
 #ifdef SCTL_MASK32
 	int tv[2];
 

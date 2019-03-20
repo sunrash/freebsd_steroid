@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)vm_extern.h	8.2 (Berkeley) 1/12/94
- * $FreeBSD: releng/12.0/sys/vm/vm_extern.h 340401 2018-11-13 18:21:47Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _VM_EXTERN_H_

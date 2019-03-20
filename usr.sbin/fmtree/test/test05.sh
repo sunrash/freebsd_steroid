@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/usr.sbin/fmtree/test/test05.sh 160083 2006-07-03 10:55:22Z maxim $
+# $FreeBSD$
 #
 # Test for 'optional' keyword.
 #

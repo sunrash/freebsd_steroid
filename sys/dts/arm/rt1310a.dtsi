@@ -25,7 +25,7 @@
  *
  * Ralink RT1310A Device Tree Source.
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/rt1310a.dtsi 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 / {

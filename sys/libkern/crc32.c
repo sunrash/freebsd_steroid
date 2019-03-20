@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/libkern/crc32.c 323923 2017-09-22 12:45:15Z mckusick $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

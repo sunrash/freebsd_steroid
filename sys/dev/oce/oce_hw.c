@@ -38,7 +38,7 @@
  * Costa Mesa, CA 92626
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/oce/oce_hw.c 333813 2018-05-18 20:13:34Z mmacy $ */
+/* $FreeBSD$ */
 
 
 #include "oce_if.h"

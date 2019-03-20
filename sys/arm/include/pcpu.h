@@ -26,7 +26,7 @@
  * SUCH DAMAGE.
  *
  *	from: FreeBSD: src/sys/i386/include/globaldata.h,v 1.27 2001/04/27
- * $FreeBSD: releng/12.0/sys/arm/include/pcpu.h 336476 2018-07-19 11:27:11Z manu $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_PCPU_H_

@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_rmlock.c 334546 2018-06-02 22:37:53Z mjg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 
@@ -742,7 +742,7 @@ _rm_assert(const struct rmlock *rm, int what, const char *file, int line)
 {
 	int count;
 
-	if (panicstr != NULL)
+	if (SCHEDULER_STOPPED())
 		return;
 	switch (what) {
 	case RA_LOCKED:

@@ -1,5 +1,5 @@
 /*	$NetBSD: efun.c,v 1.10 2015/07/26 02:20:30 kamil Exp $	*/
-/*	$FreeBSD: releng/12.0/lib/libnetbsd/efun.c 316572 2017-04-06 14:36:08Z emaste $ */
+/*	$FreeBSD$ */
 
 /*-
  * Copyright (c) 2006 The NetBSD Foundation, Inc.

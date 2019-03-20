@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/bsdiff/Makefile 148771 2005-08-06 01:59:06Z cperciva $
+# $FreeBSD$
 
 SUBDIR=	bsdiff bspatch
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/vesa/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 KMOD=	vesa
 SRCS=	opt_vga.h opt_vesa.h

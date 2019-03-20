@@ -27,7 +27,7 @@
  */
 
 #include <sys/param.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/bhyve/bootrom.c 335025 2018-06-13 03:22:08Z araujo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/mman.h>

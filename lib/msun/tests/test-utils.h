@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/msun/tests/test-utils.h 314650 2017-03-04 10:07:46Z ngie $
+ * $FreeBSD$
  */
 
 #ifndef	_TEST_UTILS_H_

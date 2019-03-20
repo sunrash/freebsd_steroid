@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_read_support_format_warc.c 314571 2017-03-02 22:59:35Z mm $");
+__FBSDID("$FreeBSD$");
 
 /**
  * WARC is standardised by ISO TC46/SC4/WG12 and currently available as
@@ -384,6 +384,11 @@ _warc_read(struct archive_read *a, const void **buf, size_t *bsz, int64_t *off)
 		*off = w->cntoff + 4U/*for \r\n\r\n separator*/;
 		w->unconsumed = 0U;
 		return (ARCHIVE_EOF);
+	}
+
+	if (w->unconsumed) {
+		__archive_read_consume(a, w->unconsumed);
+		w->unconsumed = 0U;
 	}
 
 	rab = __archive_read_ahead(a, 1U, &nrd);

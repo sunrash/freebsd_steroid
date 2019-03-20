@@ -57,7 +57,7 @@
  * You may select the license of your choice.
  *------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/sys/dts/powerpc/mpc8555cds.dts 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 /dts-v1/;

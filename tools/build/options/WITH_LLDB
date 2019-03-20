@@ -1,2 +1,2 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_LLDB 255722 2013-09-20 01:52:02Z emaste $
+.\" $FreeBSD$
 Set to build the LLDB debugger.

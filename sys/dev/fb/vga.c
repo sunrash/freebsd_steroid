@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/fb/vga.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_vga.h"
 #include "opt_fb.h"
@@ -147,7 +147,7 @@ vga_ioctl(struct cdev *dev, vga_softc_t *sc, u_long cmd, caddr_t arg, int flag,
 
 int
 vga_mmap(struct cdev *dev, vga_softc_t *sc, vm_ooffset_t offset,
-    vm_offset_t *paddr, int prot, vm_memattr_t *memattr)
+    vm_paddr_t *paddr, int prot, vm_memattr_t *memattr)
 {
 	return genfbmmap(&sc->gensc, sc->adp, offset, paddr, prot, memattr);
 }

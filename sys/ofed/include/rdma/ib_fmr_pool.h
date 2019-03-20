@@ -32,7 +32,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/rdma/ib_fmr_pool.h 330490 2018-03-05 11:49:45Z hselasky $
+ * $FreeBSD$
  */
 
 #if !defined(IB_FMR_POOL_H)

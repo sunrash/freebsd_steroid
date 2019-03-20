@@ -107,7 +107,7 @@
  *    `event_channel_port`
  * In case of multiple notify ioctls, only the last one survives.
  *
- * $FreeBSD: releng/12.0/sys/xen/gntdev.h 333169 2018-05-02 10:19:17Z royger $
+ * $FreeBSD$
  */
 
 #ifndef __XEN_GNTDEV_H__

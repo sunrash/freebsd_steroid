@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/amd/scripts/Makefile 305787 2016-09-14 01:47:01Z cy $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/contrib/amd/scripts
 

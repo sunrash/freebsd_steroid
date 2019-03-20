@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/net/if_gif.h 335924 2018-07-04 02:47:16Z mmacy $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: if_gif.h,v 1.17 2000/09/11 11:36:41 sumikawa Exp $	*/
 
 /*-
@@ -63,6 +63,7 @@ struct gif_softc {
 	} gif_uhdr;
 
 	CK_LIST_ENTRY(gif_softc) chain;
+	CK_LIST_ENTRY(gif_softc) srchash;
 };
 CK_LIST_HEAD(gif_list, gif_softc);
 MALLOC_DECLARE(M_GIF);

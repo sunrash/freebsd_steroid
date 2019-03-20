@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/vmm/amd/svm_msr.c 335030 2018-06-13 07:02:58Z araujo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/errno.h>
@@ -122,9 +122,8 @@ svm_rdmsr(struct svm_softc *sc, int vcpu, u_int num, uint64_t *result,
 	case MSR_MTRR16kBase ... MSR_MTRR16kBase + 1:
 	case MSR_MTRR64kBase:
 	case MSR_SYSCFG:
-		*result = 0;
-		break;
 	case MSR_AMDK8_IPM:
+	case MSR_EXTFEATURES:
 		*result = 0;
 		break;
 	default:
@@ -162,6 +161,8 @@ svm_wrmsr(struct svm_softc *sc, int vcpu, u_int num, uint64_t val, bool *retu)
 		/*
 		 * Ignore writes to microcode update register.
 		 */
+		break;
+	case MSR_EXTFEATURES:
 		break;
 	default:
 		error = EINVAL;

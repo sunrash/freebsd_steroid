@@ -1,5 +1,5 @@
 /*	$NetBSD: netconfig.h,v 1.6 2008/04/28 20:22:54 martin Exp $	*/
-/*	$FreeBSD: releng/12.0/include/netconfig.h 326283 2017-11-27 17:18:31Z pfg $ */
+/*	$FreeBSD$ */
 
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD

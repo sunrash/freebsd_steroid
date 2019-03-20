@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/stripe/conf.sh 293442 2016-01-08 21:28:09Z ngie $
+# $FreeBSD$
 
 name="$(mktemp -u stripe.XXXXXX)"
 class="stripe"

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/aarch64/gen/makecontext.c 285352 2015-07-10 08:36:22Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

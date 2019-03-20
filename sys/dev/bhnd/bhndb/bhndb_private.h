@@ -33,7 +33,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/bhndb/bhndb_private.h 326297 2017-11-28 00:12:14Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_BHNDB_PRIVATE_H_

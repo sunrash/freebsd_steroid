@@ -33,7 +33,7 @@
 
 /*
  * crt0-efi-x86_64.S - x86_64 EFI startup code.
- * $FreeBSD: releng/12.0/stand/efi/loader/arch/amd64/start.S 282727 2015-05-10 13:24:26Z ian $
+ * $FreeBSD$
  */
 
 	.text

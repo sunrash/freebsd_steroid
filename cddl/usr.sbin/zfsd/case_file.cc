@@ -72,7 +72,7 @@
 #include "zfsd_exception.h"
 #include "zpool_list.h"
 
-__FBSDID("$FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/case_file.cc 329681 2018-02-21 00:18:57Z mav $");
+__FBSDID("$FreeBSD$");
 
 /*============================ Namespace Control =============================*/
 using std::auto_ptr;

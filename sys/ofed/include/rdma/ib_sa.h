@@ -33,7 +33,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/rdma/ib_sa.h 336964 2018-07-31 11:23:44Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef IB_SA_H

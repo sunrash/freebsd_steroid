@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libbe/be.h 340753 2018-11-22 04:39:06Z kevans $
+ * $FreeBSD$
  */
 
 #ifndef _LIBBE_H

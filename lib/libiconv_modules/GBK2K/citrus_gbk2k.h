@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/GBK2K/citrus_gbk2k.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_gbk2k.h,v 1.2 2003/06/25 09:51:43 tshiozak Exp $ */
 
 /*-

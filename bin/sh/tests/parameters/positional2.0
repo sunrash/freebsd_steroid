@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/parameters/positional2.0 228873 2011-12-25 13:24:48Z jilles $
+# $FreeBSD$
 
 failures=''
 ok=''

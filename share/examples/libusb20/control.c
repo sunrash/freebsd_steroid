@@ -8,7 +8,7 @@
  * this stuff is worth it, you can buy me a beer in return.        Joerg Wunsch
  * ----------------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/share/examples/libusb20/control.c 326408 2017-11-30 20:33:45Z pfg $
+ * $FreeBSD$
  */
 
 /*

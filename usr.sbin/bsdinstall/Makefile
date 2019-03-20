@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdinstall/Makefile 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 
 SUBDIR= distextract distfetch partedit scripts
 SUBDIR_PARALLEL=

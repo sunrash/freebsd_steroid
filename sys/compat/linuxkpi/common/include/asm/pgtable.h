@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/asm/pgtable.h 316033 2017-03-27 17:04:11Z hselasky $
+ * $FreeBSD$
  */
 #ifndef _ASM_PGTABLE_H_
 #define	_ASM_PGTABLE_H_

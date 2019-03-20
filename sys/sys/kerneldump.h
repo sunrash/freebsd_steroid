@@ -34,7 +34,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/kerneldump.h 335227 2018-06-15 19:02:53Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_KERNELDUMP_H

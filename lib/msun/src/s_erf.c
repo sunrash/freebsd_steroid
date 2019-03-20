@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_erf.c 268593 2014-07-13 17:05:03Z kargl $");
+__FBSDID("$FreeBSD$");
 
 /* double erf(double x)
  * double erfc(double x)
@@ -107,7 +107,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_erf.c 268593 2014-07-13 17:05:03Z
  *	   	erfc/erf(NaN) is NaN
  */
 
-
+#include <float.h>
 #include "math.h"
 #include "math_private.h"
 

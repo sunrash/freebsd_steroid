@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/refcount.h 339860 2018-10-29 14:06:20Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef __SYS_REFCOUNT_H__
@@ -79,8 +79,6 @@ refcount_release(volatile u_int *count)
 /*
  * This functions returns non-zero if the refcount was
  * incremented. Else zero is returned.
- *
- * A temporary hack until refcount_* APIs are sorted out.
  */
 static __inline __result_use_check int
 refcount_acquire_if_not_zero(volatile u_int *count)

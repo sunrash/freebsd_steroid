@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/liby/yyerror.c 335270 2018-06-16 23:50:34Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #if defined(LIBC_SCCS) && !defined(lint)
 static char sccsid[] = "@(#)yyerror.c	8.1 (Berkeley) 6/4/93";

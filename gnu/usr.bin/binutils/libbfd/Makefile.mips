@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/libbfd/Makefile.mips 308130 2016-10-31 15:33:58Z br $
+# $FreeBSD$
 
 .if ${TARGET_ARCH:Mmips*el*} != ""
 _EMULATION_ENDIAN=little

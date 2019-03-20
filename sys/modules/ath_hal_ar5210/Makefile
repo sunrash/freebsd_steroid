@@ -26,7 +26,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
 # THE POSSIBILITY OF SUCH DAMAGES.
 #
-# $FreeBSD: releng/12.0/sys/modules/ath_hal_ar5210/Makefile 318856 2017-05-25 04:18:46Z adrian $
+# $FreeBSD$
 #
 
 .PATH:	${SRCTOP}/sys/dev/ath

@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: kbdmux.c,v 1.4 2005/07/14 17:38:35 max Exp $
- * $FreeBSD: releng/12.0/sys/dev/kbdmux/kbdmux.c 337721 2018-08-13 19:05:53Z wulf $
+ * $FreeBSD$
  */
 
 #include "opt_evdev.h"
@@ -505,7 +505,7 @@ kbdmux_init(int unit, keyboard_t **kbdp, void *arg, int flags)
 		evdev_support_led(evdev, LED_CAPSL);
 		evdev_support_led(evdev, LED_SCROLLL);
 
-		if (evdev_register(evdev))
+		if (evdev_register_mtx(evdev, &Giant))
 			evdev_free(evdev);
 		else
 			state->ks_evdev = evdev;

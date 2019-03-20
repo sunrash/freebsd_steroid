@@ -3,7 +3,7 @@
 #
 # This includes all the required drivers for the SoCs.
 #
-# $FreeBSD: releng/12.0/sys/mips/mediatek/std.rt2880 317873 2017-05-06 06:20:34Z adrian $
+# $FreeBSD$
 #
 
 # Include the standard file list for Mediatek SoCs.

@@ -27,7 +27,7 @@
 
 #include <machine/asm.h>
 #include <machine/armreg.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/arm64/exception.S 336967 2018-07-31 12:53:27Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "assym.inc"
 

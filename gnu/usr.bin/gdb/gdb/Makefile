@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/gdb/gdb/Makefile 328926 2018-02-06 12:12:44Z bapt $
+# $FreeBSD$
 
 PROG=	gdb${GDB_SUFFIX}
 SRCS=	gdb.c

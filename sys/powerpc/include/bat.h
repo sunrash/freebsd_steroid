@@ -60,7 +60,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	$NetBSD: bat.h,v 1.2 1999/12/18 01:36:06 thorpej Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/bat.h 326261 2017-11-27 15:09:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_BAT_H_

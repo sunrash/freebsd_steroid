@@ -1,6 +1,6 @@
 # MALTA_COMMON -- Common kernel config options for MALTA boards
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/std.MALTA 336004 2018-07-05 17:07:23Z sbruno $
+# $FreeBSD$
 
 options 	YAMON
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/dtb.mk 340362 2018-11-12 15:18:09Z kevans $
+# $FreeBSD$
 #
 # The include file <dtb.mk> handles building and installing dtb files.
 #
@@ -55,21 +55,21 @@ DTBO=${DTSO:R:S/$/.dtbo/}
 all: ${DTB} ${DTBO}
 
 .if defined(DTS)
-.export DTC
+.export DTC ECHO
 .for _dts in ${DTS}
 ${_dts:R:S/$/.dtb/}:	${_dts} ${OP_META}
 	@${ECHO} Generating ${.TARGET} from ${_dts}
-	@env ECHO=${ECHO} ${SYSDIR}/tools/fdt/make_dtb.sh ${SYSDIR} ${_dts} ${.OBJDIR}
+	@${SYSDIR}/tools/fdt/make_dtb.sh ${SYSDIR} ${_dts} ${.OBJDIR}
 CLEANFILES+=${_dts:R:S/$/.dtb/}
 .endfor
 .endif
 
 .if defined(DTSO)
-.export DTC
+.export DTC ECHO
 .for _dtso in ${DTSO}
 ${_dtso:R:S/$/.dtbo/}:	${_dtso} ${OP_META}
 	@${ECHO} Generating ${.TARGET} from ${_dtso}
-	@env ECHO=${ECHO} ${SYSDIR}/tools/fdt/make_dtbo.sh ${SYSDIR} overlays/${_dtso} ${.OBJDIR}
+	@${SYSDIR}/tools/fdt/make_dtbo.sh ${SYSDIR} overlays/${_dtso} ${.OBJDIR}
 CLEANFILES+=${_dtso:R:S/$/.dtbo/}
 .endfor
 .endif

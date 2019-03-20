@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/less/Makefile 316984 2017-04-15 20:55:09Z bapt $
+# $FreeBSD$
 
 PROG=	less
 SRCS=	main.c screen.c brac.c ch.c charset.c cmdbuf.c command.c cvt.c \

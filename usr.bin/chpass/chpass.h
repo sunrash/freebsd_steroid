@@ -40,7 +40,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)chpass.h	8.4 (Berkeley) 4/2/94
- * $FreeBSD: releng/12.0/usr.bin/chpass/chpass.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 struct passwd;

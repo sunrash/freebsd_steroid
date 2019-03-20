@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/broadcom/bcm2835/bcm2836_mp.h 306437 2016-09-29 06:54:02Z manu $
+ * $FreeBSD$
  */
 
 #ifndef _BCM2836_MP_H_

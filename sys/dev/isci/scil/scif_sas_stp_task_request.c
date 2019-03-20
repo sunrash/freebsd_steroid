@@ -53,7 +53,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/isci/scil/scif_sas_stp_task_request.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/isci/scil/sati.h>
 #include <dev/isci/scil/scif_sas_logger.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/veriexec/Makefile 335400 2018-06-20 00:48:46Z stevek $
+# $FreeBSD$
 
 .PATH: ${.PARSEDIR:H:H}/dev/veriexec
 

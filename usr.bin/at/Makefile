@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/at/Makefile 337626 2018-08-11 13:52:23Z brd $
+# $FreeBSD$
 
 .include "${.CURDIR}/Makefile.inc"
 

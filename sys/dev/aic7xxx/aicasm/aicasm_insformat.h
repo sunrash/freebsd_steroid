@@ -41,7 +41,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aicasm/aicasm_insformat.h#11 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aicasm/aicasm_insformat.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 struct ins_format1 {

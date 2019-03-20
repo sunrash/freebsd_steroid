@@ -30,9 +30,9 @@
 .\" SUCH DAMAGE.
 .\"
 .\"     @(#)stty.1	8.4 (Berkeley) 4/18/94
-.\" $FreeBSD: releng/12.0/bin/stty/stty.1 330277 2018-03-02 14:16:19Z trasz $
+.\" $FreeBSD$
 .\"
-.Dd March 2, 2018
+.Dd October 20, 2018
 .Dt STTY 1
 .Os
 .Sh NAME
@@ -459,6 +459,13 @@ The status line consists of the
 system load average, the current command name, its process ID, the
 event the process is waiting on (or the status of the process), the user
 and system times, percent cpu, and current memory usage.
+.Pp
+If the
+.Xr sysctl 8
+variable
+.Va kern.tty_info_kstacks
+is set to a non-zero value, the status message also includes the kernel program
+stack of the foreground thread.
 .It Cm columns Ar number
 The terminal size is recorded as having
 .Ar number

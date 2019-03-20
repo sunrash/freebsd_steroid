@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/gets.c 337523 2018-08-09 02:55:48Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "stand.h"
 

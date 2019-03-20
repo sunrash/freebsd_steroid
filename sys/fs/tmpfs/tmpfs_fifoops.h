@@ -31,7 +31,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/fs/tmpfs/tmpfs_fifoops.h 326268 2017-11-27 15:15:37Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _FS_TMPFS_TMPFS_FIFOOPS_H_

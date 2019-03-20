@@ -29,7 +29,7 @@
 
 #if 0
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/mips/ptrace_machdep.c 326259 2017-11-27 15:07:26Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * This file is a place holder for MIPS.  Some models of MIPS may need special

@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_core/mlx5_eq.c 339711 2018-10-25 14:07:28Z slavash $
+ * $FreeBSD$
  */
 
 #include <linux/interrupt.h>
@@ -254,8 +254,10 @@ static int mlx5_eq_int(struct mlx5_core_dev *dev, struct mlx5_eq *eq)
 			break;
 
 		case MLX5_EVENT_TYPE_CMD:
-			if (dev->state != MLX5_DEVICE_STATE_INTERNAL_ERROR)
-				mlx5_cmd_comp_handler(dev, be32_to_cpu(eqe->data.cmd.vector));
+			if (dev->state != MLX5_DEVICE_STATE_INTERNAL_ERROR) {
+				mlx5_cmd_comp_handler(dev, be32_to_cpu(eqe->data.cmd.vector),
+				    MLX5_CMD_MODE_EVENTS);
+			}
 			break;
 
 		case MLX5_EVENT_TYPE_PORT_CHANGE:

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/expansion/pathname3.0 211155 2010-08-10 22:45:59Z jilles $
+# $FreeBSD$
 
 v=12345678
 v=$v$v$v$v

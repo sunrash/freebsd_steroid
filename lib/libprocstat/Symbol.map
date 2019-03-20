@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/libprocstat/Symbol.map 318969 2017-05-26 22:17:44Z cem $
+ * $FreeBSD$
  */
 FBSD_1.2 {
 	procstat_close;
@@ -35,9 +35,12 @@ FBSD_1.3 {
 FBSD_1.5 {
 	procstat_freeptlwpinfo;
 	procstat_getptlwpinfo;
-	procstat_get_pts_info;
 	procstat_get_sem_info;
 	procstat_get_shm_info;
 	procstat_get_socket_info;
+};
+
+FBSD_1.6 {
+	procstat_get_pts_info;
 	procstat_get_vnode_info;
 };

@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/powerpc/platform.c 330305 2018-03-03 02:04:40Z nwhitehorn $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Dispatch platform calls to the appropriate platform implementation
@@ -240,6 +240,12 @@ void
 platform_smp_ap_init()
 {
 	PLATFORM_SMP_AP_INIT(plat_obj);
+}
+
+void
+platform_smp_probe_threads(void)
+{
+	PLATFORM_SMP_PROBE_THREADS(plat_obj);
 }
 
 #ifdef SMP

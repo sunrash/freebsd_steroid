@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_raudio_pxy.c 298094 2016-04-16 03:44:50Z gjb $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.

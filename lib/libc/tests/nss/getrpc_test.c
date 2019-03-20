@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/nss/getrpc_test.c 319040 2017-05-28 04:15:05Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <arpa/inet.h>
 #include <rpc/rpc.h>

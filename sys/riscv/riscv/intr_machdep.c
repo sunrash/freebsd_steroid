@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/intr_machdep.c 335007 2018-06-12 17:45:15Z br $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -202,7 +202,7 @@ riscv_unmask_ipi(void)
 static void
 ipi_send(struct pcpu *pc, int ipi)
 {
-	uintptr_t mask;
+	u_long mask;
 
 	CTR3(KTR_SMP, "%s: cpu=%d, ipi=%x", __func__, pc->pc_cpuid, ipi);
 
@@ -242,7 +242,7 @@ void
 ipi_selected(cpuset_t cpus, u_int ipi)
 {
 	struct pcpu *pc;
-	uintptr_t mask;
+	u_long mask;
 
 	CTR1(KTR_SMP, "ipi_selected: ipi: %x", ipi);
 

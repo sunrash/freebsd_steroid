@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/efi/include/efiprot.h 322038 2017-08-04 04:16:41Z imp $ */
+/* $FreeBSD$ */
 #ifndef _EFI_PROT_H
 #define _EFI_PROT_H
 

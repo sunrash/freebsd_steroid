@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libproc/tests/target_prog.c 326064 2017-11-21 16:03:21Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <signal.h>

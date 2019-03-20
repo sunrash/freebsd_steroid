@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bxe/bxe.c 339366 2018-10-15 18:39:33Z davidcs $");
+__FBSDID("$FreeBSD$");
 
 #define BXE_DRIVER_VERSION "1.78.91"
 

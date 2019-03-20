@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/tests/tests/atf/Makefile 320442 2017-06-28 08:20:51Z ngie $
+# $FreeBSD$
 
 # The release package to use for the tests contained within the directory
 #

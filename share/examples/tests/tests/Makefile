@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/examples/tests/tests/Makefile 320443 2017-06-28 08:22:04Z ngie $
+# $FreeBSD$
 
 # Directory into which the Kyuafile provided by this directory will be
 # installed.

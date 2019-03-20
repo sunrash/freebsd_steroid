@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  * $Id: hcsecd.h,v 1.3 2003/09/08 18:54:21 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/hcsecd/hcsecd.h 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _HCSECD_H_

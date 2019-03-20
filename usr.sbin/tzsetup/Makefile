@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/tzsetup/Makefile 314463 2017-03-01 04:23:53Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

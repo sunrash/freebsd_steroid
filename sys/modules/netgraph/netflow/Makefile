@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/netgraph/netflow/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #
 # Author: Gleb Smirnoff <glebius@freebsd.org>
 #

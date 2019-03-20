@@ -1,13 +1,12 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/llvm-pdbutil/Makefile 327952 2018-01-14 00:08:34Z dim $
+# $FreeBSD$
 
 PROG_CXX=	llvm-pdbutil
 
 SRCDIR=		tools/llvm-pdbutil
 SRCS+=		Analyze.cpp
 SRCS+=		BytesOutputStyle.cpp
-SRCS+=		Diff.cpp
-SRCS+=		DiffPrinter.cpp
 SRCS+=		DumpOutputStyle.cpp
+SRCS+=		ExplainOutputStyle.cpp
 SRCS+=		FormatUtil.cpp
 SRCS+=		InputFile.cpp
 SRCS+=		LinePrinter.cpp

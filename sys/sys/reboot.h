@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)reboot.h	8.3 (Berkeley) 12/13/94
- * $FreeBSD: releng/12.0/sys/sys/reboot.h 336244 2018-07-13 16:43:05Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_REBOOT_H_

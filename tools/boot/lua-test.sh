@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tools/boot/lua-test.sh 329407 2018-02-16 20:26:18Z kevans $
+# $FreeBSD$
 
 # Will image the test directory (default /tmp/loadertest) if it doesn't exist
 
@@ -13,13 +13,16 @@ scriptdir=$(dirname $(realpath $0))
 cd $(make -V SRCTOP)/stand
 obj=$(make -V .OBJDIR)
 t=$obj/userboot/test/test
-u=$obj/userboot/userboot/userboot.so
 
 [ -n "$dir" ] || dir=/tmp/loadertest
 [ -d "$dir" ] || ${scriptdir}/lua-img.sh ${dir}
+# We'll try userboot.so from the test directory before plucking it straight out
+# of .OBJDIR.
+u=$dir/boot/userboot.so
+[ -f "$u" ] || u=$obj/userboot/userboot_lua/userboot_lua.so
 [ -f "$dir/boot/lua/loader.lua" ] || die "No boot/lua/loader.lua found"
 [ -f "$dir/boot/kernel/kernel" ] || die "No kernel to load"
 [ -x "$t" ] || die "no userboot test jig found ($t)"
-[ -x "$u" ] || die "no userboot.so ($u) found"
+[ -f "$u" ] || die "no userboot.so ($u) found"
 
 $t -h $dir -b $u

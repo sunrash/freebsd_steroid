@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/dwc/if_dwc.h 301841 2016-06-12 22:55:50Z jmcneill $
+ * $FreeBSD$
  */
 
 /*

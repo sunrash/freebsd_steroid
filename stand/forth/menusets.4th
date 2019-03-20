@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/menusets.4th 280937 2015-04-01 01:54:28Z dteske $
+\ $FreeBSD$
 
 marker task-menusets.4th
 

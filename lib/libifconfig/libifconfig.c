@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libifconfig/libifconfig.c 329853 2018-02-23 03:11:43Z asomers $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

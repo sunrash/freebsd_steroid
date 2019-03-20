@@ -57,7 +57,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libmd/sha1c.c 336539 2018-07-20 07:01:28Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

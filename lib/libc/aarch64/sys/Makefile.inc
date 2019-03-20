@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/aarch64/sys/Makefile.inc 332080 2018-04-05 18:17:46Z brooks $
+# $FreeBSD$
 
 MIASM:=	${MIASM:Nfreebsd[467]_*}
 

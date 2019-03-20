@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bnxt/bnxt_ioctl.h 308696 2016-11-15 20:35:29Z shurd $");
+__FBSDID("$FreeBSD$");
 
 #ifndef _BNXT_IOCTL_H
 #define _BNXT_IOCTL_H

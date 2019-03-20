@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/4/93
-# $FreeBSD: releng/12.0/libexec/fingerd/Makefile 301243 2016-06-03 07:00:28Z lidl $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

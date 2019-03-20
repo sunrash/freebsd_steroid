@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/lockstat.h 332900 2018-04-24 01:04:10Z mjg $
+ * $FreeBSD$
  */
  
 /*

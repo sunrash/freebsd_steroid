@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/usb/usb_hid.c 336577 2018-07-21 14:20:17Z wulf $ */
+/* $FreeBSD$ */
 /*	$NetBSD: hid.c,v 1.17 2001/11/13 06:24:53 lukem Exp $	*/
 /*-
  * SPDX-License-Identifier: BSD-2-Clause-NetBSD

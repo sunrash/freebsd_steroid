@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/amd_ecc_inject/ecc_inject.c 338318 2018-08-25 19:38:08Z alc $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

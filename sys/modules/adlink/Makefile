@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/adlink/Makefile 331430 2018-03-23 15:35:19Z imp $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/adlink
 

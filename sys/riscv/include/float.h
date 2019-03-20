@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)float.h	7.1 (Berkeley) 5/8/90
- * $FreeBSD: releng/12.0/sys/riscv/include/float.h 308251 2016-11-03 13:06:17Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_FLOAT_H_

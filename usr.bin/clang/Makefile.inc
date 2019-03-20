@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/clang/Makefile.inc 322824 2017-08-23 23:30:25Z jhb $
+# $FreeBSD$
 
 WARNS?=		0
 

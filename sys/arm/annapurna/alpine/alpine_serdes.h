@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/annapurna/alpine/alpine_serdes.h 307669 2016-10-20 11:26:51Z wma $
+ * $FreeBSD$
  */
 
 #ifndef __ALPINE_SERDES_H__

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/dtrace/Makefile 330559 2018-03-06 23:44:19Z dteske $
+# $FreeBSD$
 #
 # Hand installing our scripts and optionally (based on MK_CDDL) installing
 # the DTraceToolkit.

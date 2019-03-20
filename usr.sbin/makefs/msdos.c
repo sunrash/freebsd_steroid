@@ -34,7 +34,7 @@
 
 #include <sys/cdefs.h>
 #if defined(__RCSID) && !defined(__lint)
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/makefs/msdos.c 336706 2018-07-25 13:27:20Z emaste $");
+__FBSDID("$FreeBSD$");
 #endif	/* !__lint */
 
 #include <sys/param.h>

@@ -29,7 +29,7 @@
  *
  *	from: @(#)auth_unix.h 1.8 88/02/08 SMI
  *	from: @(#)auth_unix.h	2.2 88/07/29 4.0 RPCSRC
- * $FreeBSD: releng/12.0/include/rpc/auth_unix.h 326024 2017-11-20 19:45:28Z pfg $
+ * $FreeBSD$
  */
 
 /*

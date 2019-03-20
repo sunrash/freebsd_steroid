@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/test/vm86/Makefile 333534 2018-05-12 11:53:49Z kib $
+# $FreeBSD$
 
 all:	vm86_test
 

@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: (BSD-2-Clause OR GPL-2.0)
  *
- * $FreeBSD: releng/12.0/sys/dev/vmware/vmci/vmci_kernel_api_2.h 332263 2018-04-08 01:32:56Z mp $
+ * $FreeBSD$
  */
 
 /* Kernel API (v2) exported from the VMCI guest driver. */

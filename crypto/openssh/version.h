@@ -1,5 +1,5 @@
 /* $OpenBSD: version.h,v 1.82 2018/07/03 11:42:12 djm Exp $ */
-/* $FreeBSD: releng/12.0/crypto/openssh/version.h 338810 2018-09-19 20:52:47Z emaste $ */
+/* $FreeBSD$ */
 
 #define SSH_VERSION	"OpenSSH_7.8"
 

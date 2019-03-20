@@ -1,5 +1,5 @@
 # $Id: Makefile.inc,v 1.1 2000/07/14 18:16:22 iwasaki Exp $
-# $FreeBSD: releng/12.0/usr.sbin/acpi/Makefile.inc 314659 2017-03-04 11:38:03Z ngie $
+# $FreeBSD$
 
 ACPICA_DIR= ${SRCTOP}/sys/contrib/dev/acpica
 CFLAGS+= -I${SRCTOP}/sys

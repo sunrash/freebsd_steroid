@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/rcupdate.h 329514 2018-02-18 09:10:14Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_RCUPDATE_H_
 #define	_LINUX_RCUPDATE_H_

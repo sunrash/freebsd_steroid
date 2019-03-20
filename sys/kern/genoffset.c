@@ -24,19 +24,18 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/kern/genoffset.c 335879 2018-07-03 01:55:09Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef OFFSET_TEST
 #define GENOFFSET
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/genoffset.c 335879 2018-07-03 01:55:09Z mmacy $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 #include <sys/assym.h>
 #include <sys/proc.h>
 
-OFFSYM(td_pre_epoch_prio, thread, u_char);
 OFFSYM(td_priority, thread, u_char);
 OFFSYM(td_epochnest, thread, u_char);
 OFFSYM(td_critnest, thread, u_int);

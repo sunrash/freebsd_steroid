@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/libntp/Makefile 314478 2017-03-01 05:19:35Z ngie $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/contrib/ntp/libntp \
 	${SRCTOP}/contrib/ntp/lib/isc \

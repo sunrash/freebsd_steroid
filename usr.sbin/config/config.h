@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)config.h	8.1 (Berkeley) 6/6/93
- * $FreeBSD: releng/12.0/usr.sbin/config/config.h 336415 2018-07-17 14:14:53Z kevans $
+ * $FreeBSD$
  */
 
 /*

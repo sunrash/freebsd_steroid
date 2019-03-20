@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/common/dumpregs_5211.c 287297 2015-08-29 19:47:20Z rodrigc $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

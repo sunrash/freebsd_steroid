@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/geom/geom_part/Makefile 312910 2017-01-28 02:22:15Z nyan $
+# $FreeBSD$
 
 SUBDIR=	geom_part_apm \
 	geom_part_bsd \

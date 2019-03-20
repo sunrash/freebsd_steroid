@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/stand/userboot/userboot/version 338418 2018-09-01 02:23:45Z kevans $
+$FreeBSD$
 
 1.2:	Userboot with lua or forth
 1.1:	Initial userland boot

@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_zip_jar.c 310623 2016-12-27 01:10:28Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Issue 822: jar files have an empty External File Attributes field which

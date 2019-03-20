@@ -32,7 +32,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/bhnd.h 331744 2018-03-29 19:44:15Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_BHND_H_

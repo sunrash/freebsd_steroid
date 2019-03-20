@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/linux32/linux32_machdep.c 337431 2018-08-07 18:29:10Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 

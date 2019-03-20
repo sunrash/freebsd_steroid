@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/ath/ath_ee_v14_print/Makefile 264925 2014-04-25 19:25:05Z imp $
+# $FreeBSD$
 
 .PATH:  ${.CURDIR}/../../../../sys/dev/ath/ath_hal
 

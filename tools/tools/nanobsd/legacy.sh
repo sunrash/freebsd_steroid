@@ -25,7 +25,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/tools/nanobsd/legacy.sh 328833 2018-02-03 21:56:38Z imp $
+# $FreeBSD$
 #
 
 # Media geometry, only relevant if bios doesn't understand LBA.

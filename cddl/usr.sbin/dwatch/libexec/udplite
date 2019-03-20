@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for dtrace_udplite(4) $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/udplite 337018 2018-07-31 22:56:03Z tuexen $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

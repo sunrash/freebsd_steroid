@@ -1,4 +1,6 @@
-# $FreeBSD: releng/12.0/tests/sys/geom/class/eli/attach_test.sh 327769 2018-01-10 15:55:07Z markj $
+# $FreeBSD$
+
+. $(atf_get_srcdir)/conf.sh
 
 atf_test_case attach_d cleanup
 attach_d_head()
@@ -8,7 +10,7 @@ attach_d_head()
 }
 attach_d_body()
 {
-	. $(atf_get_srcdir)/conf.sh
+	geli_test_setup
 
 	sectors=100
 	md=$(attach_md -t malloc -s `expr $sectors + 1`)
@@ -35,7 +37,6 @@ attach_d_body()
 }
 attach_d_cleanup()
 {
-	. $(atf_get_srcdir)/conf.sh
 	geli_test_cleanup
 }
 
@@ -47,7 +48,7 @@ attach_r_head()
 }
 attach_r_body()
 {
-	. $(atf_get_srcdir)/conf.sh
+	geli_test_setup
 
 	sectors=100
 	md=$(attach_md -t malloc -s `expr $sectors + 1`)
@@ -64,7 +65,6 @@ attach_r_body()
 }
 attach_r_cleanup()
 {
-	. $(atf_get_srcdir)/conf.sh
 	geli_test_cleanup
 }
 
@@ -76,7 +76,7 @@ nokey_head()
 }
 nokey_body()
 {
-	. $(atf_get_srcdir)/conf.sh
+	geli_test_setup
 
 	sectors=100
 	md=$(attach_md -t malloc -s `expr $sectors + 1`)
@@ -88,7 +88,6 @@ nokey_body()
 }
 nokey_cleanup()
 {
-	. $(atf_get_srcdir)/conf.sh
 	geli_test_cleanup
 }
 

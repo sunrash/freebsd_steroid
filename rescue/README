@@ -40,4 +40,4 @@ To compile:
 Note that rebuilds don't always work correctly; if you run into
 trouble, try 'make clean' before recompiling.
 
-$FreeBSD: releng/12.0/rescue/README 325109 2017-10-29 21:21:39Z eadler $
+$FreeBSD$

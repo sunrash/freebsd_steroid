@@ -15,7 +15,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/vmware/vmci/vmci_qpair.c 332263 2018-04-08 01:32:56Z mp $");
+__FBSDID("$FreeBSD$");
 
 #include "vmci_kernel_api.h"
 #include "vmci_kernel_defs.h"

@@ -10,7 +10,7 @@
 # * 8MB NOR SPI flash
 # * 64MB RAM
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/PB47 295945 2016-02-24 00:39:36Z sobomax $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

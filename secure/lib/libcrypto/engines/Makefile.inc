@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/lib/libcrypto/engines/Makefile.inc 339270 2018-10-09 21:28:26Z gjb $
+# $FreeBSD$
 
 SHLIBDIR?= /usr/lib/engines
 

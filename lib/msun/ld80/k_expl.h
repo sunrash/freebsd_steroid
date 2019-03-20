@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/k_expl.h 336545 2018-07-20 12:42:24Z bde $");
+__FBSDID("$FreeBSD$");
 
 /*
  * See s_expl.c for more comments about __k_expl().

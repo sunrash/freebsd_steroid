@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/tests/tools/exclude.sh 338213 2018-08-22 21:23:32Z tuexen $
+# $FreeBSD$
 
 # This file lists DTrace tests which are known to fail or hang/crash the
 # system. They were pulled from the legacy DTrace test infrastructure in

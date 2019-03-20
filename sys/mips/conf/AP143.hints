@@ -1,7 +1,7 @@
 #
 # This file adds to the values in QCA953X_BASE.hints.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/AP143.hints 328756 2018-02-01 22:00:38Z adrian $
+# $FreeBSD$
 
 # Embedded Atheros Switch
 hint.arswitch.0.at="mdio1"

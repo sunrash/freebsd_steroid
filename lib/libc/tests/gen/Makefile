@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/gen/Makefile 331279 2018-03-21 01:15:45Z cem $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

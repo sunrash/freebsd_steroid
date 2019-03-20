@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libxo/tests/encoder/Makefile 314837 2017-03-07 06:11:36Z rgrimes $
+# $FreeBSD$
 
 LIBXOSRC=	${SRCTOP}/contrib/libxo
 

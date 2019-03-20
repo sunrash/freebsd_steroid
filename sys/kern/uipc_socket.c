@@ -103,7 +103,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/uipc_socket.c 340980 2018-11-26 16:36:38Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
@@ -887,6 +887,8 @@ solisten_wakeup(struct socket *sol)
 	}
 	SOLISTEN_UNLOCK(sol);
 	wakeup_one(&sol->sol_comp);
+	if ((sol->so_state & SS_ASYNC) && sol->so_sigio != NULL)
+		pgsigio(&sol->so_sigio, SIGIO, 0);
 }
 
 /*
@@ -1442,19 +1444,11 @@ sosend_generic(struct socket *so, struct sockaddr *addr, struct uio *uio,
 	ssize_t resid;
 	int clen = 0, error, dontroute;
 	int atomic = sosendallatonce(so) || top;
-	struct sbtls_info *tls;
+	struct sbtls_session *tls;
 	int pru_flag, tls_pruflag, tls_enq_cnt;
 	uint8_t tls_rtype = TLS_RLTYPE_APP;
-	bool tls_control = false;
 
-	if ((so->so_snd.sb_tls_flags & SB_TLS_ACTIVE) != 0) {
-		tls = so->so_snd.sb_tls_info;
-		tls_pruflag = PRUS_NOTREADY;
-	}  else {
-		tls = NULL;
-		tls_pruflag = 0;
-	}
-
+	tls = NULL;
 	if (uio != NULL)
 		resid = uio->uio_resid;
 	else
@@ -1479,23 +1473,32 @@ sosend_generic(struct socket *so, struct sockaddr *addr, struct uio *uio,
 	    (so->so_proto->pr_flags & PR_ATOMIC);
 	if (td != NULL)
 		td->td_ru.ru_msgsnd++;
-	if (control != NULL) {
-		struct cmsghdr *cm = mtod(control, struct cmsghdr *);
+	if (control != NULL)
 		clen = control->m_len;
-
-		if (tls != NULL && clen >= sizeof(*cm) &&
-		    cm->cmsg_type == TLS_SET_RECORD_TYPE) {
-			tls_rtype = *((uint8_t *)CMSG_DATA(cm));
-			clen = 0;
-			m_freem(control);
-			control = NULL;
-			tls_control = true;
-		}
-	}
 
 	error = sblock(&so->so_snd, SBLOCKWAIT(flags));
 	if (error)
 		goto out;
+
+	tls_pruflag = 0;
+	tls = sbtls_hold(so->so_snd.sb_tls_info);
+	if (tls != NULL) {
+		if (tls->sb_tls_crypt != NULL)
+			tls_pruflag = PRUS_NOTREADY;
+
+		if (control != NULL) {
+			struct cmsghdr *cm = mtod(control, struct cmsghdr *);
+
+			if (clen >= sizeof(*cm) &&
+			    cm->cmsg_type == TLS_SET_RECORD_TYPE) {
+				tls_rtype = *((uint8_t *)CMSG_DATA(cm));
+				clen = 0;
+				m_freem(control);
+				control = NULL;
+				atomic = 1;
+			}
+		}
+	}
 
 restart:
 	do {
@@ -1545,9 +1548,9 @@ restart:
 			goto release;
 		}
 		if (space < resid + clen &&
-		    (atomic || tls_control ||
-			space < so->so_snd.sb_lowat || space < clen)) {
-			if ((so->so_state & SS_NBIO) || (flags & MSG_NBIO)) {
+		    (atomic || space < so->so_snd.sb_lowat || space < clen)) {
+			if ((so->so_state & SS_NBIO) ||
+			    (flags & (MSG_NBIO | MSG_DONTWAIT)) != 0) {
 				SOCKBUF_UNLOCK(&so->so_snd);
 				error = EWOULDBLOCK;
 				goto release;
@@ -1635,9 +1638,6 @@ restart:
 
 			pru_flag |= tls_pruflag;
 
-			if (tls != NULL)
-				soref(so);
-
 			error = (*so->so_proto->pr_usrreqs->pru_send)(so,
 			    pru_flag, top, addr, control, td);
 
@@ -1647,7 +1647,7 @@ restart:
 				SOCK_UNLOCK(so);
 			}
 
-			if (tls != NULL) {
+			if (tls != NULL && tls->sb_tls_crypt != NULL) {
 				/*
 				 * Note that error is intentionally
 				 * ignored.
@@ -1658,6 +1658,7 @@ restart:
 				 * pru_send() encountered an error and
 				 * did not append them to the sockbuf.
 				 */
+				soref(so);
 				sbtls_enqueue(top, so, tls_enq_cnt);
 			}
 			clen = 0;
@@ -1671,6 +1672,8 @@ restart:
 release:
 	sbunlock(&so->so_snd);
 out:
+	if (tls != NULL)
+		sbtls_free(tls);
 	if (top != NULL)
 		m_freem(top);
 	if (control != NULL)
@@ -2822,12 +2825,10 @@ sosetopt(struct socket *so, struct sockopt *sopt)
 	CURVNET_SET(so->so_vnet);
 	error = 0;
 	if (sopt->sopt_level != SOL_SOCKET) {
-		if (so->so_proto->pr_ctloutput != NULL) {
+		if (so->so_proto->pr_ctloutput != NULL)
 			error = (*so->so_proto->pr_ctloutput)(so, sopt);
-			CURVNET_RESTORE();
-			return (error);
-		}
-		error = ENOPROTOOPT;
+		else
+			error = ENOPROTOOPT;
 	} else {
 		switch (sopt->sopt_name) {
 		case SO_ACCEPTFILTER:

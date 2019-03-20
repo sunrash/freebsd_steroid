@@ -10,7 +10,7 @@
 # + 32MB RAM
 # + uboot environment
 
-# $FreeBSD: releng/12.0/sys/mips/conf/ROCKET_M2HP 319343 2017-05-31 16:32:33Z adrian $
+# $FreeBSD$
 
 #NO_UNIVERSE
 

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/x86/include/x86_var.h 335632 2018-06-25 11:01:12Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _X86_X86_VAR_H_
@@ -102,23 +102,10 @@ struct	trapframe;
  */
 typedef void alias_for_inthand_t(void);
 
-/*
- * Returns the maximum physical address that can be used with the
- * current system.
- */
-static __inline vm_paddr_t
-cpu_getmaxphyaddr(void)
-{
-#if defined(__i386__) && !defined(PAE)
-	return (0xffffffff);
-#else
-	return ((1ULL << cpu_maxphyaddr) - 1);
-#endif
-}
-
 bool	acpi_get_fadt_bootflags(uint16_t *flagsp);
 void	*alloc_fpusave(int flags);
 void	busdma_swi(void);
+vm_paddr_t cpu_getmaxphyaddr(void);
 bool	cpu_mwait_usable(void);
 void	cpu_probe_amdc1e(void);
 void	cpu_setregs(void);
@@ -129,6 +116,7 @@ void	dump_drop_page(vm_paddr_t);
 void	finishidentcpu(void);
 void	identify_cpu1(void);
 void	identify_cpu2(void);
+void	identify_cpu_fixup_bsp(void);
 void	identify_hypervisor(void);
 void	initializecpu(void);
 void	initializecpucache(void);

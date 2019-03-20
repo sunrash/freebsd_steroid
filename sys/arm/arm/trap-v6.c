@@ -30,7 +30,7 @@
 #include "opt_ktrace.h"
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/trap-v6.c 333667 2018-05-16 06:52:08Z avg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/bus.h>
@@ -599,7 +599,7 @@ abort_fatal(struct trapframe *tf, u_int idx, u_int fsr, u_int far,
 	printf(", pc =%08x\n\n", tf->tf_pc);
 
 #ifdef KDB
-	if (debugger_on_panic) {
+	if (debugger_on_trap) {
 		kdb_why = KDB_WHY_TRAP;
 		kdb_trap(fsr, 0, tf);
 		kdb_why = KDB_WHY_UNSET;

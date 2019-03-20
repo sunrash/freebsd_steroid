@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
-# $FreeBSD: releng/12.0/usr.sbin/fstyp/tests/fstyp_test.sh 312104 2017-01-14 01:08:04Z cem $
+# $FreeBSD$
 
 atf_test_case cd9660
 cd9660_head() {

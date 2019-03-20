@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/mptable.c 338058 2018-08-19 17:36:50Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_mptable_force_htt.h"
 #include <sys/param.h>

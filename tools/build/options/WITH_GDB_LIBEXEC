@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_GDB_LIBEXEC 317416 2017-04-25 18:08:56Z jhb $
+.\" $FreeBSD$
 Set to install
 .Xr gdb 1
 into

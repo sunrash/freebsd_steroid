@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/fb/fbreg.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_FB_FBREG_H_
@@ -327,7 +327,7 @@ int		genfbwrite(genfb_softc_t *sc, video_adapter_t *adp,
 int		genfbioctl(genfb_softc_t *sc, video_adapter_t *adp,
 			   u_long cmd, caddr_t arg, int flag, struct thread *td);
 int		genfbmmap(genfb_softc_t *sc, video_adapter_t *adp,
-			  vm_ooffset_t offset, vm_offset_t *paddr,
+			  vm_ooffset_t offset, vm_paddr_t *paddr,
 			  int prot, vm_memattr_t *memattr);
 
 #endif /* FB_INSTALL_CDEV */

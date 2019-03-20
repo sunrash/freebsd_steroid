@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/cam/cam_periph.c 336590 2018-07-21 21:34:10Z mav $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -470,6 +470,12 @@ cam_periph_release(struct cam_periph *periph)
 	mtx_unlock(mtx);
 }
 
+/*
+ * hold/unhold act as mutual exclusion for sections of the code that
+ * need to sleep and want to make sure that other sections that
+ * will interfere are held off. This only protects exclusive sections
+ * from each other.
+ */
 int
 cam_periph_hold(struct cam_periph *periph, int priority)
 {
@@ -930,7 +936,7 @@ cam_periph_mapmem(union ccb *ccb, struct cam_periph_map_info *mapinfo,
 		/*
 		 * Get the buffer.
 		 */
-		mapinfo->bp[i] = getpbuf(NULL);
+		mapinfo->bp[i] = uma_zalloc(pbuf_zone, M_WAITOK);
 
 		/* put our pointer in the data slot */
 		mapinfo->bp[i]->b_data = *data_ptrs[i];
@@ -956,9 +962,9 @@ cam_periph_mapmem(union ccb *ccb, struct cam_periph_map_info *mapinfo,
 			for (j = 0; j < i; ++j) {
 				*data_ptrs[j] = mapinfo->bp[j]->b_caller1;
 				vunmapbuf(mapinfo->bp[j]);
-				relpbuf(mapinfo->bp[j], NULL);
+				uma_zfree(pbuf_zone, mapinfo->bp[j]);
 			}
-			relpbuf(mapinfo->bp[i], NULL);
+			uma_zfree(pbuf_zone, mapinfo->bp[i]);
 			PRELE(curproc);
 			return(EACCES);
 		}
@@ -1046,7 +1052,7 @@ cam_periph_unmapmem(union ccb *ccb, struct cam_periph_map_info *mapinfo)
 		vunmapbuf(mapinfo->bp[i]);
 
 		/* release the buffer */
-		relpbuf(mapinfo->bp[i], NULL);
+		uma_zfree(pbuf_zone, mapinfo->bp[i]);
 	}
 
 	/* allow ourselves to be swapped once again */

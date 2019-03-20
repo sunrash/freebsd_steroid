@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/loader.mk 337806 2018-08-14 18:44:41Z imp $
+# $FreeBSD$
 
 .PATH: ${LDRSRC} ${BOOTSRC}/libsa
 
@@ -154,6 +154,10 @@ REPRO_FLAG=	-r
 vers.c: ${LDRSRC}/newvers.sh ${VERSION_FILE}
 	sh ${LDRSRC}/newvers.sh ${REPRO_FLAG} ${VERSION_FILE} \
 	    ${NEWVERSWHAT}
+
+.if ${MK_LOADER_VERBOSE} != "no"
+CFLAGS+=	-DELF_VERBOSE
+.endif
 
 .if !empty(HELP_FILES)
 HELP_FILES+=	${LDRSRC}/help.common

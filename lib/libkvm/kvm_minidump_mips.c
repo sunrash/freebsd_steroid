@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libkvm/kvm_minidump_mips.c 337048 2018-08-01 18:35:17Z kib $");
+__FBSDID("$FreeBSD$");
 
 /*
  * MIPS machine dependent routines for kvm and minidumps.

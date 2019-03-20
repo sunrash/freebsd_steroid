@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/siba/siba_eromvar.h 329180 2018-02-12 19:36:26Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef	_SIBA_SIBA_EROMVAR_H_

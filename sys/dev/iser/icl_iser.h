@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/iser/icl_iser.h 326169 2017-11-24 14:50:28Z hselasky $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2015, Mellanox Technologies, Inc. All rights reserved.
  *

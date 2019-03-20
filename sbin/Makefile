@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.5 (Berkeley) 3/31/94
-# $FreeBSD: releng/12.0/sbin/Makefile 337663 2018-08-11 23:50:09Z kevans $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
@@ -52,6 +52,7 @@ SUBDIR=adjkerntz \
 	newfs_msdos \
 	nfsiod \
 	nos-tun \
+	pfilctl \
 	ping \
 	rcorder \
 	reboot \

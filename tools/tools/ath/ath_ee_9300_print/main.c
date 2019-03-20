@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/ath/ath_ee_9300_print/main.c 303981 2016-08-12 01:13:34Z adrian $
+ * $FreeBSD$
  */
 
 #include <stdio.h>

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/ftpd/ftpusers 338147 2018-08-21 17:07:52Z brd $
+# $FreeBSD$
 #
 # list of users disallowed any ftp access.
 # read by ftpd(8).

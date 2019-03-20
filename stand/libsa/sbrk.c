@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/sbrk.c 326886 2017-12-15 23:16:47Z imp $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Minimal sbrk() emulation required for malloc support.
@@ -53,7 +53,7 @@ sbrk(int incr)
     char	*ret;
     
     if (heapbase == 0)
-	    panic("No heap setup\n");
+	    panic("No heap setup");
 
     if ((heapsize + incr) <= maxheap) {
 	ret = (char *)heapbase + heapsize;

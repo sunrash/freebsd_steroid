@@ -34,7 +34,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)filio.h	8.1 (Berkeley) 3/28/94
- * $FreeBSD: releng/12.0/sys/sys/filio.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_FILIO_H_
@@ -62,5 +62,17 @@ struct fiodgname_arg {
 /* Handle lseek SEEK_DATA and SEEK_HOLE for holey file knowledge. */
 #define	FIOSEEKDATA	_IOWR('f', 97, off_t)	/* SEEK_DATA */
 #define	FIOSEEKHOLE	_IOWR('f', 98, off_t)	/* SEEK_HOLE */
+
+#ifdef _KERNEL
+#ifdef COMPAT_FREEBSD32
+struct fiodgname_arg32 {
+	int		len;
+	uint32_t	buf;	/* (void *) */
+};
+#define	FIODGNAME_32	_IOC_NEWTYPE(FIODGNAME, struct fiodgname_arg32)
+#endif
+
+void	*fiodgname_buf_get_ptr(void *fgnp, u_long com);
+#endif
 
 #endif /* !_SYS_FILIO_H_ */

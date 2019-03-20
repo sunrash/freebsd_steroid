@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)tcp_var.h	8.4 (Berkeley) 5/24/95
- * $FreeBSD: releng/12.0/sys/netinet/tcp_var.h 338102 2018-08-20 12:43:18Z rrs $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET_TCP_VAR_H_
@@ -240,6 +240,7 @@ struct tcptemp {
  */
 /* Flags for tcp functions */
 #define TCP_FUNC_BEING_REMOVED 0x01   	/* Can no longer be referenced */
+#define	TCP_FUNC_IFNET_TLS_OK  0x02	/* Optimized for ifnet TLS */
 
 /*
  * If defining the optional tcp_timers, in the
@@ -942,8 +943,11 @@ void	 tcp_sack_partialack(struct tcpcb *, struct tcphdr *);
 void	 tcp_free_sackholes(struct tcpcb *tp);
 int	 tcp_newreno(struct tcpcb *, struct tcphdr *);
 int	 tcp_compute_pipe(struct tcpcb *);
+uint32_t tcp_compute_initwnd(uint32_t);
 void	 tcp_sndbuf_autoscale(struct tcpcb *, struct socket *, uint32_t);
-struct mbuf *tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen, int32_t seglimit, int32_t segsize, struct sockbuf *sb);
+struct mbuf *
+	 tcp_m_copym(struct mbuf *m, int32_t off0, int32_t *plen,
+	   int32_t seglimit, int32_t segsize, struct sockbuf *sb);
 
 
 static inline void

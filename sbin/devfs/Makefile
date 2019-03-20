@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/devfs/Makefile 338204 2018-08-22 15:55:23Z brd $
+# $FreeBSD$
 
 CONFS=	devfs.conf devfs.rules
 CONFSDIR_devfs.rules=	/etc/defaults

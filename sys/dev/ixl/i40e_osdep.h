@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/i40e_osdep.h 335339 2018-06-18 20:32:53Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _I40E_OSDEP_H_
 #define _I40E_OSDEP_H_

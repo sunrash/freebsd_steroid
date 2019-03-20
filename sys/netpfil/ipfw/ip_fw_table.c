@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_table.c 332402 2018-04-11 11:12:20Z oleg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Lookup table support for ipfw.
@@ -55,7 +55,6 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netpfil/ipfw/ip_fw_table.c 332402 2018-04-11
 #include <sys/socketvar.h>
 #include <sys/queue.h>
 #include <net/if.h>	/* ip_fw.h requires IFNAMSIZ */
-#include <net/pfil.h>
 
 #include <netinet/in.h>
 #include <netinet/ip_var.h>	/* struct ipfw_rule_ref */

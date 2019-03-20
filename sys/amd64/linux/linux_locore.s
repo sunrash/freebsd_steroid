@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/amd64/linux/linux_locore.s 299249 2016-05-09 07:38:47Z dchagin $ */
+/* $FreeBSD$ */
 
 #include "linux_assym.h"			/* system definitions */
 #include <machine/asmacros.h>			/* miscellaneous asm macros */

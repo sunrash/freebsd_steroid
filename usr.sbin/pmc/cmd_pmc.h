@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/pmc/cmd_pmc.h 334701 2018-06-06 02:48:09Z mmacy $
+ * $FreeBSD$
  *
  */
 #ifndef _CMD_PMC_H_

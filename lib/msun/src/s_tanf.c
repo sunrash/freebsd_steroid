@@ -15,7 +15,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_tanf.c 176569 2008-02-25 22:19:17Z bde $");
+__FBSDID("$FreeBSD$");
 
 #include <float.h>
 

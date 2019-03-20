@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/include/fpmath.h 326479 2017-12-02 19:42:08Z eadler $
+ * $FreeBSD$
  */
 
 #ifndef _FPMATH_H_

@@ -43,7 +43,7 @@
 #include <vm/vm_page.h>
 #include <vm/vm_pager.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/pcm/dsp.c 336757 2018-07-27 10:40:48Z eadler $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 static int dsp_mmap_allow_prot_exec = 0;
 SYSCTL_INT(_hw_snd, OID_AUTO, compat_linux_mmap, CTLFLAG_RWTUN,
@@ -2205,7 +2205,10 @@ dsp_mmap(struct cdev *i_dev, vm_ooffset_t offset, vm_paddr_t *paddr,
     int nprot, vm_memattr_t *memattr)
 {
 
-	/* XXX memattr is not honored */
+	/*
+	 * offset is in range due to checks in dsp_mmap_single().
+	 * XXX memattr is not honored.
+	 */
 	*paddr = vtophys(offset);
 	return (0);
 }

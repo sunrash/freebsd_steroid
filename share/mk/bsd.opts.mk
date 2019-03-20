@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.opts.mk 340773 2018-11-22 18:59:05Z emaste $
+# $FreeBSD$
 #
 # Option file for src builds.
 #
@@ -69,6 +69,7 @@ __DEFAULT_YES_OPTIONS = \
     WARNS
 
 __DEFAULT_NO_OPTIONS = \
+    BIND_NOW \
     CCACHE_BUILD \
     CTF \
     INSTALL_AS_USER \

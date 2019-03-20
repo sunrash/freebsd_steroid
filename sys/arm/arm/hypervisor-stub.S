@@ -30,7 +30,7 @@
 #include <machine/asmacros.h>
 #include <machine/armreg.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/hypervisor-stub.S 331254 2018-03-20 17:58:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #if __ARM_ARCH >= 7
 #if defined(__ARM_ARCH_7VE__) || defined(__clang__)

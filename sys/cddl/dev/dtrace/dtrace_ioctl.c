@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/dtrace_ioctl.c 326286 2017-11-27 18:42:23Z markj $
+ * $FreeBSD$
  *
  */
 

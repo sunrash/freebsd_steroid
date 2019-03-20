@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/contrib/xz/FREEBSD-Xlist 276898 2015-01-10 00:11:10Z bapt $
+$FreeBSD$
 */*/*/Makefile.*
 */*/Makefile.*
 */.gitignore

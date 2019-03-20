@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/sys/compat-ino64.h 320278 2017-06-23 18:06:20Z imp $
+ * $FreeBSD$
  */
 
 /*

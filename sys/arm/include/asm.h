@@ -35,7 +35,7 @@
  *
  *	from: @(#)asm.h	5.5 (Berkeley) 5/7/91
  *
- * $FreeBSD: releng/12.0/sys/arm/include/asm.h 336447 2018-07-18 09:17:37Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_ASM_H_

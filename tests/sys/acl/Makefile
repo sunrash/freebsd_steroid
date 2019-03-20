@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tests/sys/acl/Makefile 336617 2018-07-22 21:00:11Z asomers $
+# $FreeBSD$
 
 PACKAGE=	tests
 
@@ -14,11 +14,9 @@ ${PACKAGE}FILES+=	tools-posix.test
 
 SCRIPTS+=	run
 
-# Disable 00 and 02 until they've been updated for setfacl's new behavior
-# PR 229930 tests/sys/acl/00:main fails in CI due to unexpected error message
-# TAP_TESTS_SH+=	00
-# TAP_TESTS_SH+=	02
+TAP_TESTS_SH+=	00
 TAP_TESTS_SH+=	01
+TAP_TESTS_SH+=	02
 TAP_TESTS_SH+=	03
 TAP_TESTS_SH+=	04
 

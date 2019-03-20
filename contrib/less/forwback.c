@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/contrib/less/forwback.c 326010 2017-11-20 08:52:33Z delphij $ */
+/* $FreeBSD$ */
 /*
  * Copyright (C) 1984-2017  Mark Nudelman
  *

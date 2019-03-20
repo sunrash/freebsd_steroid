@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/Makefile 305019 2016-08-29 19:07:48Z ngie $
+# $FreeBSD$
 
 .include "Makefile.common"
 

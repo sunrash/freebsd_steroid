@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/_stdarg.h 333310 2018-05-06 21:22:46Z phk $
+ * $FreeBSD$
  */
 
 #ifndef _SYS__STDARG_H_

@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"     From: @(#)swapon.8	8.1 (Berkeley) 6/5/93
-.\" $FreeBSD: releng/12.0/sbin/dumpon/dumpon.8 340736 2018-11-21 17:47:40Z markj $
+.\" $FreeBSD$
 .\"
 .Dd November 17, 2018
 .Dt DUMPON 8
@@ -350,3 +350,26 @@ option.
 It is currently not possible to configure both compression and encryption.
 The encrypted dump format assumes that the kernel dump size is a multiple
 of the cipher block size, which may not be true when the dump is compressed.
+.Pp
+Netdump only supports IPv4 at this time.
+.Sh SECURITY CONSIDERATIONS
+The current encrypted kernel core dump scheme does not provide integrity nor
+authentication.
+That is, the recipient of an encrypted kernel core dump cannot know if they
+received an intact core dump, nor can they verify the provenance of the dump.
+.Pp
+RSA keys smaller than 1024 bits are practical to factor and therefore weak.
+Even 1024 bit keys may not be large enough to ensure privacy for many
+years, so NIST recommends a minimum of 2048 bit RSA keys.
+As a seatbelt,
+.Nm
+prevents users from configuring encrypted kernel dumps with extremely weak RSA
+keys.
+If you do not care for cryptographic privacy guarantees, just use
+.Nm
+without specifying a
+.Fl k Ar pubkey
+option.
+.Pp
+This process is sandboxed using
+.Xr capsicum 4 .

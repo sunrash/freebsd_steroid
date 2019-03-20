@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/ucontext.h 295700 2016-02-17 14:24:25Z br $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_UCONTEXT_H_

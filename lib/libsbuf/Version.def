@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libsbuf/Version.def 314533 2017-03-02 01:39:23Z scottl $
+# $FreeBSD$
 
 FBSD_1.2 {
 };

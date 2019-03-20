@@ -64,7 +64,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)dinode.h	8.3 (Berkeley) 1/21/94
- * $FreeBSD: releng/12.0/sys/ufs/ufs/dinode.h 331095 2018-03-17 12:59:55Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _UFS_UFS_DINODE_H_
@@ -149,7 +149,8 @@ struct ufs2_dinode {
 	ufs2_daddr_t	di_ib[UFS_NIADDR]; /* 208: Indirect disk blocks. */
 	u_int64_t	di_modrev;	/* 232: i_modrev for NFSv4 */
 	uint32_t	di_freelink;	/* 240: SUJ: Next unlinked inode. */
-	uint32_t	di_spare[3];	/* 244: Reserved; currently unused */
+	uint32_t	di_ckhash;	/* 244: if CK_INODE, its check-hash */
+	uint32_t	di_spare[2];	/* 248: Reserved; currently unused */
 };
 
 /*

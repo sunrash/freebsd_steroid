@@ -20,7 +20,7 @@
 /* Driver for Microdia's HID based TEMPer Temperature sensor */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/misc/ugold.c 292080 2015-12-11 05:28:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/stdint.h>
 #include <sys/stddef.h>

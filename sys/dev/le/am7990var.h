@@ -32,7 +32,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/le/am7990var.h 326255 2017-11-27 14:52:40Z pfg $ */
+/* $FreeBSD$ */
 
 #ifndef _DEV_LE_AM7990VAR_H_
 #define	_DEV_LE_AM7990VAR_H_

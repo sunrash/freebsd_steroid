@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/common/disk.h 334695 2018-06-05 22:13:45Z ian $
+ * $FreeBSD$
  */
 
 /*

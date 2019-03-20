@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.incs.mk 325493 2017-11-06 19:33:50Z bdrewery $
+# $FreeBSD$
 
 .if !target(__<bsd.init.mk>__)
 .error bsd.incs.mk cannot be included directly.

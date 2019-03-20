@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/libexec/rtld-elf/riscv/rtld_start.S 337128 2018-08-02 12:21:39Z br $");
+__FBSDID("$FreeBSD$");
 
 /*
  * func_ptr_type

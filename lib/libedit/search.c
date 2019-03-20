@@ -41,7 +41,7 @@ __RCSID("$NetBSD: search.c,v 1.39 2016/02/24 14:25:38 christos Exp $");
 #endif
 #endif /* not lint && not SCCSID */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libedit/search.c 312997 2017-01-30 22:11:53Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * search.c: History and character search functions

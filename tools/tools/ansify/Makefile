@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/ansify/Makefile 153389 2005-12-13 22:09:50Z des $
+# $FreeBSD$
 
 SCRIPTS=	ansify.pl
 BINDIR?=	/usr/local/bin

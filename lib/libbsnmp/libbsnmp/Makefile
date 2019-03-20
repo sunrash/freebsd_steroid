@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libbsnmp/libbsnmp/Makefile 335885 2018-07-03 08:44:40Z harti $
+# $FreeBSD$
 #
 # Author: Harti Brandt <harti@freebsd.org>
 

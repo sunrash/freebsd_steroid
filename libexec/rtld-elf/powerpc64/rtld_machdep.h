@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/powerpc64/rtld_machdep.h 338486 2018-09-05 23:23:16Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef RTLD_MACHDEP_H
@@ -42,6 +42,7 @@ struct Struct_Obj_Entry;
 Elf_Addr reloc_jmpslot(Elf_Addr *where, Elf_Addr target,
     const struct Struct_Obj_Entry *defobj, const struct Struct_Obj_Entry *obj,
     const Elf_Rel *rel);
+void reloc_non_plt_self(Elf_Dyn *dynp, Elf_Addr relocbase);
 
 #define make_function_pointer(def, defobj) \
 	((defobj)->relocbase + (def)->st_value)

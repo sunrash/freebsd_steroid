@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libdwarf/Makefile 312511 2017-01-20 04:54:21Z ngie $
+# $FreeBSD$
 .include <bsd.own.mk>
 
 PACKAGE=lib${LIB}

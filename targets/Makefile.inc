@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/targets/Makefile.inc 275339 2014-11-30 18:45:46Z sjg $
+# $FreeBSD$
 
 .if !target(__${_this}__)
 __${_this}__:

@@ -37,7 +37,7 @@
 static char sccsid[] = "@(#)notdi2.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/notdi2.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "quad.h"
 
@@ -46,8 +46,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/notdi2.c 326025 2017-11-20 19:49:4
  * than `not'.
  */
 quad_t
-__one_cmpldi2(a)
-	quad_t a;
+__one_cmpldi2(quad_t a)
 {
 	union uu aa;
 

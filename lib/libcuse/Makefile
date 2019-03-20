@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcuse/Makefile 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 #
 # Copyright (c) 2010 Hans Petter Selasky. All rights reserved.
 #

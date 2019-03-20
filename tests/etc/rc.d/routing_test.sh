@@ -29,7 +29,7 @@
 # 
 #  Authors: Alan Somers         (Spectra Logic Corporation)
 #
-# $FreeBSD: releng/12.0/tests/etc/rc.d/routing_test.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 atf_test_case static_ipv4_loopback_route_for_each_fib cleanup
 static_ipv4_loopback_route_for_each_fib_head()

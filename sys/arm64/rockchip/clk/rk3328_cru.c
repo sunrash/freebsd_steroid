@@ -25,11 +25,11 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk3328_cru.c 335113 2018-06-14 06:34:27Z manu $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm64/rockchip/clk/rk3328_cru.c 335113 2018-06-14 06:34:27Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -973,23 +973,23 @@ static struct rk_clk_composite_def i2c3 = {
 
 static struct rk_clk rk3328_clks[] = {
 	{
-		.type = RK_CLK_PLL,
+		.type = RK3328_CLK_PLL,
 		.clk.pll = &apll
 	},
 	{
-		.type = RK_CLK_PLL,
+		.type = RK3328_CLK_PLL,
 		.clk.pll = &dpll
 	},
 	{
-		.type = RK_CLK_PLL,
+		.type = RK3328_CLK_PLL,
 		.clk.pll = &cpll
 	},
 	{
-		.type = RK_CLK_PLL,
+		.type = RK3328_CLK_PLL,
 		.clk.pll = &gpll
 	},
 	{
-		.type = RK_CLK_PLL,
+		.type = RK3328_CLK_PLL,
 		.clk.pll = &npll
 	},
 

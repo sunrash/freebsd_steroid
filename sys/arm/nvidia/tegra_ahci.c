@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_ahci.c 328201 2018-01-20 17:02:17Z mmel $");
+__FBSDID("$FreeBSD$");
 
 /*
  * AHCI driver for Tegra SoCs.

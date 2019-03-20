@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/annapurna/alpine/alpine_common.c 320643 2017-07-04 12:26:47Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

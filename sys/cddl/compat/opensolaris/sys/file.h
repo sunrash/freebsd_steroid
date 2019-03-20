@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/file.h 333425 2018-05-09 18:47:24Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_FILE_H_

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_subr.c 326291 2017-11-27 21:30:49Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

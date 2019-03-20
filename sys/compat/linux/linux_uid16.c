@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_uid16.c 326266 2017-11-27 15:13:23Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -192,7 +192,7 @@ linux_setgroups16(struct thread *td, struct linux_setgroups16_args *args)
 	 * Keep cr_groups[0] unchanged to prevent that.
 	 */
 
-	if ((error = priv_check_cred(oldcred, PRIV_CRED_SETGROUPS, 0)) != 0) {
+	if ((error = priv_check_cred(oldcred, PRIV_CRED_SETGROUPS)) != 0) {
 		PROC_UNLOCK(p);
 		crfree(newcred);
 

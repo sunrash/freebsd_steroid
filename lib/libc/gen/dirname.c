@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/dirname.c 305952 2016-09-18 20:47:55Z ed $");
+__FBSDID("$FreeBSD$");
 
 #include <libgen.h>
 #include <string.h>

@@ -40,7 +40,7 @@
  * see ``http://www.vix.com/isc''.  To learn more about Vixie
  * Enterprises, see ``http://www.vix.com''.
  *
- * $FreeBSD: releng/12.0/sbin/dhclient/tree.h 329754 2018-02-21 21:13:08Z asomers $
+ * $FreeBSD$
  */
 
 /* A pair of pointers, suitable for making a linked list. */

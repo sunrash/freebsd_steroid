@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/i386/linux/linux_locore.s 331254 2018-03-20 17:58:51Z emaste $ */
+/* $FreeBSD$ */
 
 #include "linux_assym.h"			/* system definitions */
 #include <machine/asmacros.h>			/* miscellaneous asm macros */

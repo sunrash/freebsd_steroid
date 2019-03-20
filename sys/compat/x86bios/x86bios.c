@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/x86bios/x86bios.c 338623 2018-09-13 07:04:00Z royger $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_x86bios.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/efi/loader/arch/i386/Makefile.inc 325093 2017-10-29 05:26:59Z imp $
+# $FreeBSD$
 
 SRCS+=	start.S \
 	efimd.c \

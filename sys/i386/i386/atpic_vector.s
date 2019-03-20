@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  *	from: vector.s, 386BSD 0.1 unknown origin
- * $FreeBSD: releng/12.0/sys/i386/i386/atpic_vector.s 332489 2018-04-13 20:30:49Z kib $
+ * $FreeBSD$
  */
 
 /*

@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/ar/acplex.l 335376 2018-06-19 17:28:05Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <errno.h>

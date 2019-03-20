@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/contrib/atf/FREEBSD-upgrade 272056 2014-09-24 06:50:14Z ngie $
+$FreeBSD$
 
 This document contains a collection of notes specific to the import
 of atf into head.  These notes are built on the instructions in

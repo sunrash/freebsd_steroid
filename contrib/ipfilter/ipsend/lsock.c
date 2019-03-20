@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/ipsend/lsock.c 315368 2017-03-16 04:40:07Z cy $	*/
+/*	$FreeBSD$	*/
 
 /*
  * lsock.c (C) 1995-1998 Darren Reed

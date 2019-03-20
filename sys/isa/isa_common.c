@@ -60,7 +60,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/isa/isa_common.c 327379 2017-12-30 08:16:31Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_isa.h"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/i2c/nxprtc/Makefile 323642 2017-09-16 16:09:05Z ian $
+# $FreeBSD$
 
 .PATH:		${SRCTOP}/sys/dev/iicbus
 KMOD		= nxprtc

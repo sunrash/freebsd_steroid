@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tests/sys/geom/class/uzip/conf.sh 322214 2017-08-08 04:59:16Z ngie $
+# $FreeBSD$
 
 class="uzip"
 base=`basename $0`

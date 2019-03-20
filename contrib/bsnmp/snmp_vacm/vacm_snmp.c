@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/contrib/bsnmp/snmp_vacm/vacm_snmp.c 335885 2018-07-03 08:44:40Z harti $
+ * $FreeBSD$
  */
 #include <sys/queue.h>
 #include <sys/types.h>

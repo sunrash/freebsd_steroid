@@ -32,7 +32,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * $FreeBSD: releng/12.0/sys/ofed/include/uapi/rdma/mthca-abi.h 330490 2018-03-05 11:49:45Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef MTHCA_ABI_USER_H

@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/isa/clock.c 330773 2018-03-11 18:20:49Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Routines to handle clock hardware.

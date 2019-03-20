@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/string/wcscasecmp_test.c 290539 2015-11-08 07:53:31Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 #include <locale.h>

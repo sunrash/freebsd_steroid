@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mii/vscphy.c 319817 2017-06-11 00:38:16Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Microsemi / Vitesse VSC8501 (and similar).

@@ -24,7 +24,7 @@
  * SUCH DAMAGE.
  *
  * $KAME: if_altq.h,v 1.12 2005/04/13 03:44:25 suz Exp $
- * $FreeBSD: releng/12.0/sys/net/altq/if_altq.h 336727 2018-07-25 22:46:36Z pkelsey $
+ * $FreeBSD$
  */
 #ifndef _ALTQ_IF_ALTQ_H_
 #define	_ALTQ_IF_ALTQ_H_

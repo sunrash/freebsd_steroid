@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/usb.h 331433 2018-03-23 15:50:01Z emaste $ */
+/* $FreeBSD$ */
 /*-
  * Copyright (c) 2007 Luigi Rizzo - Universita` di Pisa. All rights reserved.
  * Copyright (c) 2007 Hans Petter Selasky. All rights reserved.

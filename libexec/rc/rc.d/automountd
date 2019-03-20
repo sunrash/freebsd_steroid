@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/automountd 325400 2017-11-04 15:52:16Z trasz $
+# $FreeBSD$
 #
 
 # PROVIDE: automountd

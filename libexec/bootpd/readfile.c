@@ -19,7 +19,7 @@ PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
 ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
 SOFTWARE.
 
- $FreeBSD: releng/12.0/libexec/bootpd/readfile.c 297866 2016-04-12 18:24:02Z pfg $
+ $FreeBSD$
 
 ************************************************************************/
 

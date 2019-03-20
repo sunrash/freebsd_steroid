@@ -31,7 +31,7 @@
  * official policies, either expressed or implied, of the FreeBSD Project.
  *
  * ------+---------+---------+---------+---------+---------+---------+---------*
- * $FreeBSD: releng/12.0/usr.sbin/newsyslog/extern.h 326276 2017-11-27 15:37:16Z pfg $
+ * $FreeBSD$
  * ------+---------+---------+---------+---------+---------+---------+---------*
  */
 

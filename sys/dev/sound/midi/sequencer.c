@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/sound/midi/sequencer.c 339719 2018-10-25 14:53:24Z hselasky $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -434,7 +434,7 @@ static void
 seq_eventthread(void *arg)
 {
 	struct seq_softc *scp = arg;
-	char event[EV_SZ];
+	u_char event[EV_SZ];
 
 	mtx_lock(&scp->seq_lock);
 	SEQ_DEBUG(2, printf("seq_eventthread started\n"));

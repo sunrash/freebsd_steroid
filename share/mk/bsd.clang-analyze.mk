@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.clang-analyze.mk 325634 2017-11-10 08:00:09Z bdrewery $
+# $FreeBSD$
 #
 # Support Clang static analyzer on SRCS.
 #

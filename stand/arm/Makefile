@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/arm/Makefile 330004 2018-02-26 03:16:04Z imp $
+# $FreeBSD$
 
 NO_OBJ=t
 

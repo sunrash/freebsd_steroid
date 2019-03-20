@@ -78,7 +78,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/fpu/fpu_emu.c 325966 2017-11-18 14:26:50Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 
@@ -189,7 +189,6 @@ fpu_emulate(struct trapframe *frame, struct fpu *fpf)
 {
 	union instr insn;
 	struct fpemu fe;
-	static int lastill = 0;
 	int sig;
 
 	/* initialize insn.is_datasize to tell it is *not* initialized */
@@ -243,17 +242,11 @@ fpu_emulate(struct trapframe *frame, struct fpu *fpf)
 			opc_disasm(frame->srr0, insn.i_int);
 		}
 #endif
-		/*
-		* XXXX retry an illegal insn once due to cache issues.
-		*/
-		if (lastill == frame->srr0) {
-			sig = SIGILL;
+		sig = SIGILL;
 #ifdef DEBUG
-			if (fpe_debug & FPE_EX)
-				kdb_enter(KDB_WHY_UNSET, "illegal instruction");
+		if (fpe_debug & FPE_EX)
+			kdb_enter(KDB_WHY_UNSET, "illegal instruction");
 #endif
-		}
-		lastill = frame->srr0;
 		break;
 	}
 

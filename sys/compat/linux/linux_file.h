@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linux/linux_file.h 328890 2018-02-05 17:29:12Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_FILE_H_

@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  *
  *	from BSDI $Id: mutex.h,v 2.7.2.35 2000/04/27 03:10:26 cp Exp $
- * $FreeBSD: releng/12.0/sys/sys/mutex.h 335873 2018-07-02 19:48:38Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_MUTEX_H_
@@ -496,7 +496,7 @@ do {									\
 	int _giantcnt = 0;						\
 	WITNESS_SAVE_DECL(Giant);					\
 									\
-	if (mtx_owned(&Giant)) {					\
+	if (__predict_false(mtx_owned(&Giant))) {			\
 		WITNESS_SAVE(&Giant.lock_object, Giant);		\
 		for (_giantcnt = 0; mtx_owned(&Giant) &&		\
 		    !SCHEDULER_STOPPED(); _giantcnt++)			\
@@ -509,7 +509,7 @@ do {									\
 
 #define PARTIAL_PICKUP_GIANT()						\
 	mtx_assert(&Giant, MA_NOTOWNED);				\
-	if (_giantcnt > 0) {						\
+	if (__predict_false(_giantcnt > 0)) {				\
 		while (_giantcnt--)					\
 			mtx_lock(&Giant);				\
 		WITNESS_RESTORE(&Giant.lock_object, Giant);		\

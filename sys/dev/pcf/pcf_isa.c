@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/pcf/pcf_isa.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Hardware driver for a Philips PCF8584 I2C bus controller sitting
@@ -111,7 +111,7 @@ pcf_isa_probe(device_t dev)
 
 	/* The port address must be explicitly specified */
 	bus_get_resource(dev, SYS_RES_IOPORT, rid, &start, &count);
-	if ((error = resource_int_value(PCF_NAME, 0, "port", &port) != 0))
+	if ((error = resource_int_value(PCF_NAME, 0, "port", &port)) != 0)
 		return (error);
 
 	/* Probe is only successful for the specified base io */

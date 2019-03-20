@@ -26,7 +26,7 @@
 
 #include "opt_platform.h"
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/dpaa/bman_fdt.c 326840 2017-12-14 04:41:07Z jhibbits $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -68,7 +68,8 @@ static driver_t bman_driver = {
 };
 
 static devclass_t bman_devclass;
-DRIVER_MODULE(bman, simplebus, bman_driver, bman_devclass, 0, 0);
+EARLY_DRIVER_MODULE(bman, simplebus, bman_driver, bman_devclass, 0, 0,
+    BUS_PASS_SUPPORTDEV);
 
 static int
 bman_fdt_probe(device_t dev)

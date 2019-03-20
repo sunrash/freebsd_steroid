@@ -31,7 +31,7 @@
 
 #ifndef lint
 static const char rcsid[] =
-  "$FreeBSD: releng/12.0/sbin/ifconfig/af_link.c 331622 2018-03-27 15:29:32Z kib $";
+  "$FreeBSD$";
 #endif /* not lint */
 
 #include <sys/types.h>

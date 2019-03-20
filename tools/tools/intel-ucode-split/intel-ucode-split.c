@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/intel-ucode-split/intel-ucode-split.c 334046 2018-05-22 14:35:33Z emaste $
+ * $FreeBSD$
  */
 
 #include <err.h>

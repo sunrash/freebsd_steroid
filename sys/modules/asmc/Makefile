@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/asmc/Makefile 334170 2018-05-24 17:06:00Z cem $
+# $FreeBSD$
 
 .PATH: ${SRCTOP}/sys/dev/asmc
 

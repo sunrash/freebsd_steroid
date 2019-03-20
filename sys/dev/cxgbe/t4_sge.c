@@ -28,10 +28,11 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/t4_sge.c 339905 2018-10-30 05:04:18Z np $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet.h"
 #include "opt_inet6.h"
+#include "opt_kern_tls.h"
 #include "opt_ratelimit.h"
 
 #include <sys/types.h>
@@ -47,6 +48,8 @@ __FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/t4_sge.c 339905 2018-10-30 05:04:1
 #include <sys/sglist.h>
 #include <sys/sysctl.h>
 #include <sys/smp.h>
+#include <sys/sockbuf_tls.h>
+#include <sys/socketvar.h>
 #include <sys/counter.h>
 #include <net/bpf.h>
 #include <net/ethernet.h>
@@ -82,12 +85,18 @@ __FBSDID("$FreeBSD: releng/12.0/sys/dev/cxgbe/t4_sge.c 339905 2018-10-30 05:04:1
 #define RX_COPY_THRESHOLD MINCLSIZE
 #endif
 
+/* Internal mbuf flags stored in PH_loc.eight[1]. */
+#define	MC_NOMAP		0x01
+#define	MC_RAW_WR		0x02
+#define	MC_TLS			0x04
+
 /*
  * Ethernet frames are DMA'd at this byte offset into the freelist buffer.
  * 0-7 are valid values.
  */
 static int fl_pktshift = 0;
-TUNABLE_INT("hw.cxgbe.fl_pktshift", &fl_pktshift);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, fl_pktshift, CTLFLAG_RDTUN, &fl_pktshift, 0,
+    "payload DMA offset in rx buffer (bytes)");
 
 /*
  * Pad ethernet payload up to this boundary.
@@ -96,7 +105,8 @@ TUNABLE_INT("hw.cxgbe.fl_pktshift", &fl_pktshift);
  *  Any power of 2 from 32 to 4096 (both inclusive) is also a valid value.
  */
 int fl_pad = -1;
-TUNABLE_INT("hw.cxgbe.fl_pad", &fl_pad);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, fl_pad, CTLFLAG_RDTUN, &fl_pad, 0,
+    "payload pad boundary (bytes)");
 
 /*
  * Status page length.
@@ -104,7 +114,8 @@ TUNABLE_INT("hw.cxgbe.fl_pad", &fl_pad);
  *  64 or 128 are the only other valid values.
  */
 static int spg_len = -1;
-TUNABLE_INT("hw.cxgbe.spg_len", &spg_len);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, spg_len, CTLFLAG_RDTUN, &spg_len, 0,
+    "status page size (bytes)");
 
 /*
  * Congestion drops.
@@ -113,7 +124,8 @@ TUNABLE_INT("hw.cxgbe.spg_len", &spg_len);
  *  1: no backpressure, drop packets for the congested queue immediately.
  */
 static int cong_drop = 0;
-TUNABLE_INT("hw.cxgbe.cong_drop", &cong_drop);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, cong_drop, CTLFLAG_RDTUN, &cong_drop, 0,
+    "Congestion control for RX queues (0 = backpressure, 1 = drop");
 
 /*
  * Deliver multiple frames in the same free list buffer if they fit.
@@ -122,7 +134,8 @@ TUNABLE_INT("hw.cxgbe.cong_drop", &cong_drop);
  *  1: enable buffer packing.
  */
 static int buffer_packing = -1;
-TUNABLE_INT("hw.cxgbe.buffer_packing", &buffer_packing);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, buffer_packing, CTLFLAG_RDTUN, &buffer_packing,
+    0, "Enable buffer packing");
 
 /*
  * Start next frame in a packed buffer at this boundary.
@@ -131,7 +144,8 @@ TUNABLE_INT("hw.cxgbe.buffer_packing", &buffer_packing);
  * T5: 16, or a power of 2 from 64 to 4096 (both inclusive) is a valid value.
  */
 static int fl_pack = -1;
-TUNABLE_INT("hw.cxgbe.fl_pack", &fl_pack);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, fl_pack, CTLFLAG_RDTUN, &fl_pack, 0,
+    "payload pack boundary (bytes)");
 
 /*
  * Allow the driver to create mbuf(s) in a cluster allocated for rx.
@@ -139,20 +153,24 @@ TUNABLE_INT("hw.cxgbe.fl_pack", &fl_pack);
  * 1: ok to create mbuf(s) within a cluster if there is room.
  */
 static int allow_mbufs_in_cluster = 1;
-TUNABLE_INT("hw.cxgbe.allow_mbufs_in_cluster", &allow_mbufs_in_cluster);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, allow_mbufs_in_cluster, CTLFLAG_RDTUN,
+    &allow_mbufs_in_cluster, 0,
+    "Allow driver to create mbufs within a rx cluster");
 
 /*
  * Largest rx cluster size that the driver is allowed to allocate.
  */
 static int largest_rx_cluster = MJUM16BYTES;
-TUNABLE_INT("hw.cxgbe.largest_rx_cluster", &largest_rx_cluster);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, largest_rx_cluster, CTLFLAG_RDTUN,
+    &largest_rx_cluster, 0, "Largest rx cluster (bytes)");
 
 /*
  * Size of cluster allocation that's most likely to succeed.  The driver will
  * fall back to this size if it fails to allocate clusters larger than this.
  */
 static int safest_rx_cluster = PAGE_SIZE;
-TUNABLE_INT("hw.cxgbe.safest_rx_cluster", &safest_rx_cluster);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, safest_rx_cluster, CTLFLAG_RDTUN,
+    &safest_rx_cluster, 0, "Safe rx cluster (bytes)");
 
 #ifdef RATELIMIT
 /*
@@ -165,10 +183,12 @@ TUNABLE_INT("hw.cxgbe.safest_rx_cluster", &safest_rx_cluster);
  * 3: 1us
  */
 static int tsclk = -1;
-TUNABLE_INT("hw.cxgbe.tsclk", &tsclk);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, tsclk, CTLFLAG_RDTUN, &tsclk, 0,
+    "Control TCP timestamp rewriting when using pacing");
 
 static int eo_max_backlog = 1024 * 1024;
-TUNABLE_INT("hw.cxgbe.eo_max_backlog", &eo_max_backlog);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, eo_max_backlog, CTLFLAG_RDTUN, &eo_max_backlog,
+    0, "Maximum backlog of ratelimited data per flow");
 #endif
 
 /*
@@ -176,19 +196,22 @@ TUNABLE_INT("hw.cxgbe.eo_max_backlog", &eo_max_backlog);
  * 1 and 3-17 (both inclusive) are legal values.
  */
 static int tscale = 1;
-TUNABLE_INT("hw.cxgbe.tscale", &tscale);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, tscale, CTLFLAG_RDTUN, &tscale, 0,
+    "Interrupt holdoff timer scale on T6+");
 
 /*
  * Number of LRO entries in the lro_ctrl structure per rx queue.
  */
 static int lro_entries = TCP_LRO_ENTRIES;
-TUNABLE_INT("hw.cxgbe.lro_entries", &lro_entries);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, lro_entries, CTLFLAG_RDTUN, &lro_entries, 0,
+    "Number of LRO entries per RX queue");
 
 /*
  * This enables presorting of frames before they're fed into tcp_lro_rx.
  */
 static int lro_mbufs = 0;
-TUNABLE_INT("hw.cxgbe.lro_mbufs", &lro_mbufs);
+SYSCTL_INT(_hw_cxgbe, OID_AUTO, lro_mbufs, CTLFLAG_RDTUN, &lro_mbufs, 0,
+    "Enable presorting of LRO frames");
 
 struct txpkts {
 	u_int wr_type;		/* type 0 or type 1 */
@@ -270,6 +293,7 @@ static inline u_int txpkt_len16(u_int, u_int);
 static inline u_int txpkt_vm_len16(u_int, u_int);
 static inline u_int txpkts0_len16(u_int);
 static inline u_int txpkts1_len16(void);
+static u_int write_raw_wr(struct sge_txq *, void *, struct mbuf *, u_int);
 static u_int write_txpkt_wr(struct sge_txq *, struct fw_eth_tx_pkt_wr *,
     struct mbuf *, u_int);
 static u_int write_txpkt_vm_wr(struct adapter *, struct sge_txq *,
@@ -682,8 +706,10 @@ t4_tweak_chip_settings(struct adapter *sc)
 
 	KASSERT(nitems(sge_flbuf_sizes) <= SGE_FLBUF_SIZES,
 	    ("%s: hw buffer size table too big", __func__));
+	t4_write_reg(sc, A_SGE_FL_BUFFER_SIZE0, 4096);
+	t4_write_reg(sc, A_SGE_FL_BUFFER_SIZE1, 65536);
 	for (i = 0; i < min(nitems(sge_flbuf_sizes), SGE_FLBUF_SIZES); i++) {
-		t4_write_reg(sc, A_SGE_FL_BUFFER_SIZE0 + (4 * i),
+		t4_write_reg(sc, A_SGE_FL_BUFFER_SIZE15 - (4 * i),
 		    sge_flbuf_sizes[i]);
 	}
 
@@ -1358,6 +1384,9 @@ t4_intr_all(void *arg)
 
 	MPASS(sc->intr_count == 1);
 
+	if (sc->intr_type == INTR_INTX)
+		t4_write_reg(sc, MYPF_REG(A_PCIE_PF_CLI), 0);
+
 	t4_intr_err(arg);
 	t4_intr_evt(fwq);
 }
@@ -1370,9 +1399,12 @@ void
 t4_intr_err(void *arg)
 {
 	struct adapter *sc = arg;
+	const bool verbose = (sc->debug_flags & DF_VERBOSE_SLOWINTR) != 0;
 
-	t4_write_reg(sc, MYPF_REG(A_PCIE_PF_CLI), 0);
-	t4_slow_intr_handler(sc);
+	if (sc->flags & ADAP_ERR)
+		return;
+
+	t4_slow_intr_handler(sc, verbose);
 }
 
 /*
@@ -2196,13 +2228,30 @@ set_mbuf_nsegs(struct mbuf *m, uint8_t nsegs)
 }
 
 static inline int
+mbuf_cflags(struct mbuf *m)
+{
+
+	M_ASSERTPKTHDR(m);
+	return (m->m_pkthdr.PH_loc.eight[4]);
+}
+
+static inline void
+set_mbuf_cflags(struct mbuf *m, uint8_t flags)
+{
+
+	M_ASSERTPKTHDR(m);
+	m->m_pkthdr.PH_loc.eight[4] = flags;
+}
+
+static inline int
 mbuf_len16(struct mbuf *m)
 {
 	int n;
 
 	M_ASSERTPKTHDR(m);
 	n = m->m_pkthdr.PH_loc.eight[0];
-	MPASS(n > 0 && n <= SGE_MAX_WR_LEN / 16);
+	if (!(mbuf_cflags(m) & MC_TLS))
+		MPASS(n > 0 && n <= SGE_MAX_WR_LEN / 16);
 
 	return (n);
 }
@@ -2275,6 +2324,36 @@ needs_eo(struct mbuf *m)
 	return (m->m_pkthdr.snd_tag != NULL);
 }
 #endif
+
+/*
+ * Try to allocate an mbuf to contain a raw work request.  To make it
+ * easy to construct the work request, don't allocate a chain but a
+ * single mbuf.
+ */
+struct mbuf *
+alloc_wr_mbuf(int len, int how, struct tlspcb *tlsp)
+{
+	struct mbuf *m;
+
+	if (len <= MHLEN)
+		m = m_gethdr(how, MT_DATA);
+	else if (len <= MCLBYTES)
+		m = m_getcl(how, MT_DATA, M_PKTHDR);
+	else
+		m = NULL;
+	if (m == NULL)
+		return (NULL);
+	m->m_pkthdr.len = len;
+#ifdef KERN_TLS
+	m->m_pkthdr.PH_per.ptr = tlsp;
+#else
+	MPASS(tlsp == NULL);
+#endif
+	m->m_len = len;
+	set_mbuf_cflags(m, MC_RAW_WR);
+	set_mbuf_len16(m, howmany(len, 16));
+	return (m);
+}
 
 static inline int
 needs_tso(struct mbuf *m)
@@ -2356,8 +2435,42 @@ m_advance(struct mbuf **pm, int *poffset, int len)
 	return ((void *)p);
 }
 
+#ifdef KERN_TLS
+static inline bool
+is_tls_mbuf(struct mbuf *m)
+{
+	struct mbuf_ext_pgs *ext_pgs;
+
+	/* for now, all unmapped mbufs are assumed to be EXT_PGS */
+	MBUF_EXT_PGS_ASSERT(m);
+	ext_pgs = m->m_ext.ext_pgs;
+	MPASS(ext_pgs->tls == NULL ||
+	    ext_pgs->tls->sb_tls_crypt == NULL);
+	return (ext_pgs->tls != NULL);
+}
+#endif
+
+static inline struct t6_sbtls_cipher *
+tls_mbuf_cipher(struct mbuf *m)
+{
+	struct mbuf_ext_pgs *ext_pgs;
+
+	while (m != NULL) {
+		if (m->m_flags & M_NOMAP) {
+			/* for now, all unmapped mbufs are assumed to be EXT_PGS */
+			MBUF_EXT_PGS_ASSERT(m);
+			ext_pgs = (void *)m->m_ext.ext_buf;
+			MPASS(ext_pgs->tls != NULL);
+			MPASS(ext_pgs->tls->sb_tls_crypt == NULL);
+			return (ext_pgs->tls->cipher);
+		}
+		m = m->m_next;
+	}
+	return (NULL);
+}
+
 static inline int
-count_mbuf_ext_pgs(struct mbuf *m, vm_paddr_t *lastb)
+count_mbuf_ext_pgs(struct mbuf *m, int skip, vm_paddr_t *lastb)
 {
 	struct mbuf_ext_pgs *ext_pgs;
 	vm_paddr_t tmp;
@@ -2374,6 +2487,8 @@ count_mbuf_ext_pgs(struct mbuf *m, vm_paddr_t *lastb)
 	 * so skip ahead until we find the start
 	 */
 	off = mtod(m, vm_offset_t);
+	off += skip;
+	len -= skip;
 
 	if (ext_pgs->hdr_len != 0) {
 		if (off >= ext_pgs->hdr_len) {
@@ -2434,7 +2549,8 @@ count_mbuf_ext_pgs(struct mbuf *m, vm_paddr_t *lastb)
  * routine to return 0 if skip accounts for all the contents of the mbuf chain.
  */
 static inline int
-count_mbuf_nsegs(struct mbuf *m, int *ext_pgs, int skip)
+count_mbuf_nsegs(struct mbuf *m, int skip, uint8_t *cflags,
+    struct t6_sbtls_cipher **cipherp)
 {
 	vm_paddr_t lastb, next;
 	vm_offset_t va;
@@ -2455,9 +2571,22 @@ count_mbuf_nsegs(struct mbuf *m, int *ext_pgs, int skip)
 			skip -= len;
 			continue;
 		}
-                if ((m->m_flags & M_NOMAP) != 0) {
-			*ext_pgs = 1;
-			nsegs += count_mbuf_ext_pgs(m, &lastb);
+
+		if ((m->m_flags & M_NOMAP) != 0) {
+			*cflags |= MC_NOMAP;
+#ifdef KERN_TLS
+			if (is_tls_mbuf(m)) {
+				if (*cflags & MC_TLS) {
+					MPASS(*cipherp == tls_mbuf_cipher(m));
+				} else {
+					MPASS(*cipherp == NULL);
+					*cflags |= MC_TLS;
+					*cipherp = tls_mbuf_cipher(m);
+				}
+			}
+#endif
+			nsegs += count_mbuf_ext_pgs(m, skip, &lastb);
+			skip = 0;
 			continue;
 		}
 		va = mtod(m, vm_offset_t) + skip;
@@ -2479,17 +2608,20 @@ count_mbuf_nsegs(struct mbuf *m, int *ext_pgs, int skip)
  * b) it may get defragged up if the gather list is too long for the hardware.
  */
 int
-parse_pkt(struct adapter *sc, struct mbuf **mp)
+parse_pkt(struct adapter *sc, struct vi_info *vi, struct mbuf **mp)
 {
 	struct mbuf *m0 = *mp, *m;
-	int rc, nsegs, defragged = 0, offset, ext_pgs = 0;
+	int rc, nsegs, defragged = 0, offset;
 	struct ether_header *eh;
 	void *l3hdr;
 #if defined(INET) || defined(INET6)
 	struct tcphdr *tcp;
 #endif
+	struct t6_sbtls_cipher *cipher;
 	uint16_t eh_type;
+	uint8_t cflags;
 
+	cflags = 0;
 	M_ASSERTPKTHDR(m0);
 	if (__predict_false(m0->m_pkthdr.len < ETHER_HDR_LEN)) {
 		rc = EINVAL;
@@ -2505,7 +2637,26 @@ restart:
 	 */
 	M_ASSERTPKTHDR(m0);
 	MPASS(m0->m_pkthdr.len > 0);
-	nsegs = count_mbuf_nsegs(m0, &ext_pgs, 0);
+	cipher = NULL;
+	nsegs = count_mbuf_nsegs(m0, 0, &cflags, &cipher);
+#ifdef KERN_TLS
+	if (cflags & MC_TLS) {
+		int len16;
+
+		if (cipher->vi != vi) {
+			rc = ECONNABORTED;
+			goto fail;
+		}
+		set_mbuf_cflags(m0, cflags);
+		rc = t6_sbtls_parse_pkt(cipher, m0, &nsegs, &len16);
+		if (rc != 0)
+			goto fail;
+		set_mbuf_nsegs(m0, nsegs);
+		set_mbuf_len16(m0, len16);
+		return (0);
+	}
+#endif
+	MPASS(cipher == NULL);
 	if (nsegs > (needs_tso(m0) ? TX_SGL_SEGS_TSO : TX_SGL_SEGS)) {
 		if (defragged++ > 0 || (m = m_defrag(m0, M_NOWAIT)) == NULL) {
 			rc = EFBIG;
@@ -2515,7 +2666,8 @@ restart:
 		goto restart;
 	}
 
-	if (__predict_false(nsegs > 2 && m0->m_pkthdr.len <= MHLEN && !ext_pgs)) {
+	if (__predict_false(nsegs > 2 && m0->m_pkthdr.len <= MHLEN &&
+	    !(cflags & MC_NOMAP))) {
 		m0 = m_pullup(m0, m0->m_pkthdr.len);
 		if (m0 == NULL) {
 			/* Should have left well enough alone. */
@@ -2526,6 +2678,7 @@ restart:
 		goto restart;
 	}
 	set_mbuf_nsegs(m0, nsegs);
+	set_mbuf_cflags(m0, cflags);
 	if (sc->flags & IS_VF)
 		set_mbuf_len16(m0, txpkt_vm_len16(nsegs, needs_tso(m0)));
 	else
@@ -2611,7 +2764,10 @@ restart:
 		/* EO WRs have the headers in the WR and not the GL. */
 		immhdrs = m0->m_pkthdr.l2hlen + m0->m_pkthdr.l3hlen +
 		    m0->m_pkthdr.l4hlen;
-		nsegs = count_mbuf_nsegs(m0, immhdrs);
+		cflags = 0;
+		nsegs = count_mbuf_nsegs(m0, immhdrs, &cflags, &cipher);
+		MPASS(cflags == mbuf_cflags(m0));
+		MPASS(cipher == NULL);
 		set_mbuf_eo_nsegs(m0, nsegs);
 		set_mbuf_eo_len16(m0,
 		    txpkt_eo_len16(nsegs, immhdrs, needs_tso(m0)));
@@ -2768,7 +2924,7 @@ cannot_use_txpkts(struct mbuf *m)
 {
 	/* maybe put a GL limit too, to avoid silliness? */
 
-	return (needs_tso(m));
+	return (needs_tso(m) || (mbuf_cflags(m) & (MC_RAW_WR | MC_TLS)) != 0);
 }
 
 static inline int
@@ -2776,6 +2932,21 @@ discard_tx(struct sge_eq *eq)
 {
 
 	return ((eq->flags & (EQ_ENABLED | EQ_QFLUSH)) != EQ_ENABLED);
+}
+
+static inline int
+wr_can_update_eq(struct fw_eth_tx_pkts_wr *wr)
+{
+
+	switch (G_FW_WR_OP(be32toh(wr->op_pkd))) {
+	case FW_ULPTX_WR:
+	case FW_ETH_TX_PKT_WR:
+	case FW_ETH_TX_PKTS_WR:
+	case FW_ETH_TX_PKT_VM_WR:
+		return (1);
+	default:
+		return (0);
+	}
 }
 
 /*
@@ -2828,7 +2999,8 @@ eth_tx(struct mp_ring *r, u_int cidx, u_int pidx)
 		M_ASSERTPKTHDR(m0);
 		MPASS(m0->m_nextpkt == NULL);
 
-		if (available < SGE_MAX_WR_NDESC) {
+		if (available < howmany(mbuf_len16(m0), EQ_ESIZE / 16)) {
+			MPASS(howmany(mbuf_len16(m0), EQ_ESIZE / 16) <= 64);
 			available += reclaim_tx_descs(txq, 64);
 			if (available < howmany(mbuf_len16(m0), EQ_ESIZE / 16))
 				break;	/* out of descriptors */
@@ -2839,7 +3011,19 @@ eth_tx(struct mp_ring *r, u_int cidx, u_int pidx)
 			next_cidx = 0;
 
 		wr = (void *)&eq->desc[eq->pidx];
-		if (sc->flags & IS_VF) {
+		if (mbuf_cflags(m0) & MC_RAW_WR) {
+			total++;
+			remaining--;
+			n = write_raw_wr(txq, (void *)wr, m0, available);
+#ifdef KERN_TLS
+		} else if (mbuf_cflags(m0) & MC_TLS) {
+			total++;
+			remaining--;
+			ETHER_BPF_MTAP(ifp, m0);
+			n = t6_sbtls_write_wr(tls_mbuf_cipher(m0), txq,
+			    (void *)wr, m0, mbuf_nsegs(m0), available);
+#endif
+		} else if (sc->flags & IS_VF) {
 			total++;
 			remaining--;
 			ETHER_BPF_MTAP(ifp, m0);
@@ -2879,20 +3063,25 @@ eth_tx(struct mp_ring *r, u_int cidx, u_int pidx)
 			ETHER_BPF_MTAP(ifp, m0);
 			n = write_txpkt_wr(txq, (void *)wr, m0, available);
 		}
-		MPASS(n >= 1 && n <= available && n <= SGE_MAX_WR_NDESC);
+		MPASS(n >= 1 && n <= available);
+		if (!(mbuf_cflags(m0) & MC_TLS))		
+			MPASS(n <= SGE_MAX_WR_NDESC);
 
 		available -= n;
 		dbdiff += n;
 		IDXINCR(eq->pidx, n, eq->sidx);
 
-		if (total_available_tx_desc(eq) < eq->sidx / 4 &&
-		    atomic_cmpset_int(&eq->equiq, 0, 1)) {
-			wr->equiq_to_len16 |= htobe32(F_FW_WR_EQUIQ |
-			    F_FW_WR_EQUEQ);
-			eq->equeqidx = eq->pidx;
-		} else if (IDXDIFF(eq->pidx, eq->equeqidx, eq->sidx) >= 32) {
-			wr->equiq_to_len16 |= htobe32(F_FW_WR_EQUEQ);
-			eq->equeqidx = eq->pidx;
+		if (wr_can_update_eq(wr)) {
+			if (total_available_tx_desc(eq) < eq->sidx / 4 &&
+			    atomic_cmpset_int(&eq->equiq, 0, 1)) {
+				wr->equiq_to_len16 |= htobe32(F_FW_WR_EQUIQ |
+				    F_FW_WR_EQUEQ);
+				eq->equeqidx = eq->pidx;
+			} else if (IDXDIFF(eq->pidx, eq->equeqidx, eq->sidx) >=
+			    32) {
+				wr->equiq_to_len16 |= htobe32(F_FW_WR_EQUEQ);
+				eq->equeqidx = eq->pidx;
+			}
 		}
 
 		if (dbdiff >= 16 && remaining >= 4) {
@@ -3427,6 +3616,8 @@ alloc_rxq(struct vi_info *vi, struct sge_rxq *rxq, int intr_idx, int idx,
 	if (vi->ifp->if_capenable & IFCAP_LRO)
 		rxq->iq.flags |= IQ_LRO_ENABLED;
 #endif
+	if (vi->ifp->if_capenable & IFCAP_HWRXTSTMP)
+		rxq->iq.flags |= IQ_RX_TIMESTAMP;
 	rxq->ifp = vi->ifp;
 
 	children = SYSCTL_CHILDREN(oid);
@@ -4087,7 +4278,52 @@ alloc_txq(struct vi_info *vi, struct sge_txq *txq, int idx,
 	SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO, "txpkts1_pkts",
 	    CTLFLAG_RD, &txq->txpkts1_pkts,
 	    "# of frames tx'd using type1 txpkts work requests");
+	SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO, "tls_wrs", CTLFLAG_RD,
+	    &txq->tls_wrs, "# of TLS work requests (TLS records)");
+	SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO, "raw_wrs", CTLFLAG_RD,
+	    &txq->raw_wrs, "# of raw work requests (non-packets)");
 
+#ifdef KERN_TLS
+	if (sc->flags & KERN_TLS_OK) {
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_records", CTLFLAG_RD, &txq->kern_tls_records,
+		    "# of NIC TLS records transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_short", CTLFLAG_RD, &txq->kern_tls_short,
+		    "# of short NIC TLS records transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_partial", CTLFLAG_RD, &txq->kern_tls_partial,
+		    "# of partial NIC TLS records transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_full", CTLFLAG_RD, &txq->kern_tls_full,
+		    "# of full NIC TLS records transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_octets", CTLFLAG_RD, &txq->kern_tls_octets,
+		    "# of payload octets in transmitted NIC TLS records");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_waste", CTLFLAG_RD, &txq->kern_tls_waste,
+		    "# of octets DMAd but not transmitted in NIC TLS records");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_options", CTLFLAG_RD, &txq->kern_tls_options,
+		    "# of NIC TLS options-only packets transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_header", CTLFLAG_RD, &txq->kern_tls_header,
+		    "# of NIC TLS header-only packets transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_fin", CTLFLAG_RD, &txq->kern_tls_fin,
+		    "# of NIC TLS FIN-only packets transmitted");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_fin_short", CTLFLAG_RD, &txq->kern_tls_fin_short,
+		    "# of NIC TLS padded FIN packets on short TLS records");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_cbc", CTLFLAG_RD, &txq->kern_tls_cbc,
+		    "# of NIC TLS sessions using AES-CBC");
+		SYSCTL_ADD_UQUAD(&vi->ctx, children, OID_AUTO,
+		    "kern_tls_gcm", CTLFLAG_RD, &txq->kern_tls_gcm,
+		    "# of NIC TLS sessions using AES-GCM");
+	}
+#endif
+	
 	SYSCTL_ADD_COUNTER_U64(&vi->ctx, children, OID_AUTO, "r_enqueues",
 	    CTLFLAG_RD, &txq->r->enqueues,
 	    "# of enqueues to the mp_ring for this queue");
@@ -4436,15 +4672,11 @@ txpkts0_len16(u_int nsegs)
 static inline u_int
 txpkts1_len16(void)
 {
-#if 0 
- 	u_int n;
+	u_int n;
 
 	n = sizeof(struct cpl_tx_pkt_core) + sizeof(struct ulptx_sgl);
 
 	return (howmany(n, 16));
-#else
-        return (0);
-#endif
 }
 
 static inline u_int
@@ -4638,6 +4870,40 @@ write_txpkt_vm_wr(struct adapter *sc, struct sge_txq *txq,
 }
 
 /*
+ * Write a raw WR to the hardware descriptors, update the software
+ * descriptor, and advance the pidx.  It is guaranteed that enough
+ * descriptors are available.
+ *
+ * The return value is the # of hardware descriptors used.
+ */
+static u_int
+write_raw_wr(struct sge_txq *txq, void *wr, struct mbuf *m0, u_int available)
+{
+	struct sge_eq *eq = &txq->eq;
+	struct tx_sdesc *txsd;
+	struct mbuf *m;
+	caddr_t dst;
+	int len16, ndesc;
+
+	len16 = mbuf_len16(m0);
+	ndesc = howmany(len16, EQ_ESIZE / 16);
+	MPASS(ndesc <= available);
+
+	dst = wr;
+	for (m = m0; m != NULL; m = m->m_next)
+		copy_to_txd(eq, mtod(m, caddr_t), &dst, m->m_len);
+
+	txq->raw_wrs++;
+
+	txsd = &txq->sdesc[eq->pidx];
+	txsd->m = m0;
+	txsd->desc_used = ndesc;
+	txsd->tlsp = m0->m_pkthdr.PH_per.ptr;
+
+	return (ndesc);
+}
+
+/*
  * Write a txpkt WR for this packet to the hardware descriptors, update the
  * software descriptor, and advance the pidx.  It is guaranteed that enough
  * descriptors are available.
@@ -4666,7 +4932,8 @@ write_txpkt_wr(struct sge_txq *txq, struct fw_eth_tx_pkt_wr *wr,
 	ctrl = sizeof(struct cpl_tx_pkt_core);
 	if (needs_tso(m0))
 		ctrl += sizeof(struct cpl_tx_pkt_lso_core);
-	else if (pktlen <= imm_payload(2) && available >= 2) {
+	else if (!(mbuf_cflags(m0) & MC_NOMAP) && pktlen <= imm_payload(2) &&
+	    available >= 2) {
 		/* Immediate data.  Recalculate len16 and set nsegs to 0. */
 		ctrl += pktlen;
 		len16 = howmany(sizeof(struct fw_eth_tx_pkt_wr) +
@@ -4806,8 +5073,11 @@ add_to_txpkts(struct mbuf *m, struct txpkts *txp, u_int available)
 
 	MPASS(txp->wr_type == 0 || txp->wr_type == 1);
 
+	if (cannot_use_txpkts(m))
+		return (1);
+
 	nsegs = mbuf_nsegs(m);
-	if (needs_tso(m) || (txp->wr_type == 1 && nsegs != 1))
+	if (txp->wr_type == 1 && nsegs != 1)
 		return (1);
 
 	plen = txp->plen + m->m_pkthdr.len;
@@ -5160,12 +5430,21 @@ reclaim_tx_descs(struct sge_txq *txq, u_int n)
 		KASSERT(can_reclaim >= ndesc,
 		    ("%s: unexpected number of credits: %d, %d",
 		    __func__, can_reclaim, ndesc));
+		KASSERT(ndesc != 0,
+		    ("%s: descriptor with no credits: cidx %d",
+		    __func__, eq->cidx));
 
 		for (m = txsd->m; m != NULL; m = nextpkt) {
 			nextpkt = m->m_nextpkt;
 			m->m_nextpkt = NULL;
 			m_freem(m);
 		}
+#ifdef KERN_TLS
+		if (txsd->tlsp != NULL) {
+			free_tlspcb(txsd->tlsp);
+			txsd->tlsp = NULL;
+		}
+#endif
 		reclaimed += ndesc;
 		can_reclaim -= ndesc;
 		IDXINCR(eq->cidx, ndesc, eq->sidx);
@@ -5691,10 +5970,6 @@ write_ethofld_wr(struct cxgbe_snd_tag *cst, struct fw_eth_tx_eo_wr *wr,
 	    m0->m_pkthdr.l4hlen > 0,
 	    ("%s: ethofld mbuf %p is missing header lengths", __func__, m0));
 
-	if (needs_udp_csum(m0)) {
-		CXGBE_UNIMPLEMENTED("UDP ethofld");
-	}
-
 	len16 = mbuf_eo_len16(m0);
 	nsegs = mbuf_eo_nsegs(m0);
 	pktlen = m0->m_pkthdr.len;
@@ -5709,37 +5984,52 @@ write_ethofld_wr(struct cxgbe_snd_tag *cst, struct fw_eth_tx_eo_wr *wr,
 	wr->equiq_to_len16 = htobe32(V_FW_WR_LEN16(len16) |
 	    V_FW_WR_FLOWID(cst->etid));
 	wr->r3 = 0;
-	wr->u.tcpseg.type = FW_ETH_TX_EO_TYPE_TCPSEG;
-	wr->u.tcpseg.ethlen = m0->m_pkthdr.l2hlen;
-	wr->u.tcpseg.iplen = htobe16(m0->m_pkthdr.l3hlen);
-	wr->u.tcpseg.tcplen = m0->m_pkthdr.l4hlen;
-	wr->u.tcpseg.tsclk_tsoff = mbuf_eo_tsclk_tsoff(m0);
-	wr->u.tcpseg.r4 = 0;
-	wr->u.tcpseg.r5 = 0;
-	wr->u.tcpseg.plen = htobe32(pktlen - immhdrs);
-
-	if (needs_tso(m0)) {
-		struct cpl_tx_pkt_lso_core *lso = (void *)(wr + 1);
-
-		wr->u.tcpseg.mss = htobe16(m0->m_pkthdr.tso_segsz);
-
-		ctrl = V_LSO_OPCODE(CPL_TX_PKT_LSO) | F_LSO_FIRST_SLICE |
-		    F_LSO_LAST_SLICE | V_LSO_IPHDR_LEN(m0->m_pkthdr.l3hlen >> 2)
-		    | V_LSO_TCPHDR_LEN(m0->m_pkthdr.l4hlen >> 2);
-		if (m0->m_pkthdr.l2hlen == sizeof(struct ether_vlan_header))
-			ctrl |= V_LSO_ETHHDR_LEN(1);
-		if (m0->m_pkthdr.l3hlen == sizeof(struct ip6_hdr))
-			ctrl |= F_LSO_IPV6;
-		lso->lso_ctrl = htobe32(ctrl);
-		lso->ipid_ofst = htobe16(0);
-		lso->mss = htobe16(m0->m_pkthdr.tso_segsz);
-		lso->seqno_offset = htobe32(0);
-		lso->len = htobe32(pktlen);
-
-		cpl = (void *)(lso + 1);
-	} else {
-		wr->u.tcpseg.mss = htobe16(0xffff);
+	if (needs_udp_csum(m0)) {
+		wr->u.udpseg.type = FW_ETH_TX_EO_TYPE_UDPSEG;
+		wr->u.udpseg.ethlen = m0->m_pkthdr.l2hlen;
+		wr->u.udpseg.iplen = htobe16(m0->m_pkthdr.l3hlen);
+		wr->u.udpseg.udplen = m0->m_pkthdr.l4hlen;
+		wr->u.udpseg.rtplen = 0;
+		wr->u.udpseg.r4 = 0;
+		wr->u.udpseg.mss = htobe16(pktlen - immhdrs);
+		wr->u.udpseg.schedpktsize = wr->u.udpseg.mss;
+		wr->u.udpseg.plen = htobe32(pktlen - immhdrs);
 		cpl = (void *)(wr + 1);
+	} else {
+		MPASS(needs_tcp_csum(m0));
+		wr->u.tcpseg.type = FW_ETH_TX_EO_TYPE_TCPSEG;
+		wr->u.tcpseg.ethlen = m0->m_pkthdr.l2hlen;
+		wr->u.tcpseg.iplen = htobe16(m0->m_pkthdr.l3hlen);
+		wr->u.tcpseg.tcplen = m0->m_pkthdr.l4hlen;
+		wr->u.tcpseg.tsclk_tsoff = mbuf_eo_tsclk_tsoff(m0);
+		wr->u.tcpseg.r4 = 0;
+		wr->u.tcpseg.r5 = 0;
+		wr->u.tcpseg.plen = htobe32(pktlen - immhdrs);
+
+		if (needs_tso(m0)) {
+			struct cpl_tx_pkt_lso_core *lso = (void *)(wr + 1);
+
+			wr->u.tcpseg.mss = htobe16(m0->m_pkthdr.tso_segsz);
+
+			ctrl = V_LSO_OPCODE(CPL_TX_PKT_LSO) |
+			    F_LSO_FIRST_SLICE | F_LSO_LAST_SLICE |
+			    V_LSO_IPHDR_LEN(m0->m_pkthdr.l3hlen >> 2) |
+			    V_LSO_TCPHDR_LEN(m0->m_pkthdr.l4hlen >> 2);
+			if (m0->m_pkthdr.l2hlen == sizeof(struct ether_vlan_header))
+				ctrl |= V_LSO_ETHHDR_LEN(1);
+			if (m0->m_pkthdr.l3hlen == sizeof(struct ip6_hdr))
+				ctrl |= F_LSO_IPV6;
+			lso->lso_ctrl = htobe32(ctrl);
+			lso->ipid_ofst = htobe16(0);
+			lso->mss = htobe16(m0->m_pkthdr.tso_segsz);
+			lso->seqno_offset = htobe32(0);
+			lso->len = htobe32(pktlen);
+
+			cpl = (void *)(lso + 1);
+		} else {
+			wr->u.tcpseg.mss = htobe16(0xffff);
+			cpl = (void *)(wr + 1);
+		}
 	}
 
 	/* Checksum offload must be requested for ethofld. */
@@ -5758,7 +6048,7 @@ write_ethofld_wr(struct cxgbe_snd_tag *cst, struct fw_eth_tx_eo_wr *wr,
 	cpl->len = htobe16(pktlen);
 	cpl->ctrl1 = htobe64(ctrl1);
 
-	/* Copy Ethernet, IP & TCP hdrs as immediate data */
+	/* Copy Ethernet, IP & TCP/UDP hdrs as immediate data */
 	p = (uintptr_t)(cpl + 1);
 	m_copydata(m0, 0, immhdrs, (void *)p);
 

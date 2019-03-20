@@ -6,7 +6,7 @@
  *  Copyright (c) 1989, 1990, 1992, William LeFebvre, Northwestern University
  *  Copyright (c) 2016, Randy Westlund
  *
- * $FreeBSD: releng/12.0/usr.bin/top/username.h 334553 2018-06-03 05:20:11Z eadler $
+ * $FreeBSD$
  */
 #ifndef USERNAME_H
 #define USERNAME_H

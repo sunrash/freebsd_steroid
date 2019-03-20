@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/xen/error.h 301195 2016-06-02 07:45:01Z royger $
+ * $FreeBSD$
  */
 
 #ifndef __XEN_ERROR_H__

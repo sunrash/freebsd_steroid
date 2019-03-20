@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hdmi/dwc_hdmireg.h 310777 2016-12-29 14:08:24Z jmcneill $
+ * $FreeBSD$
  */
 
 #ifndef __DWC_HDMIREG_H__

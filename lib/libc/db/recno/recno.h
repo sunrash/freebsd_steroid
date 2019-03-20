@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)recno.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/lib/libc/db/recno/recno.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 enum SRCHOP { SDELETE, SINSERT, SEARCH};	/* Rec_search operation. */

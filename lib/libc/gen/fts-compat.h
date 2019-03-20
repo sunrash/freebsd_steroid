@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)fts.h	8.3 (Berkeley) 8/14/94
- * $FreeBSD: releng/12.0/lib/libc/gen/fts-compat.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_FTS_H_

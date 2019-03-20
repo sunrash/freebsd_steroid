@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/key_var.h 326023 2017-11-20 19:43:44Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: key_var.h,v 1.11 2001/09/12 23:05:07 sakane Exp $	*/
 
 /*-

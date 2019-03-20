@@ -40,7 +40,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/sparc64/sparc64/pmap.c 337051 2018-08-01 18:45:51Z kib $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Manages physical address maps.

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/contrib/zstd/lib/freebsd/zstd_kfreebsd.c 331115 2018-03-18 03:42:57Z cem $
+ * $FreeBSD$
  */
 
 #include "zstd_kfreebsd.h"

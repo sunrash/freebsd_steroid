@@ -33,7 +33,7 @@
  *
  *	@(#)ucontext.h	8.1 (Berkeley) 6/10/93
  *	JNPR: ucontext.h,v 1.2 2007/08/09 11:23:32 katta
- * $FreeBSD: releng/12.0/sys/mips/include/ucontext.h 332122 2018-04-06 17:35:35Z brooks $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_UCONTEXT_H_

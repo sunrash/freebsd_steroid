@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/dtb/imx6/Makefile 314723 2017-03-06 04:16:35Z ian $
+# $FreeBSD$
 # All the dts files for imx6 systems we support.
 DTS=	\
 	imx6dl-cubox-i.dts \

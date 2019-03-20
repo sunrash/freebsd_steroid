@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.2 (Berkeley) 4/17/94
-# $FreeBSD: releng/12.0/usr.bin/compress/Makefile 322515 2017-08-14 19:21:37Z ngie $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

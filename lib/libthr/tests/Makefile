@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libthr/tests/Makefile 325510 2017-11-07 09:57:26Z imp $
+# $FreeBSD$
 
 PACKAGE=	tests
 

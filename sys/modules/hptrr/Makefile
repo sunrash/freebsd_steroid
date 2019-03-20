@@ -1,5 +1,5 @@
 # $Id: Makefile.def,v 1.18 2007/03/22 11:20:15 gmm Exp $
-# $FreeBSD: releng/12.0/sys/modules/hptrr/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 HPTRR=  ${SRCTOP}/sys/dev/hptrr
 .PATH: ${HPTRR}

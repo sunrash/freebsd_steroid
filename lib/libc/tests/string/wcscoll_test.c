@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/string/wcscoll_test.c 317034 2017-04-16 19:12:07Z bapt $");
+__FBSDID("$FreeBSD$");
 
 #include <wchar.h>
 #include <locale.h>

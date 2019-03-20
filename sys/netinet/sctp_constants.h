@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/netinet/sctp_constants.h 338134 2018-08-21 13:25:32Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #ifndef _NETINET_SCTP_CONSTANTS_H_
 #define _NETINET_SCTP_CONSTANTS_H_
@@ -982,6 +982,9 @@ __FBSDID("$FreeBSD: releng/12.0/sys/netinet/sctp_constants.h 338134 2018-08-21 1
 #define IN4_ISLINKLOCAL_ADDRESS(a) \
     ((((uint8_t *)&(a)->s_addr)[0] == 169) && \
      (((uint8_t *)&(a)->s_addr)[1] == 254))
+
+/* Maximum size of optval for IPPROTO_SCTP level socket options. */
+#define SCTP_SOCKET_OPTION_LIMIT (64 * 1024)
 
 
 #if defined(_KERNEL)

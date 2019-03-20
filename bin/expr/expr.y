@@ -5,7 +5,7 @@
  *
  * Largely rewritten by J.T. Conklin (jtc@wimsey.com)
  *
- * $FreeBSD: releng/12.0/bin/expr/expr.y 332499 2018-04-14 04:35:10Z cem $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

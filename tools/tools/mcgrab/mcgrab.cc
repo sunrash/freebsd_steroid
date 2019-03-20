@@ -30,7 +30,7 @@
 //
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/tools/mcgrab/mcgrab.cc 260791 2014-01-16 21:46:43Z gnn $");
+__FBSDID("$FreeBSD$");
 
 // C++ STL and other related includes
 #include <stdlib.h>

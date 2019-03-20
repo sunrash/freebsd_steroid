@@ -1,0 +1,5 @@
+include GENERIC 
+ident STEROIDS 
+makeoptions WITH_EXTRA_TCP_STACKS=1
+options TCPHPTS
+options KERN_TLS

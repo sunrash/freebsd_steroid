@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/_strtol.h 326025 2017-11-20 19:49:47Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: _strtol.h,v 1.2 2009/05/20 22:03:29 christos Exp $ */
 
 /*-

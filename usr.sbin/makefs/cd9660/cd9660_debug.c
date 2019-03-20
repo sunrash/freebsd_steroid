@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/makefs/cd9660/cd9660_debug.c 333664 2018-05-16 02:58:05Z emaste $");
+__FBSDID("$FreeBSD$");
 #include <sys/param.h>
 
 #include <sys/mount.h>

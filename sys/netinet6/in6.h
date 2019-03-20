@@ -60,7 +60,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)in.h	8.3 (Berkeley) 1/3/94
- * $FreeBSD: releng/12.0/sys/netinet6/in6.h 337783 2018-08-14 17:27:41Z jtl $
+ * $FreeBSD$
  */
 
 #ifndef __KAME_NETINET_IN_H_INCLUDED_

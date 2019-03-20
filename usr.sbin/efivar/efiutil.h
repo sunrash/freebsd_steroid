@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/efivar/efiutil.h 323260 2017-09-07 07:30:19Z imp $
+ * $FreeBSD$
  */
 
 /*

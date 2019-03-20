@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/share/doc/papers/kernmalloc/appendix.ms 263142 2014-03-14 03:07:51Z eadler $
+.\" $FreeBSD$
 .am vS
 ..
 .am vE

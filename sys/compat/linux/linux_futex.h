@@ -32,7 +32,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linux/linux_futex.h 332930 2018-04-24 12:50:21Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _LINUX_FUTEX_H

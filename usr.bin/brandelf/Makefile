@@ -1,5 +1,13 @@
-# $FreeBSD: releng/12.0/usr.bin/brandelf/Makefile 116346 2003-06-14 19:32:52Z obrien $
+# $FreeBSD$
+
+.include <src.opts.mk>
 
 PROG=	brandelf
+
+.if ${MK_CASPER} != "no"
+LIBADD+=	casper
+LIBADD+=	cap_fileargs
+CFLAGS+=	-DWITH_CASPER
+.endif
 
 .include <bsd.prog.mk>

@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tools/tools/git/importgit 308562 2016-11-11 23:07:31Z rstone $
+# $FreeBSD$
 
 usage()
 {

@@ -36,7 +36,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/arp.c 330864 2018-03-13 16:33:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -120,7 +120,7 @@ arpwhohas(struct iodesc *d, struct in_addr addr)
 	    arpsend, &wbuf.data, sizeof(wbuf.data),
 	    arprecv, &pkt, (void **)&ah, NULL);
 	if (i == -1) {
-		panic("arp: no response for %s\n",
+		panic("arp: no response for %s",
 			  inet_ntoa(addr));
 	}
 

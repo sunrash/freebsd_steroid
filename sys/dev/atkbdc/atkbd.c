@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/atkbdc/atkbd.c 337721 2018-08-13 19:05:53Z wulf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_kbd.h"
 #include "opt_atkbd.h"
@@ -484,7 +484,7 @@ atkbd_init(int unit, keyboard_t **kbdp, void *arg, int flags)
 			evdev_support_led(evdev, LED_CAPSL);
 			evdev_support_led(evdev, LED_SCROLLL);
 
-			if (evdev_register(evdev))
+			if (evdev_register_mtx(evdev, &Giant))
 				evdev_free(evdev);
 			else
 				state->ks_evdev = evdev;

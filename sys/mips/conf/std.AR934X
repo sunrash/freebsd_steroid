@@ -7,7 +7,7 @@
 # override the default options (adding devices as needed) and adding
 # hints as needed (for example, the GPIO and LAN PHY.)
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/std.AR934X 328868 2018-02-05 04:47:13Z adrian $
+# $FreeBSD$
 #
 
 machine         mips mips

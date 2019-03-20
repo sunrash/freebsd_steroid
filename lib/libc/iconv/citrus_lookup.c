@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libc/iconv/citrus_lookup.c 326193 2017-11-25 17:12:48Z pfg $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_lookup.c,v 1.7 2012/05/04 16:45:05 joerg Exp $	*/
 
 /*-

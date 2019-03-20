@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/pw/pw_utils.c 339369 2018-10-15 20:11:53Z yuripv $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/wait.h>
 

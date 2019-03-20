@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/nfs/bootp_subr.c 335250 2018-06-16 08:26:23Z ae $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bootp.h"
 #include "opt_nfs.h"

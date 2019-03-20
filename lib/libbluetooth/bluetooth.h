@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: bluetooth.h,v 1.5 2003/09/14 23:28:42 max Exp $
- * $FreeBSD: releng/12.0/lib/libbluetooth/bluetooth.h 333136 2018-05-01 08:03:12Z wulf $
+ * $FreeBSD$
  */
 
 #ifndef _BLUETOOTH_H_

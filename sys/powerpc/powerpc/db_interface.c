@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/powerpc/powerpc/db_interface.c 327445 2017-12-31 20:23:39Z nwhitehorn $ */
+/*	$FreeBSD$ */
 /*	$NetBSD: db_interface.c,v 1.20 2002/05/13 20:30:09 matt Exp $ */
 /*	$OpenBSD: db_interface.c,v 1.2 1996/12/28 06:21:50 rahnds Exp $	*/
 

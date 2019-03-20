@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_atmllc.c 329873 2018-02-23 18:15:50Z emaste $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/dev/auxio/auxioreg.h 326255 2017-11-27 14:52:40Z pfg $ */
+/*	$FreeBSD$ */
 /*	$NetBSD: auxioreg.h,v 1.4 2001/10/22 07:31:41 mrg Exp $	*/
 
 /*-

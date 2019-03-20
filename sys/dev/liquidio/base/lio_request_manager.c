@@ -30,7 +30,7 @@
  *   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  *   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-/*$FreeBSD: releng/12.0/sys/dev/liquidio/base/lio_request_manager.c 328218 2018-01-21 15:42:36Z pfg $*/
+/*$FreeBSD$*/
 
 #include "lio_bsd.h"
 #include "lio_common.h"

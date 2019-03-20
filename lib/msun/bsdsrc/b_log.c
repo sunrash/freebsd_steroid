@@ -35,7 +35,7 @@
 
 /* @(#)log.c	8.2 (Berkeley) 11/30/93 */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/bsdsrc/b_log.c 326670 2017-12-07 20:41:23Z dim $");
+__FBSDID("$FreeBSD$");
 
 #include <math.h>
 

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/tools/umastat/umastat.c 317445 2017-04-26 17:58:10Z glebius $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

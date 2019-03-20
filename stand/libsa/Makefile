@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/libsa/Makefile 338052 2018-08-19 14:48:32Z kevans $
+# $FreeBSD$
 # Originally from	$NetBSD: Makefile,v 1.21 1997/10/26 22:08:38 lukem Exp $
 #
 # Notes:
@@ -155,9 +155,9 @@ SRCS+=ffs_subr.c ffs_tables.c
 
 CFLAGS.bzipfs.c+= -I${SRCTOP}/contrib/bzip2
 
-# explicit_bzero
+# explicit_bzero and calculate_crc32c
 .PATH: ${SYSDIR}/libkern
-SRCS+=  explicit_bzero.c
+SRCS+=  explicit_bzero.c crc32_libkern.c
 
 # Maybe GELI
 .if ${MK_LOADER_GELI} == "yes"
@@ -165,7 +165,7 @@ SRCS+=  explicit_bzero.c
 .endif
 
 # Maybe ZFS
-.if ${MK_ZFS} == "yes"
+.if ${MK_LOADER_ZFS} == "yes"
 .include "${SASRC}/zfs/Makefile.inc"
 .endif
 

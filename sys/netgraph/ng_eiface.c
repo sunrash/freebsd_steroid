@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_eiface.c 336676 2018-07-24 16:35:52Z andrew $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

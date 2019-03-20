@@ -28,7 +28,7 @@
 #elif defined(HAVE_SYS_UTIME_H)
 #include <sys/utime.h>
 #endif
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/cpio/test/test_option_u.c 309869 2016-12-12 02:21:56Z ngie $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_option_u)
 {

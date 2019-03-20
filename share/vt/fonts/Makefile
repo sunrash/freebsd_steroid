@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/vt/fonts/Makefile 338573 2018-09-10 20:46:17Z emaste $
+# $FreeBSD$
 
 FONTS=	gallant.fnt \
 	terminus-b32.fnt \

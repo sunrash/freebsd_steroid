@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/pfctl/pfctl.c 338209 2018-08-22 19:38:48Z pkelsey $");
+__FBSDID("$FreeBSD$");
 
 #define PFIOC_USE_LATEST
 
@@ -1977,6 +1977,7 @@ int
 pfctl_set_interface_flags(struct pfctl *pf, char *ifname, int flags, int how)
 {
 	struct pfioc_iface	pi;
+	struct node_host	*h = NULL, *n = NULL;
 
 	if ((loadopt & PFCTL_FLAG_OPTION) == 0)
 		return (0);
@@ -1984,6 +1985,12 @@ pfctl_set_interface_flags(struct pfctl *pf, char *ifname, int flags, int how)
 	bzero(&pi, sizeof(pi));
 
 	pi.pfiio_flags = flags;
+
+	/* Make sure our cache matches the kernel. If we set or clear the flag
+	 * for a group this applies to all members. */
+	h = ifa_grouplookup(ifname, 0);
+	for (n = h; n != NULL; n = n->next)
+		pfctl_set_interface_flags(pf, n->ifname, flags, how);
 
 	if (strlcpy(pi.pfiio_name, ifname, sizeof(pi.pfiio_name)) >=
 	    sizeof(pi.pfiio_name))

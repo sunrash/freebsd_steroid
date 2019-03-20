@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/ralink/rt1310_intc.c 337822 2018-08-14 20:45:43Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 

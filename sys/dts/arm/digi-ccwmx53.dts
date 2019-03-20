@@ -29,7 +29,7 @@
  *
  * Digi ConnectCore Wi-i.MX53
  *
- * $FreeBSD: releng/12.0/sys/dts/arm/digi-ccwmx53.dts 325826 2017-11-14 21:03:57Z imp $
+ * $FreeBSD$
  */
 
 /dts-v1/;

@@ -32,4 +32,4 @@ configuration to distinguish one from the other.
 Daniel C. Sobral
 <dcs@freebsd.org>
 
-$FreeBSD: releng/12.0/share/examples/bootforth/README 325834 2017-11-14 23:02:19Z imp $
+$FreeBSD$

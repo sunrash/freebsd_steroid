@@ -29,7 +29,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/net/rss_config.c 324519 2017-10-11 06:08:01Z sephe $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_inet6.h"
 #include "opt_pcbgroup.h"

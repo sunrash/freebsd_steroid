@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dtrace/tests/dtrace.test.mk 299388 2016-05-10 20:25:49Z markj $
+# $FreeBSD$
 
 TESTGROUP= ${.CURDIR:H:T}/${.CURDIR:T}
 TESTSRC= ${SRCTOP}/cddl/contrib/opensolaris/cmd/dtrace/test/tst/${TESTGROUP}

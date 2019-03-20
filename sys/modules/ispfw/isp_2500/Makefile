@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ispfw/isp_2500/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 #-
 # Copyright (c) 2009 by Matthew Jacob
 # All rights reserved.

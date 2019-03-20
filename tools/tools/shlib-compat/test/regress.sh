@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: releng/12.0/tools/tools/shlib-compat/test/regress.sh 275354 2014-12-01 08:14:25Z gleb $
+# $FreeBSD$
 
 run() { ../shlib-compat.py --no-dump -vv libtest$1/libtest$1.so.0.full libtest$2/libtest$2.so.0.full; }
 echo 1..9

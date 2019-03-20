@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF 
  * SUCH DAMAGE. 
  *
- * $FreeBSD: releng/12.0/lib/libthr/plockstat.d 268297 2014-07-05 19:49:31Z rpaulo $
+ * $FreeBSD$
  */
 
 provider plockstat {

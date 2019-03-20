@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/locale/mbtowc.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <stdlib.h>
@@ -48,10 +48,11 @@ mbtowc_l(wchar_t * __restrict pwc, const char * __restrict s, size_t n, locale_t
 
 	if (s == NULL) {
 		/* No support for state dependent encodings. */
-		locale->mbtowc = initial;
+		XLOCALE_CTYPE(locale)->mbtowc = initial;
 		return (0);
 	}
-	rval = XLOCALE_CTYPE(locale)->__mbrtowc(pwc, s, n, &locale->mbtowc);
+	rval = XLOCALE_CTYPE(locale)->__mbrtowc(pwc, s, n,
+	    &(XLOCALE_CTYPE(locale)->mbtowc));
 	switch (rval) {
 	case (size_t)-2:
 		errno = EILSEQ;

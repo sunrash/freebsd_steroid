@@ -1,5 +1,5 @@
 # bootpd/Makefile
-# $FreeBSD: releng/12.0/libexec/bootpd/Makefile 201380 2010-01-02 09:50:19Z ed $
+# $FreeBSD$
 
 PROG=	bootpd
 CFLAGS+= -DETC_ETHERS

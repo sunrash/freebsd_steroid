@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm64/include/ifunc.h 339074 2018-10-01 18:51:08Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef __ARM64_IFUNC_H

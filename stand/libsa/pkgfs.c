@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/pkgfs.c 337871 2018-08-15 21:13:10Z kevans $");
+__FBSDID("$FreeBSD$");
 
 #include "stand.h"
 

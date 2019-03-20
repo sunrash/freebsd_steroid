@@ -4,7 +4,7 @@
 #
 # $Title: dwatch(8) module for VOP_READDIR(9) [or similar] entry $
 # $Copyright: 2014-2018 Devin Teske. All rights reserved. $
-# $FreeBSD: releng/12.0/cddl/usr.sbin/dwatch/libexec/vop_readdir 337610 2018-08-11 06:13:11Z dteske $
+# $FreeBSD$
 #
 ############################################################ DESCRIPTION
 #

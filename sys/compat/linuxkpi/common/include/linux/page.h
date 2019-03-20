@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/page.h 322397 2017-08-11 10:44:40Z hselasky $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_PAGE_H_
 #define _LINUX_PAGE_H_

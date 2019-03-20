@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libsysdecode/flags.c 328014 2018-01-15 20:37:11Z tuexen $");
+__FBSDID("$FreeBSD$");
 
 #define L2CAP_SOCKET_CHECKED
 

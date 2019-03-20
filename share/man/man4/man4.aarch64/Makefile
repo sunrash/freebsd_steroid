@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/man/man4/man4.aarch64/Makefile 336077 2018-07-07 21:49:30Z ian $
+# $FreeBSD$
 
 PACKAGE=runtime-manuals
 

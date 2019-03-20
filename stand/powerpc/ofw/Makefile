@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/powerpc/ofw/Makefile 330365 2018-03-03 23:39:07Z nwhitehorn $
+# $FreeBSD$
 
 LOADER_CD9660_SUPPORT?=	yes
 LOADER_EXT2FS_SUPPORT?=	no

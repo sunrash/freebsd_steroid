@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/regression/sockets/shutdown/Makefile 281395 2015-04-11 03:19:48Z ngie $
+# $FreeBSD$
 #
 
 PROG=	shutdown

@@ -31,7 +31,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/cpufunc.h 339367 2018-10-15 18:56:54Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CPUFUNC_H_
@@ -102,6 +102,18 @@ sfence_vma_page(uintptr_t addr)
 {
 
 	__asm __volatile("sfence.vma %0" :: "r" (addr) : "memory");
+}
+
+#define	rdcycle()			csr_read64(cycle)
+#define	rdtime()			csr_read64(time)
+#define	rdinstret()			csr_read64(instret)
+#define	rdhpmcounter(n)			csr_read64(hpmcounter##n)
+
+static __inline void
+load_satp(uint64_t val)
+{
+
+	__asm __volatile("csrw satp, %0" :: "r"(val));
 }
 
 #define	cpufunc_nullop()		riscv_nullop()

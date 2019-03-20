@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)user.h	8.2 (Berkeley) 9/23/93
- * $FreeBSD: releng/12.0/sys/sys/user.h 338916 2018-09-24 18:20:38Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_USER_H_
@@ -262,6 +262,7 @@ struct user {
 #define	KF_TYPE_SEM	9
 #define	KF_TYPE_PTS	10
 #define	KF_TYPE_PROCDESC	11
+#define	KF_TYPE_DEV	12
 #define	KF_TYPE_UNKNOWN	255
 
 #define	KF_VTYPE_VNON	0

@@ -42,7 +42,7 @@
  *
  * $Id: //depot/aic7xxx/aic7xxx/aic7xxx_93cx6.h#12 $
  *
- * $FreeBSD: releng/12.0/sys/dev/aic7xxx/aic7xxx_93cx6.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifndef _AIC7XXX_93CX6_H_
 #define _AIC7XXX_93CX6_H_

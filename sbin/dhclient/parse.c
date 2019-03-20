@@ -43,7 +43,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/dhclient/parse.c 327862 2018-01-12 04:26:40Z asomers $");
+__FBSDID("$FreeBSD$");
 
 #include <stdbool.h>
 

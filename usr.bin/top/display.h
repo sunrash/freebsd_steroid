@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/top/display.h 334600 2018-06-04 04:59:32Z eadler $ */
+/* $FreeBSD$ */
 /* constants needed for display.c */
 
 #define  MT_standout  1

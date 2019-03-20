@@ -41,7 +41,7 @@ static char sccsid[] = "@(#)pwd.c	8.3 (Berkeley) 4/1/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/bin/pwd/pwd.c 335278 2018-06-17 05:14:50Z eadler $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/stat.h>

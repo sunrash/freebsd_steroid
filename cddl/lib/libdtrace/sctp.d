@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/sctp.d 338213 2018-08-22 21:23:32Z tuexen $
+ * $FreeBSD$
  */
 /*
  * Copyright (c) 2018 Michael Tuexen <tuexen@FreeBSD.org>

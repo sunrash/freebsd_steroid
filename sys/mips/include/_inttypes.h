@@ -30,7 +30,7 @@
  *
  *	From: $NetBSD: int_fmtio.h,v 1.2 2001/04/26 16:25:21 kleink Exp $
  *	from: src/sys/i386/include/_inttypes.h,v 1.2 2002/06/30 05:48:02 mike
- * $FreeBSD: releng/12.0/sys/mips/include/_inttypes.h 326259 2017-11-27 15:07:26Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_INTTYPES_H_

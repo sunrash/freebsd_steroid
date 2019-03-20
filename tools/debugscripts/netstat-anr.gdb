@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/debugscripts/netstat-anr.gdb 281292 2015-04-09 07:52:03Z glebius $
+# $FreeBSD$
 #
 
 document netstat-anr

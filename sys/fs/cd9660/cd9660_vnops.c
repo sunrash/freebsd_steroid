@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/cd9660/cd9660_vnops.c 341085 2018-11-27 17:58:25Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -576,6 +576,8 @@ cd9660_readdir(ap)
 				entryoffsetinblock;
 
 		idp->curroff += reclen;
+		/* NOTE: d_off is the offset of *next* entry. */
+		idp->current.d_off = idp->curroff;
 
 		switch (imp->iso_ftype) {
 		case ISO_FTYPE_RRIP:

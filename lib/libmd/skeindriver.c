@@ -15,7 +15,7 @@
  * documentation and/or software. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libmd/skeindriver.c 326828 2017-12-13 16:30:39Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 

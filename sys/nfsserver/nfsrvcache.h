@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)nfsrvcache.h	8.3 (Berkeley) 3/30/95
- * $FreeBSD: releng/12.0/sys/nfsserver/nfsrvcache.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _NFSSERVER_NFSRVCACHE_H_

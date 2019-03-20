@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)specialreg.h	7.1 (Berkeley) 5/9/91
- * $FreeBSD: releng/12.0/sys/x86/include/specialreg.h 340627 2018-11-19 13:59:11Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_SPECIALREG_H_
@@ -189,6 +189,12 @@
 #define	CPUTPM1_SENSOR	0x00000001
 #define	CPUTPM1_TURBO	0x00000002
 #define	CPUTPM1_ARAT	0x00000004
+#define	CPUTPM1_HWP	0x00000080
+#define	CPUTPM1_HWP_NOTIFICATION	0x00000100
+#define	CPUTPM1_HWP_ACTIVITY_WINDOW	0x00000200
+#define	CPUTPM1_HWP_PERF_PREF	0x00000400
+#define	CPUTPM1_HWP_PKG	0x00000800
+#define	CPUTPM1_HWP_FLEXIBLE	0x00020000
 #define	CPUTPM2_EFFREQ	0x00000001
 
 /* Intel Processor Trace CPUID. */
@@ -368,6 +374,17 @@
 #define	AMDFEID_CLZERO		0x00000001
 #define	AMDFEID_IRPERF		0x00000002
 #define	AMDFEID_XSAVEERPTR	0x00000004
+#define	AMDFEID_IBPB		0x00001000
+#define	AMDFEID_IBRS		0x00004000
+#define	AMDFEID_STIBP		0x00008000
+/* The below are only defined if the corresponding base feature above exists. */
+#define	AMDFEID_IBRS_ALWAYSON	0x00010000
+#define	AMDFEID_STIBP_ALWAYSON	0x00020000
+#define	AMDFEID_PREFER_IBRS	0x00040000
+#define	AMDFEID_SSBD		0x01000000
+/* SSBD via MSRC001_011F instead of MSR 0x48: */
+#define	AMDFEID_VIRT_SSBD	0x02000000
+#define	AMDFEID_SSB_NO		0x04000000
 
 /*
  * AMD extended function 8000_0008h ecx info
@@ -541,7 +558,14 @@
 #define	MSR_DRAM_ENERGY_STATUS	0x619
 #define	MSR_PP0_ENERGY_STATUS	0x639
 #define	MSR_PP1_ENERGY_STATUS	0x641
+#define	MSR_PPERF		0x64e
 #define	MSR_TSC_DEADLINE	0x6e0	/* Writes are not serializing */
+#define	MSR_IA32_PM_ENABLE	0x770
+#define	MSR_IA32_HWP_CAPABILITIES	0x771
+#define	MSR_IA32_HWP_REQUEST_PKG	0x772
+#define	MSR_IA32_HWP_INTERRUPT		0x773
+#define	MSR_IA32_HWP_REQUEST	0x774
+#define	MSR_IA32_HWP_STATUS	0x777
 
 /*
  * VMX MSRs
@@ -706,6 +730,10 @@
 /*
  * IA32_SPEC_CTRL and IA32_PRED_CMD MSRs are described in the Intel'
  * document 336996-001 Speculative Execution Side Channel Mitigations.
+ *
+ * AMD uses the same MSRs and bit definitions, as described in 111006-B
+ * "Indirect Branch Control Extension" and 124441 "Speculative Store Bypass
+ * Disable."
  */
 /* MSR IA32_SPEC_CTRL */
 #define	IA32_SPEC_CTRL_IBRS	0x00000001
@@ -717,6 +745,25 @@
 
 /* MSR IA32_FLUSH_CMD */
 #define	IA32_FLUSH_CMD_L1D	0x00000001
+
+/* MSR IA32_HWP_CAPABILITIES */
+#define	IA32_HWP_CAPABILITIES_HIGHEST_PERFORMANCE(x)	(((x) >> 0) & 0xff)
+#define	IA32_HWP_CAPABILITIES_GUARANTEED_PERFORMANCE(x)	(((x) >> 8) & 0xff)
+#define	IA32_HWP_CAPABILITIES_EFFICIENT_PERFORMANCE(x)	(((x) >> 16) & 0xff)
+#define	IA32_HWP_CAPABILITIES_LOWEST_PERFORMANCE(x)	(((x) >> 24) & 0xff)
+
+/* MSR IA32_HWP_REQUEST */
+#define	IA32_HWP_REQUEST_MINIMUM_VALID			(1ULL << 63)
+#define	IA32_HWP_REQUEST_MAXIMUM_VALID			(1ULL << 62)
+#define	IA32_HWP_REQUEST_DESIRED_VALID			(1ULL << 61)
+#define	IA32_HWP_REQUEST_EPP_VALID 			(1ULL << 60)
+#define	IA32_HWP_REQUEST_ACTIVITY_WINDOW_VALID		(1ULL << 59)
+#define	IA32_HWP_REQUEST_PACKAGE_CONTROL		(1ULL << 42)
+#define	IA32_HWP_ACTIVITY_WINDOW			(0x3ffULL << 32)
+#define	IA32_HWP_REQUEST_ENERGY_PERFORMANCE_PREFERENCE	(0xffULL << 24)
+#define	IA32_HWP_DESIRED_PERFORMANCE			(0xffULL << 16)
+#define	IA32_HWP_REQUEST_MAXIMUM_PERFORMANCE		(0xffULL << 8)
+#define	IA32_HWP_MINIMUM_PERFORMANCE			(0xffULL << 0)
 
 /*
  * PAT modes.

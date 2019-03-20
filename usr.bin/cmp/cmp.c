@@ -42,7 +42,7 @@ static char sccsid[] = "@(#)cmp.c	8.3 (Berkeley) 4/2/94";
 #endif
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/cmp/cmp.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/capsicum.h>
@@ -163,22 +163,21 @@ main(int argc, char *argv[])
 	}
 
 	cap_rights_init(&rights, CAP_FCNTL, CAP_FSTAT, CAP_MMAP_R);
-	if (cap_rights_limit(fd1, &rights) < 0 && errno != ENOSYS)
+	if (caph_rights_limit(fd1, &rights) < 0)
 		err(ERR_EXIT, "unable to limit rights for %s", file1);
-	if (cap_rights_limit(fd2, &rights) < 0 && errno != ENOSYS)
+	if (caph_rights_limit(fd2, &rights) < 0)
 		err(ERR_EXIT, "unable to limit rights for %s", file2);
 
 	/* Required for fdopen(3). */
 	fcntls = CAP_FCNTL_GETFL;
-	if (cap_fcntls_limit(fd1, fcntls) < 0 && errno != ENOSYS)
+	if (caph_fcntls_limit(fd1, fcntls) < 0)
 		err(ERR_EXIT, "unable to limit fcntls for %s", file1);
-	if (cap_fcntls_limit(fd2, fcntls) < 0 && errno != ENOSYS)
+	if (caph_fcntls_limit(fd2, fcntls) < 0)
 		err(ERR_EXIT, "unable to limit fcntls for %s", file2);
 
 	if (!special) {
 		cap_rights_init(&rights);
-		if (cap_rights_limit(STDIN_FILENO, &rights) < 0 &&
-		    errno != ENOSYS) {
+		if (caph_rights_limit(STDIN_FILENO, &rights) < 0) {
 			err(ERR_EXIT, "unable to limit stdio");
 		}
 	}

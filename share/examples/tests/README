@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/share/examples/tests/README 258299 2013-11-18 12:57:46Z jmmv $
+$FreeBSD$
 
 This directory contains sample test programs along the Makefile and
 Kyuafile logic to get them build and installed.

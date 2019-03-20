@@ -13,7 +13,7 @@
 # * USB powered
 # * USB storage
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/TP-MR3020 303731 2016-08-03 19:18:53Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

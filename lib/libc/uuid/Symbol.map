@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/lib/libc/uuid/Symbol.map 183192 2008-09-19 15:52:56Z emax $
+ * $FreeBSD$
  */
 
 FBSD_1.0 {

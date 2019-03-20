@@ -1,7 +1,7 @@
 #
 # Kernel configuration for Marvell Armada38x
 #
-# $FreeBSD: releng/12.0/sys/arm/conf/ARMADA38X 338116 2018-08-20 20:31:53Z imp $
+# $FreeBSD$
 #
 
 include 	"../mv/armada38x/std.armada38x"
@@ -14,7 +14,7 @@ options 	SOC_MV_ARMADA38X
 makeoptions 	WERROR="-Werror"
 makeoptions 	MODULES_EXTRA="dtb/mv"
 
-options 	MD_ROOT
+#options 	MD_ROOT
 #makeoptions 	MFS_IMAGE=/path/to/miniroot
 #options 	ROOTDEVNAME=\"ufs:md0\"
 options 	ROOTDEVNAME=\"/dev/da0s1a\"
@@ -39,7 +39,6 @@ device		ether
 device		vlan
 device		mii
 device		bpf
-device		re
 device		mdio
 device		etherswitch
 device		e6000sw
@@ -75,6 +74,11 @@ device		ahci
 device		iic
 device		iicbus
 device		twsi
+
+# SPI
+device		spibus
+device		spigen
+device		mv_spi
 
 # Wireless NIC cards
 device		wlan		# 802.11 support

@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/stdlib/cxa_thread_atexit_nothr_test.cc 303795 2016-08-06 13:32:40Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include <dlfcn.h>
 #include <atf-c++.hpp>

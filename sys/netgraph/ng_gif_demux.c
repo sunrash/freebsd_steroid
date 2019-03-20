@@ -64,7 +64,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_gif_demux.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  */
 
 /*

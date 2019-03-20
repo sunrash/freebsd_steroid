@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/svn/lib/libapr_util/apu.h 286562 2015-08-10 00:53:45Z peter $ */
+/* $FreeBSD$ */
 /* Licensed to the Apache Software Foundation (ASF) under one or more
  * contributor license agreements.  See the NOTICE file distributed with
  * this work for additional information regarding copyright ownership.

@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/vmm_dev.h 332298 2018-04-08 19:24:49Z rgrimes $
+ * $FreeBSD$
  */
 
 #ifndef	_VMM_DEV_H_

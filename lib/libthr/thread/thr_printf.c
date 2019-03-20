@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libthr/thread/thr_printf.c 328493 2018-01-27 22:27:55Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <stdarg.h>
 #include <string.h>

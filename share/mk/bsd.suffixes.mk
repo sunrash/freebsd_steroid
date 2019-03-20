@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.suffixes.mk 335710 2018-06-27 16:58:07Z bdrewery $
+# $FreeBSD$
 
 .sh:
 	cp -f ${.IMPSRC} ${.TARGET}

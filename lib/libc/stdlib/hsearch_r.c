@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/stdlib/hsearch_r.c 292767 2015-12-27 07:50:11Z ed $");
+__FBSDID("$FreeBSD$");
 
 #include <errno.h>
 #include <limits.h>

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/samsung/exynos/chrome_kb.h 266872 2014-05-30 06:45:50Z br $
+ * $FreeBSD$
  */
 
 #include <dev/ofw/openfirm.h>

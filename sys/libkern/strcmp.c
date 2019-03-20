@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/libkern/strcmp.c 329237 2018-02-13 19:17:48Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/libkern.h>
 

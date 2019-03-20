@@ -26,7 +26,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/dev/acpica/acpi_bus_if.m 327835 2018-01-11 17:09:12Z andrew $
+# $FreeBSD$
 
 #include <sys/types.h>
 #include <sys/systm.h>

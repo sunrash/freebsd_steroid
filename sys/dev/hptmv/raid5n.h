@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hptmv/raid5n.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 #ifdef _RAID5N_
 

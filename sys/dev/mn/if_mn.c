@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/mn/if_mn.c 326408 2017-11-30 20:33:45Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Stuff to describe the MUNIC32X and FALC54 chips.

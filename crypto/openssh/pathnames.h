@@ -1,5 +1,5 @@
 /* $OpenBSD: pathnames.h,v 1.28 2018/02/23 15:58:37 markus Exp $ */
-/* $FreeBSD: releng/12.0/crypto/openssh/pathnames.h 333490 2018-05-11 13:22:43Z des $ */
+/* $FreeBSD$ */
 
 /*
  * Author: Tatu Ylonen <ylo@cs.hut.fi>

@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  *
- * $FreeBSD: releng/12.0/tools/tools/wtap/vis_map/vis_map.c 298881 2016-05-01 16:20:14Z pfg $
+ * $FreeBSD$
  */
 #include <stdio.h>
 #include <stdlib.h>

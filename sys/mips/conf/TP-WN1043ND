@@ -1,7 +1,7 @@
 #
 # TP-1043ND -- Kernel configuration file for the TP-Link WR-1043ND
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/TP-WN1043ND 327223 2017-12-26 19:50:23Z mizhka $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

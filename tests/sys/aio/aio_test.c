@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/aio/aio_test.c 331221 2018-03-19 19:09:15Z jhb $
+ * $FreeBSD$
  */
 
 /*

@@ -3,7 +3,7 @@
 #
 # Submitted by Edwin Groothuis <edwin@FreeBSD.org>
 #
-# $FreeBSD: releng/12.0/bin/date/tests/format_string_test.sh 337332 2018-08-04 21:54:30Z cem $
+# $FreeBSD$
 #
 
 #

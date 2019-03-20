@@ -29,7 +29,7 @@
  * THE POSSIBILITY OF SUCH DAMAGES.
  */
 
-/* $FreeBSD: releng/12.0/sys/dev/bhnd/bhnd_debug.h 326695 2017-12-08 15:57:29Z pfg $ */
+/* $FreeBSD$ */
 
 /*
  * This file provides set of macros for logging:

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/snmp_hostres/hostres_swinstalled_tbl.c 310666 2016-12-28 05:41:53Z ngie $
+ * $FreeBSD$
  *
  * Host Resources MIB implementation for SNMPd: instrumentation for
  * hrSWInstalledTable

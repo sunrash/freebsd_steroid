@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/siba/siba.h 305366 2016-09-03 23:57:17Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _SIBA_SIBA_H_

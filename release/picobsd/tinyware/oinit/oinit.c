@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/release/picobsd/tinyware/oinit/oinit.c 199251 2009-11-13 11:32:14Z ed $
+ * $FreeBSD$
  */
 
 /*

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/Makefile.amd64 273155 2014-10-16 00:33:06Z imp $
+# $FreeBSD$
 
 .if ${MK_HYPERV} != "no"
 SUBDIR+=	hyperv

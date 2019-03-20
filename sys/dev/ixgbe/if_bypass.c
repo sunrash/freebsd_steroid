@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/if_bypass.c 327031 2017-12-20 18:15:06Z erj $*/
+/*$FreeBSD$*/
 
 
 #include "ixgbe.h"

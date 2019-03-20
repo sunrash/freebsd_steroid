@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/fdc/Makefile 316615 2017-04-07 16:14:25Z sevan $
+# $FreeBSD$
 
 KMOD=	fdc
 

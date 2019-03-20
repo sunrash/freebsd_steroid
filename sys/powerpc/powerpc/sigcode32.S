@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/powerpc/powerpc/sigcode32.S 331254 2018-03-20 17:58:51Z emaste $ */
+/* $FreeBSD$ */
 /* $NetBSD: sigcode.S,v 1.1 1999/11/17 14:56:11 kleink Exp $	*/
 
 /*-

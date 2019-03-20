@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/md_var.h 333445 2018-05-10 02:31:54Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_MD_VAR_H_
@@ -69,6 +69,8 @@ void	doreti_popl_fs_fault(void) __asm(__STRING(doreti_popl_fs_fault));
 void	fill_based_sd(struct segment_descriptor *sdp, uint32_t base);
 void	i686_pagezero(void *addr);
 void	sse2_pagezero(void *addr);
+int	minidumpsys_nopae(struct dumperinfo *);
+int	minidumpsys_pae(struct dumperinfo *);
 void	init_AMD_Elan_sc520(void);
 vm_paddr_t kvtop(void *addr);
 void	panicifcpuunsupported(void);

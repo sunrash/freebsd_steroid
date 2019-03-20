@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/gen/fnmatch_testcases.h 322371 2017-08-10 17:03:46Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <fnmatch.h>
 

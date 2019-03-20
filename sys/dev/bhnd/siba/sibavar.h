@@ -30,7 +30,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/siba/sibavar.h 329180 2018-02-12 19:36:26Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _SIBA_SIBAVAR_H_

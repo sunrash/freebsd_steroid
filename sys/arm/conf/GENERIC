@@ -16,7 +16,7 @@
 # If you are in doubt as to the purpose or necessity of a line, check first
 # in NOTES.
 #
-# $FreeBSD: releng/12.0/sys/arm/conf/GENERIC 339422 2018-10-18 15:17:58Z br $
+# $FreeBSD$
 
 ident		GENERIC
 
@@ -169,6 +169,7 @@ device		aw_cir
 device		spibus
 device		spigen
 device		bcm2835_spi
+device		mv_spi
 device		ti_spi
 
 # ADC support

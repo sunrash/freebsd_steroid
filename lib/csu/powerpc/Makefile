@@ -1,8 +1,8 @@
-# $FreeBSD: releng/12.0/lib/csu/powerpc/Makefile 339351 2018-10-13 23:52:55Z kib $
+# $FreeBSD$
 
 .PATH: ${.CURDIR:H}/common
 
-SRCS=		crt1.c crti.S crtn.S
+SRCS=		crt1.c crti.S crtn.S crtsavres.S
 OBJS=		${SRCS:N*.h:R:S/$/.o/g}
 OBJS+=		Scrt1.o gcrt1.o
 CFLAGS+=	-I${.CURDIR:H}/common \

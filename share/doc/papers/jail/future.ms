@@ -1,5 +1,5 @@
 .\"
-.\" $FreeBSD: releng/12.0/share/doc/papers/jail/future.ms 61070 2000-05-29 18:18:07Z phk $
+.\" $FreeBSD$
 .\"
 .NH
 Future Directions

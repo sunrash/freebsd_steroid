@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/secure/lib/libcrypto/amd64/vpaes-x86_64.S 304640 2016-08-22 21:49:17Z jkim $ */
+/* $FreeBSD$ */
 /* Do not modify. This file is auto-generated from vpaes-x86_64.pl. */
 .text	
 

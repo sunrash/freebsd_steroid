@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcasper/libcasper/Makefile 335588 2018-06-23 20:12:30Z oshogbo $
+# $FreeBSD$
 
 SHLIBDIR?=	/lib
 

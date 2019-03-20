@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/teken/teken.c 333683 2018-05-16 18:12:49Z cem $
+ * $FreeBSD$
  */
 
 #include <sys/cdefs.h>

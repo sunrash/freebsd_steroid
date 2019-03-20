@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/copyright.h 328300 2018-01-23 20:38:03Z emaste $
+ * $FreeBSD$
  */
 
 
@@ -36,7 +36,7 @@
 
 /* FreeBSD */
 #define COPYRIGHT_FreeBSD \
-	"Copyright (c) 1992-2018 The FreeBSD Project.\n"
+	"Copyright (c) 1992-2019 The FreeBSD Project.\n"
 
 /* Foundation */
 #define	TRADEMARK_Foundation \

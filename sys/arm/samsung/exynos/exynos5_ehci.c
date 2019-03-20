@@ -28,7 +28,7 @@
 #include USB_GLOBAL_INCLUDE_FILE
 #else
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/samsung/exynos/exynos5_ehci.c 333074 2018-04-27 21:05:58Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 

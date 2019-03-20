@@ -1,6 +1,6 @@
 # Makefile for libopie
 #
-# $FreeBSD: releng/12.0/lib/libopie/Makefile 338823 2018-09-20 09:26:10Z brd $
+# $FreeBSD$
 #
 
 CONFS=	opieaccess

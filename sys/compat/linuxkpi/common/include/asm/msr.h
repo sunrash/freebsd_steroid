@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/asm/msr.h 334710 2018-06-06 13:29:52Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef _ASM_MSR_H_

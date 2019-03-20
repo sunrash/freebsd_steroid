@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdconfig/timezone/include/Makefile 291347 2015-11-26 01:14:27Z bdrewery $
+# $FreeBSD$
 
 FILESDIR=	${LIBEXECDIR}/bsdconfig/090.timezone/include
 FILES=		messages.subr

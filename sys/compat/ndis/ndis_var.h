@@ -31,7 +31,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/ndis/ndis_var.h 325966 2017-11-18 14:26:50Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _NDIS_VAR_H_
@@ -1736,8 +1736,6 @@ extern int ndis_get_supported_oids(void *, ndis_oid **, int *);
 extern int ndis_send_packets(void *, ndis_packet **, int);
 extern int ndis_send_packet(void *, ndis_packet *);
 extern int ndis_convert_res(void *);
-extern int ndis_alloc_amem(void *);
-extern void ndis_free_amem(void *);
 extern void ndis_free_packet(ndis_packet *);
 extern void ndis_free_bufs(ndis_buffer *);
 extern int ndis_reset_nic(void *);

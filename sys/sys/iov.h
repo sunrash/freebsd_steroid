@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/iov.h 326823 2017-12-13 16:13:17Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_IOV_H_

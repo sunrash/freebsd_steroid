@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/ofw/ofw_pcibus.h 326261 2017-11-27 15:09:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef POWERPC_OFW_OFW_PCIBUS_H

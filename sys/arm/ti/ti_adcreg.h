@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/ti/ti_adcreg.h 305708 2016-09-11 19:08:21Z gonzo $
+ * $FreeBSD$
  */
 
 #ifndef _TI_ADCREG_H_

@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_vdso.c 321728 2017-07-30 21:24:20Z dchagin $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 

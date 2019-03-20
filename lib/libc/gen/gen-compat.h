@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/gen/gen-compat.h 318736 2017-05-23 09:29:05Z kib $
+ * $FreeBSD$
  */
 
 #ifndef	_GEN_COMPAT_H_

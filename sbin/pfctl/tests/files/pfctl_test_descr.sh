@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/pfctl/tests/files/pfctl_test_descr.sh 321030 2017-07-15 19:22:01Z kp $
+# $FreeBSD$
 # atf-sh, to be sourced by run.sh
 
 pf0001_descr () { echo "Pass with labels" ; }
@@ -79,3 +79,4 @@ pf1001_descr () { echo "Binat" ; }
 pf1002_descr () { echo "Set timeout interval" ; }
 pf1003_descr () { echo "ALTQ" ; }
 pf1004_descr () { echo "ALTQ with Codel" ; }
+pf1005_descr () { echo "PR 231323" ; }

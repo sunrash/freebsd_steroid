@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/stand/fdt/fdt_platform.h 328504 2018-01-28 01:22:15Z kevans $
+ * $FreeBSD$
  */
 
 #ifndef FDT_PLATFORM_H

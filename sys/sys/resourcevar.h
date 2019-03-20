@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)resourcevar.h	8.4 (Berkeley) 1/9/95
- * $FreeBSD: releng/12.0/sys/sys/resourcevar.h 339187 2018-10-05 05:50:56Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef	_SYS_RESOURCEVAR_H_
@@ -132,6 +132,19 @@ struct plimit
 	*lim_alloc(void);
 void	 lim_copy(struct plimit *dst, struct plimit *src);
 rlim_t	 lim_cur(struct thread *td, int which);
+#define lim_cur(td, which)	({					\
+	rlim_t _rlim;							\
+	struct thread *_td = (td);					\
+	int _which = (which);						\
+	if (__builtin_constant_p(which) && which != RLIMIT_DATA &&	\
+	    which != RLIMIT_STACK && which != RLIMIT_VMEM) {		\
+		_rlim = td->td_limit->pl_rlimit[which].rlim_cur;	\
+	} else {							\
+		_rlim = lim_cur(_td, _which);				\
+	}								\
+	_rlim;								\
+})
+
 rlim_t	 lim_cur_proc(struct proc *p, int which);
 void	 lim_fork(struct proc *p1, struct proc *p2);
 void	 lim_free(struct plimit *limp);

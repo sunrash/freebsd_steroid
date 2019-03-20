@@ -25,7 +25,7 @@
 # ident	"@(#)xattr_005_pos.ksh	1.1	07/02/06 SMI"
 #
 
-# $FreeBSD: releng/12.0/tests/sys/cddl/zfs/tests/xattr/xattr_005_pos.ksh 329867 2018-02-23 16:31:00Z asomers $
+# $FreeBSD$
 
 . $STF_SUITE/include/libtest.kshlib
 . $STF_SUITE/tests/xattr/xattr_common.kshlib

@@ -70,7 +70,7 @@
  * SUCH DAMAGE.
  *
  *
- * $FreeBSD: releng/12.0/share/examples/kld/cdev/test/testcdev.c 326275 2017-11-27 15:28:26Z pfg $
+ * $FreeBSD$
  */
 #include <sys/types.h>
 #include <sys/ioccom.h>

@@ -15,7 +15,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/e_powl.c 336563 2018-07-20 18:27:30Z dim $");
+__FBSDID("$FreeBSD$");
 
 #include <math.h>
 
@@ -117,7 +117,7 @@ __p1evll(long double x, long double *PP, int n)
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/ld80/e_powl.c 336563 2018-07-20 18:27:30Z dim $");
+__FBSDID("$FreeBSD$");
 
 #include <float.h>
 #include <math.h>

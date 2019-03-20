@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/local.sys.mk 320118 2017-06-19 18:08:02Z bdrewery $
+# $FreeBSD$
 
 .if ${MK_DIRDEPS_BUILD} == "yes" || ${MK_META_MODE} == "yes"
 

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/bhnd/cores/Makefile 304870 2016-08-27 00:03:02Z landonf $
+# $FreeBSD$
 
 SUBDIR=	bhnd_pci \
 	bhnd_pci_hostb \

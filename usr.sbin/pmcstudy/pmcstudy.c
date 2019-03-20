@@ -36,7 +36,7 @@
 #include <sys/wait.h>
 #include <getopt.h>
 #include "eval_expr.h"
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/pmcstudy/pmcstudy.c 303419 2016-07-27 21:45:11Z bdrewery $");
+__FBSDID("$FreeBSD$");
 
 static int max_pmc_counters = 1;
 static int run_all = 0;

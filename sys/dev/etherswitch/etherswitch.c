@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/etherswitch.c 328766 2018-02-02 02:05:14Z adrian $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

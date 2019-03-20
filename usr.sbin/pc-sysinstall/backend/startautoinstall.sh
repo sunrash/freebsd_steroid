@@ -27,7 +27,7 @@
 #
 # Script which reads the pc-autoinstall.conf directive, and begins the install
 #
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/backend/startautoinstall.sh 326275 2017-11-27 15:28:26Z pfg $
+# $FreeBSD$
 
 # Source our functions scripts
 . ${BACKEND}/functions.sh

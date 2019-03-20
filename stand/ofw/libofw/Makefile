@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/ofw/libofw/Makefile 336085 2018-07-08 07:42:58Z imp $
+# $FreeBSD$
 
 .include <bsd.init.mk>
 

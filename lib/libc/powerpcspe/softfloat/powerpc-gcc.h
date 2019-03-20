@@ -1,5 +1,5 @@
 /* $NetBSD: arm-gcc.h,v 1.2 2001/02/21 18:09:25 bjh21 Exp $ */
-/* $FreeBSD: releng/12.0/lib/libc/powerpcspe/softfloat/powerpc-gcc.h 307761 2016-10-22 01:57:15Z jhibbits $ */
+/* $FreeBSD$ */
 
 /*
 -------------------------------------------------------------------------------

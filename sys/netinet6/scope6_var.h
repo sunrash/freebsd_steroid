@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	$KAME: scope6_var.h,v 1.4 2000/05/18 15:03:27 jinmei Exp $
- * $FreeBSD: releng/12.0/sys/netinet6/scope6_var.h 334672 2018-06-05 20:54:29Z ae $
+ * $FreeBSD$
  */
 
 #ifndef _NETINET6_SCOPE6_VAR_H_

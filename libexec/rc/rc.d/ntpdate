@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/ntpdate 311907 2017-01-11 00:14:47Z ian $
+# $FreeBSD$
 #
 
 # PROVIDE: ntpdate

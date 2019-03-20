@@ -1,4 +1,6 @@
-# $FreeBSD: releng/12.0/tests/sys/geom/class/eli/detach_test.sh 327769 2018-01-10 15:55:07Z markj $
+# $FreeBSD$
+
+. $(atf_get_srcdir)/conf.sh
 
 atf_test_case detach_l cleanup
 detach_l_head()
@@ -8,7 +10,7 @@ detach_l_head()
 }
 detach_l_body()
 {
-	. $(atf_get_srcdir)/conf.sh
+	geli_test_setup
 
 	sectors=100
 	md=$(attach_md -t malloc -s `expr $sectors + 1`)
@@ -36,7 +38,6 @@ detach_l_body()
 }
 detach_l_cleanup()
 {
-	. $(atf_get_srcdir)/conf.sh
 	geli_test_cleanup
 }
 

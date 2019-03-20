@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/src.libnames.mk 339325 2018-10-12 05:27:58Z des $
+# $FreeBSD$
 #
 # The include file <src.libnames.mk> define library names suitable
 # for INTERNALLIB and PRIVATELIB definition
@@ -75,6 +75,7 @@ _LIBRARIES=	\
 		cam \
 		casper \
 		cap_dns \
+		cap_fileargs \
 		cap_grp \
 		cap_pwd \
 		cap_random \
@@ -238,6 +239,7 @@ _DP_cam=	sbuf
 _DP_kvm=	elf
 _DP_casper=	nv
 _DP_cap_dns=	nv
+_DP_cap_fileargs=	nv
 _DP_cap_grp=	nv
 _DP_cap_pwd=	nv
 _DP_cap_random=	nv

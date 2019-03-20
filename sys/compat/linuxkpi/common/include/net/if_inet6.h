@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/net/if_inet6.h 331433 2018-03-23 15:50:01Z emaste $
+ * $FreeBSD$
  */
 #ifndef _NET_IF_INET6_H_
 #define	_NET_IF_INET6_H_

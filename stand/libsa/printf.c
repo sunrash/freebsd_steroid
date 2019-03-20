@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/printf.c 334665 2018-06-05 17:18:10Z ian $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Standaloneified version of the FreeBSD kernel printf family.
@@ -119,6 +119,34 @@ snprint_func(int ch, void *arg)
 	}
 	*(pbuf->buf)++ = ch;
 	pbuf->size--;
+}
+
+int
+asprintf(char **buf, const char *cfmt, ...)
+{
+	int retval;
+	struct print_buf arg;
+	va_list ap;
+
+	*buf = NULL;
+	va_start(ap, cfmt);
+	retval = kvprintf(cfmt, NULL, NULL, 10, ap);
+	va_end(ap);
+	if (retval <= 0)
+		return (-1);
+
+	arg.size = retval + 1;
+	arg.buf = *buf = malloc(arg.size);
+	if (*buf == NULL)
+		return (-1);
+
+	va_start(ap, cfmt);
+	retval = kvprintf(cfmt, &snprint_func, &arg, 10, ap);
+	va_end(ap);
+
+	if (arg.size >= 1)
+		*(arg.buf)++ = 0;
+	return (retval);
 }
 
 int

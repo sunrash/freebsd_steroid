@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/mv/armadaxp/armadaxp_mp.c 336834 2018-07-28 17:21:34Z andrew $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

@@ -39,7 +39,7 @@ static const char copyright[] =
 static const char sccsid[] = "@(#)dirname.c	8.4 (Berkeley) 5/4/95";
 #endif /* not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/dirname/dirname.c 335395 2018-06-19 23:43:14Z oshogbo $");
+__FBSDID("$FreeBSD$");
 
 #include <capsicum_helpers.h>
 #include <err.h>

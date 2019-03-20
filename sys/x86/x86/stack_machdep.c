@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/stack_machdep.c 337230 2018-08-03 02:51:37Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_stack.h"
 

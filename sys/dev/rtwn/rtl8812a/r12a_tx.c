@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/rtwn/rtl8812a/r12a_tx.c 322988 2017-08-28 22:14:16Z avos $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_wlan.h"
 
@@ -111,7 +111,7 @@ r12a_tx_protection(struct rtwn_softc *sc, struct r12a_tx_desc *txd,
 			rate = rtwn_ctl_mcsrate(ic->ic_rt, ridx);
 		else
 			rate = ieee80211_ctl_rate(ic->ic_rt, ridx2rate[ridx]);
-		ridx = rate2ridx(rate);
+		ridx = rate2ridx(IEEE80211_RV(rate));
 
 		txd->txdw4 |= htole32(SM(R12A_TXDW4_RTSRATE, ridx));
 		/* RTS rate fallback limit (max). */

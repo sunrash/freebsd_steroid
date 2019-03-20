@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/tools/usbtest/Makefile 291738 2015-12-04 03:17:47Z bdrewery $
+# $FreeBSD$
 #
 # Copyright (c) 2013 Hans Petter Selasky. All rights reserved.
 #

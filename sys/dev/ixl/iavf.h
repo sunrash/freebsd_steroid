@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/iavf.h 339362 2018-10-15 17:23:41Z erj $*/
+/*$FreeBSD$*/
 
 
 #ifndef _IAVF_H_

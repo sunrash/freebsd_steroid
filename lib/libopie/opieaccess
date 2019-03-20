@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libopie/opieaccess 338823 2018-09-20 09:26:10Z brd $
+# $FreeBSD$
 #
 # This file controls whether UNIX passwords are to be permitted.  Rules
 # are matched in order, and the search terminates when the first matching

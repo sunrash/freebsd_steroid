@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mthca/Makefile 329222 2018-02-13 17:04:34Z hselasky $
+# $FreeBSD$
 .PATH:	${SRCTOP}/sys/dev/mthca
 
 KMOD=	mthca

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsdinstall/distfetch/Makefile 291348 2015-11-26 01:14:40Z bdrewery $
+# $FreeBSD$
 
 BINDIR= ${LIBEXECDIR}/bsdinstall
 PROG=	distfetch

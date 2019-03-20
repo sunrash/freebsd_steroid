@@ -1,11 +1,13 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/stdlib/Makefile 316213 2017-03-30 04:57:26Z kib $
+# $FreeBSD$
 
 .include <src.opts.mk>
 
+ATF_TESTS_C+=		dynthr_test
 ATF_TESTS_C+=		heapsort_test
 ATF_TESTS_C+=		mergesort_test
 ATF_TESTS_C+=		qsort_test
 ATF_TESTS_C+=		set_constraint_handler_s_test
+ATF_TESTS_C+=		strfmon_test
 ATF_TESTS_C+=		tsearch_test
 .if ${COMPILER_FEATURES:Mc++11}
 ATF_TESTS_CXX+=		cxa_thread_atexit_test
@@ -60,5 +62,7 @@ LIBADD.${t}+=	netbsd util
 .endfor
 
 LIBADD.strtod_test+=		m
+
+SUBDIR+=	dynthr_mod
 
 .include <bsd.test.mk>

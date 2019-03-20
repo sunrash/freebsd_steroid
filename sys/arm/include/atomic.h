@@ -35,7 +35,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/atomic.h 327047 2017-12-20 20:41:51Z ian $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_ATOMIC_H_
@@ -54,6 +54,13 @@
 #else /* < armv6 */
 #include <machine/atomic-v4.h>
 #endif /* Arch >= v6 */
+
+static __inline u_long
+atomic_swap_long(volatile u_long *p, u_long v)
+{
+
+	return (atomic_swap_32((volatile uint32_t *)p, v));
+}
 
 #define atomic_clear_ptr		atomic_clear_32
 #define atomic_clear_acq_ptr		atomic_clear_acq_32

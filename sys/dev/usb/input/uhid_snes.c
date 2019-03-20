@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/usb/input/uhid_snes.c 333633 2018-05-15 15:36:34Z hselasky $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

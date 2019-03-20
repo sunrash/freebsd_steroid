@@ -34,7 +34,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/lib/libpam/pam.d/convert.pl 326276 2017-11-27 15:37:16Z pfg $
+# $FreeBSD$
 #
 
 use strict;

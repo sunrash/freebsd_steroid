@@ -1,7 +1,7 @@
 #
 # TPLink TL-WDR4300 - AR9344 based dual-band 2x2 wifi
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/TL-WDR4300 321635 2017-07-28 01:17:38Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

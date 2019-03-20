@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.suffixes-posix.mk 307075 2016-10-12 00:42:46Z jonathan $
+# $FreeBSD$
 
 # Posix 1003.2 mandated rules
 #

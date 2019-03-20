@@ -10,7 +10,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/i386/mp_clock.c 326408 2017-11-30 20:33:45Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*-
  * Just when we thought life were beautiful, reality pops its grim face over

@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THEPOSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/sound/pci/spicds.h 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /* supported CODECs */

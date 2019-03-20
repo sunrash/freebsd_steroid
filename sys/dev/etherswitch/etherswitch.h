@@ -1,5 +1,5 @@
 /*
- * $FreeBSD: releng/12.0/sys/dev/etherswitch/etherswitch.h 328922 2018-02-06 08:34:50Z adrian $
+ * $FreeBSD$
  */
 
 #ifndef __SYS_DEV_ETHERSWITCH_ETHERSWITCH_H

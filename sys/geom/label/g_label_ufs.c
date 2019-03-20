@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/geom/label/g_label_ufs.c 331491 2018-03-24 15:36:25Z mckusick $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -77,7 +77,7 @@ g_label_ufs_taste_common(struct g_consumer *cp, char *label, size_t size, int wh
 
 	fs = NULL;
 	if (SBLOCKSIZE % pp->sectorsize != 0 ||
-	    ffs_sbget(cp, &fs, -1, M_GEOM, g_use_g_read_data) != 0) {
+	    ffs_sbget(cp, &fs, STDSB, M_GEOM, g_use_g_read_data) != 0) {
 		KASSERT(fs == NULL,
 		    ("g_label_ufs_taste_common: non-NULL fs %p\n", fs));
 		return;

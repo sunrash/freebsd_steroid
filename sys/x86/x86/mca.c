@@ -32,7 +32,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/x86/x86/mca.c 332971 2018-04-24 20:29:40Z kib $");
+__FBSDID("$FreeBSD$");
 
 #ifdef __amd64__
 #define	DEV_APIC

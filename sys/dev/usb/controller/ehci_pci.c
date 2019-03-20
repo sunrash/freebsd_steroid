@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/controller/ehci_pci.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 /*
  * USB Enhanced Host Controller Driver, a.k.a. USB 2.0 controller.
@@ -209,6 +209,9 @@ ehci_pci_match(device_t self)
 
 	case 0x15621131:
 		return "Philips ISP156x USB 2.0 controller";
+
+	case 0x70021039:
+		return "SiS 968 USB 2.0 controller";
 
 	case 0x31041106:
 		return ("VIA VT6202 USB 2.0 controller");

@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixgbe/ixgbe_dcb_82599.h 326022 2017-11-20 19:36:21Z pfg $*/
+/*$FreeBSD$*/
 
 #ifndef _IXGBE_DCB_82599_H_
 #define _IXGBE_DCB_82599_H_

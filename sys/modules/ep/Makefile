@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/ep/Makefile 327381 2017-12-30 11:42:49Z kib $
+# $FreeBSD$
 
 SYSDIR?=${SRCTOP}/sys
 .include "${SYSDIR}/conf/kern.opts.mk"

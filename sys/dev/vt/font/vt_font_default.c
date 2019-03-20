@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/vt/font/vt_font_default.c 332452 2018-04-12 20:21:04Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/vt/vt.h>
 

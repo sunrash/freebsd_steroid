@@ -1,4 +1,4 @@
-dnl $FreeBSD: releng/12.0/usr.bin/m4/tests/esyscmd.m4 234852 2012-04-30 22:00:34Z bapt $
+dnl $FreeBSD$
 changequote(`{',`}')dnl
 dnl
 esyscmd({sh -c "m4<<EOF

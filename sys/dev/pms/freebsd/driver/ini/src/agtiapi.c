@@ -20,7 +20,7 @@
 *******************************************************************************/
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/pms/freebsd/driver/ini/src/agtiapi.c 324811 2017-10-21 07:23:45Z rlibby $");
+__FBSDID("$FreeBSD$");
 #include <dev/pms/config.h>
 
 #define MAJOR_REVISION	    1

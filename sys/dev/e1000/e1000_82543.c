@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/e1000/e1000_82543.c 327231 2017-12-27 03:23:21Z eadler $*/
+/*$FreeBSD$*/
 
 /*
  * 82543GC Gigabit Ethernet Controller (Fiber)

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/crunch/crunchgen/Makefile 270168 2014-08-19 15:04:32Z bdrewery $
+# $FreeBSD$
 
 PROG=	crunchgen
 SRCS=	crunchgen.c crunched_skel.c

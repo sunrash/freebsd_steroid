@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/zfsbe 307182 2016-10-13 06:19:54Z avg $
+# $FreeBSD$
 #
 
 # PROVIDE: zfsbe

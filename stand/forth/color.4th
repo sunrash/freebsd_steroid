@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/color.4th 254105 2013-08-08 22:09:46Z dteske $
+\ $FreeBSD$
 
 marker task-color.4th
 

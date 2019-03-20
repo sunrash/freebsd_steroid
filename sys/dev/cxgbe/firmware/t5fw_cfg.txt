@@ -293,5 +293,5 @@
 	version = 0x1
 	checksum = 0x30b6a157
 #
-# $FreeBSD: releng/12.0/sys/dev/cxgbe/firmware/t5fw_cfg.txt 338954 2018-09-26 21:16:07Z np $
+# $FreeBSD$
 #

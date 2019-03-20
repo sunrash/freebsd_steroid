@@ -1,4 +1,4 @@
-$FreeBSD: releng/12.0/tools/tools/nanobsd/dhcpd/README 269355 2014-07-31 22:32:39Z imp $
+$FreeBSD$
 
 Example for creating many different builds (including different
 arch) from a common set of files, as well as building natively

@@ -37,7 +37,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_autoconf.c 327430 2017-12-31 09:23:52Z cperciva $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

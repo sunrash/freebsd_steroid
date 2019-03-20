@@ -26,7 +26,7 @@
 
 
 /*
- * $FreeBSD: releng/12.0/sys/arm/ti/ti_smc.h 326258 2017-11-27 15:04:10Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef TI_SMC_H_

@@ -30,7 +30,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/include/vmparam.h 328178 2018-01-19 22:17:13Z nwhitehorn $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_VMPARAM_H_

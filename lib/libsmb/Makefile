@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libsmb/Makefile 338824 2018-09-20 09:31:27Z brd $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

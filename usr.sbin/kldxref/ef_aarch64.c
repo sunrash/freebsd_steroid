@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.sbin/kldxref/ef_aarch64.c 328094 2018-01-17 19:59:43Z emaste $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

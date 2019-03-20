@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/fdcontrol/fdcontrol.c 327579 2018-01-05 07:28:48Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/fdcio.h>
 #include <sys/file.h>

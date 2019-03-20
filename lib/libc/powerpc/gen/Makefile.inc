@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/powerpc/gen/Makefile.inc 307892 2016-10-25 01:32:35Z jhibbits $
+# $FreeBSD$
 
 .include "${LIBC_SRCTOP}/powerpc/gen/Makefile.common"
 

@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/liblua/luaconf.h 337810 2018-08-14 18:58:01Z kevans $ */
+/* $FreeBSD$ */
 /*
 ** $Id: luaconf.h,v 1.259 2016/12/22 13:08:50 roberto Exp $
 ** Configuration file for Lua
@@ -202,9 +202,9 @@
 
 #else			/* }{ */
 
-#define LUA_ROOT	"/usr/local/"
-#define LUA_LDIR	LUA_ROOT "share/lua/" LUA_VDIR "/"
-#define LUA_CDIR	LUA_ROOT "lib/lua/" LUA_VDIR "/"
+#define LUA_ROOT       "/boot/lua/" LUA_VDIR "/"
+#define LUA_LDIR       LUA_ROOT "share/"
+#define LUA_CDIR       LUA_ROOT "lib/"
 #ifndef LUA_PATH_DEFAULT
 #define LUA_PATH_DEFAULT  \
 		LUA_LDIR"?.lua;"  LUA_LDIR"?/init.lua;" \

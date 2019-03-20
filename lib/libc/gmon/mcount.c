@@ -33,7 +33,7 @@
 static char sccsid[] = "@(#)mcount.c	8.1 (Berkeley) 6/4/93";
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gmon/mcount.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/gmon.h>
@@ -279,8 +279,7 @@ MCOUNT
 
 #ifdef GUPROF
 void
-mexitcount(selfpc)
-	uintfptr_t selfpc;
+mexitcount(uintfptr_t selfpc)
 {
 	struct gmonparam *p;
 	uintfptr_t selfpcdiff;

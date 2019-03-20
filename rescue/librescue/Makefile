@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/rescue/librescue/Makefile 315174 2017-03-12 18:59:09Z imp $
+# $FreeBSD$
 #
 
 .include <src.opts.mk>

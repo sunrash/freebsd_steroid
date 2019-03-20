@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/vmm_instruction_emul.h 330032 2018-02-26 19:19:05Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef	_VMM_INSTRUCTION_EMUL_H_

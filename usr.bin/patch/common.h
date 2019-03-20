@@ -24,7 +24,7 @@
  * behaviour
  *
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
- * $FreeBSD: releng/12.0/usr.bin/patch/common.h 306561 2016-10-01 20:46:01Z pfg $
+ * $FreeBSD$
  */
 
 #include <sys/types.h>

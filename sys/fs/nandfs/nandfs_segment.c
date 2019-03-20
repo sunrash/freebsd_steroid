@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/nandfs/nandfs_segment.c 326268 2017-11-27 15:15:37Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

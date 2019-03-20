@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/dtc/fdt.hh 332483 2018-04-13 18:04:51Z kevans $
+ * $FreeBSD$
  */
 
 #ifndef _FDT_HH_

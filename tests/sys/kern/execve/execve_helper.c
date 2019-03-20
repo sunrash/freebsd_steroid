@@ -31,7 +31,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tests/sys/kern/execve/execve_helper.c 312121 2017-01-14 05:24:35Z ngie $
+ * $FreeBSD$
  */
 
 #include <err.h>

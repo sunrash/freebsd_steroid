@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: mount_smbfs.c,v 1.17 2002/04/10 04:17:51 bp Exp $
- * $FreeBSD: releng/12.0/contrib/smbfs/mount_smbfs/mount_smbfs.c 271258 2014-09-08 10:57:43Z trasz $
+ * $FreeBSD$
  */
 #include <sys/param.h>
 #include <sys/stat.h>

@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/libexec/rpc.rwalld/rwalld.c 326274 2017-11-27 15:25:02Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <err.h>
 #include <pwd.h>

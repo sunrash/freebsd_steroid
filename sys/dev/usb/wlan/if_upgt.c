@@ -1,5 +1,5 @@
 /*	$OpenBSD: if_upgt.c,v 1.35 2008/04/16 18:32:15 damien Exp $ */
-/*	$FreeBSD: releng/12.0/sys/dev/usb/wlan/if_upgt.c 330749 2018-03-10 23:16:24Z avos $ */
+/*	$FreeBSD$ */
 
 /*
  * Copyright (c) 2007 Marcus Glocker <mglocker@openbsd.org>
@@ -41,7 +41,6 @@
 #include <net/if_types.h>
 
 #include <sys/bus.h>
-#include <machine/bus.h>
 
 #include <net80211/ieee80211_var.h>
 #include <net80211/ieee80211_phy.h>
@@ -1616,7 +1615,7 @@ upgt_fw_load(struct upgt_softc *sc)
 		data_cmd->buflen = bsize;
 		upgt_bulk_tx(sc, data_cmd);
 
-		DPRINTF(sc, UPGT_DEBUG_FW, "FW offset=%d, read=%d, sent=%d\n",
+		DPRINTF(sc, UPGT_DEBUG_FW, "FW offset=%zu, read=%d, sent=%d\n",
 		    offset, n, bsize);
 		bsize = n;
 	}
@@ -1773,7 +1772,7 @@ upgt_fw_verify(struct upgt_softc *sc)
 	}
 
 	DPRINTF(sc, UPGT_DEBUG_FW,
-	    "firmware Boot Record Area found at offset %d\n", offset);
+	    "firmware Boot Record Area found at offset %zu\n", offset);
 
 	/*
 	 * Parse Boot Record Area (BRA) options.

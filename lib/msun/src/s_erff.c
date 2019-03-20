@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/msun/src/s_erff.c 268590 2014-07-13 16:24:16Z kargl $");
+__FBSDID("$FreeBSD$");
 
 #include "math.h"
 #include "math_private.h"

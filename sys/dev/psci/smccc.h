@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/psci/smccc.h 336971 2018-07-31 15:08:02Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef	_PSCI_SMCCC_H_

@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/nss/getproto_test.c 319041 2017-05-28 04:15:57Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <arpa/inet.h>
 #include <assert.h>

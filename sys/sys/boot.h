@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/boot.h 336244 2018-07-13 16:43:05Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_BOOT_H_

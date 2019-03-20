@@ -1,5 +1,5 @@
 /*	$NetBSD: reg.h,v 1.2 2001/02/23 21:23:52 reinoud Exp $	*/
-/* $FreeBSD: releng/12.0/sys/arm/include/reg.h 315900 2017-03-24 11:46:49Z mmel $ */
+/* $FreeBSD$ */
 #ifndef MACHINE_REG_H
 #define MACHINE_REG_H
 

@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)atexit.h	8.2 (Berkeley) 7/3/94
- * $FreeBSD: releng/12.0/lib/libc/stdlib/atexit.h 326025 2017-11-20 19:49:47Z pfg $
+ * $FreeBSD$
  */
 
 /* must be at least 32 to guarantee ANSI conformance */

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/i2c/iicbb/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 .PATH:		${SRCTOP}/sys/dev/iicbus
 .if ${MACHINE_CPUARCH} == "aarch64" || ${MACHINE_CPUARCH} == "arm" || \

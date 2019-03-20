@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/i386/linux/linux_ptrace.c 329794 2018-02-22 02:24:17Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_cpu.h"
 

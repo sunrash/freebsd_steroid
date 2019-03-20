@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/share/doc/atf/Makefile 314652 2017-03-04 11:26:40Z ngie $
+# $FreeBSD$
 
 ATF=	${SRCTOP}/contrib/atf
 .PATH: ${ATF} ${ATF}/doc

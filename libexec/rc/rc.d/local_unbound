@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.d/local_unbound 340219 2018-11-07 16:22:18Z des $
+# $FreeBSD$
 #
 
 # PROVIDE: local_unbound

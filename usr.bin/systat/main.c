@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 
-__FBSDID("$FreeBSD: releng/12.0/usr.bin/systat/main.c 337680 2018-08-12 07:47:44Z cy $");
+__FBSDID("$FreeBSD$");
 
 #ifdef lint
 static const char sccsid[] = "@(#)main.c	8.1 (Berkeley) 6/6/93";

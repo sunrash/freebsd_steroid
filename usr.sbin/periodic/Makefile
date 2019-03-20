@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/periodic/Makefile 338429 2018-09-02 15:53:56Z brd $
+# $FreeBSD$
 
 CONFS=	periodic.conf
 CONFSDIR=	/etc/defaults

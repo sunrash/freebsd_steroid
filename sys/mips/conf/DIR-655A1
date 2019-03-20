@@ -4,7 +4,7 @@
 # This contains a QCA9558 MIPS74k SoC with on-board 3x3 2GHz wifi,
 # 128MiB RAM, an AR8327 5-port gigabit ethernet switch.
 #
-# $FreeBSD: releng/12.0/sys/mips/conf/DIR-655A1 304937 2016-08-28 04:08:26Z adrian $
+# $FreeBSD$
 #
 
 #NO_UNIVERSE

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/libexec/getty/gettytab 338471 2018-09-05 15:25:23Z brd $
+# $FreeBSD$
 #	from: @(#)gettytab	5.14 (Berkeley) 3/27/91
 #
 # Most of the table entries here are just copies of the old getty table,

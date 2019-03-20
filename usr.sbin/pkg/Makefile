@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pkg/Makefile 336978 2018-07-31 16:42:03Z brd $
+# $FreeBSD$
 
 CONFS=	FreeBSD.conf
 CONFSDIR=	/etc/pkg

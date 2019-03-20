@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/diff3/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 DIFFSRC=${SRCTOP}/contrib/diff/src
 .PATH:  ${DIFFSRC} \

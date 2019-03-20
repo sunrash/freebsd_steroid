@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/broadcom/bcm_pmu.c 319069 2017-05-28 12:05:16Z mizhka $");
+__FBSDID("$FreeBSD$");
 
 #include <dev/bhnd/bhnd.h>
 

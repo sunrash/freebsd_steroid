@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/include/md_var.h 333272 2018-05-05 15:48:39Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_MD_VAR_H_

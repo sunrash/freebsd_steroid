@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/stdlib/mergesort_test.c 290538 2015-11-08 07:03:17Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 #include <stdio.h>

@@ -44,7 +44,7 @@ static char sccsid[] = "@(#)quotacheck.c	8.3 (Berkeley) 1/29/94";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/quotacheck/quotacheck.c 335268 2018-06-16 23:47:59Z eadler $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Fix up / report on disk quotas & usage
@@ -321,7 +321,7 @@ chkquota(char *specname, struct quotafile *qfu, struct quotafile *qfg)
 		}
 	}
 	sync();
-	if ((ret = sbget(fi, &fs, -1)) != 0) {
+	if ((ret = sbget(fi, &fs, STDSB)) != 0) {
 		switch (ret) {
 		case ENOENT:
 			warn("Cannot find file system superblock");

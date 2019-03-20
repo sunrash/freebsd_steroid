@@ -60,7 +60,7 @@
  *
  * Authors: Archie Cobbs <archie@freebsd.org>, Alexander Motin <mav@alkar.net>
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_ppp.c 326272 2017-11-27 15:23:17Z pfg $
+ * $FreeBSD$
  * $Whistle: ng_ppp.c,v 1.24 1999/11/01 09:24:52 julian Exp $
  */
 

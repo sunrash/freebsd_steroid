@@ -29,7 +29,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *	$OpenBSD: pfvar.h,v 1.282 2009/01/29 15:12:28 pyr Exp $
- *	$FreeBSD: releng/12.0/sys/netpfil/pf/pf.h 331436 2018-03-23 16:56:44Z kp $
+ *	$FreeBSD$
  */
 
 #ifndef	_NET_PF_H_

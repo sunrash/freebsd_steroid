@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/fs/nfsserver/nfs_nfsdcache.c 328417 2018-01-25 22:25:13Z cem $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Here is the basic algorithm:

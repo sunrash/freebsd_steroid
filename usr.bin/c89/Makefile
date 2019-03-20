@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/c89/Makefile 140941 2005-01-28 16:08:11Z ru $
+# $FreeBSD$
 
 PROG=	c89
 

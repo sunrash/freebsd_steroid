@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/ofed/infiniband-diags/smpquery/Makefile 335253 2018-06-16 15:05:05Z kib $
+# $FreeBSD$
 
 PROG=	smpquery
 SRCS=	smpquery.c

@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/dma-mapping.h 338318 2018-08-25 19:38:08Z alc $
+ * $FreeBSD$
  */
 #ifndef	_LINUX_DMA_MAPPING_H_
 #define _LINUX_DMA_MAPPING_H_

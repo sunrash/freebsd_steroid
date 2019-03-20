@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/UES/citrus_ues.h 326219 2017-11-26 02:00:33Z pfg $ */
+/* $FreeBSD$ */
 /* $NetBSD: citrus_ues.h,v 1.1 2006/11/13 15:16:31 tnozaki Exp $ */
 
 /*-

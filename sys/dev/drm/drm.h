@@ -34,7 +34,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm/drm.h 338348 2018-08-28 14:46:55Z imp $");
+__FBSDID("$FreeBSD$");
 
 /**
  * \mainpage

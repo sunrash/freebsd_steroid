@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_read_support_format_all.c 299529 2016-05-12 10:16:16Z mm $");
+__FBSDID("$FreeBSD$");
 
 #include "archive.h"
 #include "archive_private.h"
@@ -72,6 +72,7 @@ archive_read_support_format_all(struct archive *a)
 	archive_read_support_format_7zip(a);
 	archive_read_support_format_cab(a);
 	archive_read_support_format_rar(a);
+	archive_read_support_format_rar5(a);
 	archive_read_support_format_iso9660(a);
 	/* Seek is really bad, since it forces the read-ahead
 	 * logic to discard buffered data. */

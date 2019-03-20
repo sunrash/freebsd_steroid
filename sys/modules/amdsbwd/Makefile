@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/amdsbwd/Makefile 336134 2018-07-09 14:18:03Z ian $
+# $FreeBSD$
 
 .PATH:  ${SRCTOP}/sys/dev/amdsbwd
 KMOD    = amdsbwd

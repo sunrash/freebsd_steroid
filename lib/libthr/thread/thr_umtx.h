@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libthr/thread/thr_umtx.h 326219 2017-11-26 02:00:33Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _THR_FBSD_UMTX_H_

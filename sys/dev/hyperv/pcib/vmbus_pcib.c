@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/hyperv/pcib/vmbus_pcib.c 337322 2018-08-04 14:57:23Z dim $");
+__FBSDID("$FreeBSD$");
 
 #ifdef NEW_PCIB
 

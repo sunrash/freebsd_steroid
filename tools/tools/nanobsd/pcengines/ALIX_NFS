@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/tools/nanobsd/pcengines/ALIX_NFS 291825 2015-12-04 23:22:07Z imp $
+# $FreeBSD$
 #
 
 include	ALIX_DSK

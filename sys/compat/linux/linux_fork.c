@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_fork.c 335505 2018-06-21 21:15:04Z kib $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -235,7 +235,7 @@ linux_clone_proc(struct thread *td, struct linux_clone_args *args)
 	if (args->flags & LINUX_CLONE_PARENT) {
 		sx_xlock(&proctree_lock);
 		PROC_LOCK(p2);
-		proc_reparent(p2, td->td_proc->p_pptr);
+		proc_reparent(p2, td->td_proc->p_pptr, true);
 		PROC_UNLOCK(p2);
 		sx_xunlock(&proctree_lock);
 	}

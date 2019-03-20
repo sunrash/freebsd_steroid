@@ -12,7 +12,7 @@
  *
  * Snoop stuff.
  *
- * $FreeBSD: releng/12.0/sys/sys/snoop.h 327040 2017-12-20 20:25:28Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_SNOOP_H_

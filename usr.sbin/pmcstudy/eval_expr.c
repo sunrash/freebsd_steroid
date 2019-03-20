@@ -33,7 +33,7 @@
 #include <strings.h>
 #include <ctype.h>
 #include "eval_expr.h"
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/pmcstudy/eval_expr.c 289677 2015-10-21 05:37:09Z eadler $");
+__FBSDID("$FreeBSD$");
 
 static struct expression *
 alloc_and_hook_expr(struct expression **exp_p, struct expression **last_p)

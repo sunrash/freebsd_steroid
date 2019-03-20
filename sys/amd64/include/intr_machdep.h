@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/intr_machdep.h 338101 2018-08-20 12:31:39Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef __MACHINE_INTR_MACHDEP_H__

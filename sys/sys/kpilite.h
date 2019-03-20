@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/kpilite.h 335882 2018-07-03 04:02:40Z mmacy $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_KPILITE_H_

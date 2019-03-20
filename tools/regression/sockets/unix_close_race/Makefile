@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/regression/sockets/unix_close_race/Makefile 281400 2015-04-11 03:43:43Z ngie $
+# $FreeBSD$
 
 PROG=	unix_close_race
 MAN=

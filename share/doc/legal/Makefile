@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/doc/legal/Makefile 289393 2015-10-15 22:55:08Z bdrewery $
+# $FreeBSD$
 
 SUBDIR=	intel_ipw \
 	intel_iwi \

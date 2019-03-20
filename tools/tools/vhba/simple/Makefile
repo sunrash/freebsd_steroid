@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/tools/vhba/simple/Makefile 208926 2010-06-08 22:26:47Z mjacob $
+# $FreeBSD$
 KMOD=	vsimple
 SRCS=	vhba_simple.c vhba.c
 CFLAGS += -I${.CURDIR}/.. -DVHBA_MOD=\"vsimple\"

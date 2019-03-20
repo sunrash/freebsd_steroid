@@ -31,7 +31,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/allwinner/a10_ehci.c 333074 2018-04-27 21:05:58Z manu $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_bus.h"
 
@@ -63,7 +63,7 @@ __FBSDID("$FreeBSD: releng/12.0/sys/arm/allwinner/a10_ehci.c 333074 2018-04-27 2
 #include <arm/allwinner/aw_machdep.h>
 #include <dev/extres/clk/clk.h>
 #include <dev/extres/hwreset/hwreset.h>
-#include <dev/extres/phy/phy.h>
+#include <dev/extres/phy/phy_usb.h>
 
 #define EHCI_HC_DEVSTR			"Allwinner Integrated USB 2.0 controller"
 
@@ -242,6 +242,11 @@ a10_ehci_attach(device_t self)
 
 	/* Enable USB PHY */
 	if (phy_get_by_ofw_name(self, 0, "usb", &aw_sc->phy) == 0) {
+		err = phy_usb_set_mode(aw_sc->phy, PHY_USB_MODE_HOST);
+		if (err != 0) {
+			device_printf(self, "Could not set phy to host mode\n");
+			goto error;
+		}
 		err = phy_enable(aw_sc->phy);
 		if (err != 0) {
 			device_printf(self, "Could not enable phy\n");

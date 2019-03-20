@@ -29,7 +29,7 @@
  * File : ecore_dev.c
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/qlnx/qlnxe/ecore_dev.c 336695 2018-07-25 02:36:55Z davidcs $");
+__FBSDID("$FreeBSD$");
 
 #include "bcm_osal.h"
 #include "reg_addr.h"

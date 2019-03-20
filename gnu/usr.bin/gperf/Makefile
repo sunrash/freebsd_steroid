@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/gperf/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 GPERFDIR=	${SRCTOP}/contrib/gperf

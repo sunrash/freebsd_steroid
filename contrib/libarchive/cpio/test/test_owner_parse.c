@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/cpio/test/test_owner_parse.c 310623 2016-12-27 01:10:28Z mm $");
+__FBSDID("$FreeBSD$");
 
 #include "../cpio.h"
 #include "err.h"

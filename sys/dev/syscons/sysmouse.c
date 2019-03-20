@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/syscons/sysmouse.c 334923 2018-06-10 10:23:31Z wulf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_evdev.h"
 #include "opt_syscons.h"

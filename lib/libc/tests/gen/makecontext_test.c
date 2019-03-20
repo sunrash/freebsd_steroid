@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/tests/gen/makecontext_test.c 328633 2018-01-31 18:02:02Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <atf-c.h>
 #include <ucontext.h>

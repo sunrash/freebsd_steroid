@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/tools/regression/sockets/accf_data_attach/Makefile 281355 2015-04-10 07:59:46Z ngie $
+# $FreeBSD$
 #
 
 PROG=	accf_data_attach

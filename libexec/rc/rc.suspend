@@ -24,7 +24,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/libexec/rc/rc.suspend 339413 2018-10-17 16:49:11Z bz $
+# $FreeBSD$
 #
 
 # sample run command file for APM Suspend Event

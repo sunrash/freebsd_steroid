@@ -1,7 +1,7 @@
 /*
  * Российские праздники
  *
- * $FreeBSD: releng/12.0/usr.bin/calendar/calendars/ru_RU.UTF-8/calendar.common 303566 2016-07-31 02:43:45Z ache $
+ * $FreeBSD$
  */
 
 #ifndef _ru_RU_UTF_8_common_

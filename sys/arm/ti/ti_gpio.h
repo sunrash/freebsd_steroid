@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/arm/ti/ti_gpio.h 308444 2016-11-08 12:15:57Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef TI_GPIO_H

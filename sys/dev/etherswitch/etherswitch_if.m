@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/dev/etherswitch/etherswitch_if.m 328766 2018-02-02 02:05:14Z adrian $
+# $FreeBSD$
 
 #include <sys/bus.h>
 

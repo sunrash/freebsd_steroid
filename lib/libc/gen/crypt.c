@@ -34,7 +34,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)crypt.c	5.11 (Berkeley) 6/25/91");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/crypt.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #include <stdio.h>
 #include <string.h>

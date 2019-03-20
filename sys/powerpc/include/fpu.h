@@ -31,7 +31,7 @@
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  *	$NetBSD: fpu.h,v 1.2 1999/12/07 15:14:56 danw Exp $
- * $FreeBSD: releng/12.0/sys/powerpc/include/fpu.h 334535 2018-06-02 19:17:11Z jhibbits $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_FPU_H_

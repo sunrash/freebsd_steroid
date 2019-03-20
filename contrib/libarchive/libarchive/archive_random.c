@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/archive_random.c 315636 2017-03-20 13:02:27Z mm $");
+__FBSDID("$FreeBSD$");
 
 #ifdef HAVE_STDLIB_H
 #include <stdlib.h>

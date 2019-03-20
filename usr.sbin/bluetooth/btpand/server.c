@@ -27,7 +27,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/usr.sbin/bluetooth/btpand/server.c 326276 2017-11-27 15:37:16Z pfg $ */
+/* $FreeBSD$ */
 
 #include <sys/cdefs.h>
 __RCSID("$NetBSD: server.c,v 1.2 2009/01/24 17:29:28 plunky Exp $");

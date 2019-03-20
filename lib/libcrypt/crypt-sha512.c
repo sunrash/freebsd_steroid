@@ -30,7 +30,7 @@
  * Ulrich Drepper <drepper@redhat.com>. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libcrypt/crypt-sha512.c 336541 2018-07-20 07:16:28Z delphij $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/endian.h>
 #include <sys/param.h>

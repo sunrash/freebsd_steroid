@@ -18,7 +18,7 @@
  *
  * CDDL HEADER END
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/ip.d 337018 2018-07-31 22:56:03Z tuexen $
+ * $FreeBSD$
  */
 /*
  * Copyright (c) 2007, 2010, Oracle and/or its affiliates. All rights reserved.

@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sbin/bectl/bectl.h 337369 2018-08-06 03:41:52Z kevans $
+ * $FreeBSD$
  */
 
 int usage(bool explicit);

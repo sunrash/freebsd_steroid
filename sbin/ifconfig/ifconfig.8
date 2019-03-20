@@ -26,7 +26,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\"     From: @(#)ifconfig.8	8.3 (Berkeley) 1/5/94
-.\" $FreeBSD: releng/12.0/sbin/ifconfig/ifconfig.8 335732 2018-06-27 19:28:37Z trasz $
+.\" $FreeBSD$
 .\"
 .Dd June 27, 2018
 .Dt IFCONFIG 8
@@ -538,6 +538,28 @@ large receive offloading, enable LRO on the interface.
 If the driver supports
 .Xr tcp 4
 large receive offloading, disable LRO on the interface.
+.It Cm txtls
+Transmit TLS offload encrypts Transport Layer Security (TLS) records and
+segments the encrypted record into one or more
+.Xr tcp 4
+segments over either
+.Xr ip 4
+or
+.Xr ip6 4 .
+If the driver supports transmit TLS offload,
+enable transmit TLS offload on the interface.
+Some drivers may not be able to support transmit TLS offload for
+.Xr ip 4
+and
+.Xr ip6 4
+packets, so they may enable only one of them.
+.It Fl txtls
+If the driver supports transmit TLS offload,
+disable transmit TLS offload on the interface.
+It will always disable TSO for
+.Xr ip 4
+and
+.Xr ip6 4 .
 .It Cm wol , wol_ucast , wol_mcast , wol_magic
 Enable Wake On Lan (WOL) support, if available.
 WOL is a facility whereby a machine in a low power state may be woken
@@ -2469,7 +2491,7 @@ src/dst address for IPv4 or IPv6.
 .It Cm l4
 src/dst port for TCP/UDP/SCTP.
 .El
-.It Cm use_flowid
+.It Cm -use_flowid
 Enable local hash computation for RSS hash on the interface.
 The
 .Li loadbalance
@@ -2478,7 +2500,7 @@ and
 modes will use the RSS hash from the network card if available
 to avoid computing one, this may give poor traffic distribution
 if the hash is invalid or uses less of the protocol header information.
-.Cm use_flowid
+.Cm -use_flowid
 disables use of RSS hash from the network card.
 The default value can be set via the
 .Va net.link.lagg.default_use_flowid
@@ -2491,8 +2513,8 @@ and
 .Li 1
 means
 .Dq enabled .
-.It Cm -use_flowid
-Disable local hash computation for RSS hash on the interface.
+.It Cm use_flowid
+Use the RSS hash from the network card if available.
 .It Cm flowid_shift Ar number
 Set a shift parameter for RSS local hash computation.
 Hash is calculated by using flowid bits in a packet header mbuf

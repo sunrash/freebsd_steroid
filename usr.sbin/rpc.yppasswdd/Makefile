@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/rpc.yppasswdd/Makefile 314456 2017-03-01 04:14:41Z ngie $
+# $FreeBSD$
 
 RPCDIR=	${DESTDIR}/usr/include/rpcsvc
 

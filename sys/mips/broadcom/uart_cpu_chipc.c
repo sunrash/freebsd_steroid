@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/broadcom/uart_cpu_chipc.c 304871 2016-08-27 00:06:20Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_uart.h"
 

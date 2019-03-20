@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/release/Makefile.ec2 338141 2018-08-21 15:30:47Z cperciva $
+# $FreeBSD$
 #
 #
 # Makefile for creating an EC2 AMI from a disk image.

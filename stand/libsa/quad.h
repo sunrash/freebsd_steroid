@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)quad.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/stand/libsa/quad.h 324551 2017-10-12 14:56:28Z imp $
+ * $FreeBSD$
  */
 
 /*

@@ -41,7 +41,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/newsyslog/ptimes.c 318960 2017-05-26 16:36:30Z dab $");
+__FBSDID("$FreeBSD$");
 
 #include <ctype.h>
 #include <limits.h>

@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  * $KAME: altq_rmclass.h,v 1.10 2003/08/20 23:30:23 itojun Exp $
- * $FreeBSD: releng/12.0/sys/net/altq/altq_rmclass.h 318389 2017-05-17 00:34:34Z emaste $
+ * $FreeBSD$
  */
 
 #ifndef _ALTQ_ALTQ_RMCLASS_H_
@@ -233,13 +233,13 @@ struct rm_ifdat {
 };
 
 /* flags for rmc_init and rmc_newclass */
-/* class flags */
+/* class flags; must be the same as class flags in altq_cbq.h */
 #define	RMCF_RED		0x0001
 #define	RMCF_ECN		0x0002
 #define	RMCF_RIO		0x0004
 #define	RMCF_FLOWVALVE		0x0008	/* use flowvalve (aka penalty-box) */
 #define	RMCF_CLEARDSCP		0x0010  /* clear diffserv codepoint */
-#define	RMCF_CODEL		0x0020
+#define	RMCF_CODEL		0x0040
 
 /* flags for rmc_init */
 #define	RMCF_WRR		0x0100

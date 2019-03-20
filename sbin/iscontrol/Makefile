@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sbin/iscontrol/Makefile 314656 2017-03-04 11:33:01Z ngie $
+# $FreeBSD$
 
 PACKAGE=iscsi_legacy
 SRCS= iscontrol.c pdu.c fsm.c config.c login.c auth_subr.c misc.c

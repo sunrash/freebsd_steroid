@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/geom/vinum/geom_vinum.h 326270 2017-11-27 15:17:37Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_GEOM_VINUM_H_

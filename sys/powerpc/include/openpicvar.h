@@ -24,7 +24,7 @@
  * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
  * ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/powerpc/include/openpicvar.h 326261 2017-11-27 15:09:59Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef	_POWERPC_OPENPICVAR_H_
@@ -75,14 +75,14 @@ int	openpic_common_attach(device_t, uint32_t);
 /*
  * PIC interface.
  */
-void	openpic_bind(device_t dev, u_int irq, cpuset_t cpumask);
+void	openpic_bind(device_t dev, u_int irq, cpuset_t cpumask, void **);
 void	openpic_config(device_t, u_int, enum intr_trigger, enum intr_polarity);
 void	openpic_dispatch(device_t, struct trapframe *);
-void	openpic_enable(device_t, u_int, u_int);
-void	openpic_eoi(device_t, u_int);
+void	openpic_enable(device_t, u_int, u_int, void **);
+void	openpic_eoi(device_t, u_int, void *);
 void	openpic_ipi(device_t, u_int);
-void	openpic_mask(device_t, u_int);
-void	openpic_unmask(device_t, u_int);
+void	openpic_mask(device_t, u_int, void *);
+void	openpic_unmask(device_t, u_int, void *);
 
 int	openpic_suspend(device_t dev);
 int	openpic_resume(device_t dev);

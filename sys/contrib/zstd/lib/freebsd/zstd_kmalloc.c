@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/contrib/zstd/lib/freebsd/zstd_kmalloc.c 327706 2018-01-08 20:14:16Z cem $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>
@@ -31,3 +31,9 @@
 #include <sys/malloc.h>
 
 MALLOC_DEFINE(M_ZSTD, "zstd", "ZSTD Compressor");
+
+/*
+ * Build zstd lib/common/debug.c (single extern variable) while avoiding
+ * conflict with Xen's debug.c in objdir.
+ */
+#include "debug.c"

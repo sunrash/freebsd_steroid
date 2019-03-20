@@ -1,5 +1,5 @@
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/usb/input/ukbd.c 337721 2018-08-13 19:05:53Z wulf $");
+__FBSDID("$FreeBSD$");
 
 
 /*-
@@ -1361,7 +1361,7 @@ ukbd_attach(device_t dev)
 	if (sc->sc_flags & UKBD_FLAG_SCROLLLOCK)
 		evdev_support_led(evdev, LED_SCROLLL);
 
-	if (evdev_register(evdev))
+	if (evdev_register_mtx(evdev, &Giant))
 		evdev_free(evdev);
 	else
 		sc->sc_evdev = evdev;

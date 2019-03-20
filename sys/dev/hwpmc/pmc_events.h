@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/hwpmc/pmc_events.h 336783 2018-07-27 21:25:01Z imp $
+ * $FreeBSD$
  */
 
 #ifndef _DEV_HWPMC_PMC_EVENTS_H_

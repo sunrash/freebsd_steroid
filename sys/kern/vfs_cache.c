@@ -35,7 +35,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/vfs_cache.c 335437 2018-06-20 08:34:29Z bz $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_ktrace.h"
@@ -2450,19 +2450,6 @@ vn_commname(struct vnode *vp, char *buf, u_int buflen)
 	mtx_unlock(vlp);
 	buf[l] = '\0';
 	return (0);
-}
-
-/* ABI compat shims for old kernel modules. */
-#undef cache_enter
-
-void	cache_enter(struct vnode *dvp, struct vnode *vp,
-	    struct componentname *cnp);
-
-void
-cache_enter(struct vnode *dvp, struct vnode *vp, struct componentname *cnp)
-{
-
-	cache_enter_time(dvp, vp, cnp, NULL, NULL);
 }
 
 /*

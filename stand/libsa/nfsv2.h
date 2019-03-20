@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/stand/libsa/nfsv2.h 324551 2017-10-12 14:56:28Z imp $ */
+/* $FreeBSD$ */
 /*	$NetBSD: nfsv2.h,v 1.2 1996/02/26 23:05:23 gwr Exp $	*/
 
 /*

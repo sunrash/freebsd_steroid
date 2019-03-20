@@ -31,7 +31,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/e1000/e1000_mac.c 333631 2018-05-15 13:30:59Z sbruno $*/
+/*$FreeBSD$*/
 
 #include "e1000_api.h"
 

@@ -22,7 +22,7 @@
 \ OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 \ SUCH DAMAGE.
 \ 
-\ $FreeBSD: releng/12.0/stand/forth/logo-orbbw.4th 280975 2015-04-02 01:48:12Z dteske $
+\ $FreeBSD$
 
 46 logoX ! 7 logoY ! \ Initialize logo placement defaults
 

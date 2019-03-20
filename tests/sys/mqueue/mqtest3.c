@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tests/sys/mqueue/mqtest3.c 306588 2016-10-02 17:02:59Z kib $ */
+/* $FreeBSD$ */
 
 #include <sys/types.h>
 #include <sys/select.h>

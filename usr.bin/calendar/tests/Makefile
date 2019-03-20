@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/calendar/tests/Makefile 306338 2016-09-26 13:59:18Z br $
+# $FreeBSD$
 
 PACKAGE=	tests
 

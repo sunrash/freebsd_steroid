@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/crypto/ccp/ccp_hardware.c 328150 2018-01-18 22:01:30Z cem $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 

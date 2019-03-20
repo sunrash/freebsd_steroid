@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/axgbe/xgbe_osdep.h 313768 2017-02-15 13:56:04Z andrew $
+ * $FreeBSD$
  */
 
 #ifndef _XGBE_OSDEP_H_

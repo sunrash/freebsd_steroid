@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/i386/include/cpufunc.h 334890 2018-06-09 18:31:19Z markj $
+ * $FreeBSD$
  */
 
 /*

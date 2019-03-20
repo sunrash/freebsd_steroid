@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_META_MODE 313169 2017-02-03 19:09:46Z wblock $
+.\" $FreeBSD$
 Create
 .Xr make 1
 meta files when building, which can provide a reliable incremental build when

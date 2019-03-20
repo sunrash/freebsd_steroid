@@ -43,7 +43,7 @@
 #include "un-namespace.h"
 #include "libc_private.h"
 
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/wordexp.c 326193 2017-11-25 17:12:48Z pfg $");
+__FBSDID("$FreeBSD$");
 
 static int	we_askshell(const char *, wordexp_t *, int);
 static int	we_check(const char *);

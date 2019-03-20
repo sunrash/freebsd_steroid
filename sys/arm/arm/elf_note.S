@@ -26,7 +26,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/arm/elf_note.S 273251 2014-10-18 13:38:04Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <machine/asmacros.h>

@@ -43,7 +43,7 @@
 #define __OCTEON_IRQ_H__
 
 /*
- * $FreeBSD: releng/12.0/sys/mips/cavium/octeon_irq.h 326023 2017-11-20 19:43:44Z pfg $
+ * $FreeBSD$
  */
 
 /**

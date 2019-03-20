@@ -64,7 +64,7 @@
  * THIS SOFTWARE, EVEN IF WHISTLE COMMUNICATIONS IS ADVISED OF THE POSSIBILITY
  * OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/netgraph/ng_gif.c 334123 2018-05-24 00:06:55Z jhb $
+ * $FreeBSD$
  */
 
 /*

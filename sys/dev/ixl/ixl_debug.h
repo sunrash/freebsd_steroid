@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/ixl_debug.h 339362 2018-10-15 17:23:41Z erj $*/
+/*$FreeBSD$*/
 
 #ifndef _IXL_DEBUG_H_
 #define _IXL_DEBUG_H_

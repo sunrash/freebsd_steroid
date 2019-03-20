@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/lib/libgcc/Makefile 311567 2017-01-06 23:30:54Z jhb $
+# $FreeBSD$
 
 PACKAGE=	clibs
 GCCDIR=	${.CURDIR}/../../../contrib/gcc

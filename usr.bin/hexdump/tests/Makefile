@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/hexdump/tests/Makefile 328188 2018-01-20 02:49:32Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
 

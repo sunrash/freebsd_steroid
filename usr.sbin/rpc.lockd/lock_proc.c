@@ -1,5 +1,5 @@
 /*	$NetBSD: lock_proc.c,v 1.7 2000/10/11 20:23:56 is Exp $	*/
-/*	$FreeBSD: releng/12.0/usr.sbin/rpc.lockd/lock_proc.c 325966 2017-11-18 14:26:50Z pfg $ */
+/*	$FreeBSD$ */
 /*-
  * SPDX-License-Identifier: BSD-4-Clause
  *

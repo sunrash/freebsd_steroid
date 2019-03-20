@@ -26,7 +26,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/mips/broadcom/bcm_nvram_cfevar.h 315866 2017-03-23 19:29:12Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef	_MIPS_BROADCOM_BCM_NVRAM_CFE_H_

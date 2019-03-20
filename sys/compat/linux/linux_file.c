@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/linux/linux_file.c 335201 2018-06-15 14:41:51Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_compat.h"
 
@@ -590,7 +590,7 @@ linux_unlink(struct thread *td, struct linux_unlink_args *args)
 		printf(ARGS(unlink, "%s"), path);
 #endif
 
-	error = kern_unlinkat(td, AT_FDCWD, path, UIO_SYSSPACE, 0);
+	error = kern_unlinkat(td, AT_FDCWD, path, UIO_SYSSPACE, 0, 0);
 	if (error == EPERM) {
 		/* Introduce POSIX noncompliant behaviour of Linux */
 		if (kern_statat(td, 0, AT_FDCWD, path, UIO_SYSSPACE, &st,
@@ -623,9 +623,9 @@ linux_unlinkat(struct thread *td, struct linux_unlinkat_args *args)
 #endif
 
 	if (args->flag & LINUX_AT_REMOVEDIR)
-		error = kern_rmdirat(td, dfd, path, UIO_SYSSPACE);
+		error = kern_rmdirat(td, dfd, path, UIO_SYSSPACE, 0);
 	else
-		error = kern_unlinkat(td, dfd, path, UIO_SYSSPACE, 0);
+		error = kern_unlinkat(td, dfd, path, UIO_SYSSPACE, 0, 0);
 	if (error == EPERM && !(args->flag & LINUX_AT_REMOVEDIR)) {
 		/* Introduce POSIX noncompliant behaviour of Linux */
 		if (kern_statat(td, AT_SYMLINK_NOFOLLOW, dfd, path,
@@ -741,7 +741,7 @@ linux_rmdir(struct thread *td, struct linux_rmdir_args *args)
 	if (ldebug(rmdir))
 		printf(ARGS(rmdir, "%s"), path);
 #endif
-	error = kern_rmdirat(td, AT_FDCWD, path, UIO_SYSSPACE);
+	error = kern_rmdirat(td, AT_FDCWD, path, UIO_SYSSPACE, 0);
 	LFREEPATH(path);
 	return (error);
 }

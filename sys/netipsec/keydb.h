@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sys/netipsec/keydb.h 336269 2018-07-13 23:46:07Z cem $	*/
+/*	$FreeBSD$	*/
 /*	$KAME: keydb.h,v 1.14 2000/08/02 17:58:26 sakane Exp $	*/
 
 /*-

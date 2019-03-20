@@ -31,7 +31,7 @@
 /* Ingenic JZ4780 CODEC. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/ingenic/jz4780_codec.c 310776 2016-12-29 14:00:10Z jmcneill $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

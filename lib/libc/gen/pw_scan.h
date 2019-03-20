@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)pw_scan.h	8.1 (Berkeley) 4/1/94
- * $FreeBSD: releng/12.0/lib/libc/gen/pw_scan.h 336746 2018-07-26 18:34:38Z ian $
+ * $FreeBSD$
  */
 
 #define _PWSCAN_MASTER 0x01

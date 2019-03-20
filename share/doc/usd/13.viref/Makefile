@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.16 (Berkeley) 8/15/94
-# $FreeBSD: releng/12.0/share/doc/usd/13.viref/Makefile 284619 2015-06-20 00:13:28Z bapt $
+# $FreeBSD$
 
 VOLUME=		usd/13.viref
 EXTRA=		ex.cmd.roff ref.so set.opt.roff vi.cmd.roff

@@ -21,7 +21,7 @@
  *
  * Portions Copyright 2012,2013 Justin Hibbits <jhibbits@freebsd.org>
  *
- * $FreeBSD: releng/12.0/sys/cddl/dev/dtrace/powerpc/dtrace_asm.S 331254 2018-03-20 17:58:51Z emaste $
+ * $FreeBSD$
  */
 /*
  * Copyright 2004 Sun Microsystems, Inc.  All rights reserved.
@@ -72,7 +72,7 @@ ASENTRY_NOPROF(dtrace_interrupt_disable)
 	rldicl	%r0,%r3,48,1
 	rotldi	%r0,%r0,16
 #else
-	rlwinm	%r0,%r3,0,~PSL_EE /* Clear EE flag */
+	rlwinm	%r0,%r3,0,17,15 /* Clear EE flag */
 #endif
 	mtmsr	%r0
 	blr

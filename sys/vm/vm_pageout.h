@@ -59,7 +59,7 @@
  * any improvements or extensions that they make and grant Carnegie the
  * rights to redistribute these changes.
  *
- * $FreeBSD: releng/12.0/sys/vm/vm_pageout.h 338507 2018-09-06 19:28:52Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _VM_VM_PAGEOUT_H_
@@ -106,5 +106,6 @@ void vm_pageout_oom(int shortage);
 
 void vm_swapout_run(void);
 void vm_swapout_run_idle(void);
+
 #endif /* _KERNEL */
 #endif	/* _VM_VM_PAGEOUT_H_ */

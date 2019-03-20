@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/ia32/ia32_sigtramp.S 332122 2018-04-06 17:35:35Z brooks $
+ * $FreeBSD$
  */
 
 #include <machine/asmacros.h>

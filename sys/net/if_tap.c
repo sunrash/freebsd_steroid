@@ -33,7 +33,7 @@
  */
 
 /*
- * $FreeBSD: releng/12.0/sys/net/if_tap.c 339121 2018-10-03 07:35:16Z tuexen $
+ * $FreeBSD$
  * $Id: if_tap.c,v 0.21 2000/07/23 21:46:02 max Exp $
  */
 
@@ -346,7 +346,7 @@ tapclone(void *arg, struct ucred *cred, char *name, int namelen, struct cdev **d
 		return;
 
 	if (!tapdclone ||
-	    (!tapuopen && priv_check_cred(cred, PRIV_NET_IFCREATE, 0) != 0))
+	    (!tapuopen && priv_check_cred(cred, PRIV_NET_IFCREATE) != 0))
 		return;
 
 	unit = 0;

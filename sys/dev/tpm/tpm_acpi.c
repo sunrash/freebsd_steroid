@@ -16,7 +16,7 @@
  * OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/tpm/tpm_acpi.c 298955 2016-05-03 03:41:25Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -52,12 +52,13 @@ char *tpm_ids[] = {"ATM1200",  "BCM0102", "INTC0102", "SNO3504", "WEC1000",
 static int
 tpm_acpi_probe(device_t dev)
 {
-	if (ACPI_ID_PROBE(device_get_parent(dev), dev, tpm_ids) != NULL) {
-		device_set_desc(dev, "Trusted Platform Module");
-		return BUS_PROBE_DEFAULT;
-	}
+	int rv;
 	
-	return ENXIO;
+	rv = ACPI_ID_PROBE(device_get_parent(dev), dev, tpm_ids, NULL);
+	if (rv <= 0)
+		device_set_desc(dev, "Trusted Platform Module");
+		
+	return (rv);
 }
 
 static device_method_t tpm_acpi_methods[] = {

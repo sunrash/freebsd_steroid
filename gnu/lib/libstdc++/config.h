@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/gnu/lib/libstdc++/config.h 336351 2018-07-16 18:53:28Z pfg $ */
+/* $FreeBSD$ */
 #ifndef __ISO_C_VISIBLE
 #include <sys/cdefs.h>
 #endif

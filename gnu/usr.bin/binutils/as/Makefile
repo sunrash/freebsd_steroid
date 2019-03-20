@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/usr.bin/binutils/as/Makefile 325189 2017-10-31 00:07:37Z bdrewery $
+# $FreeBSD$
 
 
 # BINDIR

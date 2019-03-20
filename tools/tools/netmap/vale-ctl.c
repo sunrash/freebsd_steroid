@@ -23,7 +23,7 @@
  * SUCH DAMAGE.
  */
 
-/* $FreeBSD: releng/12.0/tools/tools/netmap/vale-ctl.c 339915 2018-10-30 14:25:16Z vmaffione $ */
+/* $FreeBSD$ */
 
 #define NETMAP_WITH_LIBS
 #include <net/netmap_user.h>

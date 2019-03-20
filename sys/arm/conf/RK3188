@@ -16,7 +16,7 @@
 # If you are in doubt as to the purpose or necessity of a line, check first
 # in NOTES.
 #
-# $FreeBSD: releng/12.0/sys/arm/conf/RK3188 338116 2018-08-20 20:31:53Z imp $
+# $FreeBSD$
 
 #NO_UNIVERSE
 
@@ -79,7 +79,6 @@ device		bpf
 
 # Wireless NIC cards
 options 	IEEE80211_DEBUG
-options 	IEEE80211_AMPDU_AGE
 options 	IEEE80211_SUPPORT_MESH
 options 	IEEE80211_SUPPORT_TDMA
 device		wlan			# 802.11 support

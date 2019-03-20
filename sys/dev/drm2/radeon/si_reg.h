@@ -25,7 +25,7 @@
 #define __SI_REG_H__
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/drm2/radeon/si_reg.h 338285 2018-08-24 00:02:00Z imp $");
+__FBSDID("$FreeBSD$");
 
 /* SI */
 #define SI_DC_GPIO_HPD_MASK                      0x65b0

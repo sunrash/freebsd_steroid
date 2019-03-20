@@ -1,5 +1,5 @@
 #	$NetBSD: Makefile,v 1.4 2011/02/16 01:31:33 joerg Exp $
-#	$FreeBSD: releng/12.0/usr.bin/grep/Makefile 334744 2018-06-06 23:12:35Z bapt $
+#	$FreeBSD$
 #	$OpenBSD: Makefile,v 1.6 2003/06/25 15:00:04 millert Exp $
 
 .include <src.opts.mk>
@@ -10,7 +10,7 @@ MAN1=	grep.1 zgrep.1
 .else
 PROG=	bsdgrep
 CLEANFILES+= bsdgrep.1
-MAN1=	grep.1 zgrep.1
+MAN1=	bsdgrep.1 zgrep.1
 
 bsdgrep.1: grep.1
 	${CP} ${.ALLSRC} ${.TARGET}

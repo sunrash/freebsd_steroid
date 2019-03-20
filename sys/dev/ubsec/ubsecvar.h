@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/dev/ubsec/ubsecvar.h 336439 2018-07-18 00:56:25Z cem $ */
+/* $FreeBSD$ */
 /*	$OpenBSD: ubsecvar.h,v 1.35 2002/09/24 18:33:26 jason Exp $	*/
 
 /*-

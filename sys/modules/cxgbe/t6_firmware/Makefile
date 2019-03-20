@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/sys/modules/cxgbe/t6_firmware/Makefile 333276 2018-05-05 20:16:08Z np $
+# $FreeBSD$
 #
 
 T6FW=	${SRCTOP}/sys/dev/cxgbe/firmware
@@ -17,7 +17,7 @@ FIRMWS+=	${F}:${F:C/.txt//}:1.0.0.0
 .endif
 .endfor
 
-T6FW_VER=	1.19.1.0
+T6FW_VER=	1.22.0.3
 FIRMWS+=	t6fw.fw:t6fw:${T6FW_VER}
 CLEANFILES+=	t6fw.fw
 

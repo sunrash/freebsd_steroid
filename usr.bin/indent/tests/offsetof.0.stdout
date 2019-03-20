@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/usr.bin/indent/tests/offsetof.0.stdout 321381 2017-07-23 14:04:45Z pstef $ */
+/* $FreeBSD$ */
 /* See r303718 */
 void
 t(void)

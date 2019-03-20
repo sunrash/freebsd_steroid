@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/xopo/Makefile 319999 2017-06-16 06:29:21Z phil $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

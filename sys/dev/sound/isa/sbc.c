@@ -36,7 +36,7 @@
 
 #include <isa/isavar.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/isa/sbc.c 328524 2018-01-29 00:22:30Z imp $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 #define IO_MAX	3
 #define IRQ_MAX	1

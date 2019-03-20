@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_read_format_rar_invalid1.c 302075 2016-06-22 07:49:59Z mm $");
+__FBSDID("$FreeBSD$");
 
 DEFINE_TEST(test_read_format_rar_invalid1)
 {

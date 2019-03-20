@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/kern/linker_if.m 298819 2016-04-29 22:15:33Z pfg $
+# $FreeBSD$
 #
 
 #include <sys/linker.h>

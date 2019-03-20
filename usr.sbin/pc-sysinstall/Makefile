@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/pc-sysinstall/Makefile 288266 2015-09-26 14:13:51Z bdrewery $
+# $FreeBSD$
 SUBDIR=backend backend-partmanager backend-query conf doc examples
 SUBDIR+=pc-sysinstall
 SUBDIR_PARALLEL=

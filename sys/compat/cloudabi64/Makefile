@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/compat/cloudabi64/Makefile 328560 2018-01-29 19:14:15Z bdrewery $
+# $FreeBSD$
 
 # Don't use an OBJDIR
 .OBJDIR: ${.CURDIR}

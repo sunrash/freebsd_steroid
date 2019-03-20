@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # This file is in the public domain.
-# $FreeBSD: releng/12.0/tools/build/options/makeman 334247 2018-05-26 21:14:49Z eadler $
+# $FreeBSD$
 #
 # This script creates the src.conf.5 man page using template text contained
 # herein and the contents of the WITH_* and WITHOUT_* files in the same

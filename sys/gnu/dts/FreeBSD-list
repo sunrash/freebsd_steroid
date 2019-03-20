@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/gnu/dts/FreeBSD-list 279385 2015-02-28 00:06:04Z imp $
+# $FreeBSD$
 # Files to include in the import and merging....
 src/arm/animeo_ip.dts
 src/arm/at91-ariag25.dts

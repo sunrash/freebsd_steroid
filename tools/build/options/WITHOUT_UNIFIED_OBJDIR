@@ -1,4 +1,4 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITHOUT_UNIFIED_OBJDIR 325288 2017-11-01 21:22:05Z bdrewery $
+.\" $FreeBSD$
 Set to use the historical object directory format for
 .Xr build 7
 targets.

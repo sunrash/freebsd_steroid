@@ -51,7 +51,7 @@
 
 #include <sys/cdefs.h>
 /* $NetBSD: msdosfs_vfsops.c,v 1.10 2016/01/30 09:59:27 mlelstv Exp $ */
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/makefs/msdos/msdosfs_vfsops.c 336736 2018-07-26 13:33:10Z emaste $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 

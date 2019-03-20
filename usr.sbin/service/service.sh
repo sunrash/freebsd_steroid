@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $FreeBSD: releng/12.0/usr.sbin/service/service.sh 335029 2018-06-13 06:11:04Z imp $
+# $FreeBSD$
 
 # SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 #

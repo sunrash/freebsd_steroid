@@ -24,7 +24,7 @@
  *  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  *  POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/qlnx/qlnxe/ecore_mcp_api.h 336695 2018-07-25 02:36:55Z davidcs $
+ * $FreeBSD$
  *
  */
 

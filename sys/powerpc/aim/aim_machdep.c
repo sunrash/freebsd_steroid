@@ -55,7 +55,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/aim/aim_machdep.c 335160 2018-06-14 17:23:51Z jhibbits $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_kstack_pages.h"
@@ -366,6 +366,7 @@ aim_cpu_init(vm_offset_t toc)
 	bcopy(&hypertrapcode, (void *)(EXC_HEA + trap_offset), trapsize);
 	bcopy(&hypertrapcode, (void *)(EXC_HMI + trap_offset), trapsize);
 	bcopy(&hypertrapcode, (void *)(EXC_HVI + trap_offset), trapsize);
+	bcopy(&hypertrapcode, (void *)(EXC_SOFT_PATCH + trap_offset), trapsize);
 	#endif
 
 	bcopy(&rstcode, (void *)(EXC_RST + trap_offset), (size_t)&rstcodeend -

@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/mips/ingenic/jz4780_clock.h 308857 2016-11-19 17:46:18Z br $
+ * $FreeBSD$
  */
 
 #ifndef JZ4780_CLOCK_H

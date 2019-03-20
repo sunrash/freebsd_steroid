@@ -24,7 +24,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/usr.bin/procstat/procstat_cs.c 324619 2017-10-14 18:38:36Z brooks $
+ * $FreeBSD$
  */
 
 #include <sys/param.h>

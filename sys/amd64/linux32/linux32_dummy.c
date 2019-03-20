@@ -27,7 +27,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/amd64/linux32/linux32_dummy.c 332122 2018-04-06 17:35:35Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/kernel.h>
@@ -168,7 +168,7 @@ linux_ ## s ## xattr(						\
     struct thread *td, struct linux_ ## s ## xattr_args *arg)	\
 {								\
 								\
-	return (ENOATTR);					\
+	return (EOPNOTSUPP);					\
 }
 DUMMY_XATTR(set);
 DUMMY_XATTR(lset);

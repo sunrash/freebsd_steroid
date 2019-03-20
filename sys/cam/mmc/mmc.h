@@ -53,7 +53,7 @@
  * Inspired coded in sys/dev/mmc. Thanks to Warner Losh <imp@FreeBSD.org>,
  * Bernd Walter <tisco@FreeBSD.org>, and other authors.
  *
- * $FreeBSD: releng/12.0/sys/cam/mmc/mmc.h 335384 2018-06-19 20:02:03Z kibab $
+ * $FreeBSD$
  */
 
 #ifndef CAM_MMC_H

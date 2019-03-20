@@ -28,7 +28,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/bhnd/nvram/bhnd_nvram_data_bcmraw.c 315866 2017-03-23 19:29:12Z landonf $");
+__FBSDID("$FreeBSD$");
 
 #ifdef _KERNEL
 

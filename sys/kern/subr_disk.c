@@ -14,7 +14,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/subr_disk.c 335066 2018-06-13 16:48:07Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_geom.h"
 
@@ -255,6 +255,17 @@ bioq_disksort(struct bio_queue_head *head, struct bio *bp)
 		 * also have barrier semantics - no transactions
 		 * queued in the future can pass them.
 		 */
+		bioq_insert_tail(head, bp);
+		return;
+	}
+
+	/*
+	 * We should only sort requests of types that have concept of offset.
+	 * Other types, such as BIO_FLUSH or BIO_ZONE, may imply some degree
+	 * of ordering even if strict ordering is not requested explicitly.
+	 */
+	if (bp->bio_cmd != BIO_READ && bp->bio_cmd != BIO_WRITE &&
+	    bp->bio_cmd != BIO_DELETE) {
 		bioq_insert_tail(head, bp);
 		return;
 	}

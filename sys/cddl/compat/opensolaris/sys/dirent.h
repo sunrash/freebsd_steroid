@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/dirent.h 318736 2017-05-23 09:29:05Z kib $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_DIRENT_H_

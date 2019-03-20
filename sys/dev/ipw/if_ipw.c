@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/ipw/if_ipw.c 339975 2018-10-31 23:02:59Z glebius $");
+__FBSDID("$FreeBSD$");
 
 /*-
  * Intel(R) PRO/Wireless 2100 MiniPCI driver
@@ -1326,10 +1326,7 @@ ipw_release_sbd(struct ipw_softc *sc, struct ipw_soft_bd *sbd)
 		bus_dmamap_unload(sc->txbuf_dmat, sbuf->map);
 		SLIST_INSERT_HEAD(&sc->free_sbuf, sbuf, next);
 
-		if (sbuf->m->m_flags & M_TXCB)
-			ieee80211_process_callback(sbuf->ni, sbuf->m, 0/*XXX*/);
-		m_freem(sbuf->m);
-		ieee80211_free_node(sbuf->ni);
+		ieee80211_tx_complete(sbuf->ni, sbuf->m, 0/*XXX*/);
 
 		sc->sc_tx_timer = 0;
 		break;

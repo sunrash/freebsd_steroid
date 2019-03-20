@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/i386/libi386/bootinfo32.c 336252 2018-07-13 17:50:25Z ian $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 #include <sys/param.h>
@@ -176,14 +176,9 @@ bi_load32(char *args, int *howtop, int *bootdevp, vm_offset_t *bip, vm_offset_t 
 
     switch(rootdev->dd.d_dev->dv_type) {
     case DEVT_CD:
-	    /* Pass in BIOS device number. */
-	    bi.bi_bios_dev = bc_unit2bios(rootdev->dd.d_unit);
-	    bootdevnr = bc_getdev(rootdev);
-	    break;
-
     case DEVT_DISK:
 	/* pass in the BIOS device number of the current disk */
-	bi.bi_bios_dev = bd_unit2bios(rootdev->dd.d_unit);
+	bi.bi_bios_dev = bd_unit2bios(rootdev);
 	bootdevnr = bd_getdev(rootdev);
 	break;
 

@@ -27,7 +27,7 @@
 
 #include <sys/cdefs.h>
 #ifdef __FreeBSD__
-__FBSDID("$FreeBSD: releng/12.0/sys/net80211/ieee80211_dfs.c 326272 2017-11-27 15:23:17Z pfg $");
+__FBSDID("$FreeBSD$");
 #endif
 
 /*

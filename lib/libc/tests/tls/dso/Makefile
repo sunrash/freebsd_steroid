@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/tls/dso/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 TESTSRC=	${SRCTOP}/contrib/netbsd-tests/lib/libc/tls/${.CURDIR:T}
 

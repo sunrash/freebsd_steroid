@@ -26,7 +26,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/mips/atheros/ar71xx_caldata.c 318696 2017-05-23 06:20:06Z adrian $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ar71xx.h"
 

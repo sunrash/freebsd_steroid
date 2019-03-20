@@ -30,7 +30,7 @@
 /*
  * API for writing an Active Queue Management algorithm for Dummynet
  *
- * $FreeBSD: releng/12.0/sys/netpfil/ipfw/dn_aqm.h 300783 2016-05-26 22:03:28Z truckman $
+ * $FreeBSD$
  */
 
 #ifndef _IP_DN_AQM_H

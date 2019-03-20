@@ -25,7 +25,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/kdb.h 332752 2018-04-19 05:06:56Z avg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_KDB_H_
@@ -62,7 +62,7 @@ struct kdb_dbbe {
 	DATA_SET(kdb_dbbe_set, name##_dbbe)
 
 extern u_char kdb_active;		/* Non-zero while in debugger. */
-extern int debugger_on_panic;		/* enter the debugger on panic. */
+extern int debugger_on_trap;		/* enter the debugger on trap. */
 extern struct kdb_dbbe *kdb_dbbe;	/* Default debugger backend or NULL. */
 extern struct trapframe *kdb_frame;	/* Frame to kdb_trap(). */
 extern struct pcb *kdb_thrctx;		/* Current context. */

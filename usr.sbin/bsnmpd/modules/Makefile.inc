@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/bsnmpd/modules/Makefile.inc 298107 2016-04-16 07:45:30Z gjb $
+# $FreeBSD$
 
 SHLIB_MAJOR=	6
 PACKAGE=	bsnmp

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.bin/svn/svnserve/Makefile 313679 2017-02-12 08:36:47Z ngie $
+# $FreeBSD$
 
 MAN=
 

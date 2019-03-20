@@ -77,7 +77,7 @@
 
 
 # RCSid:
-#	$FreeBSD: releng/12.0/share/mk/meta2deps.sh 310437 2016-12-23 02:57:00Z sjg $
+#	$FreeBSD$
 #	$Id: meta2deps.sh,v 1.12 2016/12/13 20:44:16 sjg Exp $
 
 # Copyright (c) 2010-2013, Juniper Networks, Inc.

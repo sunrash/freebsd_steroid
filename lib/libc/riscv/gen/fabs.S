@@ -33,7 +33,7 @@
  */
 
 #include <machine/asm.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/riscv/gen/fabs.S 332792 2018-04-19 20:36:15Z brooks $");
+__FBSDID("$FreeBSD$");
 
 #ifdef __riscv_float_abi_double
 ENTRY(fabs)

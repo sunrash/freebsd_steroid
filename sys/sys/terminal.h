@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/terminal.h 333669 2018-05-16 09:01:02Z dumbbell $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_TERMINAL_H_

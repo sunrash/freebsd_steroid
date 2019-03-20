@@ -29,7 +29,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/powerpc/ofw/openpic_ofw.c 326261 2017-11-27 15:09:59Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>
@@ -95,9 +95,12 @@ static driver_t openpic_ofw_driver = {
 	sizeof(struct openpic_softc),
 };
 
-DRIVER_MODULE(openpic, ofwbus, openpic_ofw_driver, openpic_devclass, 0, 0);
-DRIVER_MODULE(openpic, simplebus, openpic_ofw_driver, openpic_devclass, 0, 0);
-DRIVER_MODULE(openpic, macio, openpic_ofw_driver, openpic_devclass, 0, 0);
+EARLY_DRIVER_MODULE(openpic, ofwbus, openpic_ofw_driver, openpic_devclass,
+    0, 0, BUS_PASS_INTERRUPT);
+EARLY_DRIVER_MODULE(openpic, simplebus, openpic_ofw_driver, openpic_devclass,
+    0, 0, BUS_PASS_INTERRUPT);
+EARLY_DRIVER_MODULE(openpic, macio, openpic_ofw_driver, openpic_devclass, 0, 0,
+    BUS_PASS_INTERRUPT);
 
 static int
 openpic_ofw_probe(device_t dev)

@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/libsa/abort.c 328438 2018-01-26 17:13:04Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <stand.h>
 

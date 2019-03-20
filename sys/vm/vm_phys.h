@@ -30,7 +30,7 @@
  * WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/vm/vm_phys.h 339939 2018-10-31 02:02:12Z markj $
+ * $FreeBSD$
  */
 
 /*
@@ -41,6 +41,10 @@
 #define	_VM_PHYS_H_
 
 #ifdef _KERNEL
+
+#ifndef VM_NFREEORDER_MAX
+#define	VM_NFREEORDER_MAX	VM_NFREEORDER
+#endif
 
 /* Domains must be dense (non-sparse) and zero-based. */
 struct mem_affinity {
@@ -63,7 +67,7 @@ struct vm_phys_seg {
 	vm_paddr_t	end;
 	vm_page_t	first_page;
 	int		domain;
-	struct vm_freelist (*free_queues)[VM_NFREEPOOL][VM_NFREEORDER];
+	struct vm_freelist (*free_queues)[VM_NFREEPOOL][VM_NFREEORDER_MAX];
 };
 
 extern struct vm_phys_seg vm_phys_segs[];

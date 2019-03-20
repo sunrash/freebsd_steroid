@@ -23,7 +23,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/libexec/rtld-elf/paths.h 337067 2018-08-02 07:43:28Z trasz $
+ * $FreeBSD$
  */
 
 #ifndef PATHS_H
@@ -69,10 +69,10 @@
 #define	SOFT_STANDARD_LIBRARY_PATH "/usr/libsoft"
 #define	LD_SOFT_		"LD_SOFT_"
 
-extern char *ld_elf_hints_default;
-extern char *ld_path_libmap_conf;
-extern char *ld_path_rtld;
-extern char *ld_standard_library_path;
-extern char *ld_env_prefix;
+extern const char *ld_elf_hints_default;
+extern const char *ld_path_libmap_conf;
+extern const char *ld_path_rtld;
+extern const char *ld_standard_library_path;
+extern const char *ld_env_prefix;
 
 #endif /* PATHS_H */

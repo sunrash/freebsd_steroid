@@ -7,7 +7,7 @@
 /* This file implements the VMCI Simple Datagram API on the host. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/vmware/vmci/vmci_datagram.c 332263 2018-04-08 01:32:56Z mp $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/types.h>
 #include <sys/systm.h>

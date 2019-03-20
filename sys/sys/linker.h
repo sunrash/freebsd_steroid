@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/sys/linker.h 338211 2018-08-22 20:44:30Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_LINKER_H_
@@ -183,6 +183,8 @@ int linker_ddb_search_symbol_name(caddr_t value, char *buf, u_int buflen,
 /*
  * stack(9) helper for situations where kernel locking is required.
  */
+int linker_search_symbol_name_flags(caddr_t value, char *buf, u_int buflen,
+    long *offset, int flags);
 int linker_search_symbol_name(caddr_t value, char *buf, u_int buflen,
     long *offset);
 

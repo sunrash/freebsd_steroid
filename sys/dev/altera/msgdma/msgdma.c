@@ -31,7 +31,7 @@
 /* Altera mSGDMA driver. */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/altera/msgdma/msgdma.c 332470 2018-04-13 13:23:31Z br $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_platform.h"
 #include <sys/param.h>

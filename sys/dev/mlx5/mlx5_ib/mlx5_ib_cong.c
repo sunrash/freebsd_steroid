@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/mlx5_ib/mlx5_ib_cong.c 330648 2018-03-08 11:23:14Z hselasky $
+ * $FreeBSD$
  */
 
 #include "mlx5_ib.h"
@@ -393,7 +393,8 @@ void
 mlx5_ib_cleanup_congestion(struct mlx5_ib_dev *dev)
 {
 
-	cancel_delayed_work_sync(&dev->congestion.dwork);
+	while (cancel_delayed_work_sync(&dev->congestion.dwork))
+		;
 	sysctl_ctx_free(&dev->congestion.ctx);
 	sx_destroy(&dev->congestion.lock);
 }

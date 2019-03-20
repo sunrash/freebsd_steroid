@@ -75,7 +75,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/vm/vm_pageout.c 340396 2018-11-13 16:51:30Z markj $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_vm.h"
 
@@ -973,7 +973,7 @@ vm_pageout_laundry_worker(void *arg)
 	shortfall = 0;
 	in_shortfall = false;
 	shortfall_cycle = 0;
-	target = 0;
+	last_target = target = 0;
 	nfreed = 0;
 
 	/*

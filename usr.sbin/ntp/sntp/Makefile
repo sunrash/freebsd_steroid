@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/ntp/sntp/Makefile 317388 2017-04-24 21:55:59Z brooks $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

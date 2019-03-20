@@ -40,7 +40,7 @@
 
 #ifndef RPC_HDR
 %#include <sys/cdefs.h>
-%__FBSDID("$FreeBSD: releng/12.0/include/rpcsvc/nis_callback.x 259117 2013-12-09 04:26:50Z hrs $");
+%__FBSDID("$FreeBSD$");
 #endif
 
 /*

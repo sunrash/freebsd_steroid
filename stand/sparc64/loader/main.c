@@ -33,7 +33,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/stand/sparc64/loader/main.c 338201 2018-08-22 14:33:57Z lidl $");
+__FBSDID("$FreeBSD$");
 
 /*
  * FreeBSD/sparc64 kernel loader - machine dependent part

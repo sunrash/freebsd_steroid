@@ -22,7 +22,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/mlx5/vport.h 336450 2018-07-18 10:03:30Z hselasky $
+ * $FreeBSD$
  */
 
 #ifndef __MLX5_VPORT_H__
@@ -88,7 +88,7 @@ int mlx5_set_nic_vport_current_mac(struct mlx5_core_dev *mdev, int vport,
 				   bool other_vport, u8 *addr);
 int mlx5_query_nic_vport_min_inline(struct mlx5_core_dev *mdev,
 				    u16 vport, u8 *min_inline);
-void mlx5_query_min_inline(struct mlx5_core_dev *mdev, u8 *min_inline);
+int mlx5_query_min_inline(struct mlx5_core_dev *mdev, u8 *min_inline);
 int mlx5_modify_nic_vport_min_inline(struct mlx5_core_dev *mdev,
 				     u16 vport, u8 min_inline);
 int mlx5_modify_nic_vport_port_guid(struct mlx5_core_dev *mdev,

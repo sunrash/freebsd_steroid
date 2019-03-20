@@ -1,5 +1,5 @@
 #
-# $FreeBSD: releng/12.0/usr.sbin/pmc/Makefile 339064 2018-10-01 16:16:05Z br $
+# $FreeBSD$
 #
 
 .include <src.opts.mk>

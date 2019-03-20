@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/sh/tests/Makefile 322438 2017-08-12 19:17:48Z jilles $
+# $FreeBSD$
 
 .include <bsd.own.mk>
 

@@ -29,7 +29,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/amd64/include/pmc_mdep.h 334596 2018-06-04 02:05:48Z mmacy $
+ * $FreeBSD$
  */
 
 /* Machine dependent interfaces */

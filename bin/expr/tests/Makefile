@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/bin/expr/tests/Makefile 299094 2016-05-04 23:20:53Z ngie $
+# $FreeBSD$
 
 NETBSD_ATF_TESTS_SH=	expr_test
 

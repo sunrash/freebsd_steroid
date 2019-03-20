@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tests/sys/pjdfstest/config.h 320448 2017-06-28 09:22:45Z ngie $ */
+/* $FreeBSD$ */
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 

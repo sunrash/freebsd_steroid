@@ -25,7 +25,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/glxsb/glxsb.h 336441 2018-07-18 03:32:28Z cem $
+ * $FreeBSD$
  */
 
 #ifndef _GLXSB_H_

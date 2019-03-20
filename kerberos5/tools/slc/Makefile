@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/kerberos5/tools/slc/Makefile 314657 2017-03-04 11:34:36Z ngie $
+# $FreeBSD$
 
 PROG=	slc
 LIBROKEN_A=     ${.OBJDIR:H:H}/lib/libroken/libroken.a

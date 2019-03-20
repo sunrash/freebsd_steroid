@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/lib/libpam/modules/pam_tacplus/Makefile 275024 2014-11-25 11:07:26Z bapt $
+# $FreeBSD$
 
 LIB=	pam_tacplus
 SRCS=	pam_tacplus.c

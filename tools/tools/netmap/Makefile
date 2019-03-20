@@ -1,9 +1,9 @@
 #
-# $FreeBSD: releng/12.0/tools/tools/netmap/Makefile 314915 2017-03-08 17:29:40Z sbruno $
+# $FreeBSD$
 #
 # For multiple programs using a single source file each,
 # we can just define 'progs' and create custom targets.
-PROGS	=	pkt-gen nmreplay bridge vale-ctl
+PROGS	=	pkt-gen nmreplay bridge vale-ctl lb
 
 CLEANFILES = $(PROGS) *.o
 MAN=
@@ -34,3 +34,6 @@ nmreplay: nmreplay.o
 
 vale-ctl: vale-ctl.o
 	$(CC) $(CFLAGS) -o vale-ctl vale-ctl.o
+
+lb: lb.o pkt_hash.o
+	$(CC) $(CFLAGS) -o lb lb.o pkt_hash.o $(LDFLAGS)

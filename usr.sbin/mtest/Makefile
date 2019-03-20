@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/mtest/Makefile 333894 2018-05-19 20:57:22Z eadler $
+# $FreeBSD$
 
 .include <src.opts.mk>
 

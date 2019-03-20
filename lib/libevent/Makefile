@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libevent/Makefile 316063 2017-03-27 22:34:43Z adrian $
+# $FreeBSD$
 
 PACKAGE=lib${LIB}
 .PATH:	${SRCTOP}/contrib/pf/libevent

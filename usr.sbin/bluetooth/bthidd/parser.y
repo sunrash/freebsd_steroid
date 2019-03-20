@@ -31,7 +31,7 @@
  * SUCH DAMAGE.
  *
  * $Id: parser.y,v 1.7 2006/09/07 21:06:53 max Exp $
- * $FreeBSD: releng/12.0/usr.sbin/bluetooth/bthidd/parser.y 333113 2018-04-30 12:16:54Z wulf $
+ * $FreeBSD$
  */
 
 #include <sys/queue.h>

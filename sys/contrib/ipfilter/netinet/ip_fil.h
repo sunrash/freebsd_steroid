@@ -4,7 +4,7 @@
  * See the IPFILTER.LICENCE file for details on licencing.
  *
  * @(#)ip_fil.h	1.35 6/5/96
- * $FreeBSD: releng/12.0/sys/contrib/ipfilter/netinet/ip_fil.h 318606 2017-05-22 03:01:35Z cy $
+ * $FreeBSD$
  * Id: ip_fil.h,v 2.170.2.51 2007/10/10 09:48:03 darrenr Exp $
  */
 
@@ -1026,11 +1026,7 @@ typedef	struct	iplog	{
 #define	IPLOG_SIZE	sizeof(iplog_t)
 
 typedef	struct	ipflog	{
-#if (defined(NetBSD) && (NetBSD <= 1991011) && (NetBSD >= 199603)) || \
-        (defined(OpenBSD) && (OpenBSD >= 199603))
-#else
-	u_int	fl_unit;
-#endif
+	u_int		fl_unit;
 	u_32_t		fl_rule;
 	u_32_t		fl_flags;
 	u_32_t		fl_lflags;
@@ -1439,22 +1435,6 @@ typedef	struct	ipftune	{
 # define	CDEV_MAJOR	79
 #endif
 
-/*
- * Post NetBSD 1.2 has the PFIL interface for packet filters.  This turns
- * on those hooks.  We don't need any special mods in non-IP Filter code
- * with this!
- */
-#if (defined(NetBSD) && (NetBSD > 199609) && (NetBSD <= 1991011)) || \
-    (defined(NetBSD1_2) && NetBSD1_2 > 1) || \
-    (defined(__FreeBSD__) && (__FreeBSD_version >= 500043))
-# if (defined(NetBSD) && NetBSD >= 199905)
-#  define PFIL_HOOKS
-# endif
-# ifdef PFIL_HOOKS
-#  define NETBSD_PF
-# endif
-#endif
-
 #ifdef _KERNEL
 # define	FR_VERBOSE(verb_pr)
 # define	FR_DEBUG(verb_pr)
@@ -1833,9 +1813,6 @@ extern	int	ipf_resolvefunc __P((ipf_main_softc_t *, void *));
 extern	void	*ipf_resolvenic __P((ipf_main_softc_t *, char *, int));
 extern	int	ipf_send_icmp_err __P((int, fr_info_t *, int));
 extern	int	ipf_send_reset __P((fr_info_t *));
-#if  (defined(__FreeBSD_version) && (__FreeBSD_version < 501000)) || \
-     !defined(_KERNEL) || defined(linux)
-#endif
 extern	void	ipf_apply_timeout __P((ipftq_t *, u_int));
 extern	ipftq_t	*ipf_addtimeoutqueue __P((ipf_main_softc_t *, ipftq_t **,
 					  u_int));

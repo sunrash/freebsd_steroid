@@ -35,7 +35,7 @@
  *
  *	@(#)machAsmDefs.h	8.1 (Berkeley) 6/10/93
  *	JNPR: asm.h,v 1.10 2007/08/09 11:23:32 katta
- * $FreeBSD: releng/12.0/sys/mips/include/asm.h 328629 2018-01-31 17:36:39Z jhb $
+ * $FreeBSD$
  */
 
 /*

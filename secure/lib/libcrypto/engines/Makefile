@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/secure/lib/libcrypto/engines/Makefile 339270 2018-10-09 21:28:26Z gjb $
+# $FreeBSD$
 
 SUBDIR=		capi
 .if ${MACHINE_CPUARCH} == "amd64" || ${MACHINE_CPUARCH} == "i386"

@@ -40,7 +40,7 @@
 #include <machine/riscvreg.h>
 #include <machine/pte.h>
 
-__FBSDID("$FreeBSD: releng/12.0/sys/riscv/riscv/swtch.S 338814 2018-09-19 23:45:18Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #ifdef FPE
 .macro __fpe_state_save p
@@ -223,7 +223,7 @@ ENTRY(cpu_throw)
 	srli	t0, t0, PAGE_SHIFT
 	li	t1, SATP_MODE_SV39
 	or	t0, t0, t1
-	csrw	sptbr, t0
+	csrw	satp, t0
 
 	/* TODO: Invalidate the TLB */
 
@@ -341,7 +341,7 @@ ENTRY(cpu_switch)
 	srli	t0, t0, PAGE_SHIFT
 	li	t1, SATP_MODE_SV39
 	or	t0, t0, t1
-	csrw	sptbr, t0
+	csrw	satp, t0
 
 	/* TODO: Invalidate the TLB */
 

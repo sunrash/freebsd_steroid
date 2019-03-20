@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libmp/tests/Makefile 315036 2017-03-11 00:08:11Z asomers $
+# $FreeBSD$
 
 TAP_TESTS_C+=	legacy_test
 

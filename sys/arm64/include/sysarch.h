@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	from: FreeBSD: src/sys/i386/include/sysarch.h,v 1.14 2000/09/21
- * $FreeBSD: releng/12.0/sys/arm64/include/sysarch.h 280711 2015-03-26 21:10:42Z andrew $
+ * $FreeBSD$
  */
 
 /*

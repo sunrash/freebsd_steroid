@@ -31,13 +31,14 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/riscv/include/cpu.h 340269 2018-11-08 22:39:38Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _MACHINE_CPU_H_
 #define	_MACHINE_CPU_H_
 
 #include <machine/atomic.h>
+#include <machine/cpufunc.h>
 #include <machine/frame.h>
 
 #define	TRAPF_PC(tfp)		((tfp)->tf_ra)
@@ -86,8 +87,7 @@ static __inline uint64_t
 get_cyclecount(void)
 {
 
-	/* TODO: This is bogus */
-	return (1);
+	return (rdcycle());
 }
 
 #endif

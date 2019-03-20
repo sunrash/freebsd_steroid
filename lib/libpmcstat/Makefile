@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libpmcstat/Makefile 334244 2018-05-26 19:29:19Z mmacy $
+# $FreeBSD$
 PACKAGE=lib${LIB}
 LIB=	pmcstat
 INTERNALLIB=

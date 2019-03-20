@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mac_veriexec_sha384/Makefile 335399 2018-06-20 00:41:30Z stevek $
+# $FreeBSD$
 
 .PATH: ${.CURDIR}/../../security/mac_veriexec
 .PATH: ${.CURDIR}/../../crypto/sha2

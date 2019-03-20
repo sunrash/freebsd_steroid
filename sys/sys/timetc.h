@@ -8,7 +8,7 @@
  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
  * ----------------------------------------------------------------------------
  *
- * $FreeBSD: releng/12.0/sys/sys/timetc.h 326823 2017-12-13 16:13:17Z pfg $
+ * $FreeBSD$
  */
 
 #ifndef _SYS_TIMETC_H_

@@ -1,6 +1,6 @@
-# $FreeBSD: releng/12.0/stand/i386/loader/Makefile 337806 2018-08-14 18:44:41Z imp $
+# $FreeBSD$
 
-HAVE_ZFS=		${MK_ZFS}
+HAVE_ZFS=		${MK_LOADER_ZFS}
 
 LOADER_NET_SUPPORT?=	yes
 LOADER_NFS_SUPPORT?=	yes
@@ -64,7 +64,7 @@ ${LOADER}: ${LOADER}.bin ${BTXLDR} ${BTXKERN}
 ${LOADER}.bin: ${LOADER}.sym
 	strip -R .comment -R .note -o ${.TARGET} ${.ALLSRC}
 
-.if ${MK_ZFS} == "yes" && ${LOADER_INTERP} == ${LOADER_DEFAULT_INTERP}
+.if ${MK_LOADER_ZFS} == "yes" && ${LOADER_INTERP} == ${LOADER_DEFAULT_INTERP}
 LINKS+=		${BINDIR}/${LOADER} ${BINDIR}/zfsloader
 .endif
 .if ${LOADER_INTERP} == ${LOADER_DEFAULT_INTERP}

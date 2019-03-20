@@ -29,7 +29,7 @@
 // $Id: binstream.c,v 1.1 2006/07/05 10:47:54 ivoras Exp $
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/geom/virstor/binstream.c 326270 2017-11-27 15:17:37Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/endian.h>
 #include <sys/param.h>

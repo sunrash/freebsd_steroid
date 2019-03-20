@@ -26,7 +26,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF 
  * SUCH DAMAGE. 
  *
- * $FreeBSD: releng/12.0/cddl/lib/libdtrace/libproc_compat.h 329188 2018-02-12 23:53:38Z dteske $
+ * $FreeBSD$
  */
 
 /*

@@ -2,7 +2,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libmd/md4c.c 336539 2018-07-20 07:01:28Z delphij $");
+__FBSDID("$FreeBSD$");
 
 /*-
    SPDX-License-Identifier: RSA-MD

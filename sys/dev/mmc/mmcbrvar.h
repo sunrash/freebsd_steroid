@@ -51,7 +51,7 @@
  * or the SD Card Association to disclose or distribute any technical
  * information, know-how or other confidential information to any third party.
  *
- * $FreeBSD: releng/12.0/sys/dev/mmc/mmcbrvar.h 338304 2018-08-24 21:08:05Z marius $
+ * $FreeBSD$
  */
 
 #ifndef DEV_MMC_MMCBRVAR_H

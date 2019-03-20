@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/sbin/rcorder/ealloc.c 325966 2017-11-18 14:26:50Z pfg $	*/
+/*	$FreeBSD$	*/
 /*	$NetBSD: ealloc.c,v 1.1.1.1 1999/11/19 04:30:56 mrg Exp $	*/
 
 /*-

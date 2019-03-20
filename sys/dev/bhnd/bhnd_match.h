@@ -28,7 +28,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGES.
  * 
- * $FreeBSD: releng/12.0/sys/dev/bhnd/bhnd_match.h 326836 2017-12-14 01:58:05Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _BHND_BHND_MATCH_H_

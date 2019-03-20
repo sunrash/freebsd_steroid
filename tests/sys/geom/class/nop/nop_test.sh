@@ -22,7 +22,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/tests/sys/geom/class/nop/nop_test.sh 337237 2018-08-03 12:16:02Z br $
+# $FreeBSD$
 
 MD_DEVS="md.devs"
 PLAINFILES=plainfiles

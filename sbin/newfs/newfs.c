@@ -50,7 +50,7 @@ static char sccsid[] = "@(#)newfs.c	8.13 (Berkeley) 5/1/95";
 #endif /* not lint */
 #endif
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sbin/newfs/newfs.c 335597 2018-06-24 05:40:42Z eadler $");
+__FBSDID("$FreeBSD$");
 
 /*
  * newfs: friendly front end to mkfs
@@ -153,9 +153,10 @@ main(int argc, char *argv[])
 			volumelabel = optarg;
 			i = -1;
 			while (isalnum(volumelabel[++i]) ||
-			    volumelabel[i] == '_');
+			    volumelabel[i] == '_' || volumelabel[i] == '-');
 			if (volumelabel[i] != '\0') {
-				errx(1, "bad volume label. Valid characters are alphanumerics.");
+				errx(1, "bad volume label. Valid characters "
+				    "are alphanumerics, dashes, and underscores.");
 			}
 			if (strlen(volumelabel) >= MAXVOLLEN) {
 				errx(1, "bad volume label. Length is longer than %d.",

@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  *
  *	from: FreeBSD: src/sys/i386/include/atomic.h,v 1.20 2001/02/11
- * $FreeBSD: releng/12.0/sys/sparc64/include/atomic.h 336832 2018-07-28 15:42:57Z marius $
+ * $FreeBSD$
  */
 
 #ifndef	_MACHINE_ATOMIC_H_

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/mwlfw/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 KMOD=	mw88W8363fw
 FIRMWS=	mw88W8363.fw:mw88W8363fw mwlboot.fw:mwlboot

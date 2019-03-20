@@ -30,7 +30,7 @@
  * SUCH DAMAGE.
  *
  * $Id: smb_lib.h,v 1.24 2001/12/20 15:19:43 bp Exp $
- * $FreeBSD: releng/12.0/contrib/smbfs/include/netsmb/smb_lib.h 281550 2015-04-15 09:09:20Z tijl $
+ * $FreeBSD$
  */
 #ifndef _NETSMB_SMB_LIB_H_
 #define _NETSMB_SMB_LIB_H_

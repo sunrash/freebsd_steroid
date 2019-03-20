@@ -24,7 +24,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/compat/cloudabi/cloudabi_file.c 333425 2018-05-09 18:47:24Z mmacy $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/capsicum.h>
@@ -752,9 +752,9 @@ cloudabi_sys_file_unlink(struct thread *td,
 		return (error);
 
 	if (uap->flags & CLOUDABI_UNLINK_REMOVEDIR)
-		error = kern_rmdirat(td, uap->fd, path, UIO_SYSSPACE);
+		error = kern_rmdirat(td, uap->fd, path, UIO_SYSSPACE, 0);
 	else
-		error = kern_unlinkat(td, uap->fd, path, UIO_SYSSPACE, 0);
+		error = kern_unlinkat(td, uap->fd, path, UIO_SYSSPACE, 0, 0);
 	cloudabi_freestr(path);
 	return (error);
 }

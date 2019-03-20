@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libutil/uucplock.c 334106 2018-05-23 17:02:12Z jhb $");
+__FBSDID("$FreeBSD$");
 __SCCSID("@(#)uucplock.c	8.1 (Berkeley) 6/6/93");
 
 #include <sys/types.h>

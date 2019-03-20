@@ -1,5 +1,5 @@
 # AM335x generic configuration
-#$FreeBSD: releng/12.0/sys/arm/ti/am335x/std.am335x 327367 2017-12-30 00:20:49Z ian $
+#$FreeBSD$
 files		"../ti/am335x/files.am335x"
 include		"../ti/std.ti"
 

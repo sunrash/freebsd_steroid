@@ -32,7 +32,7 @@
  * SUCH DAMAGE.
  *
  *	@(#)key.h	8.1 (Berkeley) 6/4/93
- * $FreeBSD: releng/12.0/lib/libedit/keymacro.h 295369 2016-02-07 15:26:21Z pfg $
+ * $FreeBSD$
  */
 
 /*

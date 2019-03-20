@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/evdev/evdev.h 337721 2018-08-13 19:05:53Z wulf $
+ * $FreeBSD$
  */
 
 #ifndef	_DEV_EVDEV_EVDEV_H

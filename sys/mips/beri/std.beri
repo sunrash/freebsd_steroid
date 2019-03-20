@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/mips/beri/std.beri 332441 2018-04-12 17:43:19Z br $
+# $FreeBSD$
 files	"../beri/files.beri"
 
 cpu		CPU_MIPS4KC

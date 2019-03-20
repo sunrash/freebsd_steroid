@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/tools/regression/ccd/layout/a.c 109416 2003-01-17 12:23:44Z phk $ */
+/* $FreeBSD$ */
 #include <unistd.h>
 
 static uint32_t buf[512/4];

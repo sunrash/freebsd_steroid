@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/lib/libc/include/libc_private.h 338059 2018-08-19 17:40:50Z delphij $
+ * $FreeBSD$
  *
  * Private definitions for libc, libc_r and libpthread.
  *

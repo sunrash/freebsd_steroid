@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/gnu/lib/libssp/libssp_nonshared/Makefile 315175 2017-03-12 18:59:16Z imp $
+# $FreeBSD$
 
 GCCDIR=	${SRCTOP}/contrib/gcc
 GCCLIB=	${SRCTOP}/contrib/gcclibs

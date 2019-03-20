@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/lib/libcrypt/tests/Makefile 315035 2017-03-11 00:07:04Z asomers $
+# $FreeBSD$
 
 ATF_TESTS_C+= crypt_tests
 

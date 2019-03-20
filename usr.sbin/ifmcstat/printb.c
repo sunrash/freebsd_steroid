@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/usr.sbin/ifmcstat/printb.c 327580 2018-01-05 07:28:58Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <assert.h>
 #include <stdio.h>

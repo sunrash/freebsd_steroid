@@ -48,7 +48,7 @@
 ** $Id: sysdep.h,v 1.6 2001-04-26 21:41:55-07 jsadler Exp jsadler $
 */
 
-/* $FreeBSD: releng/12.0/stand/ficl/amd64/sysdep.h 223695 2011-06-30 16:08:56Z dfr $ */
+/* $FreeBSD$ */
 
 #if !defined (__SYSDEP_H__)
 #define __SYSDEP_H__ 

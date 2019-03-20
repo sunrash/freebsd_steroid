@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/tools/diag/prtblknos/main.c 332798 2018-04-19 22:43:55Z mckusick $
+ * $FreeBSD$
  */
 
 #include <ufs/ffs/fs.h>
@@ -47,7 +47,7 @@ main(argc, argv)
 	char *argv[];
 {
 	struct uufsd disk;
-	union dinode *dp;
+	union dinodep dp;
 	struct fs *fs;
 	struct stat sb;
 	struct statfs sfb;
@@ -98,11 +98,11 @@ main(argc, argv)
 			(void)printf("%s (inode #%jd): ", filename,
 			    (intmax_t)inonum);
 
-		if ((error = getino(&disk, (void **)&dp, inonum, NULL)) < 0)
-			warn("Read of inode %jd on %s failed",
-			    (intmax_t)inonum, fsname);
+		if ((error = getinode(&disk, &dp, inonum)) < 0)
+			warn("Read of inode %jd on %s failed: %s",
+			    (intmax_t)inonum, fsname, disk.d_error);
 
-		prtblknos(&disk, dp);
+		prtblknos(&disk, (union dinode *)dp.dp1);
 	}
 	exit(0);
 }

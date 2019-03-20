@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: releng/12.0/contrib/libarchive/libarchive/test/test_compat_gtar.c 313074 2017-02-02 00:50:46Z mm $");
+__FBSDID("$FreeBSD$");
 
 /*
  * Verify our ability to read sample files created by GNU tar.

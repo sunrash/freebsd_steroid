@@ -1,6 +1,9 @@
-# $FreeBSD: releng/12.0/lib/libc/tests/regex/Makefile 328240 2018-01-22 02:44:41Z kevans $
+# $FreeBSD$
 
 PACKAGE=	tests
+
+# local test cases
+ATF_TESTS_SH+=	multibyte
 
 .include "Makefile.inc"
 .include "${.CURDIR:H}/Makefile.netbsd-tests"

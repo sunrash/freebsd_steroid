@@ -1,4 +1,4 @@
-/*	$FreeBSD: releng/12.0/contrib/ipfilter/ipf.h 279029 2015-02-19 23:14:35Z glebius $	*/
+/*	$FreeBSD$	*/
 
 /*
  * Copyright (C) 2012 by Darren Reed.
@@ -47,9 +47,7 @@ struct file;
 #include <netinet/in_systm.h>
 #include <netinet/ip.h>
 #include <netinet/ip_icmp.h>
-#ifndef	TCP_PAWS_IDLE	/* IRIX */
 # include <netinet/tcp.h>
-#endif
 #include <netinet/udp.h>
 
 #include <arpa/inet.h>

@@ -1,5 +1,5 @@
 #	From: @(#)Makefile	8.1 (Berkeley) 6/8/93
-# $FreeBSD: releng/12.0/share/doc/psd/Makefile 307351 2016-10-15 12:07:37Z bapt $
+# $FreeBSD$
 
 # The following modules do not build/install:
 # 10.gdb

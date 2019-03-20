@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/pci/pci_iov_private.h 299002 2016-05-03 19:45:24Z jhb $
+ * $FreeBSD$
  */
 
 #ifndef _PCI_IOV_PRIVATE_H_

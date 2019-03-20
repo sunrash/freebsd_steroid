@@ -1,3 +1,3 @@
-.\" $FreeBSD: releng/12.0/tools/build/options/WITH_KERNEL_RETPOLINE 330110 2018-02-28 14:57:45Z emaste $
+.\" $FreeBSD$
 Set to enable the "retpoline" mitigation for CVE-2017-5715 in the kernel
 build.

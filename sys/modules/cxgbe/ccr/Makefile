@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/cxgbe/ccr/Makefile 318429 2017-05-17 22:13:07Z jhb $
+# $FreeBSD$
 
 CXGBE=	${SRCTOP}/sys/dev/cxgbe
 .PATH: ${CXGBE}/crypto

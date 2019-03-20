@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/stand/userboot/userboot/Makefile 338418 2018-09-01 02:23:45Z kevans $
+# $FreeBSD$
 
 LOADER_MSDOS_SUPPORT?=	yes
 LOADER_UFS_SUPPORT?=	yes
@@ -45,7 +45,7 @@ VERSION_FILE=	${.CURDIR}/../userboot/version
 LINKS+=		${BINDIR}/${SHLIB_NAME} ${BINDIR}/userboot.so
 .endif
 
-.if ${MK_ZFS} != "no"
+.if ${MK_LOADER_ZFS} != "no"
 CFLAGS+=	-DUSERBOOT_ZFS_SUPPORT
 HAVE_ZFS=yes
 .endif

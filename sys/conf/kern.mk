@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/conf/kern.mk 338445 2018-09-03 14:43:16Z br $
+# $FreeBSD$
 
 #
 # Warning flags for compiling the kernel and components of the kernel:
@@ -39,10 +39,6 @@ CWARNEXTRA+=	-Wno-address-of-packed-member
 .endif
 
 CLANG_NO_IAS= -no-integrated-as
-.if ${COMPILER_VERSION} < 30500
-# XXX: clang < 3.5 integrated-as doesn't grok .codeNN directives
-CLANG_NO_IAS34= -no-integrated-as
-.endif
 .endif
 
 .if ${COMPILER_TYPE} == "gcc"

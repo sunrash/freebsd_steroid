@@ -23,7 +23,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/cddl/compat/opensolaris/sys/proc.h 306304 2016-09-24 21:40:14Z markj $
+ * $FreeBSD$
  */
 
 #ifndef _OPENSOLARIS_SYS_PROC_H_

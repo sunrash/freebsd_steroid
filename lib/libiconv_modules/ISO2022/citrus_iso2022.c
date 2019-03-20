@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/lib/libiconv_modules/ISO2022/citrus_iso2022.c 328222 2018-01-21 21:09:08Z eadler $ */
+/* $FreeBSD$ */
 /*	$NetBSD: citrus_iso2022.c,v 1.20 2010/12/07 22:01:45 joerg Exp $	*/
 
 /*-

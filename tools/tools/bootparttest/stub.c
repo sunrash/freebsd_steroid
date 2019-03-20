@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/tools/tools/bootparttest/stub.c 321852 2017-08-01 06:51:03Z ngie $");
+__FBSDID("$FreeBSD$");
 
 #include <stdlib.h>
 #include <stdio.h>

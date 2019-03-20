@@ -1,4 +1,4 @@
-/* $FreeBSD: releng/12.0/sys/riscv/include/ieeefp.h 292407 2015-12-17 18:44:30Z br $ */
+/* $FreeBSD$ */
 
 #ifndef _MACHINE_IEEEFP_H_
 #define	_MACHINE_IEEEFP_H_

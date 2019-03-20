@@ -23,7 +23,7 @@
 # OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 #
-# $FreeBSD: releng/12.0/sys/kern/bus_if.m 312234 2017-01-15 17:54:01Z cem $
+# $FreeBSD$
 #
 
 #include <sys/types.h>
@@ -470,6 +470,44 @@ METHOD int teardown_intr {
 	struct resource	*_irq;
 	void		*_cookie;
 };
+
+/**
+ * @brief Suspend an interrupt handler
+ *
+ * This method is used to mark a handler as suspended in the case
+ * that the associated device is powered down and cannot be a source
+ * for the, typically shared, interrupt.
+ * The value of @p _irq must be the interrupt resource passed
+ * to a previous call to BUS_SETUP_INTR().
+ * 
+ * @param _dev		the parent device of @p _child
+ * @param _child	the device which allocated the resource
+ * @param _irq		the resource representing the interrupt
+ */
+METHOD int suspend_intr {
+	device_t	_dev;
+	device_t	_child;
+	struct resource *_irq;
+} DEFAULT bus_generic_suspend_intr;
+
+/**
+ * @brief Resume an interrupt handler
+ *
+ * This method is used to clear suspended state of a handler when
+ * the associated device is powered up and can be an interrupt source
+ * again.
+ * The value of @p _irq must be the interrupt resource passed
+ * to a previous call to BUS_SETUP_INTR().
+ * 
+ * @param _dev		the parent device of @p _child
+ * @param _child	the device which allocated the resource
+ * @param _irq		the resource representing the interrupt
+ */
+METHOD int resume_intr {
+	device_t	_dev;
+	device_t	_child;
+	struct resource *_irq;
+} DEFAULT bus_generic_resume_intr;
 
 /**
  * @brief Define a resource which can be allocated with

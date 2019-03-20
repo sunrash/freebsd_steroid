@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/share/mk/bsd.sys.mk 338735 2018-09-17 22:14:53Z bdrewery $
+# $FreeBSD$
 #
 # This file contains common settings used for building FreeBSD
 # sources.
@@ -79,6 +79,10 @@ CWARNFLAGS.clang+=	-Wno-unused-local-typedef
 .endif
 .if ${COMPILER_TYPE} == "clang" && ${COMPILER_VERSION} >= 40000
 CWARNFLAGS.clang+=	-Wno-address-of-packed-member
+.endif
+.if ${COMPILER_TYPE} == "clang" && ${COMPILER_VERSION} >= 70000 && \
+    ${MACHINE_CPUARCH} == "arm" && !${MACHINE_ARCH:Marmv[67]*}
+CWARNFLAGS.clang+=	-Wno-atomic-alignment
 .endif
 .endif # WARNS <= 3
 .if ${WARNS} <= 2

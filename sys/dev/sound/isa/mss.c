@@ -35,7 +35,7 @@
 
 #include <dev/sound/pcm/sound.h>
 
-SND_DECLARE_FILE("$FreeBSD: releng/12.0/sys/dev/sound/isa/mss.c 328524 2018-01-29 00:22:30Z imp $");
+SND_DECLARE_FILE("$FreeBSD$");
 
 /* board-specific include files */
 #include <dev/sound/isa/mss.h>

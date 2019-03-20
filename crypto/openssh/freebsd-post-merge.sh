@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: releng/12.0/crypto/openssh/freebsd-post-merge.sh 294320 2016-01-19 12:38:53Z des $
+# $FreeBSD$
 #
 
 xargs perl -n -i -e '

@@ -23,7 +23,7 @@
  * Authors:
  *	Eric Anholt <eric@anholt.net>
  *
- * $FreeBSD: releng/12.0/sys/dev/drm2/i915/intel_sdvo_regs.h 338285 2018-08-24 00:02:00Z imp $
+ * $FreeBSD$
  */
 
 /**

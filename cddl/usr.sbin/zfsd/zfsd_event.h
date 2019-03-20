@@ -29,7 +29,7 @@
  *
  * Authors: Justin T. Gibbs     (Spectra Logic Corporation)
  *
- * $FreeBSD: releng/12.0/cddl/usr.sbin/zfsd/zfsd_event.h 329284 2018-02-14 23:52:39Z asomers $
+ * $FreeBSD$
  */
 
 /**

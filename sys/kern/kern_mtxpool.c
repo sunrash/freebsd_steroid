@@ -46,7 +46,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/kern/kern_mtxpool.c 326271 2017-11-27 15:20:12Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/proc.h>
@@ -62,14 +62,14 @@ static MALLOC_DEFINE(M_MTXPOOL, "mtx_pool", "mutex pool");
 
 /* Pool sizes must be a power of two */
 #ifndef MTX_POOL_SLEEP_SIZE
-#define MTX_POOL_SLEEP_SIZE		128
+#define MTX_POOL_SLEEP_SIZE		1024
 #endif
 
 struct mtxpool_header {
 	int		mtxpool_size;
 	int		mtxpool_mask;
 	int		mtxpool_shift;
-	int		mtxpool_next;
+	int		mtxpool_next __aligned(CACHE_LINE_SIZE);
 };
 
 struct mtx_pool {

@@ -1,5 +1,5 @@
 #	@(#)Makefile	8.1 (Berkeley) 6/9/93
-# $FreeBSD: releng/12.0/usr.bin/vgrind/Makefile 335762 2018-06-28 13:48:59Z brd $
+# $FreeBSD$
 
 PROG=	vfontedpr
 SRCS=	regexp.c vfontedpr.c

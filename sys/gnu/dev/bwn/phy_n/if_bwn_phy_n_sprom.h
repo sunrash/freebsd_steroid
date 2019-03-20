@@ -27,7 +27,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/gnu/dev/bwn/phy_n/if_bwn_phy_n_sprom.h 328912 2018-02-05 23:38:15Z landonf $
+ * $FreeBSD$
  */
 
 #ifndef _IF_BWN_PHY_N_SPROM_H_

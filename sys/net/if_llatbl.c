@@ -27,7 +27,7 @@
  * SUCH DAMAGE.
  */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/net/if_llatbl.c 336676 2018-07-24 16:35:52Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include "opt_ddb.h"
 #include "opt_inet.h"
@@ -90,6 +90,7 @@ static int htable_foreach_lle(struct lltable *llt, llt_foreach_cb_t *f,
 static int
 lltable_dump_af(struct lltable *llt, struct sysctl_req *wr)
 {
+	struct epoch_tracker et;
 	int error;
 
 	LLTABLE_LIST_LOCK_ASSERT();
@@ -98,10 +99,10 @@ lltable_dump_af(struct lltable *llt, struct sysctl_req *wr)
 		return (0);
 	error = 0;
 
-	IF_AFDATA_RLOCK(llt->llt_ifp);
+	NET_EPOCH_ENTER(et);
 	error = lltable_foreach_lle(llt,
 	    (llt_foreach_cb_t *)llt->llt_dump_entry, wr);
-	IF_AFDATA_RUNLOCK(llt->llt_ifp);
+	NET_EPOCH_EXIT(et);
 
 	return (error);
 }
@@ -453,11 +454,12 @@ struct llentry *
 llentry_alloc(struct ifnet *ifp, struct lltable *lt,
     struct sockaddr_storage *dst)
 {
+	struct epoch_tracker et;
 	struct llentry *la, *la_tmp;
 
-	IF_AFDATA_RLOCK(ifp);
+	NET_EPOCH_ENTER(et);
 	la = lla_lookup(lt, LLE_EXCLUSIVE, (struct sockaddr *)dst);
-	IF_AFDATA_RUNLOCK(ifp);
+	NET_EPOCH_EXIT(et);
 
 	if (la != NULL) {
 		LLE_ADDREF(la);

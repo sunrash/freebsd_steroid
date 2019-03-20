@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/tools/test/net/Makefile 290089 2015-10-28 03:43:24Z gnn $ 
+# $FreeBSD$ 
 
 PROGS=	listen connect
 MAN=

@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/cam/Makefile 332208 2018-04-07 19:29:19Z imp $
+# $FreeBSD$
 
 S=	${SRCTOP}/sys
 

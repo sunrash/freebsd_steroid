@@ -30,7 +30,7 @@
   POSSIBILITY OF SUCH DAMAGE.
 
 ******************************************************************************/
-/*$FreeBSD: releng/12.0/sys/dev/ixl/if_iavf.c 340263 2018-11-08 21:36:45Z erj $*/
+/*$FreeBSD$*/
 
 #include "iavf.h"
 
@@ -126,7 +126,6 @@ static int	iavf_sysctl_queue_interrupt_table(SYSCTL_HANDLER_ARGS);
 static int	iavf_sysctl_vf_reset(SYSCTL_HANDLER_ARGS);
 static int	iavf_sysctl_vflr_reset(SYSCTL_HANDLER_ARGS);
 
-char *iavf_vc_speed_to_string(enum virtchnl_link_speed link_speed);
 static void	iavf_save_tunables(struct iavf_sc *);
 static enum i40e_status_code
     iavf_process_adminq(struct iavf_sc *, u16 *);
@@ -359,7 +358,7 @@ iavf_if_attach_pre(if_ctx_t ctx)
 		goto err_early;
 	}
 
-	iavf_dbg_init(sc, "Allocated PCI resources and MSIX vectors\n");
+	iavf_dbg_init(sc, "Allocated PCI resources and MSI-X vectors\n");
 
 	/*
 	 * XXX: This is called by init_shared_code in the PF driver,
@@ -408,7 +407,8 @@ iavf_if_attach_pre(if_ctx_t ctx)
 		goto err_aq;
 	}
 
-	device_printf(dev, "VSIs %d, QPs %d, MSIX %d, RSS sizes: key %d lut %d\n",
+	device_printf(dev,
+	    "VSIs %d, QPs %d, MSI-X %d, RSS sizes: key %d lut %d\n",
 	    sc->vf_res->num_vsis,
 	    sc->vf_res->num_queue_pairs,
 	    sc->vf_res->max_vectors,
@@ -1486,7 +1486,7 @@ iavf_free_pci_resources(struct iavf_sc *sc)
 	struct ixl_rx_queue	*rx_que = vsi->rx_queues;
 	device_t                dev = sc->dev;
 
-	/* We may get here before stations are setup */
+	/* We may get here before stations are set up */
 	if (rx_que == NULL)
 		goto early;
 
@@ -1499,7 +1499,7 @@ iavf_free_pci_resources(struct iavf_sc *sc)
 early:
 	if (sc->pci_mem != NULL)
 		bus_release_resource(dev, SYS_RES_MEMORY,
-		    PCIR_BAR(0), sc->pci_mem);
+		    rman_get_rid(sc->pci_mem), sc->pci_mem);
 }
 
 
@@ -1947,10 +1947,10 @@ iavf_config_rss_reg(struct iavf_sc *sc)
 		/*
 		 * Fetch the RSS bucket id for the given indirection entry.
 		 * Cap it at the number of configured buckets (which is
-		 * num_queues.)
+		 * num_rx_queues.)
 		 */
 		que_id = rss_get_indirection_to_bucket(i);
-		que_id = que_id % vsi->num_queues;
+		que_id = que_id % vsi->num_rx_queues;
 #else
 		que_id = j;
 #endif

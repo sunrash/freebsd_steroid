@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __SCCSID("@(#)uname.c	8.1 (Berkeley) 1/4/94");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/uname.c 335898 2018-07-03 17:31:45Z jhb $");
+__FBSDID("$FreeBSD$");
 
 #define uname wrapped_uname
 #include <sys/param.h>

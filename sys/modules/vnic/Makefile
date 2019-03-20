@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/sys/modules/vnic/Makefile 314651 2017-03-04 10:10:17Z ngie $
+# $FreeBSD$
 
 SYSDIR?=${SRCTOP}/sys
 .include "${SYSDIR}/conf/kern.opts.mk"

@@ -33,7 +33,7 @@
  *
  * so there!
  *
- * $FreeBSD: releng/12.0/sbin/ifconfig/ifconfig.h 332645 2018-04-17 12:54:58Z gallatin $
+ * $FreeBSD$
  */
 
 #define	__constructor	__attribute__((constructor))

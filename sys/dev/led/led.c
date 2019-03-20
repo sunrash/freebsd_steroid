@@ -11,7 +11,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/led/led.c 326408 2017-11-30 20:33:45Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/conf.h>
@@ -261,7 +261,7 @@ led_set(char const *name, char const *cmd)
 	mtx_unlock(&led_mtx);
 	if (sb != NULL)
 		sbuf_delete(sb);
-	return (0);
+	return (error);
 }
 
 static struct cdevsw led_cdevsw = {

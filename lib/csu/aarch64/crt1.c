@@ -30,7 +30,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/csu/aarch64/crt1.c 300406 2016-05-22 08:20:30Z andrew $");
+__FBSDID("$FreeBSD$");
 
 #include <stdlib.h>
 

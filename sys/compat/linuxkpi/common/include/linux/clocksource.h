@@ -26,7 +26,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/compat/linuxkpi/common/include/linux/clocksource.h 321773 2017-07-31 09:17:54Z hselasky $
+ * $FreeBSD$
  */
 #ifndef _LINUX_CLOCKSOURCE_H
 #define	_LINUX_CLOCKSOURCE_H

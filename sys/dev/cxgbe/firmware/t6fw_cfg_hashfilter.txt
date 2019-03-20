@@ -261,5 +261,5 @@
 	version = 0x1
 	checksum = 0xb577311e
 #
-# $FreeBSD: releng/12.0/sys/dev/cxgbe/firmware/t6fw_cfg_hashfilter.txt 333394 2018-05-09 04:09:49Z np $
+# $FreeBSD$
 #

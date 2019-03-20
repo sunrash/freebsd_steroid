@@ -1,4 +1,4 @@
-# $FreeBSD: releng/12.0/usr.sbin/fstyp/tests/Makefile 312010 2017-01-13 04:02:09Z ngie $
+# $FreeBSD$
 
 PACKAGE=	tests
 

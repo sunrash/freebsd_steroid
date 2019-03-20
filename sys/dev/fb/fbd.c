@@ -28,7 +28,7 @@
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  *
- * $FreeBSD: releng/12.0/sys/dev/fb/fbd.c 326255 2017-11-27 14:52:40Z pfg $
+ * $FreeBSD$
  */
 
 /* Generic framebuffer */
@@ -36,7 +36,7 @@
 /* TODO done normal /dev/fb methods */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/dev/fb/fbd.c 326255 2017-11-27 14:52:40Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include <sys/param.h>
 #include <sys/systm.h>

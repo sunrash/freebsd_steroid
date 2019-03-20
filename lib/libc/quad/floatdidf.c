@@ -37,7 +37,7 @@
 static char sccsid[] = "@(#)floatdidf.c	8.1 (Berkeley) 6/4/93";
 #endif /* LIBC_SCCS and not lint */
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/floatdidf.c 326025 2017-11-20 19:49:47Z pfg $");
+__FBSDID("$FreeBSD$");
 
 #include "quad.h"
 
@@ -45,8 +45,7 @@ __FBSDID("$FreeBSD: releng/12.0/lib/libc/quad/floatdidf.c 326025 2017-11-20 19:4
  * Convert (signed) quad to double.
  */
 double
-__floatdidf(x)
-	quad_t x;
+__floatdidf(quad_t x)
 {
 	double d;
 	union uu u;

@@ -31,7 +31,7 @@
 
 #include <sys/cdefs.h>
 __RCSID("$NetBSD: timespec_get.c,v 1.2 2016/10/04 12:48:15 christos Exp $");
-__FBSDID("$FreeBSD: releng/12.0/lib/libc/gen/timespec_get.c 337577 2018-08-10 15:16:36Z imp $");
+__FBSDID("$FreeBSD$");
 
 #include <time.h>
 

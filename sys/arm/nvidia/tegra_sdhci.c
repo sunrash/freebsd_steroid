@@ -25,7 +25,7 @@
  */
 
 #include <sys/cdefs.h>
-__FBSDID("$FreeBSD: releng/12.0/sys/arm/nvidia/tegra_sdhci.c 338371 2018-08-29 14:01:27Z manu $");
+__FBSDID("$FreeBSD$");
 
 /*
  * SDHCI driver glue for NVIDIA Tegra family
@@ -465,7 +465,7 @@ static DEFINE_CLASS_0(sdhci, tegra_sdhci_driver, tegra_sdhci_methods,
     sizeof(struct tegra_sdhci_softc));
 DRIVER_MODULE(sdhci_tegra, simplebus, tegra_sdhci_driver, tegra_sdhci_devclass,
     NULL, NULL);
-MODULE_DEPEND(sdhci_tegra, sdhci, 1, 1, 1);
+SDHCI_DEPEND(sdhci_tegra);
 #ifndef MMCCAM
 MMC_DECLARE_BRIDGE(sdhci);
 #endif

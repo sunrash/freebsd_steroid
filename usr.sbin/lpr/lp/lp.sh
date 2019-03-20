@@ -38,7 +38,7 @@
 #
 # Posix 1003.2 compliant print spooler interface.
 #
-# $FreeBSD: releng/12.0/usr.sbin/lpr/lp/lp.sh 326276 2017-11-27 15:37:16Z pfg $
+# $FreeBSD$
 #
 
 ncopies=""
