@@ -1,0 +1,12 @@
+@@ -1673,6 +1673,11 @@
+         return;
+     }
+ 
++#if (NGX_SSL_SENDFILE)
++    c->sendfile = 0;
++    u->output.sendfile = 0;
++#endif
++
+     ngx_http_upstream_ssl_handshake(c);
+ }
+ 

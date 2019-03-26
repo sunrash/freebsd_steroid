@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libisal_crypto
+Description: Crypto library for storage systems
+Version: 2.20.0
+Libs: -L${libdir} -lisal_crypto
+Libs.private:
+Cflags: -I${includedir}
