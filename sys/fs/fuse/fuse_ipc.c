@@ -233,7 +233,9 @@ fticket_ctor(void *mem, int size, void *arg, int flags)
 static void
 fticket_dtor(void *mem, int size, void *arg)
 {
+#ifdef INVARIANTS
 	struct fuse_ticket *ftick = mem;
+#endif
 
 	debug_printf("ftick=%p\n", ftick);
 
