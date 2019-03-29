@@ -105,6 +105,7 @@ hint.p4tcc.0.disabled=1
 hint.acpi_throttle.0.disabled=1
 ```
 For Chelsio card:
+## /boot/loader.conf
 ```
 net.inet.tcp.hostcache.cachelimit="0"
 net.inet.tcp.syncache.hashsize="2048" # (default 512)
@@ -117,8 +118,6 @@ hint.acpi_throttle.0.disabled=1
 t5fw_cfg_load="YES"
 if_cxgbe_load="YES"
 ```
-
-
 
 Both for Mellanox + Chelsio NIC card
 ## /etc/sysctl.conf
