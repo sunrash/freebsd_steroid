@@ -74,7 +74,16 @@ usr.bin		User commands.
 usr.sbin	System administration commands.
 
 
-# TUNNING INSTRUCTIONS
+
+
+
+# TUNING INSTRUCTIONS
+
+## Test env 
+1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
+6x 64GB @ DDR4 2400 Samsung 
+1x Mellanox Technologies MT27800 Family [ConnectX-5] 100GBe x QSPF28 
+
 
 For Mellanox NIC card:
 ## /boot/loader.conf
