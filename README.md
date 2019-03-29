@@ -173,9 +173,9 @@ http {
         ssl_certificate_key  cert.key;
 
         ssl_session_cache shared:SSL:8024m; # holds approx XXXXXXX sessions
-        ssl_session_timeout 6h; # 1 hour during which sessions can be re-used.
-        ssl_buffer_size 16k;
-        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256;
+        ssl_session_timeout 6h; # 6 hour during which sessions can be re-used.
+        ssl_buffer_size 16k; # maybe large buffer better than smal   
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256; # best & cheap perfomance 
         ssl_prefer_server_ciphers  on;
 
         location / {
