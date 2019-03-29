@@ -98,6 +98,8 @@ mlx5_load=YES
 mlx5en_load=YES
 hint.p4tcc.0.disabled=1
 hint.acpi_throttle.0.disabled=1
+ahci_load=YES
+aio_load=YES
 ```
 
 Both for Mellanox + Chelsio NIC card
@@ -165,6 +167,9 @@ net.route.netisr_maxqlen=2048       # (default 256)
 net.inet.raw.maxdgram=16384       # (default 9216)
 net.inet.raw.recvspace=16384      # (default 9216)
 kern.random.harvest.mask=351  # (default 511)
+net.isr.bindthreads=1 # (default 0, do not try it on Chelsio T6 card)
+net.isr.defaultqlimit=4096 # (default 256)
+net.link.ifqmaxlen=2048  # (default 50)
 ```
 
 
