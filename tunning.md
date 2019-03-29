@@ -1,4 +1,7 @@
-/boot/loader.conf
+
+For Mellanox card:
+##/boot/loader.conf
+```
 net.isr.maxthreads="-1"
 net.inet.tcp.syncache.hashsize="2048" # (default 512)
 net.inet.tcp.syncache.bucketlimit="300" # (default 30)
@@ -9,9 +12,11 @@ mlx5_load=YES
 mlx5en_load=YES
 hint.p4tcc.0.disabled=1
 hint.acpi_throttle.0.disabled=1
+```
 
 
-/etc/sysctl.conf
+##/etc/sysctl.conf
+```
 kern.ipc.maxsockbuf=614400000  # (wscale 14)
 net.inet.tcp.recvbuf_inc=65536     # (default 16384)
 net.inet.tcp.sendbuf_inc=65536     # (default 8192)
@@ -59,11 +64,36 @@ kern.sugid_coredump=0        # (default 0)
 kern.ipc.tls.disable=0 # (default 0)
 kern.ipc.tls.ifnet.permitted=0 (default 0)
 vfs.read_max=128
+kern.ipc.somaxconn=8096 (default 128)
+net.inet.icmp.icmplim=1 (default 200)
+net.inet.icmp.icmplim_output=0  # (default 1)
+net.inet.tcp.hostcache.expire=3900  # (default 3600)
+net.inet.tcp.delacktime=20 # (default 100)
+kern.threads.max_threads_per_proc=9000 (default 1500)
+kern.sched.interact=5 # (default 30)
+kern.sched.slice=3    # (default 12)
+net.inet.tcp.keepidle=10000 (default 65000)
+net.inet.tcp.keepintvl=5000 (default 75000)
+net.inet.ip.intr_queue_maxlen=2048  # (default 256)
+net.route.netisr_maxqlen=2048       # (default 256)
+net.inet.raw.maxdgram=16384       # (default 9216)
+net.inet.raw.recvspace=16384      # (default 9216)
+kern.random.harvest.mask=351  # (default 511)
+```
 
-NGINX COMPILE OPTIONS
-./configure --with-http_ssl_module --with-http_v2_module --with-http_auth_request_module --with-http_mp4_module --with-http_stub_status_module --with-openssl=/root/JP/openssl-kern_tls_1_0_2 --with-cc-opt="-I /root/JP/openssl-kern_tls_1_0_2/.openssl/include" --with-ld-opt="-L /root/JP/openssl-kern_tls_1_0_2/.openssl/lib" --prefix=/rtbngx
 
+###NGINX COMPILE OPTIONS
+```
+extract SRC to /root/JP/
+cd netflix/nginx_x.xx.x
+for mellanox (HW+SW)
+./configure --with-http_ssl_module --with-http_v2_module --with-http_auth_request_module --with-http_mp4_module --with-http_stub_status_module --with-openssl=/root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2 --with-cc-opt="-I /root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2/.openssl/include" --with-ld-opt="-L /root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2/.openssl/lib" --prefix=/rtbngx
+for Chelsio (HW) 
+./configure --with-http_ssl_module --with-http_v2_module --with-http_auth_request_module --with-http_mp4_module --with-http_stub_status_module --with-openssl=/root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1 --with-cc-opt="-I /root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1/.openssl/include" --with-ld-opt="-L /root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1/.openssl/lib" --prefix=/rtbngx
+```
 
-KERNEL COMPILE OPTIONS
+###KERNEL COMPILE OPTIONS
+```
  make -j16 buildkernel KERNCONF=STEROIDS && make -j16 buildworld TARGET=amd64
  make -j16 installkernel KERNCONF=STEROIDS && make -j16 installworld
+```
