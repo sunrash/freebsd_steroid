@@ -77,13 +77,16 @@ usr.sbin	System administration commands.
 
 
 
-# TUNING INSTRUCTIONS
+# BUILD & TUNING INSTRUCTIONS
 
 ## Test env 
+```
 1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
 6x 64GB @ DDR4 2400 Samsung 
-1x Mellanox Technologies MT27800 Family [ConnectX-5] 100GBe x QSPF28 
-
+1x Mellanox Technologies Mellanox MCX555A-ECAT 100IB + 100GBE @ 1xQSPF28
+1x Samsung 970 2TB NVME SSD for nginx cache
+1x SSD 240GB (6G) for system
+```
 
 For Mellanox NIC card:
 ## /boot/loader.conf
@@ -188,24 +191,21 @@ apply parametrs /etc/sysctl.conf & /boot/loader.conf
 
 cd /root/JP/freebsd_steroids/netflix/kmod/intel-isa-aes 
 make clean install
-
 cd /root/JP/freebsd_steroids/netflix/nginx_x.xx.x
-
+```
 for mellanox (HW+SW):
-
+```
 ./configure --with-http_ssl_module --with-http_v2_module --with-http_auth_request_module --with-http_mp4_module --with-http_stub_status_module --with-openssl=/root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2 --with-cc-opt="-I /root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2/.openssl/include" --with-ld-opt="-L /root/JP/feebsd_steroids/netflix/openssl-kern_tls_1_0_2/.openssl/lib" --prefix=/rtbngx
-
 make clean install
-
+```
 /rtbngx for start nginx
  
 for Chelsio (HW):
-
+```
 ./configure --with-http_ssl_module --with-http_v2_module --with-http_auth_request_module --with-http_mp4_module --with-http_stub_status_module --with-openssl=/root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1 --with-cc-opt="-I /root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1/.openssl/include" --with-ld-opt="-L /root/JP/feebsd_steroids/netflix/openssl-chelsio_toe_1_1_1/.openssl/lib" --prefix=/rtbngx
-
 make clean install
-
+```
 /rtbngx for start nginx
 
-```
+
 
