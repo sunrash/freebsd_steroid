@@ -191,7 +191,7 @@ net.link.ifqmaxlen=2048  # (default 50)
 
 ### COMPILE INSTRUCTIONS
 ```
-mdkri /root/JP/
+mkdir /root/JP/
 git clone SRC to /root/JP/
 cd /root/JP/freebsd_steroids/
 
@@ -199,9 +199,9 @@ make -j16 buildkernel KERNCONF=STEROIDS && make -j16 buildworld TARGET=amd64
 make -j16 installkernel KERNCONF=STEROIDS && make -j16 installworld
 
 reboot 
-
+```
 apply parametrs /etc/sysctl.conf & /boot/loader.conf 
-
+```
 cd /root/JP/freebsd_steroids/netflix/kmod/intel-isa-aes 
 make clean install
 cd /root/JP/freebsd_steroids/netflix/nginx_x.xx.x
@@ -221,4 +221,42 @@ make clean install
 /rtbngx for start nginx
 
 
+## Nginx.conf
+```
 
+worker_processes  15;
+
+events {
+    worker_connections  650535;
+}
+
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    tcp_nopush on;
+    #tcp_nodelay on;
+    keepalive_timeout  65;
+    reset_timedout_connection on;
+    #send_timeout 2;
+    server {
+        listen       443 ssl http2;
+        server_name  z.rutube.ru;
+        ssl_protocols        TLSv1.1 TLSv1.2;
+        ssl_certificate      cert.crt;
+        ssl_certificate_key  cert.key;
+
+        ssl_session_cache shared:SSL:8024m; # holds approx XXXXXXX sessions
+        ssl_session_timeout 6h; # 1 hour during which sessions can be re-used.
+        ssl_buffer_size 16k;
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256;
+        ssl_prefer_server_ciphers  on;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+    }
+}
+```
