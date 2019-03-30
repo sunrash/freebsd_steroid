@@ -4,6 +4,9 @@ Stack: Freebsd (HEAD) + TCP_RACK + INTEL-ISA + NGINX (SSL_SENDFILE) + HW & SW Of
 
 # BUILD & TUNING INSTRUCTIONS
 
+For AMD64 only  
+
+
 ## Test env 
 ```
 1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
