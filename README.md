@@ -25,6 +25,8 @@ net.inet.tcp.hostcache.cachelimit="0"
 net.inet.tcp.syncache.hashsize="2048" # (default 512)
 net.inet.tcp.syncache.bucketlimit="300" # (default 30)
 hw.intr_storm_threshold="37888" # (default 1000)
+net.isr.defaultqlimit=4096 # (default 256)
+net.link.ifqmaxlen=2048  # (default 50)
 tcp_rack_load=YES
 intel-isa-aes_load=YES
 mlx5_load=YES
@@ -39,6 +41,8 @@ net.inet.tcp.hostcache.cachelimit="0"
 net.inet.tcp.syncache.hashsize="2048" # (default 512)
 net.inet.tcp.syncache.bucketlimit="300" # (default 30)
 hw.intr_storm_threshold="37888" # (default 1000)
+net.isr.defaultqlimit=4096 # (default 256)
+net.link.ifqmaxlen=2048  # (default 50)
 tcp_rack_load=YES
 intel-isa-aes_load=YES
 hint.p4tcc.0.disabled=1
@@ -112,8 +116,6 @@ net.route.netisr_maxqlen=2048       # (default 256)
 net.inet.raw.maxdgram=16384       # (default 9216)
 net.inet.raw.recvspace=16384      # (default 9216)
 kern.random.harvest.mask=351  # (default 511)
-net.isr.defaultqlimit=4096 # (default 256)
-net.link.ifqmaxlen=2048  # (default 50)
 ```
 
 
