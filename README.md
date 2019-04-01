@@ -26,7 +26,7 @@ Chelsio based env:
 ```
 1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
 6x 64GB @ DDR4 2400 Samsung
-1x Chelsio T6 T62100-CR  + 100GBE @ 1xQSPF28
+1x Chelsio T6 T62100-LP-CR  - 25/40/100GBE @ 2xQSPF28
 1x Samsung 970 2TB NVME SSD for nginx cache
 1x SSD 240GB (6G) for system
 NUMA off
