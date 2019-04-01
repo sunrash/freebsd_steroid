@@ -16,6 +16,10 @@ Mellanox based env:
 1x Mellanox Technologies Mellanox MCX555A-ECAT 100IB + 100GBE @ 1xQSPF28
 1x Samsung 970 2TB NVME SSD for nginx cache
 1x SSD 240GB (6G) for system
+NUMA off 
+HT off
+A7 mode DRAM off
+POR DRAM off
 ```
 
 Chelsio based env:
@@ -25,6 +29,10 @@ Chelsio based env:
 1x Chelsio T6 T62100-CR  + 100GBE @ 1xQSPF28
 1x Samsung 970 2TB NVME SSD for nginx cache
 1x SSD 240GB (6G) for system
+NUMA off
+HT off
+A7 mode DRAM off
+POR DRAM off
 ```
 
 
