@@ -8,6 +8,8 @@ For AMD64 only
 
 
 ## Test env 
+
+Mellanox based env:
 ```
 1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
 6x 64GB @ DDR4 2400 Samsung 
@@ -15,6 +17,16 @@ For AMD64 only
 1x Samsung 970 2TB NVME SSD for nginx cache
 1x SSD 240GB (6G) for system
 ```
+
+Chelsio based env:
+```
+1x CPU: Intel(R) Xeon(R) CPU E5-2697A v4 @ 2.60GHz (2600.05-MHz K8-class CPU)
+6x 64GB @ DDR4 2400 Samsung
+1x Chelsio T6 T62100-CR  + 100GBE @ 1xQSPF28
+1x Samsung 970 2TB NVME SSD for nginx cache
+1x SSD 240GB (6G) for system
+```
+
 
 For Mellanox NIC card:
 ## /boot/loader.conf
@@ -116,6 +128,7 @@ net.route.netisr_maxqlen=2048       # (default 256)
 net.inet.raw.maxdgram=16384       # (default 9216)
 net.inet.raw.recvspace=16384      # (default 9216)
 kern.random.harvest.mask=351  # (default 511)
+kern.ipc.shm_use_phys=1 # (default 0)
 ```
 
 
@@ -155,9 +168,11 @@ make clean install
 ```
 
 worker_processes  15;
+worker_cpu_affinity auto;
 
 events {
     worker_connections  650535;
+    use kqueue;
 }
 
 
@@ -166,10 +181,11 @@ http {
     default_type  application/octet-stream;
     sendfile        on;
     tcp_nopush on;
-    #tcp_nodelay on;
+    tcp_nodelay on;
     keepalive_timeout  65;
     reset_timedout_connection on;
-    #send_timeout 2;
+    keepalive_requests 100;
+    send_timeout 2;
     server {
         listen       443 ssl http2;
         server_name  z.rutube.ru;
