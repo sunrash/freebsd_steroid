@@ -1,0 +1,12 @@
+prefix=/root/JP/openssl-kern_tls_1_0_2/.openssl
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: OpenSSL-libssl
+Description: Secure Sockets Layer and cryptography libraries
+Version: 1.0.2q-dev
+Requires.private: libcrypto
+Libs: -L${libdir} -lssl
+Libs.private: 
+Cflags: -I${includedir} 
