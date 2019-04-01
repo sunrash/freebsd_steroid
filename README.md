@@ -1,6 +1,6 @@
-Freebsd for Video Streaming on 100Gb/s
+Freebsd for Video Streaming on 100Gb/s - 200Gb/s on single core
 
-Stack: Freebsd (HEAD) + TCP_RACK + INTEL-ISA + NGINX (SSL_SENDFILE) + HW & SW Offload + Tuning for Best perfomance 
+Stack: Freebsd (HEAD) + TCP MBUF PATCH + TCP_RACK + INTEL-ISA + NGINX (SSL_SENDFILE) + HW & SW Offload + Tuning for Best perfomance 
 
 # BUILD & TUNING INSTRUCTIONS
 
