@@ -769,13 +769,11 @@ nvme_proto_debug_out(union ccb *ccb)
 {
 	char cdb_str[(sizeof(struct nvme_command) * 3) + 1];
 
-	if (ccb->ccb_h.func_code != XPT_NVME_IO ||
-	    ccb->ccb_h.func_code != XPT_NVME_ADMIN)
+	if (ccb->ccb_h.func_code != XPT_NVME_IO)
 		return;
 
 	CAM_DEBUG(ccb->ccb_h.path,
-	    CAM_DEBUG_CDB,("%s. NCB: %s\n", nvme_op_string(&ccb->nvmeio.cmd,
-		ccb->ccb_h.func_code == XPT_NVME_ADMIN),
+	    CAM_DEBUG_CDB,("%s. NCB: %s\n", nvme_op_string(&ccb->nvmeio.cmd),
 		nvme_cmd_string(&ccb->nvmeio.cmd, cdb_str, sizeof(cdb_str))));
 }
 
