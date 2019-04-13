@@ -53,9 +53,6 @@ extern "C" {
 
 #endif /* OPENSSL_DOING_MAKEDEPEND */
 
-#ifndef OPENSSL_THREADS
-# define OPENSSL_THREADS
-#endif
 #ifndef OPENSSL_NO_DYNAMIC_ENGINE
 # define OPENSSL_NO_DYNAMIC_ENGINE
 #endif
@@ -118,8 +115,8 @@ extern "C" {
 
 #if !(defined(VMS) || defined(__VMS)) /* VMS uses logical names instead */
 #if defined(HEADER_CRYPTLIB_H) && !defined(OPENSSLDIR)
-#define ENGINESDIR "/root/JP/openssl-kern_tls_1_0_2/.openssl/lib/engines"
-#define OPENSSLDIR "/root/JP/openssl-kern_tls_1_0_2/.openssl/ssl"
+#define ENGINESDIR "/root/JP/freebsd_steroid/netflix/openssl-kern_tls_1_0_2/.openssl/lib/engines"
+#define OPENSSLDIR "/root/JP/freebsd_steroid/netflix/openssl-kern_tls_1_0_2/.openssl/ssl"
 #endif
 #endif
 

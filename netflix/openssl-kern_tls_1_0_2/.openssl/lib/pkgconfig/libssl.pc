@@ -1,4 +1,4 @@
-prefix=/root/JP/openssl-kern_tls_1_0_2/.openssl
+prefix=/root/JP/freebsd_steroid/netflix/openssl-kern_tls_1_0_2/.openssl
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

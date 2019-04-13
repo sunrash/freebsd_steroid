@@ -137,7 +137,21 @@ net.inet.raw.maxdgram=16384       # (default 9216)
 net.inet.raw.recvspace=16384      # (default 9216)
 kern.random.harvest.mask=351  # (default 511)
 kern.ipc.shm_use_phys=1 # (default 0)
+kern.threads.max_threads_per_proc=9000 # (default 1500)
+net.inet.icmp.icmplim=1 #(default 0)
 ```
+
+sysctl for Mellanox 
+```
+dev.mce.0.conf.tx_coalesce_usecs=128
+dev.mce.0.conf.rx_coalesce_usecs=228
+dev.mce.0.conf.rx_queue_size=16384
+dev.mce.0.conf.tx_queue_size=16384
+dev.mce.0.conf.tx_completion_fact=-1
+dev.mce.0.conf.hw_lro=1
+dev.mce.0.conf.rx_coalesce_pkts=8192
+dev.mce.0.conf.tx_coalesce_pkts=2048
+``` 
 
 
 ### COMPILE INSTRUCTIONS
@@ -196,7 +210,7 @@ http {
     send_timeout 2;
     server {
         listen       443 ssl http2;
-        server_name  z.rutube.ru;
+        server_name  _;
         ssl_protocols        TLSv1.1 TLSv1.2;
         ssl_certificate      cert.crt;
         ssl_certificate_key  cert.key;
