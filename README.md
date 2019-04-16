@@ -61,6 +61,7 @@ For Chelsio card:
 net.inet.tcp.hostcache.cachelimit="0"
 net.inet.tcp.syncache.hashsize="2048" # (default 512)
 net.inet.tcp.syncache.bucketlimit="300" # (default 30)
+net.inet.tcp.syncache.cachelimit=65536
 hw.intr_storm_threshold="37888" # (default 1000)
 net.isr.defaultqlimit=4096 # (default 256)
 net.link.ifqmaxlen=2048  # (default 50)
@@ -68,6 +69,8 @@ tcp_rack_load=YES
 intel-isa-aes_load=YES
 hint.p4tcc.0.disabled=1
 hint.acpi_throttle.0.disabled=1
+net.isr.defaultqlimit=8192 # (default 256)
+net.link.ifqmaxlen=8192  # (default 50)
 t5fw_cfg_load="YES"
 if_cxgbe_load="YES"
 ```
@@ -144,14 +147,17 @@ net.inet.icmp.icmplim=1 #(default 0)
 
 sysctl for Mellanox 
 ```
-dev.mce.0.conf.tx_coalesce_usecs=128
-dev.mce.0.conf.rx_coalesce_usecs=228
+dev.mce.0.conf.tx_coalesce_usecs=400
+dev.mce.0.conf.rx_coalesce_usecs=400
 dev.mce.0.conf.rx_queue_size=16384
 dev.mce.0.conf.tx_queue_size=16384
 dev.mce.0.conf.tx_completion_fact=-1
 dev.mce.0.conf.hw_lro=1
-dev.mce.0.conf.rx_coalesce_pkts=8192
-dev.mce.0.conf.tx_coalesce_pkts=2048
+dev.mce.0.conf.tx_coalesce_pkts=16384
+dev.mce.0.conf.rx_coalesce_pkts=16384
+dev.mce.0.conf.channels_rsss=16
+dev.mce.0.conf.rx_coalesce_mode=1
+dev.mce.0.conf.tx_coalesce_mode=1
 ``` 
 
 
