@@ -39,20 +39,21 @@ POR DRAM off
 For Mellanox NIC card:
 ## /boot/loader.conf
 ```
-net.isr.maxthreads="-1"
-net.isr.bindthreads="1"
-net.inet.tcp.hostcache.cachelimit="0"
-net.inet.tcp.syncache.hashsize="2048" # (default 512)
-net.inet.tcp.syncache.bucketlimit="300" # (default 30)
+net.isr.maxthreads=-1
+net.inet.tcp.syncache.hashsize=4096 # (default 512)
+net.inet.tcp.syncache.bucketlimit=600 # (default 30)
+net.inet.tcp.syncache.cachelimit=65536
 hw.intr_storm_threshold="37888" # (default 1000)
-net.isr.defaultqlimit=4096 # (default 256)
-net.link.ifqmaxlen=2048  # (default 50)
+kern.random.harvest.mask=351  # (default 511)
 tcp_rack_load=YES
 intel-isa-aes_load=YES
 mlx5_load=YES
 mlx5en_load=YES
 hint.p4tcc.0.disabled=1
 hint.acpi_throttle.0.disabled=1
+net.isr.defaultqlimit=8192 # (default 256)
+net.link.ifqmaxlen=8192  # (default 50)
+net.isr.bindthreads=1 # (default 0)
 ```
 For Chelsio card:
 ## /boot/loader.conf
