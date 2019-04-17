@@ -153,9 +153,9 @@ dev.mce.0.conf.rx_queue_size=16384
 dev.mce.0.conf.tx_queue_size=16384
 dev.mce.0.conf.tx_completion_fact=-1
 dev.mce.0.conf.hw_lro=1
-dev.mce.0.conf.tx_coalesce_pkts=16384
-dev.mce.0.conf.rx_coalesce_pkts=16384
-dev.mce.0.conf.channels_rsss=16
+dev.mce.0.conf.tx_coalesce_pkts=65536
+dev.mce.0.conf.rx_coalesce_pkts=65536
+dev.mce.0.conf.channels_rsss=8
 dev.mce.0.conf.rx_coalesce_mode=1
 dev.mce.0.conf.tx_coalesce_mode=1
 ``` 
