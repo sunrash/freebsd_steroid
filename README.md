@@ -139,11 +139,11 @@ net.inet.ip.intr_queue_maxlen=2048  # (default 256)
 net.route.netisr_maxqlen=2048       # (default 256)
 net.inet.raw.maxdgram=16384       # (default 9216)
 net.inet.raw.recvspace=16384      # (default 9216)
-kern.random.harvest.mask=351  # (default 511)
 kern.ipc.shm_use_phys=1 # (default 0)
 kern.threads.max_threads_per_proc=9000 # (default 1500)
 net.inet.icmp.icmplim=1 #(default 0)
 kern.ipc.shm_use_phys=1 # (default 0)
+kern.random.harvest.mask=65887
 ```
 
 sysctl for Mellanox 
