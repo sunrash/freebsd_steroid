@@ -143,6 +143,7 @@ kern.random.harvest.mask=351  # (default 511)
 kern.ipc.shm_use_phys=1 # (default 0)
 kern.threads.max_threads_per_proc=9000 # (default 1500)
 net.inet.icmp.icmplim=1 #(default 0)
+kern.ipc.shm_use_phys=1 # (default 0)
 ```
 
 sysctl for Mellanox 
